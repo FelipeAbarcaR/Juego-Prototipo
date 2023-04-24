@@ -58,7 +58,6 @@
     {"id":{"name":"tile_arbol","path":"tilesets/tile_arbol/tile_arbol.yy",},},
     {"id":{"name":"spr_transition","path":"sprites/spr_transition/spr_transition.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
-    {"id":{"name":"Obj_Test","path":"objects/Obj_Test/Obj_Test.yy",},},
     {"id":{"name":"spr_trigger","path":"sprites/spr_trigger/spr_trigger.yy",},},
     {"id":{"name":"Scriptejecucion","path":"scripts/Scriptejecucion/Scriptejecucion.yy",},},
     {"id":{"name":"prnt_colectible","path":"objects/prnt_colectible/prnt_colectible.yy",},},

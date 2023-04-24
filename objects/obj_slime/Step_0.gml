@@ -1,6 +1,6 @@
 if(!global.gamepaused)
 {
-	if(
+	if(EntityState == EntityChase)
 	{ 
 		script_execute(EntityState);
 		EntityActivateScript = -1;

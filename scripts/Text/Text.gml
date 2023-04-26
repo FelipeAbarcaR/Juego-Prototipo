@@ -127,3 +127,71 @@ function DialogueResponses(argument0){
 	}
 
 }
+
+function SetDefaultsforText(){
+	
+	//el line break es cuando cambia de linea 
+	line_break_pos[0,page_number] = 999;
+	line_break_num[page_number] = 0;
+	line_break_offset[page_number] = 0;
+}
+
+
+/// @param string
+function ScriptText(_text){
+	
+	SetDefaultsforText();
+	text[page_number] = _text;
+	page_number++;
+}
+
+/// @param text_id
+function GameText (_text_id){
+	
+	switch(_text_id)
+	{
+		case "NPC 1":
+			ScriptText("do you want to help me pls?!");
+				ScriptOptions("Yeah!","NPC 1 - yes");
+				ScriptOptions("No I'm sorry","NPC 1 - no");
+			ScriptText("ndocsdncon  cnsdodcwndwodn  nodnsodnoscndocsn onono onon onon ");
+			break;
+			case "NPC 1 - yes":
+				ScriptText("Ohhhh thanks you so much!");
+				break;
+			case "NPC 1 - no":
+				ScriptText("YOU ARE SO SELFISH!");
+				break;
+		
+		case "NPC 2":
+		
+			ScriptText("Hi! I'm NPC 2");
+			ScriptText("Hi! I'm NPC 2ccnocnconc onodnwod o dondodmwod odwmdo");
+			ScriptText("Hi! I'm NPC 2");
+			break;
+		
+		case "NPC 3":
+		
+			break;
+		
+	}
+	
+}
+	/// @param text_id
+function CreateTextbox (_text_id){
+	
+	with (instance_create_depth(0,0,-9999,obj_text))
+	{
+	GameText(_text_id);
+	} 
+	
+}
+	/// @param text_id
+	/// @param link_id
+function ScriptOptions (_option, _link_id){
+	
+	option[option_number] = _option;
+	option_link_id[option_number] = _link_id;
+	
+	option_number++;
+}

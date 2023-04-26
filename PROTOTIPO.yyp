@@ -57,7 +57,6 @@
     {"id":{"name":"spr_textbox_bg","path":"sprites/spr_textbox_bg/spr_textbox_bg.yy",},},
     {"id":{"name":"spr_speakblock","path":"sprites/spr_speakblock/spr_speakblock.yy",},},
     {"id":{"name":"roomTexteo","path":"rooms/roomTexteo/roomTexteo.yy",},},
-    {"id":{"name":"obj_text_queued","path":"objects/obj_text_queued/obj_text_queued.yy",},},
     {"id":{"name":"tile_arbol","path":"tilesets/tile_arbol/tile_arbol.yy",},},
     {"id":{"name":"spr_transition","path":"sprites/spr_transition/spr_transition.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},

@@ -152,9 +152,9 @@ function GameText (_text_id){
 	{
 		case "NPC 1":
 			ScriptText("do you want to help me pls?!");
+			ScriptText("jfperjfopefjerpfojfpoejfepjfepfenpgern")
 				ScriptOptions("Yeah!","NPC 1 - yes");
 				ScriptOptions("No I'm sorry","NPC 1 - no");
-			ScriptText("ndocsdncon  cnsdodcwndwodn  nodnsodnoscndocsn onono onon onon ");
 			break;
 			case "NPC 1 - yes":
 				ScriptText("Ohhhh thanks you so much!");

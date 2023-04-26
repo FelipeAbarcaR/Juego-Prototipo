@@ -37,7 +37,6 @@
     {"name":"spr_textbox_bg","order":3,"path":"sprites/spr_textbox_bg/spr_textbox_bg.yy",},
     {"name":"spr_speakblock","order":9,"path":"sprites/spr_speakblock/spr_speakblock.yy",},
     {"name":"roomTexteo","order":3,"path":"rooms/roomTexteo/roomTexteo.yy",},
-    {"name":"obj_text_queued","order":3,"path":"objects/obj_text_queued/obj_text_queued.yy",},
     {"name":"tile_arbol","order":2,"path":"tilesets/tile_arbol/tile_arbol.yy",},
     {"name":"spr_transition","order":7,"path":"sprites/spr_transition/spr_transition.yy",},
     {"name":"spr_trigger","order":5,"path":"sprites/spr_trigger/spr_trigger.yy",},

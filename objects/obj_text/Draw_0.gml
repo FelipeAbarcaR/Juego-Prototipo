@@ -1,5 +1,3 @@
-accept_key = keyboard_check_pressed(vk_space);
-
 textbox_x = camera_get_view_x(view_camera[0]);
 textbox_y = camera_get_view_y(view_camera[0])+ RESOLUTION_H -89;
 
@@ -95,7 +93,7 @@ if(draw_char < text_length[page])
 
 
 //----------------Flip through pages-----------------------//
-if(accept_key)
+if(obj_player.keyactivate)
 {
 	//if the typing is done we go to the next page
 	if( draw_char == text_length[page])
@@ -138,7 +136,7 @@ draw_sprite_ext(txtb_spr,txtb_img,
 	0,c_white,1
 );
 
-//Options
+//---------------------Options----------------------------//
 if(draw_char == text_length[page]) && (page == page_number -1)
 {
 	//option Selection
@@ -174,10 +172,14 @@ if(draw_char == text_length[page]) && (page == page_number -1)
 }
 
 
-//Draw the text
+//--------------------Draw the text------------------------//
+
+//var _draw_text = string_copy(text[page], 1, draw_char);
+//draw_text_ext(_txtb_x+ border, _txtb_y + border, _draw_text, line_sep, line_width);
+
 for(var c = 0; c < draw_char ; c++)
 {
 	//the text
-	draw_text_ext(char_x[c,page], char_y[c, page], char[c,page],line_sep,line_width);
+	draw_text(char_x[c,page], char_y[c, page], char[c,page]);
 }
 

@@ -1,9 +1,9 @@
 depth = -9999;
 //textbox parameters
-textbox_width = 527;
-textbox_height = 89;
-border = 12;
-line_sep = 12;
+textbox_width = TEXTBOX_W;
+textbox_height = TEXTBOX_H;
+border = 8;
+line_sep = 13;
 line_width = textbox_width - border*2;
 txtb_spr = spr_textbox_bg;
 txtb_img = 0;

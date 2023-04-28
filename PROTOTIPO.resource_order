@@ -48,6 +48,7 @@
     {"name":"spr_player_attack_slash","order":2,"path":"sprites/spr_player_attack_slash/spr_player_attack_slash.yy",},
     {"name":"spr_attack_slash_HB","order":3,"path":"sprites/spr_attack_slash_HB/spr_attack_slash_HB.yy",},
     {"name":"obj_room_exit","order":1,"path":"objects/obj_room_exit/obj_room_exit.yy",},
+    {"name":"fnt_text_small","order":1,"path":"fonts/fnt_text_small/fnt_text_small.yy",},
     {"name":"obj_cutscene","order":3,"path":"objects/obj_cutscene/obj_cutscene.yy",},
     {"name":"Camara","order":3,"path":"scripts/Camara/Camara.yy",},
     {"name":"roomMapaInicial","order":1,"path":"rooms/roomMapaInicial/roomMapaInicial.yy",},

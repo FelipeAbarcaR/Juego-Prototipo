@@ -1,5 +1,5 @@
 textbox_x = camera_get_view_x(view_camera[0]);
-textbox_y = camera_get_view_y(view_camera[0])+ RESOLUTION_H -89;
+textbox_y = camera_get_view_y(view_camera[0])+ Y_POS_TEXTBOX;
 
 //Setup
 if(setup == false)
@@ -17,7 +17,7 @@ if(setup == false)
 		
 		//get x position for the textbox
 			//no character ( center the textbox )
-			text_x_offset[p] = 47;
+			text_x_offset[p] = X_POS_TEXTBOX;
 			
 		//Setting individual chacarters and finding where the lines of text should break
 		for(var c = 0; c < text_length[p]; c++)
@@ -145,7 +145,7 @@ if(draw_char == text_length[page]) && (page == page_number -1)
 	option_pos = clamp(option_pos , 0, option_number - 1);
 	
 	//draw the options
-	var _op_space = 40;
+	var _op_space = 20;
 	var _op_bord = 8;
 	
 	for(var op = 0; op < option_number; op++)
@@ -154,7 +154,7 @@ if(draw_char == text_length[page]) && (page == page_number -1)
 		var _o_w = string_width(option[op]) + _op_bord*2;
 		draw_sprite_ext(
 			txtb_spr,txtb_img,
-			_txtb_x + 40,_txtb_y - _op_space*option_number + _op_space*op,
+			_txtb_x + 20,_txtb_y - _op_space*option_number + _op_space*op,
 			_o_w/txtb_spr_w, (_op_space - 1)/txtb_spr_h,
 			0,c_white,1
 		);
@@ -166,7 +166,7 @@ if(draw_char == text_length[page]) && (page == page_number -1)
 		}
 		
 		//the option text
-		draw_text(_txtb_x + 40+ _op_bord, _txtb_y - _op_space*option_number + _op_space*op + 4, option[op]); 
+		draw_text(_txtb_x + 20 + _op_bord, _txtb_y - _op_space*option_number + _op_space*op + 4, option[op]); 
 	
 	}
 }

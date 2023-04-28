@@ -71,6 +71,7 @@
     {"id":{"name":"spr_player_attack_slash","path":"sprites/spr_player_attack_slash/spr_player_attack_slash.yy",},},
     {"id":{"name":"spr_attack_slash_HB","path":"sprites/spr_attack_slash_HB/spr_attack_slash_HB.yy",},},
     {"id":{"name":"obj_room_exit","path":"objects/obj_room_exit/obj_room_exit.yy",},},
+    {"id":{"name":"fnt_text_small","path":"fonts/fnt_text_small/fnt_text_small.yy",},},
     {"id":{"name":"obj_cutscene","path":"objects/obj_cutscene/obj_cutscene.yy",},},
     {"id":{"name":"Camara","path":"scripts/Camara/Camara.yy",},},
     {"id":{"name":"roomMapaInicial","path":"rooms/roomMapaInicial/roomMapaInicial.yy",},},

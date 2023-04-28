@@ -1,9 +1,14 @@
 cam = view_camera[0];
+
+camera_set_view_size(cam,RESOLUTION_W,RESOLUTION_H);
+
 follow = obj_player;
-viewwitdhhalf = 640* 0.5;
-viewheighthalf = 360* 0.5;
+viewwitdhhalf = RESOLUTION_W* 0.5;
+viewheighthalf = RESOLUTION_H* 0.5;
 xTo = xstart;
 yTo = ystart;
+
+
 
 
 

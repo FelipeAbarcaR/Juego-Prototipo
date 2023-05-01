@@ -93,7 +93,7 @@ if(draw_char < text_length[page])
 
 
 //----------------Flip through pages-----------------------//
-if(obj_player.keyactivate)
+if(keyboard_check_pressed(vk_space))
 {
 	//if the typing is done we go to the next page
 	if( draw_char == text_length[page])
@@ -169,17 +169,19 @@ if(draw_char == text_length[page]) && (page == page_number -1)
 		draw_text(_txtb_x + 20 + _op_bord, _txtb_y - _op_space*option_number + _op_space*op + 4, option[op]); 
 	
 	}
+	
+
 }
 
 
 //--------------------Draw the text------------------------//
 
-//var _draw_text = string_copy(text[page], 1, draw_char);
-//draw_text_ext(_txtb_x+ border, _txtb_y + border, _draw_text, line_sep, line_width);
+var _draw_text = string_copy(text[page], 1, draw_char);
+draw_text_ext(_txtb_x+ border, _txtb_y + border, _draw_text, line_sep, line_width);
 
-for(var c = 0; c < draw_char ; c++)
-{
-	//the text
-	draw_text(char_x[c,page], char_y[c, page], char[c,page]);
-}
+//for(var c = 0; c < draw_char ; c++)
+//{
+//	//the text
+//	draw_text(char_x[c,page], char_y[c, page], char[c,page]);
+//}
 

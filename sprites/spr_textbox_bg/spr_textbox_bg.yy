@@ -51,8 +51,8 @@
   },
   "origin": 0,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Text & Cutscenes",
+    "path": "folders/Sprites/Text & Cutscenes.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

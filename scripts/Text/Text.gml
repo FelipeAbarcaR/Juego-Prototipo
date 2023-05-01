@@ -82,14 +82,14 @@ function NewTextBox (){
 		}
 	}
 	
-	//with(obj_player)
-	//{
-	//	if(state != PlayerStateLocked)
-	//	{
-	//		laststate = state;
-	//		state = PlayerStateLocked;
-	//	}
-	//}
+	with(obj_player)
+	{
+		if(state != PlayerStateLocked)
+		{
+			laststate = state;
+			state = PlayerStateLocked;
+		}
+	}
 }
 
 
@@ -101,15 +101,7 @@ function DialogueResponses(argument0){
 	{
 		case 0: break;
 		
-		case 1:
-		{
-			NewTextBox("you gave response A!", 1);
-			with(obj_slime)
-			{
-				EntityState = EntityChase;
-			}
-			break;
-		}
+		case 1: NewTextBox("you gave response A!", 1);
 		
 		case 2: NewTextBox("You gave response B! Any further response?", 1, ["3:Yes!","4:No."]); break;
 		
@@ -143,6 +135,7 @@ function ScriptText(_text){
 	SetDefaultsforText();
 	text[page_number] = _text;
 	page_number++;
+	
 }
 
 /// @param text_id
@@ -152,15 +145,16 @@ function GameText (_text_id){
 	{
 		case "NPC 1":
 			ScriptText("do you want to help me pls?!");
-			ScriptText("jfperjfopefjerpfojfpoejfepjfepfenpgern")
 				ScriptOptions("Yeah!","NPC 1 - yes");
 				ScriptOptions("No I'm sorry","NPC 1 - no");
 			break;
 			case "NPC 1 - yes":
 				ScriptText("Ohhhh thanks you so much!");
+				global.textover = true;
 				break;
 			case "NPC 1 - no":
 				ScriptText("YOU ARE SO SELFISH!");
+				global.textover = true;
 				break;
 		
 		case "NPC 2":
@@ -185,6 +179,22 @@ function CreateTextbox (_text_id){
 	GameText(_text_id);
 	} 
 	
+	with(obj_player)
+	{
+		if(state != PlayerStateLocked)
+		{
+			laststate = state;
+			state = PlayerStateLocked;
+		}
+		else
+		{
+			if(global.textover) 
+			{
+				state = laststate;
+			}
+		}
+	}
+	
 }
 	/// @param text_id
 	/// @param link_id
@@ -194,4 +204,5 @@ function ScriptOptions (_option, _link_id){
 	option_link_id[option_number] = _link_id;
 	
 	option_number++;
+	
 }

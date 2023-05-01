@@ -130,7 +130,7 @@ function PlayerStateFree(){
 		state = PlayerStateAttack;
 		stateattack = AttackSlash;
 	}
-	
+	//Activate key logic
 	if(keyactivate)
 		{
 
@@ -166,8 +166,12 @@ function PlayerStateFree(){
 					
 			ds_list_destroy(_activatelist);
 			
-			if(activate != noone)
-	
+			if(activate == noone)
+			{
+				state = PlayerStateRoll;
+				movedistanceremaining = distanceroll;
+			}
+			else
 			{
 				//Activar la entidad
 				ScriptExecuteArray(activate.EntityActivateScript, activate.EntityActivateArgs);
@@ -184,6 +188,11 @@ function PlayerStateFree(){
 			}
 		}
 }
+
+function PlayerStateLocked(){
+	//No hace nada
+}
+
 
 function PlayerStateTransition(){
 	
@@ -236,4 +245,65 @@ function PlayerStateDead(){
 function PlayerStateAttack(){
 	
 	script_execute(stateattack);
+}
+	
+function PlayerStateBonk(){
+	
+	//Movimiento
+	hSpeed = lengthdir_x(speedbonk, direction-180);
+	vSpeed = lengthdir_y(speedbonk, direction-180);
+	
+
+	
+	//esto es para que sea 0 y no un numero negativo
+	movedistanceremaining = max(0, movedistanceremaining - speedbonk);
+	
+	var _collided = PlayerCollision();
+	
+	//Update Sprite
+	sprite_index = spr_player;
+	image_index = CARDINAL_DIR + 2;
+	
+	//Cambiar altura
+	
+	//Cambiar Altura del golpe
+	z = sin(((movedistanceremaining / distancebonk) * pi)) * distancebonkheight;
+		
+	//Cambiar estado
+	if(movedistanceremaining <= 0)
+		{
+		state = PlayerStateFree;
+		z = 0;
+		}
+}
+
+function PlayerStateRoll(){
+	//Movimiento
+	hSpeed = lengthdir_x(speedroll, direction);
+	vSpeed = lengthdir_y(speedroll, direction);
+	
+	//esto es para que sea 0 y no un numero negativo
+	movedistanceremaining = max(0, movedistanceremaining - speedroll);
+	
+	var _collided = PlayerCollision();
+	
+	//Update Sprite
+	sprite_index = spriteroll;
+	var _totalframes = sprite_get_number(sprite_index)/4;
+	//dado que la distancia del roll esa 52, movedistanteremaining sera siempre un valor menor a 52, la division nos dice cuanto queda de la animacion del roll (%)
+				//nos dice cual animacion queremos	// nos dice cuanto frames hay que añadir
+				//el minimo esta para que cuanto se haga el roll no se para para la otra animacion
+	image_index = (CARDINAL_DIR * _totalframes) + min (((1-(movedistanceremaining / distanceroll)) *(_totalframes)), _totalframes - 1);
+	
+	//Cambiar estado
+	if(movedistanceremaining <= 0)
+		{
+		state = PlayerStateFree;
+		}
+	
+	if(_collided)
+	{
+		state = PlayerStateBonk;
+		movedistanceremaining = distancebonk;
+	}
 }

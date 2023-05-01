@@ -28,8 +28,8 @@
   "nineSlice": null,
   "origin": 7,
   "parent": {
-    "name": "Entity",
-    "path": "folders/Sprites/Entity.yy",
+    "name": "NPC",
+    "path": "folders/Sprites/Entity/NPC.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -1,1 +1,0 @@
-RoomTransition(TRANS_TYPE.SLIDE,roomBattle);

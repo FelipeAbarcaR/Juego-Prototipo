@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Entity",
-    "path": "folders/Objects/Entity.yy",
+    "name": "Coleccionable",
+    "path": "folders/Objects/Entity/Coleccionable.yy",
   },
   "parentObjectId": {
     "name": "prnt_entity",

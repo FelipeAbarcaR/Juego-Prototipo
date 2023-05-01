@@ -12,4 +12,14 @@
 #macro TEXTBOX_W 407
 #macro TEXTBOX_H 57
 
+enum ENEMYSTATE
+{
+	IDLE,
+	WANDER,
+	CHASE,
+	ATTACK,
+	HURT,
+	DIE,
+	WAIT
+}
 

@@ -12,12 +12,12 @@
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"prnt_entity","path":"objects/prnt_entity/prnt_entity.yy",},"propertyId":{"name":"EntityActivateArgs","path":"objects/prnt_entity/prnt_entity.yy",},"value":"-1",},
   ],
   "parent": {
-    "name": "Entity",
-    "path": "folders/Objects/Entity.yy",
+    "name": "Enemy",
+    "path": "folders/Objects/Entity/Enemy.yy",
   },
   "parentObjectId": {
-    "name": "prnt_entity",
-    "path": "objects/prnt_entity/prnt_entity.yy",
+    "name": "prnt_enemy",
+    "path": "objects/prnt_enemy/prnt_enemy.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

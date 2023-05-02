@@ -150,11 +150,11 @@ function GameText (_text_id){
 			break;
 			case "NPC 1 - yes":
 				ScriptText("Ohhhh thanks you so much!");
-				global.textover = true;
+				TextOver();
 				break;
 			case "NPC 1 - no":
 				ScriptText("YOU ARE SO SELFISH!");
-				global.textover = true;
+				TextOver();
 				break;
 		
 		case "NPC 2":
@@ -205,4 +205,9 @@ function ScriptOptions (_option, _link_id){
 	
 	option_number++;
 	
+}
+
+function TextOver (){
+
+	global.textover = true;
 }

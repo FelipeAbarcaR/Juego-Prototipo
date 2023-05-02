@@ -11,12 +11,13 @@ hSpeed = 0;
 vSpeed = 0;
 
 speedWalk = 2.0;
-speedbonk = 1.0;
+speedbonk = 1.5;
 speedroll = 3.0;
 
 distancebonk = 40;
 distancebonkheight = 24;
-distanceroll = 42;
+distanceroll = 70;
+distancerollheight = 12;
 z = 0;
 
 localframe = 0;

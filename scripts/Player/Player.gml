@@ -190,7 +190,9 @@ function PlayerStateFree(){
 }
 
 function PlayerStateLocked(){
-	//No hace nada
+	
+	x = activate.x - 20;
+	y = activate.y ;
 }
 
 
@@ -261,7 +263,7 @@ function PlayerStateBonk(){
 	var _collided = PlayerCollision();
 	
 	//Update Sprite
-	sprite_index = spr_player;
+	sprite_index = spr_player_hurt;
 	image_index = CARDINAL_DIR + 2;
 	
 	//Cambiar altura
@@ -294,6 +296,8 @@ function PlayerStateRoll(){
 				//nos dice cual animacion queremos	// nos dice cuanto frames hay que añadir
 				//el minimo esta para que cuanto se haga el roll no se para para la otra animacion
 	image_index = (CARDINAL_DIR * _totalframes) + min (((1-(movedistanceremaining / distanceroll)) *(_totalframes)), _totalframes - 1);
+	
+	z = sin(((movedistanceremaining / distanceroll) * pi)) * distancerollheight;
 	
 	//Cambiar estado
 	if(movedistanceremaining <= 0)

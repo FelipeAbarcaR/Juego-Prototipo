@@ -61,6 +61,7 @@
     {"name":"roomBattle","order":4,"path":"rooms/roomBattle/roomBattle.yy",},
     {"name":"spr_player_run","order":1,"path":"sprites/spr_player_run/spr_player_run.yy",},
     {"name":"Items","order":6,"path":"scripts/Items/Items.yy",},
+    {"name":"spr_player_hurt","order":5,"path":"sprites/spr_player_hurt/spr_player_hurt.yy",},
     {"name":"spr_slime_hurt","order":2,"path":"sprites/spr_slime_hurt/spr_slime_hurt.yy",},
     {"name":"spr_slime_attack","order":1,"path":"sprites/spr_slime_attack/spr_slime_attack.yy",},
     {"name":"spr_player_roll","order":4,"path":"sprites/spr_player_roll/spr_player_roll.yy",},

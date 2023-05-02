@@ -92,6 +92,7 @@
     {"id":{"name":"spr_questie","path":"sprites/spr_questie/spr_questie.yy",},},
     {"id":{"name":"spr_player_run","path":"sprites/spr_player_run/spr_player_run.yy",},},
     {"id":{"name":"Items","path":"scripts/Items/Items.yy",},},
+    {"id":{"name":"spr_player_hurt","path":"sprites/spr_player_hurt/spr_player_hurt.yy",},},
     {"id":{"name":"spr_slime_hurt","path":"sprites/spr_slime_hurt/spr_slime_hurt.yy",},},
     {"id":{"name":"spr_slime","path":"sprites/spr_slime/spr_slime.yy",},},
     {"id":{"name":"spr_slime_attack","path":"sprites/spr_slime_attack/spr_slime_attack.yy",},},

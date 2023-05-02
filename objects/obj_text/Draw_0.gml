@@ -179,9 +179,12 @@ if(draw_char == text_length[page]) && (page == page_number -1)
 var _draw_text = string_copy(text[page], 1, draw_char);
 draw_text_ext(_txtb_x+ border, _txtb_y + border, _draw_text, line_sep, line_width);
 
-//for(var c = 0; c < draw_char ; c++)
-//{
-//	//the text
-//	draw_text(char_x[c,page], char_y[c, page], char[c,page]);
-//}
+/*
+for(var c = 0; c < draw_char ; c++)
+{
+	//the text
+	draw_text(char_x[c,page], char_y[c, page], char[c,page]);
+}
+*/
+
 

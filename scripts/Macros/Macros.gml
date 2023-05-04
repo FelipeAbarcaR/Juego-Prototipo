@@ -10,7 +10,7 @@
 #macro X_POS_TEXTBOX 36
 #macro Y_POS_TEXTBOX 200 
 #macro TEXTBOX_W 407
-#macro TEXTBOX_H 57
+#macro TEXTBOX_H 114
 
 enum ENEMYSTATE
 {

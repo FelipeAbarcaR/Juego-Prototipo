@@ -208,6 +208,5 @@ function ScriptOptions (_option, _link_id){
 }
 
 function TextOver (){
-
-	global.textover = true;
+	with(obj_player) state = laststate;
 }

@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Managers",
-    "path": "folders/Objects/Managers.yy",
+    "name": "No_se_ocupan",
+    "path": "folders/No_se_ocupan.yy",
   },
   "parentObjectId": null,
   "persistent": false,

@@ -48,11 +48,11 @@ function CalcAttack (_maskindex){
 				with(_hitID)
 				{
 					//la funcion checkea si el primer objeto es parent del segundo
-					//if(object_is_ancestor(object_index, obj_enemy))
-					//{
+					if(object_is_ancestor(object_index, prnt_enemy))
+					{
 						//id es el de la instancia (enemigo) y el other.id el del player
-					//	HurtEnemy(id, 5, other.id, 10);
-					//}
+						HurtEnemy(id, 5, other.id, 10);
+					}
 					//else
 					if(EntityHitScript != -1) script_execute(EntityHitScript);
 				}
@@ -61,4 +61,35 @@ function CalcAttack (_maskindex){
 	}
 	ds_list_destroy(_hitbyattacknow);
 	mask_index = spr_player;
+}
+
+function HurtEnemy(_enemy, _damage, _source, _knockback){
+	
+	with(_enemy)
+	{
+		if(state != ENEMYSTATE.DIE)
+		{
+			enemyHP -= _damage;
+			flash = 1;
+			
+			//Hurt or Dead
+			if(enemyHP <= 0)
+			{
+				state = ENEMYSTATE.DIE;
+			}
+			else
+			{
+				if(state != ENEMYSTATE.HURT) stateprevious = state;
+				state = ENEMYSTATE.HURT;
+			}
+			
+			image_index = 0;
+			if(_knockback != 0)
+			{
+				var _knockdirection = point_direction(x,y,(_source).x,(_source).y);
+				xTo = x - lengthdir_x(_knockback, _knockdirection);
+				yTo = y - lengthdir_y(_knockback, _knockdirection);
+			}
+		}
+	}
 }

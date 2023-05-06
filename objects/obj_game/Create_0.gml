@@ -3,6 +3,7 @@ randomize();
 global.gamepaused = false;
 global.textspeed = .75;
 global.icamara = instance_create_layer(0,0,layer,obj_camera);
+global.iUI = instance_create_layer(0,0,layer,obj_UI);
 global.targetRoom = -1;
 global.targetX = -1;
 global.targetY = -1;

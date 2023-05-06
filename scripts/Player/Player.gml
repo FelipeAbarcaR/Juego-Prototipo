@@ -191,10 +191,9 @@ function PlayerStateFree(){
 
 function PlayerStateLocked(){
 	
-	x = activate.x - 20;
+	x = activate.x - 30;
 	y = activate.y ;
 }
-
 
 function PlayerStateTransition(){
 	

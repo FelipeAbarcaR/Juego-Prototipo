@@ -9,17 +9,12 @@ input_delay = max_input_delay;
 
 // Position
 margin = 16; // how much space the textbox gets from the edges of the screen
-padding = 8; // how much space things inside the textbox get
+padding = 4; // how much space things inside the textbox get
 width = display_get_gui_width() - margin * 2;
 height = TEXTBOX_H;
 
 x = (display_get_gui_width()- width)/2;
 y = display_get_gui_height() - height - margin;
-
-/*
-x = (display_get_gui_width() - width) / 2;
-y = display_get_gui_height() - height - margin;
-*/
 
 // Text
 text_font = fnt_text;
@@ -41,11 +36,11 @@ speaker_color = #464633;
 
 //Option
 option_x = padding;
-option_y = padding * -6;
-option_spacing = 50;
-option_selection_indent = 24;
-option_width = 300;
-option_height = 40;
+option_y = padding *-6;
+option_spacing = 20;
+option_selection_indent = 20;
+option_width = 100;
+option_height = 20;
 option_text_x = 10;
 option_text_color = c_white;
 

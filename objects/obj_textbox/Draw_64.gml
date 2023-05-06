@@ -80,7 +80,7 @@ if(finished && option_count >0)
 		if( i == current_option)
 		{
 			opt_x += option_selection_indent;
-			draw_sprite(spr_textbox_arrow,0,opt_x,opt_y);
+			draw_sprite(spr_textbox_arrow,0,opt_x - 20,opt_y - 10);
 		}
 		
 		draw_sprite_stretched(sprite_index,1,opt_x,opt_y - option_height/2,option_width,option_height);

@@ -9,6 +9,7 @@
   "instanceCreationOrder": [
     {"name":"inst_5B348DB5","path":"rooms/roomMapaInicial/roomMapaInicial.yy",},
     {"name":"inst_12854EB","path":"rooms/roomMapaInicial/roomMapaInicial.yy",},
+    {"name":"inst_50C6F98E","path":"rooms/roomMapaInicial/roomMapaInicial.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -18,6 +19,7 @@
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"prnt_entity","path":"objects/prnt_entity/prnt_entity.yy",},"propertyId":{"name":"EntityActivateScript","path":"objects/prnt_entity/prnt_entity.yy",},"value":"startDialogue",},
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"prnt_entity","path":"objects/prnt_entity/prnt_entity.yy",},"propertyId":{"name":"EntityActivateArgs","path":"objects/prnt_entity/prnt_entity.yy",},"value":"[\"Breakfast\"]",},
           ],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":256.0,"y":96.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_50C6F98E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_slime","path":"objects/obj_slime/obj_slime.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":256.0,"y":128.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Col","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":68,"SerialiseWidth":120,"TileCompressedData":[
 -127,-2147483648,-5,1,4,-2147483648,1,-2147483648,1,-110,-2147483648,1,1,-10,-2147483648,-2,1,3,-2147483648,1,1,-120,-2147483648,-2,1,-359,-2147483648,1,1,-119,-2147483648,4,1,0,1,1,-100,-2147483648,-2,0,3,1,-2147483648,1,-14,-2147483648,-2,0,-98,-2147483648,1,1,-20,-2147483648,1,0,-97,-2147483648,1,1,-8,-2147483648,-2,1,-5,-2147483648,1,1,-3,-2147483648,-2,1,-98,-2147483648,1,1,-11,-2147483648,1,1,-3,-2147483648,2,1,-2147483648,-3,1,-99,-2147483648,-2,1,-11,-2147483648,-5,1,-103,-2147483648,-2,1,-120,-2147483648,1,1,-9,-2147483648,-2,1,-110,-2147483648,-3,1,-2,-2147483648,-3,1,-115,-2147483648,1,1,-6226,

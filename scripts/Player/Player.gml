@@ -130,15 +130,21 @@ function PlayerStateFree(){
 		state = PlayerStateAttack;
 		stateattack = AttackSlash;
 	}
+	
 	//Activate key logic
 	if(keyactivate)
 		{
 
-			var _activateX = x +lengthdir_x(10, direction);
-			var _activateY = y +lengthdir_y(10, direction);
+			var _activateX = x + lengthdir_x(10, direction);
+			
+			var _activateY = y + lengthdir_y(10, direction);
+			
 			var _activatesize = 4;
+			
 			var _activatelist = ds_list_create();
+			
 			activate = noone;
+			
 			var _entitiesfound = collision_rectangle_list(
 				_activateX - _activatesize,
 				_activateY - _activatesize,
@@ -170,6 +176,7 @@ function PlayerStateFree(){
 			{
 				state = PlayerStateRoll;
 				movedistanceremaining = distanceroll;
+				audio_play_sound()
 			}
 			else
 			{
@@ -191,7 +198,7 @@ function PlayerStateFree(){
 
 function PlayerStateLocked(){
 	
-	x = activate.x - 30;
+	x = activate.x - 40;
 	y = activate.y ;
 }
 

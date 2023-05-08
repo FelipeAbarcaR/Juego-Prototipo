@@ -33,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_questie",
-    "path": "sprites/spr_questie/spr_questie.yy",
+    "name": "spr_ViejoSabio",
+    "path": "sprites/spr_ViejoSabio/spr_ViejoSabio.yy",
   },
   "spriteMaskId": null,
   "visible": true,

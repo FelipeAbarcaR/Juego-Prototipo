@@ -33,7 +33,7 @@
   "properties": [
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"EnemySpeed","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"0.75","varType":0,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"EnemyAggroRadius","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"48","varType":0,},
-    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"EnemyAttackRadius","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"16","varType":0,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"EnemyAttackRadius","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"32","varType":0,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"enemyHP","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"18","varType":0,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"enemyforcetouch","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"32","varType":0,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"enemydamagetouch","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"0.5","varType":0,},

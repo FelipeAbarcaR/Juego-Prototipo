@@ -4,6 +4,7 @@
 // The one function that you need to call!
 // Creates a textbox and starts a conversation.
 // @param topic - What topic the dialogue box should use
+
 function startDialogue(topic) {
 	if (instance_exists(obj_textbox)) return;
 	
@@ -64,11 +65,7 @@ function type(x, y, text, progress, width) {
 
 //-----------------ACTIONS------------------//
 
-#macro TEXT new TextAction
-#macro SPEAKER new SpeakerAction
-#macro CHOICE new ChoiceAction
-#macro OPTION new OptionAction
-#macro GOTO new GotoAction
+
 
 		// el constructor hace que pueda llamar a la funcion para hacer una estructura de datos
 function DialogueAction() constructor {
@@ -147,21 +144,12 @@ function GotoAction(_topic) : DialogueAction() constructor{
 
 global.topics = {};
 
-global.topics[$ "Example"] = [
-	TEXT("Hello world!"),
-	TEXT("I sure hope this dialogue system works first try!"),
-	TEXT("We should test having a page with lots of words in it, to make sure that the line break feature is working properly.")
-];
-
 global.topics[$ "Good Morning"] = [
-	SPEAKER("Sam", spr_portrait_sam,PORTRAIT_SIDE.LEFT),
-	TEXT("Good Morning! How are you today?"),
-	SPEAKER ("Rudy", spr_portrait_rudy, PORTRAIT_SIDE.RIGHT),
-	TEXT("Im doing very well, and you?"),
-	SPEAKER("Sam", spr_portrait_sam,PORTRAIT_SIDE.LEFT),
-	TEXT("I can't complain, except for one thing..."),
-	SPEAKER ("Sam", spr_portrait_sam_mad),
-	TEXT("the supermarket was out of carrot juice today!"),
+	SPEAKER("Viejo Sabio",spr_portrait_ViejoSabio, PORTRAIT_SIDE.LEFT),
+	TEXT("fiuu, esta vez si que se lucieron, No sabes de lo que hablo?"),
+	TEXT("Bueno, nada importante, lo único que tienes que saber, es que, en este mundo, todo funciona con el ritmo."),
+	TEXT("Por tu cara de confusión veo, que la inteligencia no es lo tuyo JA!JA!JA!."),
+	TEXT("Ni tampoco el buen humor, en fin, si lo que necesitas es respuestas, al único lugar al que puedes acceder no queda lejos de aquí"),
 ];
 
 global.topics[$ "Breakfast"] = [

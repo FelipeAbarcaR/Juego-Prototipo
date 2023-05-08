@@ -12,6 +12,12 @@
 #macro TEXTBOX_W 407
 #macro TEXTBOX_H 100
 
+#macro TEXT new TextAction
+#macro SPEAKER new SpeakerAction
+#macro CHOICE new ChoiceAction
+#macro OPTION new OptionAction
+#macro GOTO new GotoAction
+
 enum ENEMYSTATE
 {
 	IDLE,

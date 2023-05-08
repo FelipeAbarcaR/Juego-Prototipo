@@ -31,7 +31,7 @@ if(sprite_exists(portrait_sprite))
 	}
 	
 	//Draw portrait backing
-	draw_sprite(spr_portrait,0,draw_portrait_x,draw_portrait_y);
+	//draw_sprite(spr_portrait,0,draw_portrait_x,draw_portrait_y);
 	
 	//Animate the portrait when typing
 	var subimg = 0;

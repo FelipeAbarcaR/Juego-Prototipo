@@ -1,4 +1,4 @@
-if(type == TRANS_TYPE.SLIDE)
+if(typee == TRANS_TYPE.SLIDE)
 {
 	draw_set_color(c_black);
 	draw_rectangle(0,0,width,percent * heightHalf, false);
@@ -6,7 +6,7 @@ if(type == TRANS_TYPE.SLIDE)
 	
 }
 
-if(type == TRANS_TYPE.FADE)
+if(typee == TRANS_TYPE.FADE)
 {
 	
 	

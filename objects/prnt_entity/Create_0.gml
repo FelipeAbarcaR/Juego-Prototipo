@@ -7,3 +7,5 @@ spd = 0;
 z= 0;
 
 text_id = ""; 
+
+depth = -bbox_bottom;

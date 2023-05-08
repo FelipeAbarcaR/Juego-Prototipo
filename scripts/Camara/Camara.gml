@@ -20,7 +20,7 @@ function RoomTransition(_type,_targetroom){
 	{
 		with(instance_create_depth(0,0,-9999,obj_transition))
 		{
-			type = _type;
+			typee = _type;
 			target = _targetroom;
 		}
 	}

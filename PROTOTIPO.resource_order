@@ -68,7 +68,6 @@
     {"name":"obj_cutscene","order":3,"path":"objects/obj_cutscene/obj_cutscene.yy",},
     {"name":"Camara","order":5,"path":"scripts/Camara/Camara.yy",},
     {"name":"roomMapaInicial","order":1,"path":"rooms/roomMapaInicial/roomMapaInicial.yy",},
-    {"name":"sfx_roll","order":1,"path":"sounds/sfx_roll/sfx_roll.yy",},
     {"name":"roomBattle","order":4,"path":"rooms/roomBattle/roomBattle.yy",},
     {"name":"Macros","order":1,"path":"scripts/Macros/Macros.yy",},
     {"name":"spr_portrait_sam","order":2,"path":"sprites/spr_portrait_sam/spr_portrait_sam.yy",},

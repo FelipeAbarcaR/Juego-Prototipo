@@ -203,7 +203,7 @@ function PlayerStateLocked(){
 }
 
 function PlayerStateTransition(){
-	
+
 	//Movimiento
 	PlayerCollision();
 	

@@ -3,11 +3,16 @@
 
 with(obj_player) 
 {
-	if(state != PlayerStateDead) state = PlayerStateTransition;
+	if(state != PlayerStateDead)
+	{
+		
+		state = PlayerStateTransition;
+	}
 }
 
 if(leading == OUT)
 {
+	audio_pause_all();
 	//se ocupa en min para que la suma no pase del 1
 	percent = min(1, percent + TRANSITION_SPEED);
 	//si la pantalla esta totalmente oscurecida
@@ -24,6 +29,8 @@ else //leading == IN
 	if(percent <= 0)
 	{
 		with(obj_player) state = PlayerStateFree;
+		audio_play_sound(music_ForestTime,5,true);
 		instance_destroy();
 	}
 }	
+

@@ -144,12 +144,12 @@ function GotoAction(_topic) : DialogueAction() constructor{
 
 global.topics = {};
 
-global.topics[$ "Good Morning"] = [
+global.topics[$ "Introduccion"] = [
 	SPEAKER("Viejo Sabio",spr_portrait_ViejoSabio, PORTRAIT_SIDE.LEFT),
 	TEXT("fiuu, esta vez si que se lucieron, No sabes de lo que hablo?"),
-	TEXT("Bueno, nada importante, lo único que tienes que saber, es que, en este mundo, todo funciona con el ritmo."),
-	TEXT("Por tu cara de confusión veo, que la inteligencia no es lo tuyo JA!JA!JA!."),
-	TEXT("Ni tampoco el buen humor, en fin, si lo que necesitas es respuestas, al único lugar al que puedes acceder no queda lejos de aquí"),
+	TEXT("Bueno, nada importante, lo unico que tienes que saber, es que, en este mundo, todo funciona con el ritmo."),
+	TEXT("Por tu cara de confusion veo, que la inteligencia no es lo tuyo JA!JA!JA!."),
+	TEXT("Ni tampoco el buen humor, en fin, si lo que necesitas es respuestas, al unico lugar al que puedes acceder no queda lejos de aqui"),
 ];
 
 global.topics[$ "Breakfast"] = [

@@ -1,1 +1,1 @@
-audio_play_sound(music_ForestTime,10,true);
+audio_play_sound(music_ForestTime,5,true);

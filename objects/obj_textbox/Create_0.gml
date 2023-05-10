@@ -92,6 +92,7 @@ next = function() {
 		{
 			global.textover = true;
 			state = laststate;
+			RoomTransition(TRANS_TYPE.SLIDE,roomBattle);
 		}
 		instance_destroy();
 	}

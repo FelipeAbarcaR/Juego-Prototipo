@@ -29,7 +29,6 @@ else //leading == IN
 	if(percent <= 0)
 	{
 		with(obj_player) state = PlayerStateFree;
-		audio_play_sound(music_ForestTime,5,true);
 		instance_destroy();
 	}
 }	

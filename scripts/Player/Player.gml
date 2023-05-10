@@ -198,6 +198,7 @@ function PlayerStateFree(){
 
 function PlayerStateLocked(){
 	
+	image_index = 3;
 	x = activate.x - 40;
 	y = activate.y ;
 }

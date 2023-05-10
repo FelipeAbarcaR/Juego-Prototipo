@@ -176,7 +176,7 @@ function PlayerStateFree(){
 			{
 				state = PlayerStateRoll;
 				movedistanceremaining = distanceroll;
-				audio_play_sound()
+				audio_play_sound(sfx_roll,8,false);
 			}
 			else
 			{

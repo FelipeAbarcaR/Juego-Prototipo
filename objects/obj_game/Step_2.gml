@@ -1,3 +1,6 @@
+with(all) depth = -bbox_bottom;
+
+
 if(keyboard_check_pressed(vk_escape))
 	{
 	global.gamepaused = !global.gamepaused;

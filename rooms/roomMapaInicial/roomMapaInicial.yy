@@ -9,14 +9,12 @@
   "instanceCreationOrder": [
     {"name":"inst_4738AF15","path":"rooms/roomMapaInicial/roomMapaInicial.yy",},
     {"name":"inst_267E89F3","path":"rooms/roomMapaInicial/roomMapaInicial.yy",},
-    {"name":"inst_7B00423F","path":"rooms/roomMapaInicial/roomMapaInicial.yy",},
   ],
   "isDnd": false,
   "layers": [
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Instances","depth":0,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4738AF15","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":896.0,"y":544.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_267E89F3","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_puerta","path":"objects/obj_puerta/obj_puerta.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1488.0,"y":912.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7B00423F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_music","path":"objects/obj_music/obj_music.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":0.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Col","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":68,"SerialiseWidth":120,"TileCompressedData":[
 -44,0,-76,-2147483648,-44,0,-76,-2147483648,-44,0,-76,-2147483648,-44,0,-76,-2147483648,-44,0,-76,-2147483648,-44,0,-76,-2147483648,-44,0,-76,-2147483648,-44,0,-76,-2147483648,2,0,1,-42,0,-76,-2147483648,2,0,1,-42,0,-76,-2147483648,2,0,1,-42,0,-76,-2147483648,1,0,-11,1,-32,0,-76,-2147483648,2,0,1,-9,0,1,1,-32,0,-45,-2147483648,-28,1,-3,-2147483648,2,0,1,-9,0,1,1,-32,0,-45,-2147483648,1,1,-26,-2147483648,1,1,-3,-2147483648,3,0,1,1,-8,0,1,1,-32,0,-44,-2147483648,-2,1,-26,-2147483648,1,1,-3,-2147483648,-2,0,-2,1,-5,

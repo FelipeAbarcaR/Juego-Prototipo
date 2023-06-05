@@ -2,7 +2,7 @@ function PlayerAnimateSprite(){
 	//Update Sprite
 	
 	//cuanto frames tenemos en una animacion en particular
-	var _totalframes = sprite_get_number(sprite_index) /4;
+	var _totalframes = sprite_get_number(sprite_index) /8;
 	image_index = localframe +(CARDINAL_DIR * _totalframes);
 
 	//nunca animamos el sprite de player sino que aumentamos el localframe

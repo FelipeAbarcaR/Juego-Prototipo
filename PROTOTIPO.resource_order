@@ -46,6 +46,7 @@
     {"name":"M0","order":3,"path":"folders/Tile Sets/M0.yy",},
     {"name":"Minijuegos","order":5,"path":"folders/Tile Sets/Minijuegos.yy",},
     {"name":"Otros","order":6,"path":"folders/Tile Sets/Otros.yy",},
+    {"name":"Gato3","order":8,"path":"folders/Sprites/Player/Gato3.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"bgm_Kappn","order":3,"path":"sounds/bgm_Kappn/bgm_Kappn.yy",},
@@ -61,6 +62,7 @@
     {"name":"spr_Hand","order":1,"path":"sprites/spr_Hand/spr_Hand.yy",},
     {"name":"Text","order":10,"path":"scripts/Text/Text.yy",},
     {"name":"obj_puerta","order":5,"path":"objects/obj_puerta/obj_puerta.yy",},
+    {"name":"spr_gato3_player","order":2,"path":"sprites/spr_gato3_player/spr_gato3_player.yy",},
     {"name":"spr_figther1_hit","order":9,"path":"sprites/spr_figther1_hit/spr_figther1_hit.yy",},
     {"name":"sfx_roll","order":4,"path":"sounds/sfx_roll/sfx_roll.yy",},
     {"name":"Dialogue_System","order":4,"path":"scripts/Dialogue_System/Dialogue_System.yy",},
@@ -152,6 +154,7 @@
     {"name":"obj_Torch","order":6,"path":"objects/obj_Torch/obj_Torch.yy",},
     {"name":"obj_control_fight","order":1,"path":"objects/obj_control_fight/obj_control_fight.yy",},
     {"name":"scr_FightEnemyMove","order":3,"path":"scripts/scr_FightEnemyMove/scr_FightEnemyMove.yy",},
+    {"name":"spr_gato3_idle","order":1,"path":"sprites/spr_gato3_idle/spr_gato3_idle.yy",},
     {"name":"spr_Laser","order":2,"path":"sprites/spr_Laser/spr_Laser.yy",},
     {"name":"scr_CountingHand","order":17,"path":"scripts/scr_CountingHand/scr_CountingHand.yy",},
     {"name":"obj_player1_ns","order":3,"path":"objects/obj_player1_ns/obj_player1_ns.yy",},

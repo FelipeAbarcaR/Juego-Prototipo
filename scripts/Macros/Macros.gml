@@ -1,5 +1,5 @@
 #macro FRAME_RATE 60
-#macro CARDINAL_DIR round(direction/90)
+#macro CARDINAL_DIR round(direction/45)
 #macro ROOM_START roomMapaInicial
 #macro RESOLUTION_W 480
 #macro RESOLUTION_H 270

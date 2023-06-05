@@ -21,8 +21,8 @@ z = 0;
 
 localframe = 0;
 
-spriterun = spr_player_run;
-spriteidle = spr_player;
+spriterun = spr_gato3_run;
+spriteidle = spr_gato3_idle;
 spriteroll = spr_player_roll;
 
 invulnerable = 0;

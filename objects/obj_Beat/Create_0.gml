@@ -1,13 +1,9 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
 
-
-/// @description Inserte aquí la descripción
-// Puede escribir su código en este editor
-
 // Keep track of the current room and its associated data
-current_music = obj_control.room_data[global.currentroom][index.music];
-current_bpm = obj_control.room_data[global.currentroom][index.bpm];
+current_music = obj_game.room_data[global.currentroom][index.music];
+current_bpm = obj_game.room_data[global.currentroom][index.bpm];
 // set bpm
 bpm=current_bpm;
 

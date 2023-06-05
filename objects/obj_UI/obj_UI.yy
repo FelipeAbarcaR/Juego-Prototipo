@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Managers",
-    "path": "folders/Objects/Managers.yy",
+    "name": "Interfaz",
+    "path": "folders/Managers/Interfaz.yy",
   },
   "parentObjectId": null,
   "persistent": true,

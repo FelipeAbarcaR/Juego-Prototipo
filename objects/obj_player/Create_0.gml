@@ -36,3 +36,5 @@ if(global.targetX != -1)
 	y = global.targetY;
 	direction = global.targetdirection;
 }
+
+inputmagnitude=0;

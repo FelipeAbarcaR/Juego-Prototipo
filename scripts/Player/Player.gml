@@ -174,9 +174,18 @@ function PlayerStateFree(){
 			
 			if(activate == noone)
 			{
-				state = PlayerStateRoll;
-				movedistanceremaining = distanceroll;
-				audio_play_sound(sfx_roll,8,false);
+				//create bar
+				with(instance_create_layer(x, y,"Instances",obj_vanish_GUI))
+					{
+						sprite_index=img_BeatMeter;
+					}
+					
+				if(global.beatchance)
+				{
+					state = PlayerStateRoll;
+					movedistanceremaining = distanceroll;
+					audio_play_sound(sfx_roll,8,false);
+				}
 			}
 			else
 			{

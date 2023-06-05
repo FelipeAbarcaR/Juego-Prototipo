@@ -29,3 +29,33 @@ enum ENEMYSTATE
 	WAIT
 }
 
+//battle
+enum EnemyStance{
+	prepare,
+	attack,
+	wait,
+	hit,
+	endstance,
+	idle,
+	dead
+}
+
+//general
+enum Sala{
+	TestMove,
+	fight,
+	Obstacles	
+}
+enum index{
+	name,
+	music,
+	bpm,
+	follow,
+	mode,
+	mainchar
+}
+enum mode{
+	move,
+	grid,
+	fight
+}

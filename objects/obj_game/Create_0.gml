@@ -4,6 +4,8 @@ global.gamepaused = false;
 global.textspeed = .75;
 global.icamara = instance_create_layer(0,0,layer,obj_camera);
 global.iUI = instance_create_layer(0,0,layer,obj_UI);
+global.DrawText=false;
+
 
 global.targetRoom = -1;
 global.targetX = -1;
@@ -17,9 +19,38 @@ global.textover = false;
 
 surface_resize(application_surface,RESOLUTION_W,RESOLUTION_H);
 
-room_goto(ROOM_START);
+global.gamemode=mode.move;
 
 
+//room control
+
+	global.currentroom=0;
+	
+	//Room data rooms index in Macros (enum) 
+	//room_data=[room_name, Music, BPM, obj_to_follow, room_mode,mainChar]
+	room_data = [
+		[roomMapaInicial, bgm_ForestTime, 126, obj_player, mode.move,obj_player],
+	    [rm_pelea,bgm_Feelings, 115, obj_control_fight , mode.fight,obj_Conde],
+	    [rm_Obstacle1,bgm_OneLove, 107,obj_CharGrid , mode.grid,obj_CharGrid],
+		[roomViejoSabio,bgm_ForestTimeInterior, 107,obj_player , mode.grid,obj_player],
+	
+	];
+	
+	room_count=array_length(room_data);
+	
+	enum rm
+	{
+		inicial,
+		fight,
+		obstaculos,
+		viejosabio,
+	}
+	
+	room_goto2(rm.inicial);
+	
+	
+//mute bin var
+mute=0;
 //room data
 
 

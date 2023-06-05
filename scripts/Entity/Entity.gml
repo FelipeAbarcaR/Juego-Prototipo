@@ -86,12 +86,12 @@ if(instance_exists(obj_player))
 	if(obj_player.state != PlayerStateDead)
 	{
 		with(obj_puerta) image_index = 1;
-		global.targetRoom = roomTesteo;
+		global.targetRoom = roomViejoSabio;
 		global.targetX = 160;
 		global.targetY = 160;
 		global.targetdirection = obj_player.direction;
 		with(obj_player) state = PlayerStateTransition;
-		RoomTransition(TRANS_TYPE.SLIDE, roomTesteo);
+		RoomTransition(TRANS_TYPE.SLIDE, roomViejoSabio);
 		instance_destroy();
 	}
 }

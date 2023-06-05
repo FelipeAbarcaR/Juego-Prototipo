@@ -1,5 +1,9 @@
-if(instance_exists(obj_player))
+
+var _follow = obj_game.room_data[global.currentroom][index.follow];
+
+if(instance_exists(_follow))
 {
-	x = obj_player.x;
-	y = obj_player.y;
+	follow=_follow;
+	x = _follow.x;
+	y = _follow.y;
 }

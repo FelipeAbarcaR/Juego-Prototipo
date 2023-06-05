@@ -225,8 +225,8 @@
   "out_tilehborder": 2,
   "out_tilevborder": 2,
   "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy",
+    "name": "M0",
+    "path": "folders/Tile Sets/M0.yy",
   },
   "spriteId": {
     "name": "spr_ts_Ale",

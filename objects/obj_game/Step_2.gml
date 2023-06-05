@@ -1,4 +1,4 @@
-with(all) depth = -bbox_bottom;
+//with(all) depth = -bbox_bottom;
 
 
 if(keyboard_check_pressed(vk_escape))

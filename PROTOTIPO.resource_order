@@ -172,6 +172,7 @@
     {"name":"obj_CountHand","order":2,"path":"objects/obj_CountHand/obj_CountHand.yy",},
     {"name":"spr_GatoIdleBack","order":1,"path":"sprites/spr_GatoIdleBack/spr_GatoIdleBack.yy",},
     {"name":"spr_CondeHurt","order":4,"path":"sprites/spr_CondeHurt/spr_CondeHurt.yy",},
+    {"name":"spr_bg_forest","order":10,"path":"sprites/spr_bg_forest/spr_bg_forest.yy",},
     {"name":"obj_slime","order":1,"path":"objects/obj_slime/obj_slime.yy",},
     {"name":"spr_health","order":7,"path":"sprites/spr_health/spr_health.yy",},
     {"name":"obj_Shuriken","order":5,"path":"objects/obj_Shuriken/obj_Shuriken.yy",},

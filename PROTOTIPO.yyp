@@ -226,6 +226,7 @@
     {"id":{"name":"Tile_casaMapaInicial","path":"tilesets/Tile_casaMapaInicial/Tile_casaMapaInicial.yy",},},
     {"id":{"name":"spr_CondeHurt","path":"sprites/spr_CondeHurt/spr_CondeHurt.yy",},},
     {"id":{"name":"FightRhythmAnimate","path":"scripts/FightRhythmAnimate/FightRhythmAnimate.yy",},},
+    {"id":{"name":"spr_bg_forest","path":"sprites/spr_bg_forest/spr_bg_forest.yy",},},
     {"id":{"name":"spr_arbol","path":"sprites/spr_arbol/spr_arbol.yy",},},
     {"id":{"name":"obj_slime","path":"objects/obj_slime/obj_slime.yy",},},
     {"id":{"name":"spr_CondaATK1","path":"sprites/spr_CondaATK1/spr_CondaATK1.yy",},},

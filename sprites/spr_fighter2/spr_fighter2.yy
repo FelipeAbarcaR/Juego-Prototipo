@@ -28,7 +28,7 @@
   "origin": 0,
   "parent": {
     "name": "Fight",
-    "path": "folders/Sprites/Fight.yy",
+    "path": "folders/Sprites/Minijuegos/Fight.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -27,7 +27,7 @@
   "origin": 7,
   "parent": {
     "name": "spr_Conde",
-    "path": "folders/Sprites/Fight/spr_Conde.yy",
+    "path": "folders/Sprites/Minijuegos/Fight/spr_Conde.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

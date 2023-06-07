@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "GUI",
-    "path": "folders/Sprites/Fight/GUI.yy",
+    "path": "folders/Sprites/Minijuegos/Fight/GUI.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

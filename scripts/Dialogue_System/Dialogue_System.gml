@@ -172,6 +172,8 @@ global.topics[$ "Breakfast"] = [
 		global.topics [$ "End of breakfast"] = [
 			TEXT("Goodbye, now"),
 		];
+global.topics[$ "signhouse1"] = [
 
-
+	TEXT("El Viejo Sabio le invita a entrar a la casa, no es que tenga algo mejor que hacer"),
+];
 

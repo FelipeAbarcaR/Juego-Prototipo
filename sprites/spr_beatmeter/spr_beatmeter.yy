@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "BeatBar",
-    "path": "folders/Sprites/BeatBar.yy",
+    "name": "Rhythm",
+    "path": "folders/Sprites/Rhythm.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

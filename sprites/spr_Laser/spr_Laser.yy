@@ -31,7 +31,7 @@
   "origin": 0,
   "parent": {
     "name": "Obstacle1",
-    "path": "folders/Sprites/Obstacle1.yy",
+    "path": "folders/Sprites/Minijuegos/Obstacle1.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

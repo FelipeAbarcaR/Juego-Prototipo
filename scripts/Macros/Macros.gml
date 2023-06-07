@@ -59,3 +59,9 @@ enum mode{
 	grid,
 	fight
 }
+
+enum signindex{
+	house,
+	danger,
+	monster
+}

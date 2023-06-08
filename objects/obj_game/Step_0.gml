@@ -3,7 +3,7 @@
 
 
 changeroom = keyboard_check_pressed(ord("M"));
-muteall= keyboard_check_pressed(ord("N"));
+muteall= keyboard_check_released(ord("N"));
 
 // on/off draw text from instances
 if keyboard_check_released(vk_lshift){
@@ -14,7 +14,7 @@ if changeroom {
 	audio_stop_all();
 	global.previousroom = global.currentroom;
     global.currentroom += 1;
-    if (global.currentroom > room_count - 1)
+    if (global.currentroom > global.room_count - 1)
     {
         global.currentroom = 0;
     }

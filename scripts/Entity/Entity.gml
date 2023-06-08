@@ -79,20 +79,25 @@ function EntityHitSolid(){
 	flash = 0.5;
 }
 	
-function AbrirPuerta(){
+function AbrirPuerta(_roomindex){
 	
 if(instance_exists(obj_player))
 {
 	if(obj_player.state != PlayerStateDead)
 	{
 		with(obj_puerta) image_index = 1;
-		global.targetRoom = roomViejoSabio;
+		var _name=index.name;
+		var _roomname=global.room_data[_roomindex][_name];
+		global.currentroom =_roomindex;
+		global.targetRoom = _roomname;
 		global.targetX = 160;
 		global.targetY = 160;
 		global.targetdirection = obj_player.direction;
 		with(obj_player) state = PlayerStateTransition;
-		RoomTransition(TRANS_TYPE.SLIDE, roomViejoSabio);
+		//room_goto(global.targetRoom)
+		RoomTransition(TRANS_TYPE.SLIDE,global.targetRoom)
 		instance_destroy();
+		
 	}
 }
 }

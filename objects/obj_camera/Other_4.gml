@@ -1,5 +1,5 @@
 
-var _follow = obj_game.room_data[global.currentroom][index.follow];
+var _follow = global.room_data[global.currentroom][index.follow];
 
 if(instance_exists(_follow))
 {

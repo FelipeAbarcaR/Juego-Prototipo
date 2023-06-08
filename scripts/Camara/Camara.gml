@@ -10,11 +10,8 @@ function ScreenShake(_magnitude,_length){
 	}
 }
 
-//Esta funcion reemplazara room_goto
+
 function RoomTransition(_type,_targetroom){
-/// @desc RoomTransition (type, targetroom)
-/// @arg Type 
-/// @arg Targetroom
 
 	if(!instance_exists(obj_transition))
 	{

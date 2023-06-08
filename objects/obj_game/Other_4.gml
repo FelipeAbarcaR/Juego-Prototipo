@@ -1,2 +1,2 @@
 layer_set_visible("Col",false);
-global.gamemode=room_data[global.currentroom][index.mode];
+global.gamemode=global.room_data[global.currentroom][index.mode];

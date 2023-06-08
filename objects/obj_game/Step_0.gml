@@ -12,12 +12,13 @@ if keyboard_check_released(vk_lshift){
 
 if changeroom {
 	audio_stop_all();
+	global.previousroom = global.currentroom;
     global.currentroom += 1;
     if (global.currentroom > room_count - 1)
     {
         global.currentroom = 0;
     }
-    room_goto(room_data[global.currentroom][index.name]);
+    room_goto(global.room_data[global.currentroom][index.name]);
 	}
 
 if muteall{

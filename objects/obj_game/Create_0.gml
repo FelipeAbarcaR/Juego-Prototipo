@@ -25,18 +25,19 @@ global.gamemode=mode.move;
 //room control
 
 	global.currentroom=0;
+	global.previousroom=global.currentroom;
 	
 	//Room data rooms index in Macros (enum) 
 	//room_data=[room_name, Music, BPM, obj_to_follow, room_mode,mainChar]
-	room_data = [
+	global.room_data = [
 		[roomMapaInicial, bgm_ForestTime, 126, obj_player, mode.move,obj_player],
 	    [rm_pelea,bgm_Feelings, 115, obj_control_fight , mode.fight,obj_Conde],
 	    [rm_Obstacle1,bgm_OneLove, 107,obj_CharGrid , mode.grid,obj_CharGrid],
-		[roomViejoSabio,bgm_ForestTimeInterior, 107,obj_player , mode.grid,obj_player],
+		[roomViejoSabio,bgm_ForestTimeInterior, 107,obj_player , mode.move,obj_player],
 	
 	];
 	
-	room_count=array_length(room_data);
+	global.room_count=array_length(global.room_data);
 	
 	enum rm
 	{

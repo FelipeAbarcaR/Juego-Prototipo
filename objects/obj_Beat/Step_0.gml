@@ -47,14 +47,14 @@ scr_CountingHand();
 	BeatBarProgress = sin((SumFullDelta/BeatTimeMS)*pi)
 	if (abs(BeatBarProgress)<=beathitrange) global.beatchance =true else global.beatchance =false
 
-	var char = obj_game.room_data[global.currentroom][index.mainchar];
+//	var char = global.room_data[global.currentroom][index.mainchar];
 
-//draw vanishing BeatBar
-	if (char.inputmagnitude and obj_game.room_data[global.currentroom][index.mode]!=mode.move)
-	{
-		with(instance_create_layer(x, y,"Instances",obj_vanish_GUI))
-		{
-			sprite_index=img_BeatMeter;
-		}
-	}
+////draw vanishing BeatBar
+//	//if (char.inputmagnitude  and global.room_data[global.currentroom][index.mode]!= mode.move)
+//	//{
+//	//	with(instance_create_layer(x, y,"Instances",obj_vanish_GUI))
+//	//	{
+//	//		sprite_index=img_BeatMeter;
+//	//	}
+//	//}
 	

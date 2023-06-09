@@ -1,3 +1,5 @@
+event_inherited();
+
 flash = 0;
 flashShader = sha_white_flash;
 uFlash = shader_get_uniform(flashShader,"flash");
@@ -8,4 +10,3 @@ z= 0;
 
 text_id = ""; 
 
-depth = -bbox_bottom;

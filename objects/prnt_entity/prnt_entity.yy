@@ -15,7 +15,10 @@
     "name": "Entity",
     "path": "folders/Objects/Entity.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "prnt_depth",
+    "path": "objects/prnt_depth/prnt_depth.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

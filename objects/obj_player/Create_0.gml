@@ -1,3 +1,5 @@
+event_inherited();
+
 state = PlayerStateFree;
 hitbyattack = -1;
 stateattack = AttackSlash;

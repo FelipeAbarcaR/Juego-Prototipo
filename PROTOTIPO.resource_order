@@ -50,6 +50,7 @@
     {"name":"M0","order":3,"path":"folders/Tile Sets/M0.yy",},
     {"name":"Minijuegos","order":5,"path":"folders/Tile Sets/Minijuegos.yy",},
     {"name":"Otros","order":6,"path":"folders/Tile Sets/Otros.yy",},
+    {"name":"Enviroment","order":5,"path":"folders/Objects/Entity/Enviroment.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"bgm_Kappn","order":3,"path":"sounds/bgm_Kappn/bgm_Kappn.yy",},
@@ -145,6 +146,7 @@
     {"name":"spr_Shuriken","order":5,"path":"sprites/spr_Shuriken/spr_Shuriken.yy",},
     {"name":"Camara","order":5,"path":"scripts/Camara/Camara.yy",},
     {"name":"spr_Torch","order":15,"path":"sprites/spr_Torch/spr_Torch.yy",},
+    {"name":"obj_depth_sorter","order":1,"path":"objects/obj_depth_sorter/obj_depth_sorter.yy",},
     {"name":"spr_CondaHurt","order":5,"path":"sprites/spr_CondaHurt/spr_CondaHurt.yy",},
     {"name":"spr_CondaATK3","order":2,"path":"sprites/spr_CondaATK3/spr_CondaATK3.yy",},
     {"name":"pth_DL1","order":4,"path":"paths/pth_DL1/pth_DL1.yy",},

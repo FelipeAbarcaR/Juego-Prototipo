@@ -28,7 +28,7 @@
   "origin": 0,
   "parent": {
     "name": "M0",
-    "path": "folders/Sprites/Tiles/M0.yy",
+    "path": "folders/Sprites/Entity/M0.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

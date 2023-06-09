@@ -11,8 +11,8 @@
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"prnt_entity","path":"objects/prnt_entity/prnt_entity.yy",},"propertyId":{"name":"EntityCollision","path":"objects/prnt_entity/prnt_entity.yy",},"value":"True",},
   ],
   "parent": {
-    "name": "Misc",
-    "path": "folders/Objects/Misc.yy",
+    "name": "M0",
+    "path": "folders/Objects/M0.yy",
   },
   "parentObjectId": {
     "name": "prnt_entity",

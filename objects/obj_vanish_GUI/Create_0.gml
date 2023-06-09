@@ -7,6 +7,8 @@ image_index=0;
 
 vanish=0.02;
 obj=obj_beat;
+
 x=obj.x;
 y=obj.y+obj.BarHalf*obj.BeatBarProgress;
+
 imgscale=1.2;

@@ -279,7 +279,7 @@ function PlayerStateBonk(){
 	var _collided = PlayerCollision();
 	
 	//Update Sprite
-	sprite_index = spr_player_hurt;
+	sprite_index = spr_gato3_idle;
 	image_index = CARDINAL_DIR + 2;
 	
 	//Cambiar altura

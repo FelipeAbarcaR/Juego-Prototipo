@@ -145,7 +145,7 @@ function GotoAction(_topic) : DialogueAction() constructor{
 global.topics = {};
 
 global.topics[$ "Introduccion"] = [
-	SPEAKER("Viejo Sabio",spr_portrait_ViejoSabio, PORTRAIT_SIDE.LEFT),
+	//SPEAKER("Viejo Sabio",spr_portrait_ViejoSabio, PORTRAIT_SIDE.LEFT),
 	TEXT("fiuu, esta vez si que se lucieron, No sabes de lo que hablo?"),
 	TEXT("Bueno, nada importante, lo unico que tienes que saber, es que, en este mundo, todo funciona con el ritmo."),
 	TEXT("Por tu cara de confusion veo, que la inteligencia no es lo tuyo JA!JA!JA!."),
@@ -153,7 +153,7 @@ global.topics[$ "Introduccion"] = [
 ];
 
 global.topics[$ "Breakfast"] = [
-	SPEAKER("Sam",spr_portrait_sam,PORTRAIT_SIDE.LEFT),
+	//SPEAKER("Sam",spr_portrait_sam,PORTRAIT_SIDE.LEFT),
 	CHOICE("What do you want for breakfast",
 		OPTION("Eggs", "Chose Eggs"),
 		OPTION ("Pancakes", "Chose Pancakes"))

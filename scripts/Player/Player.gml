@@ -175,10 +175,7 @@ function PlayerStateFree(){
 			if(activate == noone)
 			{
 				//create bar
-				with(instance_create_layer(x, y,"Instances",obj_vanish_GUI))
-					{
-						sprite_index=img_BeatMeter;
-					}
+				instance_create_layer(obj_beat.barX,obj_beat.barY,"Instances",obj_vanish_GUI)
 					
 				if(global.beatchance)
 				{

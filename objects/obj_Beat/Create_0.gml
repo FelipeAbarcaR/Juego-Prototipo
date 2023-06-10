@@ -27,3 +27,11 @@ BeatBarProgress=0;
 BeatBarLenght = 216;
 BarHalf=BeatBarLenght/2;
 boxchancelenght=50;
+
+// gui_cosas
+guiwidth=display_get_gui_width();
+guiheight=display_get_gui_height();
+
+//position of the beatbar. Set in Draw Event
+barX=0;
+barY=0;

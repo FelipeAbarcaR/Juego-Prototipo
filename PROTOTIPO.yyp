@@ -109,6 +109,7 @@
     {"id":{"name":"scr_GridMove","path":"scripts/scr_GridMove/scr_GridMove.yy",},},
     {"id":{"name":"RoomLayers","path":"scripts/RoomLayers/RoomLayers.yy",},},
     {"id":{"name":"room_goto2","path":"scripts/room_goto2/room_goto2.yy",},},
+    {"id":{"name":"ts_MapaInicial","path":"tilesets/ts_MapaInicial/ts_MapaInicial.yy",},},
     {"id":{"name":"obj_UI","path":"objects/obj_UI/obj_UI.yy",},},
     {"id":{"name":"spr_textbox_bg","path":"sprites/spr_textbox_bg/spr_textbox_bg.yy",},},
     {"id":{"name":"spr_TileGrid","path":"sprites/spr_TileGrid/spr_TileGrid.yy",},},
@@ -194,7 +195,6 @@
     {"id":{"name":"spr_Shuriken","path":"sprites/spr_Shuriken/spr_Shuriken.yy",},},
     {"id":{"name":"Camara","path":"scripts/Camara/Camara.yy",},},
     {"id":{"name":"spr_Torch","path":"sprites/spr_Torch/spr_Torch.yy",},},
-    {"id":{"name":"roomMapaInicial","path":"rooms/roomMapaInicial/roomMapaInicial.yy",},},
     {"id":{"name":"obj_depth_sorter","path":"objects/obj_depth_sorter/obj_depth_sorter.yy",},},
     {"id":{"name":"spr_CondaHurt","path":"sprites/spr_CondaHurt/spr_CondaHurt.yy",},},
     {"id":{"name":"spr_CondaATK3","path":"sprites/spr_CondaATK3/spr_CondaATK3.yy",},},
@@ -272,7 +272,6 @@
   ],
   "RoomOrderNodes": [
     {"roomId":{"name":"roomInit","path":"rooms/roomInit/roomInit.yy",},},
-    {"roomId":{"name":"roomMapaInicial","path":"rooms/roomMapaInicial/roomMapaInicial.yy",},},
     {"roomId":{"name":"rm_pelea","path":"rooms/rm_pelea/rm_pelea.yy",},},
     {"roomId":{"name":"rm_Obstacle1","path":"rooms/rm_Obstacle1/rm_Obstacle1.yy",},},
     {"roomId":{"name":"roomViejoSabio","path":"rooms/roomViejoSabio/roomViejoSabio.yy",},},

@@ -1,7 +1,7 @@
-////macros
-////alarms
-//#macro CAN_ATTACK		0
-//#macro hurrtt			1
+//macros
+//alarms
+#macro CAN_ATTACK		0
+#macro hurrtt			1
 
 //#macro TRANSITION_SPEED 0.02
 //#macro X_POS_TEXTBOX 36
@@ -13,14 +13,13 @@
 //#macro CARDINAL_DIR_NPC round(direction/90)
 
 
-
-////enums
-//enum states {
-//	IDLE,
-//	MOVE,
-//	ATTACK,
-//	DEAD,
-//	KNOCKBACK,
-//	ROLL,
-//	LOCK
-//}
+//enums
+enum states {
+	IDLE,
+	MOVE,
+	ATTACK,
+	DEAD,
+	KNOCKBACK,
+	ROLL,
+	LOCK
+}

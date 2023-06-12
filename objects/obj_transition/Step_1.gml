@@ -1,12 +1,12 @@
 /// @description Progress Transition
 //BEGIN STEP pasa antes que STEP
 
-with(obj_player) 
+with(o_player) 
 {
-	if(state != PlayerStateDead)
+	if(state != states.DEAD)
 	{
 		
-		state = PlayerStateTransition;
+		state = states.IDLE;
 	}
 }
 
@@ -28,7 +28,7 @@ else //leading == IN
 	//si la pantalla es totalmente aclarecida
 	if(percent <= 0)
 	{
-		with(obj_player) state = PlayerStateFree;
+		with(o_player) state = states.IDLE;
 		instance_destroy();
 	}
 }	

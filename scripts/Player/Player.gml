@@ -127,7 +127,7 @@ function PlayerStateFree(){
 	
 	if(keyattack)
 	{
-		state = PlayerStateAttack;
+		//state = PlayerStateAttack;
 		stateattack = AttackSlash;
 	}
 	
@@ -182,7 +182,7 @@ function PlayerStateFree(){
 					
 				if(global.beatchance)
 				{
-					state = PlayerStateRoll;
+					//state = PlayerStateRoll;
 					movedistanceremaining = distanceroll;
 					audio_play_sound(sfx_roll,8,false);
 				}
@@ -276,7 +276,7 @@ function PlayerStateBonk(){
 	//esto es para que sea 0 y no un numero negativo
 	movedistanceremaining = max(0, movedistanceremaining - speedbonk);
 	
-	var _collided = PlayerCollision();
+	//var _collided = PlayerCollision();
 	
 	//Update Sprite
 	sprite_index = spr_gato3_idle;
@@ -290,7 +290,7 @@ function PlayerStateBonk(){
 	//Cambiar estado
 	if(movedistanceremaining <= 0)
 		{
-		state = PlayerStateFree;
+		//state = PlayerStateFree;
 		z = 0;
 		}
 }
@@ -303,7 +303,7 @@ function PlayerStateRoll(){
 	//esto es para que sea 0 y no un numero negativo
 	movedistanceremaining = max(0, movedistanceremaining - speedroll);
 	
-	var _collided = PlayerCollision();
+	//var _collided = PlayerCollision();
 	
 	//Update Sprite
 	sprite_index = spriteroll;
@@ -318,12 +318,12 @@ function PlayerStateRoll(){
 	//Cambiar estado
 	if(movedistanceremaining <= 0)
 		{
-		state = PlayerStateFree;
+		//state = PlayerStateFree;
 		}
 	
-	if(_collided)
-	{
-		state = PlayerStateBonk;
-		movedistanceremaining = distancebonk;
-	}
+	//if(_collided)
+	//{
+	//	state = PlayerStateBonk;
+	//	movedistanceremaining = distancebonk;
+	//}
 }

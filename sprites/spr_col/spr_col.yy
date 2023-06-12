@@ -2,7 +2,7 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_col",
-  "bbox_bottom": 15,
+  "bbox_bottom": 31,
   "bbox_left": 16,
   "bbox_right": 31,
   "bbox_top": 0,
@@ -15,8 +15,8 @@
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ba59debf-f9d6-4781-a3d2-1f16090a8379",},
   ],
-  "gridX": 0,
-  "gridY": 0,
+  "gridX": 8,
+  "gridY": 8,
   "height": 32,
   "HTile": false,
   "layers": [

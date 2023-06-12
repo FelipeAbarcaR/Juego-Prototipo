@@ -1,4 +1,5 @@
 /// @description 
+event_inherited();
 state = states.IDLE;
 //init previous positions
 xp = x;
@@ -15,5 +16,4 @@ flash = flash_initial/2;
 //create path resource
 path = path_add();
 
-//Set my new layer
-Update_layers();
+

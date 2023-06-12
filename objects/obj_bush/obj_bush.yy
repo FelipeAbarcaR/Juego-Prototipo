@@ -9,7 +9,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "M0",
-    "path": "folders/Objects/M0.yy",
+    "path": "folders/Objects/Entity/Enviroment/M0.yy",
   },
   "parentObjectId": {
     "name": "prnt_entity",

@@ -6,8 +6,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "enviar a prototipo",
-    "path": "folders/enviar a prototipo.yy",
+    "name": "Objects",
+    "path": "folders/Objects.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -25,7 +25,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_solid",
+    "path": "sprites/spr_solid/spr_solid.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

@@ -12,8 +12,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "enviar a prototipo",
-    "path": "folders/enviar a prototipo.yy",
+    "name": "Player",
+    "path": "folders/Objects/Player.yy",
   },
   "parentObjectId": {
     "name": "o_entity_par",
@@ -34,7 +34,13 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
-  "spriteMaskId": null,
+  "spriteId": {
+    "name": "spr_gato3_player",
+    "path": "sprites/spr_gato3_player/spr_gato3_player.yy",
+  },
+  "spriteMaskId": {
+    "name": "spr_gato3_player",
+    "path": "sprites/spr_gato3_player/spr_gato3_player.yy",
+  },
   "visible": true,
 }

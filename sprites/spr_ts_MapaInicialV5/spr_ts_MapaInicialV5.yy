@@ -3,7 +3,7 @@
   "resourceVersion": "1.0",
   "name": "spr_ts_MapaInicialV5",
   "bbox_bottom": 476,
-  "bbox_left": 8,
+  "bbox_left": 0,
   "bbox_right": 527,
   "bbox_top": 0,
   "bboxMode": 0,
@@ -15,8 +15,8 @@
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"426e8664-89e5-4678-81bd-a74946c6fd03",},
   ],
-  "gridX": 0,
-  "gridY": 0,
+  "gridX": 16,
+  "gridY": 16,
   "height": 480,
   "HTile": false,
   "layers": [

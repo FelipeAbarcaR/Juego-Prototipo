@@ -1,13 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-var _imageyscale
-
-_imageyscale=image_yscale;
+/// @description Cause Room transition
 
 if (global.beat==true)
 {
-    _imageyscale*=(-1)
+    imagexscale*=(-1);
 }
 
 draw_sprite_ext(
@@ -15,9 +13,9 @@ draw_sprite_ext(
 	0,
 	x,
 	y,
-	image_xscale,
-	_imageyscale,
+	imagexscale,
+	image_yscale,
 	image_angle,
 	image_blend,
-	image_alpha
-	);
+	image_alpha);
+	

@@ -1,4 +1,4 @@
-function PlayerAnimateSprite(){
+		function PlayerAnimateSprite(){
 	//Update Sprite
 	
 	//cuanto frames tenemos en una animacion en particular

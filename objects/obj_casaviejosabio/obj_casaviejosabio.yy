@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "M0",
-    "path": "folders/Objects/M0.yy",
+    "name": "PROTOTIPO",
+    "path": "PROTOTIPO.yyp",
   },
   "parentObjectId": {
     "name": "prnt_entity",

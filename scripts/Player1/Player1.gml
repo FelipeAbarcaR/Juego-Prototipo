@@ -100,26 +100,26 @@ function anim() {
 			{
 				switch(dir)
 				{
-					case 0: sprite_index = sPlayer_right; break;
-					case 45: sprite_index = sPlayer_right; break;
-					case 90: sprite_index = sPlayer_up; break;
-					case 135: sprite_index = sPlayer_left; break;
-					case 180: sprite_index = sPlayer_left; break;
-					case 225: sprite_index = sPlayer_left; break;
-					case 270: sprite_index = sPlayer_down; break;
-					case 315: sprite_index = sPlayer_right; break;
+					case 0: sprite_index = spr_gato3_right; break;
+					case 45: sprite_index = spr_gato3_right_up; break;
+					case 90: sprite_index = spr_gato3_up; break;
+					case 135: sprite_index = spr_gato3_up_left; break;
+					case 180: sprite_index = spr_gato3_left; break;
+					case 225: sprite_index = spr_gato3_left_down; break;
+					case 270: sprite_index = spr_gato3_down; break;
+					case 315: sprite_index = spr_gato3_down_right; break;
 				}
 			}
 			else
 			{
-				sprite_index = sPlayer_idle;	
+				sprite_index = spr_gato3_player;	
 			}
 		break;
 		case states.DEAD:
-			sprite_index = sPlayer_idle; //Cambiar en un futuro
+			sprite_index = spr_gato3_player; //Cambiar en un futuro
 		break;
 		case states.ROLL:
-			sprite_index = s_roll;
+			sprite_index = spr_player_roll;
 		break;
 	}
 }
@@ -198,9 +198,18 @@ function Space_logic(){
 			
 			if(activate == noone)
 			{
-				state = states.ROLL;
-				movedistanceremaining = distanceroll;
-				//audio_play_sound(sfx_roll,8,false);
+				//create bar
+				with(instance_create_layer(x, y,"Instances",obj_vanish_GUI))
+					{
+						sprite_index=img_BeatMeter;
+					}
+					
+				if(global.beatchance)
+				{
+					state = states.ROLL;
+					movedistanceremaining = distanceroll;
+					audio_play_sound(sfx_roll,8,false);
+				}
 			}
 			else
 			{
@@ -256,11 +265,14 @@ function placement_Player_NPC(_x,_y,_relative,_spd){
 	{
 		var dir = point_direction(x,y,_xx,_yy);
 		
-		if(dir >= 0 && dir <= 80) sprite_index = sPlayer_right;
-		if(dir > 80 && dir <= 100) sprite_index = sPlayer_up;
-		if(dir > 100 && dir <= 240) sprite_index = sPlayer_left;
-		if(dir > 240 && dir <= 290) sprite_index = sPlayer_down;
-		if(dir > 290 && dir <= 359) sprite_index = sPlayer_right;
+		if(dir >= 0 && dir <= 45) sprite_index = spr_gato3_right;
+		if(dir > 45 && dir <= 90) sprite_index = spr_gato3_right_up;
+		if(dir > 90 && dir <= 135) sprite_index = spr_gato3_up;
+		if(dir > 135 && dir <= 180) sprite_index = spr_gato3_up_left;
+		if(dir > 180 && dir <= 225) sprite_index = spr_gato3_left;
+		if(dir > 225 && dir <= 270) sprite_index = spr_gato3_left_down;
+		if(dir > 270 && dir <= 315) sprite_index = spr_gato3_down;
+		if(dir > 315 && dir <= 359) sprite_index = spr_gato3_down_right;
 		
 			
 		if(point_distance(x,y,_xx,_yy) >= _spd)
@@ -277,7 +289,7 @@ function placement_Player_NPC(_x,_y,_relative,_spd){
 			}
 			else
 			{	
-				sprite_index = sPlayer_idle;
+				sprite_index = spr_gato3_player;
 				_xx = x;
 				_yy = y;
 				x_dest = -1;
@@ -289,7 +301,7 @@ function placement_Player_NPC(_x,_y,_relative,_spd){
 		}
 		else
 		{
-			sprite_index = sPlayer_idle;
+			sprite_index = spr_gato3_player;
 			x_dest = -1;
 			y_dest = -1;
 			//Activar la entidad

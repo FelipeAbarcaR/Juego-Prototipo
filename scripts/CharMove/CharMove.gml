@@ -49,7 +49,7 @@ function CharMove() {
 	}
 
 	//Choque
-	PlayerCollision();
+	//PlayerCollision();
 
 	//DASH
 	if(inputmagnitude != 0)

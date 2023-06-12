@@ -88,10 +88,10 @@ next = function() {
 	current_action++;
 	if (current_action >= array_length(actions)) 
 	{
-		with (obj_player) 
+		with (o_player) 
 		{
 			global.textover = true;
-			state = laststate;
+			state = states.IDLE;
 		}
 		instance_destroy();
 	}

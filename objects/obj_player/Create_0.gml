@@ -1,9 +1,8 @@
-event_inherited();
 
-state = PlayerStateFree;
+//state = PlayerStateFree;
 hitbyattack = -1;
 stateattack = AttackSlash;
-laststate = state;
+//laststate = state;
 
 
 collisionmap = layer_tilemap_get_id(layer_get_id("Col"));

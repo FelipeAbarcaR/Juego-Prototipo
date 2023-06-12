@@ -7,17 +7,15 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":5,"eventType":7,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"o_solid","path":"objects/o_solid/o_solid.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Player",
+    "path": "folders/Objects/Player.yy",
   },
-  "parentObjectId": {
-    "name": "prnt_depth",
-    "path": "objects/prnt_depth/prnt_depth.yy",
-  },
+  "parentObjectId": null,
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -37,6 +35,9 @@
     "name": "spr_gato3_player",
     "path": "sprites/spr_gato3_player/spr_gato3_player.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "spr_gato3_idle",
+    "path": "sprites/spr_gato3_idle/spr_gato3_idle.yy",
+  },
   "visible": true,
 }

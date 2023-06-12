@@ -10,15 +10,7 @@ function startDialogue(topic) {
 	
 	var inst = instance_create_depth(x, y, -999, obj_textbox);
 	inst.setTopic(topic);
-	
-	with(obj_player)
-	{
-		if(state != PlayerStateLocked)
-		{
-			laststate = state;
-			state = PlayerStateLocked;
-		}
-	}
+
 }
 
 function type(x, y, text, progress, width) {
@@ -170,10 +162,10 @@ global.topics[$ "Breakfast"] = [
 	];
 	
 		global.topics [$ "End of breakfast"] = [
-			TEXT("Goodbye, now"),
+			TEXT("Goodbye, now")
 		];
 global.topics[$ "signhouse1"] = [
-
 	TEXT("El Viejo Sabio le invita a entrar a la casa, no es que tenga algo mejor que hacer"),
+	TEXT("vddfdfdfd dfdfdff")
 ];
 

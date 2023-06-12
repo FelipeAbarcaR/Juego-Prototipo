@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Enviroment",
-    "path": "folders/Objects/Entity/Enviroment.yy",
+    "name": "Entity",
+    "path": "folders/Objects/Entity.yy",
   },
   "parentObjectId": null,
   "persistent": false,

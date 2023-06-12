@@ -81,9 +81,9 @@ function EntityHitSolid(){
 	
 function AbrirPuerta(_roomindex){
 	
-if(instance_exists(obj_player))
+if(instance_exists(o_player))
 {
-	if(obj_player.state != PlayerStateDead)
+	if(o_player.state != states.DEAD)
 	{
 		with(obj_puerta) image_index = 1;
 		var _name=index.name;
@@ -92,8 +92,8 @@ if(instance_exists(obj_player))
 		global.targetRoom = _roomname;
 		global.targetX = 160;
 		global.targetY = 160;
-		global.targetdirection = obj_player.direction;
-		with(obj_player) state = PlayerStateTransition;
+		global.targetdirection = o_player.dir;
+		with(o_player) state = states.IDLE;
 		//room_goto(global.targetRoom)
 		RoomTransition(TRANS_TYPE.SLIDE,global.targetRoom)
 		instance_destroy();

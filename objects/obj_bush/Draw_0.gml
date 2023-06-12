@@ -1,13 +1,21 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+/// @description Cause Room transition
+
+if (global.beat==true)
+{
+    imagexscale*=(-1);
+}
+
 draw_sprite_ext(
-	sprite_index,
-	image_index,
+	spr_bush,
+	0,
 	x,
 	y,
-	image_xscale,
+	imagexscale,
 	image_yscale,
 	image_angle,
 	image_blend,
-	image_alpha
-	)
+	image_alpha);
+	

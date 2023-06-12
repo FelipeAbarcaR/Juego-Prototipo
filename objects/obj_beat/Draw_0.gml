@@ -1,7 +1,7 @@
-/// @description Draw BeatBar
+/// @description Insert description here
 // You can write your code in this editor
 var _mode=global.room_data[global.currentroom][index.mode];
-if (_mode!=mode.fight) //print in gui only if is NOT in fight mode, (bc there is no cam)
+if (_mode==mode.fight) //print in draw only if is IN fight mode, (bc there is no cam)
 {
 	var a //scale
 	if global.beatchance{
@@ -12,6 +12,7 @@ if (_mode!=mode.fight) //print in gui only if is NOT in fight mode, (bc there is
 	var _wpos,_hpos;
 	_wpos = 0.95;
 	_hpos=0.30;
+
 
 	//draw yellow box range
 	var _x,_y;

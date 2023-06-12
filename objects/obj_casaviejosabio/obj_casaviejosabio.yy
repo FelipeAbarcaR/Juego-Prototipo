@@ -1,18 +1,21 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_bush",
+  "name": "obj_casaviejosabio",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
     "name": "M0",
-    "path": "folders/Objects/Entity/Enviroment/M0.yy",
+    "path": "folders/Objects/M0.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "prnt_entity",
+    "path": "objects/prnt_entity/prnt_entity.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -29,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_bush",
-    "path": "sprites/spr_bush/spr_bush.yy",
+    "name": "spr_casaViejoSabio",
+    "path": "sprites/spr_casaViejoSabio/spr_casaViejoSabio.yy",
   },
   "spriteMaskId": null,
   "visible": true,

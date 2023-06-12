@@ -20,7 +20,8 @@ if(MoveKey)
 	if(global.Move==false) global.Move=true else global.Move=false;
 }
 //counting hand
-scr_CountingHand();
+var _hKey=keyboard_check_pressed(ord("H"));
+if (_hKey) instance_create_layer(0,0, "Instances", obj_CountHand);
 
 //beat
 	var dt =delta_time;	
@@ -33,11 +34,7 @@ scr_CountingHand();
 	SumDelta -= BeatTimeMS;
 	global.BeatNumber+=1;
 	audio_play_sound(Beep,11,false);
-	//var _barra=instance_create_layer(x, y,"Instances",obj_vanish_GUI);
-	//with(_barra)
-	//	{
-	//		sprite_index=img_BeatMeter;
-	//	}
+	//instance_create_layer(barX, barY,"Instances",obj_vanish_GUI);
 	} else global.beat=false;
 
 //beat progress from 0 to 1
@@ -45,16 +42,16 @@ scr_CountingHand();
 
 //beat meter
 	BeatBarProgress = sin((SumFullDelta/BeatTimeMS)*pi)
+	//Beat's chance to hit
 	if (abs(BeatBarProgress)<=beathitrange) global.beatchance =true else global.beatchance =false
 
 //	var char = global.room_data[global.currentroom][index.mainchar];
 
-////draw vanishing BeatBar
-//	//if (char.inputmagnitude  and global.room_data[global.currentroom][index.mode]!= mode.move)
-//	//{
-//	//	with(instance_create_layer(x, y,"Instances",obj_vanish_GUI))
-//	//	{
-//	//		sprite_index=img_BeatMeter;
-//	//	}
-//	//}
+// draw vanishing BeatBar
+	var _player=global.room_data[global.currentroom][index.mainchar]
+	var _mode= global.room_data[global.currentroom][index.mode]
+	if (_mode != mode.move and _player.inputmagnitude)
+	{
+		instance_create_layer(barX, barY,"Instances",obj_vanish_GUI)
+	}
 	

@@ -3,7 +3,7 @@
   "resourceVersion": "1.0",
   "name": "img_BeatBar",
   "bbox_bottom": 323,
-  "bbox_left": 46,
+  "bbox_left": 44,
   "bbox_right": 119,
   "bbox_top": 108,
   "bboxMode": 0,
@@ -15,8 +15,8 @@
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"26846467-684f-47bc-99b0-9c409fe47f49",},
   ],
-  "gridX": 4,
-  "gridY": 4,
+  "gridX": 8,
+  "gridY": 8,
   "height": 432,
   "HTile": false,
   "layers": [

@@ -1,3 +1,6 @@
+/// @description Insert description here
+// You can write your code in this editor
+
 /// @description Cause Room transition
 
 if(instance_exists(o_player)) && (position_meeting(o_player.x,o_player.y,id))

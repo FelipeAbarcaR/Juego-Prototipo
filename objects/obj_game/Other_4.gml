@@ -26,12 +26,12 @@ global.mp_grid = mp_grid_create(0, 0, _w, _h, TS, TS);
 mp_grid_add_instances(global.mp_grid,o_solid,true);
 
 //loop through every tile and add a single solid if it's a wall
-var _map = layer_tilemap_get_id("Col");
+var _map = layer_tilemap_get_id("Col2");
 //create 1x1 solid
 for (var yy = 0; yy < _h; ++yy) {
     for (var xx = 0; xx < _w; ++xx) {
 	    var _t1 = tilemap_get(_map, xx, yy);
-		if (_t1 <= 2 and _t1 >= 3) or (_t1 <= 6 and _t1 >= 7) or _t1 == 15 {
+		if (_t1 == 6) {
 			instance_create_layer(xx * TS, yy * TS, "Collisions", o_solid);
 		}
 	}
@@ -49,7 +49,7 @@ for (var yy = 0; yy < _h; ++yy)
     for (var xx = 0; xx < _w; ++xx) 
 	{
 	    var _t1 = tilemap_get(_map, xx, yy);
-		if _t1 >= 1 and _t1 <= 47 
+		if _t1 == 6
 		{
 			//get solid id at this position(using a smaller tile size, as there is overlap)
 			var _inst = collision_point(xx * TS, yy * TS, o_solid, 0, 1);

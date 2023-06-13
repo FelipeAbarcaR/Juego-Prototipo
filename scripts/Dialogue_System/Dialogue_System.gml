@@ -164,8 +164,27 @@ global.topics[$ "Breakfast"] = [
 		global.topics [$ "End of breakfast"] = [
 			TEXT("Goodbye, now")
 		];
+		
 global.topics[$ "signhouse1"] = [
 	TEXT("El Viejo Sabio le invita a entrar a la casa, no es que tenga algo mejor que hacer"),
-	TEXT("vddfdfdfd dfdfdff")
+];
+global.topics[$ "signenemy1"] = [
+	TEXT("Peligro!!! Monstruo mas adelante, evite comentarios sobre su cabello."),
+];
+
+global.topics[$ "signhouse2"] = [
+	
+
+	TEXT("¿Realmente esperas a que te diga donde ir? Los letreros no hablamos."),
+	TEXT("Vamos muchacho, tu puedes, solo debes seguir la instrucción.-->"),
+	TEXT("¿Sigues Aquí? El juego no se va a completar solo."),
+	TEXT("Ya me harté de tí. Adiós!.")
+	];
+	
+global.topics[$ "signwarning1"] = [
+	TEXT("El Viejo Sabio le invita a entrar a la casa, no es que tenga algo mejor que hacer"),
+];
+global.topics[$ "signwarning2"] = [
+	TEXT("Territorio deconocido, nadie que haya pasado de este punto, ha vuelto para contarlo."),
 ];
 

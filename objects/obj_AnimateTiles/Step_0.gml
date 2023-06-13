@@ -6,7 +6,7 @@ var tileHeight = 16;
 var tileindex2
 if tileindex=1 tileindex2=2 else tileindex2=1;
 
-if (global.beat)
+if (global.beat && danceactive)
 {
 	// Loop through the tiles in the tilemap
 	for (var i = 0; i < room_width / tileWidth; i++)

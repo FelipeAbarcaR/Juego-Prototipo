@@ -41,7 +41,7 @@ if (_hKey) instance_create_layer(0,0, "Instances", obj_CountHand);
 	global.beatprogress=min(SumDelta/BeatTimeMS,1);
 
 //beat meter
-	BeatBarProgress = sin((SumFullDelta/BeatTimeMS)*pi)
+	BeatBarProgress = sin((SumFullDelta/BeatTimeMS)*pi);
 	//Beat's chance to hit
 	if (abs(BeatBarProgress)<=beathitrange) global.beatchance =true else global.beatchance =false
 

@@ -3,6 +3,7 @@ event_inherited();
 walk_spd = 2;
 hp_max = 10;
 hp = hp_max;
+dir = 270;
 
 //en un futuro
 can_attack = true;

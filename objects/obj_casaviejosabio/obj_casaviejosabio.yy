@@ -9,8 +9,13 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
+<<<<<<< Updated upstream
     "name": "M0",
     "path": "folders/Objects/Entity/Enviroment/M0.yy",
+=======
+    "name": "PROTOTIPO",
+    "path": "PROTOTIPO.yyp",
+>>>>>>> Stashed changes
   },
   "parentObjectId": {
     "name": "prnt_entity",

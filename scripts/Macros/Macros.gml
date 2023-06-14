@@ -10,7 +10,7 @@
 #macro TRANSITION_SPEED 0.02
 #macro X_POS_TEXTBOX 36
 #macro Y_POS_TEXTBOX 200 
-#macro TEXTBOX_W 200
+#macro TEXTBOX_W 407
 #macro TEXTBOX_H 80
 
 #macro TEXT new TextAction

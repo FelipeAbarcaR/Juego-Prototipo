@@ -113,6 +113,7 @@
     {"id":{"name":"obj_questie","path":"objects/obj_questie/obj_questie.yy",},},
     {"id":{"name":"beatbar","path":"objects/beatbar/beatbar.yy",},},
     {"id":{"name":"spr_gato3_down_right","path":"sprites/spr_gato3_down_right/spr_gato3_down_right.yy",},},
+    {"id":{"name":"roomMapaInicial6","path":"rooms/roomMapaInicial6/roomMapaInicial6.yy",},},
     {"id":{"name":"scr_GridMove","path":"scripts/scr_GridMove/scr_GridMove.yy",},},
     {"id":{"name":"room_goto2","path":"scripts/room_goto2/room_goto2.yy",},},
     {"id":{"name":"ts_MapaInicial","path":"tilesets/ts_MapaInicial/ts_MapaInicial.yy",},},
@@ -293,6 +294,7 @@
     {"roomId":{"name":"rm_Obstacle1","path":"rooms/rm_Obstacle1/rm_Obstacle1.yy",},},
     {"roomId":{"name":"roomViejoSabio","path":"rooms/roomViejoSabio/roomViejoSabio.yy",},},
     {"roomId":{"name":"roomMapaInicial","path":"rooms/roomMapaInicial/roomMapaInicial.yy",},},
+    {"roomId":{"name":"roomMapaInicial6","path":"rooms/roomMapaInicial6/roomMapaInicial6.yy",},},
   ],
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},

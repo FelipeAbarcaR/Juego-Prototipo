@@ -83,6 +83,7 @@
     {"name":"spr_tree2","order":2,"path":"sprites/spr_tree2/spr_tree2.yy",},
     {"name":"beatbar","order":12,"path":"objects/beatbar/beatbar.yy",},
     {"name":"spr_gato3_down_right","order":7,"path":"sprites/spr_gato3_down_right/spr_gato3_down_right.yy",},
+    {"name":"roomMapaInicial6","order":3,"path":"rooms/roomMapaInicial6/roomMapaInicial6.yy",},
     {"name":"room_goto2","order":18,"path":"scripts/room_goto2/room_goto2.yy",},
     {"name":"obj_UI","order":1,"path":"objects/obj_UI/obj_UI.yy",},
     {"name":"spr_TileGrid","order":6,"path":"sprites/spr_TileGrid/spr_TileGrid.yy",},

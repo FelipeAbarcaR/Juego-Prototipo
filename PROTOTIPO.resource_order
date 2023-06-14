@@ -183,6 +183,7 @@
     {"name":"spr_slime_attack","order":1,"path":"sprites/spr_slime_attack/spr_slime_attack.yy",},
     {"name":"spr_player_roll","order":4,"path":"sprites/spr_player_roll/spr_player_roll.yy",},
     {"name":"obj_trigger_perm","order":1,"path":"objects/obj_trigger_perm/obj_trigger_perm.yy",},
+    {"name":"roomMapaInicial5","order":2,"path":"rooms/roomMapaInicial5/roomMapaInicial5.yy",},
     {"name":"scr_ataque12","order":2,"path":"scripts/scr_ataque12/scr_ataque12.yy",},
     {"name":"spr_fighter2","order":5,"path":"sprites/spr_fighter2/spr_fighter2.yy",},
     {"name":"obj_CountHand","order":2,"path":"objects/obj_CountHand/obj_CountHand.yy",},

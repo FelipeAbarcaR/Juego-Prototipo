@@ -1,20 +1,17 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_tree2",
-  "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-  ],
+  "name": "obj_void",
+  "eventList": [],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "M0",
-    "path": "folders/Objects/Entity/Enviroment/M0.yy",
+    "name": "Enemy",
+    "path": "folders/Objects/Entity/Enemy.yy",
   },
   "parentObjectId": {
-    "name": "obj_tree1",
-    "path": "objects/obj_tree1/obj_tree1.yy",
+    "name": "prnt_entity1",
+    "path": "objects/prnt_entity1/prnt_entity1.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -32,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_tree2",
-    "path": "sprites/spr_tree2/spr_tree2.yy",
+    "name": "spr_222",
+    "path": "sprites/spr_222/spr_222.yy",
   },
   "spriteMaskId": null,
   "visible": true,

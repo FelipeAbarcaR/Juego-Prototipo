@@ -4,5 +4,12 @@
 // Inherit the parent event
 event_inherited();
 
-if (Signindex=="house") image_index=0;
 image_speed=0;
+//global.textsign= [
+//	"¿Realmente esperas a que te diga donde ir? Los letreros no hablamos.",
+//	"Vamos muchacho, tu puedes, solo debes seguir la instrucción.-->",
+//	"¿Sigues Aquí? El juego no se va a completar solo.",
+//	"Ya me harté de tí. Adiós!."
+//	];
+//global.textboxindex=0;
+

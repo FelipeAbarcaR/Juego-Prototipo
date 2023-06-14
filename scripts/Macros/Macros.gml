@@ -19,6 +19,20 @@
 #macro OPTION new OptionAction
 #macro GOTO new GotoAction
 
+#macro CAN_ATTACK		0
+#macro hurrtt			1
+
+//enums
+enum states {
+	IDLE,
+	MOVE,
+	ATTACK,
+	DEAD,
+	KNOCKBACK,
+	ROLL,
+	LOCK
+}
+
 enum ENEMYSTATE
 {
 	IDLE,

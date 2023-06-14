@@ -2,7 +2,7 @@ randomize();
 
 global.gamepaused = false;
 global.textspeed = .75;
-global.icamara = instance_create_layer(0,0,layer,obj_camera);
+//global.icamara = instance_create_layer(0,0,layer,obj_camera);
 global.iUI = instance_create_layer(0,0,layer,obj_UI);
 global.DrawText=false;
 
@@ -18,7 +18,7 @@ global.textover = false;
 
 global.mp_grid = 0;
 
-surface_resize(application_surface,RESOLUTION_W,RESOLUTION_H);
+//surface_resize(application_surface,RESOLUTION_W,RESOLUTION_H);
 
 global.gamemode=mode.move;
 
@@ -47,9 +47,6 @@ global.gamemode=mode.move;
 		obstaculos,
 		viejosabio,
 	}
-	
-	room_goto2(rm.inicial);
-	
 	
 //mute bin var
 mute=0;

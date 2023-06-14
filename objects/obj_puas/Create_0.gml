@@ -13,4 +13,4 @@ SumDeltaTime=0;
 //sprite_index of states (cargando,activado)
 sprstates=[1,2]
 i=0; //index i
-sprite_set_speed(sprite_index, ((obj_beat.bpm*4)/(60*beatwait)), spritespeed_framespersecond); //set fps speed of sprite
+sprite_set_speed(sprite_index, ((global.bpm*4)/(60*beatwait)), spritespeed_framespersecond); //set fps speed of sprite

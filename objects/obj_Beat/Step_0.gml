@@ -43,15 +43,30 @@ if (_hKey) instance_create_layer(0,0, "Instances", obj_CountHand);
 //beat meter
 	BeatBarProgress = sin((SumFullDelta/BeatTimeMS)*pi);
 	//Beat's chance to hit
-	if (abs(BeatBarProgress)<=beathitrange) global.beatchance =true else global.beatchance =false
+	if (abs(BeatBarProgress)<=beathitrange) global.beatchance =true; else global.beatchance =false;
 
 //	var char = global.room_data[global.currentroom][index.mainchar];
 
 // draw vanishing BeatBar
-	var _player=global.room_data[global.currentroom][index.mainchar]
+	var _player_mainchar = global.room_data[global.currentroom][index.mainchar]
 	var _mode= global.room_data[global.currentroom][index.mode]
-	if (_mode != mode.move and _player.inputmagnitude)
+	
+	switch(_player_mainchar)
 	{
-		instance_create_layer(barX, barY,"Instances",obj_vanish_GUI)
+		case o_player: 
+			if (_mode == mode.move and global.interact)
+			{
+				instance_create_layer(barX, barY,"Instances",obj_vanish_GUI);
+			}
+		break;
+		
+		default:
+			if (_mode == mode.move and _player_mainchar.inputmagnitude)
+			{
+				instance_create_layer(barX, barY,"Instances",obj_vanish_GUI);
+			}
+		break;		
 	}
+
+		
 	

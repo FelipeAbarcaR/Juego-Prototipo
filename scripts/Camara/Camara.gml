@@ -20,8 +20,8 @@ display_set_gui_size(_width,_height);
 var _displayWidth = display_get_width();
 var _displayHeight = display_get_height();
 
-window_set_position(_displayWidth/2 - _width/2 , _displayHeight/2 - _height/2 );
 
+window_set_position(_displayWidth/2 - _width/2 , _displayHeight/2 - _height/2 );
 
 
 function ScreenShake(_magnitude,_length){

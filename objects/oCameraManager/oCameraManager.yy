@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "enviar a prototipo",
-    "path": "folders/enviar a prototipo.yy",
+    "name": "PROTOTIPO",
+    "path": "PROTOTIPO.yyp",
   },
   "parentObjectId": null,
   "persistent": false,

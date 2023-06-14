@@ -326,10 +326,6 @@ function PlayerStateRoll(){
 }
 	
 
-
-
-
-
 function reset_variables() {
 	
 	global.interact = false;
@@ -531,7 +527,7 @@ function Space_logic(){
 			if(activate == noone)
 			{
 				//create bar
-				with(instance_create_layer(x, y,"Instances",obj_vanish_GUI))
+				with(instance_create_layer(obj_beat.barX,obj_beat.barY,"Instances",obj_vanish_GUI))
 					{
 						sprite_index=img_BeatMeter;
 					}

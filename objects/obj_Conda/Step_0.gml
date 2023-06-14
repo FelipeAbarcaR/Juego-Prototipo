@@ -5,12 +5,9 @@ if (stance!=EnemyStance.dead) FightRhythmAnimate();
 
 if ( stance ==  EnemyStance.prepare)
 {
-	rumheight=room_height;
-	rumwidth=room_width;
+
 	guiheight=display_get_gui_height();
 	guiwidth=display_get_gui_width();
-	camheight=camera_get_view_height(obj_camera.cam);
-	camwidth=camera_get_view_width(obj_camera.cam);	
 	breaktopointo=10;
 	if (current_beat != global.BeatNumber)
 	{

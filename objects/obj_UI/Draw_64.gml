@@ -25,7 +25,8 @@ if(global.gamemode!=mode.fight)
 			//3/4 de corazon (frame 4)
 			_imageindex += (_playerhealthfrac > 0.5);
 		}
-		draw_sprite(spr_health,_imageindex,20 +((i-1)*16),20);
+		var _scale=3;
+		draw_sprite_ext(spr_health,_imageindex,20 +((i-1)*16*3),20,_scale,_scale,image_angle,c_white,image_alpha);
 	}
 }
 

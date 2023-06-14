@@ -1,8 +1,8 @@
 // Follow player
 if (cameraFollow) {
 	// Player to follow
-	var _plr = global.room_data[global.currentroom][index.follow];;
-	
+	var _plr = global.room_data[global.currentroom][index.follow];
+
 	// Get camera properties
 	var _camW = global.res.width;
 	var _camH = global.res.height;

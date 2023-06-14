@@ -2,7 +2,7 @@ randomize();
 
 global.gamepaused = false;
 global.textspeed = .75;
-//global.icamara = instance_create_layer(0,0,layer,obj_camera);
+//global.icamara = instance_create_layer(0,0,layer,oCameraManager);
 global.iUI = instance_create_layer(0,0,layer,obj_UI);
 global.DrawText=false;
 
@@ -34,8 +34,7 @@ global.gamemode=mode.move;
 		[roomMapaInicial, bgm_ForestTime, 126, o_player, mode.move,o_player],
 	    [rm_pelea,bgm_Feelings, 115, obj_control_fight , mode.fight,obj_Conde],
 	    [rm_Obstacle1,bgm_OneLove, 107,obj_CharGrid , mode.grid,obj_CharGrid],
-		[roomViejoSabio,bgm_ForestTimeInterior, 107,o_player , mode.move,o_player],
-	
+		[roomViejoSabio,bgm_ForestTimeInterior, 107,o_player, mode.move,o_player]	
 	];
 	
 	global.room_count=array_length(global.room_data);

@@ -34,6 +34,6 @@ if (_mode!=mode.fight) //print in gui only if is NOT in fight mode, (bc there is
 
 	if global.DrawText{
 		draw_text(2*room_width/3,  32+32, string(BeatBarProgress));
-		draw_text(x-16,y,string(bpm));
+		draw_text(x-16,y,string(global.bpm));
 	}
 }

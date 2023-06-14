@@ -5,9 +5,9 @@
 current_music = global.room_data[global.currentroom][index.music];
 current_bpm = global.room_data[global.currentroom][index.bpm];
 // set bpm
-bpm=current_bpm;
+global.bpm= current_bpm;
 
-BeatTimeMS=((60)/bpm)*1000000
+BeatTimeMS=((60)/global.bpm)*1000000
 global.beatchance=false;
 global.beat=false;
 global.Move=false;	

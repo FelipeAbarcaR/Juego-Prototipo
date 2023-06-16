@@ -32,8 +32,9 @@ switch(state) {
 	case states.ROLL:
 		reset_variables();
 		
-		
 		player_roll();
+		
+		//collision_bridge();
 		
 		if(movedistanceremaining <= 0) state = states.IDLE;
 		

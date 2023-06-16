@@ -405,15 +405,30 @@ function collision() {
 	if place_meeting(x, y + _disy * sign(_ty - y), prnt_solid) y = round(y);
 	
 	//move as far as in x and y before hitting the solid
-	repeat(_disx) {
+	repeat(_disx)
+	{
 		if !place_meeting(x + sign(_tx - x), y, prnt_solid) x += sign(_tx - x);	
 	}
-	repeat(_disy) {
+	repeat(_disy)
+	{
 		if !place_meeting(x, y + sign(_ty - y), prnt_solid) y += sign(_ty - y);
 	}
 	
 }
+	
+function collision_bridge (){
 
+	var _lenx = lengthdir_x(distanceroll,dir);
+	var _leny = lengthdir_y(distanceroll,dir);
+	
+	if(position_meeting(x + _lenx, y + _leny, o_solid_bridge))
+	{
+		if(_lenx > 0) x += 30;
+		if(_lenx < 0) x -= 30;
+		if(_leny > 0) y += 30;
+		if(_leny < 0) y -= 30;
+	}	
+}
 
 function collision_bounce() {
 	collision();
@@ -455,6 +470,7 @@ function anim() {
 
 function player_roll(){
 	
+	
 	//Movimiento
 	hmove = lengthdir_x(speedroll, dir);
 	vmove = lengthdir_y(speedroll, dir);
@@ -471,9 +487,8 @@ function player_roll(){
 	//var _collided = PlayerCollision();
 	
 	z = sin(((movedistanceremaining / distanceroll) * pi)) *distancerollheight;
-	
+
 	//Cambiar estado
-	
 	
 	//if(_collided)
 	//{
@@ -536,6 +551,16 @@ function Space_logic(){
 				if(global.beatchance)
 				{
 					state = states.ROLL;
+					
+					var _xto,_yto;
+					
+				    _xto=x+lengthdir_x(distanceroll, dir);
+				    _yto=y+lengthdir_y(distanceroll, dir);
+					
+				    var _fall=position_meeting(_xto,_yto,o_solid_bridge);
+					
+				    if (_fall) distanceroll += 30;
+					
 					movedistanceremaining = distanceroll;
 					audio_play_sound(sfx_roll,8,false);
 				}

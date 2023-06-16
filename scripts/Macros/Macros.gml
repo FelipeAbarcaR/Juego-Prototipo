@@ -1,4 +1,4 @@
-#macro FRAME_RATE 60
+	#macro FRAME_RATE 60
 #macro CARDINAL_DIR round(dir/90)
 #macro CARDINAL_DIR_NPC round(direction/90)
 #macro ROOM_START roomMapaInicial

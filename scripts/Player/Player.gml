@@ -469,6 +469,7 @@ function anim() {
 }
 
 function player_roll(){
+
 	
 	
 	//Movimiento

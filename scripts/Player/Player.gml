@@ -469,7 +469,6 @@ function anim() {
 }
 
 function player_roll(){
-
 	
 	
 	//Movimiento
@@ -555,14 +554,15 @@ function Space_logic(){
 					
 					var _xto,_yto;
 					
-				    _xto=x+lengthdir_x(distanceroll, dir);
-				    _yto=y+lengthdir_y(distanceroll, dir);
+				    _xto=x+ lengthdir_x(distanceroll, dir);
+				    _yto=y+ lengthdir_y(distanceroll, dir);
 					
 				    var _fall=position_meeting(_xto,_yto,o_solid_bridge);
 					
 				    if (_fall) distanceroll += 30;
 					
 					movedistanceremaining = distanceroll;
+					
 					audio_play_sound(sfx_roll,8,false);
 				}
 			}

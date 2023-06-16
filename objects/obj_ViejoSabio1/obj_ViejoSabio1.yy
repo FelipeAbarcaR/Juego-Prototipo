@@ -14,7 +14,7 @@
   ],
   "parent": {
     "name": "NPC",
-    "path": "folders/enviar a prototipo/Entity/NPC.yy",
+    "path": "folders/Obsoleto/Entity/NPC.yy",
   },
   "parentObjectId": {
     "name": "prnt_entity1",

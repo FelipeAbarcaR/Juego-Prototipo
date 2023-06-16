@@ -13,7 +13,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Entity",
-    "path": "folders/enviar a prototipo/Entity.yy",
+    "path": "folders/Obsoleto/Entity.yy",
   },
   "parentObjectId": {
     "name": "prnt_depth",

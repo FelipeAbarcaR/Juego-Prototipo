@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "enviar a prototipo",
-    "path": "folders/enviar a prototipo.yy",
+    "name": "Obsoleto",
+    "path": "folders/Obsoleto.yy",
   },
   "parentObjectId": null,
   "persistent": false,

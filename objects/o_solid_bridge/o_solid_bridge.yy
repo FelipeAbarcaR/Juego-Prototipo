@@ -1,19 +1,17 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "o_enemy1",
-  "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-  ],
+  "name": "o_solid_bridge",
+  "eventList": [],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Entity",
-    "path": "folders/Obsoleto/Entity.yy",
+    "name": "Objects",
+    "path": "folders/Objects.yy",
   },
   "parentObjectId": {
-    "name": "o_enemy_par1",
-    "path": "objects/o_enemy_par1/o_enemy_par1.yy",
+    "name": "prnt_solid",
+    "path": "objects/prnt_solid/prnt_solid.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -30,7 +28,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_solid_bridge",
+    "path": "sprites/spr_solid_bridge/spr_solid_bridge.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

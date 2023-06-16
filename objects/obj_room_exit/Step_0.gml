@@ -18,6 +18,6 @@ if(instance_exists(o_player)) && (position_meeting(o_player.x,o_player.y,id))
 		
 		with(obj_player) state = states.IDLE;
 		RoomTransition(TRANS_TYPE.SLIDE,global.targetRoom);
-		instance_destroy();
+		//instance_destroy();
 	}
 }

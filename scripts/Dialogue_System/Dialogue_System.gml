@@ -19,7 +19,6 @@ function type(x, y, text, progress, width) {
 	
 	for (var i = 1; i <= progress; i++) {
 		var char = string_char_at(text, i);
-	
 		// Handle normal line breaks
 		if (char == "\n") {
 			draw_x = 0;
@@ -28,7 +27,6 @@ function type(x, y, text, progress, width) {
 		// If we're starting a new word, we can line break
 		else if (char == " ") {
 			draw_x += string_width(char);
-			
 			var word_width = 0;
 			for (var ii = i + 1; ii <= string_length(text); ii++) {
 				var word_char = string_char_at(text, ii);
@@ -146,9 +144,7 @@ global.topics[$ "Introduccion"] = [
 
 global.topics[$ "Breakfast"] = [
 	//SPEAKER("Sam",spr_portrait_sam,PORTRAIT_SIDE.LEFT),
-	CHOICE("What do you want for breakfast",
-		OPTION("Eggs", "Chose Eggs"),
-		OPTION ("Pancakes", "Chose Pancakes"))
+	CHOICE("What do you want for breakfast",OPTION("Eggs", "Chose Eggs"),OPTION ("Pancakes", "Chose Pancakes"))
 ];
 	
 	global.topics[$ "Chose Eggs"] = [
@@ -174,7 +170,6 @@ global.topics[$ "signenemy1"] = [
 
 global.topics[$ "signhouse2"] = [
 	
-
 	TEXT("¿Realmente esperas a que te diga donde ir? Los letreros no hablamos."),
 	TEXT("Vamos muchacho, tu puedes, solo debes seguir la instrucción.-->"),
 	TEXT("¿Sigues Aquí? El juego no se va a completar solo."),

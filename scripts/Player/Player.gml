@@ -453,6 +453,7 @@ function anim() {
 }
 
 function player_roll(){
+
 	
 	//Movimiento
 	hmove = lengthdir_x(speedroll, dir);

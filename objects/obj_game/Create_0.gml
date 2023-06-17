@@ -18,7 +18,7 @@ global.textover = false;
 
 global.mp_grid = 0;
 
-//surface_resize(application_surface,RESOLUTION_W,RESOLUTION_H);
+surface_resize(application_surface,RESOLUTION_W,RESOLUTION_H);
 
 global.gamemode=mode.move;
 

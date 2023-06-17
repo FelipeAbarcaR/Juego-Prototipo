@@ -172,6 +172,7 @@
     {"id":{"name":"spr_CondeDead","path":"sprites/spr_CondeDead/spr_CondeDead.yy",},},
     {"id":{"name":"Enemy","path":"scripts/Enemy/Enemy.yy",},},
     {"id":{"name":"GameData","path":"scripts/GameData/GameData.yy",},},
+    {"id":{"name":"obj_roominit","path":"objects/obj_roominit/obj_roominit.yy",},},
     {"id":{"name":"obj_bush","path":"objects/obj_bush/obj_bush.yy",},},
     {"id":{"name":"spr_tree1","path":"sprites/spr_tree1/spr_tree1.yy",},},
     {"id":{"name":"scr_WaitHalfBeat","path":"scripts/scr_WaitHalfBeat/scr_WaitHalfBeat.yy",},},

@@ -1,17 +1,13 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_AnimateTiles",
-  "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":79,"eventType":9,"isDnD":false,},
-  ],
+  "name": "obj_prnt_obstacle",
+  "eventList": [],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Obstacle1",
-    "path": "folders/Objects/Minijuegos/Obstacle1.yy",
+    "name": "GD",
+    "path": "folders/Objects/Minijuegos/GD.yy",
   },
   "parentObjectId": null,
   "persistent": false,

@@ -10,7 +10,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Fight",
-    "path": "folders/Objects/Fight.yy",
+    "path": "folders/Objects/Minijuegos/Fight.yy",
   },
   "parentObjectId": {
     "name": "obj_Conde",

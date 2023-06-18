@@ -10,7 +10,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Enemies",
-    "path": "folders/Objects/Fight/Enemies.yy",
+    "path": "folders/Objects/Minijuegos/Fight/Enemies.yy",
   },
   "parentObjectId": {
     "name": "obj_Conda",

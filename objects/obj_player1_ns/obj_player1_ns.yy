@@ -20,7 +20,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Fight",
-    "path": "folders/Objects/Fight.yy",
+    "path": "folders/Objects/Minijuegos/Fight.yy",
   },
   "parentObjectId": null,
   "persistent": false,

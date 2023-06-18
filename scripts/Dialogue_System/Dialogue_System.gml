@@ -90,6 +90,14 @@ function SpeakerAction (_name,_sprite = undefined,_side = undefined) : DialogueA
 	}
 		
 }
+function RoomAction(_roomname) : DialogueAction() constructor{
+	changeroom = _roomname;
+	act = function(textbox){
+	textbox.new_room = changeroom;
+	textbox.next();
+	}
+		
+}
 
 function ChoiceAction(_text) : DialogueAction() constructor{
 	
@@ -160,6 +168,13 @@ global.topics[$ "Breakfast"] = [
 		global.topics [$ "End of breakfast"] = [
 			TEXT("Goodbye, now")
 		];
+global.topics[$ "Batallando"] = [
+	SPEAKER("Rana",spr_pt_rana, PORTRAIT_SIDE.LEFT),
+	TEXT("Aja! encontraste mi escondite secreto, debes saber que soy un agente secreto"),
+	TEXT("Espera... No sé si lo sabías, bueno no importa."),
+	TEXT("¡Ahora debo matarte!"),
+	NEWROOM(rm_pelea)
+];
 		
 global.topics[$ "signhouse1"] = [
 	TEXT("El Viejo Sabio le invita a entrar a la casa, no es que tenga algo mejor que hacer"),
@@ -180,6 +195,5 @@ global.topics[$ "signwarning1"] = [
 	TEXT("El Viejo Sabio le invita a entrar a la casa, no es que tenga algo mejor que hacer"),
 ];
 global.topics[$ "signwarning2"] = [
-	TEXT("Territorio deconocido, nadie que haya pasado de este punto, ha vuelto para contarlo."),
+	TEXT("Territorio deconocido, nadie que haya pasado de este punto, ha vuelto para contarlo.")
 ];
-

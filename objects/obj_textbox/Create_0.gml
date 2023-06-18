@@ -44,6 +44,9 @@ option_height = 20;
 option_text_x = 10;
 option_text_color = c_white;
 
+//Room
+new_room=-1;
+
 /// PRIVATE PROPERTIES
 
 /*** LOOK BUT DO NOT EDIT! ***/

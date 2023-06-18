@@ -13,11 +13,14 @@
 #macro TEXTBOX_W 407
 #macro TEXTBOX_H 80
 
+#macro NEWROOM new RoomAction
 #macro TEXT new TextAction
 #macro SPEAKER new SpeakerAction
 #macro CHOICE new ChoiceAction
 #macro OPTION new OptionAction
 #macro GOTO new GotoAction
+
+
 
 #macro CAN_ATTACK		0
 #macro hurrtt			1

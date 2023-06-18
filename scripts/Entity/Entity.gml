@@ -83,7 +83,6 @@ function AbrirPuerta(_roomindex){
 	
 if(instance_exists(o_player))
 {
-	holo=10;
 	if(o_player.state != states.DEAD)
 	{
 		with(obj_puerta) image_index = 1;

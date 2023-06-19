@@ -20,7 +20,12 @@
 #macro OPTION new OptionAction
 #macro GOTO new GotoAction
 
-
+//GEOMETRY DASH
+enum obstacle{
+	up,
+	down,
+	updown
+}
 
 #macro CAN_ATTACK		0
 #macro hurrtt			1
@@ -75,7 +80,8 @@ enum index{
 enum mode{
 	move,
 	grid,
-	fight
+	fight,
+	obstacle	
 }
 
 enum signindex{

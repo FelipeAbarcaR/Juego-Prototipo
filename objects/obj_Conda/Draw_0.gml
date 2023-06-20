@@ -1,32 +1,19 @@
 /// @description Insert description here
 // You can write your code in this editor
 draw_self();
+var _scale=3;
+var _hpbarx=bbox_left-16;
+var _hpbary=bbox_top-36-7;
+var _barwidht=sprite_get_width(spr_hpbar2frame);
+var _barheight=6*_scale;
 
-//draw hp bar
+
+//draw hp bar (parcheado hasta encontrar soluciona  resolución)
+	//health	
+draw_sprite_stretched(spr_hpbar2hp,0,_hpbarx,_hpbary+16+5,map_value(hp,0,maxhp,0,_barwidht)*_scale,(_barheight/2)+1)
 	//frame
-draw_sprite_ext(
-	spr_hpbar2frame,
-	0,
-	x,
-	bbox_top-16,
-	image_xscale,
-	image_yscale,
-	image_angle,
-	image_blend,
-	image_alpha);
-	
-	//health
-	
-draw_sprite_ext(
-	spr_hpbar2hp,
-	0,
-	bbox_left-25,
-	bbox_top-16,
-	map_value(hp,0,maxhp,0,45*2), //el 45 no tengo idea, pero calza
-	image_yscale,
-	image_angle,
-	image_blend,
-	image_alpha);	
+draw_sprite_stretched(spr_hpbar2frame,0,_hpbarx,_hpbary,_barwidht*_scale,_barheight*_scale);
+
 if (global.DrawText){
 	var _x,_y,_xTo,_yTo;
 	_xTo=path_get_point_x(current_path,point_to_go);

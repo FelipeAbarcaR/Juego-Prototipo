@@ -10,8 +10,6 @@ yTo = ystart;
 
 
 
-
-
 //shakelength = 0;
 //shakemagnitude = 0;
 //shakeremain = 0;

@@ -214,8 +214,8 @@ for (var i = 0; i < array_length(dialogo); i++)
 global.topics[$ "Batallando"] = [
 	SPEAKER("Rana",spr_pt_rana, PORTRAIT_SIDE.LEFT),
 	TEXT("Aja! encontraste mi escondite secreto, debes saber que soy un agente secreto"),
-	TEXT("Espera... No sé si lo sabías, bueno no importa."),
-	TEXT("¡Ahora debo matarte!"),
+	TEXT("Espera... No se si lo sabias, bueno no importa."),
+	TEXT("Ahora debo matarte!"),
 	NEWROOM(rm_pelea)
 ];
 		

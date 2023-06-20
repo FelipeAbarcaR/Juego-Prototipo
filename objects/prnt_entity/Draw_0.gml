@@ -1,3 +1,6 @@
+//shadow
+if(EntityShadow) draw_sprite(spr_shadow,0,x,y-1);
+
 if(flash !=0)
 {
 	shader_set(flashShader);

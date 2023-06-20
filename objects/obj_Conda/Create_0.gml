@@ -46,4 +46,4 @@ spr_dead=spr_CondaDead;
 spr_hurt=spr_CondaHurt;
 spr_idle=spr_CondaIdle;
 
-hola=48;
+hola=0;

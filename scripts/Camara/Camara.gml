@@ -20,6 +20,8 @@ display_set_gui_size(_width,_height);
 var _displayWidth = display_get_width();
 var _displayHeight = display_get_height();
 
+view_wport[0]=_width;
+view_hport[0]=_height;
 
 //window_set_position(_displayWidth/2 - _width/2 , _displayHeight/2 - _height/2 );
 

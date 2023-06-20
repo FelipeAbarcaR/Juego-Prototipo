@@ -81,7 +81,9 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Minijuegos","folderPath":"folders/Tile Sets/Minijuegos.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Otros","folderPath":"folders/Tile Sets/Otros.yy",},
   ],
-  "IncludedFiles": [],
+  "IncludedFiles": [
+    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"prueba_dialogo.json","CopyToMask":-1,"filePath":"datafiles",},
+  ],
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {

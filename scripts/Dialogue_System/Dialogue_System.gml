@@ -138,36 +138,79 @@ function GotoAction(_topic) : DialogueAction() constructor{
 	}
 	
 }
+
 //----------------TOPICS---------------------//
 
+dialogo = undefined;
+
+if(file_exists(working_directory + "prueba_dialogo.json") )
+{
+	var json = "";
+	var file = file_text_open_read(working_directory + "prueba_dialogo.json");
+	
+	while(file_text_eof(file) == false)
+	{
+		json += file_text_readln(file);
+	}
+	file_text_close(file);
+	
+	dialogo = json_parse(json);
+}
+
+
 global.topics = {};
+global.topics_names = [];
 
-global.topics[$ "Introduccion"] = [
-	SPEAKER("Viejo Sabio",spr_portrait_ViejoSabio, PORTRAIT_SIDE.LEFT),
-	TEXT("fiuu, esta vez si que se lucieron, No sabes de lo que hablo?"),
-	TEXT("Bueno, nada importante, lo unico que tienes que saber, es que, en este mundo, todo funciona con el ritmo."),
-	TEXT("Por tu cara de confusion veo, que la inteligencia no es lo tuyo JA!JA!JA!."),
-	TEXT("Ni tampoco el buen humor, en fin, si lo que necesitas es respuestas, al unico lugar al que puedes acceder no queda lejos de aqui"),
-];
+var Topico = "";
+var textbox = "";
 
-global.topics[$ "Breakfast"] = [
-	//SPEAKER("Sam",spr_portrait_sam,PORTRAIT_SIDE.LEFT),
-	CHOICE("What do you want for breakfast",OPTION("Eggs", "Chose Eggs"),OPTION ("Pancakes", "Chose Pancakes"))
-];
+for (var i = 0; i < array_length(dialogo); i++)
+{
+	Topico = dialogo[i][$ "conversation_name"];
 	
-	global.topics[$ "Chose Eggs"] = [
-		TEXT ("That's a healthy way to start the day!"),
-		GOTO("End of breakfast")
-	];
+	if(!struct_exists(global.topics,Topico))
+	{
+		global.topics[$ Topico]= [];
+		global.topics_names[i] = Topico;
+		textbox = dialogo[i][$ "TEXTBOX"];
+		if(textbox != "")
+		{
+			global.topics[$ Topico][i] = TEXT(textbox);
+		}
+		else continue; //esto va a cambiar
+	}
+	else // si es que existe ya el topico en la global.topics
+	{
+		if(textbox != "")
+		{
+			global.topics[$ Topico][i] = TEXT(textbox);
+		}
+		else continue; //esto va a cambiar
+	}
+}
 
-	global.topics[$ "Chose Pancakes"] = [
-		TEXT("Ooh, yummy!"),
-		GOTO("End of breakfast")
-	];
+
+
+
+//global.topics[$ "Breakfast"] = [
+//	//SPEAKER("Sam",spr_portrait_sam,PORTRAIT_SIDE.LEFT),
+//	CHOICE("What do you want for breakfast",OPTION("Eggs", "Chose Eggs"),OPTION ("Pancakes", "Chose Pancakes"))
+//];
 	
-		global.topics [$ "End of breakfast"] = [
-			TEXT("Goodbye, now")
-		];
+//	global.topics[$ "Chose Eggs"] = [
+//		TEXT ("That's a healthy way to start the day!"),
+//		GOTO("End of breakfast")
+//	];
+
+//	global.topics[$ "Chose Pancakes"] = [
+//		TEXT("Ooh, yummy!"),
+//		GOTO("End of breakfast")
+//	];
+	
+//		global.topics [$ "End of breakfast"] = [
+//			TEXT("Goodbye, now")
+//		];
+
 global.topics[$ "Batallando"] = [
 	SPEAKER("Rana",spr_pt_rana, PORTRAIT_SIDE.LEFT),
 	TEXT("Aja! encontraste mi escondite secreto, debes saber que soy un agente secreto"),

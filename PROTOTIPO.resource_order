@@ -43,6 +43,7 @@
     {"name":"Minijuegos","order":15,"path":"folders/Sprites/Minijuegos.yy",},
     {"name":"Fight","order":1,"path":"folders/Sprites/Minijuegos/Fight.yy",},
     {"name":"Enemies","order":11,"path":"folders/Sprites/Minijuegos/Fight/Enemies.yy",},
+    {"name":"FX","order":12,"path":"folders/Sprites/Minijuegos/Fight/FX.yy",},
     {"name":"GUI","order":1,"path":"folders/Sprites/Minijuegos/Fight/GUI.yy",},
     {"name":"spr_Conda","order":2,"path":"folders/Sprites/Minijuegos/Fight/spr_Conda.yy",},
     {"name":"spr_Conde","order":3,"path":"folders/Sprites/Minijuegos/Fight/spr_Conde.yy",},
@@ -59,7 +60,6 @@
     {"name":"M0","order":3,"path":"folders/Tile Sets/M0.yy",},
     {"name":"Minijuegos","order":5,"path":"folders/Tile Sets/Minijuegos.yy",},
     {"name":"Otros","order":6,"path":"folders/Tile Sets/Otros.yy",},
-    {"name":"FX","order":12,"path":"folders/Sprites/Minijuegos/Fight/FX.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"bgm_Kappn","order":3,"path":"sounds/bgm_Kappn/bgm_Kappn.yy",},

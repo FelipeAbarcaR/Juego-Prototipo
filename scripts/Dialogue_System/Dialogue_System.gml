@@ -24,6 +24,7 @@ function type(x, y, text, progress, width) {
 			draw_x = 0;
 			draw_y += string_height("A");
 		}
+		
 		// If we're starting a new word, we can line break
 		else if (char == " ") {
 			draw_x += string_width(char);

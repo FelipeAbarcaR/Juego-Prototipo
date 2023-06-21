@@ -56,6 +56,6 @@ var finished = (text_progress == text_length);
 if (finished){
 	if (new_room != -1){
 		global.targetRoom=new_room;
-		RoomTransition(TRANS_TYPE.SLIDE,new_room);
+		RoomTransition(TRANS_TYPE.FADE,new_room);
 	}
 }

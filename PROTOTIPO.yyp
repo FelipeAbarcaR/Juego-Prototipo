@@ -61,6 +61,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Minijuegos","folderPath":"folders/Sprites/Minijuegos.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Fight","folderPath":"folders/Sprites/Minijuegos/Fight.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Enemies","folderPath":"folders/Sprites/Minijuegos/Fight/Enemies.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"FX","folderPath":"folders/Sprites/Minijuegos/Fight/FX.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"GUI","folderPath":"folders/Sprites/Minijuegos/Fight/GUI.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"spr_Conda","folderPath":"folders/Sprites/Minijuegos/Fight/spr_Conda.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"spr_Conde","folderPath":"folders/Sprites/Minijuegos/Fight/spr_Conde.yy",},
@@ -79,7 +80,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"M0","folderPath":"folders/Tile Sets/M0.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Minijuegos","folderPath":"folders/Tile Sets/Minijuegos.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Otros","folderPath":"folders/Tile Sets/Otros.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"FX","folderPath":"folders/Sprites/Minijuegos/Fight/FX.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"prueba_dialogo.json","CopyToMask":-1,"filePath":"datafiles",},

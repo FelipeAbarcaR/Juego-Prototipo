@@ -63,6 +63,13 @@
 	if (state=="attack")
 	{
 		x+=min(abs(x_to-x),dodge_speed)*sign(x_to-x);
+		//Attack FX when reach the spot
+		if (x_to-x==0){
+			var _midheight = (bbox_top-bbox_bottom)/2;
+			var _effectdistance = 16
+			instance_create_depth(x+ _effectdistance,y+_midheight,-999,obj_effect,{sprite_index : spr_fx_fight_atk1,image_xscale:2,image_yscale:2})
+		}
+		
 		if (sign(x_to-x)==0 and image_speed=0){
 			delay=attack_delay
 			start_delay=true;

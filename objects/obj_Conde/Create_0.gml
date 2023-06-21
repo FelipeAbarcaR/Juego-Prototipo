@@ -31,6 +31,8 @@ hpbar_x = 64;
 hpbar_y = 32;
 invincible=false;
 
+//Sprites
+	//player
 
 spr_idle=spr_CondeIdle;
 spr_atk1=spr_condeATK1;
@@ -38,6 +40,10 @@ spr_atk2=spr_CondeATK2;
 spr_atk3=spr_CondeATK3;
 spr_dead=spr_CondeDead;
 spr_hurt=spr_CondeHurt;
+	
+	//FX
+	
+fx_atk1=spr_fx_fight_atk1;
 
 debugswitch=true;
 

@@ -12,8 +12,8 @@
     "path": "folders/Obsoleto/Entity.yy",
   },
   "parentObjectId": {
-    "name": "o_enemy_par1",
-    "path": "objects/o_enemy_par1/o_enemy_par1.yy",
+    "name": "prnt_enemy_new",
+    "path": "objects/prnt_enemy_new/prnt_enemy_new.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

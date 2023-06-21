@@ -329,6 +329,7 @@ function PlayerStateRoll(){
 function reset_variables() {
 	
 	global.interact = false;
+	global.end_interaction = false;
 	left = 0;
 	right = 0;
 	up = 0;
@@ -415,6 +416,34 @@ function collision() {
 	}
 	
 }
+function collision_Entity() {
+	//set target values
+	var _tx = x;
+	var _ty = y;
+	
+	//move back to last step position, out of the collision
+	x = xprevious;
+	y = yprevious;
+	
+	//get max distance we want to move
+	var _disx = ceil(abs(_tx - x));
+	var _disy = ceil(abs(_ty - y));
+	
+	//ensure we are using integers if we are colliding in the x/y axis
+	if place_meeting(x + _disx * sign(_tx - x), y, obj_sign) x = round(x);
+	if place_meeting(x, y + _disy * sign(_ty - y), obj_sign) y = round(y);
+	
+	//move as far as in x and y before hitting the solid
+	repeat(_disx)
+	{
+		if !place_meeting(x + sign(_tx - x), y, obj_sign) x += sign(_tx - x);	
+	}
+	repeat(_disy)
+	{
+		if !place_meeting(x, y + sign(_ty - y), obj_sign) y += sign(_ty - y);
+	}
+	
+}	
 	
 function collision_bridge (){
 
@@ -503,9 +532,9 @@ function Space_logic(){
 	if(global.interact)
 		{
 
-			var _activateX = x + lengthdir_x(10, direction);
+			var _activateX = x + lengthdir_x(10, dir);
 			
-			var _activateY = y + lengthdir_y(10, direction);
+			var _activateY = y + lengthdir_y(10, dir);
 			
 			var _activatesize = 4;
 			
@@ -568,6 +597,7 @@ function Space_logic(){
 			}
 			else
 			{
+				global.end_interaction = true;
 				if(activate.EntityActivateScript == startDialogue)
 				{
 					with(o_player)
@@ -632,7 +662,7 @@ function placement_Player_NPC(_x,_y,_relative,_spd){
 			
 		if(point_distance(x,y,_xx,_yy) >= _spd)
 		{
-			var startpath = mp_grid_path(global.mp_grid, path, x,y,_xx,_yy,0)
+			var startpath = mp_grid_path(global.mp_grid, path, x,y,_xx,_yy,true)
 			
 			if(startpath)
 			{

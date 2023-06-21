@@ -1,6 +1,5 @@
 /// @description 
 event_inherited();
-last_state = state;
 walk_spd = 2;
 hp_max = 10;
 hp = hp_max;

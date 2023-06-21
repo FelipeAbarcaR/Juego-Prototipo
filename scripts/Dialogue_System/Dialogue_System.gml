@@ -141,12 +141,13 @@ function GotoAction(_topic) : DialogueAction() constructor{
 
 //----------------TOPICS---------------------//
 
+//Importando El JSON del dialogo
 dialogo = undefined;
 
-if(file_exists(working_directory + "prueba_dialogo.json") )
+if(file_exists(working_directory + "prueba_dialogo1.json"))
 {
 	var json = "";
-	var file = file_text_open_read(working_directory + "prueba_dialogo.json");
+	var file = file_text_open_read(working_directory + "prueba_dialogo1.json");
 	
 	while(file_text_eof(file) == false)
 	{
@@ -159,10 +160,18 @@ if(file_exists(working_directory + "prueba_dialogo.json") )
 
 
 global.topics = {};
-global.topics_names = [];
 
+
+hola = 10;
 var Topico = "";
 var textbox = "";
+var iter = 2;
+var speaker = "";
+var speakercomp = "";
+var sprite = 0;
+var portrait = 0;
+
+//guardando la data en global.topics
 
 for (var i = 0; i < array_length(dialogo); i++)
 {
@@ -171,23 +180,62 @@ for (var i = 0; i < array_length(dialogo); i++)
 	if(!struct_exists(global.topics,Topico))
 	{
 		global.topics[$ Topico]= [];
-		global.topics_names[i] = Topico;
 		textbox = dialogo[i][$ "TEXTBOX"];
-		if(textbox != "")
+		speaker = dialogo[i][$ "SPEAKER"];
+		speakercomp = speaker;
+		iter = 2;
+		if(speaker != "")
 		{
-			global.topics[$ Topico][i] = TEXT(textbox);
+			switch(speaker)
+			{
+				default: 
+					sprite = spr_ViejoSabio;
+				break;
+			}
+			global.topics[$ Topico][0] = SPEAKER(speaker,sprite,PORTRAIT_SIDE.LEFT);
+			portrait += 1;
+			if(textbox != "")
+			{
+				global.topics[$ Topico][1] = TEXT(textbox);
+			}
 		}
 		else continue; //esto va a cambiar
 	}
 	else // si es que existe ya el topico en la global.topics
 	{
+		speaker = dialogo[i][$ "SPEAKER"];
+		if(speaker != speakercomp)
+		{
+			switch(speaker)
+			{
+				default: 
+					sprite = spr_ViejoSabio;
+				break;
+			}
+			if(portrait == 0) 
+			{
+				global.topics[$ Topico][iter] = SPEAKER(speaker,sprite,PORTRAIT_SIDE.LEFT);
+				portrait += 1;
+			}
+			else
+			{
+				global.topics[$ Topico][iter] = SPEAKER(speaker,sprite,PORTRAIT_SIDE.RIGHT);
+				portrait = 0;
+			}
+			speakercomp = speaker;
+			iter += 1;
+		}
+		textbox = dialogo[i][$ "TEXTBOX"];
 		if(textbox != "")
 		{
-			global.topics[$ Topico][i] = TEXT(textbox);
+			global.topics[$ Topico][iter] = TEXT(textbox);
+			iter += 1;
 		}
 		else continue; //esto va a cambiar
 	}
 }
+
+
 
 
 
@@ -210,6 +258,7 @@ for (var i = 0; i < array_length(dialogo); i++)
 //		global.topics [$ "End of breakfast"] = [
 //			TEXT("Goodbye, now")
 //		];
+
 
 global.topics[$ "Batallando"] = [
 	SPEAKER("Rana",spr_pt_rana, PORTRAIT_SIDE.LEFT),

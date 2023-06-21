@@ -12,12 +12,12 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Entity",
-    "path": "folders/Obsoleto/Entity.yy",
+    "name": "Player",
+    "path": "folders/Objects/Player.yy",
   },
   "parentObjectId": {
-    "name": "prnt_depth",
-    "path": "objects/prnt_depth/prnt_depth.yy",
+    "name": "prnt_depth_object1",
+    "path": "objects/prnt_depth_object1/prnt_depth_object1.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

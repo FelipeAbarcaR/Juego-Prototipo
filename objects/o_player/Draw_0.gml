@@ -10,7 +10,7 @@ if alarm[hurrtt] > 0 and flash-- < flash_initial/2 {
 	
 } else {
 	
-	draw_sprite_ext(sprite_index, image_index,floor(x-z), floor(y-z), facing, 1, 0, c_white, image_alpha);
+	draw_sprite_ext(sprite_index, image_index,x, floor(y-z), image_xscale, image_yscale, image_angle, image_blend, image_alpha);
 	
 }
 

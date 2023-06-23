@@ -1,4 +1,3 @@
-
 randomize();
 
 global.gamepaused = false;
@@ -19,7 +18,7 @@ global.textover = false;
 
 global.mp_grid = 0;
 
-surface_resize(application_surface,RESOLUTION_W,RESOLUTION_H);
+//surface_resize(application_surface,RESOLUTION_W,RESOLUTION_H);
 
 global.gamemode=mode.move;
 
@@ -52,6 +51,14 @@ global.gamemode=mode.move;
 //mute bin var
 mute=0;
 //room data
+
+// Create ds list for inventory
+
+//ds list es como un array pero mas flexible
+inv_list = ds_list_create();
+
+//Pausing
+pause = false;
 
 
 

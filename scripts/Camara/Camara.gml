@@ -8,7 +8,7 @@ var _width = global.res.width;
 var _height = global.res.height;
 
 //Resolucion 
-surface_resize(application_surface,_width*global.res.scale,_height*global.res.scale);
+surface_resize(application_surface,_width,_height);
 
 //Ventana
 window_set_size(_width*global.res.scale,_height*global.res.scale);
@@ -20,24 +20,10 @@ display_set_gui_size(_width,_height);
 var _displayWidth = display_get_width();
 var _displayHeight = display_get_height();
 
-view_wport[0]=_width;
-view_hport[0]=_height;
+//view_wport[0]=_width;
+//view_hport[0]=_height;
 
 //window_set_position(_displayWidth/2 - _width/2 , _displayHeight/2 - _height/2 );
-
-
-function ScreenShake(_magnitude,_length){
-	with(global.icamara)
-	{
-		if(_magnitude > shakeremain)
-		{
-			shakemagnitude = _magnitude;
-			shakeremain = shakemagnitude;
-			shakelength = _length;
-		}
-	}
-}
-
 
 function RoomTransition(_type,_targetroom){
 

@@ -1,22 +1,17 @@
-//with(all) depth = -bbox_bottom;
-
-
 if(keyboard_check_pressed(vk_escape))
+{
+	if(!pause)
 	{
-	global.gamepaused = !global.gamepaused;
-	if(global.gamepaused)
-		{
-		 with (all)
-			{
-			gamepausedimagespeed = image_speed;
-			image_speed = 0;
-			}
-		}
-	else
-		{
-		with(all)
-			{
-			image_speed = gamepausedimagespeed;
-			}
-		}
+		pause = true;
+		
+		//Deactivate instances
+		instance_deactivate_all(true);
 	}
+	else
+	{
+		pause = false;
+		
+		//Activate instances
+		instance_activate_all();
+	}
+}

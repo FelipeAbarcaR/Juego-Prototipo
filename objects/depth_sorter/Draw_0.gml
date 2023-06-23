@@ -7,10 +7,8 @@ ds_grid_resize(dgrid,2,inst_num);
 var yy = 0;
 with(prnt_depth_object)
 {
-	ds_grid_add(dgrid,0,0,id);
 	dgrid[# 0,yy] = id;
 	dgrid[# 1,yy] = y;
-	
 	yy++;
 	
 }

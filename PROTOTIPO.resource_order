@@ -60,6 +60,8 @@
     {"name":"M0","order":3,"path":"folders/Tile Sets/M0.yy",},
     {"name":"Minijuegos","order":5,"path":"folders/Tile Sets/Minijuegos.yy",},
     {"name":"Otros","order":6,"path":"folders/Tile Sets/Otros.yy",},
+    {"name":"Interior","order":4,"path":"folders/Sprites/Tiles/M0/Interior.yy",},
+    {"name":"Interior","order":1,"path":"folders/Tile Sets/M0/Interior.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"bgm_Kappn","order":3,"path":"sounds/bgm_Kappn/bgm_Kappn.yy",},

@@ -13,6 +13,7 @@
 #macro TEXTBOX_W 407
 #macro TEXTBOX_H 80
 
+//dialogue system functions
 #macro NEWROOM new RoomAction
 #macro TEXT new TextAction
 #macro SPEAKER new SpeakerAction

@@ -30,6 +30,7 @@ switch Dir{
 	case "Right":
 	Direction=0;
 	break;
-
-
 }
+
+//LayerInfo
+collisionmap = layer_tilemap_get_id(layer_get_id("CryptRange"));

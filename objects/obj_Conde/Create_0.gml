@@ -11,11 +11,12 @@ state="idle"
 inputmagnitude=0;
 
 //DELAYS
+delay=0;
 start_delay=false;
 hit_delay=0.8;
 attack_delay=0.2;
-dodge_delay=0.5;
-back_dodge_delay=1.4;
+dodge_delay=0.3;
+back_dodge_delay=1.2;
 
 
 image_speed=0;
@@ -45,6 +46,19 @@ spr_hurt=spr_CondeHurt;
 	
 fx_atk1=spr_fx_fight_atk1;
 
-debugswitch=true;
+
+//SFX
+sfx_ataque=sfx_ataque_espada;
+sfx_dodge=sfx_dodge1;
+sfx_hurt=sfx_hurt1;
+
+
+//shader
+start_flash=false;
+current_flash=0.0;
+flash=0.5;
+sh_fhlash=shader_get_uniform(sha_red_flash,"flash");
+x1=0; //to use in draw
 
 hola=1;
+

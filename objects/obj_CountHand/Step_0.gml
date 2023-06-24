@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-var BeatProgress=min((obj_beat.SumDelta/obj_beat.BeatTimeMS),1);
+var BeatProgress=min((obj_beat.SumDelta/global.BeatTimeMS),1);
 //change index count
 if(global.beat && move){
 ic+=1;	

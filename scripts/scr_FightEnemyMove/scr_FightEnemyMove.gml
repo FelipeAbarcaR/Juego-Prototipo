@@ -37,8 +37,16 @@ if(_actualdistance<=_speed)
 
 _actualdistance=point_distance(x,y,_xTo,_yTo);
 
+//play sfx at 90% distance
+if ((_actualdistance/_distance)>=0.90 && played_sfx==false)
+{
+	PlaySFX(EnemyStance.prepare);
+	played_sfx=true;
+}
+
 if(_actualdistance==0||_distance==0)
 {
+	played_sfx=false;
 	//if reached the last point, attack stance
 	var _numpoints=path_get_number(current_path)-1;
 	if(point_to_go==_numpoints)

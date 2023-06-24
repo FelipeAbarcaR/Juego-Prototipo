@@ -8,7 +8,6 @@ if ( stance ==  EnemyStance.prepare)
 
 	guiheight=display_get_gui_height();
 	guiwidth=display_get_gui_width();
-	breaktopointo=10;
 	if (current_beat != global.BeatNumber)
 	{
 		current_beat=global.BeatNumber;
@@ -21,7 +20,11 @@ if ( stance ==  EnemyStance.prepare)
 	if (/*_ishalfbeat &&*/ move_on_path)
 	{
 		on_point = scr_FightEnemyMove();
-		if (on_point /*and _ishalfbeat*/) move_on_path=false;
+		if (on_point /*and _ishalfbeat*/)
+		{
+			move_on_path=false;
+		}
+		
 	}
 	}
 }

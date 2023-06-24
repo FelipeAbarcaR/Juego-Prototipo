@@ -28,7 +28,7 @@ if (game_mode!=mode.fight)
 	if global.DrawText
 	{
 		draw_text(_x+32,_y+32,string(ic));
-		draw_text(_x+32,_y+32+16,string(obj_beat.SumDelta/obj_beat.BeatTimeMS));
+		draw_text(_x+32,_y+32+16,string(obj_beat.SumDelta/global.BeatTimeMS));
 		draw_text(_x+32,_y+64,string(image_index));
 	}
 	}

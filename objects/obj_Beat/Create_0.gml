@@ -7,7 +7,8 @@ current_bpm = global.room_data[global.currentroom][index.bpm];
 // set bpm
 global.bpm= current_bpm;
 
-BeatTimeMS=((60)/global.bpm)*1000000
+global.BeatTimeMS=((60)/global.bpm)*1000000 //time of a beat in microseconds
+BeatTimeFrames=(60/global.bpm)*room_speed; //frames of a beat
 global.beatchance=false;
 global.beat=false;
 global.Move=false;	
@@ -36,3 +37,5 @@ barscale=0.6;
 //position of the beatbar. Set in Draw Event
 barX=0;
 barY=0;
+
+depth=100;

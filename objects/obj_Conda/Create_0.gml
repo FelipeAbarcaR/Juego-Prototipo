@@ -46,4 +46,13 @@ spr_dead=spr_CondaDead;
 spr_hurt=spr_CondaHurt;
 spr_idle=spr_CondaIdle;
 
+//SFX
+sfx_prepare=array_create(3,-1)
+sfx_index=0; //for playsfx()
+
+sfx_prepare[0]=sfx_prepare1;
+sfx_prepare[1]=sfx_prepare2;
+sfx_prepare[2]=sfx_prepare3;
+played_sfx=false; //actually used in scr_fightenemymove
+
 hola=0;

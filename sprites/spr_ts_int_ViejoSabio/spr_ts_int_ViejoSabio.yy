@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_ts_int_ViejoSabio",
-  "bbox_bottom": 79,
+  "bbox_bottom": 111,
   "bbox_left": 16,
-  "bbox_right": 127,
+  "bbox_right": 132,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -13,14 +13,15 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b3749e12-d52e-4bd8-879f-889dd6e9793a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"17eb70d2-8675-4b0f-a213-ec98b8296b49",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 144,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"6e6c18b2-22ef-4509-870a-77816c642b67","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"cbd4ab39-487a-481a-95ba-267b9c423dd7","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"6803b773-e9f8-4eb9-88f6-e154d000b79e","blendMode":0,"displayName":"Layer 1","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -54,7 +55,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b3749e12-d52e-4bd8-879f-889dd6e9793a","path":"sprites/spr_ts_int_ViejoSabio/spr_ts_int_ViejoSabio.yy",},},},"Disabled":false,"id":"8ff56c55-fdcd-4746-b707-d726122adbde","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"17eb70d2-8675-4b0f-a213-ec98b8296b49","path":"sprites/spr_ts_int_ViejoSabio/spr_ts_int_ViejoSabio.yy",},},},"Disabled":false,"id":"b3a6f0b9-6cb1-441f-b433-811c5a738228","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

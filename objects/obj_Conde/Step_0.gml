@@ -37,6 +37,18 @@
 				x_to=x-dodge_distance;
 				delay=back_dodge_delay;
 			}
+			//create dodge effect
+			instance_create_depth(	
+				x,
+				y,
+				-999,
+				obj_effect,
+				{
+					sprite_index	: spr_fx_fight_dodge,
+					image_xscale	: 3,
+					image_yscale	: 3,
+					sfx				: sfx_dodge
+				})
 			state="dodge";
 		}
 		//attack check
@@ -58,7 +70,7 @@
 	}
 	if (state=="delay" && start_delay=true){
 		start_delay=false;
-		alarm[0]=room_speed*delay
+		alarm[0]=room_speed*delay;
 	}
 	if (state=="attack")
 	{
@@ -67,7 +79,18 @@
 		if (x_to-x==0){
 			var _midheight = (bbox_top-bbox_bottom)/2;
 			var _effectdistance = 16
-			instance_create_depth(x+ _effectdistance,y+_midheight,-999,obj_effect,{sprite_index : spr_fx_fight_atk1,image_xscale:2,image_yscale:2})
+			//create attack effect
+			instance_create_depth(	
+				x+ _effectdistance,
+				y+_midheight,
+				-999,
+				obj_effect,
+				{
+					sprite_index	: spr_fx_fight_atk1,
+					image_xscale	: 2,
+					image_yscale	: 2,
+					sfx				: sfx_ataque
+				})
 		}
 		
 		if (sign(x_to-x)==0 and image_speed=0){
@@ -111,11 +134,15 @@ if (collision_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, obj_Conda,
 	//ATAQUE DEL ENEMIGO AL JUGADOR
 	if (global.enemy_atk and !invincible) //si el enemigo está atacando y pj vulnerable
 	{
+		//hurt sfx
+		audio_play_sound(sfx_hurt,10,0);
 		invincible=true;
 		start_delay=true;
 		state="stun";
 		hp-=obj_Conda.DMG;
 		global.enemy_atk=false;
 		if (hp<=0) state="dead";
+		start_flash=true;
+	
 	}
 }

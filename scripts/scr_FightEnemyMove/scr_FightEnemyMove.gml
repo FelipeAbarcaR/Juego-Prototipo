@@ -57,7 +57,11 @@ if(_actualdistance==0||_distance==0)
 			stance=EnemyStance.endstance;
 			StartEndState=true;
 		}		
-		if(stance=EnemyStance.prepare) stance=EnemyStance.attack;
+		if(stance=EnemyStance.prepare){
+			stance=EnemyStance.attack;
+			ShowFXArrows()
+		}
+		
 
 	} else
 	{

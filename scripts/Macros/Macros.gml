@@ -90,3 +90,11 @@ enum signindex{
 	danger,
 	monster
 }
+
+//fight path attacks
+enum paths {
+	DownLeft,
+	Middle,
+	UpDown,
+	UpLeft
+}

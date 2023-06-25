@@ -80,13 +80,7 @@
 			var _midheight = (bbox_top-bbox_bottom)/2;
 			var _effectdistance = 16
 			//create attack effect
-			instance_create_depth(	
-				x+ _effectdistance,
-				y+_midheight,
-				-999,
-				obj_effect,
-				{
-					sprite_index	: fx_atk1,
+			SendFX(fx_atk1,x+_effectdistance,y+_midheight,{
 					image_xscale	: 2,
 					image_yscale	: 2,
 					sfx				: sfx_ataque,

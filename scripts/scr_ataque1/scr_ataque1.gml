@@ -1,7 +1,7 @@
 function scr_ataque1() {
 	global.enemy_hit=false;
 	randomize();
-	ataque = choose(1,2,3,4);
+	ataque = choose(0,1,2,3);
 	switch (ataque)
 	{
 		case 1:

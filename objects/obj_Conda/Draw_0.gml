@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+//red flash hit shader
 if(start_flash1)
 {
 	x1+=0.1
@@ -14,6 +14,16 @@ if(start_flash1)
 		shader_set(sha_red_flash);
 		shader_set_uniform_f(sh_fhlash,current_flash);
 	}
+}
+//white outline shader
+if(stance ==EnemyStance.prepare)
+{
+	shader_set(sha_white_outline);	
+	var _texture = sprite_get_texture(sprite_index,image_index);
+	var _texture_width = texture_get_width(_texture);
+    var _texture_height = texture_get_height(_texture);
+	shader_set_uniform_f(sh_texture,_texture_width,_texture_height);
+	hola=10
 }
 
 draw_self();
@@ -55,6 +65,6 @@ if (global.DrawText){
 	draw_text(_x-16,_y+128+64+16,"stance: "+string(stance));
 	draw_text(_x-16,_y+128+64+32,"point: "+string(point_to_go));
 	draw_text(_x-16,_y+128+64+32+16,"point: "+string(map_value(hp,0,maxhp,0,48)));
-	draw_text(_x-16,_y+256,"hola: "+string(hola));
+	draw_text(_x-16,_y+256,"ATAQUE: "+string(ataque));
 	draw_text(_x-16,_y+256+16,"hp: "+string(hp));
 }

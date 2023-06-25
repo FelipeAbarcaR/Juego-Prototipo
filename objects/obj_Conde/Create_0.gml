@@ -3,12 +3,13 @@
 
 x_to=x;
 y_to=y;
-attack_distance=350;
+attack_distance=300;
 dodge_distance=192;
 dodge_speed=16;
 move=true;
 state="idle"
 inputmagnitude=0;
+attack_collision=false;
 
 //DELAYS
 delay=0;
@@ -25,7 +26,7 @@ image_index=0;
 
 hp=100;
 hpmax=hp;
-DMG=34;
+DMG=31;
 hpbar_width = 200;
 hpbar_height = 24;
 hpbar_x = 64;

@@ -22,7 +22,7 @@ yi=y;
 //Stats
 maxhp=100;
 hp=100;
-DMG = 31;
+DMG = 34;
 
 // path sets
 point_to_go=0;
@@ -54,5 +54,13 @@ sfx_prepare[0]=sfx_prepare1;
 sfx_prepare[1]=sfx_prepare2;
 sfx_prepare[2]=sfx_prepare3;
 played_sfx=false; //actually used in scr_fightenemymove
+
+//shader
+start_flash1=false;
+current_flash=0.0;
+flash=0.5;
+sh_fhlash=shader_get_uniform(sha_red_flash,"flash");
+x1=0; //to use in draw
+
 
 hola=0;

@@ -86,10 +86,11 @@
 				-999,
 				obj_effect,
 				{
-					sprite_index	: spr_fx_fight_atk1,
+					sprite_index	: fx_atk1,
 					image_xscale	: 2,
 					image_yscale	: 2,
-					sfx				: sfx_ataque
+					sfx				: sfx_ataque,
+					creator			: id
 				})
 		}
 		
@@ -119,10 +120,12 @@
 		y=ystart;
 		sprite_index=spr_idle;
 	}
-//check collition
-if (collision_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, obj_Conda, false, false))
+
+//ATAQUE DEL JUGADOR AL ENEMIGO
+
+if(attack_collision)
 {
-	//ATAQUE DEL JUGADOR AL ENEMIGO
+	attack_collision=false;
 	if (global.enemy_hit) // si el enemigo puede ser golpeado
 	{
 		with(obj_Conda)
@@ -131,6 +134,13 @@ if (collision_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, obj_Conda,
 			hp-=obj_Conde.DMG;
 		}
 	}
+}
+
+
+//check collition
+if (collision_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, obj_Conda, false, false))
+{
+
 	//ATAQUE DEL ENEMIGO AL JUGADOR
 	if (global.enemy_atk and !invincible) //si el enemigo está atacando y pj vulnerable
 	{

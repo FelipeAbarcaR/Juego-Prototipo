@@ -87,4 +87,5 @@ if (global.enemy_hurt)
 	last_sprite=sprite_index;
 	sprite_index=spr_hurt;
 	alarm[1]=room_speed*hurt_delay;
+	start_flash1=true;
 }

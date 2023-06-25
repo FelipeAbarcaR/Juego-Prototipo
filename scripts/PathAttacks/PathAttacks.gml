@@ -68,24 +68,25 @@ function ShowFXArrows(){
 	var _x = _char.x;
 	var _y = _char.y;
 	var _dodge = _char.dodge_distance*0.6;
+	var _scale=2;
 	
 	switch(ataque)
 	{
 		case 0://DownLeft
-			SendFX(spr_arrow2,_x-_dodge,_y+_dodge,{image_yscale : -1})
+			SendFX(spr_arrow2,_x-_dodge,_y+_dodge,{image_xscale : _scale,image_yscale : -1*_scale})
 		break;
 		
 		case 1://Middle
-			SendFX(spr_arrow1,_x-_dodge,_y);
+			SendFX(spr_arrow1,_x-_dodge,_y,{image_xscale : _scale,image_yscale : _scale});
 		break;
 		
 		case 2: //UpDown
-			SendFX(spr_arrow3,_x,_y+_dodge,{image_yscale : -1})
-			SendFX(spr_arrow3,_x,_y-_dodge)
+			SendFX(spr_arrow3,_x,_y+_dodge,{image_xscale : _scale,image_yscale : -1*_scale})
+			SendFX(spr_arrow3,_x,_y-_dodge,{image_xscale : _scale,image_yscale : _scale})
 		break;
 		
 		case 3: //UpLeft
-			SendFX(spr_arrow2,_x-_dodge,_y-_dodge);
+			SendFX(spr_arrow2,_x-_dodge,_y-_dodge,{image_xscale : _scale,image_yscale : _scale});
 		break;
 	
 		default: break;

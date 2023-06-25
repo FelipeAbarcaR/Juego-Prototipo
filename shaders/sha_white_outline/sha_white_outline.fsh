@@ -9,7 +9,7 @@ void main()
 {
 	
 	// change here thickness of outline 1.0, 2.0 etc.
-	vec2 thickness = texture_Pixel * 4.0;
+	vec2 thickness = texture_Pixel * 1.0;
 	
 	vec4 end_pixel =  v_vColour * texture2D( gm_BaseTexture, v_vTexcoord );
 	

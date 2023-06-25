@@ -34,3 +34,5 @@ switch Dir{
 
 //LayerInfo
 collisionmap = layer_tilemap_get_id(layer_get_id("CryptRange"));
+
+sh_texture=shader_get_uniform(sha_white_outline,"texture_Pixel");

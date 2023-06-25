@@ -20,10 +20,9 @@ if(stance ==EnemyStance.prepare)
 {
 	shader_set(sha_white_outline);	
 	var _texture = sprite_get_texture(sprite_index,image_index);
-	var _texture_width = texture_get_width(_texture);
-    var _texture_height = texture_get_height(_texture);
+	var _texture_width = texture_get_texel_width(_texture);
+    var _texture_height = texture_get_texel_height(_texture);
 	shader_set_uniform_f(sh_texture,_texture_width,_texture_height);
-	hola=10
 }
 
 draw_self();

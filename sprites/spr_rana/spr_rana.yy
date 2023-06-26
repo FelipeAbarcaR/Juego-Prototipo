@@ -2,7 +2,7 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_rana",
-  "bbox_bottom": 29,
+  "bbox_bottom": 27,
   "bbox_left": 8,
   "bbox_right": 23,
   "bbox_top": 8,

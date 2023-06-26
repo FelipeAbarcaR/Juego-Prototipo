@@ -9,10 +9,10 @@ if (_mode!=mode.fight) //print in gui only if is NOT in fight mode, (bc there is
 	} else a=1
 
 	//reference positions 
-	var _wpos,_hpos;
+	var _wpos,_hpos,_scale;
 	_wpos = 0.95;
 	_hpos=0.30;
-
+	
 	//draw yellow box range
 	var _x,_y;
 	_x=guiwidth*_wpos;
@@ -31,9 +31,9 @@ if (_mode!=mode.fight) //print in gui only if is NOT in fight mode, (bc there is
 	barX=_x;
 	barY=_beatbarY;
 
+}
 
-	if global.DrawText{
-		draw_text(2*room_width/3,  32+32, string(BeatBarProgress));
-		draw_text(x-16,y,string(global.bpm));
-	}
+if global.DrawText{
+	draw_text(2*room_width/3,  32+32, string(BeatBarProgress));
+	draw_text(x-20,y,"bpm: "+string(global.bpm));
 }

@@ -2,6 +2,7 @@
 // You can write your code in this editor
 if (stance!=EnemyStance.dead)
 {
+	played_sfx=false;
 	x = xstart;
 	y = ystart;
 	global.enemy_atk = false;

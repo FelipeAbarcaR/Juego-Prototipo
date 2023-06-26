@@ -23,7 +23,7 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"332c7f41-da41-4d9f-9176-05639f2c3472","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 9,
+  "origin": 4,
   "parent": {
     "name": "Obstacle1",
     "path": "folders/Sprites/Minijuegos/Obstacle1.yy",
@@ -59,7 +59,7 @@
     ],
     "visibleRange": null,
     "volume": 1.0,
-    "xorigin": 9,
+    "xorigin": 8,
     "yorigin": 8,
   },
   "swatchColours": null,

@@ -16,13 +16,14 @@ state="idle"; //state para script fightrhythmanimate
 bits=2;
 bits2=2;
 bitcount=0;
+ataque=-1
 xi=x;
 yi=y;
 
 //Stats
 maxhp=100;
 hp=100;
-DMG = 31;
+DMG = 34;
 
 // path sets
 point_to_go=0;
@@ -45,5 +46,25 @@ spr_atk4=spr_CondaATK4;
 spr_dead=spr_CondaDead;
 spr_hurt=spr_CondaHurt;
 spr_idle=spr_CondaIdle;
+
+//SFX
+sfx_prepare=array_create(3,-1)
+sfx_index=0; //for playsfx()
+
+sfx_prepare[0]=sfx_prepare1;
+sfx_prepare[1]=sfx_prepare2;
+sfx_prepare[2]=sfx_prepare3;
+played_sfx=false; //actually used in scr_fightenemymove
+
+//shader
+	//red flash hit
+	start_flash1=false;
+	current_flash=0.0;
+	flash=0.5;
+	sh_fhlash=shader_get_uniform(sha_red_flash,"flash");
+	x1=0; //to use in draw
+	
+	//white outline
+	sh_texture=shader_get_uniform(sha_white_outline,"texture_Pixel");
 
 hola=0;

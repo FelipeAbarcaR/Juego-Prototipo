@@ -28,20 +28,20 @@ if (_hKey) instance_create_layer(0,0, "Instances", obj_CountHand);
 	SumDelta+=dt;
 	SumFullDelta+=dt;
 
-	if (SumDelta>=BeatTimeMS) 
+	if (SumDelta>=global.BeatTimeMS) 
 	{
 	global.beat=true;
-	SumDelta -= BeatTimeMS;
+	SumDelta -= global.BeatTimeMS;
 	global.BeatNumber+=1;
 	audio_play_sound(Beep,11,false);
 	//instance_create_layer(barX, barY,"Instances",obj_vanish_GUI);
 	} else global.beat=false;
 
 //beat progress from 0 to 1
-	global.beatprogress=min(SumDelta/BeatTimeMS,1);
+	global.beatprogress=min(SumDelta/global.BeatTimeMS,1);
 
 //beat meter
-	BeatBarProgress = sin((SumFullDelta/BeatTimeMS)*pi);
+	BeatBarProgress = sin((SumFullDelta/global.BeatTimeMS)*pi);
 	//Beat's chance to hit
 	if (abs(BeatBarProgress)<=beathitrange) global.beatchance =true; else global.beatchance =false;
 

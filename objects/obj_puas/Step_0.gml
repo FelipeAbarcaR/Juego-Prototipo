@@ -5,21 +5,28 @@ if (global.beat)
 {
 	beatcount+=1;
 
-	if (beatcount>beatwait && image_index<2){
+	if (beatcount>beatwait){
+		if (image_index<index_activate)
+		{
 			image_index+=1;
-			beatcount=1;
-			}	
-	}
+			beatcount=0;
+		}
+	}	
+
+}
+
+if (image_index>=2){
 	
-	if (image_index>=image_number-1){
+	var _dt=delta_time;
+	delta_sum += _dt;
+	var _activeprogress=(delta_sum/active_time);
+	image_index=index_activate+frames_active*_activeprogress;
+}
+
+if (image_index>=image_number-1){
+
 		image_index=0;
 		image_speed=0;
 		beatcount=0;
-		SumDeltaTime=0;
-	}
-	if (image_index>=2){
-	SumDeltaTime+=delta_time;
-	var bp=min(obj_beat.SumDelta/obj_beat.BeatTimeMS,1);
-	//var bp2=min(sin((SumDeltaTime/(obj_beat.BeatTimeMS*2))*pi),1);
-	image_index=2+bp*4;
-} 
+		delta_sum=0
+}	

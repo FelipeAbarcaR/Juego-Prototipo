@@ -571,26 +571,34 @@ function Space_logic(){
 			
 			if(activate == noone)
 			{
-				//create bar
-				with(instance_create_layer(obj_beat.barX,obj_beat.barY,"Instances",obj_vanish_GUI))
-					{
-						sprite_index=img_BeatMeter;
-					}
 					
-				if(global.beatchance)
+				if(global.beatchance) //roll only in beat
 				{
 					state = states.ROLL;
 					
-					var _xto,_yto;
+					var _distanceroll,_xto,_yto;
+					_distanceroll=distanceroll;								
+				    _xto=x+ lengthdir_x(_distanceroll, dir);
+				    _yto=y+ lengthdir_y(_distanceroll, dir);
 					
-				    _xto=x+ lengthdir_x(distanceroll, dir);
-				    _yto=y+ lengthdir_y(distanceroll, dir);
+				    var _fall=place_meeting(_xto,_yto,o_solid_bridge); //check if it will fall from bridge
 					
-				    var _fall=position_meeting(_xto,_yto,o_solid_bridge);
+				    if (_fall) //if falling (no o_solid_bridge in landing)
+					{
+						var _solid=instance_place(_xto,_yto,o_solid_bridge)
+						var _x1=_solid.bbox_left;
+						var _x2=_solid.bbox_right;
+						var _xmid=_x1+(_x2-_x1)/2;
+						var _newx;
+						hola=10;
+						//create new point of landing closer to the edge
+						if (_xto >= _xmid) _newx=_x2+8 else _newx=_x1-8;
+						var _newdirection = point_direction(x,y,_newx,_yto);
+						dir=_newdirection;
+						_distanceroll=point_distance(x,y,_newx,_yto);	
+					};
 					
-				    if (_fall) distanceroll += 30;
-					
-					movedistanceremaining = distanceroll;
+					movedistanceremaining = _distanceroll;
 					
 					audio_play_sound(sfx_roll,8,false);
 				}

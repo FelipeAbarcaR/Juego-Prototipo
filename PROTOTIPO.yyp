@@ -130,6 +130,7 @@
     {"id":{"name":"pth_M1","path":"paths/pth_M1/pth_M1.yy",},},
     {"id":{"name":"spr_ts_MapaInicialV5","path":"sprites/spr_ts_MapaInicialV5/spr_ts_MapaInicialV5.yy",},},
     {"id":{"name":"spr_obs_gato","path":"sprites/spr_obs_gato/spr_obs_gato.yy",},},
+    {"id":{"name":"sha_red_outline","path":"shaders/sha_red_outline/sha_red_outline.yy",},},
     {"id":{"name":"spr_ts_DungeonWalls","path":"sprites/spr_ts_DungeonWalls/spr_ts_DungeonWalls.yy",},},
     {"id":{"name":"obj_game","path":"objects/obj_game/obj_game.yy",},},
     {"id":{"name":"spr_ranaconejo","path":"sprites/spr_ranaconejo/spr_ranaconejo.yy",},},

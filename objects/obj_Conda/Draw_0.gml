@@ -24,6 +24,15 @@ if(stance ==EnemyStance.prepare)
     var _texture_height = texture_get_texel_height(_texture);
 	shader_set_uniform_f(sh_texture,_texture_width,_texture_height);
 }
+//red outline shader
+if(stance == EnemyStance.attack)
+{
+    shader_set(sha_red_outline);	
+	var _texture = sprite_get_texture(sprite_index,image_index);
+	var _texture_width = texture_get_texel_width(_texture);
+    var _texture_height = texture_get_texel_height(_texture);
+	shader_set_uniform_f(sh_texture,_texture_width,_texture_height);
+}
 
 draw_self();
 if(shader_current() != -1) shader_reset();

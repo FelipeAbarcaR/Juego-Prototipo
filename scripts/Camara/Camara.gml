@@ -17,8 +17,8 @@ window_set_size(_width*global.res.scale,_height*global.res.scale);
 display_set_gui_size(_width,_height);
 
 //Centro de la ventana
-var _displayWidth = display_get_width();
-var _displayHeight = display_get_height();
+//var _displayWidth = display_get_width();
+//var _displayHeight = display_get_height();
 
 //view_wport[0]=_width;
 //view_hport[0]=_height;

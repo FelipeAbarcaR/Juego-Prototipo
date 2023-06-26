@@ -59,6 +59,7 @@ inv_list = ds_list_create();
 
 //Pausing
 pause = false;
+pause_surf = -1;
 
 
 

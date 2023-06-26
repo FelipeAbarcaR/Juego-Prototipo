@@ -1,6 +1,6 @@
 if(global.textover)
 {
-	with(instance_id)
+	with(instance_id) // no funciona
 	{
 		EntityActivateScript = -1;
 		EntityActivateArgs = [-1];

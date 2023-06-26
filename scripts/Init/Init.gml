@@ -11,3 +11,6 @@ enum ITEM {
 //global.itemsprite[ITEM.APPLE] = spr_apple;
 //global.itemsprite[ITEM.ORANGE] = spr_orange;
 //global.itemsprite[ITEM.WOOD] = spr_wood;
+
+//Inventory
+#macro INV_SIZE 12

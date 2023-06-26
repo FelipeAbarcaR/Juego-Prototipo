@@ -1,11 +1,10 @@
 if(!collected && place_meeting(x,y,o_player))
 {
 	//Add to inventory
-	Inv_add(inv_type,1)
-	
+	var _added = Inv_add(inv_type,1);
 	
 	//Collected
-	collected = true;
+	collected = _added;
 }
 
 //Collected fade away

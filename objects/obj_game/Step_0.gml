@@ -1,6 +1,33 @@
-/// @description Insert description here
-// You can write your code in this editor
-
+if(keyboard_check_pressed(vk_escape))
+{
+	if(!pause)
+	{
+		pause = true;
+		
+		//Deactivate instances
+		instance_deactivate_all(true);
+		
+		//Create surface
+		pause_surf = surface_create(global.res.width,global.res.height);
+		
+		//Copy 
+		surface_copy(pause_surf,0,0,application_surface);
+		
+	}
+	else
+	{
+		pause = false;
+		
+		//Activate instances
+		instance_activate_all();
+		
+		//Remove surface
+		if(surface_exists(pause_surf)) //Chequeamos esto porque las superficies pueden ser destruidas automaticamente
+		{
+			surface_free(pause_surf);
+		}
+	}
+}
 
 changeroom = keyboard_check_pressed(ord("M"));
 muteall= keyboard_check_released(ord("N"));
@@ -13,13 +40,13 @@ if keyboard_check_released(vk_lshift){
 //change room system
 
 if changeroom { //If pressed M to change room
-	hola=10;
+	//hola=10;
 	audio_stop_all();
 	global.previousroom = global.currentroom;
     global.currentroom += 1;
     if (global.currentroom > global.room_count - 1)
     {
-		hola=10
+		//hola=10
         global.currentroom = 0;
     }
     room_goto(global.room_data[global.currentroom][index.name]);

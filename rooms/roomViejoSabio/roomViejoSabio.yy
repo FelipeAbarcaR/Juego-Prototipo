@@ -42,15 +42,21 @@
 1,-8,-2147483648,1,0,-15,-2147483648,2,1,0,-3,-2147483648,1,1,-24,-2147483648,2,1,0,-3,-2147483648,1,1,-8,-2147483648,1,0,-15,-2147483648,2,
 1,0,-3,-2147483648,1,1,-24,-2147483648,2,1,0,-3,-2147483648,1,1,-24,-2147483648,2,1,0,-3,-2147483648,1,1,-24,-2147483648,2,1,0,-3,
 -2147483648,1,1,-24,-2147483648,2,1,0,-3,-2147483648,-26,1,1,0,-32,-2147483648,],"TileDataFormat":1,},"tilesetId":{"name":"tilesCol","path":"tilesets/tilesCol/tilesCol.yy",},"userdefinedDepth":false,"visible":false,"x":0,"y":0,},
-    {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Tiles_1","depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":17,"SerialiseWidth":30,"TileCompressedData":[
--60,0,1,1,-5,2,3,3,37,1,-12,2,1,3,-8,0,1,10,-5,37,3,12,37,10,-12,37,1,12,-8,0,
-1,10,-5,37,3,12,37,10,-12,37,1,57,-3,2,1,3,-4,0,1,10,-5,37,3,12,37,10,-16,37,1,12,
--4,0,1,10,-5,37,3,12,37,10,-16,37,1,12,-4,0,1,10,-5,37,3,57,58,59,-16,37,1,12,-4,0,
-1,10,-24,37,1,12,-4,0,1,19,-7,20,1,41,-16,37,1,12,-4,0,-8,37,1,50,-16,37,1,12,-4,0,
-1,1,-7,2,1,59,-12,37,1,39,-3,20,1,21,-4,0,1,10,-20,37,1,12,-8,0,1,10,-20,37,1,12,
--8,0,1,19,-11,20,-4,0,-5,20,1,21,-68,0,],"TileDataFormat":1,},"tilesetId":{"name":"ts_int_ViejoSabio","path":"tilesets/ts_int_ViejoSabio/ts_int_ViejoSabio.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
-    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Control","depth":500,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
-    {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4278190080,"depth":600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
+    {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Tiles_walls","depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":17,"SerialiseWidth":30,"TileCompressedData":[
+-442,0,1,13,-29,0,1,22,-37,0,],"TileDataFormat":1,},"tilesetId":{"name":"ts_int_ViejoSabio_walls","path":"tilesets/ts_int_ViejoSabio_walls/ts_int_ViejoSabio_walls.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+    {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Tiles_borders","depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":17,"SerialiseWidth":30,"TileCompressedData":[
+-60,0,1,5,-5,6,3,7,0,5,-12,6,1,7,-8,0,1,14,-5,0,3,16,0,14,-11,0,2,15,16,-8,
+0,1,14,-5,0,3,16,0,14,-12,0,1,60,-3,6,1,7,-4,0,1,14,-5,0,3,16,0,14,-16,0,1,
+16,-4,0,1,14,-5,0,3,16,0,14,-16,0,1,16,-4,0,1,14,-5,0,3,60,61,62,-16,0,1,16,-4,
+0,1,14,-24,0,1,16,-4,0,1,23,-7,24,1,44,-16,0,1,16,-12,0,1,53,-16,0,1,16,-4,0,1,
+5,-7,6,1,62,-12,0,1,42,-3,24,1,25,-4,0,1,14,-20,0,1,16,-8,0,1,14,-20,0,1,16,-8,
+0,1,23,-11,24,-4,0,-5,24,1,25,-68,0,],"TileDataFormat":1,},"tilesetId":{"name":"ts_int_ViejoSabio","path":"tilesets/ts_int_ViejoSabio/ts_int_ViejoSabio.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+    {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Tiles_floor","depth":600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":17,"SerialiseWidth":30,"TileCompressedData":[
+-60,0,-7,15,1,0,-14,15,-8,0,-7,15,1,0,-14,15,-8,0,-7,15,1,0,-18,15,-4,0,-7,15,1,0,
+-18,15,-4,0,-7,15,1,0,-18,15,-4,0,-26,15,-4,0,-26,15,-4,0,-26,15,-12,0,-18,15,-4,0,-26,15,
+-4,0,-22,15,-8,0,-22,15,-8,0,-12,15,-4,0,-6,15,-68,0,],"TileDataFormat":1,},"tilesetId":{"name":"ts_int_ViejoSabio_walls","path":"tilesets/ts_int_ViejoSabio_walls/ts_int_ViejoSabio_walls.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Control","depth":700,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
+    {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4278190080,"depth":800,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
   "parent": {
     "name": "0",

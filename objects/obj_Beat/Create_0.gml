@@ -30,9 +30,9 @@ BarHalf=BeatBarLenght/2;
 
 // gui_cosas
 var _res=global.res;
-guiwidth=_res.width;//camera_get_view_width(oCameraManager.camera);//display_get_gui_width();
-guiheight=_res.height//camera_get_view_height(oCameraManager.camera);//display_get_gui_height();
-barscale=0.6;
+guiwidth=display_get_gui_width();//camera_get_view_width(oCameraManager.camera);//display_get_gui_width();
+guiheight=display_get_gui_height();//camera_get_view_height(oCameraManager.camera);//display_get_gui_height();
+barscale=1.6;
 
 //position of the beatbar. Set in Draw Event
 barX=0;

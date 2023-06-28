@@ -1,4 +1,6 @@
 {
   "FolderOrderSettings": [],
-  "ResourceOrderSettings": [],
+  "ResourceOrderSettings": [
+    {"name":"roomMapaInicialCopy","order":1,"path":"rooms/roomMapaInicialCopy/roomMapaInicialCopy.yy",},
+  ],
 }

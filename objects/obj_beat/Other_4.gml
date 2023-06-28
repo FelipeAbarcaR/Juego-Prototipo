@@ -17,18 +17,18 @@ global.BeatTimeMS=((60)/global.bpm)*1000000
 audio_play_sound(current_music, 10, true,0.5);
 
 //gui cosas
-var _mode=global.room_data[global.currentroom][index.mode]
-if (_mode!=mode.fight)
-{
-	var _res=global.res;
-	guiwidth = _res.width;
-	guiheight = _res.height;	
-} else
-	{
+//var _mode=global.room_data[global.currentroom][index.mode]
+//if (_mode!=mode.fight)
+//{
+//	var _res=global.res;
+//	guiwidth = _res.width;
+//	guiheight = _res.height;	
+//} else
+//	{
 		
-	    guiwidth = room_width;
-		guiheight = room_height;
-	}
+	    guiwidth = display_get_gui_width();
+		guiheight = display_get_gui_height();
+	//}
 	
 
 var _mode=global.room_data[global.currentroom][index.mode];

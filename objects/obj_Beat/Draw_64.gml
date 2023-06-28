@@ -1,9 +1,9 @@
 /// @description Draw BeatBar
 // You can write your code in this editor
-var _mode=global.room_data[global.currentroom][index.mode];
-if (_mode!=mode.fight) //print in gui only if is NOT in fight mode, (bc there is no cam)
-{
-	var a //scale
+//var _mode=global.room_data[global.currentroom][index.mode];
+//if (_mode!=mode.fight) //print in gui only if is NOT in fight mode, (bc there is no cam)
+//{
+	var a //scale of the heart in 'beat'
 	if global.beatchance{
 		a=1.2
 	} else a=1
@@ -31,7 +31,7 @@ if (_mode!=mode.fight) //print in gui only if is NOT in fight mode, (bc there is
 	barX=_x;
 	barY=_beatbarY;
 
-}
+//}
 
 if global.DrawText{
 	draw_text(2*room_width/3,  32+32, string(BeatBarProgress));

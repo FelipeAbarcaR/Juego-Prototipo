@@ -1,15 +1,20 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "beatbar",
-  "eventList": [],
+  "name": "obj_orange",
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+  ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Misc",
-    "path": "folders/Objects/Misc.yy",
+    "name": "Coleccionable",
+    "path": "folders/Objects/Entity/Coleccionable.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_apple",
+    "path": "objects/obj_apple/obj_apple.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -26,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "img_BeatBar",
-    "path": "sprites/img_BeatBar/img_BeatBar.yy",
+    "name": "spr_orange",
+    "path": "sprites/spr_orange/spr_orange.yy",
   },
   "spriteMaskId": null,
   "visible": true,

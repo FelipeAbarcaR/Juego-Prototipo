@@ -1,15 +1,21 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "beatbar",
-  "eventList": [],
+  "name": "obj_button_inv",
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,},
+  ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Misc",
-    "path": "folders/Objects/Misc.yy",
+    "name": "GUI",
+    "path": "folders/Objects/GUI.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "prnt_button_pause",
+    "path": "objects/prnt_button_pause/prnt_button_pause.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -25,10 +31,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "img_BeatBar",
-    "path": "sprites/img_BeatBar/img_BeatBar.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

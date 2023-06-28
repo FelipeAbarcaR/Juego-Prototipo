@@ -1,3 +1,19 @@
+enum ITEM {
+	
+	APPLE,
+	ORANGE,
+	WOOD
+}
+
+global.itemsprite[ITEM.APPLE] = spr_apple;
+global.itemsprite[ITEM.ORANGE] = spr_orange;
+global.itemsprite[ITEM.WOOD] = spr_wood;
+
+//Inventory
+#macro INV_SIZE 12
+
+
+
 function Inv_add(_item,_count)
 {
 	var _list = obj_game.inv_list;

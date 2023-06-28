@@ -1,7 +1,7 @@
 if(!collected && place_meeting(x,y,o_player))
 {
 	//Add to inventory
-	inv_type = ITEM.APPLE;
+	inv_type = ITEM.ORANGE;
 	
 	var _added = Inv_add(inv_type,1);
 	
@@ -36,4 +36,3 @@ if (z < 0)
 	}
 	
 }
-	

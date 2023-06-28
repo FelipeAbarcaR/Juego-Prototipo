@@ -13,6 +13,10 @@ if(keyboard_check_pressed(vk_escape))
 		//Copy 
 		surface_copy(pause_surf,0,0,application_surface);
 		
+		//UI
+		event_user(0);
+		
+		
 	}
 	else
 	{
@@ -26,6 +30,9 @@ if(keyboard_check_pressed(vk_escape))
 		{
 			surface_free(pause_surf);
 		}
+		
+		//UI
+		event_user(1);
 	}
 }
 

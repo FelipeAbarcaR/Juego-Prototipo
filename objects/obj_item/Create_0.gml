@@ -1,5 +1,5 @@
 //Properties
-inv_type = ITEM.APPLE;
+inv_type = -1;
 
 //Vars
 collected = false;

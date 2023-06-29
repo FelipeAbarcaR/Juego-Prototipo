@@ -23,7 +23,7 @@
 	var _hitheight=BarHalf*barscale*beathitrange; //height of the range of beat's chance
 	var _ychance=_y-_hitheight;
 	var _beatbarY=_y+BarHalf*BeatBarProgress*barscale
-
+//Beat bar
 	draw_sprite_stretched(img_BeatRange,0,_xchance,_ychance,_barwidth,_hitheight*2);
 	draw_sprite_ext(img_BeatBar,0,_x,_y,barscale,barscale,image_angle,image_blend,image_alpha);
 	draw_sprite_ext(img_BeatMeter, 0, _x, _beatbarY,a, a, 0, -1, 1);

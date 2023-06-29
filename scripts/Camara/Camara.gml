@@ -1,6 +1,8 @@
 global.res = {
 	width: 480,
 	height: 270,
+	guiwidth: 480*3,
+	guiheight: 270*3,
 	scale: 3
 }
 
@@ -14,7 +16,7 @@ surface_resize(application_surface,_width,_height);
 window_set_size(_width*global.res.scale,_height*global.res.scale);
 
 //GUI
-display_set_gui_size(_width*3,_height*3);
+display_set_gui_size(global.res.guiwidth,global.res.guiheight);
 
 //Centro de la ventana
 //var _displayWidth = display_get_width();

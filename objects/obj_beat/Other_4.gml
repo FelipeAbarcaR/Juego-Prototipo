@@ -26,17 +26,17 @@ audio_play_sound(current_music, 10, true,0.5);
 //} else
 //	{
 		
-	    guiwidth = display_get_gui_width();
-		guiheight = display_get_gui_height();
+	  //  guiwidth = display_get_gui_width();
+	//	guiheight = display_get_gui_height();
 	//}
 	
 
 var _mode=global.room_data[global.currentroom][index.mode];
 
-if (_mode == mode.fight)
-{
-    barscale=0.6;
-}else
-{
-    //barscale=0.6;
-}
+//if (_mode == mode.fight)
+//{
+//    barscale=0.6;
+//}else
+//{
+//    //barscale=0.6;
+//}

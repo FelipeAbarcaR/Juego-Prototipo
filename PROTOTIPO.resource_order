@@ -11,6 +11,7 @@
     {"name":"Pasos_8","order":7,"path":"sounds/Pasos_8/Pasos_8.yy",},
     {"name":"spr_bg_forest2","order":1,"path":"sprites/spr_bg_forest2/spr_bg_forest2.yy",},
     {"name":"roomMapaInicialCopy7","order":2,"path":"rooms/roomMapaInicialCopy7/roomMapaInicialCopy7.yy",},
+    {"name":"spr_hpbar3","order":1,"path":"sprites/spr_hpbar3/spr_hpbar3.yy",},
     {"name":"Pasos_9","order":8,"path":"sounds/Pasos_9/Pasos_9.yy",},
     {"name":"Pasos_4","order":3,"path":"sounds/Pasos_4/Pasos_4.yy",},
     {"name":"Pasos_6","order":5,"path":"sounds/Pasos_6/Pasos_6.yy",},
@@ -21,6 +22,5 @@
     {"name":"Pasos_10","order":9,"path":"sounds/Pasos_10/Pasos_10.yy",},
     {"name":"Pasos_11","order":10,"path":"sounds/Pasos_11/Pasos_11.yy",},
     {"name":"ts_int_ViejoSabio2","order":1,"path":"tilesets/ts_int_ViejoSabio2/ts_int_ViejoSabio2.yy",},
-    {"name":"roomMapaInicialCopy","order":1,"path":"rooms/roomMapaInicialCopy/roomMapaInicialCopy.yy",},
   ],
 }

@@ -62,7 +62,7 @@ if (finished){
 	//ACTIVAR PELEA, POR MIENTRAS ES CON ROOM CHANGE
 	if (fight_enemy != -1){
 		global.targetRoom=rm_pelea;
-		var _transition=RoomTransition(TRANS_TYPE.SLIDE,rm_pelea);
+		var _transition=RoomTransition(TRANS_TYPE.FADE,rm_pelea);
 		var _enemy=fight_enemy;
 		var _bg=fight_bg;
 		with(_transition)

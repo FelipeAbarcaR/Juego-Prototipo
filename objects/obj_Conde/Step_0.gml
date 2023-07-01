@@ -117,13 +117,14 @@
 
 //ATAQUE DEL JUGADOR AL ENEMIGO
 
-if(attack_collision)
+	if(attack_collision)
 {
 	attack_collision=false;
 	if (global.enemy_hit) // si el enemigo puede ser golpeado
 	{
 		with(obj_Conda)
 		{
+			draw_hp2=true;
 			global.enemy_hurt=true;
 			hp-=obj_Conde.DMG;
 		}
@@ -135,11 +136,12 @@ if(attack_collision)
 if (collision_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, obj_Conda, false, false))
 {
 
-	//ATAQUE DEL ENEMIGO AL JUGADOR
+//ATAQUE DEL ENEMIGO AL JUGADOR
 	if (global.enemy_atk and !invincible) //si el enemigo está atacando y pj vulnerable
 	{
 		//hurt sfx
 		audio_play_sound(sfx_hurt,10,0);
+		
 		invincible=true;
 		start_delay=true;
 		state="stun";
@@ -147,6 +149,10 @@ if (collision_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, obj_Conda,
 		global.enemy_atk=false;
 		if (hp<=0) state="dead";
 		start_flash=true;
-	
+		
+		//DAMAGE ANIMATION (obj_control_fight)
+		draw_hp2=true;
+
 	}
 }
+

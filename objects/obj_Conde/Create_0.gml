@@ -15,7 +15,7 @@ attack_collision=false;
 delay=0;
 start_delay=false;
 hit_delay=0.8;
-attack_delay=0.2;
+attack_delay=0.4;
 dodge_delay=0.3;
 back_dodge_delay=1.2;
 
@@ -62,4 +62,8 @@ sh_fhlash=shader_get_uniform(sha_red_flash,"flash");
 x1=0; //to use in draw
 
 hola=1;
+
+//2nd bar decrease animation
+draw_hp2=false;
+
 

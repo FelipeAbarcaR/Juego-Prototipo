@@ -58,7 +58,10 @@ function type(x, y, text, progress, width) {
 		}
 		else {
 			// Draw the letter
+			
 			draw_text(x + draw_x, y + draw_y, char);
+
+			//draw_text(x + draw_x+2, y + draw_y+2, char);
 			draw_x += string_width(char);
 		}
 	}

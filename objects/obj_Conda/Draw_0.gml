@@ -37,20 +37,20 @@ if(stance == EnemyStance.attack)
 draw_self();
 if(shader_current() != -1) shader_reset();
 
-//HP BAR
+////HP BAR
 
-	var _scale=3;
-	var _hpbarx=bbox_left-16;
-	var _hpbary=bbox_top-36-7;
-	var _barwidht=sprite_get_width(spr_hpbar2frame);
-	var _barheight=6*_scale;
+//	var _scale=3;
+//	var _hpbarx=bbox_left-16;
+//	var _hpbary=bbox_top-36-7;
+//	var _barwidht=sprite_get_width(spr_hpbar2frame);
+//	var _barheight=6*_scale;
 
 
-	//draw hp bar (parcheado hasta encontrar soluciona  resolución)
-		//health	
-	draw_sprite_stretched(spr_hpbar2hp,0,_hpbarx,_hpbary+16+5,map_value(hp,0,maxhp,0,_barwidht)*_scale,(_barheight/2)+1)
-		//frame
-	draw_sprite_stretched(spr_hpbar2frame,0,_hpbarx,_hpbary,_barwidht*_scale,_barheight*_scale);
+//	//draw hp bar (parcheado hasta encontrar soluciona  resolución)
+//		//health	
+//	draw_sprite_stretched(spr_hpbar2hp,0,_hpbarx,_hpbary+16+5,map_value(hp,0,maxhp,0,_barwidht)*_scale,(_barheight/2)+1)
+//		//frame
+//	draw_sprite_stretched(spr_hpbar2frame,0,_hpbarx,_hpbary,_barwidht*_scale,_barheight*_scale);
 
 if (global.DrawText){
 	var _x,_y,_xTo,_yTo;

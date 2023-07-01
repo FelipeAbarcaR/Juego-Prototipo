@@ -21,8 +21,8 @@ xi=x;
 yi=y;
 
 //Stats
-maxhp=100;
 hp=100;
+hpmax=hp;
 DMG = 34;
 
 // path sets
@@ -68,3 +68,5 @@ played_sfx=false; //actually used in scr_fightenemymove
 	sh_texture=shader_get_uniform(sha_white_outline,"texture_Pixel");
 
 hola=0;
+//hp2 animation (obj_control_fight)
+draw_hp2=false;

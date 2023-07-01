@@ -60,7 +60,8 @@ if(speaker_name != "")
 // Text
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
-draw_set_font(text_font);
+
+//draw_set_font(text_font);
 draw_set_color(text_color);
 
 type(draw_text_x + text_x, draw_text_y + text_y, text, text_progress, draw_text_witdh);

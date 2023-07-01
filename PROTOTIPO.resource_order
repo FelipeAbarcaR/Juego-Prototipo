@@ -1,7 +1,7 @@
 {
   "FolderOrderSettings": [
-    {"name":"Gato3.2","order":1,"path":"folders/Sprites/Player/Gato3.2.yy",},
     {"name":"Pasos","order":1,"path":"folders/Sonidos/SFX/Pasos.yy",},
+    {"name":"Gato3.2","order":1,"path":"folders/Sprites/Player/Gato3.2.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"Pasos_3","order":2,"path":"sounds/Pasos_3/Pasos_3.yy",},
@@ -9,12 +9,14 @@
     {"name":"Pasos_2","order":1,"path":"sounds/Pasos_2/Pasos_2.yy",},
     {"name":"spr_ts_int_ViejoSabio2","order":2,"path":"sprites/spr_ts_int_ViejoSabio2/spr_ts_int_ViejoSabio2.yy",},
     {"name":"Pasos_8","order":7,"path":"sounds/Pasos_8/Pasos_8.yy",},
+    {"name":"spr_bg_forest2","order":1,"path":"sprites/spr_bg_forest2/spr_bg_forest2.yy",},
     {"name":"roomMapaInicialCopy7","order":2,"path":"rooms/roomMapaInicialCopy7/roomMapaInicialCopy7.yy",},
     {"name":"Pasos_9","order":8,"path":"sounds/Pasos_9/Pasos_9.yy",},
     {"name":"Pasos_4","order":3,"path":"sounds/Pasos_4/Pasos_4.yy",},
     {"name":"Pasos_6","order":5,"path":"sounds/Pasos_6/Pasos_6.yy",},
     {"name":"Pasos_12","order":11,"path":"sounds/Pasos_12/Pasos_12.yy",},
     {"name":"Pasos_5","order":4,"path":"sounds/Pasos_5/Pasos_5.yy",},
+    {"name":"obj_fight_transition","order":1,"path":"objects/obj_fight_transition/obj_fight_transition.yy",},
     {"name":"Pasos_7","order":6,"path":"sounds/Pasos_7/Pasos_7.yy",},
     {"name":"Pasos_10","order":9,"path":"sounds/Pasos_10/Pasos_10.yy",},
     {"name":"Pasos_11","order":10,"path":"sounds/Pasos_11/Pasos_11.yy",},

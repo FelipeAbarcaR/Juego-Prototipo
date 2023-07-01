@@ -8,11 +8,11 @@ if(keyboard_check_pressed(vk_escape))
 		instance_deactivate_all(true);
 		
 		//Create surface
-		pause_surf = surface_create(global.res.guiwidth,global.res.guiheight);
+		pause_surf = surface_create(global.res.width,global.res.height);
 		
 		//Copy 
 		surface_copy(pause_surf,0,0,application_surface);
-		
+
 		//UI
 		event_user(0);
 		

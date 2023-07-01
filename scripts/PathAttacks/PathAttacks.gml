@@ -65,8 +65,8 @@ yi=y;
 
 function ShowFXArrows(){
 	var _char = obj_Conde;
-	var _x = _char.x;
-	var _y = _char.y;
+	var _x = _char.xstart;
+	var _y = _char.ystart;
 	var _dodge = _char.dodge_distance*0.6;
 	var _scale=2;
 	

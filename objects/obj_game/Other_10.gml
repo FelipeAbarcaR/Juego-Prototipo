@@ -11,7 +11,7 @@ var _sizeY = 2; // y dos de alto
 
 //Coordinates
 var _invX = _margin;												//el mas 30 es porque si
-var _invY = global.res.height - (_margin + _sep + _cellSize + _sizeY + 30);
+var _invY = global.res.guiheight - (_margin + _sep + _cellSize + _sizeY + 30);
 
 var _x = 0;
 var _y = 0;

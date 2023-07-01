@@ -13,13 +13,6 @@
 #macro TEXTBOX_W 407
 #macro TEXTBOX_H 80
 
-//dialogue system functions
-#macro NEWROOM new RoomAction
-#macro TEXT new TextAction
-#macro SPEAKER new SpeakerAction
-#macro CHOICE new ChoiceAction
-#macro OPTION new OptionAction
-#macro GOTO new GotoAction
 
 //GEOMETRY DASH
 enum obstacle{

@@ -47,6 +47,10 @@ option_text_color = c_white;
 //Room
 new_room=-1;
 
+//Fight
+fight_enemy=-1;
+fight_bg=-1;
+
 /// PRIVATE PROPERTIES
 
 /*** LOOK BUT DO NOT EDIT! ***/

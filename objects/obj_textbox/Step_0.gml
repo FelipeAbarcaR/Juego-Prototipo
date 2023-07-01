@@ -56,6 +56,19 @@ var finished = (text_progress == text_length);
 if (finished){
 	if (new_room != -1){
 		global.targetRoom=new_room;
-		RoomTransition(TRANS_TYPE.FADE,new_room);
+		RoomTransition(TRANS_TYPE.SLIDE,new_room);
+	}
+	
+	//ACTIVAR PELEA, POR MIENTRAS ES CON ROOM CHANGE
+	if (fight_enemy != -1){
+		global.targetRoom=rm_pelea;
+		var _transition=RoomTransition(TRANS_TYPE.SLIDE,rm_pelea);
+		var _enemy=fight_enemy;
+		var _bg=fight_bg;
+		with(_transition)
+		{
+			enemy=_enemy;
+			background=_bg;
+		}
 	}
 }

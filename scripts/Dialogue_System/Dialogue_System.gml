@@ -5,6 +5,16 @@
 // Creates a textbox and starts a conversation.
 // @param topic - What topic the dialogue box should use
 
+//dialogue system functions
+#macro NEWROOM new RoomAction
+#macro TEXT new TextAction
+#macro SPEAKER new SpeakerAction
+#macro CHOICE new ChoiceAction
+#macro OPTION new OptionAction
+#macro GOTO new GotoAction
+#macro FIGHT new FightAction
+
+
 function startDialogue(topic) {
 	if (instance_exists(obj_textbox)) return;
 	
@@ -100,10 +110,20 @@ function RoomAction(_roomname) : DialogueAction() constructor{
 		
 }
 
+function FightAction(_background,_enemy) : DialogueAction() constructor{
+	enemy = _enemy;
+	background = _background;
+	act = function(textbox){
+
+	textbox.fight_bg=background;
+	textbox.fight_enemy=enemy;
+	textbox.next();
+	}
+}
+
 function ChoiceAction(_text) : DialogueAction() constructor{
 	
 	text = _text;
-	
 	//Fill this array with all the arguments after the first one
 	options = [];
 	for(var i = 1; i < argument_count; i++) array_push(options, argument[i]);
@@ -266,7 +286,7 @@ global.topics[$ "Batallando"] = [
 	TEXT("Aja! encontraste mi escondite secreto, debes saber que soy un agente secreto"),
 	TEXT("Espera... No se si lo sabias, bueno no importa."),
 	TEXT("Ahora debo matarte!"),
-	NEWROOM(rm_pelea)
+	FIGHT(spr_bg_forest2,obj_fight_rana)
 ];
 		
 global.topics[$ "signhouse1"] = [

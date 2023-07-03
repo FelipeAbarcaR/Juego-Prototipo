@@ -15,7 +15,7 @@ global.playerhealthmax = 3;
 global.playerhealth = global.playerhealthmax;
 global.playermoney = 0;
 global.textover = false;
-
+global.activate = -1;
 global.mp_grid = 0;
 
 //surface_resize(application_surface,RESOLUTION_W,RESOLUTION_H);

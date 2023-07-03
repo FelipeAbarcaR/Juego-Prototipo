@@ -58,7 +58,7 @@ function type(x, y, text, progress, width) {
 		}
 		else {
 			// Draw the letter
-			
+
 			draw_text(x + draw_x, y + draw_y, char);
 
 			//draw_text(x + draw_x+2, y + draw_y+2, char);
@@ -286,9 +286,9 @@ for (var i = 0; i < array_length(dialogo); i++)
 
 global.topics[$ "Batallando"] = [
 	SPEAKER("Rana",spr_pt_rana, PORTRAIT_SIDE.LEFT),
-	TEXT("Aja! encontraste mi escondite secreto, debes saber que soy un agente secreto"),
+	TEXT("Aja! encontraste mi [rainbow]escondite secreto[/rainbow], debes saber que soy un [c_blue]agente secreto"),
 	TEXT("Espera... No se si lo sabias, bueno no importa."),
-	TEXT("Ahora debo matarte!"),
+	TEXT("Ahora debo [wave][c_yellow]matarte!"),
 	FIGHT(spr_bg_forest2,obj_fight_rana)
 ];
 		
@@ -301,7 +301,7 @@ global.topics[$ "signenemy1"] = [
 
 global.topics[$ "signhouse2"] = [
 	
-	TEXT("¿Realmente esperas a que te diga donde ir? Los letreros no hablamos."),
+	TEXT("¿Realmente [c_yellow]esperas a que te diga donde ir? Los letreros no hablamos."),
 	TEXT("Vamos muchacho, tu puedes, solo debes seguir la instrucción.-->"),
 	TEXT("¿Sigues Aquí? El juego no se va a completar solo."),
 	TEXT("Ya me harté de tí. Adiós!.")

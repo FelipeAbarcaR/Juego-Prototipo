@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Obstacle1",
-    "path": "folders/Objects/Minijuegos/Obstacle1.yy",
+    "name": "PROTOTIPO",
+    "path": "PROTOTIPO.yyp",
   },
   "parentObjectId": null,
   "persistent": false,

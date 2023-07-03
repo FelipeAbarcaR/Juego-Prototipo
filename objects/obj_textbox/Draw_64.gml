@@ -1,17 +1,17 @@
 // Draw the box
 draw_sprite_stretched(sprite_index, 2, x, y, width, height);
-
+hola=10;
 var draw_text_x = x;
 var draw_text_y = y;
 var draw_text_witdh = text_width;
-
+var portrait_scale =2;
 var finished = (text_progress == text_length); 
 
 //Portrait
 if(sprite_exists(portrait_sprite))
 {
 	//Shrink text width vy the width the portrait will take up
-	draw_text_witdh -= portrait_width + portrait_x + padding;
+	draw_text_witdh -= portrait_width*portrait_scale + portrait_x + padding;
 	
 	var draw_portrait_x = x + portrait_x;
 	var draw_portrait_y = y + portrait_y;
@@ -21,7 +21,7 @@ if(sprite_exists(portrait_sprite))
 	if(portrait_side == PORTRAIT_SIDE.LEFT)
 	{
 		//Shift the text over when the portrait is on the left
-		draw_text_x += portrait_width + portrait_x + padding;
+		draw_text_x += portrait_width*portrait_scale + portrait_x + padding;
 	}
 	else 
 	{
@@ -38,8 +38,8 @@ if(sprite_exists(portrait_sprite))
 	if(!finished) subimg = (text_progress / text_speed) * (sprite_get_speed(portrait_sprite) / game_get_speed(gamespeed_fps));
 	
 	draw_sprite_ext(portrait_sprite, subimg,
-					draw_portrait_x + portrait_width/2, draw_portrait_y + portrait_height/2,
-					draw_portrait_xscale,1,0,c_white,1);
+					draw_portrait_x + (portrait_width*portrait_scale)/2, draw_portrait_y + (portrait_height*portrait_scale)/2,
+					draw_portrait_xscale*portrait_scale,portrait_scale,0,c_white,1);
 }
 
 //Speaker
@@ -61,10 +61,16 @@ if(speaker_name != "")
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 
-//draw_set_font(text_font);
+draw_set_font(text_font);
 draw_set_color(text_color);
 
-type(draw_text_x + text_x, draw_text_y + text_y, text, text_progress, draw_text_witdh);
+//type(draw_text_x + text_x, draw_text_y + text_y, text, text_progress, draw_text_witdh);
+
+draw_set_color(c_gray);
+draw_text_scribble_ext(draw_text_x + text_x-1,draw_text_y + text_y-3,text,draw_text_witdh,text_progress)
+draw_set_color(text_color);
+draw_text_scribble_ext(draw_text_x + text_x,draw_text_y + text_y,text,draw_text_witdh,text_progress)
+
 
 //Options
 if(finished && option_count >0)

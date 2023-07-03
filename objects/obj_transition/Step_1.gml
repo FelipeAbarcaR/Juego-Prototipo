@@ -30,7 +30,6 @@ else //leading == IN
 	{
 		with(o_player) state = states.IDLE;
 		instance_destroy();
-	hola=10;
 	}
 }	
 

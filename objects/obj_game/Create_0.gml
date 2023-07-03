@@ -62,9 +62,5 @@ pause = false;
 pause_surf = -1;
 
 
-
-
-
-
-
+textoruro="La vida de un crítico es [c_yellow]sencilla en muchos aspectos, [rainbow]arriesgamos poco[/rainbow], y tenemos poder sobre aquellos que ofrecen su trabajo y su servicio a nuestro juicio. Esperamos con las críticas negativas"
 

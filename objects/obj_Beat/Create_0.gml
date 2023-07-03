@@ -39,3 +39,6 @@ barX=0;
 barY=0;
 
 depth=100;
+
+//perfect,good,bad
+beat_hit_data = ds_list_create(); 

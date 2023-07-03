@@ -72,7 +72,7 @@ if (global.DrawText){
 	draw_set_color(c_black);
 	draw_text(_x-16,_y+128+64+16,"stance: "+string(stance));
 	draw_text(_x-16,_y+128+64+32,"point: "+string(point_to_go));
-	draw_text(_x-16,_y+128+64+32+16,"point: "+string(map_value(hp,0,maxhp,0,48)));
+	draw_text(_x-16,_y+128+64+32+16,"point: "+string(map_value(hp,0,hpmax,0,48)));
 	draw_text(_x-16,_y+256,"ATAQUE: "+string(ataque));
 	draw_text(_x-16,_y+256+16,"hp: "+string(hp));
 }

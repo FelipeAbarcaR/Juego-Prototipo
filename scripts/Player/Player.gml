@@ -330,6 +330,7 @@ function reset_variables() {
 	
 	global.interact = false;
 	global.end_interaction = false;
+	global.activate = -1;
 	left = 0;
 	right = 0;
 	up = 0;
@@ -526,48 +527,49 @@ function player_roll(){
 	//}
 }
 
-function Space_logic(){
+function Space_logic()
+{
+
+	var _activateX = x + lengthdir_x(10, dir);
+			
+	var _activateY = y + lengthdir_y(10, dir);
+			
+	var _activatesize = 4;
+			
+	var _activatelist = ds_list_create();
+			
+	activate = noone;
+			
+	var _entitiesfound = collision_rectangle_list(
+		_activateX - _activatesize,
+		_activateY - _activatesize,
+		_activateX + _activatesize,
+		_activateY + _activatesize,
+		prnt_entity,
+		false,
+		true,
+		_activatelist,
+		true
+	);
+			
+	//si la primera instancia que encontramos es la entidad	que podemos levantar o no tiene script: intenta el siguiente
+	while(_entitiesfound > 0)
+	{
+		var _check = _activatelist[| --_entitiesfound];
+		if(_check.EntityActivateScript != -1)
+		{
+			global.activate = _check;
+			activate = _check;
+			_entitiesfound = 0; // _entitiesfound = 0 es lo mismo
+		}
+	}
+					
+	ds_list_destroy(_activatelist);
+
 
 	//Activate key logic
 	if(global.interact)
 		{
-
-			var _activateX = x + lengthdir_x(10, dir);
-			
-			var _activateY = y + lengthdir_y(10, dir);
-			
-			var _activatesize = 4;
-			
-			var _activatelist = ds_list_create();
-			
-			activate = noone;
-			
-			var _entitiesfound = collision_rectangle_list(
-				_activateX - _activatesize,
-				_activateY - _activatesize,
-				_activateX + _activatesize,
-				_activateY + _activatesize,
-				prnt_entity,
-				false,
-				true,
-				_activatelist,
-				true
-			);
-			
-			//si la primera instancia que encontramos es la entidad	que podemos levantar o no tiene script: intenta el siguiente
-			
-			
-			while(_entitiesfound > 0)
-			{
-				var _check = _activatelist[| --_entitiesfound];
-				if(_check.EntityActivateScript != -1)
-				{
-					activate = _check;
-					_entitiesfound = 0; // _entitiesfound = 0 es lo mismo
-				}
-			}
-					
-			ds_list_destroy(_activatelist);
 			
 			if(activate == noone)
 			{

@@ -16,6 +16,7 @@ height = display_get_height()/5;
 x = (display_get_gui_width()- width)/2;
 y = display_get_gui_height() - height - margin;
 
+
 // Text
 text_font = fnt_Dogica;
 text_color = c_white;

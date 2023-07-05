@@ -42,25 +42,25 @@ if global.DrawText{
 
 // bad/good/perfect
 
-if(keyboard_check_pressed(vk_space))
-{
-	var _xdist=140;
+//if(keyboard_check_pressed(vk_space))
+//{
+//	var _xdist=140;
 
-    if(abs(BeatBarProgress)>=beathitrange) 
-	{
-	    store_beat_hit2(_x-_xdist,_beatbarY,"[c_black]Almost")
-	}
+//    if(abs(BeatBarProgress)>=beathitrange) 
+//	{
+//	    store_beat_hit2(_x-_xdist,_beatbarY,"[c_black]Almost")
+//	}
 	
-    if(abs(BeatBarProgress)>=0.30 && abs(BeatBarProgress)<beathitrange) 
-	{
-	    store_beat_hit2(_x-_xdist,_beatbarY,"[c_green]Good!")
-	}
+//    if(abs(BeatBarProgress)>=0.30 && abs(BeatBarProgress)<beathitrange) 
+//	{
+//	    store_beat_hit2(_x-_xdist,_beatbarY,"[c_green]Good!")
+//	}
 	
-    if(abs(BeatBarProgress)<0.30) 
-	{
-	    store_beat_hit2(_x-_xdist,_beatbarY,"[wobble][rainbow]Perfect!")
-	}
+//    if(abs(BeatBarProgress)<0.30) 
+//	{
+//	    store_beat_hit2(_x-_xdist,_beatbarY,"[wobble][rainbow]Perfect!")
+//	}
 
-}
+//}
 
-draw_beat_hit_texts2();
+//draw_beat_hit_texts2();

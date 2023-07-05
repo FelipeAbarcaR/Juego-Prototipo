@@ -208,6 +208,7 @@ for (var i = 0; i < array_length(dialogo); i++)
 		speaker = dialogo[i][$ "SPEAKER"];
 		speakercomp = speaker;
 		iter = 2;
+		
 		if(speaker != "")
 		{
 			switch(speaker)
@@ -286,7 +287,7 @@ for (var i = 0; i < array_length(dialogo); i++)
 
 global.topics[$ "Batallando"] = [
 	SPEAKER("Rana",spr_pt_rana, PORTRAIT_SIDE.LEFT),
-	TEXT("Aja! encontraste mi [rainbow]escondite secreto[/rainbow], debes saber que soy un [c_blue]agente secreto"),
+	TEXT("Aja! encontraste mi [rainbow]escondite[fnt_text] secreto[/rainbow], debes [fnt_Dogica]saber que soy un [c_blue] agente secreto"),
 	TEXT("Espera... No se si lo sabias, bueno no importa."),
 	TEXT("Ahora debo [wave][c_yellow]matarte!"),
 	FIGHT(spr_bg_forest2,obj_fight_rana)
@@ -300,10 +301,10 @@ global.topics[$ "signenemy1"] = [
 ];
 
 global.topics[$ "signhouse2"] = [
-	
-	TEXT("¿Realmente [c_yellow]esperas a que te diga donde ir? Los letreros no hablamos."),
-	TEXT("Vamos muchacho, tu puedes, solo debes seguir la instrucción.-->"),
-	TEXT("¿Sigues Aquí? El juego no se va a completar solo."),
+
+	TEXT("¿Realmente [fnt_Dogica]esperas a que te diga donde ir? Los letreros no hablamos."),
+	TEXT("Vamos muchacho, [DogicaBold]tu puedes, solo debes seguir la instrucción.-->"),
+	TEXT("¿Sigues Aquí? [fnt_text]El juego no[spr_Torch] se va a completar solo."),
 	TEXT("Ya me harté de tí. Adiós!.")
 	];
 	

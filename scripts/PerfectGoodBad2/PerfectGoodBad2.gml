@@ -15,33 +15,34 @@ var new_text=
 	}
 ds_list_add(beat_hit_data, new_text);
 }
-//function draw_beat_hit_texts2()
-//{
+function draw_beat_hit_texts2()
+{
 
-//	var num_text = ds_list_size(beat_hit_data);
-//	if (num_text >0){
-//		var i;
-//		for (i = 0; i < num_text; i++) {
-//		    var current_text = beat_hit_data[|i];
-//		    var _x = current_text.x_pos;
-//		    var _y = current_text.y_pos;
-//		    var _text = current_text.texto;
+	var num_text = ds_list_size(beat_hit_data);
+	if (num_text >0){
+		var i;
+		for (i = 0; i < num_text; i++) {
+		    var current_text = beat_hit_data[|i];
+		    var _x = current_text.x_pos;
+		    var _y = current_text.y_pos;
+		    var _text = current_text.texto;
+			var _previousalpha=draw_get_alpha();
+		    draw_set_alpha(current_text.alpha);
+			draw_set_font(DogicaBold);
 
-//		    draw_set_alpha(current_text.alpha);
-//			draw_set_font(DogicaBold);
+			draw_text_scribble(_x, _y, _text);
 
-//			draw_text_scribble(_x, _y, _text);
+		    beat_hit_data[|i].y_pos -= 2;
+		    beat_hit_data[|i].alpha -= 0.025;
+		
+			draw_set_alpha(_previousalpha);		
 
-
-//		    beat_hit_data[|i].y_pos -= 2;
-//		    beat_hit_data[|i].alpha -= 0.025;
-
-//		    if (beat_hit_data[|i].alpha <= 0) {
-//		        ds_list_delete(beat_hit_data, i);
-//		        i--;
-//		        num_text--;
-//		    }
-//		}
-//	}
-//}
+		    if (beat_hit_data[|i].alpha <= 0) {
+		        ds_list_delete(beat_hit_data, i);
+		        i--;
+		        num_text--;
+		    }
+		}
+	}
+}
 

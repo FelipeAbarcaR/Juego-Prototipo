@@ -237,6 +237,7 @@
     {"id":{"name":"scribble_anim_cycle","path":"scripts/scribble_anim_cycle/scribble_anim_cycle.yy",},},
     {"id":{"name":"bgm_OneLove","path":"sounds/bgm_OneLove/bgm_OneLove.yy",},},
     {"id":{"name":"spr_sign","path":"sprites/spr_sign/spr_sign.yy",},},
+    {"id":{"name":"fnt_RODIN","path":"fonts/fnt_RODIN/fnt_RODIN.yy",},},
     {"id":{"name":"img_BeatRange","path":"sprites/img_BeatRange/img_BeatRange.yy",},},
     {"id":{"name":"Pasos_4","path":"sounds/Pasos_4/Pasos_4.yy",},},
     {"id":{"name":"spr_CondeATK3","path":"sprites/spr_CondeATK3/spr_CondeATK3.yy",},},

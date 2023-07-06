@@ -69,6 +69,7 @@
     {"name":"Pasos_9","order":8,"path":"sounds/Pasos_9/Pasos_9.yy",},
     {"name":"scribble_anim_wave","order":7,"path":"scripts/scribble_anim_wave/scribble_anim_wave.yy",},
     {"name":"scribble_anim_cycle","order":1,"path":"scripts/scribble_anim_cycle/scribble_anim_cycle.yy",},
+    {"name":"fnt_RODIN","order":3,"path":"fonts/fnt_RODIN/fnt_RODIN.yy",},
     {"name":"Pasos_4","order":3,"path":"sounds/Pasos_4/Pasos_4.yy",},
     {"name":"__scribble_class_page","order":5,"path":"scripts/__scribble_class_page/__scribble_class_page.yy",},
     {"name":"__shd_scribble_bake_outline_4dir","order":1,"path":"shaders/__shd_scribble_bake_outline_4dir/__shd_scribble_bake_outline_4dir.yy",},

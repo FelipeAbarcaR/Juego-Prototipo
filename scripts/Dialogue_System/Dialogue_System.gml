@@ -302,10 +302,10 @@ global.topics[$ "signenemy1"] = [
 
 global.topics[$ "signhouse2"] = [
 
-	TEXT("¿Realmente [fnt_Dogica]esperas a que te diga donde ir? Los letreros no hablamos."),
-	TEXT("Vamos muchacho, [DogicaBold]tu puedes, solo debes seguir la instrucción.-->"),
-	TEXT("¿Sigues Aquí? [fnt_text]El juego no[spr_Torch] se va a completar solo."),
-	TEXT("Ya me harté de tí. Adiós!.")
+	TEXT("[DogicaBold]¿Realmente [U]esperas a que te[/U] diga donde ir? Los letreros no hablamos."),
+	TEXT("[fnt_Dogica]Vamos muchacho, tu puedes, solo debes seguir la instrucción.-->"),
+	TEXT("[fnt_RODIN]¿Sigues Aquí? El juego no[spr_Torch] se va a completar solo."),
+	TEXT("[fnt_text]Ya me harté de tí. Adiós!.")
 	];
 	
 global.topics[$ "signwarning1"] = [

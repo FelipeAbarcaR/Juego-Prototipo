@@ -5,6 +5,7 @@
 if (global.DrawText)
 {
     draw_text(100,100,"currentroom: "+ string(global.currentroom))
+	draw_text(120,120," [U]esperas a que te[/U] perro");
 }
 
 //var xx = 32;

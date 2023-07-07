@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function store_beat_hit2(xx,yy,text){
+function store_beat_hit(xx,yy,text){
 
 //var xxx = argument[0];
 //var yyy = argument[1];
@@ -15,7 +15,7 @@ var new_text=
 	}
 ds_list_add(beat_hit_data, new_text);
 }
-function draw_beat_hit_texts2()
+function draw_beat_hit_texts()
 {
 
 	var num_text = ds_list_size(beat_hit_data);

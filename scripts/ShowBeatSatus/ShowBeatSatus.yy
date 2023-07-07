@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "PerfectGoodBad",
+  "name": "ShowBeatSatus",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {

@@ -17,12 +17,12 @@
 
 function startDialogue(topic) {
 	if (instance_exists(obj_textbox)) return;
-	
 	var inst = instance_create_depth(x, y, -999, obj_textbox);
 	inst.setTopic(topic);
+	inst.dialogue_sounds=activate.dialogue_sounds;
 
 }
-
+	
 function type(x, y, text, progress, width) {
 	var draw_x = 0;
 	var draw_y = 0;
@@ -74,6 +74,33 @@ function type(x, y, text, progress, width) {
 		// el constructor hace que pueda llamar a la funcion para hacer una estructura de datos
 function DialogueAction() constructor {
 	act = function() { };
+}
+function DialogueSound(){
+
+	if (dialogue_sounds != -1){
+
+		if(current_tb_sound == -1)
+		{
+		    ChooseSound();
+			audio_play_sound(current_tb_sound,10,0);
+		}else
+		{
+		    var _audio_playing=audio_is_playing(current_tb_sound)
+			if(!_audio_playing)
+			{
+			    ChooseSound();
+				audio_play_sound(current_tb_sound,10,0);
+			}
+		}
+	}
+
+
+}
+function ChooseSound()
+{
+	var _sounds_number=array_length(dialogue_sounds)-1
+    sound_index=irandom(_sounds_number);
+	current_tb_sound=dialogue_sounds[sound_index];
 }
 
 // Define new text to type out
@@ -186,7 +213,6 @@ if(file_exists(working_directory + "prueba_dialogo1.json"))
 global.topics = {};
 
 
-hola = 10;
 var Topico = "";
 var textbox = "";
 var iter = 2;
@@ -302,7 +328,7 @@ global.topics[$ "signenemy1"] = [
 
 global.topics[$ "signhouse2"] = [
 
-	TEXT("[DogicaBold]¿Realmente [U]esperas a que te[/U] diga donde ir? Los letreros no hablamos."),
+	TEXT("[DogicaBold]¿Realmente esperas a que te diga donde ir? Los letreros no hablamos."),
 	TEXT("[fnt_Dogica]Vamos muchacho, tu puedes, solo debes seguir la instrucción.-->"),
 	TEXT("[fnt_RODIN]¿Sigues Aquí? El juego no[spr_Torch] se va a completar solo."),
 	TEXT("[fnt_text]Ya me harté de tí. Adiós!.")
@@ -313,4 +339,10 @@ global.topics[$ "signwarning1"] = [
 ];
 global.topics[$ "signwarning2"] = [
 	TEXT("Territorio deconocido, nadie que haya pasado de este punto, ha vuelto para contarlo.")
+];
+global.topics[$ "conejeando"] = [
+	SPEAKER("Conejita",spr_pt_coneja, PORTRAIT_SIDE.LEFT),
+	TEXT("Esto es una prueba de sfx de diálogo, necesito algunas palabras laaaaaargas y demas que textos cortos y piolas"),
+	TEXT("Y demás que necesito otro textbox para ir [Rania_2] probando si funciona bien"),
+	TEXT("Con eso debería ser suficiente... ¿no?"),
 ];

@@ -47,13 +47,13 @@ if keyboard_check_released(vk_lshift){
 //change room system
 
 if changeroom { //If pressed M to change room
-	//hola=10;
+
 	audio_stop_all();
 	global.previousroom = global.currentroom;
     global.currentroom += 1;
     if (global.currentroom > global.room_count - 1)
     {
-		//hola=10
+
         global.currentroom = 0;
     }
     room_goto(global.room_data[global.currentroom][index.name]);

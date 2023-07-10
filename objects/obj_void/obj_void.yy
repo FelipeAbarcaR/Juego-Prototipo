@@ -28,10 +28,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_void",
-    "path": "sprites/spr_void/spr_void.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

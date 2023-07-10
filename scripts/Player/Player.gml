@@ -592,7 +592,7 @@ function Space_logic()
 						var _x2=_solid.bbox_right;
 						var _xmid=_x1+(_x2-_x1)/2;
 						var _newx;
-						hola=10;
+
 						//create new point of landing closer to the edge
 						if (_xto >= _xmid) _newx=_x2+8 else _newx=_x1-8;
 						var _newdirection = point_direction(x,y,_newx,_yto);

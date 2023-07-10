@@ -16,8 +16,9 @@ height = display_get_height()/5;
 x = (display_get_gui_width()- width)/2;
 y = display_get_gui_height() - height - margin;
 
+
 // Text
-text_font = fnt_Dogica;
+text_font = fnt_RODIN;
 text_color = c_white;
 text_speed = 0.6;
 text_x = padding;
@@ -114,3 +115,6 @@ setText = function(newText) {
 	text_progress = 0;
 }
 
+//Dialogue SFX
+current_tb_sound=-1;
+dialogue_sounds=-1;

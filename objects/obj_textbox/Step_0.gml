@@ -10,9 +10,10 @@ if (input_delay > 0)
 	input_delay--;
 	exit;
 }
+var finished = (text_progress == text_length); 
 
 // Are we finished typing?
-if (text_progress == text_length) 
+if (finished) 
 {
 	if (option_count > 0)
 	{
@@ -51,7 +52,6 @@ else if (confirm)
 	text_progress = text_length;
 }
 
-var finished = (text_progress == text_length); 
 
 if (finished){
 	if (new_room != -1){
@@ -71,4 +71,6 @@ if (finished){
 			background=_bg;
 		}
 	}
+}else{
+	DialogueSound()
 }

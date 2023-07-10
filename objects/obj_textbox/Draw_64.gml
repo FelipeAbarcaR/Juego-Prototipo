@@ -1,6 +1,5 @@
 // Draw the box
 draw_sprite_stretched(sprite_index, 2, x, y, width, height);
-hola=10;
 var draw_text_x = x;
 var draw_text_y = y;
 var draw_text_witdh = text_width;

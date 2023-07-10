@@ -16,7 +16,6 @@ global.playerhealth = global.playerhealthmax;
 global.playermoney = 0;
 global.textover = false;
 global.activate = -1;
-
 global.mp_grid = 0;
 
 //surface_resize(application_surface,RESOLUTION_W,RESOLUTION_H);
@@ -63,5 +62,5 @@ pause = false;
 pause_surf = -1;
 
 
-textoruro="La vida de un crítico es [c_yellow]sencilla en muchos aspectos, [rainbow]arriesgamos poco[/rainbow], y tenemos poder sobre aquellos que ofrecen su trabajo y su servicio a nuestro juicio. Esperamos con las críticas negativas"
+
 

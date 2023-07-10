@@ -111,7 +111,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.4.0.84",
+    "IDEVersion": "2023.6.0.89",
   },
   "resources": [
     {"id":{"name":"bgm_Kappn","path":"sounds/bgm_Kappn/bgm_Kappn.yy",},},

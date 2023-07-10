@@ -187,75 +187,282 @@ global.topics = {};
 
 
 hola = 10;
-var Topico = "";
-var textbox = "";
-var iter = 2;
-var speaker = "";
-var speakercomp = "";
-var sprite = 0;
-var portrait = 0;
+
+var _portrait = 0;
+var _iter = 2;
+
+var _topico = "";
+var _topico_comp = "";
+var _textbox = "";
+
+var _speaker = "";
+var _speakercomp = "";
+var _sprite = "";
+var _sprite_portrait = "";
+
+var _option = "";
+var _option1 = "";
+var _option2 = "";
+var _option3 = "";
+var _option4 = "";
+var _num_options = "";
+var _option_create = false;
 
 //guardando la data en global.topics
 
-for (var i = 0; i < array_length(dialogo); i++)
+for (var _i = 0; _i < array_length(dialogo); _i++)
 {
-	Topico = dialogo[i][$ "conversation_name"];
-	
-	if(!struct_exists(global.topics,Topico))
+	_topico = dialogo[_i][$ "conversation_name"];
+
+	if(!struct_exists(global.topics,_topico) and _topico != "")
 	{
-		global.topics[$ Topico]= [];
-		textbox = dialogo[i][$ "TEXTBOX"];
-		speaker = dialogo[i][$ "SPEAKER"];
-		speakercomp = speaker;
-		iter = 2;
-		if(speaker != "")
+		global.topics[$ _topico]= [];
+		_textbox = dialogo[_i][$ "TEXTBOX"];
+		_speaker = dialogo[_i][$ "SPEAKER"];
+		_sprite = dialogo[_i][$ "SPRITE"];
+		_option = dialogo[_i][$ "TIENE_OPCIONES"];
+		_speakercomp = _speaker;
+		_iter = 2;
+		if(_speaker != "")
 		{
-			switch(speaker)
+			switch(_speaker) // esto es para obtener el sprite correcto
 			{
-				default: 
-					sprite = spr_ViejoSabio;
+				default:
+					_sprite_portrait = spr_ViejoSabio;
+				case "Viejo Sabio": 
+					_sprite_portrait = spr_ViejoSabio;
+				break;
+				case "Pedro":
+					_sprite_portrait = spr_pt_rana;
 				break;
 			}
-			global.topics[$ Topico][0] = SPEAKER(speaker,sprite,PORTRAIT_SIDE.LEFT);
-			portrait += 1;
-			if(textbox != "")
-			{
-				global.topics[$ Topico][1] = TEXT(textbox);
-			}
+			global.topics[$ _topico][0] = SPEAKER(_speaker,_sprite_portrait,PORTRAIT_SIDE.LEFT);
+			_portrait += 1;
 		}
-		else continue; //esto va a cambiar
+		//else continue; //esto va a cambiar para los carteles
+		if(_option != "0")
+		{
+			_num_options = dialogo[_i][$ "NUMERO_OPCIONES"];
+			switch(_num_options)
+			{
+				case "2":
+					_option1 = dialogo[_i][$ "OPCION1"];
+					_option2 = dialogo[_i][$ "OPCION2"];
+					if(_option1 != "" and _option2 != "") 
+					{
+						global.topics[$ _topico][1] = CHOICE(_textbox,OPTION(_option1,"Chose "+_option1),OPTION (_option2, "Chose "+_option2));
+						global.topics[$ "Chose "+_option1] = [];
+						global.topics[$ "Chose "+_option2] = [];
+						_option_create = true;
+						_topico_comp = dialogo[_i+1][$ "conversation_response"];
+						_iter = 0;
+						
+					}
+				break;	
+				case "3":
+					_option1 = dialogo[_i][$ "OPCION1"];
+					_option2 = dialogo[_i][$ "OPCION2"];
+					_option3 = dialogo[_i][$ "OPCION3"];
+					if(_option1 != "" and _option2 != "" and _option3 != "") 
+					{
+						global.topics[$ _topico][1] = CHOICE(_textbox,OPTION(_option1,"Chose "+_option1),OPTION (_option2, "Chose "+_option2),OPTION (_option3, "Chose "+_option3));
+						global.topics[$ "Chose "+_option1] = [];
+						global.topics[$ "Chose "+_option2] = [];
+						global.topics[$ "Chose "+_option3] = [];
+						_option_create = true;
+						_topico_comp = dialogo[_i+1][$ "conversation_response"];
+						_iter = 0;
+					}
+				break;	
+				case "4":
+					_option1 = dialogo[_i][$ "OPCION1"];
+					_option2 = dialogo[_i][$ "OPCION2"];
+					_option3 = dialogo[_i][$ "OPCION3"];
+					_option4 = dialogo[_i][$ "OPCION4"];
+					if(_option1 != "" and _option2 != "" and _option3 != "" and _option4 != "") 
+					{
+						global.topics[$ _topico][1] = CHOICE(_textbox,OPTION(_option1,"Chose "+_option1),OPTION (_option2, "Chose "+_option2),,OPTION (_option3, "Chose "+_option3),,OPTION (_option4, "Chose "+_option4));
+						global.topics[$ "Chose "+_option1] = [];
+						global.topics[$ "Chose "+_option2] = [];
+						global.topics[$ "Chose "+_option3] = [];
+						global.topics[$ "Chose "+_option4] = [];
+						_option_create = true;	
+						_topico_comp = dialogo[_i+1][$ "conversation_response"];
+						_iter = 0;	
+					}
+				break;	
+			}
+			_speaker = dialogo[_i+1][$ "SPEAKER"];
+			if(_speaker != "")
+			{
+				switch(_speaker)
+				{
+					case "Viejo Sabio": 
+						_sprite_portrait = spr_ViejoSabio;
+					break;
+					case "Pedro":
+						_sprite_portrait = spr_pt_rana;
+					break;
+				}
+				if(_portrait == 0) 
+				{
+					global.topics[$ "Chose "+_option1][0] = SPEAKER(_speaker,_sprite_portrait,PORTRAIT_SIDE.RIGHT); 
+					_portrait += 1;
+				}
+				else // _portrait >= 1
+				{
+					global.topics[$ "Chose "+_option1][0] = SPEAKER(_speaker,_sprite_portrait,PORTRAIT_SIDE.LEFT);
+					_portrait = 0;
+				}
+				_speakercomp = _speaker;
+				_iter += 1;
+			}
+			
+		}
+		else // _option == 0
+		{
+			if(_textbox != "")
+			{
+				global.topics[$ _topico][1] = TEXT(_textbox);
+			}
+			else continue;
+		}
 	}
-	else // si es que existe ya el topico en la global.topics
+	// SI YA EXISTE EL TOPICS EN LA GLOBAL
+	else 
 	{
-		speaker = dialogo[i][$ "SPEAKER"];
-		if(speaker != speakercomp)
+		if(_option_create) 
 		{
-			switch(speaker)
+			_topico = dialogo[_i][$ "conversation_response"];
+			
+			if(_topico == "0") 
 			{
-				default: 
-					sprite = spr_ViejoSabio;
+				_topico = dialogo[_i][$ "conversation_name"];
+				_option_create = false;
+			}
+			else // _topico != 0
+			{
+				if(_topico != _topico_comp and _topico != _option1) 
+				{
+					_iter = 0;
+					_speaker = dialogo[_i][$ "SPEAKER"];
+					if(_speaker != "")
+					{
+						switch(_speaker)
+						{
+							case "Viejo Sabio": 
+								_sprite_portrait = spr_ViejoSabio;
+							break;
+							case "Pedro":
+								_sprite_portrait = spr_pt_rana;
+							break;
+						}
+					
+						if(_portrait == 0) 
+						{
+							global.topics[$ _topico][0] = SPEAKER(_speaker,_sprite_portrait,PORTRAIT_SIDE.RIGHT); //esto debe cambiar para hacer mas top
+							_portrait += 1;
+						}
+						else // _portrait >= 1
+						{
+							global.topics[$ _topico][0] = SPEAKER(_speaker,_sprite_portrait,PORTRAIT_SIDE.LEFT);
+							_portrait = 0;
+						}
+						_speakercomp = _speaker;
+						_iter += 1;
+					}
+				}
+			}
+			_topico_comp = _topico;
+		}
+		_speaker = dialogo[_i][$ "SPEAKER"];
+		if(_speaker != _speakercomp and _speaker != "")
+		{
+			switch(_speaker)
+			{
+				case "Viejo Sabio": 
+					_sprite_portrait = spr_ViejoSabio;
+				break;
+				case "Pedro":
+					_sprite_portrait = spr_pt_rana;
 				break;
 			}
-			if(portrait == 0) 
+			if(_portrait == 0) 
 			{
-				global.topics[$ Topico][iter] = SPEAKER(speaker,sprite,PORTRAIT_SIDE.LEFT);
-				portrait += 1;
+				global.topics[$ _topico][_iter] = SPEAKER(_speaker,_sprite_portrait,PORTRAIT_SIDE.LEFT);
+				_portrait += 1;
 			}
-			else
+			else // _portrait >= 1
 			{
-				global.topics[$ Topico][iter] = SPEAKER(speaker,sprite,PORTRAIT_SIDE.RIGHT);
-				portrait = 0;
+				global.topics[$ _topico][_iter] = SPEAKER(_speaker,_sprite_portrait,PORTRAIT_SIDE.RIGHT);
+				_portrait = 0;
 			}
-			speakercomp = speaker;
-			iter += 1;
+			_speakercomp = _speaker;
+			_iter += 1;
 		}
-		textbox = dialogo[i][$ "TEXTBOX"];
-		if(textbox != "")
+		_option = dialogo[_i][$ "TIENE_OPCIONES"];
+		if(_option != "0")
 		{
-			global.topics[$ Topico][iter] = TEXT(textbox);
-			iter += 1;
+			_num_options = dialogo[_i][$ "NUMERO_OPCIONES"];
+			switch(_num_options)
+			{
+				case "2":
+					_option1 = dialogo[_i][$ "OPCION1"];
+					_option2 = dialogo[_i][$ "OPCION2"];
+					if(_option1 != "" and _option2 != "") 
+					{
+						global.topics[$ _topico][_iter] = CHOICE(_textbox,OPTION(_option1,"Chose "+_option1),OPTION (_option2, "Chose "+_option2));
+						global.topics[$ "Chose "+_option1] = [];
+						global.topics[$ "Chose "+_option2] = [];
+						_option_create = true;
+						_topico_comp = dialogo[_i+1][$ "conversation_response"];
+						_iter = 0;
+					}
+				break;	
+				case "3":
+					_option1 = dialogo[_i][$ "OPCION1"];
+					_option2 = dialogo[_i][$ "OPCION2"];
+					_option3 = dialogo[_i][$ "OPCION3"];
+					if(_option1 != "" and _option2 != "" and _option3 != "")
+					{
+						global.topics[$ _topico][_iter] = CHOICE(_textbox,OPTION(_option1,"Chose "+_option1),OPTION (_option2, "Chose "+_option2),OPTION (_option3, "Chose "+_option3));
+						global.topics[$ "Chose "+_option1] = [];
+						global.topics[$ "Chose "+_option2] = [];
+						global.topics[$ "Chose "+_option3] = [];
+						_option_create = true;
+						_topico_comp = dialogo[_i+1][$ "conversation_response"];
+						_iter = 0;
+					}
+				break;	
+				case "4":
+					_option1 = dialogo[_i][$ "OPCION1"];
+					_option2 = dialogo[_i][$ "OPCION2"];
+					_option3 = dialogo[_i][$ "OPCION3"];
+					_option4 = dialogo[_i][$ "OPCION4"];
+					if(_option1 != "" and _option2 != "" and _option3 != "" and _option4 != "") 
+					{
+						global.topics[$ _topico][_iter] = CHOICE(_textbox,OPTION(_option1,"Chose "+_option1),OPTION (_option2, "Chose "+_option2),OPTION (_option3, "Chose "+_option3),OPTION (_option4, "Chose "+_option4));
+						global.topics[$ "Chose "+_option1] = [];
+						global.topics[$ "Chose "+_option2] = [];
+						global.topics[$ "Chose "+_option3] = [];
+						global.topics[$ "Chose "+_option4] = [];
+						_option_create = true;
+						_topico_comp = dialogo[_i+1][$ "conversation_response"];
+						_iter = 0;
+					}
+				break;	
+			}
 		}
-		else continue; //esto va a cambiar
+		else // _option == 0
+		{
+			_textbox = dialogo[_i][$ "TEXTBOX"];
+			if(_textbox != "")
+			{
+				global.topics[$ _topico][_iter] = TEXT(_textbox);
+				_iter += 1;
+			}
+			else continue;
+		}
 	}
 }
 

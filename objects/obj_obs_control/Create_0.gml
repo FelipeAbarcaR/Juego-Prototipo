@@ -1,14 +1,14 @@
 /// @description Insert description here
 // You can write your code in this editor
-// Get the BPM of the music (replace with your actual BPM)
+
+// Get the BPM of the music 
 bpm = global.room_data[global.currentroom][index.bpm];
 
-// Get the width of the room (replace with your actual room width)
+// Get the width of the room 
 distance = obj_obs_player.x-x;
 
-obs_speed=4;
-// Calculate the creation time for the obstacle
-creation_time = scr_calculate_creation_time(13,bpm,obs_speed,distance);
+obs_speed=3;
+delay=0.5; //how much of a beat it should wait to reach the player
 
 time=0; 
 

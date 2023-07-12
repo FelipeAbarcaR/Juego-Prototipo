@@ -10,7 +10,7 @@ if (time>=beat_play_array[0][0]) && _array_len>1 {
 
 	}
     // Create the obstacle and erase first row
-    instance_create_depth(x, y,depth, obj_prnt_obstacle,{obs_type : beat_play_array[0][1]});
+    instance_create_depth(x, y,depth, obj_obstacle,{obs_type : beat_play_array[0][1]});
 
 	array_shift(beat_play_array);
 } else {

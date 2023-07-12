@@ -32,7 +32,9 @@ enum states {
 	DEAD,
 	KNOCKBACK,
 	ROLL,
-	LOCK
+	LOCK,
+	CROUCH,
+	JUMP
 }
 
 enum ENEMYSTATE

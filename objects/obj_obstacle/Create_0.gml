@@ -8,14 +8,17 @@ switch(obs_type)
 {
     case obstacle.down:
 		sprite_index=spr_obstacle_down;
-	break;
+		break;
 	
 	case obstacle.up:
 		sprite_index=spr_obstacle_up;
-		y-=80;
-	break;
+		y+=40;
+		break;
+	case obstacle.updown:
+		sprite_index=spr_obstacle_updown
+		break;
 	
 	default:
-	break;
+		break;
 }
 

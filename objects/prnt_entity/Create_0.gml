@@ -9,4 +9,3 @@ spd = 0;
 z= 0;
 dialogue_sounds=[];
 text_id = ""; 
-

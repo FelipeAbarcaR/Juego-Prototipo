@@ -19,10 +19,40 @@ function startDialogue(topic) {
 	if (instance_exists(obj_textbox)) return;
 	
 	var inst = instance_create_depth(x, y, -999, obj_textbox);
+	inst.dialogue_sounds=activate.dialogue_sounds;
 	inst.setTopic(topic);
 
 }
+function DialogueSound(){
 
+	if (dialogue_sounds != -1 && array_length(dialogue_sounds)>0){
+
+		if(current_tb_sound == -1)
+		{
+		    ChooseSound();
+			audio_play_sound(current_tb_sound,10,0);
+			show_debug_message("played from nonsound");
+		}else
+		{
+		    var _audio_playing=audio_is_playing(current_tb_sound)
+			if(!_audio_playing)
+			{
+			    ChooseSound();
+				audio_play_sound(current_tb_sound,10,0);
+				show_debug_message("played from sound ended");
+			}
+		}
+	}
+
+
+}
+function ChooseSound()
+{
+	var _sounds_number=array_length(dialogue_sounds)-1
+    sound_index=irandom(_sounds_number);
+	current_tb_sound=dialogue_sounds[sound_index];
+	show_debug_message("ChooseSound() sfx choosed")
+}
 function type(x, y, text, progress, width) {
 	var draw_x = 0;
 	var draw_y = 0;
@@ -519,4 +549,11 @@ global.topics[$ "signwarning1"] = [
 ];
 global.topics[$ "signwarning2"] = [
 	TEXT("Territorio deconocido, nadie que haya pasado de este punto, ha vuelto para contarlo.")
+	
+];
+global.topics[$ "conejeando"] = [
+	SPEAKER("Conejita",spr_pt_coneja, PORTRAIT_SIDE.LEFT),
+	TEXT("Esto es una prueba de sfx de diálogo, necesito algunas palabras laaaaaargas y demas que textos cortos y piolas"),
+	TEXT("Y demás que necesito otro textbox para ir probando si funciona bien"),
+	TEXT("Con eso debería ser suficiente... ¿no?")
 ];

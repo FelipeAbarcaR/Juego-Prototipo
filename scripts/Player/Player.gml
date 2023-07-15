@@ -326,6 +326,30 @@ function PlayerStateRoll(){
 }
 	
 
+function play_walk_audio(){
+	
+	if(room == roomMapaInicial) var _path_id = layer_get_id("TilesMain");
+	else if (room == roomViejoSabio) var _path_id = layer_get_id("Tiles_floor");
+
+	var _map_id = layer_tilemap_get_id(_path_id);
+	var _data = tilemap_get_at_pixel(_map_id,x,y);
+	
+	if(!tile_get_empty(_data))
+	{
+		if (!audio_is_playing(Pasos_4))
+		{
+			audio_play_sound(Pasos_4,8,false);
+		}
+	} 
+	else
+	{
+		if (!audio_is_playing(Pasos_2))
+		{
+			audio_play_sound(Pasos_2,8,false);
+		}
+	}
+}
+
 function reset_variables() {
 	
 	global.interact = false;
@@ -364,6 +388,8 @@ function calc_movement() {
 	if hmove != 0 or vmove != 0 {
 		//get direction we are moving
 		dir = point_direction(0, 0, hmove, vmove);
+		
+		play_walk_audio();
 		
 		//get distance we are moving
 		hmove = lengthdir_x(walk_spd, dir);
@@ -477,10 +503,10 @@ function anim() {
 					case 0: sprite_index = spr_gato3_right; break;
 					case 45: sprite_index = spr_gato3_right_up; break;
 					case 90: sprite_index = spr_gato3_up; break;
-					case 135: sprite_index = spr_gato3_up_left; break;
+					case 135: sprite_index = spr_gato3_left_up; break;
 					case 180: sprite_index = spr_gato3_left; break;
 					case 225: sprite_index = spr_gato3_left_down; break;
-					case 270: sprite_index = spr_gato3_down; break;
+					case 270: sprite_index = spr_gato3_down1; break;
 					case 315: sprite_index = spr_gato3_down_right; break;
 				}
 			}

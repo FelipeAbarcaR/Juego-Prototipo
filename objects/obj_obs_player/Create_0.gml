@@ -11,9 +11,9 @@ delay_time=20;
 inputmagnitude=0;
 
 idle_sprite=spr_obs_gato;
-roll_sprite=spr_gato3_roll_right_1;
+roll_sprite=spr_gato3_roll_right;
 jump_sprite=spr_gato3_idle;
-crouch_sprite=spr_gato3_roll_down_1;
+crouch_sprite=spr_gato3_roll_down;
 
 gravedad=2;
 acc_gravedad=0.07;

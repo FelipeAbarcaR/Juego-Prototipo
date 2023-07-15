@@ -19,7 +19,7 @@ function startDialogue(topic) {
 	if (instance_exists(obj_textbox)) return;
 	
 	var inst = instance_create_depth(x, y, -999, obj_textbox);
-	inst.dialogue_sounds=activate.dialogue_sounds;
+	inst.dialogue_sounds= activate.dialogue_sounds;
 	inst.setTopic(topic);
 
 }
@@ -381,7 +381,7 @@ for (var _i = 0; _i < array_length(dialogo); _i++)
 						switch(_speaker)
 						{
 							case "Viejo Sabio": 
-								_sprite_portrait = spr_ViejoSabio;
+								_sprite_portrait = spr_portrait_ViejoSabio;
 							break;
 							case "Pedro":
 								_sprite_portrait = spr_pt_rana;

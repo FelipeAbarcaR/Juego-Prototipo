@@ -17,7 +17,6 @@ if(global.DrawText)
 		//beat number
 		draw_text(_xx,_yy+_theight*(i+1),string(beat_map[i][0]));
 	
-	
 		//beat obstacle
 		var _obs=beat_map[i][1];
 		var _char
@@ -33,7 +32,7 @@ if(global.DrawText)
 				break;	
 			default:
 			break;
-		}
+		}		
 		draw_text(_xx+_tab,_yy+_theight*(i+1),_char);
 	}
 }

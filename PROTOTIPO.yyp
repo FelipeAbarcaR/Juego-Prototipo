@@ -477,6 +477,7 @@
     {"id":{"name":"spr_gato3_right1","path":"sprites/spr_gato3_right1/spr_gato3_right1.yy",},},
     {"id":{"name":"ts_int_ViejoSabio_walls","path":"tilesets/ts_int_ViejoSabio_walls/ts_int_ViejoSabio_walls.yy",},},
     {"id":{"name":"spr_ts_MapaInicialV4","path":"sprites/spr_ts_MapaInicialV4/spr_ts_MapaInicialV4.yy",},},
+    {"id":{"name":"spr_gato3_down_right1","path":"sprites/spr_gato3_down_right1/spr_gato3_down_right1.yy",},},
     {"id":{"name":"obj_Conda","path":"objects/obj_Conda/obj_Conda.yy",},},
     {"id":{"name":"o_entity_par","path":"objects/o_entity_par/o_entity_par.yy",},},
     {"id":{"name":"spr_CondaDead","path":"sprites/spr_CondaDead/spr_CondaDead.yy",},},

@@ -500,14 +500,14 @@ function anim() {
 			{
 				switch(dir)
 				{
-					case 0: sprite_index = spr_gato3_right; break;
-					case 45: sprite_index = spr_gato3_right_up; break;
-					case 90: sprite_index = spr_gato3_up; break;
-					case 135: sprite_index = spr_gato3_left_up; break;
-					case 180: sprite_index = spr_gato3_left; break;
-					case 225: sprite_index = spr_gato3_left_down; break;
-					case 270: sprite_index = spr_gato3_down1; break;
-					case 315: sprite_index = spr_gato3_down_right; break;
+					case 0: sprite_index =		spr_move_right;			 break;		
+					case 45: sprite_index =		spr_move_right_up;		 break;
+					case 90: sprite_index =		spr_move_up;			 break;	
+					case 135: sprite_index =	spr_move_left_up;		 break;
+					case 180: sprite_index =	spr_move_left;			 break;
+					case 225: sprite_index =	spr_move_left_down;		 break;
+					case 270: sprite_index =	spr_move_down;			 break;
+					case 315: sprite_index =	spr_move_down_right;	 break;
 				}
 			}
 			else

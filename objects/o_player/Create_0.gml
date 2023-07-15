@@ -19,4 +19,23 @@ y_dest = -1;
 
 script_start = false;
 
-
+//sprites
+	//moving
+	spr_move_right		= spr_gato3_right;
+	spr_move_right_up	= spr_gato3_right_up;
+	spr_move_up			= spr_gato3_up;
+	spr_move_left_up	= spr_gato3_left_up;
+	spr_move_left		= spr_gato3_left;
+	spr_move_left_down	= spr_gato3_left_down;
+	spr_move_down		= spr_gato3_down;
+	spr_move_down_right	= spr_gato3_down_right;
+	
+	//idle
+	//spr_idle_right		=
+	//spr_idle_right_up		=
+	//spr_idle_up			=
+	//spr_idle_left_up		=
+	//spr_idle_left			=
+	//spr_idle_left_down	=
+	//spr_idle_down			=
+	//spr_idle_down_right	=

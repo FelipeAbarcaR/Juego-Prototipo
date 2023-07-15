@@ -29,7 +29,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_gato3_idle",
+    "path": "sprites/spr_gato3_idle/spr_gato3_idle.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

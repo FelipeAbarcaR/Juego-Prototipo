@@ -34,6 +34,7 @@ switch(state)
 {
     case states.IDLE:
 		sprite_index=idle_sprite;
+		
 		image_speed=1;
 		break;
 		

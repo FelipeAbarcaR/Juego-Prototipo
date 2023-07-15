@@ -23,7 +23,7 @@ z = 0;
 localframe = 0;
 
 spriterun = spr_gato3_run;
-spriteidle = spr_gato3_idle;
+spriteidle = gato_completo;
 spriteroll = spr_player_roll;
 
 invulnerable = 0;

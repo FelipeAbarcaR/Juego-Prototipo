@@ -13,7 +13,7 @@ for (var i = 0; i < arrayLength-1; i++) {
     }
 }
 
-#macro TS		8
+#macro TS	8
 
 //get tiles in room
 var _w = ceil(room_width / TS);

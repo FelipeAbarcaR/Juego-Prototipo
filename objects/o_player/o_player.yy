@@ -37,7 +37,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_gato3_player",
+    "path": "sprites/spr_gato3_player/spr_gato3_player.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

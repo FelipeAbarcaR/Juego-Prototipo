@@ -22,9 +22,6 @@ var _h = ceil(room_height / TS);
 //create motion planning grid
 global.mp_grid = mp_grid_create(0, 0, _w, _h, TS, TS);
 
-//mp_grid_add_instances(global.mp_grid,o_solid_bridge,true);
-//add solid instances to grid
-//mp_grid_add_instances(global.mp_grid,o_solid,true);
 
 //loop through every tile and add a single solid if it's a wall
 var _map = layer_tilemap_get_id("Col2");
@@ -32,7 +29,7 @@ var _map = layer_tilemap_get_id("Col2");
 for (var yy = 0; yy < _h; ++yy) {
     for (var xx = 0; xx < _w; ++xx) {
 	    var _t1 = tilemap_get(_map, xx, yy);
-		if (_t1 == 6 ) {
+		if (_t1 == 6) {
 			instance_create_layer(xx * TS, yy * TS, "Collisions", o_solid);
 		}
 	}
@@ -60,6 +57,7 @@ for (var yy = 0; yy < _h; ++yy)
 			//replace the solids to the right 
 			with(_inst) 
 			{
+				
 				do 
 				{
 					var _change = false;

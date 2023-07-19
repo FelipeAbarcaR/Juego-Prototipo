@@ -40,7 +40,7 @@ if global.DrawText{
 }
 
 
-// SHOW BEAT STATUS (PERFECT,GOOD,BAD)
+ //SHOW BEAT STATUS (PERFECT,GOOD,BAD)
 
 if(keyboard_check_pressed(vk_space))
 {

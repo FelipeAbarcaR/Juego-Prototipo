@@ -35,7 +35,7 @@ global.gamemode=mode.move;
 	    [rm_pelea,bgm_Feelings, 115, obj_fight_control , mode.fight,obj_Conde],
 	    [rm_Obstacle1,bgm_OneLove, 107,obj_CharGrid , mode.grid,obj_CharGrid],
 		[roomViejoSabio,bgm_ForestTimeInterior, 107,o_player, mode.move,o_player],
-		[rm_GD,bgm_defcon_zero, 136,obj_obs_player, mode.obstacle,obj_obs_player]
+		[rm_GD,bgm_boss_01, 127,obj_obs_player, mode.obstacle,obj_obs_player]
 	];
 	
 	global.room_count=array_length(global.room_data);

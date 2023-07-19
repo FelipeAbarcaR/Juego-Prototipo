@@ -94,8 +94,9 @@ if(instance_exists(o_player))
 		global.targetY = 160;
 		global.targetdirection = o_player.dir;
 		with(o_player) state = states.IDLE;
+		TransitionStart(_roomname,sqSlideOutDiagonal,sqSlideInDiagonal);
 		//room_goto(global.targetRoom)
-		RoomTransition(TRANS_TYPE.SLIDE,global.targetRoom)
+		//RoomTransition(TRANS_TYPE.SLIDE,global.targetRoom)
 		//instance_destroy();
 		
 	}

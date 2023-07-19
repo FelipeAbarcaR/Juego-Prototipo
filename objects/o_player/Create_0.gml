@@ -1,6 +1,7 @@
 /// @description 
 event_inherited();
 walk_spd = 2;
+diag_walk_spd = floor(walk_spd*(sqr(2)/2));
 hp_max = 10;
 hp = hp_max;
 dir = 270;
@@ -31,11 +32,5 @@ script_start = false;
 	spr_move_down_right	= spr_gato3_down_right;
 	
 	//idle
-	//spr_idle_right		=
-	//spr_idle_right_up		=
-	//spr_idle_up			=
-	//spr_idle_left_up		=
-	//spr_idle_left			=
-	//spr_idle_left_down	=
-	//spr_idle_down			=
-	//spr_idle_down_right	=
+	spr_player_idle = spr_gato3_idle;
+	

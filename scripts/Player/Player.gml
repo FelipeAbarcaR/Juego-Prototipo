@@ -103,121 +103,6 @@ function PlayerCollision(){
 	return _collision;
 }
 
-function PlayerStateFree(){
-	//MOVIMIENTO
-	hSpeed = lengthdir_x(inputmagnitude*speedWalk, inputdirection);
-	vSpeed = lengthdir_y(inputmagnitude*speedWalk, inputdirection);
-
-	PlayerCollision();	
-	//Update sprite index
-
-	//el var es para crear una variable temporal en esta funcion
-	var _oldsprite = sprite_index ;
-	if(inputmagnitude != 0)
-		{
-		direction = inputdirection;
-		sprite_index = spriterun;
-		}
-	else sprite_index = spriteidle;
-
-	if(_oldsprite != sprite_index) localframe = 0;
-
-	//Udpate Image Index
-	PlayerAnimateSprite();
-	
-	if(keyattack)
-	{
-		//state = PlayerStateAttack;
-		stateattack = AttackSlash;
-	}
-	
-	//Activate key logic
-	if(keyactivate)
-		{
-
-			var _activateX = x + lengthdir_x(10, direction);
-			
-			var _activateY = y + lengthdir_y(10, direction);
-			
-			var _activatesize = 4;
-			
-			var _activatelist = ds_list_create();
-			
-			activate = noone;
-			
-			var _entitiesfound = collision_rectangle_list(
-				_activateX - _activatesize,
-				_activateY - _activatesize,
-				_activateX + _activatesize,
-				_activateY + _activatesize,
-				prnt_entity,
-				false,
-				true,
-				_activatelist,
-				true
-			);
-			
-			//si la primera instancia que encontramos es la entidad	que podemos levantar o no tiene script: intenta el siguiente
-			
-			
-			while(_entitiesfound > 0)
-			{
-				var _check = _activatelist[| --_entitiesfound];
-				if(_check.EntityActivateScript != -1)
-				{
-					activate = _check;
-					_entitiesfound = 0; // _entitiesfound = 0 es lo mismo
-				}
-			}
-					
-			ds_list_destroy(_activatelist);
-			
-			if(activate == noone)
-			{
-				//create bar
-				instance_create_layer(obj_beat.barX,obj_beat.barY,"Instances",obj_vanish_GUI)
-					
-				if(global.beatchance)
-				{
-					//state = PlayerStateRoll;
-					movedistanceremaining = distanceroll;
-					audio_play_sound(sfx_roll,8,false);
-				}
-			}
-			else
-			{
-				//Activar la entidad
-				ScriptExecuteArray(activate.EntityActivateScript, activate.EntityActivateArgs);
-				
-				//Hace que en NPC mire hacia el jugador
-				if(activate.EntityNPC)
-				{
-					with(activate)
-					{
-							direction = point_direction(x,y,other.x,other.y);
-							image_index = CARDINAL_DIR;
-					}
-				}
-			}
-		}
-}
-
-function PlayerStateLocked(){
-	
-	image_index = 3;
-	x = activate.x - 40;
-	y = activate.y ;
-}
-
-function PlayerStateTransition(){
-
-	//Movimiento
-	PlayerCollision();
-	
-	//Update Image Index
-	PlayerAnimateSprite();	
-}
-
 function PlayerStateDead(){
 	
 	hSpeed = 0;
@@ -292,40 +177,6 @@ function PlayerStateBonk(){
 		}
 }
 
-function PlayerStateRoll(){
-	//Movimiento
-	hSpeed = lengthdir_x(speedroll, direction);
-	vSpeed = lengthdir_y(speedroll, direction);
-	
-	//esto es para que sea 0 y no un numero negativo
-	movedistanceremaining = max(0, movedistanceremaining - speedroll);
-	
-	//var _collided = PlayerCollision();
-	
-	//Update Sprite
-	sprite_index = spriteroll;
-	var _totalframes = sprite_get_number(sprite_index)/4;
-	//dado que la distancia del roll esa 52, movedistanteremaining sera siempre un valor menor a 52, la division nos dice cuanto queda de la animacion del roll (%)
-				//nos dice cual animacion queremos	// nos dice cuanto frames hay que añadir
-				//el minimo esta para que cuanto se haga el roll no se para para la otra animacion
-	image_index = (CARDINAL_DIR * _totalframes) + min (((1-(movedistanceremaining / distanceroll)) *(_totalframes)), _totalframes - 1);
-	
-	z = sin(((movedistanceremaining / distanceroll) * pi)) * distancerollheight;
-	
-	//Cambiar estado
-	if(movedistanceremaining <= 0)
-		{
-		//state = PlayerStateFree;
-		}
-	
-	//if(_collided)
-	//{
-	//	state = PlayerStateBonk;
-	//	movedistanceremaining = distancebonk;
-	//}
-}
-	
-
 function play_walk_audio(){
 	
 	if(room == roomMapaInicial) var _path_id = layer_get_id("TilesMain");
@@ -361,7 +212,8 @@ function reset_variables() {
 	down = 0;
 	vmove = 0;
 	hmove = 0;
-
+	walk_spd = 2;
+	
 	//Roll
 	speedroll = 3;
 	distanceroll = 70;
@@ -384,8 +236,13 @@ function get_input() {
 function calc_movement() {
 	hmove = right - left;	
 	vmove = down - up;
+	//if hmove != 0 and vmove != 0 
+	//{
+	//	walk_spd = diag_walk_spd;
+	//}
 
-	if hmove != 0 or vmove != 0 {
+	if hmove != 0 or vmove != 0 
+	{
 		//get direction we are moving
 		dir = point_direction(0, 0, hmove, vmove);
 		
@@ -443,6 +300,7 @@ function collision() {
 	}
 	
 }
+	
 function collision_Entity() {
 	//set target values
 	var _tx = x;
@@ -500,19 +358,31 @@ function anim() {
 			{
 				switch(dir)
 				{
-					case 0: sprite_index =		spr_move_right;			 break;		
-					case 45: sprite_index =		spr_move_right_up;		 break;
-					case 90: sprite_index =		spr_move_up;			 break;	
-					case 135: sprite_index =	spr_move_left_up;		 break;
-					case 180: sprite_index =	spr_move_left;			 break;
-					case 225: sprite_index =	spr_move_left_down;		 break;
-					case 270: sprite_index =	spr_move_down;			 break;
-					case 315: sprite_index =	spr_move_down_right;	 break;
+					case 0: sprite_index =		spr_move_right;			break;		
+					case 45: sprite_index =		spr_move_right_up;		break;
+					case 90: sprite_index =		spr_move_up;			break;	
+					case 135: sprite_index =	spr_move_left_up;		break;
+					case 180: sprite_index =	spr_move_left;			break;
+					case 225: sprite_index =	spr_move_left_down;		break;
+					case 270: sprite_index =	spr_move_down;			break;
+					case 315: sprite_index =	spr_move_down_right;	break;
 				}
 			}
 			else
 			{
-				sprite_index = spr_gato3_player;	
+				sprite_index = spr_player_idle;
+				switch(dir)
+				{
+					case 0: image_index = 0 break;
+					case 45: image_index = 1 break;
+					case 90: image_index = 2 break;
+					case 135: image_index = 3 break;
+					case 180: image_index = 4 break;
+					case 225: image_index = 5 break;
+					case 270: image_index = 6 break;
+					case 315: image_index = 7 break;
+				}	
+				
 			}
 		break;
 		case states.DEAD:

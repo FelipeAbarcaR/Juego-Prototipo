@@ -28,7 +28,6 @@ function draw_beat_hit_texts()
 		    var _text = current_text.texto;
 			var _previousalpha=draw_get_alpha();
 		    draw_set_alpha(current_text.alpha);
-			draw_set_font(DogicaBold);
 
 			draw_text_scribble(_x, _y, _text);
 

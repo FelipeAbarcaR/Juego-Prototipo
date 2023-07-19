@@ -62,8 +62,8 @@
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"control_layer","depth":3000,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
   ],
   "parent": {
-    "name": "M1",
-    "path": "folders/Rooms/M1.yy",
+    "name": "Rooms",
+    "path": "folders/Rooms.yy",
   },
   "parentRoom": null,
   "physicsSettings": {

@@ -553,7 +553,9 @@ global.topics[$ "signwarning2"] = [
 ];
 global.topics[$ "conejeando"] = [
 	SPEAKER("Conejita",spr_pt_coneja, PORTRAIT_SIDE.LEFT),
+	TEXT("fiuu~, esta vez sí que se lucieron, ¿no sabes de lo que hablo?."),
 	TEXT("Esto es una prueba de sfx de diálogo, necesito algunas palabras laaaaaargas y demas que textos cortos y piolas"),
 	TEXT("Y demás que necesito otro textbox para ir probando si funciona bien"),
 	TEXT("Con eso debería ser suficiente... ¿no?")
 ];
+

@@ -47,13 +47,13 @@ if(speaker_name != "")
 	//Expand the nameplate if the name is wider than the default width
 	var name_w = max(string_width(speaker_name), speaker_width)
 	
-	draw_sprite_stretched(spr_name,0,x + speaker_x, y + speaker_y - speaker_height/2, name_w, speaker_height);
+	draw_sprite_stretched(spr_name,0,x + speaker_x, y + speaker_y - speaker_height/2, name_w+15, speaker_height+10);
 	
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_center);
-	draw_set_font(speaker_font);
+	//draw_set_font(speaker_font);
 	draw_set_color(speaker_color);
-	draw_text(x + speaker_x + name_w/2, y + speaker_y, speaker_name);
+	draw_text(x +7+ speaker_x + name_w/2, y + speaker_y, speaker_name);
 }
 
 // Text

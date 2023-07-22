@@ -200,7 +200,13 @@ function play_walk_audio(){
 		}
 	}
 }
+function PlayerUpdateStatus()
+{
+//check if have dash in inventory
+	 var _dash = Inv_hasItem(ITEM.DASH);
+	 if (_dash) global.CanDash =true else global.CanDash=false;
 
+}
 function reset_variables() {
 	
 	global.interact = false;
@@ -470,7 +476,7 @@ function Space_logic()
 			if(activate == noone)
 			{
 					
-				if(global.beatchance) //roll only in beat
+				if(global.beatchance && global.CanDash) //roll only in beat and if can dash
 				{
 					state = states.ROLL;
 					

@@ -13,6 +13,8 @@
 #macro OPTION new OptionAction
 #macro GOTO new GotoAction
 #macro FIGHT new FightAction
+#macro INVENTORY new ItemAction
+
 
 
 function startDialogue(topic) {
@@ -96,29 +98,90 @@ function type(x, y, text, progress, width) {
 		}
 	}
 }
+	
+function checkConditions(){
+	
+	var conditions = [condition1, condition2, condition3, condition4];
+	var arrays = [global.items, global.attributes, global.talks];
+	
+	var found = true;
+	var condition_exist=false;
+	var condition_count=0;
 
+	for (var i = 0; i < array_length(conditions); i++) {
+	    if (conditions[i] != "") {
+			condition_exist=true;
+			condition_count+=1;
+			var match = false;
+	        for (var j = 0; j < array_length(arrays); j++) {
+	            var arrayToSearch = arrays(j);
+	            if (array_contains(arrayToSearch, conditions[i])) {
+	                match = true;
+	                break;
+	            }
+				if (!match){
+					found=false;
+				}
+	        }
+	        }
+	    }
+	if(condition_exist)
+	{
+	    show_debug_message("condition found in text");
+	}
+	if(condition_exist && found)
+	{
+	    show_debug_message("all conditions passed ("+string(condition_count)+")");
+	}
+	
+	if (condition_exist && !found) {
+	    // If at least one condition doesn't exist, reset the variables to "" anad next
+		next();
+	    condition1 = "";
+	    condition2 = "";
+	    condition3 = "";
+	    condition4 = "";
+}
+}
+	
+	
 //-----------------ACTIONS------------------//
 
-
-
-		// el constructor hace que pueda llamar a la funcion para hacer una estructura de datos
+		
 function DialogueAction() constructor {
+	// el constructor hace que pueda llamar a la funcion para hacer una estructura de datos
 	act = function() { };
 }
-
-// Define new text to type out
+function TextAction(_text/*,_cond1=0,_cond2=0,_cond3=0,_cond4=0*/) : DialogueAction() constructor {
+	// Define new text to type out
 			// el : significa que hereda de la funcion DialogueAction
-function TextAction(_text) : DialogueAction() constructor {
-	text = _text;
+    text = _text;
+    
+   // var new_conditions = [_cond1, _cond2, _cond3, _cond4];
+   // var textbox_conditions = [condition1, condition2, condition3, condition4];
 
+    //for (var i = 0; i < array_length(new_conditions); i++) {
+    //    if (new_conditions[i] != 0) {
+    //        textbox_conditions[i] = new_conditions[i];
+    //    } else {
+    //        textbox_conditions[i] = "";
+    //    }
+    //}
+
+    //// Now, you can use textbox_conditions[i] as needed.
+    //// For example, if you want to update the original condition variables, you can do:
+	
+    //condition1 = textbox_conditions[0]; 
+    //condition2 = textbox_conditions[1];
+    //condition3 = textbox_conditions[2];
+    //condition4 = textbox_conditions[3];
+	
 	act = function(textbox) {
 		textbox.setText(text);
 	}
 }
-
-//Set the speaker its portrait and side the portrait is on 
 function SpeakerAction (_name,_sprite = undefined,_side = undefined) : DialogueAction() constructor{
-	
+//Set the speaker its portrait and side the portrait is on 	
 	name = _name;
 	sprite = _sprite;
 	side = _side;
@@ -141,8 +204,7 @@ function RoomAction(_roomname) : DialogueAction() constructor{
 	textbox.next();
 	}
 		
-}
-
+}                                 
 function FightAction(_background,_enemy) : DialogueAction() constructor{
 	enemy = _enemy;
 	background = _background;
@@ -153,7 +215,6 @@ function FightAction(_background,_enemy) : DialogueAction() constructor{
 	textbox.next();
 	}
 }
-
 function ChoiceAction(_text) : DialogueAction() constructor{
 	
 	text = _text;
@@ -171,7 +232,6 @@ function ChoiceAction(_text) : DialogueAction() constructor{
 		
 	
 }
-
 function OptionAction(_text,_topic) : DialogueAction() constructor{
 	 text = _text;
 	 topic = _topic;
@@ -181,7 +241,6 @@ function OptionAction(_text,_topic) : DialogueAction() constructor{
 		 textbox.setTopic(topic);
 	 }
 }
-
 function GotoAction(_topic) : DialogueAction() constructor{
 	
 	topic = _topic;
@@ -192,7 +251,19 @@ function GotoAction(_topic) : DialogueAction() constructor{
 	}
 	
 }
+function ItemAction(_itemid,_quantity) : DialogueAction() constructor{
+	
+	inv_quantity=_quantity;
+	item_id=_itemid;
 
+	
+	act = function(textbox)
+	{
+		textbox.inv_type=item_id;
+		textbox.item_quantity=inv_quantity
+	}
+	
+}
 //----------------TOPICS---------------------//
 
 //Importando El JSON del dialogo
@@ -503,7 +574,7 @@ for (var _i = 0; _i < array_length(dialogo); _i++)
 
 //global.topics[$ "Breakfast"] = [
 //	//SPEAKER("Sam",spr_portrait_sam,PORTRAIT_SIDE.LEFT),
-//	CHOICE("What do you want for breakfast",OPTION("Eggs", "Chose Eggs"),OPTION ("Pancakes", "Chose Pancakes"))
+//	POSTFIGHT(WIN("Chose Eggs"),LOSE ("Chose Pancakes"))
 //];
 	
 //	global.topics[$ "Chose Eggs"] = [
@@ -525,7 +596,7 @@ global.topics[$ "Batallando"] = [
 	SPEAKER("Rana",spr_pt_rana, PORTRAIT_SIDE.LEFT),
 	TEXT("Aja! encontraste mi [rainbow]escondite secreto[/rainbow], debes saber que soy un [c_blue]agente secreto"),
 	TEXT("Espera... No se si lo sabias, bueno no importa."),
-	TEXT("Ahora debo [wave][c_yellow]matarte!"),
+	TEXT("Y ademas no te gusta"),
 	FIGHT(spr_bg_forest2,obj_fight_rana)
 ];
 		
@@ -559,3 +630,10 @@ global.topics[$ "conejeando"] = [
 	TEXT("Con eso debería ser suficiente... ¿no?")
 ];
 
+global.topics[$ "conejeandoitem"] = [
+	SPEAKER("Conejita",spr_pt_coneja, PORTRAIT_SIDE.LEFT),
+	TEXT("Wena compa, te le voy a dar un item."),
+	INVENTORY(ITEM.DASH,1),
+	TEXT("Y demás que necesito otro textbox para ir probando si funciona bien"),
+	TEXT("Con eso debería ser suficiente... ¿no?")
+];

@@ -53,7 +53,7 @@ if(speaker_name != "")
 	draw_set_valign(fa_center);
 	//draw_set_font(speaker_font);
 	draw_set_color(speaker_color);
-	draw_text(x +7+ speaker_x + name_w/2, y + speaker_y, speaker_name);
+	draw_text(x +padding+ speaker_x + name_w/2, y + speaker_y, speaker_name);
 }
 
 // Text

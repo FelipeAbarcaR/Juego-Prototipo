@@ -9,6 +9,12 @@ dir = 270;
 //en un futuro
 can_attack = true;
 
+//Habilidades
+global.CanDash=false;
+//global.CanShield=false;
+//global.Can3Tempo=false;
+
+
 ready_to_restart = false; //ensures we can restart after death animation
 
 speedroll = 3.0;

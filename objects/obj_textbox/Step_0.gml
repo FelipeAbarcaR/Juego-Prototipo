@@ -12,6 +12,7 @@ if (input_delay > 0)
 }
 var finished = (text_progress == text_length); 
 
+
 // Are we finished typing?
 if (finished) 
 {
@@ -54,6 +55,42 @@ else if (confirm)
 
 
 if (finished){
+	
+	//Inventory
+	if(item_quantity!=0)
+	{
+	    switch (sign(item_quantity))
+		{
+		    case 1:
+				var _added=Inv_add(inv_type,item_quantity);
+				if (_added)
+				{
+				    item_quantity=0;
+				}else
+				{
+				    show_debug_message("algo paso con inv_add")
+				}
+			break;
+			
+			case -1:
+				var _deleted = Inv_del(inv_type,item_quantity);
+				if (_deleted)
+				{
+				    item_quantity=0;
+				}else
+				{
+				    show_debug_message("algo paso con inv_del")
+				}
+			break;
+			
+			default:
+			break;
+				
+		}
+	}
+	
+	
+	//Changeroom (se debe cambiar a sequence)
 	if (new_room != -1){
 		global.targetRoom=new_room;
 		RoomTransition(TRANS_TYPE.SLIDE,new_room);
@@ -74,3 +111,4 @@ if (finished){
 }else{
 	DialogueSound()
 }
+

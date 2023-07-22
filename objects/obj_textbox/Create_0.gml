@@ -52,6 +52,10 @@ new_room=-1;
 fight_enemy=-1;
 fight_bg=-1;
 
+//Inventory
+inv_type=0;
+item_quantity=0;
+
 /// PRIVATE PROPERTIES
 
 /*** LOOK BUT DO NOT EDIT! ***/
@@ -75,10 +79,17 @@ enum PORTRAIT_SIDE
 speaker_name = "";
 speaker_width = sprite_get_width(spr_name);
 speaker_height = sprite_get_height(spr_name);
+	
 
 options = [];
 current_option = 0;
 option_count = 0;
+
+//Conditions
+condition1="";
+condition2="";
+condition3="";
+condition4="";
 
 /// Methods
 /*** Generally you never need to call these manually ***/
@@ -101,6 +112,13 @@ next = function() {
 			global.textover = true;
 			state = states.IDLE;
 		}
+		//call to player to update values
+		var _player=global.room_data[global.currentroom][index.mainchar];
+		with(_player)
+		{
+		    PlayerUpdateStatus();
+		}
+	
 		instance_destroy();
 	}
 	else {

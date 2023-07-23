@@ -51,6 +51,7 @@ new_room=-1;
 //Fight
 fight_enemy=-1;
 fight_bg=-1;
+start_fight=false;
 
 //Inventory
 inv_type=0;

@@ -152,6 +152,7 @@ function DialogueAction() constructor {
 	// el constructor hace que pueda llamar a la funcion para hacer una estructura de datos
 	act = function() { };
 }
+
 function TextAction(_text/*,_cond1=0,_cond2=0,_cond3=0,_cond4=0*/) : DialogueAction() constructor {
 	// Define new text to type out
 			// el : significa que hereda de la funcion DialogueAction
@@ -180,6 +181,7 @@ function TextAction(_text/*,_cond1=0,_cond2=0,_cond3=0,_cond4=0*/) : DialogueAct
 		textbox.setText(text);
 	}
 }
+
 function SpeakerAction (_name,_sprite = undefined,_side = undefined) : DialogueAction() constructor{
 //Set the speaker its portrait and side the portrait is on 	
 	name = _name;
@@ -197,6 +199,7 @@ function SpeakerAction (_name,_sprite = undefined,_side = undefined) : DialogueA
 	}
 		
 }
+
 function RoomAction(_roomname) : DialogueAction() constructor{
 	changeroom = _roomname;
 	act = function(textbox){
@@ -205,6 +208,7 @@ function RoomAction(_roomname) : DialogueAction() constructor{
 	}
 		
 }                                 
+
 function FightAction(_background,_enemy) : DialogueAction() constructor{
 	enemy = _enemy;
 	background = _background;
@@ -212,9 +216,10 @@ function FightAction(_background,_enemy) : DialogueAction() constructor{
 
 	textbox.fight_bg=background;
 	textbox.fight_enemy=enemy;
-	textbox.next();
+	textbox.start_fight=true;
 	}
 }
+
 function ChoiceAction(_text) : DialogueAction() constructor{
 	
 	text = _text;
@@ -232,6 +237,7 @@ function ChoiceAction(_text) : DialogueAction() constructor{
 		
 	
 }
+
 function OptionAction(_text,_topic) : DialogueAction() constructor{
 	 text = _text;
 	 topic = _topic;
@@ -241,6 +247,7 @@ function OptionAction(_text,_topic) : DialogueAction() constructor{
 		 textbox.setTopic(topic);
 	 }
 }
+
 function GotoAction(_topic) : DialogueAction() constructor{
 	
 	topic = _topic;
@@ -251,6 +258,7 @@ function GotoAction(_topic) : DialogueAction() constructor{
 	}
 	
 }
+
 function ItemAction(_itemid,_quantity) : DialogueAction() constructor{
 	
 	inv_quantity=_quantity;

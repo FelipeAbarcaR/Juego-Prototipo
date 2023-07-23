@@ -35,8 +35,9 @@
 //}
 
 if global.DrawText{
-	draw_text(2*room_width/3,  32+32, string(BeatBarProgress));
-	draw_text(x-20,y,"bpm: "+string(global.bpm));
+	draw_text(2*room_width/4,  32+32,"BeatBarProgress: "+ string(BeatBarProgress));
+	draw_text(2*room_width/4,  32+32+16,"Global Progress: "+ string(global.beatprogress));
+	draw_text(2*room_width/4,  32+64,"BPM, Beat: "+ string(global.bpm)+", "+string(global.BeatNumber));
 }
 
 

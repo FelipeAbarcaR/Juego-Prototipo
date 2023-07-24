@@ -40,3 +40,10 @@ script_start = false;
 	//idle
 	spr_player_idle = spr_gato3_idle;
 	
+//sound
+path_id = -1;
+
+//Shaders
+sha_alpha = 0.5;
+
+	

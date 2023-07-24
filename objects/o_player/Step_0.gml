@@ -10,6 +10,7 @@ switch(state) {
 		Space_logic();
 
 		anim();
+		
 	break;
 	case states.KNOCKBACK:
 		reset_variables();

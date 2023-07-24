@@ -304,6 +304,10 @@ var _iter = 2;
 var _topico = "";
 var _topico_comp = "";
 var _textbox = "";
+var _condition1 = "";
+var _condition2 = "";
+var _condition3 = "";
+var _condition4 = "";
 
 var _speaker = "";
 var _speakercomp = "";
@@ -335,19 +339,12 @@ for (var _i = 0; _i < array_length(dialogo); _i++)
 		_iter = 2;
 		if(_speaker != "")
 		{
-			switch(_speaker) // esto es para obtener el sprite correcto
-			{
-				default:
-					_sprite_portrait = spr_ViejoSabio;
-				case "Viejo Sabio": 
-					_sprite_portrait = spr_ViejoSabio;
-				break;
-				case "Pedro":
-					_sprite_portrait = spr_pt_rana;
-				break;
+			if(_sprite != "")
+			{	
+				_sprite_portrait = asset_get_index(_sprite);
+				global.topics[$ _topico][0] = SPEAKER(_speaker,_sprite_portrait,PORTRAIT_SIDE.LEFT);
+				_portrait += 1;
 			}
-			global.topics[$ _topico][0] = SPEAKER(_speaker,_sprite_portrait,PORTRAIT_SIDE.LEFT);
-			_portrait += 1;
 		}
 		//else continue; //esto va a cambiar para los carteles
 		if(_option != "0")
@@ -408,7 +405,7 @@ for (var _i = 0; _i < array_length(dialogo); _i++)
 				switch(_speaker)
 				{
 					case "Viejo Sabio": 
-						_sprite_portrait = spr_ViejoSabio;
+						_sprite_portrait = spr_portrait_ViejoSabio;
 					break;
 					case "Pedro":
 						_sprite_portrait = spr_pt_rana;
@@ -433,7 +430,11 @@ for (var _i = 0; _i < array_length(dialogo); _i++)
 		{
 			if(_textbox != "")
 			{
-				global.topics[$ _topico][1] = TEXT(_textbox);
+				_condition1 = dialogo[_i][$ "CONDICION1"];
+				_condition2 = dialogo[_i][$ "CONDICION2"];
+				_condition3 = dialogo[_i][$ "CONDICION3"];
+				_condition4 = dialogo[_i][$ "CONDICION4"];
+				global.topics[$ _topico][1] = TEXT(_textbox,_condition1,_condition2,_condition3,_condition4);
 			}
 			else continue;
 		}
@@ -456,18 +457,11 @@ for (var _i = 0; _i < array_length(dialogo); _i++)
 				{
 					_iter = 0;
 					_speaker = dialogo[_i][$ "SPEAKER"];
+					_sprite = dialogo[_i][$ "SPRITE"];
 					if(_speaker != "")
 					{
-						switch(_speaker)
-						{
-							case "Viejo Sabio": 
-								_sprite_portrait = spr_portrait_ViejoSabio;
-							break;
-							case "Pedro":
-								_sprite_portrait = spr_pt_rana;
-							break;
-						}
-					
+						_sprite_portrait = asset_get_index(_sprite);
+							
 						if(_portrait == 0) 
 						{
 							global.topics[$ _topico][0] = SPEAKER(_speaker,_sprite_portrait,PORTRAIT_SIDE.RIGHT); //esto debe cambiar para hacer mas top
@@ -481,6 +475,7 @@ for (var _i = 0; _i < array_length(dialogo); _i++)
 						_speakercomp = _speaker;
 						_iter += 1;
 					}
+					
 				}
 			}
 			_topico_comp = _topico;
@@ -488,15 +483,9 @@ for (var _i = 0; _i < array_length(dialogo); _i++)
 		_speaker = dialogo[_i][$ "SPEAKER"];
 		if(_speaker != _speakercomp and _speaker != "")
 		{
-			switch(_speaker)
-			{
-				case "Viejo Sabio": 
-					_sprite_portrait = spr_ViejoSabio;
-				break;
-				case "Pedro":
-					_sprite_portrait = spr_pt_rana;
-				break;
-			}
+			_sprite = dialogo[_i][$ "SPRITE"];
+			_sprite_portrait = asset_get_index(_sprite);
+			
 			if(_portrait == 0) 
 			{
 				global.topics[$ _topico][_iter] = SPEAKER(_speaker,_sprite_portrait,PORTRAIT_SIDE.LEFT);
@@ -568,7 +557,11 @@ for (var _i = 0; _i < array_length(dialogo); _i++)
 			_textbox = dialogo[_i][$ "TEXTBOX"];
 			if(_textbox != "")
 			{
-				global.topics[$ _topico][_iter] = TEXT(_textbox);
+				_condition1 = dialogo[_i][$ "CONDICION1"];
+				_condition2 = dialogo[_i][$ "CONDICION2"];
+				_condition3 = dialogo[_i][$ "CONDICION3"];
+				_condition4 = dialogo[_i][$ "CONDICION4"];
+				global.topics[$ _topico][_iter] = TEXT(_textbox,_condition1,_condition2,_condition3,_condition4);
 				_iter += 1;
 			}
 			else continue;

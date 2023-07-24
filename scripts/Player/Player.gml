@@ -179,10 +179,10 @@ function PlayerStateBonk(){
 
 function play_walk_audio(){
 	
-	if(room == roomMapaInicial) var _path_id = layer_get_id("TilesMain");
-	else if (room == roomViejoSabio) var _path_id = layer_get_id("Tiles_floor");
+	if(room == roomMapaInicial) path_id = layer_get_id("TilesMain");
+	else if (room == roomViejoSabio) path_id = layer_get_id("Tiles_floor");
 
-	var _map_id = layer_tilemap_get_id(_path_id);
+	var _map_id = layer_tilemap_get_id(path_id);
 	var _data = tilemap_get_at_pixel(_map_id,x,y);
 	
 	if(!tile_get_empty(_data))
@@ -242,7 +242,7 @@ function get_input() {
 function calc_movement() {
 	hmove = right - left;	
 	vmove = down - up;
-	//if hmove != 0 and vmove != 0 
+	//if (hmove != 0 and vmove != 0)
 	//{
 	//	walk_spd = diag_walk_spd;
 	//}
@@ -335,6 +335,22 @@ function collision_Entity() {
 	}
 	
 }	
+	
+function tile_alpha(){
+	
+	var rate = 0.05;
+	var _lay_id = layer_get_id("TilesUpperUpper");
+	var _map_id = layer_tilemap_get_id(_lay_id);
+
+	if(tilemap_get_at_pixel(_map_id,x,y))
+	{
+		shader_set(sha_transparent);
+		var uni_transparency = shader_get_uniform(sha_transparent,"sha_alpha");
+		shader_set_uniform_f(uni_transparency,sha_alpha);
+		layer_shader(_lay_id,sha_transparent);
+		shader_reset();
+	}
+}
 	
 function collision_bridge (){
 

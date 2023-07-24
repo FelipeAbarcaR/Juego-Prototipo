@@ -28,6 +28,7 @@
     {"name":"Superfonts","order":9,"path":"folders/Scribble/Superfonts.yy",},
     {"name":"Scripts","order":8,"path":"folders/Scripts.yy",},
     {"name":"Sequences","order":16,"path":"folders/Sequences.yy",},
+    {"name":"Fight","order":6,"path":"folders/Sequences/Fight.yy",},
     {"name":"Shaders","order":9,"path":"folders/Shaders.yy",},
     {"name":"Sonidos","order":10,"path":"folders/Sonidos.yy",},
     {"name":"Pasos","order":1,"path":"folders/Sonidos/SFX/Pasos.yy",},
@@ -47,7 +48,6 @@
     {"name":"Text & Cutscenes","order":15,"path":"folders/Sprites/Text & Cutscenes.yy",},
     {"name":"Tiles","order":16,"path":"folders/Sprites/Tiles.yy",},
     {"name":"Tile Sets","order":12,"path":"folders/Tile Sets.yy",},
-    {"name":"Fight","order":6,"path":"folders/Sequences/Fight.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"__scribble_get_krutidev_matra_lookup_map","order":12,"path":"scripts/__scribble_get_krutidev_matra_lookup_map/__scribble_get_krutidev_matra_lookup_map.yy",},

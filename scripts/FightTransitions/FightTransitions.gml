@@ -8,8 +8,9 @@ function FightTransitionStart(_roomBG, _typeOut, _typeIn)
 		global.midTransition = true;
 		global.fightBackground=_roomBG
 		FightTransitionPlaceSequence(_typeOut);
-		FightTransitionPlaceSequence(_typeIn);
+		//FightTransitionPlaceSequence(_typeIn);
 		return true;
+		
 	}
 	else return false
 }
@@ -19,13 +20,20 @@ function FightTransitionPlaceSequence(_type)
 {
 	if (layer_exists("transition")) layer_destroy("transition")
 	var _lay = layer_create(-9999,"transition")
-	layer_sequence_create(_lay,0,0,_type);	
+	layer_sequence_create(_lay,x,y,_type);
 }
 
 //Called as a moment at the end of an "Out" transition sequence
 function FightTransitionChangeBG()
-{
-	draw_background=true;
+{	
+	with(obj_fight_control)
+	{
+	    draw_background=true;
+		create_fighters=true;
+		alarm[2]=room_speed * obj_fight_control.time_transition_in;
+		
+	}
+	
 }
 
 //Called as a moment at the end of an "In" transition sequence

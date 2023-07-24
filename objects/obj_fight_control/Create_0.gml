@@ -1,7 +1,7 @@
 /// @description hola
 
 
-fighter1=obj_Conde;
+fighter1=obj_fight_gato;
 fighter2=global.fightEnemy;
 
 marginw=140;
@@ -21,4 +21,7 @@ bg_width=global.res.width;
 bg_height=global.res.height;
 
 
-FightTransitionStart(global.fightBackground,sqFightFadeOut,sqFightFadeIn);
+FightTransitionStart(background,sqFightFadeOut,sqFightFadeIn);
+time_transition_in=0.3;
+create_fighters=false;
+fighters_created=false;

@@ -99,7 +99,7 @@ if (finished){
 	//ACTIVAR PELEA, POR MIENTRAS ES CON ROOM CHANGE
 	if (start_fight){
 		start_fight=false;
-		NewEncounter(fight_enemy,fight_bg)
+		NewEncounter(fight_enemy,fight_bg);
 		
 	}
 }else{

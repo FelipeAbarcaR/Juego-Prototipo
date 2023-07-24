@@ -217,6 +217,7 @@ function FightAction(_background,_enemy) : DialogueAction() constructor{
 	textbox.fight_bg=background;
 	textbox.fight_enemy=enemy;
 	textbox.start_fight=true;
+	textbox.next();
 	}
 }
 
@@ -604,7 +605,7 @@ global.topics[$ "Batallando"] = [
 	SPEAKER("Rana",spr_pt_rana, PORTRAIT_SIDE.LEFT),
 	TEXT("Aja! encontraste mi [rainbow]escondite secreto[/rainbow], debes saber que soy un [c_blue]agente secreto"),
 	TEXT("Espera... No se si lo sabias, bueno no importa."),
-	TEXT("Y ademas no te gusta"),
+	TEXT("Y ademas no te gustan los completos, peleemos"),
 	FIGHT(spr_bg_forest2,obj_fight_rana)
 ];
 		
@@ -632,10 +633,9 @@ global.topics[$ "signwarning2"] = [
 ];
 global.topics[$ "conejeando"] = [
 	SPEAKER("Conejita",spr_pt_coneja, PORTRAIT_SIDE.LEFT),
-	TEXT("fiuu~, esta vez sí que se lucieron, ¿no sabes de lo que hablo?."),
 	TEXT("Esto es una prueba de sfx de diálogo, necesito algunas palabras laaaaaargas y demas que textos cortos y piolas"),
 	TEXT("Y demás que necesito otro textbox para ir probando si funciona bien"),
-	TEXT("Con eso debería ser suficiente... ¿no?")
+	TEXT("Con eso debería ser suficiente... ¿no?"),
 ];
 
 global.topics[$ "conejeandoitem"] = [
@@ -644,4 +644,9 @@ global.topics[$ "conejeandoitem"] = [
 	INVENTORY(ITEM.DASH,1),
 	TEXT("Y demás que necesito otro textbox para ir probando si funciona bien"),
 	TEXT("Con eso debería ser suficiente... ¿no?")
+];
+global.topics[$ "conejeandopelea"] = [
+	SPEAKER("Conejita",spr_pt_coneja, PORTRAIT_SIDE.LEFT),
+	TEXT("fiuu~, esta vez sí que se lucieron, ¿no sabes de lo que hablo?."),
+	FIGHT(spr_bg_forest2,obj_fight_rana)
 ];

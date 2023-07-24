@@ -6,10 +6,10 @@ function NewEncounter(_enemy,_bg){
 	global.fightEnemy=_enemy;
 	global.fightBackground=_bg;
 	instance_create_depth(
-	camera_get_view_x(_cam),
-	camera_get_view_y(_cam),
-	-99999,
-	obj_fight_control
-	)
+		camera_get_view_x(_cam),
+		camera_get_view_y(_cam),
+		-999,
+		obj_fight_control
+	);
 
 }

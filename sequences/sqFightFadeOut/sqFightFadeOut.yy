@@ -23,8 +23,8 @@
     "resourceVersion": "1.0",
     "Keyframes": [
       {"resourceType":"Keyframe<MomentsEventKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"MomentsEventKeyframe","resourceVersion":"1.0","Events":[
-              "TransitionChangeRoom",
-            ],},},"Disabled":false,"id":"f019c409-d09a-43e6-b61c-8544788adbb6","IsCreationKey":false,"Key":59.9999,"Length":1.0,"Stretch":false,},
+              "FightTransitionChangeBG",
+            ],},},"Disabled":false,"id":"d4861ff1-4698-40e4-9d93-819f2293eabb","IsCreationKey":false,"Key":59.9999,"Length":1.0,"Stretch":false,},
     ],
   },
   "parent": {

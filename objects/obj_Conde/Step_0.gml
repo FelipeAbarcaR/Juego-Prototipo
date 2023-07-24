@@ -81,8 +81,6 @@
 			var _effectdistance = 16
 			//create attack effect
 			SendFX(fx_atk1,x+_effectdistance,y+_midheight,{
-					image_xscale	: 2,
-					image_yscale	: 2,
 					sfx				: sfx_ataque,
 					creator			: id
 				})
@@ -114,7 +112,9 @@
 		y=ystart;
 		sprite_index=spr_idle;
 	}
-
+	if(state=="locked")
+	{ }
+	
 //ATAQUE DEL JUGADOR AL ENEMIGO
 
 	if(attack_collision)

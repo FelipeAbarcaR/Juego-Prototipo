@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+//red flash shader
 if(start_flash)
 {
 	x1+=0.1
@@ -18,6 +19,7 @@ if(start_flash)
 }
 
 draw_self();
+
 if (global.DrawText){
 	draw_text(x-16,y+16,string(x_to))
 	draw_text(x-16,y+32,string(y_to))

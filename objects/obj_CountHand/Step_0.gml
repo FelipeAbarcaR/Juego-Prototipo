@@ -23,7 +23,8 @@ if(move){
 } 
 
 	if(image_index>=image_number-1){
+		move=false;		
+		global.start_fight=true;
 		instance_destroy();
-		move=false;
 	}
 }

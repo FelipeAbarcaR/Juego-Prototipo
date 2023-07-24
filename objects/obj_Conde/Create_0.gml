@@ -3,11 +3,11 @@
 
 x_to=x;
 y_to=y;
-attack_distance=300;
-dodge_distance=192;
+attack_distance=170;
+dodge_distance=90;
 dodge_speed=16;
 move=true;
-state="idle"
+state="locked";
 inputmagnitude=0;
 attack_collision=false;
 
@@ -16,7 +16,7 @@ delay=0;
 start_delay=false;
 hit_delay=0.8;
 attack_delay=0.4;
-dodge_delay=0.3;
+dodge_delay=0.5;
 back_dodge_delay=1.2;
 
 
@@ -66,4 +66,7 @@ hola=1;
 //2nd bar decrease animation
 draw_hp2=false;
 
-
+Izquierda=0;
+Derecha=0;
+Arriba=0;
+Abajo=0;

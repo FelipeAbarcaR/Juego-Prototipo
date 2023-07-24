@@ -4,6 +4,9 @@
 // Keep track of the current room and its associated data
 current_music = global.room_data[global.currentroom][index.music];
 current_bpm = global.room_data[global.currentroom][index.bpm];
+last_music=-1;
+sound_fade_in=false;
+
 // set bpm
 global.bpm= current_bpm;
 
@@ -15,6 +18,7 @@ global.Move=false;
 global.beatprogress=0;
 global.BeatNumber=0;
 
+global.fight_music_start=false;
 // range to beatchance
 beathitrange=0.60;
 

@@ -56,7 +56,8 @@ enum EnemyStance{
 	hit,
 	endstance,
 	idle,
-	dead
+	dead,
+	locked
 }
 
 //general

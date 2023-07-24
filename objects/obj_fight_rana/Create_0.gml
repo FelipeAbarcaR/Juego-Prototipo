@@ -4,6 +4,9 @@
 // Inherit the parent event
 event_inherited();
 
+bgm=bgm_Feelings;
+bpm=115;
+
 spr_atk1=spr_fight_rana;
 spr_atk2=spr_fight_rana;
 spr_atk3=spr_fight_rana;

@@ -68,7 +68,7 @@ function ShowFXArrows(){
 	var _x = _char.xstart;
 	var _y = _char.ystart;
 	var _dodge = _char.dodge_distance*0.6;
-	var _scale=2;
+	var _scale=1;
 	
 	switch(ataque)
 	{

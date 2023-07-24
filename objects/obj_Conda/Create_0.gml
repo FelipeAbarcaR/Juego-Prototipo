@@ -6,12 +6,20 @@ global.enemy_hit = true; //true: enemy can be hit
 global.enemy_atk = false; //true:enemy can do damage
 global.enemy_hurt = false; //true: enemy got hurt
 
+
+//screen
+guiheight=display_get_gui_height();
+guiwidth=display_get_gui_width();
+
+//attack & gettin hit options
+
 time_attack = round(random_range(3,4));
 attack_delay=0.5; //seconds to wait to start counting to attack
 hurt_delay=0.5;
 collided=false;
 
-stance = EnemyStance.wait;
+//stance parameters
+stance = EnemyStance.locked;
 state="idle"; //state para script fightrhythmanimate
 bits=2;
 bits2=2;

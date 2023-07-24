@@ -4,9 +4,18 @@ function scr_FightEnemyMove(){
 
 var _xTo,_yTo;
 
-_xTo=path_get_point_x(current_path,point_to_go);
-_yTo=path_get_point_y(current_path,point_to_go);
+var _control=obj_fight_control;
 
+var _current_path_x = path_get_point_x(current_path,point_to_go);
+var _current_path_y = path_get_point_y(current_path,point_to_go);
+var _fight_room_width = 1024;
+var _fight_room_height = 576;
+
+var _point_x=map_value(_current_path_x,0,_fight_room_width,0,global.res.width);
+var _point_y=map_value(_current_path_y,0,_fight_room_height,0,global.res.height);
+
+_xTo=_control.x+ _point_x;
+_yTo=_control.y+_point_y;
 
 //
 var _distance,_actualdistance;

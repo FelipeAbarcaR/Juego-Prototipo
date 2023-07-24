@@ -1,5 +1,8 @@
 // Get input
-var confirm = keyboard_check_pressed(confirm_key);
+
+var confirm=false;
+
+if (!fighting) confirm = keyboard_check_pressed(confirm_key);
 
 // Type out the text
 text_progress = min(text_progress + text_speed, text_length);
@@ -96,10 +99,11 @@ if (finished){
 		RoomTransition(TRANS_TYPE.SLIDE,new_room);
 	}
 	
-	//ACTIVAR PELEA, POR MIENTRAS ES CON ROOM CHANGE
+	//ACTIVAR PELEA
 	if (start_fight){
 		start_fight=false;
 		NewEncounter(fight_enemy,fight_bg);
+		fighting=true;
 		
 	}
 }else{

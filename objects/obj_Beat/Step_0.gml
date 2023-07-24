@@ -50,7 +50,34 @@ if (_hKey) instance_create_layer(0,0, "Instances", obj_CountHand);
 // draw vanishing BeatBar
 	var _player_mainchar = global.room_data[global.currentroom][index.mainchar]
 	var _mode= global.room_data[global.currentroom][index.mode]
+
+//Fight things
+	if(global.fight_music_start)
+	{
+	    if(audio_is_playing(current_music))
+		{
+			    audio_sound_gain(current_music, 0, 300);
+		}
+		var _volumen = audio_sound_get_gain(current_music);
+		if(_volumen<=0.1 && instance_exists(obj_fight_control.fighter2))
+		{
+			ResetBeatStats();
+			audio_sound_gain(current_music, 1, 0);
+			audio_stop_sound(current_music);
+		    last_music=current_music;
+			current_music=obj_fight_control.fighter2.bgm;
+			current_bpm = obj_fight_control.fighter2.bpm;
+			global.bpm = current_bpm;
+			global.BeatTimeMS=((60)/global.bpm)*1000000;
+			global.fight_music_start = false;
+			var snd = audio_play_sound(current_music,10,1);
+			audio_sound_gain(snd, 0, 0);
+			audio_sound_gain(snd, 1, 3000);
+		}
+		
+	}
 	
+	//beat meter vanishing
 	switch(_player_mainchar)
 	{
 		case o_player: 

@@ -511,6 +511,7 @@
     {"id":{"name":"sqFadeOut","path":"sequences/sqFadeOut/sqFadeOut.yy",},},
     {"id":{"name":"FightRhythmAnimate","path":"scripts/FightRhythmAnimate/FightRhythmAnimate.yy",},},
     {"id":{"name":"obj_fight_gato","path":"objects/obj_fight_gato/obj_fight_gato.yy",},},
+    {"id":{"name":"Beat","path":"scripts/Beat/Beat.yy",},},
     {"id":{"name":"__shd_scribble_bake_shadow","path":"shaders/__shd_scribble_bake_shadow/__shd_scribble_bake_shadow.yy",},},
     {"id":{"name":"spr_bg_forest_GD2","path":"sprites/spr_bg_forest_GD2/spr_bg_forest_GD2.yy",},},
     {"id":{"name":"roomMapaInicialcOPY","path":"rooms/roomMapaInicialcOPY/roomMapaInicialcOPY.yy",},},

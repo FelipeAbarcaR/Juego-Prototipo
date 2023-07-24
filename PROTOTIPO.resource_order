@@ -219,6 +219,7 @@
     {"name":"Rania_8","order":7,"path":"sounds/Rania_8/Rania_8.yy",},
     {"name":"gato_completo","order":5,"path":"sprites/gato_completo/gato_completo.yy",},
     {"name":"sqFadeOut","order":1,"path":"sequences/sqFadeOut/sqFadeOut.yy",},
+    {"name":"Beat","order":5,"path":"scripts/Beat/Beat.yy",},
     {"name":"__shd_scribble_bake_shadow","order":4,"path":"shaders/__shd_scribble_bake_shadow/__shd_scribble_bake_shadow.yy",},
     {"name":"roomMapaInicialcOPY","order":2,"path":"rooms/roomMapaInicialcOPY/roomMapaInicialcOPY.yy",},
     {"name":"scribble_font_add_all","order":1,"path":"scripts/scribble_font_add_all/scribble_font_add_all.yy",},

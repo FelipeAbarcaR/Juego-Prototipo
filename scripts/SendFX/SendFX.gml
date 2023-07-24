@@ -7,11 +7,11 @@ function SendFX(_sprite,_x,_y,_struct=undefined){
 	if(is_undefined(_struct))
 	{
 		
-		instance_create_depth(_x,_y,-999,obj_effect,{sprite_index : _spr});    
+		instance_create_depth(_x,_y,depth-1,obj_effect,{sprite_index : _spr});    
 	} else
 	{
 		_mystruct.sprite_index = _spr;
-		instance_create_depth(_x,_y,-999,obj_effect,_mystruct);    
+		instance_create_depth(_x,_y,depth-1,obj_effect,_mystruct);    
 	}
 
 }

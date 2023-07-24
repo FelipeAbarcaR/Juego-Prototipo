@@ -1,13 +1,12 @@
 	/// @description
 
+//enemies loop on frames on rhythm
 if (stance!=EnemyStance.dead) FightRhythmAnimate();
-
 
 if ( stance ==  EnemyStance.prepare)
 {
 
-	guiheight=display_get_gui_height();
-	guiwidth=display_get_gui_width();
+	
 	if (current_beat != global.BeatNumber)
 	{
 		current_beat=global.BeatNumber;
@@ -19,8 +18,8 @@ if ( stance ==  EnemyStance.prepare)
 	//var _ishalfbeat=(global.beatprogress>=0.45)
 	if (/*_ishalfbeat &&*/ move_on_path)
 	{
-		on_point = scr_FightEnemyMove();
-		if (on_point /*and _ishalfbeat*/)
+		var _on_point = scr_FightEnemyMove();
+		if (_on_point /*and _ishalfbeat*/)
 		{
 			move_on_path=false;
 		}
@@ -28,9 +27,11 @@ if ( stance ==  EnemyStance.prepare)
 	}
 	}
 }
-//idle state, wait for for certain beats to start attack
+
 if (stance ==  EnemyStance.wait)
 {
+	//idle state, wait for for certain beats to start attack
+	
 	if (global.beat=true) bitcount++;
 	if (bitcount==bits)
 	{
@@ -78,6 +79,10 @@ if (stance==EnemyStance.dead)
 	{
 		image_speed=0;
 	}
+}
+if(stance==EnemyStance.locked)
+{
+    // code here
 }
 if (global.enemy_hurt)
 {

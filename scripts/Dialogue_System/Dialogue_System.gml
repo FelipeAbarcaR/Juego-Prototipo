@@ -15,8 +15,6 @@
 #macro FIGHT new FightAction
 #macro INVENTORY new ItemAction
 
-
-
 function startDialogue(topic) {
 	if (instance_exists(obj_textbox)) return;
 	
@@ -217,7 +215,6 @@ function FightAction(_background,_enemy) : DialogueAction() constructor{
 	textbox.fight_bg=background;
 	textbox.fight_enemy=enemy;
 	textbox.start_fight=true;
-	textbox.next();
 	}
 }
 
@@ -640,6 +637,6 @@ global.topics[$ "conejeandoitem"] = [
 ];
 global.topics[$ "conejeandopelea"] = [
 	SPEAKER("Conejita",spr_pt_coneja, PORTRAIT_SIDE.LEFT),
-	TEXT("fiuu~, esta vez sí que se lucieron, ¿no sabes de lo que hablo?."),
+	TEXT("Vamo a pelear ! (con la rana)"),
 	FIGHT(spr_bg_forest2,obj_fight_rana)
 ];

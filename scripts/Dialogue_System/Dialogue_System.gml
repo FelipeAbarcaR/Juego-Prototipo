@@ -631,9 +631,7 @@ global.topics[$ "conejeando"] = [
 global.topics[$ "conejeandoitem"] = [
 	SPEAKER("Conejita",spr_pt_coneja, PORTRAIT_SIDE.LEFT),
 	TEXT("Wena compa, te le voy a dar un item."),
-	INVENTORY(ITEM.DASH,1),
-	TEXT("Y demás que necesito otro textbox para ir probando si funciona bien"),
-	TEXT("Con eso debería ser suficiente... ¿no?")
+	INVENTORY(ITEM.DASH,1)
 ];
 global.topics[$ "conejeandopelea"] = [
 	SPEAKER("Conejita",spr_pt_coneja, PORTRAIT_SIDE.LEFT),

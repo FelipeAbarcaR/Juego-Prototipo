@@ -17,7 +17,7 @@ global.CanDash=false;
 
 ready_to_restart = false; //ensures we can restart after death animation
 
-speedroll = 3.0;
+speedroll = 2.5;
 distanceroll = 70;
 distancerollheight = 12;
 z = 0;
@@ -39,6 +39,9 @@ script_start = false;
 	
 	//idle
 	spr_player_idle = spr_gato3_idle;
+	
+	//roll
+	spr_roll = spr_player_roll
 	
 //sound
 path_id = -1;

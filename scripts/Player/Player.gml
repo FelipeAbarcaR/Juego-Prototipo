@@ -220,11 +220,7 @@ function reset_variables() {
 	hmove = 0;
 	walk_spd = 2;
 	
-	//Roll
-	speedroll = 3;
-	distanceroll = 70;
-	distancerollheight = 12;
-	z = 0;
+
 	
 	//Space Logic 
 	ScriptNPCstart = false;
@@ -411,7 +407,7 @@ function anim() {
 			sprite_index = spr_gato3_player; //Cambiar en un futuro
 		break;
 		case states.ROLL:
-			sprite_index = spr_player_roll;
+			sprite_index = spr_roll;
 		break;
 	}
 }

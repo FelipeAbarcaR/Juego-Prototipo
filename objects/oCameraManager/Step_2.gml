@@ -8,8 +8,8 @@ if (cameraFollow) {
 	var _camH = global.res.height;
 	
 	// Get new position for camera
-	var _camX = round(_plr.x) - _camW / 2;
-	var _camY = round(_plr.y) - _camH / 2;
+	var _camX = _plr.x - _camW / 2;
+	var _camY = _plr.y - _camH / 2;
 	
 	// Clamp position to room
 	_camX = clamp(_camX, 0, room_width - _camW);

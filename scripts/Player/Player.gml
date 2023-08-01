@@ -211,7 +211,7 @@ function reset_variables() {
 	
 	global.interact = false;
 	global.end_interaction = false;
-	global.activate = -1;
+	global.activate = noone;
 	left = 0;
 	right = 0;
 	up = 0;
@@ -474,7 +474,7 @@ function Space_logic()
 		{
 			global.activate = _check;
 			activate = _check;
-			_entitiesfound = 0; // _entitiesfound = 0 es lo mismo
+			_entitiesfound = 0; 
 		}
 	}
 					

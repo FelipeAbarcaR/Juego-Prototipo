@@ -23,6 +23,7 @@ function startDialogue(topic) {
 	inst.setTopic(topic);
 
 }
+
 function DialogueSound(){
 
 	if (dialogue_sounds != -1 && array_length(dialogue_sounds)>0){
@@ -46,6 +47,7 @@ function DialogueSound(){
 
 
 }
+
 function ChooseSound()
 {
 	var _sounds_number=array_length(dialogue_sounds)-1
@@ -96,7 +98,7 @@ function type(x, y, text, progress, width) {
 		}
 	}
 }
-	
+
 function checkConditions(){
 	
 	var conditions = [condition1, condition2, condition3, condition4];
@@ -144,8 +146,7 @@ function checkConditions(){
 	
 	
 //-----------------ACTIONS------------------//
-
-		
+	
 function DialogueAction() constructor {
 	// el constructor hace que pueda llamar a la funcion para hacer una estructura de datos
 	act = function() { };
@@ -275,6 +276,7 @@ function ItemAction(_itemid,_quantity) : DialogueAction() constructor{
 //Importando El JSON del dialogo
 dialogo = undefined;
 global.dialogue_order = {};
+global.dialogue_loop = {};
 
 if(file_exists(working_directory + "NPC_dialogues.json"))
 {
@@ -297,8 +299,6 @@ global.topics = {};
 hola = 10;
 
 var _portrait = 0;
-var _iter = 0;
-var _npc_iter = 0;
 
 var _npc = "";
 var _topico = "";
@@ -331,6 +331,7 @@ for (var _i = 0; _i < array_length(dialogo); _i++)
 	if(!struct_exists(global.topics,_topico) and _topico != "")
 	{
 		global.topics[$ _topico]= [];
+		global.dialogue_loop[$ _topico] = dialogo[_i][$ "LOOP"];
 		_textbox = dialogo[_i][$ "TEXTBOX"];
 		_speaker = dialogo[_i][$ "SPEAKER"];
 		_sprite = dialogo[_i][$ "SPRITE"];
@@ -358,7 +359,6 @@ for (var _i = 0; _i < array_length(dialogo); _i++)
 			{	
 				_sprite_portrait = asset_get_index(_sprite);
 				array_insert(global.topics[$ _topico],array_length(global.topics[$ _topico]),SPEAKER(_speaker,_sprite_portrait,PORTRAIT_SIDE.LEFT));
-				_iter = 1;
 				_portrait += 1;
 			}
 		}
@@ -419,16 +419,15 @@ for (var _i = 0; _i < array_length(dialogo); _i++)
 				
 				if(_portrait == 0) 
 				{
-					array_insert(global.topics[$ "Chose "+_option1],array_length(global.topics[$ _topico]),SPEAKER(_speaker,_sprite_portrait,PORTRAIT_SIDE.RIGHT)); 
+					array_insert(global.topics[$ "Chose "+_option1],array_length(global.topics[$ "Chose "+_option1]),SPEAKER(_speaker,_sprite_portrait,PORTRAIT_SIDE.RIGHT)); 
 					_portrait += 1;
 				}
 				else // _portrait >= 1
 				{
-					array_insert(global.topics[$ "Chose "+_option1],array_length(global.topics[$ _topico]),SPEAKER(_speaker,_sprite_portrait,PORTRAIT_SIDE.LEFT));
+					array_insert(global.topics[$ "Chose "+_option1],array_length(global.topics[$ "Chose "+_option1]),SPEAKER(_speaker,_sprite_portrait,PORTRAIT_SIDE.LEFT));
 					_portrait = 0;
 				}
 				_speakercomp = _speaker;
-				_iter += 1;
 			}
 			
 		}
@@ -461,7 +460,6 @@ for (var _i = 0; _i < array_length(dialogo); _i++)
 			{
 				if(_topico != _topico_comp and _topico != _option1) 
 				{
-					_iter = 0;
 					_speaker = dialogo[_i][$ "SPEAKER"];
 					_sprite = dialogo[_i][$ "SPRITE"];
 					if(_speaker != "")
@@ -479,7 +477,6 @@ for (var _i = 0; _i < array_length(dialogo); _i++)
 							_portrait = 0;
 						}
 						_speakercomp = _speaker;
-						_iter += 1;
 					}
 					
 				}
@@ -503,7 +500,6 @@ for (var _i = 0; _i < array_length(dialogo); _i++)
 				_portrait = 0;
 			}
 			_speakercomp = _speaker;
-			_iter += 1;
 		}
 		_option = dialogo[_i][$ "TIENE_OPCIONES"];
 		if(_option != "0")
@@ -521,7 +517,7 @@ for (var _i = 0; _i < array_length(dialogo); _i++)
 						global.topics[$ "Chose "+_option2] = [];
 						_option_create = true;
 						if(_i < array_length(dialogo)-1) _topico_comp = dialogo[_i+1][$ "conversation_response"];
-						_iter = 0;
+						_iter = 0; // creo que hay que borrarlo
 					}
 				break;	
 				case "3":
@@ -553,7 +549,6 @@ for (var _i = 0; _i < array_length(dialogo); _i++)
 						global.topics[$ "Chose "+_option4] = [];
 						_option_create = true;
 						if(_i < array_length(dialogo)-1) _topico_comp = dialogo[_i+1][$ "conversation_response"];
-						_iter = 0;
 					}
 				break;	
 			}
@@ -568,16 +563,11 @@ for (var _i = 0; _i < array_length(dialogo); _i++)
 				_condition3 = dialogo[_i][$ "CONDICION3"];
 				_condition4 = dialogo[_i][$ "CONDICION4"];
 				array_insert(global.topics[$ _topico],array_length(global.topics[$ _topico]),TEXT(_textbox));
-				_iter += 1;
 			}
 			else continue;
 		}
 	}
 }
-
-
-
-
 
 
 //global.topics[$ "Breakfast"] = [

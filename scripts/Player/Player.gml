@@ -211,7 +211,6 @@ function reset_variables() {
 	
 	global.interact = false;
 	global.end_interaction = false;
-	global.activate = noone;
 	left = 0;
 	right = 0;
 	up = 0;

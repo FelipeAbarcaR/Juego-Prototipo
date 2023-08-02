@@ -6,9 +6,13 @@ global.gamemode=global.room_data[global.currentroom][index.mode];
 var roomName = room; // Get the current room's name
 var arrayLength = array_length(global.room_data); // Get the length of the room_data array
 
-for (var i = 0; i < arrayLength-1; i++) {
+for (var i = 0; i <= arrayLength - 1; i++) {
+	
+	var _check = 0;
+	
     if (global.room_data[i, index.name] == roomName) {
         global.currentroom = i;
+		_check = 1;
         break; // Exit the loop once a match is found
     }
 }

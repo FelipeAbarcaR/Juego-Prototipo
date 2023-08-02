@@ -1,20 +1,12 @@
 if(global.textover)
 {
-	var _npc = "RANA";
+	//if(global.activate != noone) _npc = "RANA";
+	var _obj = object_get_name(global.activate);
+
+	array_delete(global.dialogue_order[$ _obj],0,1);
 	
-	switch(global.activate)
-	{
-		case obj_questie:
-			_npc = "VIEJO_SABIO";
-			
-	}
-	
-	array_delete(global.dialogue_order[$ _npc],conversation_number,1);
-	conversation_number += 1;
-	with(obj_questie) // no funciona
-	{
-		EntityActivateArgs = [global.dialogue_order[$ _npc][0]];
-	}
+	global.activate.EntityActivateArgs = [global.dialogue_order[$ _obj][0]];
+
 	global.textover = false;
 }
 // flash ira disminuyendo esta llegar a 0

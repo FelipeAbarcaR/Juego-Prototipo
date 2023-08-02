@@ -80,7 +80,7 @@ function EntityHitSolid(){
 }
 	
 function AbrirPuerta(_roomindex){
-	
+
 if(instance_exists(o_player))
 {
 	if(o_player.state != states.DEAD)
@@ -95,8 +95,6 @@ if(instance_exists(o_player))
 		global.targetdirection = o_player.dir;
 		with(o_player) state = states.IDLE;
 		TransitionStart(_roomname,sqSlideOutDiagonal,sqSlideInDiagonal);
-		//room_goto(global.targetRoom)
-		//RoomTransition(TRANS_TYPE.SLIDE,global.targetRoom)
 		//instance_destroy();
 		
 	}

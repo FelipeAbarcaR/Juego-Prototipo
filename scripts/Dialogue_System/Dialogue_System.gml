@@ -101,7 +101,7 @@ function checkConditions(){
 	
 	var conditions = [condition1, condition2, condition3, condition4];
 	var arrays = [global.items, global.attributes, global.talks];
-	
+	real
 	var found = true;
 	var condition_exist=false;
 	var condition_count=0;
@@ -207,7 +207,7 @@ function RoomAction(_roomname) : DialogueAction() constructor{
 		
 }                                 
 
-function FightAction(_background,_enemy) : DialogueAction() constructor{
+}function FightAction(_background,_enemy) : DialogueAction() constructor{
 	enemy = _enemy;
 	background = _background;
 	act = function(textbox){

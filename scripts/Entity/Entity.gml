@@ -80,7 +80,7 @@ function EntityHitSolid(){
 }
 	
 function AbrirPuerta(_roomindex){
-	
+	hola=10;
 if(instance_exists(o_player))
 {
 	if(o_player.state != states.DEAD)

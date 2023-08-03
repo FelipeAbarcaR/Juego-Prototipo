@@ -66,6 +66,7 @@ enum Sala{
 	fight,
 	Obstacles	
 }
+
 enum index{
 	name,
 	music,

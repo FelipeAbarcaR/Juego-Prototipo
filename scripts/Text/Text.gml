@@ -179,22 +179,6 @@ function CreateTextbox (_text_id){
 	GameText(_text_id);
 	} 
 	
-	with(obj_player)
-	{
-		if(state != PlayerStateLocked)
-		{
-			laststate = state;
-			state = PlayerStateLocked;
-		}
-		else
-		{
-			if(global.textover) 
-			{
-				state = laststate;
-			}
-		}
-	}
-	
 }
 	/// @param text_id
 	/// @param link_id

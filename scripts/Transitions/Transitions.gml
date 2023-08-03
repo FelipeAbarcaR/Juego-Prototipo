@@ -29,6 +29,7 @@ function TransitionPlaceSequence(_type)
 function TransitionChangeRoom()
 {
 	room_goto(global.roomTarget);
+	//hola =10;
 }
 
 //Called as a moment at the end of an "In" transition sequence

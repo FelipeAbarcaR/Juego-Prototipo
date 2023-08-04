@@ -4,6 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
+
 bgm=bgm_Feelings;
 bpm=115;
 

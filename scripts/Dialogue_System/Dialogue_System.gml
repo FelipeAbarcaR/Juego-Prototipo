@@ -103,7 +103,6 @@ function checkConditions(){
 	
 	var conditions = [condition1, condition2, condition3, condition4];
 	var arrays = [global.items, global.attributes, global.talks];
-	real
 	var found = true;
 	var condition_exist=false;
 	var condition_count=0;
@@ -208,13 +207,15 @@ function RoomAction(_roomname) : DialogueAction() constructor{
 		
 }                                 
 
-}function FightAction(_background,_enemy) : DialogueAction() constructor{
-	enemy = _enemy;
-	background = _background;
+function FightAction(_topicWIN,_topicLOSE) : DialogueAction() constructor{
+	topic_if_win = _topicWIN;
+	topic_if_lose = _topicLOSE;
+	
 	act = function(textbox){
-
-	textbox.fight_bg=background;
-	textbox.fight_enemy=enemy;
+	textbox.fight_bg=global.activate.fight_bg;
+	textbox.fight_enemy=global.activate.fighter;
+	textbox.win_topic=topic_if_win;
+	textbox.lose_topic=topic_if_lose;
 	textbox.start_fight=true;
 	}
 }
@@ -271,6 +272,7 @@ function ItemAction(_itemid,_quantity) : DialogueAction() constructor{
 	}
 	
 }
+
 //----------------TOPICS---------------------//
 
 //Importando El JSON del dialogo
@@ -624,7 +626,7 @@ global.topics[$ "conejeando"] = [
 	SPEAKER("Conejita",spr_pt_coneja, PORTRAIT_SIDE.LEFT),
 	TEXT("Esto es una prueba de sfx de diálogo, necesito algunas palabras laaaaaargas y demas que textos cortos y piolas"),
 	TEXT("Y demás que necesito otro textbox para ir probando si funciona bien"),
-	TEXT("Con eso debería ser suficiente... ¿no?"),
+	TEXT("Con eso debería ser suficiente... ¿no?")
 ];
 
 global.topics[$ "conejeandoitem"] = [
@@ -635,5 +637,17 @@ global.topics[$ "conejeandoitem"] = [
 global.topics[$ "conejeandopelea"] = [
 	SPEAKER("Conejita",spr_pt_coneja, PORTRAIT_SIDE.LEFT),
 	TEXT("Vamo a pelear ! (con la rana)"),
-	FIGHT(spr_bg_forest2,obj_fight_rana)
+	FIGHT("pelearanagana","pelearanapierde")
+];
+global.topics[$ "pelearanagana"] = [
+	SPEAKER("Conejita",spr_pt_coneja, PORTRAIT_SIDE.LEFT),
+	TEXT("Wena hmno ganaste! (con la rana)"),
+	TEXT("Te le voy a dar un Item"),
+	INVENTORY(ITEM.DASH,1),
+	TEXT("Recuerda que tienes que arreglar pa que no se duplique la wea"),
+	TEXT("Y poner que por ahora se comienze con el dash wn")
+];
+global.topics[$ "pelearanapierde"] = [
+	SPEAKER("Conejita",spr_pt_coneja, PORTRAIT_SIDE.LEFT),
+	TEXT("Mala hmno perdiste [spr_emoticon_coneja_sad] (con la rana)"),
 ];

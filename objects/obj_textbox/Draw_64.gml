@@ -6,7 +6,7 @@ var portrait_scale =2;
 var finished = (text_progress == text_length); 
 
 //Portrait
-if (!fighting)
+if (!already_fighting)
 {
 	// Draw the box
 	draw_sprite_stretched(sprite_index, 2, x, y, width, height);

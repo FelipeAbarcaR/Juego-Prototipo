@@ -60,6 +60,9 @@ inv_list = ds_list_create();
 pause = false;
 pause_surf = -1;
 
+//end fight parameters
+delay_to_return_from_fight=1.5
+
 
 
 

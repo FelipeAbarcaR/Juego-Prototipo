@@ -35,24 +35,42 @@ if(beat_counting)
 	}
 }
 
+//start fight! fighters can move, fight is in progress
 if(global.start_fight)
 {
     global.start_fight=false;
+	fight_status=fighting.inprogress;
 	fighter1.state="idle";
 	fighter2.stance=EnemyStance.wait;
 }
 
-//end fight
+//MID-FIGHT STUFF
+
 if(fighters_created)
 {
-	if(obj_Conde.hp<=0)	obj_Conda.stance=EnemyStance.idle;
-	if(obj_Conda.hp<=0)
+//fight end
+
+	if(fight_status==fighting.inprogress)
 	{
-		obj_Conda.stance=EnemyStance.dead;
-		with(obj_Conde)
-		state="stop";
+		if(obj_Conde.hp<=0)
+		{
+		   obj_Conda.stance=EnemyStance.locked;
+		   fight_status=fighting.ending;
+			victory=false;
+			alarm[3]=room_speed;
+		}
+		if(obj_Conda.hp<=0)
+		{
+			obj_Conda.stance=EnemyStance.dead;
+			fight_status=fighting.ending;
+			victory=true;
+			alarm[3]=room_speed;
+			with(obj_Conde)	state="stop";
+		
+		}
 	}
 
+//Decreasing hp animation, it will start decreasing after 1 sec.
 	if (fighter1.draw_hp2==true)
 	{
 	    alarm[0]=room_speed;
@@ -64,4 +82,15 @@ if(fighters_created)
 	    alarm[1]=room_speed;
 		fighter2.draw_hp2=false;
 	}
+}
+
+//ENDING FIGHT
+
+if(destroy_fighters)
+{
+    destroy_fighters=false;
+	instance_destroy(fighter1);
+	instance_destroy(fighter2);
+	fighters_created=false;	
+	
 }

@@ -1,7 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
+fighter=obj_fight_rana;
+fight_bg=spr_bg_forest2;
 
 // Inherit the parent event
 event_inherited();

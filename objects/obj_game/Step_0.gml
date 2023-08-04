@@ -64,10 +64,21 @@ if changeroom { //If pressed M to change room
 		
 	}
 
-if muteall{
+
+//mute all
+if muteall
+{
 	if (mute) mute=0 else mute=1; 
 	var info = audio_get_listener_info(0);
-	audio_set_master_gain(info[? "index"], mute);
+	audio_set_master_gain(info[? "index"], 1-mute);
 
 	ds_map_destroy(info);
+}
+
+//FIGHT ENDED
+if(global.fight_ended)
+{
+	global.fight_ended=-1;
+	//set alarm 
+    alarm[0]=room_speed*delay_to_return_from_fight;
 }

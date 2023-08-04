@@ -1,12 +1,9 @@
-/// @description dibujar hit y atk
+/// @description dibujar background e info
 
 if(draw_background)
 {
     draw_sprite_stretched(background,0,x,y,bg_width,bg_height)
 }
-
-
-
 
 
 

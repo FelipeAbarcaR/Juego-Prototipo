@@ -52,7 +52,10 @@ new_room=-1;
 fight_enemy=-1;
 fight_bg=-1;
 start_fight=false;
-fighting = false;
+already_fighting = false;
+fight_concluded=false;
+win_topic=-1;
+lose_topic=-1;
 
 //Inventory
 inv_type=0;

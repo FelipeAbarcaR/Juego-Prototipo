@@ -16,9 +16,9 @@
 #macro INVENTORY new ItemAction
 
 function startDialogue(topic) {
-	if (instance_exists(obj_textbox)) return;
+	if (instance_exists(obj_textbox_con)) return;
 	
-	var inst = instance_create_depth(x, y, -999, obj_textbox);
+	var inst = instance_create_depth(x, y, -999, obj_textbox_con);
 	inst.dialogue_sounds= activate.dialogue_sounds;
 	inst.setTopic(topic);
 
@@ -114,7 +114,9 @@ function checkConditions(){
 			condition_count+=1;
 			var match = false;
 	        for (var j = 0; j < array_length(arrays); j++) {
-	            var arrayToSearch = arrays(j);
+				
+	            var arrayToSearch = arrays[j];
+				
 	            if (array_contains(arrayToSearch, conditions[i])) {
 	                match = true;
 	                break;
@@ -152,13 +154,14 @@ function DialogueAction() constructor {
 	act = function() { };
 }
 
-function TextAction(_text/*,_cond1=0,_cond2=0,_cond3=0,_cond4=0*/) : DialogueAction() constructor {
+function TextAction(_text,_cond1=0,_cond2=0,_cond3=0,_cond4=0) : DialogueAction() constructor {
 	// Define new text to type out
-			// el : significa que hereda de la funcion DialogueAction
+	// el : significa que hereda de la funcion DialogueAction
+	
     text = _text;
     
-   // var new_conditions = [_cond1, _cond2, _cond3, _cond4];
-   // var textbox_conditions = [condition1, condition2, condition3, condition4];
+    //var new_conditions = [_cond1, _cond2, _cond3, _cond4];
+    //var textbox_conditions = [condition1, condition2, condition3, condition4];
 
     //for (var i = 0; i < array_length(new_conditions); i++) {
     //    if (new_conditions[i] != 0) {
@@ -304,10 +307,10 @@ var _npc = "";
 var _topico = "";
 var _topico_comp = "";
 var _textbox = "";
-var _condition1 = "";
-var _condition2 = "";
-var _condition3 = "";
-var _condition4 = "";
+var _condition1 = 0;
+var _condition2 = 0;
+var _condition3 = 0;
+var _condition4 = 0;
 
 var _speaker = "";
 var _speakercomp = "";
@@ -331,7 +334,7 @@ for (var _i = 0; _i < array_length(dialogo); _i++)
 	if(!struct_exists(global.topics,_topico) and _topico != "")
 	{
 		global.topics[$ _topico]= [];
-		global.dialogue_loop[$ _topico] = dialogo[_i][$ "LOOP"];
+		global.dialogue_loop[$ _topico] = real(dialogo[_i][$ "LOOP"]);
 		_textbox = dialogo[_i][$ "TEXTBOX"];
 		_speaker = dialogo[_i][$ "SPEAKER"];
 		_sprite = dialogo[_i][$ "SPRITE"];
@@ -439,7 +442,7 @@ for (var _i = 0; _i < array_length(dialogo); _i++)
 				_condition2 = dialogo[_i][$ "CONDICION2"];
 				_condition3 = dialogo[_i][$ "CONDICION3"];
 				_condition4 = dialogo[_i][$ "CONDICION4"];
-				array_insert(global.topics[$ _topico],array_length(global.topics[$ _topico]),TEXT(_textbox));
+				array_insert(global.topics[$ _topico],array_length(global.topics[$ _topico]),TEXT(_textbox,_condition1,_condition2,_condition3,_condition4));
 			}
 			else continue;
 		}
@@ -562,7 +565,7 @@ for (var _i = 0; _i < array_length(dialogo); _i++)
 				_condition2 = dialogo[_i][$ "CONDICION2"];
 				_condition3 = dialogo[_i][$ "CONDICION3"];
 				_condition4 = dialogo[_i][$ "CONDICION4"];
-				array_insert(global.topics[$ _topico],array_length(global.topics[$ _topico]),TEXT(_textbox));
+				array_insert(global.topics[$ _topico],array_length(global.topics[$ _topico]),TEXT(_textbox,_condition1,_condition2,_condition3,_condition4));
 			}
 			else continue;
 		}

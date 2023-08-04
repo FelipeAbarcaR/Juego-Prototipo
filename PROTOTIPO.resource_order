@@ -159,6 +159,7 @@
     {"name":"spr_attack_slash_HB","order":2,"path":"sprites/spr_attack_slash_HB/spr_attack_slash_HB.yy",},
     {"name":"__scribble_get_buffer_a","order":2,"path":"scripts/__scribble_get_buffer_a/__scribble_get_buffer_a.yy",},
     {"name":"__scribble_get_effects_map","order":5,"path":"scripts/__scribble_get_effects_map/__scribble_get_effects_map.yy",},
+    {"name":"obj_textbox","order":1,"path":"objects/obj_textbox/obj_textbox.yy",},
     {"name":"spr_solid","order":4,"path":"sprites/spr_solid/spr_solid.yy",},
     {"name":"scribble_super_glyph_copy_all","order":3,"path":"scripts/scribble_super_glyph_copy_all/scribble_super_glyph_copy_all.yy",},
     {"name":"string_height_scribble_ext","order":3,"path":"scripts/string_height_scribble_ext/string_height_scribble_ext.yy",},

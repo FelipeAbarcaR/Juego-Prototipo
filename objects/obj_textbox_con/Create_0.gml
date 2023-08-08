@@ -8,19 +8,18 @@ max_input_delay = 5; // how many frames to ignore input
 input_delay = max_input_delay;
 
 // Position
-margin = 8; // how much space the textbox gets from the edges of the screen
-padding = 2; // how much space things inside the textbox get
-width = 300 - margin * 2;
-//width = display_get_gui_width()*(5/8) - margin * 2;
-height = 80;
-//height = display_get_height()/5;
+margin = 16; // how much space the textbox gets from the edges of the screen
+padding = 6; // how much space things inside the textbox get
+width = display_get_gui_width()*(5/16) - margin * 2;
+height = display_get_height()/5;
 
-x = (global.activate.x + 2*width)/2;
-y = global.activate.y - 4*(height - margin);
+
+x = (display_get_gui_width()- width)/2  +  200;
+y = display_get_gui_height() - height - margin - 520;
 
 
 // Text
-text_font = fnt_RODIN;
+text_font = fnt_dialogo_conciencia;
 text_color = c_white;
 text_speed = 0.6;
 text_x = padding;

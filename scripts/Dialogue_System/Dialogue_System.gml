@@ -280,8 +280,6 @@ function ItemAction(_itemid,_quantity) : DialogueAction() constructor{
 
 //Importando El JSON del dialogo
 dialogo = undefined;
-global.dialogue_order = {};
-global.dialogue_loop = {};
 
 if(file_exists(working_directory + "NPC_dialogues.json"))
 {
@@ -297,9 +295,9 @@ if(file_exists(working_directory + "NPC_dialogues.json"))
 	dialogo = json_parse(json);
 }
 
-
+global.dialogue_order = {};
+global.dialogue_loop = {};
 global.topics = {};
-
 
 hola = 10;
 
@@ -341,10 +339,10 @@ for (var _i = 0; _i < array_length(dialogo); _i++)
 		_speaker = dialogo[_i][$ "SPEAKER"];
 		_sprite = dialogo[_i][$ "SPRITE"];
 		_option = dialogo[_i][$ "TIENE_OPCIONES"];
-		_npc = dialogo[_i][$ "NPC_NAME"];
+		_npc = dialogo[_i][$ "OBJ_NAME"];
 		_speakercomp = _speaker;
 		
-		if(_npc != "") 
+		if(_npc != "0") 
 		{
 			if(!struct_exists(global.dialogue_order,_npc)) 
 			{
@@ -358,9 +356,9 @@ for (var _i = 0; _i < array_length(dialogo); _i++)
 			
 		}
 		
-		if(_speaker != "")
+		if(_speaker != "0")
 		{
-			if(_sprite != "")
+			if(_sprite != "0")
 			{	
 				_sprite_portrait = asset_get_index(_sprite);
 				array_insert(global.topics[$ _topico],array_length(global.topics[$ _topico]),SPEAKER(_speaker,_sprite_portrait,PORTRAIT_SIDE.LEFT));
@@ -418,7 +416,7 @@ for (var _i = 0; _i < array_length(dialogo); _i++)
 				break;	
 			}
 			if(_i < array_length(dialogo)-1) _speaker = dialogo[_i+1][$ "SPEAKER"];
-			if(_speaker != "")
+			if(_speaker != "0")
 			{
 				_sprite_portrait = asset_get_index(_sprite);
 				
@@ -438,7 +436,7 @@ for (var _i = 0; _i < array_length(dialogo); _i++)
 		}
 		else // _option == 0
 		{
-			if(_textbox != "")
+			if(_textbox != "0")
 			{
 				_condition1 = dialogo[_i][$ "CONDICION1"];
 				_condition2 = dialogo[_i][$ "CONDICION2"];
@@ -467,7 +465,7 @@ for (var _i = 0; _i < array_length(dialogo); _i++)
 				{
 					_speaker = dialogo[_i][$ "SPEAKER"];
 					_sprite = dialogo[_i][$ "SPRITE"];
-					if(_speaker != "")
+					if(_speaker != "0")
 					{
 						_sprite_portrait = asset_get_index(_sprite);
 							
@@ -489,7 +487,7 @@ for (var _i = 0; _i < array_length(dialogo); _i++)
 			_topico_comp = _topico;
 		}
 		_speaker = dialogo[_i][$ "SPEAKER"];
-		if(_speaker != _speakercomp and _speaker != "")
+		if(_speaker != _speakercomp and _speaker != "0")
 		{
 			_sprite = dialogo[_i][$ "SPRITE"];
 			_sprite_portrait = asset_get_index(_sprite);

@@ -176,6 +176,7 @@
     {"name":"__scribble_gen_5_finalize_bidi","order":5,"path":"scripts/__scribble_gen_5_finalize_bidi/__scribble_gen_5_finalize_bidi.yy",},
     {"name":"__scribble_config_defaults","order":2,"path":"scripts/__scribble_config_defaults/__scribble_config_defaults.yy",},
     {"name":"__scribble_get_glyph_data","order":10,"path":"scripts/__scribble_get_glyph_data/__scribble_get_glyph_data.yy",},
+    {"name":"fnt_dialogo_conciencia","order":4,"path":"fonts/fnt_dialogo_conciencia/fnt_dialogo_conciencia.yy",},
     {"name":"__scribble_system","order":10,"path":"scripts/__scribble_system/__scribble_system.yy",},
     {"name":"spr_testeo_interaction_NPC","order":3,"path":"sprites/spr_testeo_interaction_NPC/spr_testeo_interaction_NPC.yy",},
     {"name":"spr_Torch","order":2,"path":"sprites/spr_Torch/spr_Torch.yy",},

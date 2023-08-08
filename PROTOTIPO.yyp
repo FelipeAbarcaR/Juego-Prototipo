@@ -397,6 +397,7 @@
     {"id":{"name":"spr_bush","path":"sprites/spr_bush/spr_bush.yy",},},
     {"id":{"name":"sfx_prepare3","path":"sounds/sfx_prepare3/sfx_prepare3.yy",},},
     {"id":{"name":"__scribble_get_glyph_data","path":"scripts/__scribble_get_glyph_data/__scribble_get_glyph_data.yy",},},
+    {"id":{"name":"fnt_dialogo_conciencia","path":"fonts/fnt_dialogo_conciencia/fnt_dialogo_conciencia.yy",},},
     {"id":{"name":"obj_effect","path":"objects/obj_effect/obj_effect.yy",},},
     {"id":{"name":"spr_Shuriken","path":"sprites/spr_Shuriken/spr_Shuriken.yy",},},
     {"id":{"name":"__scribble_system","path":"scripts/__scribble_system/__scribble_system.yy",},},

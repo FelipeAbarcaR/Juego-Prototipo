@@ -39,7 +39,6 @@ if (_hKey) instance_create_layer(0,0, "Instances", obj_CountHand);
 
 //beat progress from 0 to 1
 	global.beatprogress=min(SumDelta/global.BeatTimeMS,1);
-
 //beat meter
 	BeatBarProgress = sin(((SumFullDelta/global.BeatTimeMS)*pi));
 	//Beat's chance to hit
@@ -74,9 +73,15 @@ if (_hKey) instance_create_layer(0,0, "Instances", obj_CountHand);
 			audio_sound_gain(snd, 0, 0);
 			audio_sound_gain(snd, 1, 3000);
 		}
-		
 	}
-	
+//Change BGM
+
+if(start_BGM_transition)
+{
+    var _listo=bgm_fade_transition();
+	if (_listo) start_BGM_transition=false;
+}
+
 	//beat meter vanishing
 	switch(_player_mainchar)
 	{

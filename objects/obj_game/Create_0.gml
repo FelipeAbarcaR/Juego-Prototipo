@@ -61,7 +61,7 @@ pause = false;
 pause_surf = -1;
 
 //end fight parameters
-delay_to_return_from_fight=1.5
+delay_to_return_from_fight=0.5;
 
 
 

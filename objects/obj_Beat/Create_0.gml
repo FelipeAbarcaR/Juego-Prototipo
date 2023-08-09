@@ -6,6 +6,10 @@ current_music = global.room_data[global.currentroom][index.music];
 current_bpm = global.room_data[global.currentroom][index.bpm];
 last_music=-1;
 sound_fade_in=false;
+start_BGM_transition= false;
+new_music=-1;
+snd=-1;
+start_bgm_fade_in=-1;
 
 // set bpm
 global.bpm= current_bpm;
@@ -18,7 +22,6 @@ global.Move=false;
 global.beatprogress=0;
 global.BeatNumber=0;
 
-global.fight_music_start=false;
 // range to beatchance
 beathitrange=0.60;
 
@@ -44,5 +47,16 @@ barY=0;
 
 depth=100;
 
+
 //perfect,good,bad
 beat_hit_data = ds_list_create(); 
+
+
+BGM_data=[
+	[bgm_boss_01,127],
+	[bgm_Feelings,115],
+	[bgm_ForestTimeInterior,126],
+	[bgm_ForestTime,126],
+	[bgm_NightCall,115],
+	[bgm_OneLove,107]
+];

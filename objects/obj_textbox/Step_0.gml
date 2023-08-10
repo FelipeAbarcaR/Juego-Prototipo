@@ -105,10 +105,9 @@ if (finished){
 		NewEncounter(fight_enemy,fight_bg);
 		already_fighting=true;
 	}
-
+//señal de que la pelea terminó, (la cambia el obj_game desde alarm 0)
 	if (fight_concluded)
 	{
-		ChangeBGM(obj_beat.last_music);
 		fight_concluded=false;
 	    if(global.fight_victory)
 		{

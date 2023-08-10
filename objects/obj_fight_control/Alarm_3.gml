@@ -7,3 +7,4 @@ if(victory)
 	
 }else global.fight_victory=false;
 FightTransitionReturn(sqFightFadeOut,sqFightFadeIn);
+ChangeBGM(obj_beat.last_music);

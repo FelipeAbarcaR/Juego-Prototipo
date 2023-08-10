@@ -160,11 +160,11 @@ function TextAction(_text,_cond1=0,_cond2=0,_cond3=0,_cond4=0) : DialogueAction(
     text = _text;
     
     var new_conditions = [_cond1, _cond2, _cond3, _cond4];
-	condition1="";
-	condition2="";
-	condition3="";
-	condition4="";
-    var textbox_conditions = [condition1, condition2, condition3, condition4];
+	condicion1="";
+	condicion2="";
+	condicion3="";
+	condicion4="";
+    var textbox_conditions = [condicion1, condicion2, condicion3, condicion4];
 
     for (var i = 0; i < array_length(new_conditions); i++) {
         if (new_conditions[i] != 0) {
@@ -176,13 +176,17 @@ function TextAction(_text,_cond1=0,_cond2=0,_cond3=0,_cond4=0) : DialogueAction(
 
     // update the original condition variables:
 	
-    condition1 = textbox_conditions[0]; 
-    condition2 = textbox_conditions[1];
-    condition3 = textbox_conditions[2];
-    condition4 = textbox_conditions[3];
+    condicion1 = textbox_conditions[0]; 
+    condicion2 = textbox_conditions[1];
+    condicion3 = textbox_conditions[2];
+    condicion4 = textbox_conditions[3];
 	
 	act = function(textbox) {
 		textbox.setText(text);
+		textbox.condition1=condicion1;
+		textbox.condition2=condicion2;
+		textbox.condition3=condicion3;
+		textbox.condition4=condicion4;
 	}
 }
 
@@ -628,9 +632,8 @@ global.topics[$ "signwarning2"] = [
 ];
 global.topics[$ "conejeando"] = [
 	SPEAKER("Conejita",spr_pt_coneja, PORTRAIT_SIDE.LEFT),
-	TEXT("Esto es una prueba de sfx de diálogo, necesito algunas palabras laaaaaargas y demas que textos cortos y piolas"),
-	TEXT("Y demás que necesito otro textbox para ir probando si funciona bien"),
-	TEXT("Con eso debería ser suficiente... ¿no?")
+	CHOICE("Che queres pelear o sólo el item?",OPTION("Pelear","conejeandopelea"),OPTION("dash","conejeandoitem"))
+
 ];
 
 global.topics[$ "conejeandoitem"] = [

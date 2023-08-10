@@ -16,9 +16,9 @@
 #macro INVENTORY new ItemAction
 
 function startDialogue(topic) {
-	if (instance_exists(obj_textbox_con)) return;
+	if (instance_exists(obj_textbox)) return;
 	
-	var inst = instance_create_depth(x, y, -999, obj_textbox_con);
+	var inst = instance_create_depth(x, y, -999, obj_textbox);
 	inst.dialogue_sounds= activate.dialogue_sounds;
 	inst.setTopic(topic);
 
@@ -159,24 +159,27 @@ function TextAction(_text,_cond1=0,_cond2=0,_cond3=0,_cond4=0) : DialogueAction(
 	
     text = _text;
     
-    //var new_conditions = [_cond1, _cond2, _cond3, _cond4];
-    //var textbox_conditions = [condition1, condition2, condition3, condition4];
+    var new_conditions = [_cond1, _cond2, _cond3, _cond4];
+	condition1="";
+	condition2="";
+	condition3="";
+	condition4="";
+    var textbox_conditions = [condition1, condition2, condition3, condition4];
 
-    //for (var i = 0; i < array_length(new_conditions); i++) {
-    //    if (new_conditions[i] != 0) {
-    //        textbox_conditions[i] = new_conditions[i];
-    //    } else {
-    //        textbox_conditions[i] = "";
-    //    }
-    //}
+    for (var i = 0; i < array_length(new_conditions); i++) {
+        if (new_conditions[i] != 0) {
+            textbox_conditions[i] = new_conditions[i];
+        } else {
+            textbox_conditions[i] = "";
+        }
+    }
 
-    //// Now, you can use textbox_conditions[i] as needed.
-    //// For example, if you want to update the original condition variables, you can do:
+    // update the original condition variables:
 	
-    //condition1 = textbox_conditions[0]; 
-    //condition2 = textbox_conditions[1];
-    //condition3 = textbox_conditions[2];
-    //condition4 = textbox_conditions[3];
+    condition1 = textbox_conditions[0]; 
+    condition2 = textbox_conditions[1];
+    condition3 = textbox_conditions[2];
+    condition4 = textbox_conditions[3];
 	
 	act = function(textbox) {
 		textbox.setText(text);

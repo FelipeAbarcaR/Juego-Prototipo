@@ -108,6 +108,7 @@ if (finished){
 
 	if (fight_concluded)
 	{
+		ChangeBGM(obj_beat.last_music);
 		fight_concluded=false;
 	    if(global.fight_victory)
 		{

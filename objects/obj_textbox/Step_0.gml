@@ -1,5 +1,17 @@
 // Get input
 
+if (!keyboard_check(vk_lcontrol) && keyboard_check_pressed(vk_add)) {
+    hola++;
+}
+if (!keyboard_check(vk_lcontrol) && keyboard_check_pressed(vk_subtract)) {
+    hola--;
+}
+if (keyboard_check(vk_lcontrol) && keyboard_check_pressed(vk_add)) {
+    hola2++;
+}
+if (keyboard_check(vk_lcontrol) && keyboard_check_pressed(vk_subtract)) {
+    hola2--;
+}
 var confirm=false;
 
 if (!already_fighting) confirm = keyboard_check_pressed(confirm_key);

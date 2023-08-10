@@ -75,6 +75,5 @@ played_sfx=false; //actually used in scr_fightenemymove
 	//white outline
 	sh_texture=shader_get_uniform(sha_white_outline,"texture_Pixel");
 
-hola=0;
 //hp2 animation (obj_control_fight)
 draw_hp2=false;

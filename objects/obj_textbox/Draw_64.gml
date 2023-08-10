@@ -8,8 +8,8 @@ var finished = (text_progress == text_length);
 //Portrait
 if (!already_fighting)
 {
-	// Draw the box
-	draw_sprite_stretched(sprite_index, 2, x, y, width, height);
+	// Draw the box (THE BACKGROUND IS DRAWING ON DRAW EVENT)
+	//draw_sprite_stretched(sprite_index, 2, x, y, width, height);
 	
 	if(sprite_exists(portrait_sprite))
 	{

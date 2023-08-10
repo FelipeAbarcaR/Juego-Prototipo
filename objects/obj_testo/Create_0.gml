@@ -4,7 +4,7 @@
 /// Create Event
 
 
-blurry_shader = sha_blur_2_pass_gauss;
+blurry_shader = shader_blur;
 u_blur_steps = shader_get_uniform(blurry_shader,"blur_steps");
 u_sigma = shader_get_uniform(blurry_shader, "sigma");
 u_texel_size = shader_get_uniform(blurry_shader, "texel_size");
@@ -22,4 +22,10 @@ surface_textbox = -1; // Initialize the surface variable
 blur_steps=15;
 sigma=0.5;
 
-
+//blur effect marketplace
+vRatio = 1.0;
+timeCounter = 0;
+timeStep = 0.05;
+oscillatorValue = 0;
+oscillatorValueAbs = 0;
+holavalue=1;

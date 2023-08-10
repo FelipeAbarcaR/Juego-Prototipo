@@ -306,7 +306,6 @@ global.dialogue_order = {};
 global.dialogue_loop = {};
 global.topics = {};
 
-hola = 10;
 
 var _portrait = 0;
 
@@ -605,7 +604,7 @@ global.topics[$ "Batallando"] = [
 	TEXT("Aja! encontraste mi [rainbow]escondite secreto[/rainbow], debes saber que soy un [c_blue]agente secreto"),
 	TEXT("Espera... No se si lo sabias, bueno no importa."),
 	TEXT("Y ademas no te gustan los completos, peleemos"),
-	FIGHT(spr_bg_forest2,obj_fight_rana)
+	FIGHT("signhouse1","signhouse2")
 ];
 		
 global.topics[$ "signhouse1"] = [

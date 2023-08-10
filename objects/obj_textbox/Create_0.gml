@@ -38,10 +38,10 @@ speaker_color = #464633;
 //Option
 option_x = padding;
 option_y = padding *-6;
-option_spacing = 20;
+option_spacing = 40;
 option_selection_indent = 20;
 option_width = 100;
-option_height = 20;
+option_height = 35;
 option_text_x = 10;
 option_text_color = c_white;
 
@@ -141,3 +141,13 @@ setText = function(newText) {
 //Dialogue SFX
 current_tb_sound=-1;
 dialogue_sounds=-1;
+
+//shader effects
+blurry_shader = shader_blur;
+u_vRatio = shader_get_uniform(blurry_shader, "u_vRatio");
+u_threshold = shader_get_uniform(blurry_shader, "u_threshold");
+surface_textbox = -1;
+vRatio = 1.0;
+blurValue=1.0;
+hola=0;
+hola2=0;

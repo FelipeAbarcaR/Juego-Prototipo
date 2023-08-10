@@ -57,14 +57,8 @@ if changeroom { //If pressed M to change room
         global.currentroom = 0;
     }
     room_goto(global.room_data[global.currentroom][index.name]);
-	if (room_get_name(room)==roomViejoSabio)
-	{
-		hola=room_get_name(room);
-	}
-		
-	}
 
-
+}
 //mute all
 if muteall
 {

@@ -4,9 +4,12 @@
 	var _height=global.res.height*0.2;
 	var _tb_x=(global.res.width-_width)/2;
 	
+	var _x_pos=camera_get_view_x(oCameraManager.camera)+_tb_x;
+	var _y_pos=camera_get_view_y(oCameraManager.camera)+global.res.height*0.7;
+	
 if (!surface_exists(surface_textbox)) {
 	surface_textbox = surface_create(_width,_height);
-    surface_copy_part(surface_textbox,0,0,application_surface,_tb_x,global.res.height*0.7,_width,_height);
+	surface_copy_part(surface_textbox,0,0,application_surface,_tb_x,global.res.height*0.7,_width,_height);
 	show_debug_message("surface textbox created");
 }
 
@@ -44,17 +47,25 @@ if (!surface_exists(surface_textbox)) {
      surface_reset_target();
 	
 	
-	shader_set(blurry_shader);
-		shader_set_uniform_f(u_blur_steps,_blur_steps);
-		shader_set_uniform_f(u_texel_size,texel_w,texel_h);
-		shader_set_uniform_f(u_sigma,_sigma);
+	//shader_set(blurry_shader);
+	//	shader_set_uniform_f(u_blur_steps,_blur_steps);
+	//	shader_set_uniform_f(u_texel_size,texel_w,texel_h);
+	//	shader_set_uniform_f(u_sigma,_sigma);
 	
-	var _x_pos=camera_get_view_x(oCameraManager.camera)+_tb_x;
-	var _y_pos=camera_get_view_y(oCameraManager.camera)+global.res.height*0.7;
+	var u_vRatio = shader_get_uniform(blurry_shader, "u_vRatio");
+    var u_threshold = shader_get_uniform(blurry_shader, "u_threshold");
+            
+    var radius = 0.005;
+            
+    shader_set(blurry_shader);
+        shader_set_uniform_f(u_vRatio, vRatio);
+        shader_set_uniform_f(u_threshold, radius * holavalue);
+
+
 	
 	if(surface_exists(_circular_surface)){
 			
-	draw_surface(_circular_surface,_x_pos,_y_pos);	
+	draw_surface(_circular_surface,_x_pos,_y_pos);
 	shader_reset();
 		}
 	surface_free(_circular_surface);
@@ -66,6 +77,6 @@ if (!surface_exists(surface_textbox)) {
 if(global.DrawText)
 {
     draw_text(_x_pos,_y_pos-64,"Blur_steps: "+string(blur_steps));
-	draw_text(_x_pos,_y_pos-64+16,"Sigma: "+string(sigma));
+	draw_text(_x_pos,_y_pos-64+16,"Sigma: "+string(holavalue));
 	
 }

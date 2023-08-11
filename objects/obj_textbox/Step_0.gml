@@ -17,12 +17,7 @@ var confirm=false;
 if (!already_fighting) confirm = keyboard_check_pressed(confirm_key);
 
 // Type out the text
-increasing_value=min(1,increasing_value+delta_scaling);
-if(increasing_value==1)
-{
-    text_progress = min(text_progress + text_speed, text_length);
-}
-
+text_progress = min(text_progress + text_speed, text_length);
 
 // Ignore inputs when delay is active
 if (input_delay > 0) 
@@ -110,7 +105,7 @@ if (finished){
 	}
 	
 	
-	//Changeroom 
+	//Changeroom (se debe cambiar a sequence)
 	if (new_room != -1){
 		global.targetRoom=new_room;
 		RoomTransition(TRANS_TYPE.SLIDE,new_room);
@@ -122,7 +117,7 @@ if (finished){
 		NewEncounter(fight_enemy,fight_bg);
 		already_fighting=true;
 	}
-//señal de que la pelea terminó, (la activa el obj_game desde alarm 0)
+//señal de que la pelea terminó, (la cambia el obj_game desde alarm 0)
 	if (fight_concluded)
 	{
 		fight_concluded=false;

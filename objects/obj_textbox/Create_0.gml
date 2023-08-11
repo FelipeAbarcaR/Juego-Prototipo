@@ -10,7 +10,7 @@ input_delay = max_input_delay;
 // Position
 margin = 32; // how much space the textbox gets from the edges of the screen
 padding = 8; // how much space things inside the textbox get
-width = display_get_gui_width()*(5/8);
+width = display_get_gui_width()*(5/8) - margin * 2;
 height = display_get_height()/5;
 
 x = (display_get_gui_width()- width)/2;
@@ -110,7 +110,6 @@ setTopic = function(topic) {
 // Move to the next action, or close the textbox if out of actions
 next = function() {
 	current_action++;
-	increasing_value=0;
 	if (current_action >= array_length(actions)) 
 	{
 		with (o_player) 
@@ -152,8 +151,3 @@ vRatio = 1.0;
 blurValue=1.0;
 hola=0;
 hola2=0;
-
-//upscaling textbox draw
-increasing_value=0.0;
-starting_y=y+height/2;
-delta_scaling=0.1;

@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "TextBox",
+  "name": "Textbox",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {

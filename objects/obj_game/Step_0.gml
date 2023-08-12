@@ -49,15 +49,18 @@ if keyboard_check_released(vk_lshift){
 if changeroom { //If pressed M to change room
 
 	audio_stop_all();
-	global.previousroom = global.currentroom;
-    global.currentroom += 1;
-    if (global.currentroom > global.room_count - 1)
+	//global.previousroom = global.currentroom;
+    //global.currentroom += 1;
+	var _target_room = global.currentroom+1;
+    if (_target_room > global.room_count - 1)
     {
 
-        global.currentroom = 0;
+        _target_room = 0;
     }
-    room_goto(global.room_data[global.currentroom][index.name]);
-
+    var _room = global.room_data[_target_room][index.name];
+	var _bgm = global.room_data[_target_room][index.music];
+	TransitionStart(_room,sqFadeOut,sqFadeIn);
+	ChangeBGM(_bgm);
 }
 //mute all
 if muteall

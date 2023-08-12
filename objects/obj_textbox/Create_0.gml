@@ -26,15 +26,22 @@ text_y = padding*3;
 text_width = width - padding * 2;
 
 //Portrait
+
+portrait_sprite = -1;
+portrait_width = height-padding*2;
+portrait_height = height-padding*2;
 portrait_x = padding;
 portrait_y = padding;
 
 //Speaker
-speaker_x = padding;
-speaker_y = 0;
+
 speaker_font = fnt_text;
 speaker_color = #464633;
-
+speaker_name = "";
+speaker_width = sprite_get_width(spr_name);
+speaker_height = sprite_get_height(spr_name);
+speaker_x = padding+portrait_width/2;
+speaker_y = height-padding-speaker_height;
 //Option
 option_x = padding;
 option_y = padding *-6;
@@ -71,19 +78,13 @@ text = "";
 text_progress = 0;
 text_length = 0;
 
-portrait_sprite = -1;
-portrait_width = sprite_get_width(spr_portrait);
-portrait_height = sprite_get_height(spr_portrait);
+
 
 enum PORTRAIT_SIDE
 {
 	LEFT,
 	RIGHT,
 }
-
-speaker_name = "";
-speaker_width = sprite_get_width(spr_name);
-speaker_height = sprite_get_height(spr_name);
 	
 
 options = [];
@@ -103,10 +104,10 @@ condition4="";
 setTopic = function(topic) {
 	actions = global.topics[$ topic];
 	current_action = -1;
-		
+	
 	next();
 }
-
+minimize_to_destroy=false;
 // Move to the next action, or close the textbox if out of actions
 next = function() {
 	current_action++;
@@ -124,7 +125,7 @@ next = function() {
 		    PlayerUpdateStatus();
 		}
 	
-		instance_destroy();
+		minimize_to_destroy=true;
 	}
 	else {
 		actions[current_action].act(id);

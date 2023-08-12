@@ -77,7 +77,9 @@ if (_hKey) instance_create_layer(0,0, "Instances", obj_CountHand);
 			}
 		}
 	}
-//Change BGM
+	
+	
+//Change BGM its called from ChangeBGM()
 
 if(start_BGM_transition)
 {

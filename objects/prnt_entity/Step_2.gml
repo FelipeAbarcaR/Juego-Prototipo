@@ -4,7 +4,7 @@ if(global.textover)
 	{
 		var _npc = object_get_name(object_index);
 		var _array = global.dialogue_order[$ _npc];
-		
+	
 		if(is_array(_array) and _array != [])
 		{
 			var _topico = _array[0];
@@ -22,8 +22,8 @@ if(global.textover)
 			}
 			else //_array == []
 			{
-				global.activate.EntityActivateScript = -1;
-				global.activate.EntityActivateArgs = -1;
+				global.activate.EntityActivateScript = [-1];
+				global.activate.EntityActivateArgs = [-1];
 			}
 			
 		}

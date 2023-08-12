@@ -1,5 +1,4 @@
 
-
 //Called whenever you want to fight arena, using any combination of in/out sequences
 function FightTransitionStart(_roomBG, _typeOut, _typeIn)
 {
@@ -12,7 +11,7 @@ function FightTransitionStart(_roomBG, _typeOut, _typeIn)
 		return true;
 		
 	}
-	else return false
+	else return false;
 }
 
 //Places the sequences in the room

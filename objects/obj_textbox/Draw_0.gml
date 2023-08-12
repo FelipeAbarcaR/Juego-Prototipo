@@ -2,6 +2,7 @@ var _width = global.res.width;
 var _height = global.res.height;
 
 
+
 if(!already_fighting)
 {
 	if (!surface_exists(surface_textbox)) {

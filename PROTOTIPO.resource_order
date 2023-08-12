@@ -47,7 +47,9 @@
     {"name":"Testeo","order":14,"path":"folders/Sprites/Testeo.yy",},
     {"name":"Text & Cutscenes","order":15,"path":"folders/Sprites/Text & Cutscenes.yy",},
     {"name":"Tiles","order":16,"path":"folders/Sprites/Tiles.yy",},
+    {"name":"M1","order":1,"path":"folders/Sprites/Tiles/M1.yy",},
     {"name":"Tile Sets","order":12,"path":"folders/Tile Sets.yy",},
+    {"name":"M1","order":1,"path":"folders/Tile Sets/M1.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"__scribble_get_krutidev_matra_lookup_map","order":12,"path":"scripts/__scribble_get_krutidev_matra_lookup_map/__scribble_get_krutidev_matra_lookup_map.yy",},
@@ -156,6 +158,7 @@
     {"name":"spr_player_attack_slash","order":3,"path":"sprites/spr_player_attack_slash/spr_player_attack_slash.yy",},
     {"name":"NewEncounter","order":1,"path":"scripts/NewEncounter/NewEncounter.yy",},
     {"name":"obj_display_manager","order":3,"path":"objects/obj_display_manager/obj_display_manager.yy",},
+    {"name":"obj_transition_sequence","order":2,"path":"objects/obj_transition_sequence/obj_transition_sequence.yy",},
     {"name":"__scribble_gen_6_build_lines","order":6,"path":"scripts/__scribble_gen_6_build_lines/__scribble_gen_6_build_lines.yy",},
     {"name":"spr_attack_slash_HB","order":2,"path":"sprites/spr_attack_slash_HB/spr_attack_slash_HB.yy",},
     {"name":"__scribble_get_buffer_a","order":2,"path":"scripts/__scribble_get_buffer_a/__scribble_get_buffer_a.yy",},
@@ -219,6 +222,7 @@
     {"name":"scribble_markdown_set_styles","order":4,"path":"scripts/scribble_markdown_set_styles/scribble_markdown_set_styles.yy",},
     {"name":"Rania_11","order":10,"path":"sounds/Rania_11/Rania_11.yy",},
     {"name":"scribble_refresh_everything","order":6,"path":"scripts/scribble_refresh_everything/scribble_refresh_everything.yy",},
+    {"name":"spr_textbox_paw","order":2,"path":"sprites/spr_textbox_paw/spr_textbox_paw.yy",},
     {"name":"spr_gato3_player","order":3,"path":"sprites/spr_gato3_player/spr_gato3_player.yy",},
     {"name":"FightParameters","order":2,"path":"scripts/FightParameters/FightParameters.yy",},
     {"name":"__scribble_tick","order":11,"path":"scripts/__scribble_tick/__scribble_tick.yy",},
@@ -247,5 +251,6 @@
     {"name":"Rania_3","order":2,"path":"sounds/Rania_3/Rania_3.yy",},
     {"name":"__scribble_class_font","order":2,"path":"scripts/__scribble_class_font/__scribble_class_font.yy",},
     {"name":"scribble_font_add_from_sprite","order":2,"path":"scripts/scribble_font_add_from_sprite/scribble_font_add_from_sprite.yy",},
+    {"name":"obj_transition","order":1,"path":"objects/obj_transition/obj_transition.yy",},
   ],
 }

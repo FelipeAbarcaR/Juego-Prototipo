@@ -90,5 +90,6 @@ function ShowFXArrows(){
 		break;
 	
 		default: break;
+
 	}
 }

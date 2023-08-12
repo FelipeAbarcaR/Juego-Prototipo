@@ -11,8 +11,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "M0",
-    "path": "folders/Managers/M0.yy",
+    "name": "Interfaz",
+    "path": "folders/Managers/Interfaz.yy",
   },
   "parentObjectId": null,
   "persistent": true,

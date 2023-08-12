@@ -41,7 +41,8 @@ function bgm_fade_transition()
 			
 		}
 		if (current_music!=new_music)
-		if(start_bgm_fade_in)
+		{
+		if(start_bgm_fade_in && (current_music!=new_music || !audio_is_playing(current_music)))
 		{
 		    audio_sound_gain(snd, 0, 0);
 			audio_sound_gain(snd, 1, 3000);
@@ -51,6 +52,7 @@ function bgm_fade_transition()
 			    start_bgm_fade_in=false;
 				return true;
 			} else return false;
+		}
 		}
 }
 

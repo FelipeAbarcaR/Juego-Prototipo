@@ -7,11 +7,13 @@ if(global.beat){
 
 var _xto = x+lengthdir_x(GridSpeed,Direction);
 var _yto = y+lengthdir_y(GridSpeed,Direction)
-
-var _goingtoborder=tilemap_get_at_pixel(collisionmap,_xto,_yto)
-if (_goingtoborder)
+if(collisionmap!=(-1))
 {
-	Direction+=180;
+	var _goingtoborder=tilemap_get_at_pixel(collisionmap,_xto,_yto)
+	if (_goingtoborder)
+	{
+		Direction+=180;
+	}
 }
 if(/*global.Move &&*/ global.beat){  //MOVE ES PARA ACTIVAR TODOS A MOVERSE
 	state="move"

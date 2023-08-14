@@ -48,9 +48,6 @@ if keyboard_check_released(vk_lshift){
 
 if changeroom { //If pressed M to change room
 
-	audio_stop_all();
-	//global.previousroom = global.currentroom;
-    //global.currentroom += 1;
 	var _target_room = global.currentroom+1;
     if (_target_room > global.room_count - 1)
     {

@@ -24,14 +24,17 @@ function PlayerCollision(){
 	var _entitylist = ds_list_create();
 	
 	//TILES HORIZONTAL
-	if(tilemap_get_at_pixel(collisionmap, x + hSpeed, y))
-		{
-	x -= x mod TILE_SIZE;
-	//la funcion sign retorna el signo de el numero 1 siendo positivo y -1 negativo
-	if(sign(hSpeed) == 1) x += TILE_SIZE - 1;
-	hSpeed = 0;
-	_collision = true;
-		}
+	if(collisionmap!=(-1))
+	{
+		if(tilemap_get_at_pixel(collisionmap, x + hSpeed, y))
+			{
+		x -= x mod TILE_SIZE;
+		//la funcion sign retorna el signo de el numero 1 siendo positivo y -1 negativo
+		if(sign(hSpeed) == 1) x += TILE_SIZE - 1;
+		hSpeed = 0;
+		_collision = true;
+			}
+	}
 	
 	//Entidades Horizontales
 	
@@ -63,14 +66,17 @@ function PlayerCollision(){
 	ds_list_clear(_entitylist);
 	
 	//TILES VERTICALES
-	if(tilemap_get_at_pixel(collisionmap, x, y+ vSpeed))
-		{
-	y -= y mod TILE_SIZE;
-	//la funcion sign retorna el signo de el numero 1 siendo positivo y -1 negativo
-	if(sign(vSpeed) == 1) y += TILE_SIZE - 1;
-	vSpeed = 0;
-	_collision = true;
-		}
+	if(collisionmap!=(-1))
+	{
+		if(tilemap_get_at_pixel(collisionmap, x, y+ vSpeed))
+			{
+		y -= y mod TILE_SIZE;
+		//la funcion sign retorna el signo de el numero 1 siendo positivo y -1 negativo
+		if(sign(vSpeed) == 1) y += TILE_SIZE - 1;
+		vSpeed = 0;
+		_collision = true;
+			}
+	}
 	
 	//Entidades Verticales
 	
@@ -183,7 +189,7 @@ function play_walk_audio(){
 	else if (room == roomViejoSabio) path_id = layer_get_id("Tiles_floor");
 
 	var _map_id = layer_tilemap_get_id(path_id);
-	var _data = tilemap_get_at_pixel(_map_id,x,y);
+	if (_map_id!=(-1)) var _data = tilemap_get_at_pixel(_map_id,x,y) else var _data=-1;
 	
 	if(!tile_get_empty(_data))
 	{
@@ -336,14 +342,16 @@ function tile_alpha(){
 	var rate = 0.05;
 	var _lay_id = layer_get_id("TilesUpperUpper");
 	var _map_id = layer_tilemap_get_id(_lay_id);
-
-	if(tilemap_get_at_pixel(_map_id,x,y))
+	if(_map_id!=(-1))
 	{
-		shader_set(sha_transparent);
-		var uni_transparency = shader_get_uniform(sha_transparent,"sha_alpha");
-		shader_set_uniform_f(uni_transparency,sha_alpha);
-		layer_shader(_lay_id,sha_transparent);
-		shader_reset();
+		if(tilemap_get_at_pixel(_map_id,x,y))
+		{
+			shader_set(sha_transparent);
+			var uni_transparency = shader_get_uniform(sha_transparent,"sha_alpha");
+			shader_set_uniform_f(uni_transparency,sha_alpha);
+			layer_shader(_lay_id,sha_transparent);
+			shader_reset();
+		}
 	}
 }
 	

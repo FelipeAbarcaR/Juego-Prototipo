@@ -1,12 +1,16 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
-
+enum transition_step
+{
+    fading_out,
+	set_parameters,
+	fading_in
+}
 // Keep track of the current room and its associated data
 current_music = global.room_data[global.currentroom][index.music];
 current_bpm = global.room_data[global.currentroom][index.bpm];
 last_music=-1;
-sound_fade_in=false;
-start_BGM_transition= false;
+
 new_music=-1;
 snd=-1;
 start_bgm_fade_in=-1;
@@ -46,6 +50,16 @@ barX=0;
 barY=0;
 
 depth=100;
+
+//FADE OUT TRANSITION OPTIONS
+bgm_transition_time=2000;  //The length for the change in gain in milliseconds.
+sound_fade_in=false;
+start_BGM_transition= false;
+change_step=transition_step.fading_out;
+mid_fading=false;
+starting_volume=0.1;
+current_volume=starting_volume;
+bgm_snd=-1;
 
 
 //perfect,good,bad

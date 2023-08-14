@@ -79,14 +79,38 @@ if (_hKey) instance_create_layer(0,0, "Instances", obj_CountHand);
 	}
 	
 	
-//Change BGM its called from ChangeBGM()
+//Change BGM its called from ChangeBGM() function
 
 if(start_BGM_transition)
 {
-    var _listo=bgm_fade_transition();
-	if (_listo) start_BGM_transition=false;
+	if(change_step==transition_step.fading_out)
+	{
+	    var _transition_out_ready= bgm_fade_out(bgm_transition_time/2);
+		if (_transition_out_ready)
+		{
+			change_step=transition_step.set_parameters;
+		}
+	}
+	if(change_step==transition_step.set_parameters)
+	{
+		hola=10;
+	    bgm_transition_set_values();
+		audio_stop_all();
+		bgm_snd=audio_play_sound(current_music,10,1,starting_volume); //song start at 0.1 and begin fading volume up
+		change_step=transition_step.fading_in;
+	}
+	if(change_step==transition_step.fading_in)
+	{
+	    var _transition_in_ready= bgm_fade_in(bgm_transition_time/2);
+		if (_transition_in_ready)
+		{
+			change_step=transition_step.fading_out;
+			start_BGM_transition=false;
+			show_debug_message("BGM Changed successfully");
+		}
+		
+	}
 }
-
 	//beat meter vanishing
 	switch(_player_mainchar)
 	{

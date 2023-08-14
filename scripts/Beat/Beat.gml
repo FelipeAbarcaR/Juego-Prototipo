@@ -18,44 +18,56 @@ function ChangeBGM(_newBGM)
 	   
 	 }
 }
-
-function bgm_fade_transition()
+function bgm_fade_out(_time)
 {
-     if(!start_bgm_fade_in)
-		{
-			    audio_sound_gain(current_music, 0, 300);
-		}
-		var _volumen = audio_sound_get_gain(current_music);
-		if(_volumen<=0.01 && current_music!=new_music)
-		{
+	if(!mid_fading)
+	{
+		mid_fading=true;
+	    audio_sound_gain(current_music, 0, _time);
+	}
+
+	var _volumen = audio_sound_get_gain(current_music);
+	if(_volumen<=0.01)
+	{
+		audio_sound_gain(current_music,1,0);
+	    audio_stop_sound(current_music);
+		mid_fading=false;
+		return true;
+	}else return false;
+
+}
+function bgm_transition_set_values(){
 			ResetBeatStats();
-			audio_sound_gain(current_music, 1, 0);
-			audio_stop_sound(current_music);
 		    last_music=current_music;
 			current_music=new_music;
 			current_bpm = getBPM(new_music);
-			global.bpm = getBPM(new_music);
-			global.BeatTimeMS=((60)/global.bpm)*1000000;
-			snd = audio_play_sound(current_music,10,1);
-			start_bgm_fade_in=true;
-			
-		}
-		if (current_music!=new_music)
-		{
-		if(start_bgm_fade_in && (current_music!=new_music || !audio_is_playing(current_music)))
-		{
-		    audio_sound_gain(snd, 0, 0);
-			audio_sound_gain(snd, 1, 3000);
-			var _volumen = audio_sound_get_gain(current_music);
-			if(_volumen==1)
-			{
-			    start_bgm_fade_in=false;
-				return true;
-			} else return false;
-		}
-		}
+			global.bpm = current_bpm
+			global.BeatTimeMS=((60)/global.bpm)*1000000;			
 }
+function bgm_fade_in(_time)
+{
+	var transition_time = _time; // Time in milliseconds
+	var frames = transition_time * 60 / 1000; // Convert time to frames
 
+	var _increase_gain = (1-starting_volume) / frames;
+	var _current_volume=current_volume;
+	var _gain = _current_volume +_increase_gain;
+	_gain = clamp(_gain, 0.1, 1);
+	audio_sound_gain(bgm_snd,_gain,0);
+	current_volume=_gain;
+	var _volumen = audio_sound_get_gain(bgm_snd);
+	
+	if(_gain>=1)
+	{
+		//current_volume=starting_volume;
+		return true;
+	}else
+	{
+	    return false;
+	}
+}
+ 
+ 
 function getBPM(_BGM)
 {
 	   var arrayLength = array_length(BGM_data);

@@ -33,8 +33,10 @@ if(!global.gamepaused)
 	//Move
 	x += lengthdir_x(spd,direction);
 	y += lengthdir_y(spd, direction);
-	if(tilemap_get_at_pixel(collisionmap, x, y)> 0) spd = 0;
-	
+	if(collisionmap!=(-1))
+	{
+		if(tilemap_get_at_pixel(collisionmap, x, y)> 0) spd = 0;
+	}
 	spd = max(spd - Friction, 0);
 
 }

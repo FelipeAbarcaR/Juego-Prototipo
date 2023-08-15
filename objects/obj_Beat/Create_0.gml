@@ -52,7 +52,7 @@ barY=0;
 depth=100;
 
 //FADE OUT TRANSITION OPTIONS
-bgm_transition_time=2000;  //The length for the change in gain in milliseconds.
+bgm_transition_time=3;  //The length for the change in gain in seconds.
 sound_fade_in=false;
 start_BGM_transition= false;
 change_step=transition_step.fading_out;
@@ -60,6 +60,11 @@ mid_fading=false;
 starting_volume=0.1;
 current_volume=starting_volume;
 bgm_snd=-1;
+ready_to_transition_in=false;
+transition_in_ready=false;
+new_transition_time=-1;
+
+wait_for_signal=false;
 
 
 //perfect,good,bad

@@ -92,7 +92,7 @@ if(instance_exists(o_player))
 		var _name=index.name;
 		var _roomname=global.room_data[_roomindex][_name];
 		global.currentroom =_roomindex;
-		global.targetRoom = _roomname;
+		global.roomTarget = _roomname;
 		global.targetX = 160;
 		global.targetY = 160;
 		global.targetdirection = o_player.dir;

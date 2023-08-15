@@ -18,7 +18,7 @@ if(leading == OUT)
 	//si la pantalla esta totalmente oscurecida
 	if(percent >= 1) 
 	{
-		room_goto(global.targetRoom)
+		room_goto(global.roomTarget)
 		leading = IN;
 	}
 }

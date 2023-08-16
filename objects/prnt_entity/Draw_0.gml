@@ -9,5 +9,12 @@ if(flash !=0)
 }
 	draw_sprite_ext(sprite_index,image_index, floor(x), floor(y-z),image_xscale, image_yscale, image_angle, image_blend, image_alpha);
 
-if(id == global.activate) draw_sprite(spr_testeo_interaction_NPC,0,x,y - 20);
+if(id == global.activate) 
+{
+	instance_create_depth(x,bbox_top - 10,-999,obj_space_NPC);
+	
+	if(distance_to_object(o_player) > 20) instance_deactivate_object(obj_space_NPC);
+	
+}
+
 if(shader_current() != -1) shader_reset();

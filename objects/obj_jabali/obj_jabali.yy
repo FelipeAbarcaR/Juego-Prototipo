@@ -28,7 +28,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_jabali",
+    "path": "sprites/spr_jabali/spr_jabali.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

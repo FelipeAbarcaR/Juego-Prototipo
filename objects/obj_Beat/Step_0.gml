@@ -83,25 +83,43 @@ if (_hKey) instance_create_layer(0,0, "Instances", obj_CountHand);
 
 if(start_BGM_transition)
 {
+	//set transition time
+	var _time;
+	if(new_transition_time!=(-1))
+	{
+	    _time=(new_transition_time/2)*1000;
+	} else _time=(bgm_transition_time/2)*1000;
+	
+	
 	if(change_step==transition_step.fading_out)
 	{
-	    var _transition_out_ready= bgm_fade_out(bgm_transition_time/2);
-		if (_transition_out_ready)
+		if(!transition_in_ready)
 		{
-			change_step=transition_step.set_parameters;
+			
+			transition_in_ready= bgm_fade_out(_time);
+			if(transition_in_ready)
+			{
+			    if(wait_for_signal)
+				{
+				    //just wait till someone(obj_transition_sequence) change his changestep
+				} else change_step=transition_step.set_parameters
+			}
 		}
 	}
+	
 	if(change_step==transition_step.set_parameters)
 	{
-		hola=10;
-	    bgm_transition_set_values();
+		bgm_transition_set_values();
 		audio_stop_all();
 		bgm_snd=audio_play_sound(current_music,10,1,starting_volume); //song start at 0.1 and begin fading volume up
 		change_step=transition_step.fading_in;
 	}
+	
 	if(change_step==transition_step.fading_in)
 	{
-	    var _transition_in_ready= bgm_fade_in(bgm_transition_time/2);
+
+	    var _transition_in_ready= bgm_fade_in(_time);
+		
 		if (_transition_in_ready)
 		{
 			change_step=transition_step.fading_out;
@@ -111,8 +129,8 @@ if(start_BGM_transition)
 		
 	}
 }
-	//beat meter vanishing
-	switch(_player_mainchar)
+//beat meter vanishing
+switch(_player_mainchar)
 	{
 		case o_player: 
 			if (_mode == mode.move and global.interact)

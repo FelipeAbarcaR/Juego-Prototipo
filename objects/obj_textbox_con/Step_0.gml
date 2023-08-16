@@ -95,7 +95,7 @@ if (finished){
 	
 	//Changeroom (se debe cambiar a sequence)
 	if (new_room != -1){
-		global.targetRoom=new_room;
+		global.roomTarget=new_room;
 		RoomTransition(TRANS_TYPE.SLIDE,new_room);
 	}
 	

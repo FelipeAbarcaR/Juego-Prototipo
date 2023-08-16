@@ -7,7 +7,6 @@ global.iUI = instance_create_layer(0,0,layer,obj_UI);
 global.DrawText=false;
 
 
-global.targetRoom = -1;
 global.targetX = -1;
 global.targetY = -1;
 global.targetdirection = 0;
@@ -18,7 +17,6 @@ global.textover = false;
 global.activate = noone;
 global.mp_grid = 0;
 
-//surface_resize(application_surface,RESOLUTION_W,RESOLUTION_H);
 
 global.gamemode=mode.move;
 
@@ -66,3 +64,6 @@ delay_to_return_from_fight=0.5;
 //Start first bgm music
 var _bgm = global.room_data[global.currentroom][index.music];
 audio_play_sound(_bgm,10,1,0.3);
+
+//transition parameters
+changed_room=false;

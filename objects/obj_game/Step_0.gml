@@ -56,8 +56,7 @@ if changeroom { //If pressed M to change room
     }
     var _room = global.room_data[_target_room][index.name];
 	var _bgm = global.room_data[_target_room][index.music];
-	TransitionStart(_room,sqFadeOut,sqFadeIn);
-	ChangeBGM(_bgm);
+	TransitionStart(_room,sqFadeOut,sqFadeIn,2.0,_bgm);
 }
 //mute all
 if muteall
@@ -76,3 +75,6 @@ if(global.fight_ended)
 	//set alarm 
     alarm[0]=room_speed*delay_to_return_from_fight;
 }
+
+//transition change room and start fading up the interface and bgm at the same time
+if(global.midTransition && !changed_room) CheckSincronizedTransition();

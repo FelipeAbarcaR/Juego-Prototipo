@@ -9,25 +9,28 @@ function ResetBeatStats(){
 	BeatBarProgress=0;
 }
 
-function ChangeBGM(_newBGM)
+function ChangeBGM(_newBGM,_time,_wait_for_room=false)
 {
      with(obj_beat)
 	 {
 		 new_music=_newBGM;
+		 new_speed_transition=_time;
 		 start_BGM_transition=true;
-	   
+		 wait_for_signal=_wait_for_room;
 	 }
 }
 function bgm_fade_out(_time)
 {
-	if(!mid_fading)
-	{
-		mid_fading=true;
-	    audio_sound_gain(current_music, 0, _time);
-	}
+	var transition_time = _time; // Time in milliseconds
+	var frames = (transition_time * room_speed) / 1000; // Convert time to frames
 
-	var _volumen = audio_sound_get_gain(current_music);
-	if(_volumen<=0.01)
+	var _actual_volume = audio_sound_get_gain(current_music);
+	var _decrease_gain = 1 / frames;
+	var _gain=_actual_volume-_decrease_gain;
+	_gain = clamp(_gain, 0, 1);
+	audio_sound_gain(current_music,_gain,0);
+	
+	if(_gain<=0.01)
 	{
 		audio_sound_gain(current_music,1,0);
 	    audio_stop_sound(current_music);

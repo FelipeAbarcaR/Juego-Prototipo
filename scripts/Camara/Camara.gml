@@ -27,7 +27,7 @@ display_set_gui_size(global.res.guiwidth,global.res.guiheight);
 
 //window_set_position(_displayWidth/2 - _width/2 , _displayHeight/2 - _height/2 );
 
-function RoomTransition(_type,_targetroom){
+function RoomTransition(_type,_roomTarget){
 
 	if(!instance_exists(obj_transition))
 	{
@@ -35,7 +35,7 @@ function RoomTransition(_type,_targetroom){
 		with(_transition)
 		{
 			typee = _type;
-			target = _targetroom;
+			target = _roomTarget;
 			return _transition;
 		}
 	}

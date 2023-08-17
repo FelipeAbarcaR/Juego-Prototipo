@@ -28,7 +28,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_capibara",
+    "path": "sprites/spr_capibara/spr_capibara.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

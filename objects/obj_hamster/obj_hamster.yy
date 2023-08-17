@@ -28,7 +28,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_hamster",
+    "path": "sprites/spr_hamster/spr_hamster.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

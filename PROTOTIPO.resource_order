@@ -58,7 +58,7 @@
     {"name":"Pasos_3","order":2,"path":"sounds/Pasos_3/Pasos_3.yy",},
     {"name":"spr_obstacle_down","order":3,"path":"sprites/spr_obstacle_down/spr_obstacle_down.yy",},
     {"name":"__scribble_gen_7_build_pages","order":7,"path":"scripts/__scribble_gen_7_build_pages/__scribble_gen_7_build_pages.yy",},
-    {"name":"roomMapa19","order":1,"path":"rooms/roomMapa19/roomMapa19.yy",},
+    {"name":"roomMapa1","order":1,"path":"rooms/roomMapa1/roomMapa1.yy",},
     {"name":"spr_gato3_left_up","order":2,"path":"sprites/spr_gato3_left_up/spr_gato3_left_up.yy",},
     {"name":"__scribble_get_krutidev_lookup_map","order":11,"path":"scripts/__scribble_get_krutidev_lookup_map/__scribble_get_krutidev_lookup_map.yy",},
     {"name":"__scribble_get_generator_state","order":9,"path":"scripts/__scribble_get_generator_state/__scribble_get_generator_state.yy",},

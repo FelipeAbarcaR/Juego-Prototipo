@@ -99,13 +99,16 @@ function TransitionFinished()
 
 function CheckSincronizedTransition()
 {
-	var _bgm_ready=obj_beat.ready_to_transition_in;
-	var _sequence_ready=obj_transition_sequence.ready_to_transition_in;
-    if (_bgm_ready && _sequence_ready)
+	if(instance_exists(obj_transition_sequence))
 	{
-		changed_room=true;
-		room_goto(global.roomTarget);
-	    global.transition_in_start=true;
+		var _bgm_ready=obj_beat.ready_to_transition_in;
+		var _sequence_ready=obj_transition_sequence.ready_to_transition_in;
+	    if (_bgm_ready && _sequence_ready)
+		{
+			changed_room=true;
+			room_goto(global.roomTarget);
+		    global.transition_in_start=true;
+		}
 	}
 }
 

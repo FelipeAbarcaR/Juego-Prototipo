@@ -3,7 +3,7 @@
 
 // Inherit the parent event
 event_inherited();
-DMG=100;
+DMG=30;
 spr_idle=spr_fight_gato;
 spr_atk1=spr_fight_gato;
 spr_atk2=spr_fight_gato;

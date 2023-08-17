@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "Object78",
+  "name": "obj_pileta",
   "eventList": [],
   "managed": true,
   "overriddenProperties": [],

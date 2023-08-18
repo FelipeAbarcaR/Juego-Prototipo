@@ -11,6 +11,9 @@ switch(state) {
 
 		anim();
 		
+		check_alpha_tiles();
+		
+		
 	break;
 	case states.KNOCKBACK:
 		reset_variables();

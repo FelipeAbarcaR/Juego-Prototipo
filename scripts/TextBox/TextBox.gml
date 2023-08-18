@@ -94,7 +94,6 @@ function draw_blurry_background_gui(_x,_y,_tb_width,_tb_height,_col= #566573){
 
         draw_set_alpha(1);
         var _rounded = 15;
-		
 		draw_roundrect_ext(0, 0, _width/w_ratio, _height/h_ratio, _rounded, _rounded, 0);
         gpu_set_blendenable(true);
         gpu_set_colorwriteenable(true,true,true,true);

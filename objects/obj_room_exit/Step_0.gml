@@ -13,7 +13,7 @@ if(instance_exists(o_player)) && (position_meeting(o_player.x,o_player.y,id))
 		global.targetdirection = o_player.dir;
 		
 		with(obj_player) state = states.IDLE;
-		var _bgm = global.room_data[4][index.music];
+		var _bgm = target(index.music);
 		TransitionStart(target_room,sequence_out,sequence_in,2.0,_bgm);
 		//RoomTransition(TRANS_TYPE.SLIDE,global.roomTarget);
 		//instance_destroy();

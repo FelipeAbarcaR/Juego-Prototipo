@@ -78,5 +78,6 @@ BGM_data=[
 	[bgm_ForestTime,126],
 	[bgm_NightCall,115],
 	[bgm_OneLove,107],
-	[bgm_Kappn,130]
+	[bgm_Kappn,130],
+	[bgm_WillPower_89,89]
 ];

@@ -109,3 +109,11 @@ if(_map!=(-1))
 		}
 	}
 }
+
+
+//Deactivate player if gamemode != free (activate again in room end)
+
+var _mode=current(index.mode);
+
+if(_mode==mode.obstacle) instance_deactivate_object(o_player);
+

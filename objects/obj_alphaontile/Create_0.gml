@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-tiles_lenght=14;
+tiles_lenght=30;
 tiles_height=10;
 width=tiles_lenght*TILE_SIZE;
 height=tiles_height*TILE_SIZE;
@@ -33,3 +33,20 @@ for (var y_offset = 0; y_offset < tiles_height; y_offset++) {
         tilemap_set_at_pixel(tilemap_upper, 0, x + x_offset * TILE_SIZE, y + y_offset * TILE_SIZE); // Clear tile
     }
 }
+if (!surface_exists(surf)) {
+    surf = surface_create(width, height);
+}
+
+surface_set_target(surf);
+for (var y_offset = 0; y_offset < tiles_height; y_offset++) {
+    for (var x_offset = 0; x_offset < tiles_lenght; x_offset++) {
+        // Store rectangle in local variable for upper and upperupper layer
+        var _tiledata = tile_data_upper[# x_offset, y_offset];
+		var _tiledata2 = tile_data_upper2[# x_offset, y_offset];
+        draw_tile(tile_set, _tiledata, 0, x_offset * 16, y_offset * 16);
+		draw_tile(tile_set, _tiledata2, 0, x_offset * 16, y_offset * 16);
+    }
+}
+surface_reset_target();
+
+alpha_tile=0.35;

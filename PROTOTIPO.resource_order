@@ -252,6 +252,7 @@
     {"name":"obj_testo","order":17,"path":"objects/obj_testo/obj_testo.yy",},
     {"name":"spr_health","order":1,"path":"sprites/spr_health/spr_health.yy",},
     {"name":"__scribble_font_add_all_from_project","order":6,"path":"scripts/__scribble_font_add_all_from_project/__scribble_font_add_all_from_project.yy",},
+    {"name":"spr_flashlightpixel","order":21,"path":"sprites/spr_flashlightpixel/spr_flashlightpixel.yy",},
     {"name":"ts_int_ViejoSabio2","order":1,"path":"tilesets/ts_int_ViejoSabio2/ts_int_ViejoSabio2.yy",},
     {"name":"__shd_scribble_bake_outline_8dir","order":2,"path":"shaders/__shd_scribble_bake_outline_8dir/__shd_scribble_bake_outline_8dir.yy",},
     {"name":"__scribble_class_typist","order":6,"path":"scripts/__scribble_class_typist/__scribble_class_typist.yy",},

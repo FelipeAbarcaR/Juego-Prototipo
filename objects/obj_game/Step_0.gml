@@ -48,15 +48,18 @@ if keyboard_check_released(vk_lshift){
 
 if changeroom { //If pressed M to change room
 
-	var _target_room = global.currentroom + 1;
-    if (_target_room > global.room_count - 1)
-    {
-        _target_room = 0;
-    }
-    var _room = global.room_data[_target_room][index.name];
-	var _bgm = global.room_data[_target_room][index.music];
-	TransitionStart(_room,sqFadeOut,sqFadeIn,2.0,_bgm);
-}
+	if(!global.midTransition)
+	{
+		var _target_room = global.currentroom + 1;
+	    if (_target_room > global.room_count - 1)
+	    {
+	        _target_room = 0;
+	    }
+	    var _room = global.room_data[_target_room][index.name];
+		var _bgm = global.room_data[_target_room][index.music];
+		TransitionStart(_room,sqFadeOut,sqFadeIn,2.0,_bgm);
+	}else show_debug_message("obj_game, changeroom: You are already in a transition marico");
+	}
 //mute all
 if muteall
 {

@@ -26,15 +26,15 @@ enum obstacle{
 
 //enums
 enum states {
-	IDLE,
-	MOVE,
-	ATTACK,
-	DEAD,
-	KNOCKBACK,
-	ROLL,
-	LOCK,
-	CROUCH,
-	JUMP
+	IDLE,			//0
+	MOVE,			//1
+	ATTACK,			//2
+	DEAD,			//3
+	KNOCKBACK,		//4
+	ROLL,			//5
+	LOCK,			//6
+	CROUCH,			//7
+	JUMP			//8
 }
 
 enum ENEMYSTATE
@@ -57,7 +57,8 @@ enum EnemyStance{
 	endstance,
 	idle,
 	dead,
-	locked
+	locked,
+	postattack
 }
 
 //general

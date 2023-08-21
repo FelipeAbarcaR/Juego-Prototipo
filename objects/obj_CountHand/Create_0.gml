@@ -9,8 +9,16 @@ ic=0;  //indexcounter
 move=false;
 StartCounting=true;
 
-guiwidth=camera_get_view_width(oCameraManager.camera);
-guiheight=camera_get_view_height(oCameraManager.camera);
+var _cam	=	oCameraManager;
+if(instance_exists(_cam))
+{
+	guiwidth=camera_get_view_width(_cam.camera);
+	guiheight=camera_get_view_height(_cam.camera);
+}else 
+{
+    guiwidth=global.res.guiwidth;
+}	guiheight=global.res.guiheight;
+
 
 game_mode=global.room_data[global.currentroom][index.mode]
 //guiwidth=display_get_gui_width();

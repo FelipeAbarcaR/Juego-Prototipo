@@ -15,6 +15,9 @@ new_music=-1;
 snd=-1;
 start_bgm_fade_in=-1;
 
+//gains
+bgm_gain=0.3;
+
 // set bpm
 global.bpm= current_bpm;
 

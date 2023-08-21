@@ -30,10 +30,10 @@ global.gamemode=mode.move;
 	//room_data=[room_name, Music, BPM, obj_to_follow, room_mode,mainChar]
 	global.room_data = [
 		[roomMapaInicial, bgm_ForestTime, 126, o_player, mode.move,o_player],
-	    [rm_Obstacle1,bgm_OneLove, 107,obj_CharGrid , mode.grid,obj_CharGrid],
-		[roomViejoSabio,bgm_ForestTimeInterior, 107,o_player, mode.move,o_player],
 		[rm_GD,bgm_boss_01, 127,obj_obs_player, mode.obstacle,obj_obs_player],
-		[roomMapa1,bgm_WillPower_89, 89,o_player, mode.move,o_player]
+	    [roomMapa1,bgm_WillPower_89, 89,o_player, mode.move,o_player],
+		[rm_Obstacle1,bgm_OneLove, 107,obj_CharGrid , mode.grid,obj_CharGrid],
+		[roomViejoSabio,bgm_ForestTimeInterior, 107,o_player, mode.move,o_player]		
 	];
 	
 	global.room_count=array_length(global.room_data);

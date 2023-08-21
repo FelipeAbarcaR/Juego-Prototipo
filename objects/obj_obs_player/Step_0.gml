@@ -7,16 +7,25 @@ var keyLeft=keyboard_check_pressed(vk_left);
 
 if (y<ystart)
 {
-    gravedad=gravedad*(1+acc_gravedad);
+	var _acc=acc_gravedad+hola;
+    gravedad=gravedad*(1+_acc);
 	y=y+min(gravedad,ystart-y);
-	if(y==ystart && state ==states.JUMP) state=states.IDLE;
+	if(y==ystart && state == states.JUMP) state=states.IDLE;
 } else 
 {
-    gravedad=2;
+    gravedad=gravedad_inicial;
 	y=ystart;
 }
 
-if (state == states.IDLE)
+var _handcreated=instance_exists(obj_CountHand);
+if (_handcreated)
+{
+
+    state = states.IDLE;
+}
+
+
+if (state == states.IDLE && !_handcreated)
 {
 	if (keyUp)	 state = states.JUMP;
 	if (keyDown){
@@ -29,6 +38,7 @@ if (state == states.IDLE)
 		image_index=0;
 	}
 }
+
 
 switch(state)
 {
@@ -56,11 +66,20 @@ switch(state)
 		y=ystart+crouch_z;
 		break;	
 	
+	case states.LOCK:
+		break;
+		
 	default:
 		break;
 }
 
 if(state!=states.JUMP)
 {
-	if(image_index>=image_number-1) state= states.IDLE;
+	if (state==states.LOCK)
+	{
+	    // code here
+	}else
+	{
+	    if(image_index>=image_number-1) state= states.IDLE;
+	}
 }

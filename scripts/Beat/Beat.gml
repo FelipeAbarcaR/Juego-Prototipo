@@ -82,3 +82,24 @@ function getBPM(_BGM)
     }
 
 }
+
+/// @description any_audio_is_playing()
+/// @function any_audio_is_playing
+function any_audio_is_playing()
+{
+	for (var i = 0; audio_exists(i); i++)
+	{
+		if audio_is_playing(i)
+			return true;
+	}
+	return false;
+}
+
+function setBPM(_bpm)
+{
+	var bpm=_bpm;
+	obj_beat.current_bpm=bpm;
+    global.bpm = bpm
+	global.BeatTimeMS=((60)/global.bpm)*1000000;
+	
+}

@@ -84,6 +84,11 @@ if(stance==EnemyStance.locked)
 {
     // code here
 }
+if(stance== EnemyStance.postattack)
+{
+    var _on_point = scr_FightEnemyMove();
+	hola=10;
+}
 if (global.enemy_hurt)
 {
 	global.enemy_hurt=false;

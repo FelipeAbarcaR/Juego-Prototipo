@@ -1,7 +1,12 @@
 /// @description Start Music& beats
 // You can write your code in this editor
 
-
+if(!any_audio_is_playing())
+{
+    var _bgm= current(index.music);
+	ResetBeatStats();
+	audio_play_sound(_bgm,10,1,0.4);
+}
 
 //global.beatchance=false;
 //global.beat=false;

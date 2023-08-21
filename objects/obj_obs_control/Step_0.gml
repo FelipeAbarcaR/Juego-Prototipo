@@ -17,3 +17,4 @@ if (time>=beat_play_array[0][0]) && _array_len>1 {
     // Decrease the creation time by the time passed
     //creation_time -= delta_time / 1000000; // Convert delta_time to seconds
 }
+

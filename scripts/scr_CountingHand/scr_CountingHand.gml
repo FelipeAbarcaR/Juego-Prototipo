@@ -9,6 +9,17 @@ function scr_CountingHand(){
 			xhand=480;
 			yhand=110;
 		}
+		
+		if(room==rm_GD){
+			xhand=700;
+			yhand=60;
+		}
+		
 	//create counting hand with h
-		if keyboard_check_pressed(ord("H")) instance_create_layer(128+xhand, 80+yhand, "Instances", obj_CountHand);
+		if keyboard_check_pressed(ord("H")) handcreate(128+xhand,80+yhand);
+}
+
+function handcreate(_x,_y)
+{
+     instance_create_layer(_x, _y, "Instances", obj_CountHand);
 }

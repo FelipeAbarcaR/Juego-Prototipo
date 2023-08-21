@@ -77,3 +77,6 @@ played_sfx=false; //actually used in scr_fightenemymove
 
 //hp2 animation (obj_control_fight)
 draw_hp2=false;
+//music settings
+bgm=bgm_Feelings;
+bpm=115;

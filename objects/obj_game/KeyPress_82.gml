@@ -1,3 +1,2 @@
 game_restart();
-
-
+TransitionResetValues();

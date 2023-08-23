@@ -61,3 +61,25 @@ if (global.DrawText){
 	draw_text(_x-16,_y+256,"ATAQUE: "+string(ataque));
 	draw_text(_x-16,_y+256+16,"hp: "+string(hp));
 }
+
+//draw_path(current_path,xstart,ystart,0)
+for(var i=0;i<path_get_number(current_path);i++)
+{
+    var _xTo,_yTo;
+
+	var _control=obj_fight_control;
+
+	//get the coordinates of the point to go
+	var _current_path_x = path_get_point_x(current_path,i);
+	var _current_path_y = path_get_point_y(current_path,i);
+	//scale to screen resolution
+	var _fight_room_width = 1024; //width of path's canvas
+	var _fight_room_height = 576; //height of path's canvas
+	var _point_x=map_value(_current_path_x,0,_fight_room_width,0,global.res.width);
+	var _point_y=map_value(_current_path_y,0,_fight_room_height,0,global.res.height);
+
+	_xTo=_control.x+ _point_x;
+	_yTo=_control.y+_point_y;
+	
+	draw_circle(_xTo,_yTo,2,0);
+}

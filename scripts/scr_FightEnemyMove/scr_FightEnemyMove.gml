@@ -29,7 +29,9 @@ var _BPM,_time,_speed,_direction;
 //set speed based on bpm
 _BPM = obj_beat.current_bpm;
 _time = ((60/_BPM)*room_speed);
-_speed = (_distance/_time)*2;//twice of speed
+var _multiplier=2;
+if (stance=EnemyStance.postattack) _multiplier=10;
+_speed = (_distance/_time)*_multiplier; //x times the original speed
 _direction= point_direction(x,y,_xTo,_yTo);
 
 //move the object to the point
@@ -104,19 +106,32 @@ if(_actualdistance==0||_distance==0)
 function pathrandom()
 {
     var _path = path_add();
-	for(var i=0;i<4;i++)
+	var _obj=obj_fight_control;
+	
+	//starting position on screen
+	var _x=x-_obj.x;
+	var _y=y-_obj.y;
+
+	var _fight_room_width = 1024; //width of path's canvas
+	var _fight_room_height = 576; //height of path's canvas
+
+	//scale this new coordinates to path's canvas (arreglar a que sea 480x270)
+	var _point_x=map_value(_x,0,global.res.width,0,_fight_room_width);
+	var _point_y=map_value(_y,0,global.res.height,0,_fight_room_height);
+
+	var _range = 60;
+	var _x_random,_y_random;
+
+	for(var i=0;i<3;i++)
 	{
-		var _range = 15;
-		var x_random,y_random;
-		x_random=floor(random(1)*_range);
-		y_random=floor(random(1)*_range);
-		//get the x and y coordinates from the position on room
-		var _obj=obj_fight_control;
-		var _x=x-_obj.x;
-		var _y=y-_obj.y;
+		_x_random=floor(random(1)*_range)-(_range/2);
+		_y_random=floor(random(1)*_range)-(_range)/2;
+		
 		//add a new random point close to actual position
-	    path_add_point(_path,_x+x_random,_y+y_random,100);
+	    path_add_point(_path,_point_x+_x_random,_point_y+_y_random,100);
 	}
+	//add final point on the same starting point
+	path_add_point(_path,_point_x,_point_y,100);
 	return _path;
 	
 }

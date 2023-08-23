@@ -42,6 +42,8 @@
     {"name":"M1","order":1,"path":"folders/Sprites/Entity/M1.yy",},
     {"name":"Icons","order":9,"path":"folders/Sprites/Icons.yy",},
     {"name":"Minijuegos","order":10,"path":"folders/Sprites/Minijuegos.yy",},
+    {"name":"Forest bg 1","order":5,"path":"folders/Sprites/Minijuegos/GD/Forest bg 1.yy",},
+    {"name":"Forest Traps","order":6,"path":"folders/Sprites/Minijuegos/GD/Forest Traps.yy",},
     {"name":"Player","order":11,"path":"folders/Sprites/Player.yy",},
     {"name":"Gato3","order":5,"path":"folders/Sprites/Player/Gato3.yy",},
     {"name":"Rhythm","order":12,"path":"folders/Sprites/Rhythm.yy",},
@@ -52,8 +54,6 @@
     {"name":"M1","order":1,"path":"folders/Sprites/Tiles/M1.yy",},
     {"name":"Tile Sets","order":12,"path":"folders/Tile Sets.yy",},
     {"name":"M1","order":1,"path":"folders/Tile Sets/M1.yy",},
-    {"name":"Forest bg 1","order":5,"path":"folders/Sprites/Minijuegos/GD/Forest bg 1.yy",},
-    {"name":"Forest Traps","order":6,"path":"folders/Sprites/Minijuegos/GD/Forest Traps.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"__scribble_get_krutidev_matra_lookup_map","order":12,"path":"scripts/__scribble_get_krutidev_matra_lookup_map/__scribble_get_krutidev_matra_lookup_map.yy",},

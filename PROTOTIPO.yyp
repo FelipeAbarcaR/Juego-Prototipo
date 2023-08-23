@@ -93,6 +93,8 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"spr_Conda","folderPath":"folders/Sprites/Minijuegos/Fight/spr_Conda.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"spr_Conde","folderPath":"folders/Sprites/Minijuegos/Fight/spr_Conde.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"GD","folderPath":"folders/Sprites/Minijuegos/GD.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Forest bg 1","folderPath":"folders/Sprites/Minijuegos/GD/Forest bg 1.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Forest Traps","folderPath":"folders/Sprites/Minijuegos/GD/Forest Traps.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Obstacle1","folderPath":"folders/Sprites/Minijuegos/Obstacle1.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Player","folderPath":"folders/Sprites/Player.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Gato3","folderPath":"folders/Sprites/Player/Gato3.yy",},
@@ -112,8 +114,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"M1","folderPath":"folders/Tile Sets/M1.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Minijuegos","folderPath":"folders/Tile Sets/Minijuegos.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Otros","folderPath":"folders/Tile Sets/Otros.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Forest bg 1","folderPath":"folders/Sprites/Minijuegos/GD/Forest bg 1.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Forest Traps","folderPath":"folders/Sprites/Minijuegos/GD/Forest Traps.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"NPC_dialogues.json","CopyToMask":-1,"filePath":"datafiles",},

@@ -10,10 +10,13 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Obstacle1",
-    "path": "folders/Objects/Minijuegos/Obstacle1.yy",
+    "name": "Crypt",
+    "path": "folders/Objects/Minijuegos/Crypt.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_prnt_trap",
+    "path": "objects/obj_prnt_trap/obj_prnt_trap.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

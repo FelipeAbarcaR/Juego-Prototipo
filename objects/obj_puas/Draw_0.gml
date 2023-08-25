@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+event_inherited();
 draw_self();
 if global.DrawText{
 	draw_text(x,y+16,string(beatcount));

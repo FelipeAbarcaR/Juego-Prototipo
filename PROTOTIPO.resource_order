@@ -170,6 +170,7 @@
     {"name":"__scribble_get_buffer_b","order":3,"path":"scripts/__scribble_get_buffer_b/__scribble_get_buffer_b.yy",},
     {"name":"scribble_font_bake_outline_8dir_2px","order":2,"path":"scripts/scribble_font_bake_outline_8dir_2px/scribble_font_bake_outline_8dir_2px.yy",},
     {"name":"_4__Trees","order":4,"path":"sprites/_4__Trees/_4__Trees.yy",},
+    {"name":"obj_prnt_trap","order":1,"path":"objects/obj_prnt_trap/obj_prnt_trap.yy",},
     {"name":"scribble_font_get_default","order":9,"path":"scripts/scribble_font_get_default/scribble_font_get_default.yy",},
     {"name":"scribble_fallback_font","order":13,"path":"fonts/scribble_fallback_font/scribble_fallback_font.yy",},
     {"name":"string_height_scribble","order":2,"path":"scripts/string_height_scribble/string_height_scribble.yy",},

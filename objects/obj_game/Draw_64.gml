@@ -4,8 +4,9 @@
 
 if (global.DrawText)
 {
-    draw_text(100,100,"currentroom: "+ string(global.currentroom))
-	draw_text(120,120," [U]esperas a que te[/U] perro");
+	draw_text(100,100,"font: "+font_get_fontname(draw_get_font()));
+    draw_text(100,100+30,"currentroom: "+room_get_name(room));
+	
 }
 
 

@@ -9,13 +9,25 @@ Abajo = (keyboard_check_pressed(vk_down));
 InputDirection = point_direction(0,0, Derecha - Izquierda, Abajo-Arriba);
 inputmagnitude = (Derecha-Izquierda != 0) xor (Abajo - Arriba != 0);
 
-if (state =="wait" && inputmagnitude==1 && global.beatchance==true){
-	Direction=InputDirection;
-	DistanceRemaining=GridDistance;
-	state = "jump";
-	//audio_play_sound(Beep, 9, 0);
-}
+if(Izquierda+Derecha+Arriba+Abajo!=0)
+{
+    InputDirection = point_direction(0,0, Derecha - Izquierda, Abajo-Arriba);
+	LastDirection=InputDirection;
+}else InputDirection=LastDirection;
+
+image_index=(InputDirection/45);
+
 States();
 
+
+if(inmunity)
+{
+    blinking_delta_time+=delta_time/1000000;
+}
+if(damaged)
+{
+	damaged=false;
+    start_flash=true;
+}
 //animation
-if z>0 image_speed=1 else image_speed=0;
+//if z>0 image_speed=1 else image_speed=0;

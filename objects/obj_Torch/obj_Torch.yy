@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Obstacle1",
-    "path": "folders/Objects/Minijuegos/Obstacle1.yy",
+    "name": "Crypt",
+    "path": "folders/Objects/Minijuegos/Crypt.yy",
   },
   "parentObjectId": null,
   "persistent": false,

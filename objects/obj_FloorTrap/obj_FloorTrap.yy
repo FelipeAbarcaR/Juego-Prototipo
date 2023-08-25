@@ -6,12 +6,12 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Obstacle1",
-    "path": "folders/Objects/Minijuegos/Obstacle1.yy",
+    "name": "Crypt",
+    "path": "folders/Objects/Minijuegos/Crypt.yy",
   },
   "parentObjectId": {
-    "name": "obj_puas",
-    "path": "objects/obj_puas/obj_puas.yy",
+    "name": "obj_prnt_trap",
+    "path": "objects/obj_prnt_trap/obj_prnt_trap.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

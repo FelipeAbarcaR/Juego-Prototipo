@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+event_inherited();
 if(RotationRemaining>0){
 	Rotation+=RotationSpeed;
 	RotationRemaining-=RotationSpeed;

@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+event_inherited();
 DMG=20;
 TipoATK="TRAP";
 

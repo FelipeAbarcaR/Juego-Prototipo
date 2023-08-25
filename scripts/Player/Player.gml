@@ -206,6 +206,7 @@ function play_walk_audio(){
 		}
 	}
 }
+	
 function PlayerUpdateStatus()
 {
 //check if have dash in inventory
@@ -213,6 +214,7 @@ function PlayerUpdateStatus()
 	 if (_dash) global.CanDash =true else global.CanDash=false;
 
 }
+
 function reset_variables() {
 	
 	global.interact = false;
@@ -584,7 +586,7 @@ function placement_Player_NPC(_x,_y,_relative,_spd){
 		if(dir >= 0 && dir <= 45) sprite_index = spr_gato3_right;
 		if(dir > 45 && dir <= 90) sprite_index = spr_gato3_right_up;
 		if(dir > 90 && dir <= 135) sprite_index = spr_gato3_up;
-		if(dir > 135 && dir <= 180) sprite_index = spr_gato3_up_left;
+		if(dir > 135 && dir <= 180) sprite_index = spr_gato3_left_up;
 		if(dir > 180 && dir <= 225) sprite_index = spr_gato3_left;
 		if(dir > 225 && dir <= 270) sprite_index = spr_gato3_left_down;
 		if(dir > 270 && dir <= 315) sprite_index = spr_gato3_down;
@@ -605,7 +607,9 @@ function placement_Player_NPC(_x,_y,_relative,_spd){
 			}
 			else
 			{	
-				sprite_index = spr_gato3_player;
+				sprite_index = spr_gato3_idle;
+				direction = point_direction(x,y,global.activate.x,global.activate.y);
+				image_index = CARDINAL_DIR_PLAYER;
 				_xx = x;
 				_yy = y;
 				x_dest = -1;
@@ -617,7 +621,9 @@ function placement_Player_NPC(_x,_y,_relative,_spd){
 		}
 		else
 		{
-			sprite_index = spr_gato3_player;
+			sprite_index = spr_gato3_idle;
+			direction = point_direction(x,y,global.activate.x,global.activate.y);
+			image_index = CARDINAL_DIR_PLAYER;
 			x_dest = -1;
 			y_dest = -1;
 			//Activar la entidad

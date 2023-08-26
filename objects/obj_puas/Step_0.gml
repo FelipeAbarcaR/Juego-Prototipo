@@ -21,7 +21,8 @@ if (image_index>=2){
 	delta_sum += _dt;
 	var _activeprogress=(delta_sum/active_time);
 	image_index=index_activate+frames_active*_activeprogress;
-}
+	doing_damage=true;
+} else doing_damage = false;
 
 if (image_index>=image_number-1){
 

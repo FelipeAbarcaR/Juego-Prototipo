@@ -15,7 +15,9 @@ if (global.beat)
 		image_index=0
 		image_speed=0;
 		beatcount=0;
+		doing_damage=false;
 	}
 	if (image_index==2){
 	image_speed=1;
+	doing_damage=true;
 } 

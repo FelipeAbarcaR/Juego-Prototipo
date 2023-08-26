@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+if(doing_damage) draw_set_color(c_red);
+
 if(global.DrawText)
 {
 	var _x1,_x2,_x3,_x4;
@@ -20,5 +22,5 @@ if(global.DrawText)
 	draw_line(_x2,_y2,_x4,_y4);
 }
 
-
+draw_set_color(c_white);
 

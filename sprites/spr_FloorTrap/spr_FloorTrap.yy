@@ -38,8 +38,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Obstacle1",
-    "path": "folders/Sprites/Minijuegos/Obstacle1.yy",
+    "name": "Crypt",
+    "path": "folders/Sprites/Minijuegos/Crypt.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

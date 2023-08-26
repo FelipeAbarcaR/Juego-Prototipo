@@ -1,7 +1,7 @@
 /// @description trap collition
 // You can write your code in this editor
 
-if (obj_prnt_trap.doing_damage && !inmunity)
+if (other.doing_damage && !inmunity)
 {
     global.playerhealth-=1;
 	inmunity=true;

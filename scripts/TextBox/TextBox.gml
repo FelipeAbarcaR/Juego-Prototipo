@@ -81,6 +81,12 @@ function draw_blurry_background_gui(_x,_y,_tb_width,_tb_height,_col= #566573){
 	var h_ratio=display_get_gui_height()/global.res.height;
 	var w_ratio=display_get_gui_width()/global.res.width;
 
+	if (!surface_exists(surface_textbox)) {
+		surface_textbox = surface_create(_width,_height);
+		surface_copy_part(surface_textbox,0,0,application_surface,_tb_x,global.res.height - _height,_width,_height);
+		show_debug_message("surface textbox created");
+	}
+	
 	//	//draw
 
 	var _circular_surface= -1;
@@ -126,13 +132,5 @@ function draw_blurry_background_gui(_x,_y,_tb_width,_tb_height,_col= #566573){
 	draw_set_alpha(0.5);
 	draw_roundrect_color_ext(_x,_y,_x+_width,_y+_height,_rounded,_rounded, _col , _col ,0);
 	draw_set_alpha(1);
-	
-	if(global.DrawText)
-{
-		draw_text(_x,_y-64+16,"BlurValue: "+string(blurValue));
-		draw_text(_x,_y-64+32,"hola1: "+string(hola));
-		draw_text(_x,_y-64+32+16,"hola2: "+string(hola2));
-	
-	}
 	
 }

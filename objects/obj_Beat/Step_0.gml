@@ -8,7 +8,7 @@
 	if sKey
 	{
 		audio_play_sound(Beep,100,0,1,0,3)
-		var _barra=instance_create_layer(x, y,"Instances",obj_vanish_GUI);
+		var _barra=instance_create_layer(x, y,"Instances",obj_vanish);
 		with(_barra)
 			{
 				sprite_index=img_BeatMeter;
@@ -135,14 +135,14 @@ switch(_player_mainchar)
 		case o_player: 
 			if (_mode == mode.move and global.interact)
 			{
-				instance_create_layer(barX, barY,"Instances",obj_vanish_GUI);
+				instance_create_layer(barX, barY,"Instances",obj_vanish);
 			}
 		break;
 		
 		default:
 			if (_mode == mode.move and _player_mainchar.inputmagnitude)
 			{
-				instance_create_layer(barX, barY,"Instances",obj_vanish_GUI);
+				instance_create_layer(barX, barY,"Instances",obj_vanish);
 			}
 		break;		
 	}

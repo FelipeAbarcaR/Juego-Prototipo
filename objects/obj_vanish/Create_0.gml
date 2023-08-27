@@ -7,3 +7,7 @@ image_index=0;
 
 vanish=0.02;
 imgscale=1.2;
+
+//should it be drawn on gui?
+draw_on_gui=false;
+sprite_color=-1;

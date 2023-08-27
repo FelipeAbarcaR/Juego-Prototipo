@@ -5,4 +5,5 @@
 event_inherited();
 
 image_speed=0;
-maxalpha=0.7;
+maxalpha=0.5;
+EntityShadowScale=2;

@@ -1,5 +1,6 @@
 //shadow
-if(EntityShadow) draw_sprite(spr_shadow,0,x,y-1);
+if(EntityShadow) draw_sprite_ext(spr_shadow,0,x,y-1,EntityShadowScale,EntityShadowScale,image_angle,image_blend,image_alpha);
+
 
 if(flash !=0)
 {

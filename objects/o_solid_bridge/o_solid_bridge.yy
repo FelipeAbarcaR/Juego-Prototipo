@@ -6,8 +6,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Misc",
-    "path": "folders/Objects/Misc.yy",
+    "name": "Misceláneos",
+    "path": "folders/Objects/Misceláneos.yy",
   },
   "parentObjectId": {
     "name": "prnt_solid",

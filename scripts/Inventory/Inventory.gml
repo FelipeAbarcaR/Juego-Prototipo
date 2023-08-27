@@ -97,3 +97,8 @@ function Inv_hasItem(_item)
     
     return false; // Item not found in inventory
 }
+
+function Inv_Interface(_item,_qty)
+{
+    // code here
+}

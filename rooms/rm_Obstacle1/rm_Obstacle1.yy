@@ -24,6 +24,9 @@
     {"name":"inst_546001D1","path":"rooms/rm_Obstacle1/rm_Obstacle1.yy",},
     {"name":"inst_758CD495","path":"rooms/rm_Obstacle1/rm_Obstacle1.yy",},
     {"name":"inst_37C24A7","path":"rooms/rm_Obstacle1/rm_Obstacle1.yy",},
+    {"name":"inst_18415193","path":"rooms/rm_Obstacle1/rm_Obstacle1.yy",},
+    {"name":"inst_6C8B7566","path":"rooms/rm_Obstacle1/rm_Obstacle1.yy",},
+    {"name":"inst_3270AABA","path":"rooms/rm_Obstacle1/rm_Obstacle1.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -59,6 +62,9 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_2C6AD4BE","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_puas","path":"objects/obj_puas/obj_puas.yy",},"properties":[
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_puas","path":"objects/obj_puas/obj_puas.yy",},"propertyId":{"name":"beatwait","path":"objects/obj_puas/obj_puas.yy",},"value":"2",},
           ],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":144.0,"y":208.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_18415193","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_spear","path":"objects/obj_spear/obj_spear.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":168.0,"y":120.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6C8B7566","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_spikeball","path":"objects/obj_spikeball/obj_spikeball.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":240.0,"y":112.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3270AABA","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_spear","path":"objects/obj_spear/obj_spear.yy",},"properties":[],"rotation":180.0,"scaleX":1.0,"scaleY":1.0,"x":216.0,"y":48.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"BeatTiles","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":23,"SerialiseWidth":40,"TileCompressedData":[
 -171,-2147483648,-8,1,-28,-2147483648,-5,1,-6,-2147483648,1,1,-28,-2147483648,1,1,-10,-2147483648,1,1,-28,-2147483648,1,1,-10,-2147483648,1,1,-28,-2147483648,1,1,-10,-2147483648,1,1,-24,-2147483648,-5,1,

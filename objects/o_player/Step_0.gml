@@ -13,6 +13,8 @@ switch(state) {
 		
 		check_alpha_tiles();
 		
+		check_floor_tiles();
+		
 		
 	break;
 	case states.KNOCKBACK:

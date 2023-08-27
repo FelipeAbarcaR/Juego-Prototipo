@@ -43,10 +43,12 @@ if(inmunity)
 
 shader_reset();
 
-draw_circle(x,y,2,0);
+
 
 if(global.DrawText)
 {
+	draw_circle(x,y,2,0);
+	
 	var _x1,_x2,_x3,_x4;
 	var _y1,_y2,_y3,_y4;
 	_x1 = bbox_left;

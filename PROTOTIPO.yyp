@@ -85,6 +85,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"NPC","folderPath":"folders/Sprites/Entity/NPC.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Enemy","folderPath":"folders/Sprites/Entity/NPC/Enemy.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Icons","folderPath":"folders/Sprites/Icons.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Interfaz","folderPath":"folders/Sprites/Interfaz.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Minijuegos","folderPath":"folders/Sprites/Minijuegos.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Crypt","folderPath":"folders/Sprites/Minijuegos/Crypt.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Fight","folderPath":"folders/Sprites/Minijuegos/Fight.yy",},
@@ -114,7 +115,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"M1","folderPath":"folders/Tile Sets/M1.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Minijuegos","folderPath":"folders/Tile Sets/Minijuegos.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Otros","folderPath":"folders/Tile Sets/Otros.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Interfaz","folderPath":"folders/Sprites/Interfaz.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"NPC_dialogues.json","CopyToMask":-1,"filePath":"datafiles",},

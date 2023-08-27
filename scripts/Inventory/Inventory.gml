@@ -37,6 +37,7 @@ function Inv_add(_item,_count)
 		if(_arr[0] == _item)
 		{
 			_arr[@ 1] += _count;
+			Inv_Interface(_item,_count);
 			return true;
 		}
 	}
@@ -71,6 +72,7 @@ function Inv_del(_item,_count){
             if (_arr[1] >= _count)
             {
                 _arr[@ 1] -= _count;
+				Inv_Interface(_item,_count);
                 return true;
             }
             else

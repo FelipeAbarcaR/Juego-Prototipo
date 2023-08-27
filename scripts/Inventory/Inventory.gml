@@ -11,6 +11,13 @@ global.itemsprite[ITEM.ORANGE] = spr_orange;
 global.itemsprite[ITEM.WOOD] = spr_wood;
 global.itemsprite[ITEM.DASH] = spr_icon_dash;
 
+global.itemname[ITEM.APPLE]		=	"Manzanita";
+global.itemname[ITEM.ORANGE]	= 	"Naranja";
+global.itemname[ITEM.WOOD]		= 	"Madera";
+global.itemname[ITEM.DASH]		= 	"Dash";
+
+
+
 //Inventory
 #macro INV_SIZE 12
 
@@ -42,6 +49,7 @@ function Inv_add(_item,_count)
 	var _arr = [_item, _count];
 	
 	ds_list_add(_list,_arr);
+	Inv_Interface(_item,_count);
 	
 	return true;
 
@@ -70,6 +78,7 @@ function Inv_del(_item,_count){
                 // Not enough quantity to remove, so remove the entire stack
                 ds_list_delete(_list, i);
                 return true;
+				Inv_Interface(_item,_count);
             }
         }
     }
@@ -100,5 +109,9 @@ function Inv_hasItem(_item)
 
 function Inv_Interface(_item,_qty)
 {
-    // code here
+    var _obj = instance_create_depth(x,y,depth,obj_getitem_GUI,
+		{
+		    item_id	:	_item,
+			item_quantity	:	_qty	
+		});
 }

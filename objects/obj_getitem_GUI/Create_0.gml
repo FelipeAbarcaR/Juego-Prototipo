@@ -3,13 +3,24 @@
 gui_width=display_get_gui_width();
 gui_height=display_get_gui_height();
 
+image_alpha=0.8;
+
 x_pos= 50;
 y_pos=gui_height*(3/5);
 
-move_speed=2;
-alpha_speed=0.02;
+move_speed=1.6;
+alpha_speed=0.01;
 
 margin=8;
 
 width=208;
 height=48;
+
+if(item_id!=-1)
+{
+    item_sprite=global.itemsprite[item_id];
+	item_name=global.itemname[item_id];
+}else
+{
+    show_debug_message("obj_getitem_frame no se encontró ITEM.ID "+ string(item_id)+" "+string(item_quantity));
+}

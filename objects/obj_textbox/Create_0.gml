@@ -18,7 +18,7 @@ y = display_get_gui_height() - height - margin;
 
 
 // Text
-text_font = fnt_RODIN;
+text_font = "fnt_RODIN";
 text_color = c_white;
 text_speed = 0.6;
 text_x = padding;
@@ -132,11 +132,17 @@ next = function() {
 	}
 }
 
+scribble_object=-1;
+typing_speed=text_speed;
+typist=scribble_typist();
+typist.in(typing_speed,0);
+
 // Set the text that should be typed out
 setText = function(newText) {
 	text = newText;
 	text_length = string_length(newText);
 	text_progress = 0;
+	scribble_object = scribble(text+"áéíóú");
 }
 
 //Dialogue SFX
@@ -158,3 +164,5 @@ hola2=0;
 increasing_value=0.0;
 starting_y=y+height/2;
 delta_scaling=0.1;
+
+//SCRIBBLE OBJECT

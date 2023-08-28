@@ -2,7 +2,7 @@ var draw_text_x = x;
 var draw_text_y = y;
 var draw_text_witdh = text_width;
 var portrait_scale =1;
-var finished = (text_progress == text_length); 
+var finished = (typist.get_state()==1);
 
 
 //Portrait
@@ -73,19 +73,12 @@ if (!already_fighting)
 		}
 
 		// Text
-		draw_set_halign(fa_left);
-		draw_set_valign(fa_top);
+		scribble_object.starting_format(text_font,#5c2e17);
+		scribble_object.draw(draw_text_x + text_x,draw_text_y + text_y,typist);
+		scribble_object.starting_format(text_font,text_color);
+		scribble_object.draw(draw_text_x + text_x+2,draw_text_y + text_y+2,typist);
 
-		draw_set_font(text_font);
-		draw_set_color(text_color);
-
-		//type(draw_text_x + text_x, draw_text_y + text_y, text, text_progress, draw_text_witdh);
-
-		draw_set_color(c_gray);
-		draw_text_scribble_ext(draw_text_x + text_x-1,draw_text_y + text_y-3,text,draw_text_witdh,text_progress)
-		draw_set_color(text_color);
-		draw_text_scribble_ext(draw_text_x + text_x,draw_text_y + text_y,text,draw_text_witdh,text_progress)
-
+		
 
 		//Options
 		if(finished && option_count >0)

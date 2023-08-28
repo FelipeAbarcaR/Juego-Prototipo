@@ -13,20 +13,26 @@ if (keyboard_check(vk_lcontrol) && keyboard_check_pressed(vk_subtract)) {
     hola2--;
 }
 
-//if not self-desructing himself
+//if not self-desructing himself by minimizing
 if(!minimize_to_destroy)
 {
+	//create scribble's object
+
 	var confirm=false;
+	
+	// fights occurs while still in a textbox'action
+	// so confirm key only works while not fighting
+	PlaySFX()
+	if (!already_fighting) confirm = keyboard_check_pressed(confirm_key); 
 
-	if (!already_fighting) confirm = keyboard_check_pressed(confirm_key);
-
+	//textbox background's increasing value 
 	increasing_value=min(1,increasing_value+delta_scaling);
 
+	//start typewriter once the textbox got his maximum height
 	if(increasing_value==1)
 	{
 	    text_progress = min(text_progress + text_speed, text_length);
 	}
-
 
 	// Ignore inputs when delay is active
 	if (input_delay > 0) 
@@ -34,12 +40,15 @@ if(!minimize_to_destroy)
 		input_delay--;
 		exit;
 	}
-	var finished = (text_progress == text_length); 
+	//check if typewriter finished
+
+	var finished = (typist.get_state()==1);
 
 
 	// Are we finished typing?
 	if (finished) 
 	{
+		//check if there is options to show
 		if (option_count > 0)
 		{
 			var up = keyboard_check_pressed(up_key);
@@ -74,6 +83,7 @@ if(!minimize_to_destroy)
 	}
 	else if (confirm) 
 	{
+		//if it is typing and the confirm key is pressed, then show the full text
 		text_progress = text_length;
 	}
 
@@ -114,7 +124,7 @@ if(!minimize_to_destroy)
 		}
 	
 	
-		//Changeroo
+		//Changeroom
 		if (new_room != -1){
 			global.roomTarget=new_room;
 			RoomTransition(TRANS_TYPE.SLIDE,new_room);
@@ -141,11 +151,13 @@ if(!minimize_to_destroy)
 
 		}
 	}else{
+		//play dialogue sounds if is not finished typing
 		DialogueSound()
 	}
 }else{
-	     //decrease the height until 0, then instance destroy
-		 increasing_value=max(0,increasing_value-delta_scaling);
-		 if(increasing_value<=0) instance_destroy()
+		//if it is minimizing unill destroy, then minimize 'till destroy
+	    //decrease the height until 0, then instance destroy
+		increasing_value=max(0,increasing_value-delta_scaling);	 
+		if(increasing_value<=0) instance_destroy()
 	 }
 

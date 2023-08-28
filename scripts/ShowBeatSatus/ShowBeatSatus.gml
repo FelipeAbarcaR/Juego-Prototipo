@@ -26,15 +26,25 @@ function draw_beat_hit_texts()
 		    var _x = current_text.x_pos;
 		    var _y = current_text.y_pos;
 		    var _text = current_text.texto;
-			var _previousalpha=draw_get_alpha();
-		    draw_set_alpha(current_text.alpha);
-
-			draw_text_scribble(_x, _y, _text);
-
-		    beat_hit_data[|i].y_pos -= 2;
+			var _alpha = current_text.alpha;
+			
+			var _scribble_object=scribble(_text);
+			_scribble_object.starting_format("fnt_RODIN",c_white);
+			_scribble_object.blend(c_white,_alpha);
+			//tilt the text
+			var scaled_x = pi * (_alpha - 0.5);
+			var _angle	 = 5 * sin(scaled_x);
+			_scribble_object.transform(1,1,_angle);
+			
+			//draw text
+			_scribble_object.draw(_x,_y);
+		    
+			//draw_text_scribble(_x, _y, _text);
+	
+			
+			beat_hit_data[|i].y_pos -= 2;
 		    beat_hit_data[|i].alpha -= 0.025;
 		
-			draw_set_alpha(_previousalpha);		
 
 		    if (beat_hit_data[|i].alpha <= 0) {
 		        ds_list_delete(beat_hit_data, i);

@@ -60,32 +60,32 @@ if (!already_fighting)
 		{
 			//Expand the nameplate if the name is wider than the default width
 			
-			var name_w = max(string_width_scribble(speaker_name), speaker_width)
+			var _scribble_speaker=scribble(speaker_name);
+			var name_w = max(_scribble_speaker.get_width()+padding*2, speaker_width);
+			var name_h= max(_scribble_speaker.get_height()+padding*2,speaker_height);
 			//el padding los puse como extra para que calce, en verdad no se pq pero funciona
-			draw_sprite_stretched(spr_name,0,x + speaker_x-name_w/2, y + speaker_y-speaker_height/2, name_w+padding*2, speaker_height+padding);
-	
-			draw_set_halign(fa_center);
-			draw_set_valign(fa_center);
-			//draw_set_font(speaker_font);
-			draw_set_color(speaker_color);
-			draw_text_scribble(x +padding+ speaker_x, y + speaker_y, speaker_name);
+			draw_sprite_stretched(spr_name,0,x + speaker_x-name_w/2, y + speaker_y-speaker_height/2, name_w+padding*2, speaker_height+padding*2);
+			if(global.DrawText)
+			{
+			    draw_circle(x+padding+speaker_x,y+speaker_y,3,0);
+				draw_circle(x + speaker_x-name_w/2, y + speaker_y-speaker_height/2,3,0);
+			}
 			
+			_scribble_speaker.starting_format(speaker_font,speaker_color);
+			_scribble_speaker.align(fa_center,fa_middle);
+			_scribble_speaker.draw(x+padding+speaker_x,y+speaker_y+padding);
 		}
 
 		// Text
 		scribble_object.starting_format(text_font,#5c2e17);
+		scribble_object.wrap(draw_text_witdh);
 		scribble_object.draw(draw_text_x + text_x,draw_text_y + text_y,typist);
 		scribble_object.starting_format(text_font,text_color);
 		scribble_object.draw(draw_text_x + text_x+2,draw_text_y + text_y+2,typist);
 
-		
-
 		//Options
 		if(finished && option_count >0)
 		{
-			draw_set_valign(fa_middle);
-			draw_set_color(option_text_color);
-	
 			for(var i = 0; i < option_count ; i++)
 			{
 				var opt_x = x + option_x;
@@ -95,11 +95,19 @@ if (!already_fighting)
 				if( i == current_option)
 				{
 					opt_x += option_selection_indent;
-					draw_sprite(spr_textbox_paw,0,opt_x - 30,opt_y - 10);
+					draw_sprite(spr_textbox_paw,0,opt_x - 30,opt_y-2);
 				}
-		
-				draw_sprite_stretched(sprite_index,1,opt_x,opt_y - option_height/2,option_width,option_height);
-				draw_text(opt_x + option_text_x,opt_y-5,options[i].text);
+				
+				var _string=options[i].text;
+				var _scribble_option=scribble(_string);
+				
+				var _option_width=max(option_width,_scribble_option.get_width()+padding*2);
+				draw_sprite_stretched(sprite_index,1,opt_x,opt_y,_option_width,option_height);
+				
+				_scribble_option.align(fa_left,fa_middle);
+				_scribble_option.starting_format(text_font,option_text_color);
+				_scribble_option.draw(opt_x+option_text_x,opt_y+padding+2);
+				
 			}
 		
 		}

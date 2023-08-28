@@ -19,10 +19,10 @@ if(!minimize_to_destroy)
 	//create scribble's object
 
 	var confirm=false;
+	var typist_state=typist.get_state();
 	
 	// fights occurs while still in a textbox'action
 	// so confirm key only works while not fighting
-	PlaySFX()
 	if (!already_fighting) confirm = keyboard_check_pressed(confirm_key); 
 
 	//textbox background's increasing value 
@@ -42,7 +42,7 @@ if(!minimize_to_destroy)
 	}
 	//check if typewriter finished
 
-	var finished = (typist.get_state()==1);
+	var finished = (typist_state==1);
 
 
 	// Are we finished typing?
@@ -59,7 +59,8 @@ if(!minimize_to_destroy)
 			if(change != 0)
 			{
 				current_option += change;
-			
+				PlaySFX(sfx_up_down_option);
+				
 				//Wrap to first and last option
 				if(current_option < 0) current_option = option_count -2;
 				else if (current_option >= option_count) current_option = 0;
@@ -71,7 +72,7 @@ if(!minimize_to_destroy)
 				var option = options[current_option];
 				options = [];
 				option_count  = 0;
-			
+				PlaySFX(sfx_confirm_option);
 				option.act(id);
 			}
 		
@@ -85,6 +86,7 @@ if(!minimize_to_destroy)
 	{
 		//if it is typing and the confirm key is pressed, then show the full text
 		text_progress = text_length;
+		typist.skip();
 	}
 
 
@@ -152,7 +154,7 @@ if(!minimize_to_destroy)
 		}
 	}else{
 		//play dialogue sounds if is not finished typing
-		DialogueSound()
+		if (typist_state>=0.3) DialogueSound();
 	}
 }else{
 		//if it is minimizing unill destroy, then minimize 'till destroy

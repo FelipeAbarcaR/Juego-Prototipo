@@ -13,10 +13,3 @@ function PlaySFX(_stance){
 	}
 
 }
-
-function PlaySFX(_index){
-with (obj_beat)
-{
-    audio_play_sound(_index,)
-}
-}

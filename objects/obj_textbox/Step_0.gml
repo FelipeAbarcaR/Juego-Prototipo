@@ -22,7 +22,6 @@ if(!minimize_to_destroy)
 	
 	// fights occurs while still in a textbox'action
 	// so confirm key only works while not fighting
-	PlaySFX()
 	if (!already_fighting) confirm = keyboard_check_pressed(confirm_key); 
 
 	//textbox background's increasing value 

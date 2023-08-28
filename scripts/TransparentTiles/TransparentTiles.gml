@@ -3,21 +3,24 @@
 function check_alpha_tiles(){
 	//Check for a collision with alpha layer tilemap, if it is, then create alpha object manager
 	var _lay_id=layer_get_id("Alpha");
-	var _tilemap_id=layer_tilemap_get_id(_lay_id);
-	var _alpha_tile_collision = tilemap_get_at_pixel(_tilemap_id,x,y);
-	if (_alpha_tile_collision)
+	if(_lay_id!=-1)
 	{
-	    if(!instance_exists(obj_alphaontile))
+		var _tilemap_id=layer_tilemap_get_id(_lay_id);
+		var _alpha_tile_collision = tilemap_get_at_pixel(_tilemap_id,x,y);
+		if (_alpha_tile_collision)
 		{
-			//create the object in the corner of the space of where to apply alpha
-			var _tileswidth = 12;
+		    if(!instance_exists(obj_alphaontile))
+			{
+				//create the object in the corner of the space of where to apply alpha
+				var _tileswidth = 12;
 			
-			var _x=x-(x%16)-16*(_tileswidth/2); // 16 is the width of tiles in pixels
-			var _y=y-y%16-16; // one tile up from the player
+				var _x=x-(x%16)-16*(_tileswidth/2); // 16 is the width of tiles in pixels
+				var _y=y-y%16-16; // one tile up from the player
 			
 			
-			instance_create_depth(_x,_y,depth-1,obj_alphaontile);
+				instance_create_depth(_x,_y,depth-1,obj_alphaontile);
+			}
 		}
-	}
+	}else show_debug_message("no se encuentra layer Alpha "+"lay_id: "+string(_lay_id));
 
 }

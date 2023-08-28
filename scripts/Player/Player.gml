@@ -183,7 +183,7 @@ function PlayerStateBonk(){
 		}
 }
 
-function play_walk_audio(){
+function play_walk_audio(_terreno){
 	
 	if(room == roomMapaInicial) path_id = layer_get_id("TilesMain");
 	else if (room == roomViejoSabio) path_id = layer_get_id("Tiles_floor");

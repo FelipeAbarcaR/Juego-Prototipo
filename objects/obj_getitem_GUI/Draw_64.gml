@@ -15,9 +15,16 @@ if(item_id!=-1)
 	{
 	    _qty=string(item_quantity)+" ";
 	}
-    draw_text(x_pos+margin+_sprite_height+margin,y_pos,_qty+item_name);
 	
+	var _scribble_description=scribble(_qty+item_name);
+	
+	_scribble_description.starting_format("fnt_Dogica",c_white);
+	//_scribble_description.align(fa_center,fa_middle);
+	_scribble_description.blend(c_white,image_alpha);
+	_scribble_description.draw(x_pos+margin+_sprite_height+margin,y_pos+margin);	
+
 }
 
 
 draw_set_alpha(1);
+

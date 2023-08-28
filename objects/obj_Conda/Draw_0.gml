@@ -44,7 +44,8 @@ if (global.DrawText){
 	_x=xstart+128;
 	_y=ystart-256;
 	
-	var _currentpathname=path_get_name(current_path)
+	var _currentpathname=path_get_name(current_path);
+	//draw_set_color(c_black);
 	draw_text(x-16,y+32+16,string(bitcount));
 	draw_text(x-16,y+64,string(stance));
 	draw_text(_x-16,_y+64+32,"path: "+string(_currentpathname));
@@ -54,12 +55,12 @@ if (global.DrawText){
 	draw_text(_x-16,_y+128+32,"yi: "+string(yi));
 	draw_text(_x-16,_y+128+32+16,"xto: "+string(_xTo));
 	draw_text(_x-16,_y+128+64,"yto: "+string(_yTo));
-	draw_set_color(c_black);
 	draw_text(_x-16,_y+128+64+16,"stance: "+string(stance));
 	draw_text(_x-16,_y+128+64+32,"point: "+string(point_to_go));
 	draw_text(_x-16,_y+128+64+32+16,"point: "+string(map_value(hp,0,hpmax,0,48)));
 	draw_text(_x-16,_y+256,"ATAQUE: "+string(ataque));
 	draw_text(_x-16,_y+256+16,"hp: "+string(hp));
+	
 }
 
 //draw_path(current_path,xstart,ystart,0)

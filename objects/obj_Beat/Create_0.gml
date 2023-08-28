@@ -17,6 +17,7 @@ start_bgm_fade_in=-1;
 
 //gains
 bgm_gain=0.3;
+sfx_gain=0.9;
 
 // set bpm
 global.bpm= current_bpm;

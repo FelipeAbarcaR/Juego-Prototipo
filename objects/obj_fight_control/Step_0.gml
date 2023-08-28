@@ -59,6 +59,7 @@ if(fighters_created)
 			victory=false;
 			alarm[3]=room_speed;
 		}
+		
 		if(obj_Conda.hp<=0)
 		{
 			obj_Conda.stance=EnemyStance.dead;

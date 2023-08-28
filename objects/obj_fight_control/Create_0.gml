@@ -15,6 +15,12 @@ global.start_fight=false;
 global.fight_ended=false;
 global.fight_victory=-1;
 
+//enemy globals
+global.enemy_hit = true; //true: enemy can be hit
+global.enemy_atk = false; //true:enemy can do damage
+global.enemy_hurt = false; //true: enemy got hurt
+
+
 //set enemies
 fighter1=obj_fight_gato;
 fighter2=global.fightEnemy;

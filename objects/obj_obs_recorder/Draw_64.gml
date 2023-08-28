@@ -8,10 +8,9 @@ if(global.DrawText)
 	var _xx=global.res.guiwidth*(1/3);
 	var _yy=global.res.guiheight*(1/3);
 
-	draw_set_font(fnt_RODIN)
-	draw_set_color(c_white)
-	draw_text(_xx,_yy,"Beat Number")
-	draw_text(_xx+_tab,_yy,"Key")
+	draw_set_color(c_white);
+	draw_text(_xx,_yy,"Beat Number");
+	draw_text(_xx+_tab,_yy,"Key");
 
 	for (var i = 0; i < array_length(beat_map); i++) {
 		//beat number

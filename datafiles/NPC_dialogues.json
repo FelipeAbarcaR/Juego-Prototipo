@@ -717,7 +717,7 @@
   "BACKGROUND": "spr_textbox_bg",
   "BG_INDEX": 2,
   "LOOP": 0,
-  "OBJ_NAME": 0
+  "OBJ_NAME": "obj_jabali"
  },
  {
   "ID": "NPC 101_c1d1t2",
@@ -747,7 +747,7 @@
   "BACKGROUND": "spr_textbox_bg",
   "BG_INDEX": 2,
   "LOOP": 0,
-  "OBJ_NAME": 0
+  "OBJ_NAME": "obj_jabali"
  },
  {
   "ID": "NPC 101_c1d1t3",
@@ -777,7 +777,7 @@
   "BACKGROUND": "spr_textbox_bg",
   "BG_INDEX": 2,
   "LOOP": 0,
-  "OBJ_NAME": 0
+  "OBJ_NAME": "obj_jabali"
  },
  {
   "ID": "NPC 101_c1d1t4",
@@ -807,7 +807,7 @@
   "BACKGROUND": "spr_textbox_bg",
   "BG_INDEX": 2,
   "LOOP": 0,
-  "OBJ_NAME": 0
+  "OBJ_NAME": "obj_jabali"
  },
  {
   "ID": "NPC 101_c1d1t5",
@@ -837,7 +837,7 @@
   "BACKGROUND": "spr_textbox_bg",
   "BG_INDEX": 2,
   "LOOP": 0,
-  "OBJ_NAME": 0
+  "OBJ_NAME": "obj_jabali"
  },
  {
   "ID": "NPC 102_c1d1t6",
@@ -867,7 +867,7 @@
   "BACKGROUND": "spr_textbox_bg",
   "BG_INDEX": 2,
   "LOOP": 0,
-  "OBJ_NAME": 0
+  "OBJ_NAME": "obj_jabali"
  },
  {
   "ID": "NPC 102_c1d1t7",
@@ -897,7 +897,7 @@
   "BACKGROUND": "spr_textbox_bg",
   "BG_INDEX": 2,
   "LOOP": 0,
-  "OBJ_NAME": 0
+  "OBJ_NAME": "obj_jabali"
  },
  {
   "ID": "NPC 102_c1d1t8",
@@ -927,7 +927,7 @@
   "BACKGROUND": "spr_textbox_bg",
   "BG_INDEX": 2,
   "LOOP": 0,
-  "OBJ_NAME": 0
+  "OBJ_NAME": "obj_jabali"
  },
  {
   "ID": "NPC 102_c1d1t9",
@@ -957,7 +957,7 @@
   "BACKGROUND": "spr_textbox_bg",
   "BG_INDEX": 2,
   "LOOP": 0,
-  "OBJ_NAME": 0
+  "OBJ_NAME": "obj_jabali"
  },
  {
   "ID": "NPC 102_c1d1t10",
@@ -987,7 +987,7 @@
   "BACKGROUND": "spr_textbox_bg",
   "BG_INDEX": 2,
   "LOOP": 0,
-  "OBJ_NAME": 0
+  "OBJ_NAME": "obj_jabali"
  },
  {
   "ID": "NPC 103_c1d1t1",
@@ -1017,7 +1017,7 @@
   "BACKGROUND": "spr_textbox_bg",
   "BG_INDEX": 2,
   "LOOP": 0,
-  "OBJ_NAME": 0
+  "OBJ_NAME": "obj_capibara"
  },
  {
   "ID": "NPC 103_c1d1t2",
@@ -1047,7 +1047,7 @@
   "BACKGROUND": "spr_textbox_bg",
   "BG_INDEX": 2,
   "LOOP": 0,
-  "OBJ_NAME": 0
+  "OBJ_NAME": "obj_capibara"
  },
  {
   "ID": "NPC 103_c1d1t3",
@@ -1077,7 +1077,7 @@
   "BACKGROUND": "spr_textbox_bg",
   "BG_INDEX": 2,
   "LOOP": 0,
-  "OBJ_NAME": 0
+  "OBJ_NAME": "obj_capibara"
  },
  {
   "ID": "NPC 103_c1d1r1t4",
@@ -1107,7 +1107,7 @@
   "BACKGROUND": "spr_textbox_bg",
   "BG_INDEX": 2,
   "LOOP": 0,
-  "OBJ_NAME": 0
+  "OBJ_NAME": "obj_capibara"
  },
  {
   "ID": "NPC 103_c1d1r2t5",
@@ -1137,7 +1137,7 @@
   "BACKGROUND": "spr_textbox_bg",
   "BG_INDEX": 2,
   "LOOP": 0,
-  "OBJ_NAME": 0
+  "OBJ_NAME": "obj_capibara"
  },
  {
   "ID": "NPC 103_c1d1r2t6",
@@ -1167,7 +1167,7 @@
   "BACKGROUND": "spr_textbox_bg",
   "BG_INDEX": 2,
   "LOOP": 0,
-  "OBJ_NAME": 0
+  "OBJ_NAME": "obj_capibara"
  },
  {
   "ID": "NPC 103_c1d1r2t7",
@@ -1197,7 +1197,7 @@
   "BACKGROUND": "spr_textbox_bg",
   "BG_INDEX": 2,
   "LOOP": 0,
-  "OBJ_NAME": 0
+  "OBJ_NAME": "obj_capibara"
  },
  {
   "ID": "NPC 103_c1d1r3t8",
@@ -1227,7 +1227,7 @@
   "BACKGROUND": "spr_textbox_bg",
   "BG_INDEX": 2,
   "LOOP": 0,
-  "OBJ_NAME": 0
+  "OBJ_NAME": "obj_capibara"
  },
  {
   "ID": "NPC 103_c1d1r3t9",
@@ -1257,7 +1257,7 @@
   "BACKGROUND": "spr_textbox_bg",
   "BG_INDEX": 2,
   "LOOP": 0,
-  "OBJ_NAME": 0
+  "OBJ_NAME": "obj_capibara"
  },
  {
   "ID": "NPC 103_c1d1r3t10",
@@ -1287,7 +1287,7 @@
   "BACKGROUND": "spr_textbox_bg",
   "BG_INDEX": 2,
   "LOOP": 0,
-  "OBJ_NAME": 0
+  "OBJ_NAME": "obj_capibara"
  },
  {
   "ID": "NPC 104_c1d1r3t1",
@@ -1317,7 +1317,7 @@
   "BACKGROUND": "spr_textbox_bg",
   "BG_INDEX": 2,
   "LOOP": 0,
-  "OBJ_NAME": 0
+  "OBJ_NAME": "obj_hamster"
  },
  {
   "ID": "NPC 104_c1d1r3t2",
@@ -1347,7 +1347,7 @@
   "BACKGROUND": "spr_textbox_bg",
   "BG_INDEX": 2,
   "LOOP": 0,
-  "OBJ_NAME": 0
+  "OBJ_NAME": "obj_hamster"
  },
  {
   "ID": "NPC 104_c1d1r3t3",
@@ -1377,7 +1377,7 @@
   "BACKGROUND": "spr_textbox_bg",
   "BG_INDEX": 2,
   "LOOP": 0,
-  "OBJ_NAME": 0
+  "OBJ_NAME": "obj_hamster"
  },
  {
   "ID": "NPC 104_c1d1r3t4",
@@ -1407,7 +1407,7 @@
   "BACKGROUND": "spr_textbox_bg",
   "BG_INDEX": 2,
   "LOOP": 0,
-  "OBJ_NAME": 0
+  "OBJ_NAME": "obj_hamster"
  },
  {
   "ID": "NPC 104_c1d1r3t5",
@@ -1437,7 +1437,7 @@
   "BACKGROUND": "spr_textbox_bg",
   "BG_INDEX": 2,
   "LOOP": 0,
-  "OBJ_NAME": 0
+  "OBJ_NAME": "obj_hamster"
  },
  {
   "ID": "NPC 105_c1d1t1",
@@ -1467,7 +1467,7 @@
   "BACKGROUND": "spr_textbox_bg",
   "BG_INDEX": 2,
   "LOOP": 0,
-  "OBJ_NAME": 0
+  "OBJ_NAME": "obj_coneja"
  },
  {
   "ID": "NPC 105_c1d1t2",
@@ -1497,7 +1497,7 @@
   "BACKGROUND": "spr_textbox_bg",
   "BG_INDEX": 2,
   "LOOP": 0,
-  "OBJ_NAME": 0
+  "OBJ_NAME": "obj_coneja"
  },
  {
   "ID": "NPC 105_c1d1t3",
@@ -1527,7 +1527,7 @@
   "BACKGROUND": "spr_textbox_bg",
   "BG_INDEX": 2,
   "LOOP": 0,
-  "OBJ_NAME": 0
+  "OBJ_NAME": "obj_coneja"
  },
  {
   "ID": "NPC 105_c1d1t4",
@@ -1557,7 +1557,7 @@
   "BACKGROUND": "spr_textbox_bg",
   "BG_INDEX": 2,
   "LOOP": 0,
-  "OBJ_NAME": 0
+  "OBJ_NAME": "obj_coneja"
  },
  {
   "ID": "NPC 106_c1d1t1",
@@ -1587,7 +1587,7 @@
   "BACKGROUND": "spr_textbox_bg",
   "BG_INDEX": 2,
   "LOOP": 0,
-  "OBJ_NAME": 0
+  "OBJ_NAME": "obj_jabali"
  },
  {
   "ID": "NPC 106_c1d1t2",
@@ -1617,7 +1617,7 @@
   "BACKGROUND": "spr_textbox_bg",
   "BG_INDEX": 2,
   "LOOP": 0,
-  "OBJ_NAME": 0
+  "OBJ_NAME": "obj_jabali"
  },
  {
   "ID": "NPC 106_c1d1t3",
@@ -1647,7 +1647,7 @@
   "BACKGROUND": "spr_textbox_bg",
   "BG_INDEX": 2,
   "LOOP": 0,
-  "OBJ_NAME": 0
+  "OBJ_NAME": "obj_jabali"
  },
  {
   "ID": "NPC 106_c1d1t4",
@@ -1677,7 +1677,7 @@
   "BACKGROUND": "spr_textbox_bg",
   "BG_INDEX": 2,
   "LOOP": 0,
-  "OBJ_NAME": 0
+  "OBJ_NAME": "obj_jabali"
  },
  {
   "ID": "NPC 107_c1d1t1",
@@ -1707,6 +1707,6 @@
   "BACKGROUND": "spr_textbox_bg",
   "BG_INDEX": 2,
   "LOOP": 0,
-  "OBJ_NAME": 0
+  "OBJ_NAME": "obj_questie"
  }
 ]

@@ -25,6 +25,4 @@ if(item_id!=-1)
 
 }
 
-
 draw_set_alpha(1);
-

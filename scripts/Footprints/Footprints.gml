@@ -8,7 +8,7 @@ function check_floor_tiles(){
 		var _lay_id=layer_get_id("terrain_base");
 		var _tilemap_id=layer_tilemap_get_id(_lay_id);
 		var _alpha_tile_collision = tilemap_get_at_pixel(_tilemap_id,x,y);
-		show_debug_message("tilemap: "+string(_alpha_tile_collision));
+		//show_debug_message("tilemap: "+string(_alpha_tile_collision));
 		if (_alpha_tile_collision==611) //sand tile map = 611
 		{
 				var _istooclose=false;

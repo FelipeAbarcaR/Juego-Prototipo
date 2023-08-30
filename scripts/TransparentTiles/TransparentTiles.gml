@@ -21,6 +21,6 @@ function check_alpha_tiles(){
 				instance_create_depth(_x,_y,depth-1,obj_alphaontile);
 			}
 		}
-	}else show_debug_message("no se encuentra layer Alpha "+"lay_id: "+string(_lay_id));
+	}
 
 }

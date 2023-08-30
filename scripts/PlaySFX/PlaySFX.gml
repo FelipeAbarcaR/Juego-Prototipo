@@ -8,3 +8,4 @@ function PlaySFX(_sound,_gain=undefined){
 		if(is_undefined(_gain)) gain=sfx_gain else gain=_gain;
 	    audio_play_sound(_sound,10,0,gain)
 	}
+}

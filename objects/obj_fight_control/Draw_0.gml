@@ -5,8 +5,6 @@ if(draw_background)
     draw_sprite_stretched(background,0,x,y,bg_width,bg_height)
 }
 
-
-
 if(global.DrawText)
 {
 	draw_text(2*room_width/3, 16, "HIT : "+string(global.enemy_hit));

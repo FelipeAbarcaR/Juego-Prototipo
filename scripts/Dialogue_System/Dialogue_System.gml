@@ -632,7 +632,7 @@ global.topics[$ "signwarning2"] = [
 ];
 global.topics[$ "conejeando"] = [
 	SPEAKER("Conejita",spr_pt_coneja, PORTRAIT_SIDE.LEFT),
-	CHOICE("Che queres pelear o sólo el item? á é í ó ú",OPTION("Pelear","conejeandopelea"),OPTION("dash","conejeandoitem"))
+	CHOICE("Che queres pelear o sólo el item?",OPTION("Pelear","conejeandopelea"),OPTION("dash","conejeandoitem"))
 
 ];
 

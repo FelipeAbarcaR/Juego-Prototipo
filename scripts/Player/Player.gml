@@ -343,18 +343,20 @@ function tile_alpha(){
 	
 	var rate = 0.05;
 	var _lay_id = layer_get_id("TilesUpperUpper");
-	var _map_id = layer_tilemap_get_id(_lay_id);
-	if(_map_id!=(-1))
-	{
-		if(tilemap_get_at_pixel(_map_id,x,y))
+
+		var _map_id = layer_tilemap_get_id(_lay_id);
+		if(_map_id!=(-1))
 		{
-			shader_set(sha_transparent);
-			var uni_transparency = shader_get_uniform(sha_transparent,"sha_alpha");
-			shader_set_uniform_f(uni_transparency,sha_alpha);
-			layer_shader(_lay_id,sha_transparent);
-			shader_reset();
+			if(tilemap_get_at_pixel(_map_id,x,y))
+			{
+				shader_set(sha_transparent);
+				var uni_transparency = shader_get_uniform(sha_transparent,"sha_alpha");
+				shader_set_uniform_f(uni_transparency,sha_alpha);
+				layer_shader(_lay_id,sha_transparent);
+				shader_reset();
+			}
 		}
-	}
+
 }
 	
 function collision_bridge (){

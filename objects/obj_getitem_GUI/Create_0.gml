@@ -16,11 +16,15 @@ margin=8;
 width=208;
 height=48;
 
-if(item_id!=-1)
+if(variable_instance_exists(id,"item_id"))
 {
-    item_sprite=global.itemsprite[item_id];
-	item_name=global.itemname[item_id];
+	if(item_id!=-1)
+	{
+	    item_sprite=global.itemsprite[item_id];
+		item_name=global.itemname[item_id];
+	}
 }else
 {
-    show_debug_message("obj_getitem_frame no se encontró ITEM.ID "+ string(item_id)+" "+string(item_quantity));
+    show_debug_message("obj_getitem_frame no se encontró ITEM.ID (-1 o no fue asignado)");
+	item_id=-1;
 }

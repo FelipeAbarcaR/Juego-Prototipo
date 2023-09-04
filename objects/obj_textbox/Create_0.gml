@@ -35,7 +35,7 @@ portrait_y = padding;
 
 //Speaker
 
-speaker_font = fnt_text;
+speaker_font = "fnt_Dogica";
 speaker_color = #464633;
 speaker_name = "";
 speaker_width = sprite_get_width(spr_name);
@@ -100,6 +100,16 @@ condition4="";
 /// Methods
 /*** Generally you never need to call these manually ***/
 
+
+//Sound Effects
+sfx_up_down_option=Arrow_Up___Down;
+sfx_close_textbox=Close_Textbox;
+sfx_open_textbox=Open_Textbox;
+sfx_confirm_option=Confirm_Option;
+
+//Start opening sfx
+PlaySFX(sfx_open_textbox);
+
 // Start a conversation
 setTopic = function(topic) {
 	actions = global.topics[$ topic];
@@ -126,6 +136,7 @@ next = function() {
 		}
 	
 		minimize_to_destroy=true;
+		PlaySFX(sfx_close_textbox);
 	}
 	else {
 		actions[current_action].act(id);
@@ -142,7 +153,7 @@ setText = function(newText) {
 	text = newText;
 	text_length = string_length(newText);
 	text_progress = 0;
-	scribble_object = scribble(text+"áéíóú");
+	scribble_object = scribble(text);
 }
 
 //Dialogue SFX
@@ -165,4 +176,3 @@ increasing_value=0.0;
 starting_y=y+height/2;
 delta_scaling=0.1;
 
-//SCRIBBLE OBJECT

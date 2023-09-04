@@ -16,6 +16,7 @@ if(is_array(_arr))
 	
 	draw_set_font(fnt_UI);
 	draw_text(x + 2, y + 4, _count);
+	draw_set_font(fnt_text);
 }
 
 

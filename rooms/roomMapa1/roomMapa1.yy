@@ -18,6 +18,7 @@
     {"name":"inst_12E9F82","path":"rooms/roomMapa1/roomMapa1.yy",},
     {"name":"inst_4A62F843","path":"rooms/roomMapa1/roomMapa1.yy",},
     {"name":"inst_690BCF55","path":"rooms/roomMapa1/roomMapa1.yy",},
+    {"name":"inst_1073573E","path":"rooms/roomMapa1/roomMapa1.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -93,6 +94,10 @@
                 {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"prnt_entity","path":"objects/prnt_entity/prnt_entity.yy",},"propertyId":{"name":"EntityShadow","path":"objects/prnt_entity/prnt_entity.yy",},"value":"False",},
               ],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1632.0,"y":720.0,},
             {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4A62F843","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_palmera","path":"objects/obj_palmera/obj_palmera.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":512.0,"y":656.0,},
+            {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_1073573E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_coneja","path":"objects/obj_coneja/obj_coneja.yy",},"properties":[
+                {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"prnt_entity","path":"objects/prnt_entity/prnt_entity.yy",},"propertyId":{"name":"EntityActivateArgs","path":"objects/prnt_entity/prnt_entity.yy",},"value":"[array_first(global.dialogue_order[$ \"obj_coneja\"])]",},
+                {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"prnt_entity","path":"objects/prnt_entity/prnt_entity.yy",},"propertyId":{"name":"EntityActivateScript","path":"objects/prnt_entity/prnt_entity.yy",},"value":"startDialogue",},
+              ],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":928.0,"y":160.0,},
           ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
         {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"instances_OBJ","depth":2100,"effectEnabled":true,"effectType":null,"gridX":8,"gridY":8,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
       ],"properties":[],"userdefinedDepth":false,"visible":true,},

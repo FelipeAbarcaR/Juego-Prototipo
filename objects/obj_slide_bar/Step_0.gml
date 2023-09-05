@@ -1,29 +1,43 @@
-if(mouse_check_button_pressed(mb_left))
+if(mouse_check_button(mb_left) and instance_position(mouse_x,mouse_y,all) = id)
 {
-	var _button_x = x + sprite_width*zoom_value;
-	var _button_y = y;
-	var _button_radius = sprite_get_width(spr_slide_button)/2;
-	
-	if(point_in_circle(mouse_x,mouse_y,_button_x,_button_y,_button_radius))
+	slide_clicked = true;
+}
+
+if(slide_clicked == true)
+{
+	if(slide_bar_x >= slide_bar_pos_x and slide_bar_x <= slide_bar_pos_x + slide_bar_box_width)
 	{
-		selected = true;
+		slide_bar_x = mouse_x;	
+	}
+	
+	if(slide_bar_x < slide_bar_pos_x)
+	{
+		slide_bar_x = slide_bar_pos_x;
+	}
+	
+	if(slide_bar_x > slide_bar_pos_x + slide_bar_box_width)
+	{
+		slide_bar_x = slide_bar_pos_x + slide_bar_box_width;	
+	}		
+}
+
+if(mouse_check_button_released(mb_left))
+{
+	slide_clicked = false;
+	
+	if(slide_percentage < 1)
+	{	
+		global.zoom = -slide_percentage;
+	}
+	else if(slide_percentage > 1)
+	{
+		global.zoom = slide_percentage;
+	}
+	else if (slide_percentage == 1)
+	{
+		global.zoom = 0;
 	}
 }
 
-if(!mouse_check_button(mb_left))
-{
-	selected = false;	
-}
-
-if selected
-{
-	zoom_value = clamp((mouse_x - x)/sprite_width/2,-zoom_max_value,zoom_max_value);	
-	
-	global.zoom = zoom_value;
-	
-	
-
-	
-
-	
-}
+slide_percentage = 2*((slide_bar_x - slide_bar_pos_x)/slide_bar_box_width);
+x = slide_bar_x;

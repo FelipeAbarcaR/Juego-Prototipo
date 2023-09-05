@@ -1,7 +1,3 @@
-draw_self();
-//draw_sprite_part(sprite_index,1,0,0,sprite_width*zoom_value, sprite_width, x, y - sprite_get_yoffset(sprite_index));
-draw_sprite(spr_slide_button,0,x + sprite_width*zoom_value,y);
-
-
-
-
+draw_sprite(spr_slide_button,0,x,y);
+draw_sprite(spr_slide_bar,0,slide_bar_pos_x,y);
+draw_text(slide_bar_pos_x + slide_bar_box_width + 12,y+6,string(round(slide_percentage*100)) + string("%"));

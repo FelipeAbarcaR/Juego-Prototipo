@@ -50,7 +50,7 @@
     {"name":"inst_68FC0AC1","path":"rooms/roomMapaInicial/roomMapaInicial.yy",},
     {"name":"inst_44A256CC","path":"rooms/roomMapaInicial/roomMapaInicial.yy",},
     {"name":"inst_5863B18E","path":"rooms/roomMapaInicial/roomMapaInicial.yy",},
-    {"name":"inst_7746B749","path":"rooms/roomMapaInicial/roomMapaInicial.yy",},
+    {"name":"inst_4F1CCDBD","path":"rooms/roomMapaInicial/roomMapaInicial.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -99,7 +99,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3712230E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_apple","path":"objects/obj_apple/obj_apple.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1184.0,"y":432.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4E6BD8F8","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_orange","path":"objects/obj_orange/obj_orange.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1136.0,"y":560.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_2A40B88A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_apple","path":"objects/obj_apple/obj_apple.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":936.0,"y":424.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6909B141","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_coneja","path":"objects/obj_coneja/obj_coneja.yy",},"properties":[
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6909B141","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_coneja_m0","path":"objects/obj_coneja_m0/obj_coneja_m0.yy",},"properties":[
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"prnt_entity","path":"objects/prnt_entity/prnt_entity.yy",},"propertyId":{"name":"EntityActivateScript","path":"objects/prnt_entity/prnt_entity.yy",},"value":"startDialogue",},
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"prnt_entity","path":"objects/prnt_entity/prnt_entity.yy",},"propertyId":{"name":"EntityActivateArgs","path":"objects/prnt_entity/prnt_entity.yy",},"value":"[\"conejeando\"]",},
           ],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1056.0,"y":504.0,},
@@ -117,7 +117,7 @@
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_room_exit","path":"objects/obj_room_exit/obj_room_exit.yy",},"propertyId":{"name":"sequence_in","path":"objects/obj_room_exit/obj_room_exit.yy",},"value":"sqFadeIn",},
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_room_exit","path":"objects/obj_room_exit/obj_room_exit.yy",},"propertyId":{"name":"sequence_out","path":"objects/obj_room_exit/obj_room_exit.yy",},"value":"sqFadeOut",},
           ],"rotation":0.0,"scaleX":0.5,"scaleY":1.0,"x":8.0,"y":752.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7746B749","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_slide_bar","path":"objects/obj_slide_bar/obj_slide_bar.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":960.0,"y":536.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4F1CCDBD","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_slide_bar","path":"objects/obj_slide_bar/obj_slide_bar.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":896.0,"y":536.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRLayer","resourceVersion":"1.0","name":"Crypt","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[
         {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"CryptObstacles","depth":300,"effectEnabled":true,"effectType":null,"gridX":8,"gridY":8,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[

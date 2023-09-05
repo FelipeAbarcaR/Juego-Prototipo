@@ -21,7 +21,8 @@ if (cameraFollow) {
 	
 	if(global.zoom != 0)
 	{
-		global.zoom *= 0.1;
+		//var _zoom_width = global.zoom * room_width;
+		//var _zoom_height = global.zoom * room_height;
 		
 		//Add to size
 		var _addW = _camW * global.zoom;

@@ -13,8 +13,14 @@ var _sizeY = 2; // y dos de alto
 var _invX = _margin;												//el mas 30 es porque si
 var _invY = global.res.guiheight - (_margin + _sep + _cellSize + _sizeY + 30);
 
+//slide bar
+var _slide_bar_x = 100;
+var _slide_bar_y = 100;
+
 var _x = 0;
 var _y = 0;
+
+instance_create_depth(_slide_bar_x,_slide_bar_y,0,obj_slide_bar);
 
 for(var i = 0; i < INV_SIZE ; i++)
 {

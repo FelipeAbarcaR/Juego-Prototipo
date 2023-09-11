@@ -103,3 +103,15 @@ function setBPM(_bpm)
 	global.BeatTimeMS=((60)/global.bpm)*1000000;
 	
 }
+
+
+//dibujar la barrita de ritmo que se desvanece
+
+function draw_vanish_beatbar()
+{
+    with(obj_beat)
+	{
+	    var _bar = instance_create_layer(barX, barY,"Instances",obj_vanish);
+		_bar.draw_on_gui=true;
+	}
+}

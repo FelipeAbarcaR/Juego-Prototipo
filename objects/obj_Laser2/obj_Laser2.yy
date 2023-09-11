@@ -10,8 +10,8 @@
     "path": "folders/Objects/Minijuegos/Crypt.yy",
   },
   "parentObjectId": {
-    "name": "obj_prnt_trap",
-    "path": "objects/obj_prnt_trap/obj_prnt_trap.yy",
+    "name": "obj_crypt_prnt_trap",
+    "path": "objects/obj_crypt_prnt_trap/obj_crypt_prnt_trap.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

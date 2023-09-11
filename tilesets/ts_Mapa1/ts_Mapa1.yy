@@ -9739,7 +9739,7 @@
         0,
       ],},
   ],
-  "tileAnimationSpeed": 15.0,
+  "tileAnimationSpeed": 1.5,
   "tileHeight": 16,
   "tilehsep": 0,
   "tilevsep": 0,

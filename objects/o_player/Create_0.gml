@@ -28,6 +28,7 @@ script_start = false;
 
 //sprites
 	//moving
+	
 	spr_move_right		= spr_gato3_right;
 	spr_move_right_up	= spr_gato3_right_up;
 	spr_move_up			= spr_gato3_up;
@@ -36,12 +37,12 @@ script_start = false;
 	spr_move_left_down	= spr_gato3_left_down;
 	spr_move_down		= spr_gato3_down;
 	spr_move_down_right	= spr_gato3_down_right;
-	
+
 	//idle
 	spr_player_idle = spr_gato3_idle;
 	
 	//roll
-	spr_roll = spr_player_roll
+	spr_roll = spr_player_roll;
 	
 //sound
 path_id = -1;

@@ -37,6 +37,10 @@ if (state == states.IDLE && !_handcreated)
 	    state = states.ROLL;
 		image_index=0;
 	}
+	if(keyUp+keyDown+keyLeft>0)
+	{
+	    draw_vanish_beatbar();
+	}
 }
 
 

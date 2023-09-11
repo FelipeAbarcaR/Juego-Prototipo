@@ -57,7 +57,7 @@ function scr_GridMove(){
 		var x_to = lengthdir_x(DistanceRemaining,Direction);
 		var y_to = lengthdir_y(DistanceRemaining,Direction);
 		var _tilemap = tilemap_get_at_pixel(_tilemap_id,x+x_to,y+y_to);
-		if(object_index==obj_CharGrid)
+		if(object_index==obj_crypt_player)
 		{
 			if(_tilemap ==-1 or _tilemap==0)
 			{
@@ -71,7 +71,7 @@ function scr_GridMove(){
 
 function scr_Wait()
 {
-	if(object_index==obj_CharGrid)
+	if(object_index==obj_crypt_player)
 	{
 		if (inputmagnitude==1 && global.beatchance==true){
 			Direction=InputDirection;

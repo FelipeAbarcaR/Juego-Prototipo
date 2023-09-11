@@ -20,7 +20,7 @@ if(shader_current() != -1) shader_reset();
 
 if(global.DrawText)
 {
-
+	draw_sprite_bbox();
     draw_text_transformed(x-40,y-20,"hola: "+string(hola),0.4,0.4,0);
 	draw_circle(x,y,2,0);
 

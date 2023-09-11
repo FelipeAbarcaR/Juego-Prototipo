@@ -2,7 +2,9 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "obj_pileta",
-  "eventList": [],
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+  ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
@@ -29,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_pileta",
-    "path": "sprites/spr_pileta/spr_pileta.yy",
+    "name": "spr_fountain3",
+    "path": "sprites/spr_fountain3/spr_fountain3.yy",
   },
   "spriteMaskId": null,
   "visible": true,

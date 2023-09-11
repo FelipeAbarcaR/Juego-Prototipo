@@ -188,21 +188,24 @@ function play_walk_audio(_terreno){
 	if(room == roomMapaInicial) path_id = layer_get_id("TilesMain");
 	else if (room == roomViejoSabio) path_id = layer_get_id("Tiles_floor");
 
-	var _map_id = layer_tilemap_get_id(path_id);
-	if (_map_id!=(-1)) var _data = tilemap_get_at_pixel(_map_id,x,y) else var _data=-1;
+	if(path_id!=(-1))
+	{
+		var _map_id = layer_tilemap_get_id(path_id);
+		if (_map_id!=(-1)) var _data = tilemap_get_at_pixel(_map_id,x,y) else var _data=-1;
 	
-	if(!tile_get_empty(_data))
-	{
-		if (!audio_is_playing(Pasos_4))
+		if(!tile_get_empty(_data))
 		{
-			audio_play_sound(Pasos_4,8,false);
-		}
-	} 
-	else
-	{
-		if (!audio_is_playing(Pasos_2))
+			if (!audio_is_playing(Pasos_4))
+			{
+				audio_play_sound(Pasos_4,8,false);
+			}
+		} 
+		else
 		{
-			audio_play_sound(Pasos_2,8,false);
+			if (!audio_is_playing(Pasos_2))
+			{
+				audio_play_sound(Pasos_2,8,false);
+			}
 		}
 	}
 }
@@ -225,7 +228,7 @@ function reset_variables() {
 	down = 0;
 	vmove = 0;
 	hmove = 0;
-	walk_spd = 2;
+	walk_spd = 1.8;
 	
 
 	
@@ -254,7 +257,7 @@ function calc_movement() {
 	{
 		//get direction we are moving
 		dir = point_direction(0, 0, hmove, vmove);
-		
+	
 		play_walk_audio();
 		
 		//get distance we are moving

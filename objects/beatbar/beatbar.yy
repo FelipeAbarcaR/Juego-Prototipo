@@ -26,8 +26,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "img_BeatBar",
-    "path": "sprites/img_BeatBar/img_BeatBar.yy",
+    "name": "img_BeatBarFrame",
+    "path": "sprites/img_BeatBarFrame/img_BeatBarFrame.yy",
   },
   "spriteMaskId": null,
   "visible": true,

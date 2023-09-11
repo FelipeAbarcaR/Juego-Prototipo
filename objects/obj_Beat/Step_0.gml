@@ -4,21 +4,13 @@
 //Activar obstáculos Obstacle1 
 	MoveKey=keyboard_check_pressed(vk_control);
 
-	var sKey=keyboard_check_pressed(ord("S"));
-	if sKey
-	{
-		audio_play_sound(Beep,100,0,1,0,3)
-		var _barra=instance_create_layer(x, y,"Instances",obj_vanish);
-		with(_barra)
-			{
-				sprite_index=img_BeatMeter;
-			}
-	}
+
 //start movement's obstacles
 if(MoveKey)
 {
 	if(global.Move==false) global.Move=true else global.Move=false;
 }
+
 //counting hand
 var _hKey=keyboard_check_pressed(ord("H"));
 if (_hKey) instance_create_layer(0,0, "Instances", obj_CountHand);
@@ -33,14 +25,15 @@ if (_hKey) instance_create_layer(0,0, "Instances", obj_CountHand);
 	global.beat=true;
 	SumDelta -= global.BeatTimeMS;
 	global.BeatNumber+=1;
-	audio_play_sound(Beep,11,false);
+	//audio_play_sound(Beep,11,false);
 	//instance_create_layer(barX, barY,"Instances",obj_vanish_GUI);
 	} else global.beat=false;
 
 //beat progress from 0 to 1
 	global.beatprogress=min(SumDelta/global.BeatTimeMS,1);
 //beat meter
-	BeatBarProgress = sin(((SumFullDelta/global.BeatTimeMS)*pi));
+	var _midtime =global.BeatTimeMS/2; //fix para que el beat no sea en los bordes
+	BeatBarProgress =  sin((((SumFullDelta)/global.BeatTimeMS)*pi));
 	//Beat's chance to hit
 	if (abs(BeatBarProgress)<=beathitrange) global.beatchance =true; else global.beatchance =false;
 
@@ -135,14 +128,16 @@ switch(_player_mainchar)
 		case o_player: 
 			if (_mode == mode.move and global.interact)
 			{
-				instance_create_layer(barX, barY,"Instances",obj_vanish);
+				var _bar = instance_create_layer(barX, barY,"Instances",obj_vanish);
+				_bar.draw_on_gui=true;
 			}
 		break;
 		
 		default:
 			if (_mode == mode.move and _player_mainchar.inputmagnitude)
 			{
-				instance_create_layer(barX, barY,"Instances",obj_vanish);
+				var _bar instance_create_layer(barX, barY,"Instances",obj_vanish);
+				_bar.draw_on_gui=true;
 			}
 		break;		
 	}

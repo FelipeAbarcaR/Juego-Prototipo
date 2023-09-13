@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Core",
-    "path": "folders/KazanGames/FoxeyTransitionsPro/Core.yy",
+    "path": "folders/Transiciones/FoxeyTransitionsPro/Core.yy",
   },
 }

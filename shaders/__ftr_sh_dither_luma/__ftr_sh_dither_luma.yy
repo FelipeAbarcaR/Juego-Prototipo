@@ -4,7 +4,7 @@
   "name": "__ftr_sh_dither_luma",
   "parent": {
     "name": "Dither",
-    "path": "folders/KazanGames/FoxeyTransitionsPro/Shaders/Dither.yy",
+    "path": "folders/Transiciones/FoxeyTransitionsPro/Shaders/Dither.yy",
   },
   "type": 1,
 }

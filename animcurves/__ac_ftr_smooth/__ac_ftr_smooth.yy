@@ -11,6 +11,6 @@
   "function": 2,
   "parent": {
     "name": "Curves",
-    "path": "folders/KazanGames/FoxeyTransitionsPro/Core/Curves.yy",
+    "path": "folders/Transiciones/FoxeyTransitionsPro/Core/Curves.yy",
   },
 }

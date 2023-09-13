@@ -10,3 +10,10 @@ transition_colour=c_black;
 
 //Comenzar transición (en step)
 transition_start=true;
+
+//var _player=o_player;
+
+//if(instance_exists(_player))
+//{
+//    o_player.state=states.LOCK;
+//}

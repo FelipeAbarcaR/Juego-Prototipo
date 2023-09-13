@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "Pattern",
-    "path": "folders/KazanGames/FoxeyTransitionsPro/Core/Pattern.yy",
+    "path": "folders/Transiciones/FoxeyTransitionsPro/Core/Pattern.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

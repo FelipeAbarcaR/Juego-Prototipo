@@ -15,15 +15,7 @@ if(transition_start)
 			var _bgm=target(Index.music);
 			audio_play_sound(_bgm,10,1,bgm_gain)
 		}
-		
-		if(global.targetX!=-1 && global.targetY!=-1)
-		{
-			with(o_player)
-			{
-			    x=global.targetX;
-				y=global.targetY;
-			}
-		}
+
 	}
 
 	transition=screen_transition(transition_type,transition_way,0,transition_colour,_callout);
@@ -41,6 +33,13 @@ if(screen_transition_exists(transition))
 		TransitionResetValues();
 		screen_transition_destroy(transition, true);
 	    instance_destroy();
+		
+	//var _player=o_player;
+	//if(instance_exists(_player))
+	//{
+	//    o_player.state=states.IDLE;
+	//}
+		
 	}
 }
 

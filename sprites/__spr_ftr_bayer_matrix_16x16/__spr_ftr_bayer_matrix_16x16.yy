@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "Dithering",
-    "path": "folders/KazanGames/FoxeyTransitionsPro/Core/Dithering.yy",
+    "path": "folders/Transiciones/FoxeyTransitionsPro/Core/Dithering.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

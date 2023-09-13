@@ -4,7 +4,7 @@
   "name": "__ftr_sh_colorize",
   "parent": {
     "name": "Shaders",
-    "path": "folders/KazanGames/FoxeyTransitionsPro/Shaders.yy",
+    "path": "folders/Transiciones/FoxeyTransitionsPro/Shaders.yy",
   },
   "type": 1,
 }

@@ -25,7 +25,7 @@
   },
   "parent": {
     "name": "Sequences",
-    "path": "folders/KazanGames/FoxeyTransitionsPro/Sequences.yy",
+    "path": "folders/Transiciones/FoxeyTransitionsPro/Sequences.yy",
   },
   "playback": 1,
   "playbackSpeed": 60.0,

@@ -4,7 +4,7 @@
   "name": "__ftr_sh_sequence_example",
   "parent": {
     "name": "Shaders",
-    "path": "folders/KazanGames/FoxeyTransitionsPro/Sequences/Shaders.yy",
+    "path": "folders/Transiciones/FoxeyTransitionsPro/Sequences/Shaders.yy",
   },
   "type": 1,
 }

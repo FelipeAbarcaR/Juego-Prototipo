@@ -29,7 +29,7 @@
   "origin": 0,
   "parent": {
     "name": "Luma",
-    "path": "folders/KazanGames/FoxeyTransitionsPro/Core/Luma.yy",
+    "path": "folders/Transiciones/FoxeyTransitionsPro/Core/Luma.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

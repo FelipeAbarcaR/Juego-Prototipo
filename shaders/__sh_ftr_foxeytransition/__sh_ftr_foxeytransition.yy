@@ -4,7 +4,7 @@
   "name": "__sh_ftr_foxeytransition",
   "parent": {
     "name": "Core",
-    "path": "folders/KazanGames/FoxeyTransitionsPro/Core.yy",
+    "path": "folders/Transiciones/FoxeyTransitionsPro/Core.yy",
   },
   "type": 1,
 }

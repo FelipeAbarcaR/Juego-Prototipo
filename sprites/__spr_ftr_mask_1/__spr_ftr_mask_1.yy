@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "Masks",
-    "path": "folders/KazanGames/FoxeyTransitionsPro/Core/Masks.yy",
+    "path": "folders/Transiciones/FoxeyTransitionsPro/Core/Masks.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

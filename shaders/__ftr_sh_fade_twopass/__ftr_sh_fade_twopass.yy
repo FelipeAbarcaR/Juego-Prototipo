@@ -4,7 +4,7 @@
   "name": "__ftr_sh_fade_twopass",
   "parent": {
     "name": "Normal",
-    "path": "folders/KazanGames/FoxeyTransitionsPro/Shaders/Normal.yy",
+    "path": "folders/Transiciones/FoxeyTransitionsPro/Shaders/Normal.yy",
   },
   "type": 1,
 }

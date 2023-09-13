@@ -82,26 +82,26 @@ function EntityHitSolid(){
 	flash = 0.5;
 }
 	
-function AbrirPuerta(_roomindex){
+function AbrirPuerta(_roomindex,_targetX,_targetY){
 
-if(instance_exists(o_player))
-{
-	if(o_player.state != states.DEAD)
+	if(instance_exists(o_player))
 	{
-		with(obj_puerta) image_index = 1;
-		var _name=index.name;
-		var _roomname=global.room_data[_roomindex][_name];
-		global.currentroom =_roomindex;
-		global.roomTarget = _roomname;
-		global.targetX = 160;
-		global.targetY = 160;
-		global.targetdirection = o_player.dir;
-		with(o_player) state = states.IDLE;
-		TransitionStart(_roomname,sqSlideOutDiagonal,sqSlideInDiagonal);
-		//instance_destroy();
-		
+		if(o_player.state != states.DEAD)
+		{
+			with(obj_puerta) image_index = 1;
+			var _name=Index.name;
+			var _roomname=global.room_data[_roomindex][_name];
+			global.currentroom =_roomindex;
+			global.roomTarget = _roomname;
+			global.targetX = _targetX;
+			global.targetY = _targetY;
+			global.targetdirection = o_player.dir;
+			with(o_player) state = states.IDLE;
+			TransitionStart(_roomname,TR_TYPE.DITHER_CIRCLE_TWOPASS);
+			//instance_destroy();
+			//screen_transition(TR_TYPE.DITHER_CIRCLE_TWOPASS)//HACER ROOM TRANSITION EN FUNCION DEL OBJ_TRANSITION_MANAGER, Y PONER TARGET X Y TARGET Y, LUEGO ARREGLAR LAS OTRAS PUERTAS.(OBJ_GAME ROOM,START:TARGETX Y TARGET Y A 0, Y OTRAS COSITAS (CUANDO ES PALYER MOVE, O X E Y POR DEFECTO SI ESTAN EN 0))
+		}
 	}
-}
 }
 	
 function damage_entity(_tid, _sid, _damage, _time) {

@@ -3,11 +3,11 @@
 
 if(!any_audio_is_playing())
 {
-    var _bgm= current(index.music);
+    var _bgm= current(Index.music);
 	ResetBeatStats();
 	audio_play_sound(_bgm,10,1,0.4);
 }
-current_bpm=current(index.bpm);
+current_bpm=current(Index.bpm);
 global.bpm= current_bpm;
 global.BeatTimeMS=((60)/global.bpm)*1000000 //time of a beat in microseconds
 BeatTimeFrames=(60/global.bpm)*room_speed; //frames of a beat

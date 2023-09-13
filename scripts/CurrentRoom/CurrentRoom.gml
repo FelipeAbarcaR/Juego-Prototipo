@@ -12,7 +12,7 @@ function target(_index){
 	var _found = false;
 	for(var i=0;i<array_length(_array);i++)
 	{
-	    if(_map==_array[i][index.name])
+	    if(_map==_array[i][Index.name])
 		{
 		    _found=true;
 			break;

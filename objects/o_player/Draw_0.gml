@@ -7,7 +7,6 @@ if alarm[hurrtt] > 0 and flash-- < flash_initial/2 {
 	
 	//reset flash
 	if flash <= 0 flash = flash_initial;	
-	
 } else {
 	draw_sprite(spr_shadow,0,x,y+1); //Shadow
 	draw_sprite_ext(sprite_index, image_index,x, y-z, image_xscale, image_yscale, image_angle, image_blend, image_alpha);

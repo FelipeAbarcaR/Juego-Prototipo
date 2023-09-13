@@ -1,13 +1,13 @@
 /// @description Enumeracion + Configuracion
 
-enum TRANS_TYPE
-{
-	SLIDE,
-	FADE,
-	PUSH,
-	STAR,
-	WIPE
-}
+//enum TRANS_TYPE
+//{
+//	SLIDE,
+//	FADE,
+//	PUSH,
+//	STAR,
+//	WIPE
+//}
 
 width = global.res.guiwidth
 height = global.res.guiheight;
@@ -19,3 +19,6 @@ leading = OUT;
 //fight options
 background=-1;
 enemy=-1;
+
+OUT=0;
+IN=1;

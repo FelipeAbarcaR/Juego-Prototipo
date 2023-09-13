@@ -246,6 +246,7 @@ function get_input() {
 }
 
 function calc_movement() {
+	if(left) show_debug_message("left")
 	hmove = right - left;	
 	vmove = down - up;
 	//if (hmove != 0 and vmove != 0)
@@ -261,8 +262,8 @@ function calc_movement() {
 		play_walk_audio();
 		
 		//get distance we are moving
-		hmove = lengthdir_x(walk_spd, dir);
-		vmove = lengthdir_y(walk_spd, dir);
+		hmove = lengthdir_x(walk_spd*(1-walk_friction), dir);
+		vmove = lengthdir_y(walk_spd*(1-walk_friction), dir);
 	
 		//add movement to players position
 		

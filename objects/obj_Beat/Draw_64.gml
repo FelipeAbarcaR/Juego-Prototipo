@@ -1,6 +1,6 @@
 /// @description Draw BeatBar
 // You can write your code in this editor
-//var _mode=global.room_data[global.currentroom][index.mode];
+//var _mode=global.room_data[global.currentroom][Index.mode];
 //if (_mode!=mode.fight) //print in gui only if is NOT in fight mode, (bc there is no cam)
 //{
 	var a //scale of the heart in 'beat'

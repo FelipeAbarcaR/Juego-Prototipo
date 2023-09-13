@@ -3,40 +3,44 @@ global.midTransition = false;
 global.transition_out_type=-1;
 global.transition_in_type=-1;
 global.transition_in_start=false;
+global.transition_time=-1;
 
 //Called whenever you want to go from one room to another, using any combination of in/out sequences
-function TransitionStart(_roomTarget,_typeOut, _typeIn,_time=2,_BGM=undefined)
+function TransitionStart(_roomTarget,_type,_way=TR_WAY.TWOPASS, _time=2,_BGM=undefined)
 {
 	if(!global.midTransition)
 	{
-		global.midTransition=true;
+		//global.midTransition=true;
 		global.roomTarget=_roomTarget;
-		global.transition_out_type=_typeOut;
-		global.transition_in_type=_typeIn;
-		global.transition_time=_time;
+		//global.transition_out_type=_typeOut;
+		//global.transition_in_type=_typeIn;
+		//global.transition_time=_time;
 
 		//where is the left corner of the screen
 		//(cambiar a gui para poner 0,0. o encontrar algo mejor)
-		var _x,_y;
-		if(instance_exists(oCameraManager))
-		{
-		    _x=camera_get_view_x(oCameraManager.camera);
-			_y=camera_get_view_y(oCameraManager.camera);
-		}else
-		{
-		    _x=0;
-			_y=0;
-		}
-		//create the transition manager object
-		instance_create_depth(_x,_y,depth,obj_transition_sequence);
-		//start fade out bgm
-		if(_BGM!=undefined)
-		{
-		    with obj_beat
-			{
-			    ChangeBGM(_BGM,_time,true)
-			}
-		}
+		//var _x,_y;
+		//if(instance_exists(oCameraManager))
+		//{
+		//    _x=camera_get_view_x(oCameraManager.camera);
+		//	_y=camera_get_view_y(oCameraManager.camera);
+		//}else
+		//{
+		//    _x=0;
+		//	_y=0;
+		//}
+		////create the transition manager object
+		var _transition = instance_create_depth(0,0,depth,obj_transition_manager);
+	    _transition.transition_type=_type;
+		_transition.transition_way=_way;
+	
+		////start fade out bgm
+		//if(_BGM!=undefined)
+		//{
+		//    with obj_beat
+		//	{
+		//	    ChangeBGM(_BGM,_time,true)
+		//	}
+		//}
 		
 	} else
 	{
@@ -117,8 +121,7 @@ function TransitionResetValues()
 {
     global.roomTarget = -1;
 	global.midTransition = false;
-	global.transition_out_type=-1;
-	global.transition_in_type=-1;
-	global.transition_sincronize_bgm=false;
-	global.transition_in_start=false;
+	global.targetX=-1;
+	global.targetY=-1;
+	global.targetdirection=-1;
 }

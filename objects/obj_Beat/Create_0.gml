@@ -7,8 +7,8 @@ enum transition_step
 	fading_in
 }
 // Keep track of the current room and its associated data
-current_music = global.room_data[global.currentroom][index.music];
-current_bpm = global.room_data[global.currentroom][index.bpm];
+current_music = global.room_data[global.currentroom][Index.music];
+current_bpm = global.room_data[global.currentroom][Index.bpm];
 last_music=-1;
 
 new_music=-1;

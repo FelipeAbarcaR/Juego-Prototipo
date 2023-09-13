@@ -37,11 +37,11 @@ if (_hKey) instance_create_layer(0,0, "Instances", obj_CountHand);
 	//Beat's chance to hit
 	if (abs(BeatBarProgress)<=beathitrange) global.beatchance =true; else global.beatchance =false;
 
-//	var char = global.room_data[global.currentroom][index.mainchar];
+//	var char = global.room_data[global.currentroom][Index.mainchar];
 
 // draw vanishing BeatBar
-	var _player_mainchar = global.room_data[global.currentroom][index.mainchar]
-	var _mode= global.room_data[global.currentroom][index.mode]
+	var _player_mainchar = global.room_data[global.currentroom][Index.mainchar]
+	var _mode= global.room_data[global.currentroom][Index.mode]
 
 //Fight things
 	if(global.fight_music_start)

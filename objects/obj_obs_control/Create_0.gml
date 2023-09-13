@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 // Get the BPM of the music 
-bpm = current(index.bpm);
+bpm = current(Index.bpm);
 
 // Get the width of the room 
 distance = obj_obs_player.x-x;
@@ -26,10 +26,10 @@ with(obj_beat)
 {
     audio_stop_all();
 	ResetBeatStats();
-	current_music=current(index.music);
+	current_music=current(Index.music);
 	var _bgm = current_music;
 	audio_play_sound(_bgm,10,1,bgm_gain);
-	var _bpm=current(index.bpm);
+	var _bpm=current(Index.bpm);
 	setBPM(_bpm);
 }
 

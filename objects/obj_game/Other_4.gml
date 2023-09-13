@@ -1,5 +1,5 @@
 //Change gamemode
-global.gamemode=global.room_data[global.currentroom][index.mode];
+global.gamemode=global.room_data[global.currentroom][Index.mode];
 
 // Change the current room
 
@@ -10,7 +10,7 @@ for (var i = 0; i <= arrayLength - 1; i++) {
 	
 	var _check = 0;
 	
-    if (global.room_data[i, index.name] == roomName) {
+    if (global.room_data[i, Index.name] == roomName) {
         global.currentroom = i;
 		_check = 1;
         break; // Exit the loop once a match is found
@@ -113,7 +113,24 @@ if(_map!=(-1))
 
 //Deactivate player if gamemode != free (activate again in room end)
 
-var _mode=current(index.mode);
+var _mode=current(Index.mode);
 
 if(_mode==mode.obstacle) instance_deactivate_object(o_player);
 
+//SET COLLISION TILES TO INVISIBLE
+if(layer_exists("Col2"))
+{
+	//collision tiles
+	
+	var lay_id=layer_get_id("Col2");
+	layer_set_visible(lay_id,0);
+	
+}
+
+if(layer_exists("Collisions"))
+{
+	//collision tiles
+	var lay_id=layer_get_id("Collisions");
+	layer_set_visible(lay_id,0);
+	
+}

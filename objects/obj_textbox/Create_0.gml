@@ -129,7 +129,7 @@ next = function() {
 			state = states.IDLE;
 		}
 		//call to player to update values
-		var _player=global.room_data[global.currentroom][index.mainchar];
+		var _player=global.room_data[global.currentroom][Index.mainchar];
 		with(_player)
 		{
 		    PlayerUpdateStatus();

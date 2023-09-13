@@ -20,6 +20,6 @@ if(instance_exists(_cam))
 }	guiheight=global.res.guiheight;
 
 
-game_mode=global.room_data[global.currentroom][index.mode]
+game_mode=global.room_data[global.currentroom][Index.mode]
 //guiwidth=display_get_gui_width();
 //guiheight=display_get_gui_height();

@@ -2,6 +2,7 @@
 event_inherited();
 walk_spd = 2;
 diag_walk_spd = floor(walk_spd*(sqr(2)/2));
+walk_friction=0;
 hp_max = 10;
 hp = hp_max;
 dir = 270;

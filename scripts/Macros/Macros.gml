@@ -6,8 +6,6 @@
 #macro RESOLUTION_W 480
 #macro RESOLUTION_H 270
 #macro TILE_SIZE 16
-#macro OUT 0
-#macro IN 1
 #macro TRANSITION_SPEED 0.02
 #macro X_POS_TEXTBOX 36
 #macro Y_POS_TEXTBOX 200 
@@ -69,7 +67,7 @@ enum Sala{
 	Obstacles	
 }
 
-enum index{
+enum Index{
 	name,
 	music,
 	bpm,

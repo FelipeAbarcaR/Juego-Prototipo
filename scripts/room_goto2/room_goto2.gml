@@ -4,7 +4,7 @@ function room_goto2(_roomindex)
 {
 	
 	//global.currentroom=_roomindex;
-	var _name=index.name;
+	var _name=Index.name;
 	var _roomname=global.room_data[_roomindex][_name];
 	room_goto(_roomname);
 

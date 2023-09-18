@@ -17,10 +17,11 @@ if (cameraFollow) {
 	
 	//Zooming
 	
-	//global.zoom = mouse_wheel_down() - mouse_wheel_up();
+	global.zoom = mouse_wheel_down() - mouse_wheel_up();
 	
 	if(global.zoom != 0)
 	{
+		global.zoom *= 0.05;
 		//var _zoom_width = global.zoom * room_width;
 		//var _zoom_height = global.zoom * room_height;
 		
@@ -54,12 +55,18 @@ if (cameraFollow) {
 			_camW = _prevW - _addW;
 			_camH = _prevH - _addH;
 		}
-		
-		
-
+	global.percentage_zoom = ((_camW*100)/480) - 100;
+	
+	//_camH = round(_camH);
+	//_camW = round(_camW);
+	
 	}
-
+	
+	global.zoom_height = _camH;
+	global.zoom_width = _camW;
+	
 	// Set position
 	camera_set_view_pos(camera, _camX, _camY);
 	camera_set_view_size(camera,_camW, _camH);
+	surface_resize(application_surface,_camW,_camH);
 }

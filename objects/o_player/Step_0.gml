@@ -50,7 +50,7 @@ switch(state) {
 		
 		reset_variables();
 		
-		placement_Player_NPC( activate.x + 20 ,activate.y + 30, false,walk_spd/2);
+		placement_Player_NPC( activate.x + 20 ,activate.y + 30, false, walk_spd/2);
 		
 	break;
 	

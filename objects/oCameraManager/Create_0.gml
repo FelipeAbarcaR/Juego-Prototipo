@@ -14,3 +14,6 @@ cameraFollow = true;
 
 //Zoom
 global.zoom = 0;
+global.zoom_height = 0;
+global.zoom_width = 0;
+global.percentage_zoom = 0;

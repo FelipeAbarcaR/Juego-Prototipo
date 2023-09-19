@@ -124,14 +124,14 @@ function scr_Roll()
     inputmagnitude=0;
 	
 	if(GridSpeed<=DistanceRemaining){
-		x+=lengthdir_x(GridSpeed,Direction);
-		y+=lengthdir_y(GridSpeed,Direction);
-		DistanceRemaining-=GridSpeed;
+		x+=lengthdir_x(GridRollSpeed,Direction);
+		y+=lengthdir_y(GridRollSpeed,Direction);
+		DistanceRemaining-=GridRollSpeed;
 	} else {
 		if(DistanceRemaining=0) state="wait";
 		else {
-			x+=lengthdir_x(GridSpeed-DistanceRemaining,Direction);
-			y+=lengthdir_y(GridSpeed-DistanceRemaining,Direction);
+			x+=lengthdir_x(GridRollSpeed-DistanceRemaining,Direction);
+			y+=lengthdir_y(GridRollSpeed-DistanceRemaining,Direction);
 			DistanceRemaining=0;
 			state="wait"
 		}

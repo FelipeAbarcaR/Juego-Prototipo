@@ -7,6 +7,7 @@ GridDistance=16;
 GridJumpHeight=10;
 DistanceRemaining=0;
 
+GridRollSpeed=1.1;
 GridRollHeight=7;
 GridRollDistance=GridDistance*2;
 

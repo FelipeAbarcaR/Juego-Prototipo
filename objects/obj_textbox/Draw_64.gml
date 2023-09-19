@@ -6,7 +6,7 @@ var finished = (typist.get_state()==1);
 
 
 //Portrait
-if (!already_fighting)
+if (event_mode==textbox_event.TEXTING)
 {
 	var _scaling_y = starting_y-(height/2)*increasing_value;
 	

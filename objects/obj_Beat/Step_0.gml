@@ -11,21 +11,18 @@ if(MoveKey)
 	if(global.Move==false) global.Move=true else global.Move=false;
 }
 
-//counting hand
-var _hKey=keyboard_check_pressed(ord("H"));
-if (_hKey) instance_create_layer(0,0, "Instances", obj_CountHand);
-
 //beat
 	var dt =delta_time;	
 	SumDelta+=dt;
 	SumFullDelta+=dt;
 
+//Check if reached the beat
 	if (SumDelta>=global.BeatTimeMS) 
 	{
 	global.beat=true;
 	SumDelta -= global.BeatTimeMS;
 	global.BeatNumber+=1;
-	//audio_play_sound(Beep,11,false);
+	if(global.DrawText) audio_play_sound(Beep,11,false);
 	//instance_create_layer(barX, barY,"Instances",obj_vanish_GUI);
 	} else global.beat=false;
 

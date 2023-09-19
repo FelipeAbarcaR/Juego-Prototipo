@@ -4,6 +4,7 @@
 if(!any_audio_is_playing())
 {
     var _bgm= current(Index.music);
+	current_music=_bgm;
 	ResetBeatStats();
 	audio_play_sound(_bgm,10,1,0.4);
 }

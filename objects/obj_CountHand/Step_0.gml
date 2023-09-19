@@ -28,3 +28,28 @@ if(move){
 		instance_destroy();
 	}
 }
+var _finish_count=(image_index>=EndingSpriteIndex[4])
+if(_finish_count && !players_activated)
+{
+    players_activated=true;
+	
+	var _player;
+	if(instance_exists(o_player))
+	{
+		o_player.state=states.IDLE;
+	}
+	if(instance_exists(obj_crypt_player))
+	{
+	    obj_crypt_player.state="move";
+	}
+	
+	if(instance_exists(obj_obs_player))	
+	{
+	    obj_obs_player.state=states.IDLE;
+	}
+	
+	if(instance_exists(obj_CryptManager))
+	{
+	    obj_CryptManager.hand_signal=true;
+	}
+}

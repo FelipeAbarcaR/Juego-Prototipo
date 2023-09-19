@@ -4,7 +4,7 @@ if(instance_exists(obj_textbox))
 {
 
     obj_textbox.fight_concluded=true;
-	obj_textbox.already_fighting=false;
+	obj_textbox.event_mode=textbox_event.TEXTING
 	
 }
 

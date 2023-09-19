@@ -34,3 +34,29 @@ if (global.beat && danceactive)
 		if (tileindex==1) tileindex=2 else tileindex=1;
 	}
 }
+
+var _hand=instance_exists(obj_CountHand);
+
+if(_hand) hand_created=true;
+
+if(hand_created)
+{
+    if(hand_signal)
+	{
+	    var _cryptroom=global.cryptroom;
+		var _list =_cryptroom.trap_list;
+		var _num = _cryptroom.trap_num;
+		if _num > 0
+		{
+		    for (var i = 0; i < _num; ++i;)
+		    {
+				var _trap=_list[| i]
+		        _trap.trap_activated=true;
+		    }
+		}
+		ds_list_destroy(_list);
+		hand_create=false;
+		hand_signal=false;
+	}
+}
+

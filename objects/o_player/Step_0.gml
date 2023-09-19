@@ -48,10 +48,17 @@ switch(state) {
 	break;
 	case states.LOCK:
 		
-		reset_variables();
-		
-		placement_Player_NPC( activate.x + 20 ,activate.y + 30, false,walk_spd/2);
+		//image_speed=0;
+		image_index = CARDINAL_DIR_PLAYER;
 		
 	break;
 	
+	case states.AUTOMOVING:
+		reset_variables();
+		
+		player_automove();
+		
+		anim();
+
+	break;
 }

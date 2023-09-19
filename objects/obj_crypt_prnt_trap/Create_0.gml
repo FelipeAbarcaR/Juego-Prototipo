@@ -3,3 +3,4 @@
 
 doing_damage=false;
 
+trap_activated=false;

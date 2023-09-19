@@ -51,4 +51,9 @@ path_id = -1;
 //Shaders
 sha_alpha = 0.5;
 
-	
+//automove
+
+automove_from_activate=false;
+automove_x=-1;
+automove_y=-1;
+

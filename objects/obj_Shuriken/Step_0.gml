@@ -15,7 +15,7 @@ if(collisionmap!=(-1))
 		Direction+=180;
 	}
 }
-if(/*global.Move &&*/ global.beat){  //MOVE ES PARA ACTIVAR TODOS A MOVERSE
+if(trap_activated && global.beat){  //MOVE ES PARA ACTIVAR TODOS A MOVERSE
 	state="move"
 	DistanceRemaining=GridDistance;
 }

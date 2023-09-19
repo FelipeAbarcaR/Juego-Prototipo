@@ -28,7 +28,7 @@ if(beat_counting)
 			var _x1,_y1;
 			_x1=x+global.res.width*0.35;
 			_y1=y+global.res.height*0.15;
-		    instance_create_depth(_x1,_y1,depth-10,obj_CountHand);
+		    handcreate();
 			beat_count=0;
 			beat_counting=false;
 		}

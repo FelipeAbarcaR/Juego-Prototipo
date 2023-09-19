@@ -21,7 +21,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "M0",
-    "path": "folders/Managers/M0.yy",
+    "path": "folders/Objects/Managers/M0.yy",
   },
   "parentObjectId": null,
   "persistent": true,

@@ -14,3 +14,5 @@ cameraFollow = true;
 
 //Zoom
 global.zoom = 0;
+
+camera_follow=current(Index.follow)

@@ -14,10 +14,11 @@
 #macro GOTO new GotoAction
 #macro FIGHT new FightAction
 #macro INVENTORY new ItemAction
+#macro AUTOMOVE new AutomoveAction
+#macro CRYPT new CryptAction
 
 function startDialogue(topic) {
 	if (instance_exists(obj_textbox)) return;
-	
 	var inst = instance_create_depth(x, y, -999, obj_textbox);
 	inst.dialogue_sounds= activate.dialogue_sounds;
 	inst.setTopic(topic);
@@ -55,6 +56,7 @@ function ChooseSound()
 	current_tb_sound=dialogue_sounds[sound_index];
 	show_debug_message("ChooseSound() sfx choosed")
 }
+
 function type(x, y, text, progress, width) {
 	var draw_x = 0;
 	var draw_y = 0;
@@ -187,6 +189,7 @@ function TextAction(_text,_cond1=0,_cond2=0,_cond3=0,_cond4=0) : DialogueAction(
 		textbox.condition2=condicion2;
 		textbox.condition3=condicion3;
 		textbox.condition4=condicion4;
+		textbox.event_mode=textbox_event.TEXTING;
 	}
 }
 
@@ -269,6 +272,28 @@ function GotoAction(_topic) : DialogueAction() constructor{
 	
 }
 
+function AutomoveAction(_x,_y) : DialogueAction() constructor{
+	
+	player_x=_x;
+	player_y=_y;
+	
+	act = function(textbox)
+	{
+		textbox.automove_x=player_x;
+		textbox.automove_y=player_y;
+		textbox.automove_active=true;
+	}
+	
+}
+function CryptAction() : DialogueAction() constructor{
+	
+	act = function(textbox)
+	{
+		textbox.start_crypt=true;
+		textbox.next();
+	}
+	
+}
 function ItemAction(_itemid,_quantity) : DialogueAction() constructor{
 	
 	inv_quantity=_quantity;
@@ -622,7 +647,37 @@ global.topics[$ "signhouse2"] = [
 	TEXT("¿Sigues Aquí? El juego no se va a completar solo."),
 	TEXT("Ya me harté de tí. Adiós!.")
 	];
+
+global.topics[$ "signCrypt1"] = [
 	
+	CHOICE("¿Quieres comenzar?",OPTION("Si","Cryptmoveandfight"),OPTION("No","signenemy1"))
+];
+
+global.topics[$ "signCrypt2"] = [
+	
+	CHOICE("¿Quieres comenzar?",OPTION("Si","Cryptmoveandfight2"),OPTION("No","signenemy1"))
+];
+
+global.topics[$ "signCrypt3"] = [
+	
+	CHOICE("¿Quieres comenzar?",OPTION("Si","Cryptmoveandfight3"),OPTION("No","signenemy1"))
+];
+
+global.topics[$ "Cryptmoveandfight"] = [
+	
+	AUTOMOVE(648,750),
+	CRYPT()
+];
+global.topics[$ "Cryptmoveandfight2"] = [
+	
+	AUTOMOVE(743,542),
+	CRYPT()
+];
+global.topics[$ "Cryptmoveandfight3"] = [
+	
+	AUTOMOVE(920,606),
+	CRYPT()
+];
 global.topics[$ "signwarning1"] = [
 	TEXT("El Viejo Sabio le invita a entrar a la casa, no es que tenga algo mejor que hacer"),
 ];

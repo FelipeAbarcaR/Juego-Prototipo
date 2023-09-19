@@ -3,7 +3,7 @@ var _height = global.res.height;
 
 
 
-if(!already_fighting)
+if(event_mode==textbox_event.TEXTING)
 {
 	if (!surface_exists(surface_textbox)) {
 		surface_textbox = surface_create(_width,_height);

@@ -1,4 +1,4 @@
-/// @description Configuracion
+/// @description Configuración
 
 global.midTransition=true;
 

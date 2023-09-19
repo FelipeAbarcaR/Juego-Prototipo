@@ -1,7 +1,7 @@
 // Follow player
 if (cameraFollow) {
 	// Player to follow
-	var _plr = global.room_data[global.currentroom][Index.follow];
+	var _plr = camera_follow;
 
 	// Get camera properties
 	var _camW = camera_get_view_width(camera);

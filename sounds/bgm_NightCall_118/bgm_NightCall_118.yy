@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "bgm_NightCall_115",
+  "name": "bgm_NightCall_118",
   "audioGroupId": {
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
@@ -17,7 +17,7 @@
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "bgm_NightCall_115.wav",
+  "soundFile": "bgm_NightCall_118.wav",
   "type": 0,
   "volume": 0.79,
 }

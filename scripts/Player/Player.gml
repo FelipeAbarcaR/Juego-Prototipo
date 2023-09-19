@@ -246,7 +246,7 @@ function get_input() {
 }
 
 function calc_movement() {
-	if(left) show_debug_message("left")
+
 	hmove = right - left;	
 	vmove = down - up;
 	//if (hmove != 0 and vmove != 0)
@@ -424,6 +424,22 @@ function anim() {
 		case states.ROLL:
 			sprite_index = spr_roll;
 		break;
+		case states.AUTOMOVING:
+			if hmove != 0 or vmove != 0 
+			{
+				switch(dir)
+				{
+					case 0: sprite_index =		spr_move_right;			break;		
+					case 45: sprite_index =		spr_move_right_up;		break;
+					case 90: sprite_index =		spr_move_up;			break;	
+					case 135: sprite_index =	spr_move_left_up;		break;
+					case 180: sprite_index =	spr_move_left;			break;
+					case 225: sprite_index =	spr_move_left_down;		break;
+					case 270: sprite_index =	spr_move_down;			break;
+					case 315: sprite_index =	spr_move_down_right;	break;
+					case 360: sprite_index =	spr_move_right;			break;
+				}
+			}
 	}
 }
 
@@ -503,7 +519,7 @@ function Space_logic()
 			if(activate == noone)
 			{
 					
-				if(global.beatchance && global.CanDash) //roll only in beat and if can dash
+				if(global.beatchance && global.CanDash) //roll only if player is in beat and if player can dash
 				{
 					state = states.ROLL;
 					
@@ -541,8 +557,8 @@ function Space_logic()
 				{
 					with(o_player)
 					{
-						//CAMBIAR
-						if(state != states.LOCK) state = states.LOCK;
+						automove_from_activate=true;
+						if(state != states.LOCK && state != states.AUTOMOVING) state = states.AUTOMOVING;
 					}
 				}
 				else
@@ -587,18 +603,8 @@ function placement_Player_NPC(_x,_y,_relative,_spd){
 	
 	with(o_player)
 	{
-		var dir = point_direction(x,y,_xx,_yy);
-		
-		if(dir >= 0 && dir <= 45) sprite_index = spr_gato3_right;
-		if(dir > 45 && dir <= 90) sprite_index = spr_gato3_right_up;
-		if(dir > 90 && dir <= 135) sprite_index = spr_gato3_up;
-		if(dir > 135 && dir <= 180) sprite_index = spr_gato3_left_up;
-		if(dir > 180 && dir <= 225) sprite_index = spr_gato3_left;
-		if(dir > 225 && dir <= 270) sprite_index = spr_gato3_left_down;
-		if(dir > 270 && dir <= 315) sprite_index = spr_gato3_down;
-		if(dir > 315 && dir <= 359) sprite_index = spr_gato3_down_right;
-		
-			
+		var _dir = point_direction(x,y,_xx,_yy);
+
 		if(point_distance(x,y,_xx,_yy) >= _spd)
 		{
 			var startpath = mp_grid_path(global.mp_grid, path, x,y,_xx,_yy,true)
@@ -606,23 +612,32 @@ function placement_Player_NPC(_x,_y,_relative,_spd){
 			if(startpath)
 			{
 				
-				var ldirx = lengthdir_x(_spd,dir);
-				var ldiry = lengthdir_y(_spd,dir);
+				var ldirx = lengthdir_x(_spd,_dir);
+				var ldiry = lengthdir_y(_spd,_dir);
+				
 				x+= ldirx;
 				y+= ldiry;
+				hmove=ldirx;
+				vmove=ldiry;
+				_dir-=_dir mod 45;
+				dir=_dir
 			}
 			else
 			{	
-				sprite_index = spr_gato3_idle;
-				direction = point_direction(x,y,global.activate.x,global.activate.y);
-				image_index = CARDINAL_DIR_PLAYER;
+				sprite_index	=	spr_gato3_idle;
+				direction		=	point_direction(x,y,global.activate.x,global.activate.y);
+				image_index		=	CARDINAL_DIR_PLAYER;
+				
 				_xx = x;
 				_yy = y;
 				x_dest = -1;
 				y_dest = -1;
+
+				automove_from_activate=false;
+				state=states.LOCK;
+				
 				//Activar la entidad
 				ScriptExecuteArray(activate.EntityActivateScript, activate.EntityActivateArgs);
-				
 			}	
 		}
 		else
@@ -634,13 +649,100 @@ function placement_Player_NPC(_x,_y,_relative,_spd){
 			y_dest = -1;
 			//Activar la entidad
 				ScriptExecuteArray(activate.EntityActivateScript, activate.EntityActivateArgs);
+			automove_from_activate=false;
+			state=states.LOCK;
+		}
+	}				
+}
+
+function placement_Player(_x,_y,_relative,_spd){
+										//Relativo es que si quiero que se mueva a un punto concreto o si quiero que se mueva relativo a su posicion
+	if(x_dest == -1)
+	{
+		if(!_relative)
+		{
+			x_dest = _x;
+			y_dest = _y;
+		}
+		else
+		{
+			x_dest = o_player.x + _x;
+			y_dest = o_player.y + _y;
+		}
+	}
+	var _xx = x_dest;
+	var _yy = y_dest;
+	
+	xp = x;
+	yp = y;
+	
+	with(o_player)
+	{
+		var _dir = point_direction(x,y,_xx,_yy);
+		if(point_distance(x,y,_xx,_yy) >= _spd)
+		{
+			var startpath = mp_grid_path(global.mp_grid, path, x,y,_xx,_yy,true)
+			
+			if(startpath)
+			{
+				var ldirx = lengthdir_x(_spd,_dir);
+				var ldiry = lengthdir_y(_spd,_dir);
+				x+= ldirx;
+				y+= ldiry;
+				hmove=ldirx;
+				vmove=ldiry;
+				_dir-=_dir mod 45;
+				dir=_dir;
+				
+			}
+			else
+			{	
+				sprite_index = spr_gato3_idle;
+				//direction = point_direction(x,y,_xx+1,_yy+1);
+				image_index = CARDINAL_DIR_PLAYER;
+				_xx = x;
+				_yy = y;
+				x_dest = -1;
+				y_dest = -1;
+				automove_x=-1;
+				automove_y=-1;
+				state=states.LOCK;
+				
+			}	
+		}
+		else
+		{
+			sprite_index	=	spr_gato3_idle;
+			//direction		=	point_direction(x,y,_xx+1,_yy+1);
+			image_index		=	CARDINAL_DIR_PLAYER;
+			x				=	_xx;
+			y				=	_yy;
+			
+			x_dest	=	-1;
+			y_dest	=	-1;
+			
+			automove_x	=	-1;
+			automove_y	=	-1;
+			state		=	states.LOCK;
 	
 		}
 	}				
 }
 
+function player_change(_player=undefined)
+{
+	//change player from one type to another
+	// e.g. from o_player to obj_crypt_player
+    instance_create_layer(0,0,"Instances",obj_player_manager);
+}
 
-
-
-
-	
+function player_automove()
+{
+	 if(automove_from_activate)
+		{
+			placement_Player_NPC( activate.x + 20 ,activate.y + 30, false,walk_spd/2);
+		}else
+		{
+			placement_Player( automove_x, automove_y, false,walk_spd/2);
+		}
+}

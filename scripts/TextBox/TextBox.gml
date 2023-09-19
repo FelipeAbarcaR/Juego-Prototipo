@@ -1,5 +1,12 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+
+enum textbox_event
+{
+	TEXTING,
+	FIGHTING,
+	MOVING
+}
 function draw_blurry_background(_x,_y,_tb_width,_tb_height,_col= #566573){
 
 	var _width=_tb_width;

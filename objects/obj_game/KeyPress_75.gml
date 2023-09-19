@@ -1,4 +1,4 @@
-/// @description testo
+/// @description testos
 // You can write your code in this editor
 
 //transition testo
@@ -9,4 +9,16 @@
 //ChangeBGM(bgm_Feelings);
 
 
-instance_create_depth(x,y,depth,obj_getitem_GUI);
+//instance_create_depth(x,y,depth,obj_getitem_GUI);
+
+//var _lay_id=layer_get_id("ChillEffect")
+//var _is_visible=layer_get_visible("ChillEffect");
+
+//if(_is_visible)
+//{
+//    layer_set_visible("ChillEffect",false);
+//}else     layer_set_visible("ChillEffect",true);
+
+instance_create_depth(x,y,depth,obj_player_manager);
+//if(instance_exists(obj_crypt_player))
+//obj_crypt_player

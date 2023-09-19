@@ -7,6 +7,10 @@ GridDistance=16;
 GridJumpHeight=10;
 DistanceRemaining=0;
 
+GridRollHeight=7;
+GridRollDistance=GridDistance*2;
+
+
 
 LastDirection=0;
 
@@ -14,7 +18,7 @@ LastDirection=0;
 HP=100;
 damaged=false;
 
-state="wait"
+state="locked"
 
 //misc
 texto="nada"/*draw*/
@@ -58,3 +62,8 @@ sh_fhlash=shader_get_uniform(sha_red_flash,"flash");
 x1=0; //to use in draw
 red_flashing=false;
 
+//SPRITES
+
+spr_wait=spr_gato3_idle;
+spr_move=spr_gato3_idle;
+spr_roll=spr_player_roll;

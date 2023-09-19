@@ -8,19 +8,20 @@ if(transition_start)
 	{
 	    ready=true;
 		room_goto(global.roomTarget);
-		show_debug_message("terminado y destruyendose");
+		show_debug_message("obj_transition_manager: terminado y destruyendose");
 		with(obj_beat)
 		{
-		    audio_stop_all();
 			var _bgm=target(Index.music);
-			audio_play_sound(_bgm,10,1,bgm_gain)
+		    audio_stop_all();
+			audio_play_sound(_bgm,10,1,bgm_gain);
+			current_music= _bgm;			
 		}
 
 	}
 
 	transition=screen_transition(transition_type,transition_way,0,transition_colour,_callout);
 	transition_progress=0;
-	show_debug_message("transición empezando ando");
+	show_debug_message("obj_transition_manager: transición empezando ando");
 
 }
 

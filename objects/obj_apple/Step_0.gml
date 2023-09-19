@@ -1,4 +1,7 @@
-if(!collected && place_meeting(x,y,o_player))
+var _player;
+if(instance_exists(o_player)) _player=o_player;
+if(instance_exists(obj_crypt_player)) _player=obj_crypt_player;
+if(!collected && place_meeting(x,y,_player))
 {
 	//Add to inventory
 	inv_type = ITEM.APPLE;

@@ -19,7 +19,27 @@ if(instance_exists(_cam))
     guiwidth=global.res.guiwidth;
 }	guiheight=global.res.guiheight;
 
+gui_x=global.res.guiwidth*0.5;
+gui_y=global.res.guiheight*0.25;
 
 game_mode=global.room_data[global.currentroom][Index.mode]
 //guiwidth=display_get_gui_width();
 //guiheight=display_get_gui_height();
+
+players_activated=false;
+
+//Lock the player
+if(instance_exists(o_player))
+{
+	o_player.state=states.LOCK;
+}
+if(instance_exists(obj_crypt_player))
+{
+	obj_crypt_player.state="locked";
+}
+	
+if(instance_exists(obj_obs_player))	
+{
+	obj_obs_player.state=states.LOCK;
+}
+	

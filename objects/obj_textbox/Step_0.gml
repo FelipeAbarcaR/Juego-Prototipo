@@ -23,7 +23,7 @@ if(!minimize_to_destroy)
 	
 	// fights occurs while still in a textbox'action
 	// so confirm key only works while not fighting
-	if (!already_fighting) confirm = keyboard_check_pressed(confirm_key); 
+	if (event_mode==textbox_event.TEXTING) confirm = keyboard_check_pressed(confirm_key); 
 
 	//textbox background's increasing value 
 	increasing_value=min(1,increasing_value+delta_scaling);
@@ -69,6 +69,7 @@ if(!minimize_to_destroy)
 			//Select an option!
 			if(confirm)
 			{
+				
 				var option = options[current_option];
 				options = [];
 				option_count  = 0;
@@ -125,7 +126,29 @@ if(!minimize_to_destroy)
 			}
 		}
 	
-	
+		//Automove
+		if(automove_active)
+		{
+			event_mode	=	textbox_event.MOVING;
+			
+			o_player.state		=	states.AUTOMOVING;
+			o_player.automove_x	=	automove_x;
+			o_player.automove_y	=	automove_y;
+			var _player	=	o_player;
+			
+			if(_player.x==automove_x && _player.y==automove_y)
+			{
+				automove_active=false;
+			    next(); 
+			}
+		}
+		if(start_crypt)
+		{
+		    handcreate();
+			player_change();
+			
+			next();
+		}
 		//Changeroom
 		if (new_room != -1){
 			global.roomTarget=new_room;
@@ -136,7 +159,7 @@ if(!minimize_to_destroy)
 		if (start_fight){
 			start_fight=false;
 			NewEncounter(fight_enemy,fight_bg);
-			already_fighting=true;
+			event_mode=textbox_event.FIGHTING;
 		}
 	//señal de que la pelea terminó, (la activa el obj_game desde alarm 0)
 		if (fight_concluded)

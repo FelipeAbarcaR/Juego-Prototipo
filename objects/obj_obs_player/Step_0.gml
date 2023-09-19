@@ -17,15 +17,15 @@ if (y<ystart)
 	y=ystart;
 }
 
-var _handcreated=instance_exists(obj_CountHand);
-if (_handcreated)
-{
+//var _handexists=instance_exists(obj_CountHand);
+//if (_handexists)
+//{
 
-    state = states.IDLE;
-}
+//    state = states.IDLE;
+//}
 
 
-if (state == states.IDLE && !_handcreated)
+if (state == states.IDLE)
 {
 	if (keyUp)	 state = states.JUMP;
 	if (keyDown){
@@ -71,6 +71,9 @@ switch(state)
 		break;	
 	
 	case states.LOCK:
+		
+		sprite_index=idle_sprite;
+		image_speed=1;
 		break;
 		
 	default:

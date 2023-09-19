@@ -55,11 +55,11 @@ option_text_color = c_white;
 //Room
 new_room=-1;
 
+
 //Fight
 fight_enemy=-1;
 fight_bg=-1;
 start_fight=false;
-already_fighting = false;
 fight_concluded=false;
 win_topic=-1;
 lose_topic=-1;
@@ -68,6 +68,16 @@ lose_topic=-1;
 inv_type=0;
 item_quantity=0;
 
+//Automove-
+automove_x=-1;
+automove_y=-1;
+automove_active=false;
+
+//Crypt
+start_crypt=false;
+
+//Events (in case of fighting or moving, or more)
+event_mode = false;
 /// PRIVATE PROPERTIES
 
 /*** LOOK BUT DO NOT EDIT! ***/
@@ -118,9 +128,11 @@ setTopic = function(topic) {
 	next();
 }
 minimize_to_destroy=false;
+
 // Move to the next action, or close the textbox if out of actions
 next = function() {
 	current_action++;
+	event_mode=textbox_event.TEXTING;
 	if (current_action >= array_length(actions)) 
 	{
 		with (o_player) 

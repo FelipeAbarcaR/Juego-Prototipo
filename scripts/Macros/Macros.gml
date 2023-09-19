@@ -33,7 +33,8 @@ enum states {
 	ROLL,			//5
 	LOCK,			//6
 	CROUCH,			//7
-	JUMP			//8
+	JUMP,			//8
+	AUTOMOVING		//9
 }
 
 enum ENEMYSTATE

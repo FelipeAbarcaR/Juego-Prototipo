@@ -16,7 +16,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Minijuegos",
-    "path": "folders/Managers/Minijuegos.yy",
+    "path": "folders/Objects/Managers/Minijuegos.yy",
   },
   "parentObjectId": null,
   "persistent": false,

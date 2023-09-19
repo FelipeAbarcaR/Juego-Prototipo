@@ -48,8 +48,12 @@ switch(state) {
 	break;
 	case states.LOCK:
 		
+
 		//image_speed=0;
 		image_index = CARDINAL_DIR_PLAYER;
+
+		reset_variables();
+
 		
 	break;
 	

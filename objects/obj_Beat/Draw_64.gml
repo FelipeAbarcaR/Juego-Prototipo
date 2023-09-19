@@ -38,6 +38,7 @@
 //	draw_sprite_ext(spr_circle_meter, 0, _x-300, _y,4, 4, global.beatprogress*360, c_white, 1);
 
 if global.DrawText{
+
 	var _width=global.res.guiwidth;
 	draw_text(3*_width/4,  64,"BeatBarProgress: "+ string(BeatBarProgress));
 	draw_text(3*_width/4,  64+16,"Global Progress: "+ string(global.beatprogress));
@@ -45,6 +46,22 @@ if global.DrawText{
 	draw_text(3*_width/4,  128,"BeatTimeMS "+ string(global.BeatTimeMS));
 	draw_text(3*_width/4,  128+16,"BGM: "+ string(audio_get_name(current_music)));
 	
+
+	draw_text(2*room_width/4,  32+32,"BeatBarProgress: "+ string(BeatBarProgress));
+	draw_text(2*room_width/4,  32+32+16,"Global Progress: "+ string(global.beatprogress));
+	draw_text(2*room_width/4,  32+64,"BPM, Beat: "+ string(global.bpm)+", "+string(global.BeatNumber));
+	draw_text(2*room_width/4,  64+32+16,"SumDelta: "+ string(SumDelta));
+	draw_text(2*room_width/4,  128,"BeatTimeMS "+ string(global.BeatTimeMS));
+	draw_text(2*room_width/4,  128+16,"Zoom Width: "+ string(global.zoom_width));
+	draw_text(2*room_width/4,  128+32,"Zoom Height: "+ string(global.zoom_height));
+	draw_text(2*room_width/4,  128+32+16,"Zoom Percentage: "+ string(global.percentage_zoom)+"%");
+	
+	layer_set_visible(layer_get_id("Collisions"),true);
+}
+else
+{
+	layer_set_visible(layer_get_id("Collisions"),false);
+
 }
 
 

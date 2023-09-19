@@ -12,6 +12,10 @@
   "defaultScriptType": 1,
   "Folders": [
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Fonts","folderPath":"folders/Fonts.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Managers","folderPath":"folders/Managers.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Interfaz","folderPath":"folders/Managers/Interfaz.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"M0","folderPath":"folders/Managers/M0.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Minijuegos","folderPath":"folders/Managers/Minijuegos.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"No_se_ocupan","folderPath":"folders/No_se_ocupan.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Notes","folderPath":"folders/Notes.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Objects","folderPath":"folders/Objects.yy",},

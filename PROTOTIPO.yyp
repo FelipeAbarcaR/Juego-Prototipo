@@ -133,6 +133,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Shaders","folderPath":"folders/Transiciones/FoxeyTransitionsPro/Shaders.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Dither","folderPath":"folders/Transiciones/FoxeyTransitionsPro/Shaders/Dither.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Normal","folderPath":"folders/Transiciones/FoxeyTransitionsPro/Shaders/Normal.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Player","folderPath":"folders/Sprites/Minijuegos/Crypt/Player.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"NPC_dialogues.json","CopyToMask":-1,"filePath":"datafiles",},
@@ -446,6 +447,7 @@
     {"id":{"name":"scribble_rgb_to_bgr","path":"scripts/scribble_rgb_to_bgr/scribble_rgb_to_bgr.yy",},},
     {"id":{"name":"spr_gato3_roll_right","path":"sprites/spr_gato3_roll_right/spr_gato3_roll_right.yy",},},
     {"id":{"name":"obj_roominit","path":"objects/obj_roominit/obj_roominit.yy",},},
+    {"id":{"name":"spr_gato_crypt_roll","path":"sprites/spr_gato_crypt_roll/spr_gato_crypt_roll.yy",},},
     {"id":{"name":"obj_bush","path":"objects/obj_bush/obj_bush.yy",},},
     {"id":{"name":"spr_tree1","path":"sprites/spr_tree1/spr_tree1.yy",},},
     {"id":{"name":"scr_WaitHalfBeat","path":"scripts/scr_WaitHalfBeat/scr_WaitHalfBeat.yy",},},
@@ -510,6 +512,7 @@
     {"id":{"name":"__ftr_sh_zwave","path":"shaders/__ftr_sh_zwave/__ftr_sh_zwave.yy",},},
     {"id":{"name":"scribble_typewriter_add_event","path":"scripts/scribble_typewriter_add_event/scribble_typewriter_add_event.yy",},},
     {"id":{"name":"ts_Grid1","path":"tilesets/ts_Grid1/ts_Grid1.yy",},},
+    {"id":{"name":"spr_gato_crypt_idle","path":"sprites/spr_gato_crypt_idle/spr_gato_crypt_idle.yy",},},
     {"id":{"name":"__ftr_sh_crosswarp","path":"shaders/__ftr_sh_crosswarp/__ftr_sh_crosswarp.yy",},},
     {"id":{"name":"rm_pelea","path":"rooms/rm_pelea/rm_pelea.yy",},},
     {"id":{"name":"__scribble_class_event","path":"scripts/__scribble_class_event/__scribble_class_event.yy",},},

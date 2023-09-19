@@ -12,7 +12,7 @@ GridJumpHeight=0;
 state="wait"
 
 DMG=20;
-
+tipo=trap_type.FLYING;
 
 switch Dir{
 	case "Up":

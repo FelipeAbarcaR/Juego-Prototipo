@@ -89,3 +89,10 @@ enum signindex{
 	monster
 }
 
+//Crypt traps
+enum trap_type
+{
+	FLOOR,
+	WALL,
+	FLYING
+}

@@ -22,6 +22,7 @@
     {"name":"Shaders","order":3,"path":"folders/Transiciones/FoxeyTransitionsPro/Shaders.yy",},
     {"name":"Dither","order":1,"path":"folders/Transiciones/FoxeyTransitionsPro/Shaders/Dither.yy",},
     {"name":"Normal","order":2,"path":"folders/Transiciones/FoxeyTransitionsPro/Shaders/Normal.yy",},
+    {"name":"Player","order":3,"path":"folders/Sprites/Minijuegos/Crypt/Player.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"__ac_ftr_linear","order":1,"path":"animcurves/__ac_ftr_linear/__ac_ftr_linear.yy",},
@@ -69,6 +70,7 @@
     {"name":"__ftr_sq_wipe_triangle","order":4,"path":"sequences/__ftr_sq_wipe_triangle/__ftr_sq_wipe_triangle.yy",},
     {"name":"roomMapa1Dungeon","order":1,"path":"rooms/roomMapa1Dungeon/roomMapa1Dungeon.yy",},
     {"name":"obj_roominit","order":7,"path":"objects/obj_roominit/obj_roominit.yy",},
+    {"name":"spr_gato_crypt_roll","order":1,"path":"sprites/spr_gato_crypt_roll/spr_gato_crypt_roll.yy",},
     {"name":"__ftr_sh_doom","order":8,"path":"shaders/__ftr_sh_doom/__ftr_sh_doom.yy",},
     {"name":"__ftr_sh_doom_twopass","order":9,"path":"shaders/__ftr_sh_doom_twopass/__ftr_sh_doom_twopass.yy",},
     {"name":"__ftr_sh_luma_twopass","order":17,"path":"shaders/__ftr_sh_luma_twopass/__ftr_sh_luma_twopass.yy",},

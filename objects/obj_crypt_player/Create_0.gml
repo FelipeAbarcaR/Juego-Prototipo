@@ -67,4 +67,4 @@ red_flashing=false;
 
 spr_wait=spr_gato3_idle;
 spr_move=spr_gato3_idle;
-spr_roll=spr_player_roll;
+spr_roll=spr_gato_crypt_roll;

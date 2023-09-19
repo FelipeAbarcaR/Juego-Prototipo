@@ -14,6 +14,5 @@ global.BeatTimeMS=((60)/global.bpm)*1000000 //time of a beat in microseconds
 BeatTimeFrames=(60/global.bpm)*room_speed; //frames of a beat
 global.beatchance=false;
 global.beat=false;
-global.Move=false;	
 global.beatprogress=0;
 global.BeatNumber=0;

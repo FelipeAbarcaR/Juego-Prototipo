@@ -11,7 +11,7 @@
 		[roomMapa1,			bgm_WillPower_89,		89 ,	o_player,			mode.move,		o_player],
 		[rm_Obstacle1,		bgm_OneLove,			107,	obj_crypt_player ,	mode.grid,		obj_crypt_player],
 		[rm_GD,				bgm_boss_01,			127,	obj_obs_player,		mode.obstacle,	obj_obs_player],
-		[roomViejoSabio,	bgm_ForestTimeInterior, 107,	o_player,			mode.move,		o_player],
+		[roomViejoSabio,	bgm_ForestTimeInterior, 126,	o_player,			mode.move,		o_player],
 		[roomMapa1Dungeon,	bgm_NightCall_118,		118,	o_player,			mode.move,		o_player]
 	];
 	

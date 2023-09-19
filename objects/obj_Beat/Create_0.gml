@@ -7,8 +7,8 @@ enum transition_step
 	fading_in
 }
 // Keep track of the current room and its associated data
-current_music = global.room_data[global.currentroom][Index.music];
-current_bpm = global.room_data[global.currentroom][Index.bpm];
+current_music = current(Index.music);
+current_bpm =current(Index.bpm);
 last_music=-1;
 
 new_music=-1;
@@ -26,12 +26,15 @@ global.BeatTimeMS=((60)/global.bpm)*1000000 //time of a beat in microseconds
 BeatTimeFrames=(60/global.bpm)*room_speed; //frames of a beat
 global.beatchance=false;
 global.beat=false;
-global.Move=false;	
 global.beatprogress=0;
 global.BeatNumber=0;
 
+//parche para arreglar que el beat se vaya a los lados o al medio
+beat_fix=false;
+beat_speed=2;
+
 // range to beatchance
-beathitrange=0.60;
+beathitrange=0.60/2;
 
 //BeatProgress
 SumDelta=0; //para global beat

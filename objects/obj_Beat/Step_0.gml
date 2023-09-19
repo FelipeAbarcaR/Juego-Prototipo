@@ -1,16 +1,6 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
 
-//Activar obstáculos Obstacle1 
-	MoveKey=keyboard_check_pressed(vk_control);
-
-
-//start movement's obstacles
-if(MoveKey)
-{
-	if(global.Move==false) global.Move=true else global.Move=false;
-}
-
 //beat
 	var dt =delta_time;	
 	SumDelta+=dt;
@@ -28,10 +18,14 @@ if(MoveKey)
 
 //beat progress from 0 to 1
 	global.beatprogress=min(SumDelta/global.BeatTimeMS,1);
+	
 //beat meter
-	var _midtime =global.BeatTimeMS/2; //fix para que el beat no sea en los bordes
-	BeatBarProgress =  sin((((SumFullDelta)/global.BeatTimeMS)*pi));
+	var _midtime=0
+	if(beat_fix) _midtime =global.BeatTimeMS; //fix para que el beat no sea en los bordes
+	BeatBarProgress =  sin((((SumFullDelta+_midtime)/(global.BeatTimeMS*beat_speed))*pi));
+	
 	//Beat's chance to hit
+	
 	if (abs(BeatBarProgress)<=beathitrange) global.beatchance =true; else global.beatchance =false;
 
 //	var char = global.room_data[global.currentroom][Index.mainchar];

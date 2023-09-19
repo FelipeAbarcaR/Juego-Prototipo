@@ -2,7 +2,7 @@
 // You can write your code in this editor
 event_inherited();
 DMG=20;
-TipoATK="LASER";
+tipo=trap_type.WALL;
 beatcount=0;
 beatwait=3;
 image_speed=0;

@@ -93,6 +93,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Interfaz","folderPath":"folders/Sprites/Interfaz.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Minijuegos","folderPath":"folders/Sprites/Minijuegos.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Crypt","folderPath":"folders/Sprites/Minijuegos/Crypt.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Player","folderPath":"folders/Sprites/Minijuegos/Crypt/Player.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Fight","folderPath":"folders/Sprites/Minijuegos/Fight.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Enemies","folderPath":"folders/Sprites/Minijuegos/Fight/Enemies.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"FX","folderPath":"folders/Sprites/Minijuegos/Fight/FX.yy",},
@@ -133,7 +134,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Shaders","folderPath":"folders/Transiciones/FoxeyTransitionsPro/Shaders.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Dither","folderPath":"folders/Transiciones/FoxeyTransitionsPro/Shaders/Dither.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Normal","folderPath":"folders/Transiciones/FoxeyTransitionsPro/Shaders/Normal.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Player","folderPath":"folders/Sprites/Minijuegos/Crypt/Player.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"NPC_dialogues.json","CopyToMask":-1,"filePath":"datafiles",},

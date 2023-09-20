@@ -24,3 +24,8 @@ layer_set_visible(lay_id,true);
 layer_set_visible(obstacles_lay_id,true);
 layer_set_visible(range_lay_id,false);
 layer_set_visible(room_lay_id,false);
+
+if(instance_activated==false)
+{
+    instance_deactivate_object(object_index)
+}

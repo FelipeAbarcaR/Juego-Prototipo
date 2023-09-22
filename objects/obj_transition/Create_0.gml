@@ -1,4 +1,4 @@
-/// @description Enumeracion + Configuracion
+	/// @description Enumeracion + Configuracion
 
 //enum TRANS_TYPE
 //{

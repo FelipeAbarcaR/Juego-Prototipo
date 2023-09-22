@@ -21,16 +21,16 @@ scr_ObstacleList();
 
 hola=0;
 
-//set the music
-with(obj_beat)
-{
-    audio_stop_all();
-	ResetBeatStats();
-	current_music=current(Index.music);
-	var _bgm = current_music;
-	audio_play_sound(_bgm,10,1,bgm_gain);
-	var _bpm=current(Index.bpm);
-	setBPM(_bpm);
-}
+////set the music
+//with(obj_beat)
+//{
+//    audio_stop_all();
+//	ResetBeatStats();
+//	current_music=current(Index.music);
+//	var _bgm = current_music;
+//	audio_play_sound(_bgm,10,1,bgm_gain);
+//	var _bpm=current(Index.bpm);
+//	setBPM(_bpm);
+//}
 
 alarm[0]=room_speed*2//*global.BeatTimeMS*1000000*2;

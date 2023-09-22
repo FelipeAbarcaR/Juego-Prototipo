@@ -12,7 +12,7 @@
 	global.beat=true;
 	SumDelta -= global.BeatTimeMS;
 	global.BeatNumber+=1;
-	if(global.DrawText) audio_play_sound(Beep,11,false);
+	if(global.DrawText) audio_play_sound(Beep,11,false,1);
 	//instance_create_layer(barX, barY,"Instances",obj_vanish_GUI);
 	} else global.beat=false;
 
@@ -21,7 +21,11 @@
 	
 //beat meter
 	var _midtime=0
-	if(beat_fix) _midtime =global.BeatTimeMS; //fix para que el beat no sea en los bordes
+	if(beat_fix)
+	{
+		if(beat_speed==2)_midtime =global.BeatTimeMS else _midtime= global.BeatTimeMS/2 ; //fix para que el beat no sea en los bordes
+	}
+	
 	BeatBarProgress =  sin((((SumFullDelta+_midtime)/(global.BeatTimeMS*beat_speed))*pi));
 	
 	//Beat's chance to hit
@@ -133,3 +137,40 @@ switch(_player_mainchar)
 		break;		
 	}
 		
+//fate in/out along with obj_transition_manager's progress
+if(instance_exists(obj_transition_manager))
+{
+var _tp=obj_transition_manager.transition_progress;
+	//Fade out volumen while in first half of progress
+	
+	if(_tp >0 and _tp<=0.5)
+	{
+		var new_gain=1-map_value(_tp,0,0.5,0,1);
+		var scaled_new_gain=map_value(new_gain,0,1,0,bgm_gain);
+		audio_sound_gain(bgm_snd,scaled_new_gain,0);
+	}
+	if(_tp>=0.5 && !mid_fading)
+	{
+		mid_fading=true;
+		
+		new_music=target(Index.music);
+		show_debug_message("new_music: " +string(audio_get_name(new_music)));
+		bgm_snd=audio_play_sound(new_music,10,1,0);
+		bgm_transition_set_values();
+			
+	}
+	if(_tp>=0.5)
+	{
+		var new_gain=map_value(_tp,0.5,1,0,1);
+		var scaled_new_gain=map_value(new_gain,0,1,0,bgm_gain);
+		if(bgm_snd!=-1)
+		{
+			audio_sound_gain(bgm_snd,scaled_new_gain,0);
+		}else show_debug_message("obj_beat con transicion,no se encontró bgm_snd para subirle volumen compra")
+		show_debug_message("sound volume: "+string(audio_sound_get_gain(bgm_snd)));
+	}
+}else 
+{
+	mid_fading=false;
+	
+}

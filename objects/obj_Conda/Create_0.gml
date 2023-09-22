@@ -21,8 +21,8 @@ collided=false;
 //stance parameters
 stance = EnemyStance.locked;
 state="idle"; //state para script fightrhythmanimate
-bits=2;
-bits2=2;
+bits=3; //beats para pasar de idle a prepare
+bits2=3; //beats para pasar de prepare a attack
 bitcount=0;
 ataque=-1
 xi=x;
@@ -31,7 +31,7 @@ yi=y;
 //Stats
 hp=100;
 hpmax=hp;
-DMG = 34;
+DMG = 20;
 
 // path sets
 point_to_go=0;

@@ -9,14 +9,6 @@ if(transition_start)
 	    ready=true;
 		room_goto(global.roomTarget);
 		show_debug_message("obj_transition_manager: terminado y destruyendose");
-		with(obj_beat)
-		{
-			var _bgm=target(Index.music);
-		    audio_stop_all();
-			audio_play_sound(_bgm,10,1,bgm_gain);
-			current_music= _bgm;			
-		}
-
 	}
 
 	transition=screen_transition(transition_type,transition_way,0,transition_colour,_callout);
@@ -28,19 +20,20 @@ if(transition_start)
 if(screen_transition_exists(transition))
 {
 	transition_progress= screen_transition_get_progress(transition);
-	show_debug_message(string(transition_progress));
-	if(transition_progress==1)
+	var _tp=transition_progress;
+	
+	if(_tp>=0.5 and !middle_of_transition)
+	{
+	    middle_of_transition=true;
+		
+	}
+	
+	show_debug_message(string(_tp));
+	if(_tp==1)
 	{
 		TransitionResetValues();
 		screen_transition_destroy(transition, true);
 	    instance_destroy();
-		
-	//var _player=o_player;
-	//if(instance_exists(_player))
-	//{
-	//    o_player.state=states.IDLE;
-	//}
-		
 	}
 }
 

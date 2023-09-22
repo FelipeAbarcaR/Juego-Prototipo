@@ -58,8 +58,10 @@ function scr_GridMove(){
 	{
 	    //check if it is landing on a beattile
 		
-		var _lay_id	=	layer_get_id("CryptTiles");
-		var _tilemap_id = layer_tilemap_get_id(_lay_id);
+		var _lay_id	= -1;
+		var _tilemap_id=-1;
+		_lay_id= layer_get_id("CryptTiles");
+		_tilemap_id = layer_tilemap_get_id(_lay_id);
 		var x_to = lengthdir_x(DistanceRemaining,Direction);
 		var y_to = lengthdir_y(DistanceRemaining,Direction);
 		var _tilemap = tilemap_get_at_pixel(_tilemap_id,x+x_to,y+y_to);

@@ -11,8 +11,6 @@ GridRollSpeed=1.1;
 GridRollHeight=7;
 GridRollDistance=GridDistance*2;
 
-
-
 LastDirection=0;
 
 //Stats

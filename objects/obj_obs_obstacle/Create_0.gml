@@ -27,10 +27,20 @@ switch(obs_type)
 		y-=(_sprite_grid*_grid_distance)-_offsety;
 		distance_active=true;
 		break;
+		
 	case obstacle.updown:
 		sprite_index=spr_fan2//spr_obstacle_updown
+		instance_create_depth(x, y,depth, obj_obs_obstacle,{obs_type : obstacle.updown2});
 		animated=true;
 		break;
+		
+	case obstacle.updown2:
+		sprite_index=spr_fan;
+		var _sprite_grid=32;
+		var _grid_distance=4;
+		var _offsety=16;
+		y-=(_sprite_grid*_grid_distance)-_offsety;
+		animated=true;
 	
 	default:
 		break;

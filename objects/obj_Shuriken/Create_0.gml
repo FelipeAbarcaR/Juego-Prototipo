@@ -9,7 +9,9 @@ RotationRemaining=0;
 GridDistance=16;
 DistanceRemaining=0;
 GridJumpHeight=0;
-state="wait"
+state="wait";
+
+depth=depth-1;
 
 DMG=20;
 tipo=trap_type.FLYING;
@@ -33,6 +35,7 @@ switch Dir{
 }
 
 //LayerInfo
-collisionmap = layer_tilemap_get_id(layer_get_id("CryptRange"));
+var _lay_id=layer_get_id("CryptRange")
+if(_lay_id!=-1) collisionmap = layer_tilemap_get_id(_lay_id) else collsiionmap =-1;
 
 sh_texture=shader_get_uniform(sha_white_outline,"texture_Pixel");

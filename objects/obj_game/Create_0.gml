@@ -38,9 +38,6 @@ pause_surf = -1;
 //end fight parameters
 delay_to_return_from_fight=0.5;
 
-//Start first bgm music
-var _bgm = global.room_data[global.currentroom][Index.music];
-audio_play_sound(_bgm,10,1,0.3);
 
 //transition parameters
 changed_room=false;

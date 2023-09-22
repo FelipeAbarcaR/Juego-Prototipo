@@ -56,4 +56,3 @@ sha_alpha = 0.5;
 automove_from_activate=false;
 automove_x=-1;
 automove_y=-1;
-

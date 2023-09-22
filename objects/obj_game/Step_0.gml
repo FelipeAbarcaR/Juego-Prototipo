@@ -41,7 +41,15 @@ muteall= keyboard_check_released(ord("N"));
 
 // on/off draw text from instances
 if keyboard_check_released(vk_lshift){
-	if (global.DrawText=true) global.DrawText=false else global.DrawText=true;
+	if (global.DrawText=true)
+	{
+		global.DrawText=false;
+		layer_set_visible(layer_get_id("Collisions"),false);
+		
+	}else {
+		global.DrawText=true;
+		layer_set_visible(layer_get_id("Collisions"),true);
+	}
 }
 
 //change room system

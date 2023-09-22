@@ -348,9 +348,9 @@ function tile_alpha(){
 	var rate = 0.05;
 	var _lay_id = layer_get_id("TilesUpperUpper");
 
-		var _map_id = layer_tilemap_get_id(_lay_id);
-		if(_map_id!=(-1))
+		if(_lay_id!=(-1))
 		{
+			var _map_id = layer_tilemap_get_id(_lay_id);
 			if(tilemap_get_at_pixel(_map_id,x,y))
 			{
 				shader_set(sha_transparent);

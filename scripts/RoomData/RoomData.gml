@@ -24,3 +24,68 @@
 		obstaculos,
 		viejosabio,
 	}
+	
+
+function room_get_bgm(_room=undefined)
+{
+	var _r=_room;
+	if (_room==undefined) _r=current(Index.name);
+    var arrayLength = global.room_count;
+	var _data=global.room_data;
+
+	for (var i = 0; i < arrayLength; i++) {
+	    if (_data[i, 0] == _r) {
+	        return _data[i, 1];
+	    }
+    }
+	show_debug_message("room_get_bgm(): no se encontró BGM, entregando bgm_Kappn");
+	return _data[0,1]
+}
+
+//GET THE CURRENT 'SOMETHING' FROM CURRENT ROOM
+function current(_index){
+	var _value = global.room_data[global.currentroom][_index];
+	return _value
+}
+//GET THE CURRENT 'SOMETHING' FROM TARGET ROOM
+function target(_index){
+	
+	var _map=global.roomTarget
+	var _array=global.room_data;
+	var _found = false;
+	for(var i=0;i<array_length(_array);i++)
+	{
+	    if(_map==_array[i][Index.name])
+		{
+		    _found=true;
+			break;
+		}
+	}
+	if(_found)
+	{
+	    var _value = global.room_data[i][_index];
+		return _value
+	}else
+	{
+	    return bgm_Kappn;
+		show_debug_message("target(): BGM not found, selected bgm_Kappn")
+	}
+	
+	
+}
+function get_current_room()
+{
+    var _room=room;
+	var _data=global.room_data;
+	var _count=global.room_count;
+	
+	for(var i=0;i<_count;i++)
+	{
+	    if(_data[i][0]==_room)
+		{
+			return i;
+		}
+	}
+	show_debug_message("get_current_room(), no se encontró el mapa, devolviendo 0 (M0)");
+	return 0;
+}

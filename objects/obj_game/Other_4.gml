@@ -29,7 +29,13 @@ global.mp_grid = mp_grid_create(0, 0, _w, _h, TS, TS);
 
 
 //loop through every tile and add a single solid if it's a wall
-var _map = layer_tilemap_get_id("Col2");
+var _map=-1;
+if(layer_exists("Col2"))
+{
+	var _lay_id =layer_get_id("Col2");
+	_map = layer_tilemap_get_id(_lay_id);
+	
+}
 if(_map!=(-1))//create 1x1 solid
 {
 //create 1x1 solid
@@ -132,5 +138,4 @@ if(layer_exists("Collisions"))
 	//collision tiles
 	var lay_id=layer_get_id("Collisions");
 	layer_set_visible(lay_id,0);
-	
 }

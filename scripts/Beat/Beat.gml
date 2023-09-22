@@ -7,6 +7,7 @@ function ResetBeatStats(){
 	SumDelta=0;
 	SumFullDelta=0;
 	BeatBarProgress=0;
+	global.beatprogress=0
 }
 
 function ChangeBGM(_newBGM,_time,_wait_for_room=false)

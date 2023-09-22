@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 lay_id = layer_get_id("CryptTiles");
-map_id = layer_tilemap_get_id(lay_id);
+if(lay_id!=-1) map_id = layer_tilemap_get_id(lay_id) else map_id = -1;
 room_lay_id=layer_get_id("CryptRooms");
 obstacles_lay_id = layer_get_id("CryptObstacles");
 range_lay_id=layer_get_id("CryptRange");	

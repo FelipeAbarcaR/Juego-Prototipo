@@ -89,3 +89,4 @@ if(global.fight_ended)
 
 //transition change room and start fading up the interface and bgm at the same time
 if(global.midTransition && !changed_room) CheckSincronizedTransition();
+

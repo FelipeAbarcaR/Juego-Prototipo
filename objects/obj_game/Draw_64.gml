@@ -31,5 +31,13 @@ if(pause)
 	draw_text(_x,_y+_spacing*5	,"F:      'Fix' Beat");
 	draw_text(_x,_y+_spacing*6	,"Ctrl+F: Cambiar velocidad del Beat");
 	draw_text(_x,_y+_spacing*7	,"H:      Start Hand");
-	draw_text(_x,_y+_spacing*9	,"Ctrl+Shift:    Ajustar volumen según posición del mouse (más abajo es más volumen");
+	draw_text(_x,_y+_spacing*9	,"Ctrl+Shift+(cursor position):    Ajustar volumen según posición del mouse (más abajo es más volumen");
+}
+
+if(game_over)
+{
+	_sep=10; //separation of pixels between characters
+    _x=global.res.guiwidth/2-string_length("RESTART")-_sep*5;
+	_y=global.res.guiheight/2
+	draw_text_ext_transformed(_x,_y,"RESTART",_sep,300,2,2,0);
 }

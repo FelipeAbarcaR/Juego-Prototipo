@@ -18,7 +18,8 @@ enum obstacle{
 	up,
 	down,
 	updown,
-	updown2
+	updown2,
+	activate
 }
 
 #macro CAN_ATTACK		0

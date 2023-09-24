@@ -13,4 +13,4 @@ if (other.doing_damage && !inmunity)
 		damaged=true;
 		alarm[0]=room_speed*hit_inmunity_time;
 	}
-}
+}	

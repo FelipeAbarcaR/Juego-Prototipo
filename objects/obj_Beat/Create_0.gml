@@ -8,6 +8,7 @@ enum transition_step
 	set_parameters,
 	fading_in
 }
+
 // Keep track of the current room and its associated data
 current_music = current(Index.music);
 current_bpm =current(Index.bpm);
@@ -43,16 +44,13 @@ SumDelta=0; //para global beat
 SumFullDelta=0; //para bar meter
 BeatBarProgress=0;
 
-
 // Barra HP
 BeatBarLenght = 216;
 BarHalf=BeatBarLenght/2;
 
-
 //START BGM MUSIC
 var _bgm = current(Index.music);
 bgm_snd = audio_play_sound(_bgm,10,1,bgm_gain);
-
 
 // gui_cosas
 var _res=global.res;
@@ -93,5 +91,30 @@ BGM_data=[
 	[bgm_NightCall_118,118],
 	[bgm_OneLove,107],
 	[bgm_Kappn,130],
-	[bgm_WillPower_89,89]
+	[bgm_WillPower_89,89],
+	[bgm_midnight_100,100]
 ];
+
+
+//BEAT BAR 2.0
+
+BeatTimeFrames=(60/global.bpm)*room_speed;
+
+bar2_timer=0;
+
+beat_meter_speed=2;
+
+beat_frame_height=280;
+beat_frame_width=40;
+bar2_range=beat_frame_height*beat_hit_range_slow;
+
+bar2_x=global.res.guiwidth*(8.2/10);
+bar2_y=global.res.guiheight*0.4;
+
+beats_to_start=7;
+time_to_beat=global.BeatTimeMS*beats_to_start;
+time_to_reach_end=(beat_frame_height/beat_meter_speed)*(1/room_speed)*1000000;
+
+beat_meter_list=[]; 
+
+

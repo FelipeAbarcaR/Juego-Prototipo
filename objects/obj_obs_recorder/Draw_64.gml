@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if(global.DrawText)
+if(global.DrawText&&record)
 {
     
 	var _theight=32;
@@ -29,6 +29,9 @@ if(global.DrawText)
 			case obstacle.updown:
 				_char="medio";
 				break;	
+			case obstacle.activate:
+				_char="activar";
+				break;					
 			default:
 			break;
 		}		

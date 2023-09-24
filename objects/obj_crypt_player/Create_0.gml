@@ -13,6 +13,8 @@ GridRollDistance=GridDistance*2;
 
 LastDirection=0;
 
+key_direction_pressed=false;
+
 //Stats
 HP=100;
 damaged=false;

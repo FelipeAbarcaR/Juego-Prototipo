@@ -11,11 +11,14 @@ roll_key = (keyboard_check_pressed(vk_space));
 InputDirection = point_direction(0,0, Derecha - Izquierda, Abajo-Arriba);
 inputmagnitude = (Derecha-Izquierda != 0) xor (Abajo - Arriba != 0);
 
-if(Izquierda+Derecha+Arriba+Abajo!=0)
+key_direction_pressed=(Izquierda+Derecha+Arriba+Abajo!=0);
+
+if(key_direction_pressed)
 {
     InputDirection = point_direction(0,0, Derecha - Izquierda, Abajo-Arriba);
 	LastDirection=InputDirection;
 	draw_vanish_beatbar();
+	
 }else InputDirection=LastDirection;
 image_index=(InputDirection/45);
 States();

@@ -174,3 +174,35 @@ var _tp=obj_transition_manager.transition_progress;
 	mid_fading=false;
 	
 }
+
+////BEAT BAR 2.0 STEP
+//bar2_timer+=dt;
+//if(bar2_timer>=time_to_beat-time_to_reach_end)
+//{
+//    time_to_beat+=global.BeatTimeMS*2;
+//	bar2_store_meter(bar2_y-beat_frame_height);
+//}
+
+//var _length=array_length(beat_meter_list);
+//if(_length>0)
+//{
+//    for(var i=0;i<_length;i++)
+//	{
+//	    beat_meter_list[i]+=beat_meter_speed;
+//	}
+	
+//	if(beat_meter_list[0]>=bar2_y+bar2_range)
+//	{
+//	   var _last_time= array_shift(beat_meter_list);
+//	}
+	
+//	if(keyboard_check_pressed(vk_space))
+//	{
+//	    var _obj = instance_create_depth(bar2_x,beat_meter_list[0],depth,obj_vanish)
+//		_obj.sprite_index= spr_beat_meter_2;
+//		_obj.image_xscale=2.5;
+//		_obj.image_yscale=2.5;
+//		_obj.draw_on_gui=true;
+//	}
+//}
+

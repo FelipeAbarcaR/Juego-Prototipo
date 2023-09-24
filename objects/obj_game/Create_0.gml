@@ -30,7 +30,7 @@ mute=0;
 
 //ds list es como un array pero mas flexible
 inv_list = ds_list_create();
-
+Inv_add(ITEM.DASH,1)
 //Pausing
 pause = false;
 pause_surf = -1;
@@ -43,3 +43,6 @@ delay_to_return_from_fight=0.5;
 changed_room=false;
 
 window_set_cursor(cr_none);
+
+//GAMEOVER
+game_over=false;

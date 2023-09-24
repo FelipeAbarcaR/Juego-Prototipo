@@ -1,3 +1,28 @@
+//red flash shader if got hit
+shader_set(shdrRainbow)
+var uv = sprite_get_uvs(sprite_index, image_index);
+shader_set_uniform_f(rainbow_uniUV, uv[0], uv[2]);
+shader_set_uniform_f(rainbow_uniSpeed, rainbow_speed);
+shader_set_uniform_f(rainbow_uniTime, rainbow_time);
+shader_set_uniform_f(rainbow_uniSaturation, rainbow_saturation);
+shader_set_uniform_f(rainbow_uniBrightness, rainbow_brightness);
+shader_set_uniform_f(rainbow_uniSection, rainbow_section);
+shader_set_uniform_f(rainbow_uniMix, rainbow_mix);
+if(start_flash)
+{
+	x1+=0.1
+    current_flash=max(sin(x1)*flash,0);
+	if (current_flash<=0)
+	{
+		start_flash=false;
+		x1=0;
+		current_flash=0;
+	}else{
+		shader_set(sha_red_flash);
+		shader_set_uniform_f(sh_fhlash,current_flash);
+	}	
+}
+
 if alarm[hurrtt] > 0 and flash-- < flash_initial/2 {
 	
 	//draw white sprite
@@ -8,10 +33,28 @@ if alarm[hurrtt] > 0 and flash-- < flash_initial/2 {
 	//reset flash
 	if flash <= 0 flash = flash_initial;	
 } else {
-	draw_sprite(spr_shadow,0,x,y+1); //Shadow
-	draw_sprite_ext(sprite_index, image_index,x, y-z, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
-	
+	if(inmunity)
+	{
+		if(time_to_wait==time_showing_sprite)
+		{
+			draw_cat();	
+		}
+		
+		if(blinking_delta_time>=time_to_wait)
+		{
+			blinking_delta_time=0;
+			//switch between time showing the sprite or not
+		    if(time_to_wait==time_showing_sprite)
+			{
+				time_to_wait=time_showing_nothing
+			} else 
+			{
+			    time_to_wait=time_showing_sprite;
+			}
+		}
+	}else draw_cat();
 }
+shader_reset();
 
 show_healthbar();
 if(global.DrawText)

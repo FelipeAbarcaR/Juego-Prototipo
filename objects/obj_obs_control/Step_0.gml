@@ -6,9 +6,7 @@ time+=delta_time/1000000;
 var _array_len=array_length(beat_play_array);
 
 if (time>=beat_play_array[0][0]) && _array_len>1 {
-	if _array_len==2 {
-
-	}
+	
     // Create the obstacle and erase first row
     instance_create_depth(x, y,depth, obj_obs_obstacle,{obs_type : beat_play_array[0][1]});
 

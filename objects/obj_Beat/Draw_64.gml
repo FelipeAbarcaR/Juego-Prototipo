@@ -37,10 +37,7 @@
 	barX=_x;
 	barY=_beatbarY;
 
-//}
-//// circle frame
-//	draw_sprite_ext(spr_circle_frame,0,_x-300,_y,4,4,image_angle,image_blend,image_alpha);
-//	draw_sprite_ext(spr_circle_meter, 0, _x-300, _y,4, 4, global.beatprogress*360, c_white, 1);
+
 
 if global.DrawText{
 
@@ -62,8 +59,12 @@ if global.DrawText{
 
 
  //SHOW BEAT STATUS (PERFECT,GOOD,BAD)
-
-if(keyboard_check_pressed(vk_space))
+var _player_input=0;
+if(instance_exists(obj_crypt_player))
+{
+    if (obj_crypt_player.key_direction_pressed) _player_input=true;
+}
+if(keyboard_check_pressed(vk_space) || _player_input)
 {
 	var _xdist=140;
 
@@ -85,3 +86,26 @@ if(keyboard_check_pressed(vk_space))
 }
 
 draw_beat_hit_texts();
+
+
+
+////DRAW BAR 2
+//var _scale=1.8;
+//if(global.beatprogress>=0.5)
+//{
+//	_scale=2;
+//	//instance_create_depth()
+//}
+//draw_sprite_stretched(spr_beat_frame_2,(get_timer()*(4/1000000)),bar2_x-(beat_frame_width/2),bar2_y-beat_frame_height,beat_frame_width,beat_frame_height);
+//draw_sprite_ext(spr_beat_heart_2,0,bar2_x,bar2_y,_scale,_scale,0,c_white,1);
+//draw_sprite_stretched(img_BeatRange,0,bar2_x-(beat_frame_width/2),bar2_y-bar2_range,beat_frame_width,bar2_range*2);
+//var _length=array_length(beat_meter_list);
+
+//if(_length>0)
+//{
+//	for(var i=0;i<_length;i++)
+//	{
+//		var _yy=beat_meter_list[i];
+//	    draw_sprite_ext(spr_beat_meter_2,0,bar2_x,_yy,1.7,1.7,0,c_white,1-max(0,min(1,(_yy-bar2_y)/bar2_range)));
+//	}
+//}

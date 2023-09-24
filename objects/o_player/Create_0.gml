@@ -1,6 +1,7 @@
 /// @description 
 event_inherited();
 walk_spd = 2;
+initial_walk_spd=walk_spd;
 diag_walk_spd = floor(walk_spd*(sqr(2)/2));
 walk_friction=0;
 hp_max = 10;
@@ -48,11 +49,57 @@ script_start = false;
 //sound
 path_id = -1;
 
-//Shaders
+
+//SHADERS
 sha_alpha = 0.5;
 
-//automove
+	//red flash shader (if the gato get hurts)
+	start_flash=false;
+	current_flash=0.0;
+	flash=0.5;
+	sh_fhlash=shader_get_uniform(sha_red_flash,"flash");
+	x1=0; //to use in draw
+	red_flashing=false;
+
+	//rainbow shader
+
+	shdrRainbow=sha_rainbow;
+
+	rainbow_uniUV         = shader_get_uniform(shdrRainbow, "u_uv");
+	rainbow_uniTime       = shader_get_uniform(shdrRainbow, "u_time");
+	rainbow_uniSpeed      = shader_get_uniform(shdrRainbow, "u_speed");
+	rainbow_uniSection    = shader_get_uniform(shdrRainbow, "u_section");
+	rainbow_uniSaturation = shader_get_uniform(shdrRainbow, "u_saturation"); 
+	rainbow_uniBrightness = shader_get_uniform(shdrRainbow, "u_brightness");
+	rainbow_uniMix        = shader_get_uniform(shdrRainbow, "u_mix");
+
+	rainbow_time  = 0.0;
+	rainbow_speed = 1.0;
+	rainbow_section = 0.5;
+	rainbow_saturation = 0.5;
+	rainbow_brightness = 0.9;
+	rainbow_mix = 0.6; 
+
+
+//AUTOMOVE STATE PARAMETERS
 
 automove_from_activate=false;
 automove_x=-1;
 automove_y=-1;
+
+//HIT EFFECT PARAMETERS
+
+damaged				=	false;
+inmunity			=	false;
+hit_inmunity_time	=	1.6; //time in seconds of no receveing damage when the gato get hit;
+
+	//blink effect (or strobe effect, idk)
+	time_showing_sprite		=	0.08;
+	time_showing_nothing	=	0.03;
+	time_to_wait			=	time_showing_sprite;
+	blinking_delta_time		=	0;
+	
+//PARTICLES EFFECTS
+
+rainbow_particle=part_system_create(particle_notes);
+part_system_depth(rainbow_particle,depth-1);

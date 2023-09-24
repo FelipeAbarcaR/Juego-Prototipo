@@ -44,9 +44,10 @@ function bgm_transition_set_values(){
 			ResetBeatStats();
 		    last_music=current_music;
 			current_music=new_music;
-			current_bpm = getBPM(new_music);
+			current_bpm = get_bpm(new_music);
 			global.bpm = current_bpm
-			global.BeatTimeMS=((60)/global.bpm)*1000000;			
+			global.BeatTimeMS=((60)/global.bpm)*1000000;
+			reset_beat_bar_2_variables();
 }
 function bgm_fade_in(_time)
 {
@@ -72,14 +73,15 @@ function bgm_fade_in(_time)
 }
  
  
-function getBPM(_BGM)
+function get_bpm(_BGM)
 {
-	   var arrayLength = array_length(BGM_data);
+	var _data=obj_beat.BGM_data
+	var arrayLength = array_length(_data);
 
-	    for (var i = 0; i < arrayLength; i++) {
-	        if (BGM_data[i, 0] == _BGM) {
-	            return BGM_data[i, 1];
-	        }
+	for (var i = 0; i < arrayLength; i++) {
+	    if (_data[i, 0] == _BGM) {
+	        return _data[i, 1];
+	    }
     }
 
 }
@@ -115,4 +117,21 @@ function draw_vanish_beatbar()
 	    var _bar = instance_create_layer(barX, barY,"Instances",obj_vanish);
 		_bar.draw_on_gui=true;
 	}
+}
+
+//Beat Bar 2 functions
+ //store a new beat_meter to the list
+ function bar2_store_meter(_y){
+
+	array_push(beat_meter_list, _y);
+}
+function reset_beat_bar_2_variables()
+{
+    BeatTimeFrames=(60/global.bpm)*room_speed;
+
+	bar2_timer=0;
+	time_to_beat=global.BeatTimeMS*beats_to_start;
+	time_to_reach_end=(beat_frame_height/beat_meter_speed)*(1/room_speed)*1000000;
+
+	beat_meter_list=[]; 
 }

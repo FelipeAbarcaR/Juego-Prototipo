@@ -3,7 +3,10 @@
 
 audio_stop_all();
 room_restart();
-global.currentroom=get_current_room();
+global.currentroom=get_current_room_index();
+global.playerhealth = global.playerhealthmax;
+game_over=false;
+instance_activate_all();
 with(obj_beat)
 {
     var _bgm= current(Index.music);
@@ -14,4 +17,5 @@ with(obj_beat)
 	global.bpm= current_bpm;
 	global.BeatTimeMS=((60)/global.bpm)*1000000 //time of a beat in microseconds
 	BeatTimeFrames=(60/global.bpm)*room_speed; //frames of a beat
+	reset_beat_bar_2_variables();
 }

@@ -228,8 +228,8 @@ function reset_variables() {
 	down = 0;
 	vmove = 0;
 	hmove = 0;
-	walk_spd = 1.8;
-	
+	walk_spd = initial_walk_spd;
+	PlayerUpdateStatus();
 
 	
 	//Space Logic 

@@ -47,8 +47,6 @@ switch(state) {
 		anim();
 	break;
 	case states.LOCK:
-		
-
 		//image_speed=0;
 		image_index = CARDINAL_DIR_PLAYER;
 
@@ -66,3 +64,16 @@ switch(state) {
 
 	break;
 }
+
+//HIT EFFECT STUFF
+if(inmunity)
+{
+    blinking_delta_time+=delta_time/1000000;
+}
+if(damaged)
+{
+	damaged=false;
+    start_flash=true;
+}
+rainbow_time += 1 / obj_beat.BeatTimeFrames;
+part_system_position(rainbow_particle,x,y)

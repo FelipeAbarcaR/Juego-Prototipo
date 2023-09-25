@@ -10,6 +10,7 @@
     {"name":"Runny","order":2,"path":"folders/Objects/Minijuegos/Runny.yy",},
     {"name":"Misceláneos","order":11,"path":"folders/Objects/Misceláneos.yy",},
     {"name":"Player","order":12,"path":"folders/Objects/Player.yy",},
+    {"name":"Particles","order":2,"path":"folders/Particles.yy",},
     {"name":"Entity","order":11,"path":"folders/Sprites/Entity.yy",},
     {"name":"Icons","order":12,"path":"folders/Sprites/Icons.yy",},
     {"name":"Interfaz","order":13,"path":"folders/Sprites/Interfaz.yy",},
@@ -39,7 +40,6 @@
     {"name":"Shaders","order":3,"path":"folders/Transiciones/FoxeyTransitionsPro/Shaders.yy",},
     {"name":"Dither","order":1,"path":"folders/Transiciones/FoxeyTransitionsPro/Shaders/Dither.yy",},
     {"name":"Normal","order":2,"path":"folders/Transiciones/FoxeyTransitionsPro/Shaders/Normal.yy",},
-    {"name":"Particles","order":2,"path":"folders/Particles.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"__ac_ftr_linear","order":1,"path":"animcurves/__ac_ftr_linear/__ac_ftr_linear.yy",},

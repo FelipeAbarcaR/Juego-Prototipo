@@ -75,5 +75,5 @@ if(damaged)
 	damaged=false;
     start_flash=true;
 }
-rainbow_time += 1 / obj_beat.BeatTimeFrames;
-part_system_position(rainbow_particle,x,y)
+//rainbow_time += 1 / obj_beat.BeatTimeFrames;
+//part_system_position(rainbow_particle,x,y)

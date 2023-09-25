@@ -46,6 +46,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Obsoleto","folderPath":"folders/Obsoleto.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Entity","folderPath":"folders/Obsoleto/Entity.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"NPC","folderPath":"folders/Obsoleto/Entity/NPC.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Particles","folderPath":"folders/Particles.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Rooms","folderPath":"folders/Rooms.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"0","folderPath":"folders/Rooms/0.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"M1","folderPath":"folders/Rooms/M1.yy",},
@@ -137,7 +138,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Shaders","folderPath":"folders/Transiciones/FoxeyTransitionsPro/Shaders.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Dither","folderPath":"folders/Transiciones/FoxeyTransitionsPro/Shaders/Dither.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Normal","folderPath":"folders/Transiciones/FoxeyTransitionsPro/Shaders/Normal.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Particles","folderPath":"folders/Particles.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"NPC_dialogues.json","CopyToMask":-1,"filePath":"datafiles",},

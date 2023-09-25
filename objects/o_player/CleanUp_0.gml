@@ -1,2 +1,2 @@
 path_delete(path);
-part_system_destroy(rainbow_particle);
+//part_system_destroy(rainbow_particle);

@@ -216,7 +216,6 @@
     {"id":{"name":"__ftr_sh_sqrot_twopass","path":"shaders/__ftr_sh_sqrot_twopass/__ftr_sh_sqrot_twopass.yy",},},
     {"id":{"name":"spr_arrow3","path":"sprites/spr_arrow3/spr_arrow3.yy",},},
     {"id":{"name":"scribble_glyph_get","path":"scripts/scribble_glyph_get/scribble_glyph_get.yy",},},
-    {"id":{"name":"roomMapa1NPC","path":"rooms/roomMapa1NPC/roomMapa1NPC.yy",},},
     {"id":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},},
     {"id":{"name":"ts_Mapa1","path":"tilesets/ts_Mapa1/ts_Mapa1.yy",},},
     {"id":{"name":"scribble_fallback_bulletpoint","path":"sprites/scribble_fallback_bulletpoint/scribble_fallback_bulletpoint.yy",},},
@@ -795,7 +794,6 @@
     {"roomId":{"name":"rm_GD","path":"rooms/rm_GD/rm_GD.yy",},},
     {"roomId":{"name":"roomMapa1Dungeon","path":"rooms/roomMapa1Dungeon/roomMapa1Dungeon.yy",},},
     {"roomId":{"name":"rm_runny","path":"rooms/rm_runny/rm_runny.yy",},},
-    {"roomId":{"name":"roomMapa1NPC","path":"rooms/roomMapa1NPC/roomMapa1NPC.yy",},},
   ],
   "templateType": null,
   "TextureGroups": [

@@ -13,7 +13,8 @@
 		[roomViejoSabio,	bgm_ForestTimeInterior, 126,	o_player,			mode.move,		o_player],
 		[roomMapa1Dungeon,	bgm_NightCall_118,		118,	o_player,			mode.move,		o_player],
 		[rm_runny,			bgm_midnight_100,		100,	o_player,			mode.move,		o_player],
-		[rm_Obstacle1,		bgm_OneLove,			107,	obj_crypt_player ,	mode.grid,		obj_crypt_player]
+		[rm_Obstacle1,		bgm_OneLove,			107,	obj_crypt_player ,	mode.grid,		obj_crypt_player],
+		[roomMapa1NPC,		bgm_WillPower_89,		89,		o_player,			mode.move,		o_player],
 		
 	];
 	

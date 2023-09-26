@@ -260,6 +260,7 @@
     {"id":{"name":"obj_questie","path":"objects/obj_questie/obj_questie.yy",},},
     {"id":{"name":"beatbar","path":"objects/beatbar/beatbar.yy",},},
     {"id":{"name":"fnt_UI","path":"fonts/fnt_UI/fnt_UI.yy",},},
+    {"id":{"name":"roomMapa1NPC","path":"rooms/roomMapa1NPC/roomMapa1NPC.yy",},},
     {"id":{"name":"__ftr_scr_macros","path":"scripts/__ftr_scr_macros/__ftr_scr_macros.yy",},},
     {"id":{"name":"spr_bg_forest2","path":"sprites/spr_bg_forest2/spr_bg_forest2.yy",},},
     {"id":{"name":"ts_mapaplaza","path":"sprites/ts_mapaplaza/ts_mapaplaza.yy",},},
@@ -794,6 +795,7 @@
     {"roomId":{"name":"rm_GD","path":"rooms/rm_GD/rm_GD.yy",},},
     {"roomId":{"name":"roomMapa1Dungeon","path":"rooms/roomMapa1Dungeon/roomMapa1Dungeon.yy",},},
     {"roomId":{"name":"rm_runny","path":"rooms/rm_runny/rm_runny.yy",},},
+    {"roomId":{"name":"roomMapa1NPC","path":"rooms/roomMapa1NPC/roomMapa1NPC.yy",},},
   ],
   "templateType": null,
   "TextureGroups": [

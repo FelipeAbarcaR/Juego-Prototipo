@@ -169,40 +169,72 @@ var _tp=obj_transition_manager.transition_progress;
 		}else show_debug_message("obj_beat con transicion,no se encontró bgm_snd para subirle volumen compra")
 		show_debug_message("sound volume: "+string(audio_sound_get_gain(bgm_snd)));
 	}
-}else 
+}else mid_fading=false;
+
+//BEAT BAR 2.0 STEP
+
+bar2_timer+=dt;
+
+if(bar2_timer>=time_to_beat-time_to_reach_end)
 {
-	mid_fading=false;
-	
+    time_to_beat+=global.BeatTimeMS*2;
+	bar2_store_meter(bar2_y-beat_frame_height);
 }
 
-////BEAT BAR 2.0 STEP
-//bar2_timer+=dt;
-//if(bar2_timer>=time_to_beat-time_to_reach_end)
-//{
-//    time_to_beat+=global.BeatTimeMS*2;
-//	bar2_store_meter(bar2_y-beat_frame_height);
-//}
-
-//var _length=array_length(beat_meter_list);
-//if(_length>0)
-//{
-//    for(var i=0;i<_length;i++)
-//	{
-//	    beat_meter_list[i]+=beat_meter_speed;
-//	}
+var _length=array_length(beat_meter_list);
+if(_length>0)
+{
+	var _last_beat_position =beat_meter_list[0];
 	
-//	if(beat_meter_list[0]>=bar2_y+bar2_range)
-//	{
-//	   var _last_time= array_shift(beat_meter_list);
-//	}
+    for(var i=0;i<_length;i++)
+	{
+	    beat_meter_list[i]+=beat_meter_speed;
+		
+	}
 	
-//	if(keyboard_check_pressed(vk_space))
-//	{
-//	    var _obj = instance_create_depth(bar2_x,beat_meter_list[0],depth,obj_vanish)
-//		_obj.sprite_index= spr_beat_meter_2;
-//		_obj.image_xscale=2.5;
-//		_obj.image_yscale=2.5;
-//		_obj.draw_on_gui=true;
-//	}
-//}
+	if(_last_beat_position>=bar2_y+bar2_range)
+	{
+	   var _last_time= array_shift(beat_meter_list);
+	   if(groovy_count>0)
+	   {
+	       groovy_count=0;
+		   play_sfx(sfx_error)
+	   }
+	}
+	
+	var _player_input=0;
+	
+	if(instance_exists(obj_crypt_player))
+	{
+	   if (obj_crypt_player.key_direction_pressed) _player_input=true;
+	}
+	
+	if(keyboard_check_pressed(vk_space) || _player_input)
+	{
+		perfect_good_bad();
+		
+		var _obj = instance_create_depth(bar2_x,_last_beat_position,depth,obj_vanish)
+		_obj.sprite_index= spr_beat_meter_2;
+		_obj.image_xscale=3;
+		_obj.image_yscale=3;
+		_obj.draw_on_gui=true;
+		_obj.sprite_color=c_red;
+		
+		if(global.beatchance)
+		{
+			var _last_time= array_shift(beat_meter_list);
+			groovy_count+=1;
+		}
+		else
+		{
+			var _last_time= array_shift(beat_meter_list);
+		   if(groovy_count>0)
+		   {
+		       groovy_count=0;
+			   play_sfx(sfx_error)
+		   }
+		}
+	}
+}
 
+if (groovy_count>=groovy_max) global.groovy=true else global.groovy=false;

@@ -17,7 +17,6 @@ ds_list_add(beat_hit_data, new_text);
 }
 function draw_beat_hit_texts()
 {
-
 	var num_text = ds_list_size(beat_hit_data);
 	if (num_text >0){
 		var i;
@@ -55,3 +54,36 @@ function draw_beat_hit_texts()
 	}
 }
 
+function perfect_good_bad()
+{
+//SHOW BEAT STATUS (PERFECT,GOOD,BAD)
+	var _player_input=0;
+	var _bar_y=beat_meter_list[0];
+	var _x=bar2_x;
+	var _top_good=beathitrange; //0.35
+	var _top_perfect=0.25;
+	var _progress=BeatBarProgress;
+	
+	if(_top_good<=_top_perfect)
+	{
+		_top_perfect=_top_good*0.8; //patch if the beathitrange change;
+	}
+
+	var _xdist=140;
+
+	if(abs(_progress)>=_top_good) 
+	{
+		store_beat_hit(_x-_xdist,_bar_y,"[c_black]Almost")
+	}
+	
+	if(abs(_progress)>=_top_perfect && abs(_progress)<_top_good) 
+	{
+		store_beat_hit(_x-_xdist,_bar_y,"[c_green]Good!")
+	}
+	
+	if(abs(_progress)<_top_perfect) 
+	{
+		store_beat_hit(_x-_xdist,_bar_y,"[wobble][rainbow]Perfect!")
+	}
+
+}

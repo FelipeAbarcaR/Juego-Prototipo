@@ -17,10 +17,10 @@ if(!surface_exists(shadow_surface))
 //_shadow_fog[1]=c_black;
 
 gpu_set_fog(true,c_black,0,1);
-var _scale=1.2;
-var _distance=100;
+var _scale=0.7;
+var _distance=120;
 var _dx=20;
-var _alpha=0.6;
+var _alpha=0.4;
 draw_sprite_ext(sprite_index,image_index,x+_dx,y+_distance,_scale,_scale,image_angle,image_blend,_alpha);
 gpu_set_fog(0,c_white,0,0);
 draw_self();

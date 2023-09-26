@@ -1,7 +1,5 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
-
-
 enum transition_step
 {
     fading_out,
@@ -20,7 +18,7 @@ start_bgm_fade_in=-1;
 
 //gains
 bgm_gain=0.3;
-sfx_gain=0.789;
+sfx_gain=0.8;
 
 // set bpm
 global.bpm= current_bpm;
@@ -32,13 +30,14 @@ global.beatprogress=0;
 global.BeatNumber=0;
 
 //parche para arreglar que el beat se vaya a los lados o al medio
-beat_fix=false;
+beat_fix=true;
 beat_speed=2;
 
 // range to beatchance
-beat_hit_range=0.7;
+beat_hit_range=0.6;
 beat_hit_range_slow=beat_hit_range/2;
-beathitrange=beat_hit_range_slow;
+beathitrange=beat_hit_range;
+
 //BeatProgress
 SumDelta=0; //para global beat
 SumFullDelta=0; //para bar meter
@@ -102,19 +101,24 @@ BeatTimeFrames=(60/global.bpm)*room_speed;
 
 bar2_timer=0;
 
-beat_meter_speed=2;
+beat_meter_speed=3;
 
-beat_frame_height=280;
-beat_frame_width=40;
-bar2_range=beat_frame_height*beat_hit_range_slow;
+beat_frame_height=340;
+beat_frame_width=80;
+bar2_range=beat_frame_height*beathitrange;
 
-bar2_x=global.res.guiwidth*(8.2/10);
-bar2_y=global.res.guiheight*0.4;
+bar2_x=global.res.guiwidth*(0.85);
+bar2_y=global.res.guiheight*0.5;
 
 beats_to_start=7;
 time_to_beat=global.BeatTimeMS*beats_to_start;
 time_to_reach_end=(beat_frame_height/beat_meter_speed)*(1/room_speed)*1000000;
 
+groovy_count=0;
+groovy_max=3;
+global.groovy=false;
+
 beat_meter_list=[]; 
 
+sfx_error=error_style_05;
 

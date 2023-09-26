@@ -1,13 +1,9 @@
 //red flash shader if got hit
-shader_set(shdrRainbow)
-var uv = sprite_get_uvs(sprite_index, image_index);
-shader_set_uniform_f(rainbow_uniUV, uv[0], uv[2]);
-shader_set_uniform_f(rainbow_uniSpeed, rainbow_speed);
-shader_set_uniform_f(rainbow_uniTime, rainbow_time);
-shader_set_uniform_f(rainbow_uniSaturation, rainbow_saturation);
-shader_set_uniform_f(rainbow_uniBrightness, rainbow_brightness);
-shader_set_uniform_f(rainbow_uniSection, rainbow_section);
-shader_set_uniform_f(rainbow_uniMix, rainbow_mix);
+if(global.groovy)
+{
+	set_rainbow_shader();
+}
+
 if(start_flash)
 {
 	x1+=0.1
@@ -54,9 +50,11 @@ if alarm[hurrtt] > 0 and flash-- < flash_initial/2 {
 		}
 	}else draw_cat();
 }
+
 shader_reset();
 
 show_healthbar();
+
 if(global.DrawText)
 {
     draw_sprite_bbox();

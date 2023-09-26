@@ -8,6 +8,7 @@ function ResetBeatStats(){
 	SumFullDelta=0;
 	BeatBarProgress=0;
 	global.beatprogress=0
+	groovy_count=0;
 }
 
 function ChangeBGM(_newBGM,_time,_wait_for_room=false)
@@ -134,4 +135,12 @@ function reset_beat_bar_2_variables()
 	time_to_reach_end=(beat_frame_height/beat_meter_speed)*(1/room_speed)*1000000;
 
 	beat_meter_list=[]; 
+}
+
+function play_sfx(_sfx)
+{
+    with(obj_beat)
+	{
+	    audio_play_sound(_sfx,10,0,sfx_gain);
+	}
 }

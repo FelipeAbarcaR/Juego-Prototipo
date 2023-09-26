@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "ShowBeatSatus",
+  "name": "ShowBeatStatus",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {

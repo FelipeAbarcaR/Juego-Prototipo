@@ -3,39 +3,39 @@
 //var _mode=global.room_data[global.currentroom][Index.mode];
 //if (_mode!=mode.fight) //print in gui only if is NOT in fight mode, (bc there is no cam)
 //{
-	var a //scale of the heart in 'beat'
-	if global.beatchance{
-		a=1.2
-	} else a=1
+//	var a //scale of the heart in 'beat'
+//	if global.beatchance{
+//		a=1.2
+//	} else a=1
 
-	//reference positions 
-	var _wpos,_hpos,_scale;
-	_wpos = 0.95;
-	_hpos=0.30;
+//	//reference positions 
+	//var _wpos,_hpos,_scale;
+	//_wpos = 0.95;
+	//_hpos=0.30;
 	
 	//draw yellow box range
 	var _x,_y;
-	_x=guiwidth*_wpos;
-	_y=guiheight*_hpos
+	_x=bar2_x;
+	_y=bar2_y;
 
-	var _barwidth=40*barscale;
-	var _xchance=_x-_barwidth*0.5;
-	var _hitheight=BarHalf*barscale*beathitrange; //height of the range of beat's chance
-	var _ychance=_y-_hitheight;
-	var _beatbarY=_y+BarHalf*BeatBarProgress*barscale
+//	var _barwidth=40*barscale;
+//	var _xchance=_x-_barwidth*0.5;
+//	var _hitheight=BarHalf*barscale*beathitrange; //height of the range of beat's chance
+//	var _ychance=_y-_hitheight;
+	//var _beatbarY=_y+BarHalf*BeatBarProgress*barscale
 
-//Beat bar
-	draw_sprite_stretched(img_BeatRange,0,_xchance,_ychance,_barwidth,_hitheight*2);
-	draw_sprite_ext(img_BeatBarFrame,0,_x,_y,barscale,barscale,image_angle,image_blend,image_alpha);
-	draw_sprite_ext(img_BeatMeter, 0, _x, _beatbarY,a, a, 0, -1, 1);
-	if(global.beat)
-	{
-	   var _obj=instance_create_depth(_x,_beatbarY,depth,obj_vanish);
-	   _obj.draw_on_gui=true;
-	}
-	draw_sprite_ext(spr_Heart,0,_x,_y,a*barscale,a*barscale,0,-1,1);
-	barX=_x;
-	barY=_beatbarY;
+////Beat bar
+//	draw_sprite_stretched(img_BeatRange,0,_xchance,_ychance,_barwidth,_hitheight*2);
+//	draw_sprite_ext(img_BeatBarFrame,0,_x,_y,barscale,barscale,image_angle,image_blend,image_alpha);
+//	draw_sprite_ext(img_BeatMeter, 0, _x, _beatbarY,a, a, 0, -1, 1);
+//	if(global.beat)
+//	{
+//	   var _obj=instance_create_depth(_x,_beatbarY,depth,obj_vanish);
+//	   _obj.draw_on_gui=true;
+//	}
+//	draw_sprite_ext(spr_Heart,0,_x,_y,a*barscale,a*barscale,0,-1,1);
+//	barX=_x;
+//	barY=_beatbarY;
 
 
 
@@ -58,54 +58,47 @@ if global.DrawText{
 
 
 
- //SHOW BEAT STATUS (PERFECT,GOOD,BAD)
-var _player_input=0;
-if(instance_exists(obj_crypt_player))
-{
-    if (obj_crypt_player.key_direction_pressed) _player_input=true;
-}
-if(keyboard_check_pressed(vk_space) || _player_input)
-{
-	var _xdist=140;
+ 
+//BEAT BAR 2
+var _scale=2;
 
-    if(abs(BeatBarProgress)>=beathitrange) 
-	{
-	    store_beat_hit(_x-_xdist,_beatbarY,"[c_black]Almost")
-	}
-	
-    if(abs(BeatBarProgress)>=0.30 && abs(BeatBarProgress)<beathitrange) 
-	{
-	    store_beat_hit(_x-_xdist,_beatbarY,"[c_green]Good!")
-	}
-	
-    if(abs(BeatBarProgress)<0.30) 
-	{
-	    store_beat_hit(_x-_xdist,_beatbarY,"[wobble][rainbow]Perfect!")
-	}
+if(global.beatprogress>=0.75)
+{
+	_scale=2*1.15 //latido: aumentar el sprite en 15% cerca del ritmo;
 
 }
+//frame
+var _animation_speed=(get_timer()/1000000)*4;
+draw_sprite_stretched(spr_beat_frame_2,_animation_speed,_x-(beat_frame_width/2),bar2_y-beat_frame_height,beat_frame_width,beat_frame_height);
+//"heart", base de la barra
+draw_sprite_ext(spr_beat_heart_2,0,_x,bar2_y,_scale,_scale,0,c_white,1);
+//beat yellow range
+draw_sprite_stretched(img_BeatRange,0,_x-(beat_frame_width/2),bar2_y-bar2_range,beat_frame_width,bar2_range*2);
 
-draw_beat_hit_texts();
+//"beats", cositas que caen
+var _length=array_length(beat_meter_list);
+
+if(_length>0) //si hay al menos 1 beat en la queue
+{
+	for(var i=0;i<_length;i++)
+	{
+		var _bar_scale=3
+		var _yy=beat_meter_list[i];
+	    draw_sprite_ext(spr_beat_meter_2,0,_x,_yy,_bar_scale,_bar_scale,0,c_white,1-max(0,min(1,(_yy-bar2_y)/bar2_range)));
+	}
+
+}
+
+var _index=clamp(groovy_count,0,groovy_max);
+var _dx=30;
+var _dy=16;
+draw_sprite(spr_numbers,_index,_x+_dx,_y)
+draw_rectangle(_x-_dx,_y,_x+_dx,_y+_dy,false);
+draw_beat_hit_texts();	
+
+if(global.beatchance)draw_circle_color(_x+_dx,_y+_dy*2,5,c_orange,c_blue,false);
 
 
 
-////DRAW BAR 2
-//var _scale=1.8;
-//if(global.beatprogress>=0.5)
-//{
-//	_scale=2;
-//	//instance_create_depth()
-//}
-//draw_sprite_stretched(spr_beat_frame_2,(get_timer()*(4/1000000)),bar2_x-(beat_frame_width/2),bar2_y-beat_frame_height,beat_frame_width,beat_frame_height);
-//draw_sprite_ext(spr_beat_heart_2,0,bar2_x,bar2_y,_scale,_scale,0,c_white,1);
-//draw_sprite_stretched(img_BeatRange,0,bar2_x-(beat_frame_width/2),bar2_y-bar2_range,beat_frame_width,bar2_range*2);
-//var _length=array_length(beat_meter_list);
 
-//if(_length>0)
-//{
-//	for(var i=0;i<_length;i++)
-//	{
-//		var _yy=beat_meter_list[i];
-//	    draw_sprite_ext(spr_beat_meter_2,0,bar2_x,_yy,1.7,1.7,0,c_white,1-max(0,min(1,(_yy-bar2_y)/bar2_range)));
-//	}
-//}
+

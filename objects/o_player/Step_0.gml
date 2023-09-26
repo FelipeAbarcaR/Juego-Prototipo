@@ -75,5 +75,18 @@ if(damaged)
 	damaged=false;
     start_flash=true;
 }
-rainbow_time += 1 / obj_beat.BeatTimeFrames;
-part_system_position(rainbow_particle,x,y)
+if(global.groovy)
+{
+	rainbow_time += 1 / obj_beat.BeatTimeFrames;
+	
+    if(part_system_exists(rainbow_particle))
+	{
+		part_system_position(rainbow_particle,x,y);
+	} else 
+	{
+		rainbow_particle=part_system_create(particle_notes);
+	    part_system_depth(rainbow_particle,depth-1);
+	}
+	
+}else part_system_destroy(rainbow_particle);
+

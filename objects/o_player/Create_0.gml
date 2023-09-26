@@ -101,5 +101,5 @@ hit_inmunity_time	=	1.6; //time in seconds of no receveing damage when the gato 
 	
 //PARTICLES EFFECTS
 
-rainbow_particle=part_system_create(particle_notes);
-part_system_depth(rainbow_particle,depth-1);
+//rainbow_particle=part_system_create(particle_notes);
+//part_system_depth(rainbow_particle,depth-1);

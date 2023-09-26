@@ -1,4 +1,5 @@
 //red flash shader if got hit
+
 if(global.groovy)
 {
 	set_rainbow_shader();

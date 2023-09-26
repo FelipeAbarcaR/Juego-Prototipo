@@ -75,6 +75,7 @@ if(damaged)
 	damaged=false;
     start_flash=true;
 }
+
 if(global.groovy)
 {
 	rainbow_time += 1 / obj_beat.BeatTimeFrames;
@@ -89,4 +90,3 @@ if(global.groovy)
 	}
 	
 }else part_system_destroy(rainbow_particle);
-

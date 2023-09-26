@@ -89,4 +89,8 @@ if(global.groovy)
 	    part_system_depth(rainbow_particle,depth-1);
 	}
 	
-}else part_system_destroy(rainbow_particle);
+}else
+{
+	if(part_system_exists(rainbow_particle)) part_system_destroy(rainbow_particle);
+	
+}

@@ -73,12 +73,12 @@ sha_alpha = 0.5;
 	rainbow_uniBrightness = shader_get_uniform(shdrRainbow, "u_brightness");
 	rainbow_uniMix        = shader_get_uniform(shdrRainbow, "u_mix");
 
-	rainbow_time  = 0.0;
-	rainbow_speed = 1.0;
-	rainbow_section = 0.5;
-	rainbow_saturation = 0.5;
-	rainbow_brightness = 0.9;
-	rainbow_mix = 0.6; 
+	rainbow_time		=	0.0;
+	rainbow_speed		=	1.0;
+	rainbow_section		=	0.5;
+	rainbow_saturation	=	0.2;
+	rainbow_brightness	=	0.7;
+	rainbow_mix			=	0.6; 
 
 
 //AUTOMOVE STATE PARAMETERS

@@ -57,17 +57,19 @@ function draw_beat_hit_texts()
 function perfect_good_bad()
 {
 //SHOW BEAT STATUS (PERFECT,GOOD,BAD)
-	var _player_input=0;
-	var _bar_y=beat_meter_list[0];
-	var _x=bar2_x;
-	var _top_good=beathitrange; //0.35
-	var _top_perfect=0.25;
-	var _progress=BeatBarProgress;
+
+	var _x	=	bar2_x;
+	var _y	=	bar2_y;
 	
-	if(_top_good<=_top_perfect)
-	{
-		_top_perfect=_top_good*0.8; //patch if the beathitrange change;
-	}
+	var _bar_y	=	beat_meter_list[0];
+
+	var _height		=	beat_frame_height;
+	var _distance	=	abs(_y-_bar_y);
+	
+	var _progress	=	map_value(_distance,0,_height,0,1);
+
+	var _top_good		=	beathitrange; //0.35
+	var _top_perfect	=	beathitrange/2;
 
 	var _xdist=140;
 

@@ -9,6 +9,7 @@ function ResetBeatStats(){
 	BeatBarProgress=0;
 	global.beatprogress=0
 	groovy_count=0;
+	bar2_timer=0;
 }
 
 function ChangeBGM(_newBGM,_time,_wait_for_room=false)

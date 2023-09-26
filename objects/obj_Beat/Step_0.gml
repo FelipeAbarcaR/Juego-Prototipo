@@ -28,9 +28,6 @@
 	
 	BeatBarProgress =  sin((((SumFullDelta+_midtime)/(global.BeatTimeMS*beat_speed))*pi));
 	
-	//Beat's chance to hit
-	
-	if (abs(BeatBarProgress)<=beathitrange) global.beatchance =true; else global.beatchance =false;
 
 //	var char = global.room_data[global.currentroom][Index.mainchar];
 
@@ -171,34 +168,41 @@ var _tp=obj_transition_manager.transition_progress;
 	}
 }else mid_fading=false;
 
+
 //BEAT BAR 2.0 STEP
 
 bar2_timer+=dt;
-
-if(bar2_timer>=time_to_beat-time_to_reach_end)
+//
+if(bar2_timer>=time_to_beat-time_to_reach_end)//If it is the time to drop a meter
 {
-    time_to_beat+=global.BeatTimeMS*2;
-	bar2_store_meter(bar2_y-beat_frame_height);
+    time_to_beat+=global.BeatTimeMS*2; //set the time of the new beat meter
+	bar2_store_meter(bar2_y-beat_frame_height); //store the new meter in array, starting from top of frame
 }
 
 var _length=array_length(beat_meter_list);
-if(_length>0)
+
+if(_length>0) //if it is at least one beat meter in the array
 {
-	var _last_beat_position =beat_meter_list[0];
+	var _last_beat_position = beat_meter_list[0];
 	
-    for(var i=0;i<_length;i++)
+	//Beat's chance to hit
+	var _distance_from_heart=point_distance(bar2_x,_last_beat_position,bar2_x,bar2_y);
+	if (_distance_from_heart<=bar2_range) global.beatchance =true else global.beatchance =false;
+    
+	for(var i=0;i<_length;i++)
 	{
-	    beat_meter_list[i]+=beat_meter_speed;
-		
+		//change the position of every beat meter
+	    beat_meter_list[i]	+=	beat_meter_speed;
 	}
 	
-	if(_last_beat_position>=bar2_y+bar2_range)
+	if(_last_beat_position>=bar2_y+bar2_range) //if beat meter reach the bottom of range
 	{
-	   var _last_time= array_shift(beat_meter_list);
-	   if(groovy_count>0)
+	   var _last_time	= array_shift(beat_meter_list); //delete the beat meter of the array
+	   
+	if(groovy_count>0) //reset the groovy counter
 	   {
 	       groovy_count=0;
-		   play_sfx(sfx_error)
+		   play_sfx(sfx_groovy_error);
 	   }
 	}
 	
@@ -209,32 +213,36 @@ if(_length>0)
 	   if (obj_crypt_player.key_direction_pressed) _player_input=true;
 	}
 	
-	if(keyboard_check_pressed(vk_space) || _player_input)
+	var _activate_key=keyboard_check_pressed(vk_space);
+	if(	_activate_key || _player_input)
 	{
-		perfect_good_bad();
+		perfect_good_bad(); //store the beat status (perfect,good,almost)
 		
-		var _obj = instance_create_depth(bar2_x,_last_beat_position,depth,obj_vanish)
+		//Create the meter to show where it was the position when input a key.
+		var _obj = instance_create_depth(bar2_x,_last_beat_position,depth,obj_vanish);
 		_obj.sprite_index= spr_beat_meter_2;
 		_obj.image_xscale=3;
 		_obj.image_yscale=3;
 		_obj.draw_on_gui=true;
 		_obj.sprite_color=c_red;
 		
-		if(global.beatchance)
+		if(global.beatchance) //if the input was in beatchance
 		{
-			var _last_time= array_shift(beat_meter_list);
-			groovy_count+=1;
+			var _last_time= array_shift(beat_meter_list); //delete the beat meter of the array
+			groovy_count+=1;										
 		}
-		else
+		else // if the input was not in beatchance
 		{
-			var _last_time= array_shift(beat_meter_list);
-		   if(groovy_count>0)
+			var _last_time= array_shift(beat_meter_list); //delete the beat meter of the array
+		   if(groovy_count>0) //reset the groovy counter
 		   {
 		       groovy_count=0;
-			   play_sfx(sfx_error)
+			   play_sfx(sfx_groovy_error)
 		   }
 		}
+	
 	}
+	
 }
 
 if (groovy_count>=groovy_max) global.groovy=true else global.groovy=false;

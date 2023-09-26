@@ -53,9 +53,7 @@ if global.DrawText{
 	draw_text(3*_width/4,  _spacing*10	,	"beatrange: "+ string(beathitrange));
 	draw_text(3*_width/4,  _spacing*11	,		"beat_speed: "+ string(beat_speed));	
 	draw_text(3*_width/4,  _spacing*12	,	"Volume: "+string(audio_sound_get_gain(bgm_snd)));	
-	
 }
-
 
 
  
@@ -72,8 +70,13 @@ var _animation_speed=(get_timer()/1000000)*4;
 draw_sprite_stretched(spr_beat_frame_2,_animation_speed,_x-(beat_frame_width/2),bar2_y-beat_frame_height,beat_frame_width,beat_frame_height);
 //"heart", base de la barra
 draw_sprite_ext(spr_beat_heart_2,0,_x,bar2_y,_scale,_scale,0,c_white,1);
-//beat yellow range
-draw_sprite_stretched(img_BeatRange,0,_x-(beat_frame_width/2),bar2_y-bar2_range,beat_frame_width,bar2_range*2);
+//beat range
+draw_set_alpha(0.25);
+var _h=beat_frame_height;
+var _w=beat_frame_width;
+draw_rectangle_color(_x-_w/2,_y-_h*beathitrange,_x+_w/2,_y+_h*beathitrange,c_orange,c_orange,#e0bf1b,#e0bf1b,false);
+draw_rectangle_color(_x-_w/2,_y-_h*beathitrange/2,_x+_w/2,_y+_h*beathitrange/2,c_green,c_green,c_green,c_green,false);
+draw_set_alpha(1);
 
 //"beats", cositas que caen
 var _length=array_length(beat_meter_list);
@@ -93,7 +96,6 @@ var _index=clamp(groovy_count,0,groovy_max);
 var _dx=30;
 var _dy=16;
 draw_sprite(spr_numbers,_index,_x+_dx,_y)
-draw_rectangle(_x-_dx,_y,_x+_dx,_y+_dy,false);
 draw_beat_hit_texts();	
 
 if(global.beatchance)draw_circle_color(_x+_dx,_y+_dy*2,5,c_orange,c_blue,false);

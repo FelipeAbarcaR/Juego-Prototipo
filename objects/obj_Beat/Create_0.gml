@@ -34,7 +34,7 @@ beat_fix=true;
 beat_speed=2;
 
 // range to beatchance
-beat_hit_range=0.6;
+beat_hit_range=0.15;
 beat_hit_range_slow=beat_hit_range/2;
 beathitrange=beat_hit_range;
 
@@ -115,10 +115,10 @@ time_to_beat=global.BeatTimeMS*beats_to_start;
 time_to_reach_end=(beat_frame_height/beat_meter_speed)*(1/room_speed)*1000000;
 
 groovy_count=0;
-groovy_max=3;
+groovy_max=4;
 global.groovy=false;
 
 beat_meter_list=[]; 
 
-sfx_error=error_style_05;
+sfx_groovy_error=error_style_05;
 

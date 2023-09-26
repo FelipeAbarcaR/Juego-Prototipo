@@ -713,3 +713,8 @@ global.topics[$ "pelearanapierde"] = [
 	SPEAKER("Conejita",spr_pt_coneja, PORTRAIT_SIDE.LEFT),
 	TEXT("Mala hmno perdiste [spr_emoticon_coneja_sad] (con la rana)"),
 ];
+
+global.topics[$ "ejejejejeeXD123"] = [
+	TEXT("que ganas historicas que tengo de comer French fries weonooo"),
+
+];

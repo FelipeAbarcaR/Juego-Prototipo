@@ -12,8 +12,12 @@
 		[rm_GD,				bgm_boss_01,			127,	obj_obs_player,		mode.obstacle,	obj_obs_player],
 		[roomViejoSabio,	bgm_ForestTimeInterior, 126,	o_player,			mode.move,		o_player],
 		[roomMapa1Dungeon,	bgm_NightCall_118,		118,	o_player,			mode.move,		o_player],
+<<<<<<< Updated upstream
 		[rm_runny,			bgm_midnight_100,		100,	o_player,			mode.move,		o_player],
 		[rm_Obstacle1,		bgm_OneLove,			107,	obj_crypt_player ,	mode.grid,		obj_crypt_player]
+=======
+		[roomMapa1NPC,	    bgm_NightCall_118,		118,	o_player,			mode.move,		o_player]
+>>>>>>> Stashed changes
 		
 	];
 	

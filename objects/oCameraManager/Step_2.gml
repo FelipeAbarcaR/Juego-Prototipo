@@ -1,5 +1,6 @@
 // Follow player
 if (cameraFollow) {
+	
 	// Player to follow
 	var _plr = camera_follow;
 
@@ -15,6 +16,7 @@ if (cameraFollow) {
 	_camX = clamp(_camX, 0, room_width - _camW);
 	_camY = clamp(_camY, 0, room_height - _camH);
 	
+
 	//Zooming
 	
 	global.zoom = mouse_wheel_down() - mouse_wheel_up();
@@ -64,9 +66,10 @@ if (cameraFollow) {
 	
 	global.zoom_height = _camH;
 	global.zoom_width = _camW;
-	
 	// Set position
 	camera_set_view_pos(camera, _camX, _camY);
 	camera_set_view_size(camera,_camW, _camH);
 	surface_resize(application_surface,_camW,_camH);
+	
+	
 }

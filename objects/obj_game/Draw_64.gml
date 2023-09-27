@@ -9,10 +9,15 @@ if (global.DrawText)
 		draw_text(100,100,"font: "+font_get_fontname(draw_get_font()));
 	    
 	}
-	draw_text(96,96+16,"currentroom: "+room_get_name(room));
-	draw_text(96,96+32,"Zoom Width: "+ string(global.zoom_width));
-	draw_text(96,96+32+16,"Zoom Height: "+ string(global.zoom_height));
-	draw_text(96,96+64,"Zoom Percentage: "+ string(global.percentage_zoom)+"%");
+	var _x=96;
+	var _y=96;
+	var _dy=16;
+	draw_text(_x,_y			,"currentroom: "+room_get_name(room));
+	draw_text(_x,_y+_dy*1	,"Zoom Width: "+ string(global.zoom_width));
+	draw_text(_x,_y+_dy*2	,"Zoom Height: "+ string(global.zoom_height));
+	draw_text(_x,_y+_dy*3	,"Zoom Percentage: "+ string(global.percentage_zoom)+"%");
+	draw_text(_x,_y+_dy*4	,"Game time: "+ string(game_time/1000000));
+	draw_text(_x,_y+_dy*5	,"Room time: "+ string(room_time/1000000));
 }
 
 //Mouse cursor

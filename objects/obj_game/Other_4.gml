@@ -139,3 +139,6 @@ if(layer_exists("Collisions"))
 	var lay_id=layer_get_id("Collisions");
 	layer_set_visible(lay_id,0);
 }
+
+//restart room timer
+room_time=0;

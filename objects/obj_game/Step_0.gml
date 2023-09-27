@@ -96,3 +96,8 @@ if(global.playerhealth<=0)
     game_over=true;
 	instance_deactivate_all(1);
 }
+
+//game time
+var _dt=delta_time;
+game_time+=_dt;
+room_time+=_dt;

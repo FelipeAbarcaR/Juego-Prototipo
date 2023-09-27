@@ -30,8 +30,8 @@ global.beatprogress=0;
 global.BeatNumber=0;
 
 //parche para arreglar que el beat se vaya a los lados o al medio
-beat_fix=true;
-beat_speed=2;
+beat_fix=false;
+beats_per_input=2;
 
 // range to beatchance
 beat_hit_range=0.15;
@@ -97,6 +97,8 @@ BGM_data=[
 
 //BEAT BAR 2.0
 
+beat_bar_visible=1;
+
 BeatTimeFrames=(60/global.bpm)*room_speed;
 
 bar2_timer=0;
@@ -107,13 +109,14 @@ beat_frame_height=340;
 beat_frame_width=80;
 bar2_range=beat_frame_height*beathitrange;
 
-bar2_x=global.res.guiwidth*(0.06);
-bar2_y=global.res.guiheight*0.7;
+bar2_x=global.res.guiwidth*(0.92);
+bar2_y=global.res.guiheight*0.5;
 
 beats_to_start=5;
 time_to_beat=global.BeatTimeMS*beats_to_start;
 time_to_reach_end=(beat_frame_height/beat_meter_speed)*(1/room_speed)*1000000;
 
+//GROOVY STATE
 groovy_count=0;
 groovy_max=4;
 global.groovy=false;

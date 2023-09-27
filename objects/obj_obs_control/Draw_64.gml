@@ -2,8 +2,8 @@
 // You can write your code in this editor
 
 if global.DrawText{
-	draw_text(100,110,"seconds: "+string(time));
-	draw_text(100,120,"beat: "+string(global.BeatNumber));
-	draw_text(100,140,"hola: "+string(hola));
+	draw_text(800,110,"seconds: "+string(time));
+	draw_text(800,120,"beat: "+string(global.BeatNumber));
+	draw_text(800,140,"hola: "+string(hola));
 	
 }

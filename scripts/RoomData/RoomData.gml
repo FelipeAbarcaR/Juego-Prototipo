@@ -13,7 +13,6 @@
 		[roomViejoSabio,	bgm_ForestTimeInterior, 126,	o_player,			mode.move,		o_player],
 		[roomMapa1Dungeon,	bgm_NightCall_118,		118,	o_player,			mode.move,		o_player],
 		[rm_runny,			bgm_midnight_100,		100,	o_player,			mode.move,		o_player],
-		[rm_Obstacle1,		bgm_OneLove,			107,	obj_crypt_player ,	mode.grid,		obj_crypt_player],
 		[roomMapa1NPC,		bgm_WillPower_89,		89,		o_player,			mode.move,		o_player],
 		
 	];
@@ -45,9 +44,38 @@ function room_get_bgm(_room=undefined)
 	return _data[0,1]
 }
 
+function room_get_mode(_room=undefined)
+{
+	var _r=_room;
+	if (_room==undefined) _r=room_get_current_room_index();
+    var arrayLength = global.room_count;
+	var _data=global.room_data;
+
+	for (var i = 0; i < arrayLength; i++) {
+	    if (i == _r) {
+			var _mode=Index.mode;
+	        return _data[i, _mode];
+	    }
+    }
+	show_debug_message("room_get_mode(): no se encontró room para ");
+	return _data[0,1]
+}
+
 //GET THE CURRENT 'SOMETHING' FROM CURRENT ROOM
 function current(_index){
-	var _value = global.room_data[global.currentroom][_index];
+	//check if currentroom is good
+	_data=global.room_data;
+	var _current_room = _data[global.currentroom][Index.name];
+	var _value;
+	if(_current_room==room)
+	{
+	   _value = _data[global.currentroom][_index];
+	}else
+	{
+	    global.currentroom=room_get_current_room_index();
+		_value = _data[global.currentroom][_index];
+	}
+	
 	return _value
 }
 //GET THE CURRENT 'SOMETHING' FROM TARGET ROOM
@@ -76,7 +104,7 @@ function target(_index){
 	
 	
 }
-function get_current_room_index()
+function room_get_current_room_index()
 {
     var _room=room;
 	var _data=global.room_data;

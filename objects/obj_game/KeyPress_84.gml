@@ -3,7 +3,7 @@
 
 audio_stop_all();
 room_restart();
-global.currentroom=get_current_room_index();
+global.currentroom=room_get_current_room_index();
 global.playerhealth = global.playerhealthmax;
 game_over=false;
 instance_activate_all();

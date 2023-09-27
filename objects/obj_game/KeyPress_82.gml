@@ -5,6 +5,7 @@ global.currentroom=0;
 game_over=false;
 global.playerhealth = global.playerhealthmax;
 instance_activate_all();
+game_time=0;
 with(obj_beat)
 {
     var _bgm= current(Index.music);

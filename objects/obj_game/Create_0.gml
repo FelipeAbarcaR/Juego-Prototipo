@@ -46,3 +46,7 @@ window_set_cursor(cr_none);
 
 //GAMEOVER
 game_over=false;
+
+//gametime
+game_time=0;
+room_time=0;

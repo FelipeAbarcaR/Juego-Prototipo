@@ -1,12 +1,14 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-Izquierda = (keyboard_check_pressed(vk_left));
-Derecha = (keyboard_check_pressed(vk_right));
-Arriba = (keyboard_check_pressed(vk_up));
-Abajo = (keyboard_check_pressed(vk_down));
+Izquierda =		(keyboard_check_pressed(vk_left)	|| keyboard_check_pressed(ord("A")));
+Derecha =	 (keyboard_check_pressed(vk_right)		|| keyboard_check_pressed(ord("D")));
+Arriba =	 (keyboard_check_pressed(vk_up)			|| keyboard_check_pressed(ord("W")));
+Abajo =		(keyboard_check_pressed(vk_down)		|| keyboard_check_pressed(ord("S")));
 
-roll_key = (keyboard_check_pressed(vk_space));
+roll_key = (keyboard_check_pressed(vk_space)|| keyboard_check_pressed(ord("J")));
+
+
 
 InputDirection = point_direction(0,0, Derecha - Izquierda, Abajo-Arriba);
 inputmagnitude = (Derecha-Izquierda != 0) xor (Abajo - Arriba != 0);

@@ -23,10 +23,10 @@
 	var _midtime=0
 	if(beat_fix)
 	{
-		if(beat_speed==2)_midtime =global.BeatTimeMS else _midtime= global.BeatTimeMS/2 ; //fix para que el beat no sea en los bordes
+		if(beats_per_input==2)_midtime =global.BeatTimeMS else _midtime= global.BeatTimeMS/2 ; //fix para que el beat no sea en los bordes
 	}
 	
-	BeatBarProgress =  sin((((SumFullDelta+_midtime)/(global.BeatTimeMS*beat_speed))*pi));
+	BeatBarProgress =  sin((((SumFullDelta+_midtime)/(global.BeatTimeMS*beats_per_input))*pi));
 	
 
 //	var char = global.room_data[global.currentroom][Index.mainchar];
@@ -172,10 +172,12 @@ var _tp=obj_transition_manager.transition_progress;
 //BEAT BAR 2.0 STEP
 
 bar2_timer+=dt;
-//
-if(bar2_timer>=time_to_beat-time_to_reach_end)//If it is the time to drop a meter
+//SET A NEW BEAT TO START MOVING DOWN THE "HEART"
+var _fix=0;
+if(beat_fix) _fix=global.BeatTimeMS/2;
+if(bar2_timer>=time_to_beat-time_to_reach_end+_fix)//If it is the time to drop a meter
 {
-    time_to_beat+=global.BeatTimeMS*2; //set the time of the new beat meter
+    time_to_beat+=global.BeatTimeMS*beats_per_input; //set the time of the new beat meter
 	bar2_store_meter(bar2_y-beat_frame_height); //store the new meter in array, starting from top of frame
 }
 

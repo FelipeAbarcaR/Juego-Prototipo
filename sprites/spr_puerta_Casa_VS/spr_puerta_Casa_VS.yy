@@ -26,8 +26,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "M0",
-    "path": "folders/Sprites/Entity/M0.yy",
+    "name": "PROTOTIPO",
+    "path": "PROTOTIPO.yyp",
   },
   "preMultiplyAlpha": false,
   "sequence": {

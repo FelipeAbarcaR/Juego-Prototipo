@@ -8,7 +8,7 @@ bpm = current(Index.bpm);
 distance = obj_obs_player.x-x;
 
 obs_speed=5;
-delay=0.5; //how much of a beat it should wait to reach the player
+delay=0; //how much of a beat it should wait to reach the player
 
 
 time=0; 

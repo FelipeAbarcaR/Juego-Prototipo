@@ -237,11 +237,12 @@ function reset_variables() {
 }
 
 function get_input() {
-	if keyboard_check(vk_left)	left	= 1;
-	if keyboard_check(vk_right)	right	= 1;
-	if keyboard_check(vk_up)	up		= 1;
-	if keyboard_check(vk_down)	down	= 1;
-	if keyboard_check_pressed(vk_space) global.interact = true;
+	if (keyboard_check(vk_left)	|| keyboard_check(ord("A")))	left	= 1;
+	if (keyboard_check(vk_right)|| keyboard_check(ord("D")))	right	= 1;
+	if (keyboard_check(vk_up)	|| keyboard_check(ord("W")))	up		= 1;
+	if (keyboard_check(vk_down)	|| keyboard_check(ord("S")))	down	= 1;
+	
+	if (keyboard_check_pressed(vk_space) || keyboard_check(ord("J")))	global.interact = true;
 	
 }
 

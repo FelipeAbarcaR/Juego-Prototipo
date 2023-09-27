@@ -5,8 +5,9 @@
 	global.previousroom=global.currentroom;
 	
 	//Room data rooms index in Macros (enum) 
-	//room_data=[room_name, Music, BPM, obj_to_follow, room_mode,mainChar]
+	//room_data=[room_name, Music, BPM, obj_to_follow, room_mode, mainChar, zoom, witdh, height]
 	global.room_data = [
+
 		[roomMapaInicial,	bgm_ForestTime,			126,	o_player,			mode.move,		o_player],
 		[roomMapa1,			bgm_WillPower_89,		89 ,	o_player,			mode.move,		o_player],
 		[rm_GD,				bgm_boss_01,			127,	obj_obs_player,		mode.obstacle,	obj_obs_player],
@@ -14,6 +15,15 @@
 		[roomMapa1Dungeon,	bgm_NightCall_118,		118,	o_player,			mode.move,		o_player],
 		[rm_runny,			bgm_midnight_100,		100,	o_player,			mode.move,		o_player],
 		[roomMapa1NPC,		bgm_WillPower_89,		89,		o_player,			mode.move,		o_player],
+
+		[roomMapaInicial,	bgm_ForestTime,			126,	o_player,			mode.move,		o_player,			false,	0,	0],
+		[roomMapa1,			bgm_WillPower_89,		89 ,	o_player,			mode.move,		o_player,			true,	240,135],
+		[rm_GD,				bgm_boss_01,			127,	obj_obs_player,		mode.obstacle,	obj_obs_player,		false,	0,	0],
+		[roomViejoSabio,	bgm_ForestTimeInterior, 126,	o_player,			mode.move,		o_player,			false,	0,	0],
+		[roomMapa1Dungeon,	bgm_NightCall_118,		118,	o_player,			mode.move,		o_player,			false,	0,	0],
+		[rm_runny,			bgm_midnight_100,		100,	o_player,			mode.move,		o_player,			false,	0,	0],
+		[rm_Obstacle1,		bgm_OneLove,			107,	obj_crypt_player ,	mode.grid,		obj_crypt_player,	false,	0,	0],
+		[roomMapa1NPC,		bgm_WillPower_89,		89,		o_player,			mode.move,		o_player,			false,	0,	0],
 		
 	];
 	

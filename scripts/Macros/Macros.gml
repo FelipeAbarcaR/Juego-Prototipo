@@ -76,7 +76,10 @@ enum Index{
 	bpm,
 	follow,
 	mode,
-	mainchar
+	mainchar,
+	zoom,
+	witdh,
+	height
 }
 enum mode{
 	move,

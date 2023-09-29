@@ -8,4 +8,3 @@ layer_fog=layer_get_id("Fog_effect");
 fog_active_distance=100;
 
 
-

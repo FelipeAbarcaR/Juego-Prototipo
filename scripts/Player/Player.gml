@@ -230,6 +230,7 @@ function reset_variables() {
 	hmove = 0;
 	walk_spd = initial_walk_spd;
 	PlayerUpdateStatus();
+	speedroll=initial_speed_roll;
 
 	
 	//Space Logic 
@@ -254,6 +255,11 @@ function calc_movement() {
 	//{
 	//	walk_spd = diag_walk_spd;
 	//}
+	if(global.groovy)
+	{
+	    walk_spd=walk_spd*(1+groovy_speed_increase);
+		speedroll=speedroll*(1+groovy_speed_roll_increase)
+	}
 
 	if hmove != 0 or vmove != 0 
 	{
@@ -446,23 +452,30 @@ function anim() {
 
 function player_roll(){
 	
+	var _distanceroll=distanceroll;
+	var _speedroll=speedroll;
+	if(global.groovy)
+	{
+		_distanceroll=_distanceroll*(1+groovy_distance_roll_increase);
+		_speedroll=_speedroll*(1+groovy_speed_roll_increase);
+	}
 	
 	//Movimiento
-	hmove = lengthdir_x(speedroll, dir);
-	vmove = lengthdir_y(speedroll, dir);
+	hmove = lengthdir_x(_speedroll, dir);
+	vmove = lengthdir_y(_speedroll, dir);
 	
 	x += hmove;
 	y += vmove;
 	
 	//esto es para que sea 0 y no un numero negativo
-	movedistanceremaining = max(0, movedistanceremaining - speedroll);
+	movedistanceremaining = max(0, movedistanceremaining - _speedroll);
 	
 	var _totalframes = sprite_get_number(sprite_index)/4;
 		
-	image_index = (CARDINAL_DIR * _totalframes) + min (((1-(movedistanceremaining / distanceroll)) *(_totalframes)), _totalframes - 1);
+	image_index = (CARDINAL_DIR * _totalframes) + min (((1-(movedistanceremaining / _distanceroll)) *(_totalframes)), _totalframes - 1);
 	//var _collided = PlayerCollision();
 	
-	z = sin(((movedistanceremaining / distanceroll) * pi)) *distancerollheight;
+	z = sin(((movedistanceremaining / _distanceroll) * pi)) *distancerollheight;
 
 	//Cambiar estado
 	
@@ -525,25 +538,18 @@ function Space_logic()
 					state = states.ROLL;
 					
 					var _distanceroll,_xto,_yto;
-					_distanceroll=distanceroll;								
+					_distanceroll=distanceroll;
+					if(global.groovy) _distanceroll=_distanceroll*(1+groovy_distance_roll_increase)
 				    _xto=x+ lengthdir_x(_distanceroll, dir);
 				    _yto=y+ lengthdir_y(_distanceroll, dir);
 					
-				    var _fall=place_meeting(_xto,_yto,o_solid_bridge); //check if it will fall from bridge
+					var _bridge=o_solid_bridge;
+				    var _fall=place_meeting(_xto,_yto,_bridge); //check if it will fall from bridge
 					
 				    if (_fall) //if falling (no o_solid_bridge in landing)
 					{
-						var _solid=instance_place(_xto,_yto,o_solid_bridge)
-						var _x1=_solid.bbox_left;
-						var _x2=_solid.bbox_right;
-						var _xmid=_x1+(_x2-_x1)/2;
-						var _newx;
-
-						//create new point of landing closer to the edge
-						if (_xto >= _xmid) _newx=_x2+8 else _newx=_x1-8;
-						var _newdirection = point_direction(x,y,_newx,_yto);
-						dir=_newdirection;
-						_distanceroll=point_distance(x,y,_newx,_yto);	
+						//his function will change the new dir and return the new direction to land on desired point
+						_distanceroll=bridge_set_landing(_distanceroll);
 					};
 					
 					movedistanceremaining = _distanceroll;

@@ -10,3 +10,8 @@ for (var y_offset = 0; y_offset < tiles_height; y_offset++) {
     }
 }
 if (surface_exists(surf)) surface_free(surf);
+
+ds_grid_destroy(tile_data_upper);
+ds_grid_destroy(tile_data_upper2);
+
+

@@ -2,10 +2,12 @@
 // You can write your code in this editor
 
 /// @description Cause Room transition
-
-if (global.beat==true)
+if(dancing_bush)
 {
-    imagexscale*=(-1);
+	if (global.beat==true)
+	{
+	    imagexscale*=(-1);
+	}
 }
 
 draw_sprite_ext(

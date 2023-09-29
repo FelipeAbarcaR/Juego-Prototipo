@@ -59,4 +59,5 @@ show_healthbar();
 if(global.DrawText)
 {
     draw_sprite_bbox();
+	draw_text(x+20,y+20,string(walk_spd));
 }

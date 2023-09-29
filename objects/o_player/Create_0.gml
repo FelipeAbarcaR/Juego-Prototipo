@@ -1,6 +1,6 @@
 /// @description 
 event_inherited();
-walk_spd = 2;
+walk_spd = 1.7;
 initial_walk_spd=walk_spd;
 diag_walk_spd = floor(walk_spd*(sqr(2)/2));
 walk_friction=0;
@@ -16,10 +16,17 @@ global.CanDash=false;
 //global.CanShield=false;
 //global.Can3Tempo=false;
 
+//Groovy parameters (when the player is in the groove)
+groovy_speed_increase=0.6;
+groovy_speed_roll_increase=0.2;
+groovy_distance_roll_increase=0.4;
+
+
 
 ready_to_restart = false; //ensures we can restart after death animation
 
 speedroll = 2.5;
+initial_speed_roll=speedroll;
 distanceroll = 70;
 distancerollheight = 12;
 z = 0;

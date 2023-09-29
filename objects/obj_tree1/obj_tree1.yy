@@ -8,7 +8,9 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
   ],
   "managed": true,
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"prnt_entity","path":"objects/prnt_entity/prnt_entity.yy",},"propertyId":{"name":"EntityCollision","path":"objects/prnt_entity/prnt_entity.yy",},"value":"True",},
+  ],
   "parent": {
     "name": "M0",
     "path": "folders/Objects/Entity/Enviroment/M0.yy",

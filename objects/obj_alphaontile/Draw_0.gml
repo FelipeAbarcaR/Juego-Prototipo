@@ -1,13 +1,17 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-/// @description Insert description here
-// You can write your code in this editor
-
 var _data_1=ds_grid_create(tiles_lenght, tiles_height);
 var _data_2=ds_grid_create(tiles_lenght, tiles_height);
+var _data_3=ds_grid_create(tiles_lenght, tiles_height);
+var _data_4=ds_grid_create(tiles_lenght, tiles_height);
+var _data_5=ds_grid_create(tiles_lenght, tiles_height);
+
 ds_grid_copy(_data_1,tile_data_upper);
 ds_grid_copy(_data_2,tile_data_upper2);
+ds_grid_copy(_data_3,tile_data_mountain_1);
+ds_grid_copy(_data_4,tile_data_mountain_2);
+ds_grid_copy(_data_5,tile_data_mountain_3);
 
 // Draw tiles in the surface
 if (!surface_exists(surf)) {
@@ -18,10 +22,18 @@ surface_set_target(surf);
 for (var y_offset = 0; y_offset < tiles_height; y_offset++) {
     for (var x_offset = 0; x_offset < tiles_lenght; x_offset++) {
         // Store rectangle in local variable for upper and upperupper layer
-        var _tiledata = tile_data_upper[# x_offset, y_offset];
-		var _tiledata2 = tile_data_upper2[# x_offset, y_offset];
+        var _tiledata	= _data_1[# x_offset, y_offset];
+		var _tiledata2	= _data_2[# x_offset, y_offset];
+		var _tiledata3	= _data_3[# x_offset, y_offset];
+		var _tiledata4	= _data_4[# x_offset, y_offset];
+		var _tiledata5	= _data_5[# x_offset, y_offset];
+		
         draw_tile(tile_set, _tiledata, 0, x_offset * 16, y_offset * 16);
 		draw_tile(tile_set, _tiledata2, 0, x_offset * 16, y_offset * 16);
+		
+		draw_tile(tile_set_mountain, _tiledata3, 0, x_offset * 16, y_offset * 16);
+		draw_tile(tile_set_mountain, _tiledata4, 0, x_offset * 16, y_offset * 16);
+		draw_tile(tile_set_mountain, _tiledata5, 0, x_offset * 16, y_offset * 16);
     }
 }
 
@@ -37,6 +49,9 @@ surface_reset_target();
 
 ds_grid_destroy(_data_1);
 ds_grid_destroy(_data_2);
+ds_grid_destroy(_data_3);
+ds_grid_destroy(_data_4);
+ds_grid_destroy(_data_5);
 
 draw_surface(surf,x,y);
 

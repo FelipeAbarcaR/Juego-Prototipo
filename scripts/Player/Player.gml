@@ -271,6 +271,8 @@ function calc_movement() {
 		//get distance we are moving
 		hmove = lengthdir_x(walk_spd*(1-walk_friction), dir);
 		vmove = lengthdir_y(walk_spd*(1-walk_friction), dir);
+		
+		//check_entity_collision();
 	
 		//add movement to players position
 		
@@ -326,6 +328,7 @@ function collision_Entity() {
 	var _tx = x;
 	var _ty = y;
 	
+	
 	//move back to last step position, out of the collision
 	x = xprevious;
 	y = yprevious;
@@ -335,17 +338,17 @@ function collision_Entity() {
 	var _disy = ceil(abs(_ty - y));
 	
 	//ensure we are using integers if we are colliding in the x/y axis
-	if place_meeting(x + _disx * sign(_tx - x), y, obj_sign) x = round(x);
-	if place_meeting(x, y + _disy * sign(_ty - y), obj_sign) y = round(y);
+	if place_meeting(x + _disx * sign(_tx - x), y, prnt_entity) x = round(x);
+	if place_meeting(x, y + _disy * sign(_ty - y), prnt_entity) y = round(y);
 	
 	//move as far as in x and y before hitting the solid
 	repeat(_disx)
 	{
-		if !place_meeting(x + sign(_tx - x), y, obj_sign) x += sign(_tx - x);	
+		if !place_meeting(x + sign(_tx - x), y, prnt_entity) x += sign(_tx - x);	
 	}
 	repeat(_disy)
 	{
-		if !place_meeting(x, y + sign(_ty - y), obj_sign) y += sign(_ty - y);
+		if !place_meeting(x, y + sign(_ty - y), prnt_entity) y += sign(_ty - y);
 	}
 	
 }	
@@ -752,4 +755,70 @@ function player_automove()
 		{
 			placement_Player( automove_x, automove_y, false,walk_spd/2);
 		}
+}
+
+function check_entity_collision()
+{
+	//Revisa y ajusta el hspeed,vspeed en caso que colisione con un objeto
+	
+	var _entitylist=ds_list_create();
+   
+   //Entidades Horizontales
+	
+	//var h_col=instance_position(x+hmove,y,prnt_entity)
+	//if(h_col != noone) hmove=0;
+	
+	//Entidades Horizontales
+	
+	var _entitycount = instance_position_list(x + hSpeed, y, prnt_entity, _entitylist, false);
+	var _snapX;
+	
+	while(_entitycount > 0)
+	{
+		var _entitycheck = _entitylist[| 0]; //ds_list_find_value( _entitylist,0)
+		// si la entidad que esta en la posicion 0 tiene true la entity collision
+		if(_entitycheck.EntityCollision == true)
+		{
+			//Moverse lo mas cerca que puedas
+			if(sign(hSpeed)==-1) _snapX = _entitycheck.bbox_right+1; 
+			else _snapX = _entitycheck.bbox_left -1;
+			x = _snapX;
+			hmove =0;
+			_collision = true;
+			_entitycount =0;
+		}
+		ds_list_delete(_entitylist,0);
+		_entitycount--;
+	}
+	
+	
+	
+	//Entidades Verticales
+	
+	//var v_col=instance_position(x,y+vmove,prnt_entity)
+	//if(h_col != noone) vmove=0;
+	
+	//Entidades Verticales
+	
+	var _entitycount = instance_position_list(x, y+ vmove, prnt_entity, _entitylist, false);
+	var _snapY;
+	
+	while(_entitycount > 0)
+	{
+		var _entitycheck = _entitylist[| 0]; //ds_list_find_value( _entitylist,0)
+		// si la entidad que esta en la posicion 0 tiene true la entity collision
+		if(_entitycheck.EntityCollision == true)
+		{
+			//Moverse lo mas cerca que puedas
+			if(sign(vmove)==-1) _snapY = _entitycheck.bbox_bottom+1; 
+			else _snapY = _entitycheck.bbox_top -1;
+			y = _snapY;
+			vmove =0;
+			_collision = true;
+			_entitycount =0;
+		}
+		ds_list_delete(_entitylist,0);
+		_entitycount--;
+	}
+	ds_list_destroy(_entitylist)
 }

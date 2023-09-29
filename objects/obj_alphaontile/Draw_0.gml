@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+/// @description Insert description here
+// You can write your code in this editor
+
 var _data_1=ds_grid_create(tiles_lenght, tiles_height);
 var _data_2=ds_grid_create(tiles_lenght, tiles_height);
 ds_grid_copy(_data_1,tile_data_upper);
@@ -15,8 +18,8 @@ surface_set_target(surf);
 for (var y_offset = 0; y_offset < tiles_height; y_offset++) {
     for (var x_offset = 0; x_offset < tiles_lenght; x_offset++) {
         // Store rectangle in local variable for upper and upperupper layer
-        var _tiledata = _data_1[# x_offset, y_offset];
-		var _tiledata2 = _data_2[# x_offset, y_offset];
+        var _tiledata = tile_data_upper[# x_offset, y_offset];
+		var _tiledata2 = tile_data_upper2[# x_offset, y_offset];
         draw_tile(tile_set, _tiledata, 0, x_offset * 16, y_offset * 16);
 		draw_tile(tile_set, _tiledata2, 0, x_offset * 16, y_offset * 16);
     }
@@ -41,11 +44,12 @@ draw_surface(surf,x,y);
 
 if(global.DrawText)
 {
-	draw_circle(x,y,2,0);
+	draw_circle(x,y,3,0);
 	draw_line(x,y,x+width,y);
 	draw_line(x,y,x,y+height);
 	draw_line(x+width,y,x+width,y+height);
 	draw_line(x,y+height,x+width,y+height);
 
 }
+
 

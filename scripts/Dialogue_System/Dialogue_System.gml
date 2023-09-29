@@ -702,14 +702,13 @@ global.topics[$ "conejeandopelea"] = [
 	FIGHT("pelearanagana","pelearanapierde")
 ];
 global.topics[$ "pelearanagana"] = [
-	SPEAKER("Conejita",spr_pt_coneja, PORTRAIT_SIDE.LEFT),
-	TEXT("Wena hmno ganaste! (con la rana)"),
+	SPEAKER("Rana",spr_pt_rana, PORTRAIT_SIDE.LEFT),
+	TEXT("Wena hmno ganaste!"),
 	TEXT("Te le voy a dar un Item"),
 	INVENTORY(ITEM.DASH,1),
-	TEXT("Recuerda que tienes que arreglar pa que no se duplique la wea"),
-	TEXT("Y poner que por ahora se comienze con el dash wn")
+	TEXT("Recuerda que tienes que arreglar pa que no se duplique esa vaina en el inventario"),
 ];
 global.topics[$ "pelearanapierde"] = [
-	SPEAKER("Conejita",spr_pt_coneja, PORTRAIT_SIDE.LEFT),
-	TEXT("Mala hmno perdiste [spr_emoticon_coneja_sad] (con la rana)"),
+	SPEAKER("Rana",spr_pt_rana, PORTRAIT_SIDE.LEFT),
+	TEXT("Mala hmno perdiste [spr_emoticon_coneja_sad], como podi ser tan malo"),
 ];

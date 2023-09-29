@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-tiles_lenght=10;
+tiles_lenght=16;
 tiles_height=10;
 width=tiles_lenght*TILE_SIZE;
 height=tiles_height*TILE_SIZE;
@@ -9,22 +9,11 @@ height=tiles_height*TILE_SIZE;
 surf=-1;
 surf=surface_create(width,height);
 
+
 //set x and y position
 var _player=o_player;
 x= _player.x-(width/2) - (_player.x mod TILE_SIZE);
-y= _player.y-(height/2) - (_player.x mod TILE_SIZE);
-
-show_debug_message("alpha_on_tile x: " + string(x)+" - "+string(width/2)+" - "+string((_player.x mod TILE_SIZE)));
-show_debug_message("alpha_on_tile y: " + string(y)+" - "+string(height/2)+" - "+string((_player.y mod TILE_SIZE)));
-
-show_debug_message(x);
-show_debug_message(y);
-//upper_lay_id	=	layer_get_id("TilesUpper");
-//upper2_lay_id	=	layer_get_id("TilesUpperUpper")
-
-upper_lay_id	=	layer_get_id("solid_base");
-upper2_lay_id	=	layer_get_id("solid_base_deco")
-
+y= _player.y-(height/2) - (_player.y mod TILE_SIZE);
 
 lay_id1 = layer_get_id("solid_base");
 lay_id2 = layer_get_id("solid_base_deco");

@@ -142,16 +142,16 @@ if (collision_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, obj_Conda,
 		//hurt sfx
 		audio_play_sound(sfx_hurt,10,0);
 		
-		invincible=true;
-		start_delay=true;
-		state="stun";
-		hp-=obj_Conda.DMG;
-		global.enemy_atk=false;
-		if (hp<=0) state="dead";
-		start_flash=true;
+		//invincible=true;
+		//start_delay=true;
+		//state="stun";
+		//hp-=obj_Conda.DMG;
+		//global.enemy_atk=false;
+		//if (hp<=0) state="dead";
+		//start_flash=true;
 		
-		//DAMAGE ANIMATION (obj_control_fight)
-		draw_hp2=true;
+		////DAMAGE ANIMATION (obj_control_fight)
+		//draw_hp2=true;
 
 	}
 }

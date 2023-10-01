@@ -25,6 +25,7 @@ global.enemy_hurt = false; //true: enemy got hurt
 fighter1=obj_fight_gato;
 fighter2=global.fightEnemy;
 
+//HP BAR PARAMS
 //margenes de especio entre la barra de hp y la esquina
 marginw=140;
 marginh=50;
@@ -60,3 +61,4 @@ fighters_created=false;
 //ending parameters
 destroy_fighters=false;
 
+camera_recorder=instance_create_depth(x,y,depth,obj_fight_recorder)

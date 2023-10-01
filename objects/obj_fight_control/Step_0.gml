@@ -1,5 +1,8 @@
 /// @description end fight
-
+if(instance_exists(o_player))
+{
+    o_player.state=states.LOCK;
+}
 //Create fighters (if the transition out ended)
 if(create_fighters)
 {
@@ -13,6 +16,7 @@ if(create_fighters)
 	instance_create_layer(_x1,_y,_lay,fighter1,{image_xscale:2,image_yscale:2});
 	instance_create_layer(_x2,_y,_lay,fighter2,{image_xscale:2,image_yscale:2});
 	
+	instance_deactivate_object(prnt_entity);
 	fighters_created = true;
 	beat_counting=true;
 }

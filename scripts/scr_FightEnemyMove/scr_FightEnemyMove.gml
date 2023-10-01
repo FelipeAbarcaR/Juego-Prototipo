@@ -79,6 +79,7 @@ if(_actualdistance==0||_distance==0)
 			stance=EnemyStance.postattack;
 			//create and set a new random path
 			current_path=pathrandom();
+			prepare_wait_beats=0;
 			point_to_go=0;
 			xi=x;
 			yi=y;

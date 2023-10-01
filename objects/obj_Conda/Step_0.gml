@@ -5,26 +5,37 @@ if (stance!=EnemyStance.dead) FightRhythmAnimate();
 
 if ( stance ==  EnemyStance.prepare)
 {
-
-	
-	if (current_beat != global.BeatNumber)
+	var _waiting=false;
+	if(prepare_wait_beats>0)
 	{
-		current_beat=global.BeatNumber;
-		move_on_path=true;
-	}
-	
-	if (move_on_path==true)
-	{
-	//var _ishalfbeat=(global.beatprogress>=0.45)
-	if (/*_ishalfbeat &&*/ move_on_path)
-	{
-		var _on_point = scr_FightEnemyMove();
-		if (_on_point /*and _ishalfbeat*/)
+	    _waiting=true;
+		if(global.beat)
 		{
-			move_on_path=false;
+		    prepare_wait_beats--;
+			hola=10;
 		}
-		
 	}
+	if(!_waiting)
+	{
+		if (current_beat != global.BeatNumber)
+		{
+			current_beat=global.BeatNumber;
+			move_on_path=true;
+		}
+	
+		if (move_on_path==true)
+		{
+			//var _ishalfbeat=(global.beatprogress>=0.45)
+			if (/*_ishalfbeat &&*/ move_on_path)
+			{
+				var _on_point = scr_FightEnemyMove();
+				if (_on_point /*and _ishalfbeat*/)
+				{
+					move_on_path=false;
+				}
+		
+			}
+		}
 	}
 }
 

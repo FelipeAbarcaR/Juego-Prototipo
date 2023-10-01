@@ -79,6 +79,7 @@
     {"name":"bgm_WillPower_89","order":1,"path":"sounds/bgm_WillPower_89/bgm_WillPower_89.yy",},
     {"name":"__ftr_sh_crosswarp_twopass","order":7,"path":"shaders/__ftr_sh_crosswarp_twopass/__ftr_sh_crosswarp_twopass.yy",},
     {"name":"__ftr_sh_sqrot_twopass","order":23,"path":"shaders/__ftr_sh_sqrot_twopass/__ftr_sh_sqrot_twopass.yy",},
+    {"name":"obj_fight_recorder","order":1,"path":"objects/obj_fight_recorder/obj_fight_recorder.yy",},
     {"name":"__sh_ftr_foxeytransition","order":12,"path":"shaders/__sh_ftr_foxeytransition/__sh_ftr_foxeytransition.yy",},
     {"name":"obj_footprint","order":3,"path":"objects/obj_footprint/obj_footprint.yy",},
     {"name":"__ftr_sh_circle","order":2,"path":"shaders/__ftr_sh_circle/__ftr_sh_circle.yy",},

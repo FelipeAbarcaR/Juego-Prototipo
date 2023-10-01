@@ -1,5 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+var _color=c_white;
+
 //red flash hit shader
 if(start_flash1)
 {
@@ -18,15 +21,18 @@ if(start_flash1)
 //white outline shader
 if(stance ==EnemyStance.prepare)
 {
+	_color=#6187d8;
 	shader_set(sha_white_outline);	
 	var _texture = sprite_get_texture(sprite_index,image_index);
 	var _texture_width = texture_get_texel_width(_texture);
     var _texture_height = texture_get_texel_height(_texture);
 	shader_set_uniform_f(sh_texture,_texture_width,_texture_height);
 }
+
 //red outline shader
 if(stance == EnemyStance.attack)
 {
+	_color=#cb7c52;
     shader_set(sha_red_outline);	
 	var _texture = sprite_get_texture(sprite_index,image_index);
 	var _texture_width = texture_get_texel_width(_texture);
@@ -34,9 +40,10 @@ if(stance == EnemyStance.attack)
 	shader_set_uniform_f(sh_texture,_texture_width,_texture_height);
 }
 
-draw_self();
-if(shader_current() != -1) shader_reset();
+//DRAW SELF
+draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,0,_color,image_alpha)
 
+if(shader_current() != -1) shader_reset();
 if (global.DrawText){
 	var _x,_y,_xTo,_yTo;
 	_xTo=path_get_point_x(current_path,point_to_go);

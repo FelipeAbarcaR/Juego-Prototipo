@@ -1,7 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
 if (global.DrawText)
 {
 	if(font_exists(draw_get_font()))
@@ -15,13 +14,15 @@ if (global.DrawText)
 	draw_text(_x,_y			,"currentroom: "+room_get_name(room));
 	draw_text(_x,_y+_dy*1	,"Zoom Width: "+ string(global.zoom_width));
 	draw_text(_x,_y+_dy*2	,"Zoom Height: "+ string(global.zoom_height));
-	draw_text(_x,_y+_dy*3	,"Zoom Percentage: "+ string(global.percentage_zoom)+"%");
+	draw_text(_x,_y+_dy*3	,"Zoom Percetage: "+ string(global.percentage_zoom)+"%");
 	draw_text(_x,_y+_dy*4	,"Game time: "+ string(game_time/1000000));
 	draw_text(_x,_y+_dy*5	,"Room time: "+ string(room_time/1000000));
 }
 
+
 //Mouse cursor
 draw_circle(device_mouse_x_to_gui(0),device_mouse_y_to_gui(0),3,false);
+
 
 if(pause)
 {

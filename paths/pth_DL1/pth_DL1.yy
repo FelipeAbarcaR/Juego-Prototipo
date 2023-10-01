@@ -9,7 +9,6 @@
     "path": "folders/Rutas.yy",
   },
   "points": [
-    {"speed":100.0,"x":672.0,"y":512.0,},
     {"speed":100.0,"x":832.0,"y":320.0,},
   ],
   "precision": 4,

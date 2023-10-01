@@ -10,6 +10,8 @@ function ResetBeatStats(){
 	global.beatprogress=0
 	groovy_count=0;
 	bar2_timer=0;
+	time_to_beat=global.BeatTimeMS*beats_to_start;
+	
 }
 
 function ChangeBGM(_newBGM,_time,_wait_for_room=false)

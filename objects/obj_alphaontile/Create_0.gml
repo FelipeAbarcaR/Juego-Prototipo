@@ -53,6 +53,7 @@ for (var y_offset = 0; y_offset < tiles_height; y_offset++) {
 		tile_data_mountain_3[# x_offset, y_offset] = tilemap_get_at_pixel(tilemap_m3, x + x_offset * TILE_SIZE, y + y_offset * TILE_SIZE);
 		
         // Set those tiles to empty
+		
         tilemap_set_at_pixel(tilemap_lower, 0, x + x_offset * TILE_SIZE, y + y_offset * TILE_SIZE); // Clear tile
         tilemap_set_at_pixel(tilemap_upper, 0, x + x_offset * TILE_SIZE, y + y_offset * TILE_SIZE); // Clear tile
 		

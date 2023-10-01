@@ -10,14 +10,18 @@ enum paths {
 
 function scr_ataque1() {
 	global.enemy_hit=false;
+	
 	ataque = choose(0,1,2,3);
+	
 	switch (ataque)
 	{
 		case 0:
+		wait_to_prepare(2);
 		current_path=pth_DL1;
 		break;
 	
 		case 1:
+		wait_to_prepare(2);
 		current_path=pth_M1;
 		break;
 	
@@ -26,6 +30,7 @@ function scr_ataque1() {
 		break;
 	
 		case 3:
+		wait_to_prepare(2);
 		current_path=pth_UL1;
 		break;
 	}
@@ -92,4 +97,9 @@ function ShowFXArrows(){
 		default: break;
 
 	}
+}
+
+function wait_to_prepare(_beats)
+{
+    prepare_wait_beats=_beats;
 }

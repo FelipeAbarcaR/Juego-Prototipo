@@ -220,6 +220,7 @@
     {"id":{"name":"ts_Mapa1","path":"tilesets/ts_Mapa1/ts_Mapa1.yy",},},
     {"id":{"name":"scribble_fallback_bulletpoint","path":"sprites/scribble_fallback_bulletpoint/scribble_fallback_bulletpoint.yy",},},
     {"id":{"name":"obj_spear","path":"objects/obj_spear/obj_spear.yy",},},
+    {"id":{"name":"obj_fight_recorder","path":"objects/obj_fight_recorder/obj_fight_recorder.yy",},},
     {"id":{"name":"__sh_ftr_foxeytransition","path":"shaders/__sh_ftr_foxeytransition/__sh_ftr_foxeytransition.yy",},},
     {"id":{"name":"obj_footprint","path":"objects/obj_footprint/obj_footprint.yy",},},
     {"id":{"name":"spr_ts_int_ViejoSabio2","path":"sprites/spr_ts_int_ViejoSabio2/spr_ts_int_ViejoSabio2.yy",},},

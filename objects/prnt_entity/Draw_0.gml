@@ -19,3 +19,5 @@ if(id == global.activate && EntitySpaceBarActive)
 }
 
 if(shader_current() != -1) shader_reset();
+
+if(global.DrawText) draw_sprite_bbox();

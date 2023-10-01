@@ -47,7 +47,6 @@
 			var _volumen = audio_sound_get_gain(current_music);
 			if(_volumen<=0.1 && instance_exists(obj_fight_control.fighter2))
 			{
-				ResetBeatStats();
 				audio_sound_gain(current_music, 1, 0);
 				audio_stop_sound(current_music);
 			    last_music=current_music;
@@ -59,6 +58,7 @@
 				var snd = audio_play_sound(current_music,10,1);
 				audio_sound_gain(snd, 0, 0);
 				audio_sound_gain(snd, 1, 3000);
+				ResetBeatStats();
 			}
 		}
 	}
@@ -170,6 +170,14 @@ var _tp=obj_transition_manager.transition_progress;
 
 
 //BEAT BAR 2.0 STEP
+if(instance_exists(obj_fight_control))
+{
+    if(obj_fight_control.fighters_created)
+	{
+		perro=20;
+	    hola=10;
+	}
+}
 
 bar2_timer+=dt;
 //SET A NEW BEAT TO START MOVING DOWN THE "HEART"

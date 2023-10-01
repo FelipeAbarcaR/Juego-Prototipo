@@ -4,7 +4,7 @@
 x_to=x;
 y_to=y;
 attack_distance=170;
-dodge_distance=90;
+dodge_distance=70;
 dodge_speed=16;
 move=true;
 state="locked";
@@ -26,7 +26,7 @@ image_index=0;
 
 hp=100;
 hpmax=hp;
-DMG=31;
+DMG=9;
 hpbar_width = 200;
 hpbar_height = 24;
 hpbar_x = 64;

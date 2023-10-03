@@ -2,7 +2,13 @@
 if (cameraFollow) {
 	
 	// Player to follow
+
 	var _plr = camera_follow;
+	
+	if(global.activate != noone and global.end_interaction)
+	{
+		_plr = global.activate;
+	}
 
 	// Get camera properties
 	var _camW = camera_get_view_width(camera);

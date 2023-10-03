@@ -13,6 +13,7 @@ can_attack = true;
 
 //Habilidades
 global.CanDash=false;
+global.end_interaction = -1;
 //global.CanShield=false;
 //global.Can3Tempo=false;
 

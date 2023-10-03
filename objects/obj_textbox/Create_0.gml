@@ -135,9 +135,11 @@ next = function() {
 	event_mode=textbox_event.TEXTING;
 	if (current_action >= array_length(actions)) 
 	{
+		global.end_interaction = false;
+		global.textover = true;
+		
 		with (o_player) 
 		{
-			global.textover = true;
 			state = states.IDLE;
 		}
 		//call to player to update values

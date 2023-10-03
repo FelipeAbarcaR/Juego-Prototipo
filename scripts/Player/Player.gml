@@ -221,7 +221,7 @@ function PlayerUpdateStatus()
 function reset_variables() {
 	
 	global.interact = false;
-	global.end_interaction = false;
+	//global.end_interaction = false;
 	left = 0;
 	right = 0;
 	up = 0;
@@ -647,18 +647,22 @@ function placement_Player_NPC(_x,_y,_relative,_spd){
 				state=states.LOCK;
 				
 				//Activar la entidad
+
 				ScriptExecuteArray(activate.EntityActivateScript, activate.EntityActivateArgs);
+				
 			}	
 		}
 		else
 		{
+			
 			sprite_index = spr_gato3_idle;
 			direction = point_direction(x,y,global.activate.x,global.activate.y);
 			image_index = CARDINAL_DIR_PLAYER;
 			x_dest = -1;
 			y_dest = -1;
 			//Activar la entidad
-				ScriptExecuteArray(activate.EntityActivateScript, activate.EntityActivateArgs);
+	
+			ScriptExecuteArray(activate.EntityActivateScript, activate.EntityActivateArgs);
 			automove_from_activate=false;
 			state=states.LOCK;
 		}

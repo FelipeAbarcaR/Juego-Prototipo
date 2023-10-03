@@ -15,6 +15,7 @@ global.playerhealth = global.playerhealthmax;
 global.playermoney = 0;
 global.textover = false;
 global.activate = noone;
+
 global.mp_grid = 0;
 
 

@@ -56,7 +56,8 @@ switch(state) {
 	break;
 	
 	case states.AUTOMOVING:
-		reset_variables();
+	
+		//reset_variables();
 		
 		player_automove();
 		

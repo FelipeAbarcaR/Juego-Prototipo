@@ -3,4 +3,5 @@
 
 // Inherit the parent event
 event_inherited();
+item=ITEM.BUG;
 image_speed=0;

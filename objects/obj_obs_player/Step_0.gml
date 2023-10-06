@@ -1,9 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-var keyUp=keyboard_check_pressed(vk_up);
-var keyDown=keyboard_check_pressed(vk_down);
-var keyLeft=keyboard_check_pressed(vk_left);
+var keyUp=(keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W")));
+var keyDown=keyboard_check_pressed(vk_down)|| keyboard_check_pressed(ord("S"));
+var keyLeft=keyboard_check_pressed(vk_left)|| keyboard_check_pressed(ord("A"));
 
 if (y<ystart)
 {

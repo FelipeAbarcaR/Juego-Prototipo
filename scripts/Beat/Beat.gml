@@ -147,3 +147,11 @@ function play_sfx(_sfx)
 	    audio_play_sound(_sfx,10,0,sfx_gain);
 	}
 }
+
+function beat_change_speed()
+{
+    with(obj_beat)
+	{
+		if(beats_per_input==1) beats_per_input=2 else beats_per_input=1;
+	}
+}

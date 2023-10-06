@@ -3,18 +3,21 @@ enum ITEM {
 	APPLE,
 	ORANGE,
 	WOOD,
-	DASH
+	DASH,
+	BUG
 }
 
 global.itemsprite[ITEM.APPLE] = spr_apple;
 global.itemsprite[ITEM.ORANGE] = spr_orange;
 global.itemsprite[ITEM.WOOD] = spr_wood;
 global.itemsprite[ITEM.DASH] = spr_icon_dash;
+global.itemsprite[ITEM.BUG] = spr_bug;
 
 global.itemname[ITEM.APPLE]		=	"Manzanita";
 global.itemname[ITEM.ORANGE]	= 	"Naranja";
 global.itemname[ITEM.WOOD]		= 	"Madera";
 global.itemname[ITEM.DASH]		= 	"Dash";
+global.itemname[ITEM.BUG]		=	"Bichota";
 
 
 

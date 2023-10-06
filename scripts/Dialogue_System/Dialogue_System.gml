@@ -194,7 +194,9 @@ function TextAction(_text,_cond1=0,_cond2=0,_cond3=0,_cond4=0) : DialogueAction(
 }
 
 function SpeakerAction (_name,_sprite = undefined,_side = undefined) : DialogueAction() constructor{
+
 //Set the speaker its portrait and side the portrait is on 	
+
 	name = _name;
 	sprite = _sprite;
 	side = _side;
@@ -285,6 +287,7 @@ function AutomoveAction(_x,_y) : DialogueAction() constructor{
 	}
 	
 }
+	
 function CryptAction() : DialogueAction() constructor{
 	
 	act = function(textbox)
@@ -357,6 +360,11 @@ var _option4 = "";
 var _num_options = "";
 var _option_create = false;
 
+var _activate = "";
+var _activate_arg1 = "";
+var _activate_arg2 = "";
+var _activate_arg3 = "";
+
 //guardando la data en global.topics
 
 for (var _i = 0; _i < array_length(dialogo); _i++)
@@ -372,6 +380,7 @@ for (var _i = 0; _i < array_length(dialogo); _i++)
 		_sprite = dialogo[_i][$ "SPRITE"];
 		_option = dialogo[_i][$ "TIENE_OPCIONES"];
 		_npc = dialogo[_i][$ "OBJ_NAME"];
+		_activate = dialogo[_i][$ "ACTIVAR"];
 		_speakercomp = _speaker;
 		
 		if(_npc != "0") 
@@ -478,6 +487,7 @@ for (var _i = 0; _i < array_length(dialogo); _i++)
 			}
 			else continue;
 		}
+		
 	}
 	// SI YA EXISTE EL TOPICS EN LA GLOBAL
 	else 
@@ -598,8 +608,33 @@ for (var _i = 0; _i < array_length(dialogo); _i++)
 				_condition3 = dialogo[_i][$ "CONDICION3"];
 				_condition4 = dialogo[_i][$ "CONDICION4"];
 				array_insert(global.topics[$ _topico],array_length(global.topics[$ _topico]),TEXT(_textbox,_condition1,_condition2,_condition3,_condition4));
+	
 			}
-			else continue;
+			
+			_activate=dialogo[_i][$ "ACTIVAR"];
+			
+			if(_activate != "")
+			{
+				_activate_arg1 = dialogo[_i][$ "ACT_ARG1"];
+				_activate_arg2 = dialogo[_i][$ "ACT_ARG2"];
+				_activate_arg3 = dialogo[_i][$ "ACT_ARG3"];
+
+			    switch(_activate)
+				{
+					case "FIGHT":
+					array_insert(global.topics[$ _topico],array_length(global.topics[$ _topico]),FIGHT(_activate_arg1,_activate_arg2));
+					break;
+					
+					case "ITEM":
+					var _act_arg1_r,_act_arg2_r,_act_arg3_r;
+					_act_arg1_r=real(_activate_arg1);
+					_act_arg2_r=real(_activate_arg2);
+					
+					array_insert(global.topics[$ _topico],array_length(global.topics[$ _topico]),INVENTORY(_act_arg1_r,_act_arg2_r));
+					break;
+					
+				}
+			}
 		}
 	}
 }
@@ -626,10 +661,10 @@ for (var _i = 0; _i < array_length(dialogo); _i++)
 
 
 global.topics[$ "Batallando"] = [
-	SPEAKER("Rana",spr_pt_rana, PORTRAIT_SIDE.LEFT),
-	TEXT("Aja! encontraste mi [rainbow]escondite secreto[/rainbow], debes saber que soy un [c_blue]agente secreto"),
-	TEXT("Espera... No se si lo sabias, bueno no importa."),
-	TEXT("Y ademas no te gustan los completos, peleemos"),
+	SPEAKER("Pedro",spr_pt_rana, PORTRAIT_SIDE.LEFT),
+	TEXT("Si vienes para llevarte mis frituritas te advierto que el último tipo se fue llorando"),
+	TEXT("¿Que por qué frituras? ¿Que acaso por ser conejo solo debo comer zanahorias? "),
+	TEXT("Esa mirada de juicio me tiene cansado, en guardia, a mover la coneja"),
 	FIGHT("pelearanagana","pelearanapierde")
 ];
 		
@@ -703,14 +738,14 @@ global.topics[$ "conejeandopelea"] = [
 ];
 global.topics[$ "pelearanagana"] = [
 	SPEAKER("Rana",spr_pt_rana, PORTRAIT_SIDE.LEFT),
-	TEXT("Wena hmno ganaste!"),
-	TEXT("Te le voy a dar un Item"),
+	TEXT("Suficiente, estas frituritas no valen la pena"),
+	TEXT("Toma estos patines, los solía utilizar ATRAVESAR OBSTÁCULOS, pero ahora solo quiero comer frituritas"),
 	INVENTORY(ITEM.DASH,1),
-	TEXT("Recuerda que tienes que arreglar pa que no se duplique esa vaina en el inventario")
+	TEXT("En fin, si logras IR AL RITMO, te serán de gran ayuda. Disfrútalos, sin resentimientos")
 ];
 global.topics[$ "pelearanapierde"] = [
 	SPEAKER("Rana",spr_pt_rana, PORTRAIT_SIDE.LEFT),
-	TEXT("Mala hmno perdiste [spr_emoticon_coneja_sad], como podi ser tan malo")
+	TEXT("Creo que todo fue un malentendido viejo, sin resentimientos")
 ];
 global.topics[$ "signentrancem1"] = [
 	TEXT("Bienvenido a Chill City, lugar de descanso")

@@ -33,4 +33,5 @@ hola=0;
 //	setBPM(_bpm);
 //}
 
-alarm[0]=room_speed*2//*global.BeatTimeMS*1000000*2;
+alarm[0]=room_speed*2;//*global.BeatTimeMS*1000000*2;
+alarm[1]=room_speed*48;

@@ -26,7 +26,7 @@ image_index=0;
 
 hp=100;
 hpmax=hp;
-DMG=9;
+DMG=19;
 hpbar_width = 200;
 hpbar_height = 24;
 hpbar_x = 64;

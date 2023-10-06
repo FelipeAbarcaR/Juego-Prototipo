@@ -5,9 +5,10 @@ var portrait_scale =1;
 var finished = (typist.get_state()==1);
 
 
-//Portrait
+
 if (event_mode==textbox_event.TEXTING)
 {
+	//Background
 	var _scaling_y = starting_y-(height/2)*increasing_value;
 	
 	// Draw the box, it will have a scale animation and will return true when finished 
@@ -18,6 +19,7 @@ if (event_mode==textbox_event.TEXTING)
 	
 	if (_background_ready)
 	{
+		//Portrait
 		if(sprite_exists(portrait_sprite))
 		{
 			//Shrink text width vy the width the portrait will take up

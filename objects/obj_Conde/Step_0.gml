@@ -1,10 +1,10 @@
 /// @description states,animate,dodge,*hit
 // You can write your code in this editor
 
-	Izquierda=keyboard_check_pressed(vk_left);
-	Derecha=keyboard_check_pressed(vk_right);
-	Arriba=keyboard_check_pressed(vk_up);
-	Abajo=keyboard_check_pressed(vk_down);
+	Izquierda=(keyboard_check_pressed(vk_left)||keyboard_check_pressed(ord("A")));
+	Derecha=keyboard_check_pressed(vk_right)||keyboard_check_pressed(ord("D"));
+	Arriba=keyboard_check_pressed(vk_up)||keyboard_check_pressed(ord("W"));
+	Abajo=keyboard_check_pressed(vk_down)||keyboard_check_pressed(ord("S"));
 
 //change image index through rhythm
 
@@ -142,16 +142,16 @@ if (collision_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, obj_Conda,
 		//hurt sfx
 		audio_play_sound(sfx_hurt,10,0);
 		
-		//invincible=true;
-		//start_delay=true;
-		//state="stun";
-		//hp-=obj_Conda.DMG;
-		//global.enemy_atk=false;
-		//if (hp<=0) state="dead";
-		//start_flash=true;
+		invincible=true;
+		start_delay=true;
+		state="stun";
+		hp-=obj_Conda.DMG;
+		global.enemy_atk=false;
+		if (hp<=0) state="dead";
+		start_flash=true;
 		
-		////DAMAGE ANIMATION (obj_control_fight)
-		//draw_hp2=true;
+		//DAMAGE ANIMATION (obj_control_fight)
+		draw_hp2=true;
 
 	}
 }

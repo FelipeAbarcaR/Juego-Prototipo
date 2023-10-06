@@ -8,5 +8,8 @@ if(_mode==mode.obstacle)
     beat_bar_visible=false;
 }else beat_bar_visible=true;
 
-
+if(beats_per_input==1)
+{
+    beat_change_speed();
+}
 

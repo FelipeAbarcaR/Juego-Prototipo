@@ -3,7 +3,7 @@
 gui_width=display_get_gui_width();
 gui_height=display_get_gui_height();
 
-image_alpha=0.8;
+image_alpha=0.9;
 
 x_pos= 50;
 y_pos=gui_height*(3/5);

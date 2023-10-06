@@ -139,6 +139,12 @@ if(layer_exists("Collisions"))
 	var lay_id=layer_get_id("Collisions");
 	layer_set_visible(lay_id,0);
 }
+if(layer_exists("Alpha"))
+{
+	//collision tiles
+	var _lay_id=layer_get_id("Alpha");
+	layer_set_visible(_lay_id,0);
+}
 
 //restart room timer
 room_time=0;

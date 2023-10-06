@@ -1,6 +1,6 @@
 //Properties
 inv_type = -1;
-
+item=1;
 //Vars
 collected = false;
 

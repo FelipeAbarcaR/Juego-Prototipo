@@ -7,6 +7,10 @@ if(instance_exists(o_player))
 	if(_collision)
 	{
 	    global.cryptroom=id;
+		if(o_player.state=states.AUTOMOVING)
+		{
+		    instance_deactivate_object(crypt_room_gate);
+		}
 	}
 	
 	

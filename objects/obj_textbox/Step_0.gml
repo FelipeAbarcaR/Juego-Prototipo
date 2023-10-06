@@ -51,8 +51,8 @@ if(!minimize_to_destroy)
 		//check if there is options to show
 		if (option_count > 0)
 		{
-			var up = keyboard_check_pressed(up_key);
-			var down = keyboard_check_pressed(down_key);
+			var up = keyboard_check_pressed(up_key) || keyboard_check_pressed(ord("W"));
+			var down = keyboard_check_pressed(down_key) || keyboard_check_pressed(ord("S"));
 		
 			//Cycle through available options
 			var change = down - up;
@@ -146,6 +146,7 @@ if(!minimize_to_destroy)
 		{
 		    handcreate();
 			player_change();
+			beat_change_speed();
 			
 			next();
 		}

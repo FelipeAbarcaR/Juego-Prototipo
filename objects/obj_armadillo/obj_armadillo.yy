@@ -28,7 +28,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_armadillo",
+    "path": "sprites/spr_armadillo/spr_armadillo.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

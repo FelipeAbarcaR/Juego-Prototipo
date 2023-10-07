@@ -31,26 +31,58 @@ if global.DrawText{
  if(beat_bar_visible)
  {
 	//BEAT BAR 2
-	var _scale=2;
+	var _scale=3;
 
-	if(global.beatprogress>=0.75)
-	{
-		_scale=2*1.15 //latido: aumentar el sprite en 15% cerca del ritmo;
+	//if(global.beatprogress>=0.75)
+	//{
+	//	_scale=_scale*1.15 //latido: aumentar el sprite en 15% cerca del ritmo;
 
-	}
+	//}
+	
 	//frame
-	var _animation_speed=(get_timer()/1000000)*4;
-	draw_sprite_stretched(spr_beat_frame_2,_animation_speed,_x-(beat_frame_width/2),bar2_y-beat_frame_height,beat_frame_width,beat_frame_height);
+	var _animation_speed;
+	if(global.groovy)
+	{
+		_animation_speed=(get_timer()/1000000)*4;	
+	} else _animation_speed=0;
+	var __scale=4;
+	
+	//draw_sprite_stretched(spr_beat_frame_2,_animation_speed,_x-(beat_frame_width/2),bar2_y-beat_frame_height,beat_frame_width,beat_frame_height);
+	draw_sprite_ext(spr_beat_frame_4,_animation_speed,_x-(beat_frame_width/2),bar2_y-beat_frame_height,__scale,__scale,0,c_white,1);
 	//"heart", base de la barra
-	draw_sprite_ext(spr_beat_heart_2,0,_x,bar2_y,_scale,_scale,0,c_white,1);
-	//beat range
-	draw_set_alpha(0.25);
-	var _h=beat_frame_height;
-	var _w=beat_frame_width;
-	draw_rectangle_color(_x-_w/2,_y-_h*beathitrange,_x+_w/2,_y+_h*beathitrange,c_orange,c_orange,#e0bf1b,#e0bf1b,false);
-	draw_rectangle_color(_x-_w/2,_y-_h*beathitrange/2,_x+_w/2,_y+_h*beathitrange/2,c_green,c_green,c_green,c_green,false);
-	draw_set_alpha(1);
+	
+	//draw_sprite_ext(spr_beat_heart_2,0,_x,bar2_y,_scale,_scale,0,c_white,1);
+	var _rotation;
+	if(heart_pulse)
+	{
+		var _increase=0.1;
+		var _shake_length=5;
+		var _frequency=2;
+		beat_heart_t+=_increase;
+		var _t =beat_heart_t;
+		
+		_rotation= sin(_t*pi*_frequency)*(1-_t/_shake_length)*beat_heart_shake_amplitude;
+		
+		if(_t==_shake_length)
+		{
+			heart_pulse=false;
+			beat_heart_t=0;
+		}
+	} else _rotation=0;
 
+	draw_sprite_ext(spr_beat_heart_4,0,_x+_rotation,bar2_y,_scale,_scale,_rotation,c_white,1);
+	
+	//beat range
+	if(global.DrawText)
+	{
+		draw_set_alpha(0.25);
+		var _h=beat_frame_height;
+		var _w=beat_frame_width;
+		draw_rectangle_color(_x-_w/2,_y-_h*beathitrange,_x+_w/2,_y+_h*beathitrange,c_orange,c_orange,#e0bf1b,#e0bf1b,false);
+		draw_rectangle_color(_x-_w/2,_y-_h*beathitrange/2,_x+_w/2,_y+_h*beathitrange/2,c_green,c_green,c_green,c_green,false);
+		draw_set_alpha(1);
+	}
+	
 	//"beats", cositas que caen
 	var _length=array_length(beat_meter_list);
 
@@ -58,9 +90,9 @@ if global.DrawText{
 	{
 		for(var i=0;i<_length;i++)
 		{
-			var _bar_scale=3
+			var _bar_scale=2;
 			var _yy=beat_meter_list[i];
-		    draw_sprite_ext(spr_beat_meter_2,0,_x,_yy,_bar_scale,_bar_scale,0,c_white,1-max(0,min(1,(_yy-bar2_y)/bar2_range)));
+		    draw_sprite_ext(spr_beat_meter_4,0,_x,_yy,_bar_scale,_bar_scale,0,c_white,1-max(0,min(1,(_yy-bar2_y)/bar2_range)));
 		}
 
 	}

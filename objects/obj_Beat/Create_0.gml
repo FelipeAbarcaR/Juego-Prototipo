@@ -107,6 +107,10 @@ beat_meter_speed=3;
 
 beat_frame_height=340;
 beat_frame_width=80;
+
+//beat_frame_height=sprite_get_height(spr_beat_frame_4);
+//beat_frame_width=sprite_get_width(spr_beat_frame_4);
+
 bar2_range=beat_frame_height*beathitrange;
 
 bar2_x=global.res.guiwidth*(0.92);
@@ -115,6 +119,10 @@ bar2_y=global.res.guiheight*0.5;
 beats_to_start=5;
 time_to_beat=global.BeatTimeMS*beats_to_start;
 time_to_reach_end=(beat_frame_height/beat_meter_speed)*(1/room_speed)*1000000;
+
+heart_pulse=false;
+beat_heart_shake_amplitude=5;
+beat_heart_t=0;
 
 //GROOVY STATE
 groovy_count=0;

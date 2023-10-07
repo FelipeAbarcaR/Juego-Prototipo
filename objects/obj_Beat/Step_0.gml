@@ -230,16 +230,17 @@ if(_length>0) //if it is at least one beat meter in the array
 		
 		//Create the meter to show where it was the position when input a key.
 		var _obj = instance_create_depth(bar2_x,_last_beat_position,depth,obj_vanish);
-		_obj.sprite_index= spr_beat_meter_2;
-		_obj.image_xscale=3;
-		_obj.image_yscale=3;
+		_obj.sprite_index= spr_beat_meter_4;
+		_obj.image_xscale=1.5;
+		_obj.image_yscale=1.5;
 		_obj.draw_on_gui=true;
-		_obj.sprite_color=c_red;
+		_obj.sprite_color=c_orange;
 		
 		if(global.beatchance) //if the input was in beatchance
 		{
 			var _last_time= array_shift(beat_meter_list); //delete the beat meter of the array
-			groovy_count+=1;										
+			groovy_count+=1;
+			heart_pulse=true;
 		}
 		else // if the input was not in beatchance
 		{

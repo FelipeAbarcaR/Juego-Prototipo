@@ -42,6 +42,23 @@ speaker_width = sprite_get_width(spr_name);
 speaker_height = sprite_get_height(spr_name);
 speaker_x = padding+portrait_width/2;
 speaker_y = height-padding-speaker_height;
+
+//Background
+
+enum  BG_TYPE
+{
+    blurry,
+	woodsign,
+	npc
+}
+
+bg_type	=	BG_TYPE.blurry;
+
+bg_sign_sprite	=	spr_textbox_bg;
+bg_NPC_sprite	=	spr_textbox_sign_background;
+
+bg_index	=	0;
+
 //Option
 option_x = padding;
 option_y = padding *-6;

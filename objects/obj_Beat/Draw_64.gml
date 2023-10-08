@@ -53,15 +53,19 @@ if global.DrawText{
 	
 	//draw_sprite_ext(spr_beat_heart_2,0,_x,bar2_y,_scale,_scale,0,c_white,1);
 	var _rotation;
+
 	if(heart_pulse)
 	{
-		var _increase=0.1;
-		var _shake_length=5;
-		var _frequency=2;
-		beat_heart_t+=_increase;
-		var _t =beat_heart_t;
+		var _amplitude		=	shake_amplitude;
+		var _increase		=	0.1;
+		var _shake_length	=	5;
+		var _frequency		=	2;
 		
-		_rotation= sin(_t*pi*_frequency)*(1-_t/_shake_length)*beat_heart_shake_amplitude;
+		beat_heart_t += _increase;
+
+		var _t	=	beat_heart_t;
+		
+		_rotation= sin(_t*pi*_frequency)*(1-_t/_shake_length)*_amplitude;
 		
 		if(_t==_shake_length)
 		{

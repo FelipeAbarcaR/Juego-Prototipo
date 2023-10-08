@@ -71,7 +71,6 @@ function FightTransitionFinished()
 	layer_sequence_destroy(self.elementID);
 	global.midTransition = false;
 	global.sequencetransitionid =undefined;
-	;
 	if (obj_fight_control.fight_status==fighting.ending)
 	{
 	    global.fight_ended=true;

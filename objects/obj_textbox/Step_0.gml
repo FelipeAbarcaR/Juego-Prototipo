@@ -44,7 +44,6 @@ if(!minimize_to_destroy)
 
 	var finished = (typist_state==1);
 
-
 	// Are we finished typing?
 	if (finished) 
 	{
@@ -90,7 +89,7 @@ if(!minimize_to_destroy)
 		typist.skip();
 	}
 
-
+//stuffs after a dialogue
 	if (finished){
 	
 		//Inventory

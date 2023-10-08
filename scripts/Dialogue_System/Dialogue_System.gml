@@ -16,6 +16,7 @@
 #macro INVENTORY new ItemAction
 #macro AUTOMOVE new AutomoveAction
 #macro CRYPT new CryptAction
+#macro BACKGROUND new BGAction
 
 function startDialogue(topic) {
 	if (instance_exists(obj_textbox)) return;
@@ -297,6 +298,7 @@ function CryptAction() : DialogueAction() constructor{
 	}
 	
 }
+	
 function ItemAction(_itemid,_quantity) : DialogueAction() constructor{
 	
 	inv_quantity=_quantity;
@@ -307,6 +309,21 @@ function ItemAction(_itemid,_quantity) : DialogueAction() constructor{
 	{
 		textbox.inv_type=item_id;
 		textbox.item_quantity=inv_quantity
+	}
+	
+}
+
+function BGAction(_bg_type,_sprite_index=0) : DialogueAction() constructor{
+	
+	background_type=_bg_type;
+	background_index=_sprite_index;
+
+	
+	act = function(textbox)
+	{
+		textbox.bg_type=background_type;
+		textbox.bg_index=background_index;
+		textbox.next ();
 	}
 	
 }
@@ -676,11 +693,8 @@ global.topics[$ "signenemy1"] = [
 ];
 
 global.topics[$ "signhouse2"] = [
-	
-	TEXT("¿Realmente [c_yellow]esperas a que te diga donde ir? Los letreros no hablamos."),
-	TEXT("Vamos muchacho, tu puedes, solo debes seguir la instrucción.-->"),
-	TEXT("¿Sigues Aquí? El juego no se va a completar solo."),
-	TEXT("Ya me harté de tí. Adiós!.")
+	BACKGROUND(BG_TYPE.woodsign),
+	TEXT("¿Realmente esperas a que te diga donde ir? Los letreros no hablamos.")
 	];
 
 global.topics[$ "signCrypt1"] = [

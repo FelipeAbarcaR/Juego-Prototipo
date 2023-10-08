@@ -148,10 +148,12 @@ function play_sfx(_sfx)
 	}
 }
 
-function beat_change_speed()
+function beat_change_speed(N_Beats)
 {
     with(obj_beat)
 	{
 		if(beats_per_input==1) beats_per_input=2 else beats_per_input=1;
+		if(N_Beats!=undefined) beats_per_input=N_Beats;
 	}
+
 }

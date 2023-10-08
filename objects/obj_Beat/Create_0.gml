@@ -91,7 +91,9 @@ BGM_data=[
 	[bgm_OneLove,107],
 	[bgm_Kappn,130],
 	[bgm_WillPower_89,89],
-	[bgm_midnight_100,100]
+	[bgm_midnight_100,100],
+	/*[bgm_Boss1_190BPM,190]*/
+	
 ];
 
 
@@ -121,7 +123,7 @@ time_to_beat=global.BeatTimeMS*beats_to_start;
 time_to_reach_end=(beat_frame_height/beat_meter_speed)*(1/room_speed)*1000000;
 
 heart_pulse=false;
-beat_heart_shake_amplitude=5;
+shake_amplitude=6;
 beat_heart_t=0;
 
 //GROOVY STATE

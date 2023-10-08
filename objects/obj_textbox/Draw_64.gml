@@ -11,8 +11,22 @@ if (event_mode==textbox_event.TEXTING)
 	//Background
 	var _scaling_y = starting_y-(height/2)*increasing_value;
 	
-	// Draw the box, it will have a scale animation and will return true when finished 
-	draw_blurry_background_gui(x,_scaling_y,width,1+height*increasing_value);
+	// Draw the box, it will have a scale animation and will return true when finished
+	switch(bg_type)
+	{
+	    case BG_TYPE.npc:
+			draw_sprite_stretched(bg_NPC_sprite,bg_index,x,_scaling_y,width,1+height*increasing_value);
+		break;
+		
+		case BG_TYPE.blurry:
+			draw_blurry_background_gui(x,_scaling_y,width,1+height*increasing_value);
+		break;
+		
+		case BG_TYPE.woodsign:
+			draw_sprite_stretched(bg_NPC_sprite,bg_index,x,_scaling_y,width,1+height*increasing_value);
+		break;
+	}
+	
 	
 	//check if the animation for background reached his limit
 	var _background_ready= increasing_value==1;

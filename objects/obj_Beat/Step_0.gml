@@ -29,7 +29,7 @@
 	BeatBarProgress =  sin((((SumFullDelta+_midtime)/(global.BeatTimeMS*beats_per_input))*pi));
 	
 
-//	var char = global.room_data[global.currentroom][Index.mainchar];
+//	var char = globa	l.room_data[global.currentroom][Index.mainchar];
 
 // draw vanishing BeatBar
 	var _player_mainchar = global.room_data[global.currentroom][Index.mainchar]
@@ -170,14 +170,6 @@ var _tp=obj_transition_manager.transition_progress;
 
 
 //BEAT BAR 2.0 STEP
-if(instance_exists(obj_fight_control))
-{
-    if(obj_fight_control.fighters_created)
-	{
-		perro=20;
-	    hola=10;
-	}
-}
 
 bar2_timer+=dt;
 //SET A NEW BEAT TO START MOVING DOWN THE "HEART"
@@ -241,6 +233,7 @@ if(_length>0) //if it is at least one beat meter in the array
 			var _last_time= array_shift(beat_meter_list); //delete the beat meter of the array
 			groovy_count+=1;
 			heart_pulse=true;
+			beat_heart_t=0;
 		}
 		else // if the input was not in beatchance
 		{

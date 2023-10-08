@@ -44,9 +44,30 @@ bg_width=global.res.width;
 bg_height=global.res.height;
 
 //Part 1 of fight, deactivate all and start fight transition
-
+	//mid transition
+if (!global.midTransition)
+	{
+		global.midTransition = true;
+	}
+	
 oCameraManager.cameraFollow=false;
-FightTransitionStart(background,sqFightFadeOut,sqFightFadeIn);
+//FightTransitionStart(background,sqFightFadeOut,sqFightFadeIn);
+var _end_in = function()
+{
+    with(obj_fight_control)
+	{
+		draw_background=true;
+		create_fighters=true;
+	}
+	
+	var _end_out = function()
+	{
+		global.midTransition = false;
+	}
+	screen_transition(TR_TYPE.ZOOMBLUR,TR_WAY.OUT,true,c_white,_end_out,1);
+
+}
+screen_transition(TR_TYPE.ZOOMBLUR,TR_WAY.IN,false,c_white,_end_in,1);
 
 //beat count to start fight (or create hand)
 beat_count=0;

@@ -4,6 +4,7 @@
 var _activate = keyboard_check_pressed(vk_space);
 if(record)
 {
+	obj_runny_player.inmunity=true;
 	if(_activate){	
 	
 		var _beat_num=global.BeatNumber+global.beatprogress;

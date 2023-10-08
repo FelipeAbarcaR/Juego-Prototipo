@@ -73,25 +73,25 @@ function ShowFXArrows(){
 	var _x = _char.xstart;
 	var _y = _char.ystart;
 	var _dodge = _char.dodge_distance*0.6;
-	var _scale=1;
+	var _scale=1.5;
 	
 	switch(ataque)
 	{
 		case 0://DownLeft
-			SendFX(spr_arrow2,_x-_dodge,_y+_dodge,{image_xscale : _scale,image_yscale : -1*_scale})
+			SendFX(spr_arrow2,_x-_dodge,_y+_dodge,{image_xscale : _scale,image_yscale : -1*_scale, image_blend : c_red})
 		break;
 		
 		case 1://Middle
-			SendFX(spr_arrow1,_x-_dodge,_y,{image_xscale : _scale,image_yscale : _scale});
+			SendFX(spr_arrow1,_x-_dodge,_y,{image_xscale : _scale,image_yscale : _scale, image_blend : c_red});
 		break;
 		
 		case 2: //UpDown
-			SendFX(spr_arrow3,_x,_y+_dodge,{image_xscale : _scale,image_yscale : -1*_scale})
-			SendFX(spr_arrow3,_x,_y-_dodge,{image_xscale : _scale,image_yscale : _scale})
+			SendFX(spr_arrow3,_x,_y+_dodge,{image_xscale : _scale,image_yscale : -1*_scale, image_blend : c_red})
+			SendFX(spr_arrow3,_x,_y-_dodge,{image_xscale : _scale,image_yscale : _scale, image_blend : c_red})
 		break;
 		
 		case 3: //UpLeft
-			SendFX(spr_arrow2,_x-_dodge,_y-_dodge,{image_xscale : _scale,image_yscale : _scale});
+			SendFX(spr_arrow2,_x-_dodge,_y-_dodge,{image_xscale : _scale,image_yscale : _scale, image_blend : c_red});
 		break;
 	
 		default: break;

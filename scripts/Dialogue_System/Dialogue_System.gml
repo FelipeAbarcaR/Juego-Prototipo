@@ -686,9 +686,11 @@ global.topics[$ "Batallando"] = [
 ];
 		
 global.topics[$ "signhouse1"] = [
+	BACKGROUND(BG_TYPE.woodsign),
 	TEXT("El Viejo Sabio le invita a entrar a la casa, no es que tenga algo mejor que hacer"),
 ];
 global.topics[$ "signenemy1"] = [
+	BACKGROUND(BG_TYPE.woodsign),
 	TEXT("Peligro!!! Monstruo mas adelante, evite comentarios sobre su cabello."),
 ];
 
@@ -728,9 +730,11 @@ global.topics[$ "Cryptmoveandfight3"] = [
 	CRYPT()
 ];
 global.topics[$ "signwarning1"] = [
+	BACKGROUND(BG_TYPE.woodsign),
 	TEXT("El Viejo Sabio le invita a entrar a la casa, no es que tenga algo mejor que hacer"),
 ];
 global.topics[$ "signwarning2"] = [
+	BACKGROUND(BG_TYPE.woodsign),
 	TEXT("Territorio deconocido, nadie que haya pasado de este punto, ha vuelto para contarlo.")
 	
 ];

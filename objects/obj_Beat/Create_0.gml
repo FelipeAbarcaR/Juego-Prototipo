@@ -92,8 +92,7 @@ BGM_data=[
 	[bgm_Kappn,130],
 	[bgm_WillPower_89,89],
 	[bgm_midnight_100,100],
-	/*[bgm_Boss1_190BPM,190]*/
-	
+	[bgm_Boss1_190BPM,95]
 ];
 
 

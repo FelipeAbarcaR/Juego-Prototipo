@@ -139,7 +139,6 @@
     {"name":"obj_runny_trap_fury","order":4,"path":"objects/obj_runny_trap_fury/obj_runny_trap_fury.yy",},
     {"name":"__ftr_sh_crossfade","order":4,"path":"shaders/__ftr_sh_crossfade/__ftr_sh_crossfade.yy",},
     {"name":"spr_chumbeque_chico","order":4,"path":"sprites/spr_chumbeque_chico/spr_chumbeque_chico.yy",},
-    {"name":"spr_beat_pulse","order":3,"path":"sprites/spr_beat_pulse/spr_beat_pulse.yy",},
     {"name":"__ftr_sh_pixelize_twopass","order":21,"path":"shaders/__ftr_sh_pixelize_twopass/__ftr_sh_pixelize_twopass.yy",},
     {"name":"__ftr_sq_wipe_triangle","order":4,"path":"sequences/__ftr_sq_wipe_triangle/__ftr_sq_wipe_triangle.yy",},
     {"name":"roomMapa1Dungeon","order":2,"path":"rooms/roomMapa1Dungeon/roomMapa1Dungeon.yy",},

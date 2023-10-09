@@ -466,7 +466,6 @@
     {"id":{"name":"SendFX","path":"scripts/SendFX/SendFX.yy",},},
     {"id":{"name":"scribble_super_create","path":"scripts/scribble_super_create/scribble_super_create.yy",},},
     {"id":{"name":"spr_CondeDead","path":"sprites/spr_CondeDead/spr_CondeDead.yy",},},
-    {"id":{"name":"spr_beat_pulse","path":"sprites/spr_beat_pulse/spr_beat_pulse.yy",},},
     {"id":{"name":"scribble_font_add_msdf","path":"scripts/scribble_font_add_msdf/scribble_font_add_msdf.yy",},},
     {"id":{"name":"sqSlideInDiagonal","path":"sequences/sqSlideInDiagonal/sqSlideInDiagonal.yy",},},
     {"id":{"name":"scribble_color_set","path":"scripts/scribble_color_set/scribble_color_set.yy",},},

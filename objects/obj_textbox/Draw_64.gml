@@ -9,10 +9,11 @@ var finished = (typist.get_state()==1);
 if (event_mode==textbox_event.TEXTING)
 {
 	//Background
+	// Draw the box, it will have a scale animation and will return true when finished
+	
 	var _scaling_y = starting_y-(height/2)*increasing_value;
 	
-	// Draw the box, it will have a scale animation and will return true when finished
-	switch(bg_type)
+switch(bg_type)
 	{
 	    case BG_TYPE.npc:
 			draw_sprite_stretched(bg_NPC_sprite,bg_index,x,_scaling_y,width,1+height*increasing_value);
@@ -111,7 +112,7 @@ if (event_mode==textbox_event.TEXTING)
 				if( i == current_option)
 				{
 					opt_x += option_selection_indent;
-					draw_sprite(spr_textbox_paw,0,opt_x - 30,opt_y-2);
+					draw_sprite_ext(spr_textbox_paw,0,opt_x - 30,opt_y-2,_scale,_scale,0,c_white,1);
 				}
 				
 				var _string=options[i].text;

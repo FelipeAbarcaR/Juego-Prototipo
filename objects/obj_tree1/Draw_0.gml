@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+
 event_inherited();
 
 //// draw shadow
@@ -15,6 +16,6 @@ event_inherited();
 //	image_blend,
 //	image_alpha);
 
-// Inherit the parent event
-event_inherited();
+//// Inherit the parent event
+//event_inherited();
 

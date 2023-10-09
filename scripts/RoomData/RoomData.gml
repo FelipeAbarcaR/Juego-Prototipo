@@ -9,8 +9,8 @@
 	global.room_data = [
 
 		[roomMapaInicial,			bgm_ForestTime,			126,	o_player,			mode.move,		o_player,			false,	0,	0],
-		//[rm_runny,					bgm_Boss1_190BPM,		190,	o_player,			mode.move,		o_player,			false,	0,	0],
-		[rm_runny,					bgm_midnight_100,		100,	o_player,			mode.move,		o_player,			false,	0,	0],
+		[rm_runny,					bgm_Boss1_190BPM,		95,		o_player,			mode.move,		o_player,			false,	0,	0],
+		//[rm_runny,					bgm_midnight_100,		100,	o_player,			mode.move,		o_player,			false,	0,	0],
 		[roomMapa1,					bgm_WillPower_89,		89 ,	o_player,			mode.move,		o_player,			false,	0,	0],
 		[rm_GD,						bgm_boss_01,			127,	obj_obs_player,		mode.obstacle,	obj_obs_player,		false,	0,	0],
 		[roomViejoSabio,			bgm_ForestTimeInterior, 126,	o_player,			mode.move,		o_player,			false,	0,	0],

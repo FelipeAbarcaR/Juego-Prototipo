@@ -147,7 +147,6 @@
     {"name":"spr_gato_crypt_roll","order":1,"path":"sprites/spr_gato_crypt_roll/spr_gato_crypt_roll.yy",},
     {"name":"spr_notitas","order":1,"path":"sprites/spr_notitas/spr_notitas.yy",},
     {"name":"spr_runny_table","order":2,"path":"sprites/spr_runny_table/spr_runny_table.yy",},
-    {"name":"bgm_Boss1_190BPM","order":2,"path":"sounds/bgm_Boss1_190BPM/bgm_Boss1_190BPM.yy",},
     {"name":"spr_tree1","order":3,"path":"sprites/spr_tree1/spr_tree1.yy",},
     {"name":"spr_shadow","order":6,"path":"sprites/spr_shadow/spr_shadow.yy",},
     {"name":"__ftr_sh_doom","order":8,"path":"shaders/__ftr_sh_doom/__ftr_sh_doom.yy",},

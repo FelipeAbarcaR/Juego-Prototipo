@@ -520,14 +520,14 @@ for (var _i = 0; _i < array_length(dialogo); _i++)
 			}
 			else // _topico != 0
 			{
-				if(_topico != _topico_comp and _topico != _option1) 
+				if(_topico != _topico_comp /* and _topico != _option1*/) 
 				{
 					_speaker = dialogo[_i][$ "SPEAKER"];
 					_sprite = dialogo[_i][$ "SPRITE"];
-					if(_speaker != "0")
+					if(_speaker != "0" and _sprite != 0)
 					{
 						_sprite_portrait = asset_get_index(_sprite);
-							
+						
 						if(_portrait == 0) 
 						{
 							array_insert(global.topics[$ _topico],array_length(global.topics[$ _topico]),SPEAKER(_speaker,_sprite_portrait,PORTRAIT_SIDE.RIGHT)); //esto debe cambiar para hacer mas top
@@ -539,6 +539,7 @@ for (var _i = 0; _i < array_length(dialogo); _i++)
 							_portrait = 0;
 						}
 						_speakercomp = _speaker;
+						
 					}
 					
 				}

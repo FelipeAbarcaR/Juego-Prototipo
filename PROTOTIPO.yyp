@@ -484,7 +484,6 @@
     {"id":{"name":"spr_notitas","path":"sprites/spr_notitas/spr_notitas.yy",},},
     {"id":{"name":"obj_bush","path":"objects/obj_bush/obj_bush.yy",},},
     {"id":{"name":"spr_runny_table","path":"sprites/spr_runny_table/spr_runny_table.yy",},},
-    {"id":{"name":"bgm_Boss1_190BPM","path":"sounds/bgm_Boss1_190BPM/bgm_Boss1_190BPM.yy",},},
     {"id":{"name":"spr_tree1","path":"sprites/spr_tree1/spr_tree1.yy",},},
     {"id":{"name":"scr_WaitHalfBeat","path":"scripts/scr_WaitHalfBeat/scr_WaitHalfBeat.yy",},},
     {"id":{"name":"sfx_hurt1","path":"sounds/sfx_hurt1/sfx_hurt1.yy",},},

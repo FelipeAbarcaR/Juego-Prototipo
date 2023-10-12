@@ -12,8 +12,6 @@ if(instance_exists(o_player))
 		    instance_deactivate_object(crypt_room_gate);
 		}
 	}
-	
-	
 }
 
 

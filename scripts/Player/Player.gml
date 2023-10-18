@@ -222,10 +222,10 @@ function reset_variables() {
 	
 	global.interact = false;
 	//global.end_interaction = false;
-	left = 0;
-	right = 0;
-	up = 0;
-	down = 0;
+	_left = 0;
+	_right = 0;
+	_up = 0;
+	_down = 0;
 	vmove = 0;
 	hmove = 0;
 	walk_spd = initial_walk_spd;
@@ -238,19 +238,19 @@ function reset_variables() {
 }
 
 function get_input() {
-	if (keyboard_check(vk_left)	|| keyboard_check(ord("A")))	left	= 1;
-	if (keyboard_check(vk_right)|| keyboard_check(ord("D")))	right	= 1;
-	if (keyboard_check(vk_up)	|| keyboard_check(ord("W")))	up		= 1;
-	if (keyboard_check(vk_down)	|| keyboard_check(ord("S")))	down	= 1;
+	if (input_check("left"))	_left	= 1;
+	if (input_check("right"))	_right	= 1;
+	if (input_check("up"))	_up		= 1;
+	if (input_check("down"))	_down	= 1;
 	
-	if (keyboard_check_pressed(vk_space) || keyboard_check(ord("J")))	global.interact = true;
+	if (input_check("accept"))	global.interact = true;
 	
 }
 
 function calc_movement() {
 
-	hmove = right - left;	
-	vmove = down - up;
+	hmove = _right - _left;	
+	vmove = _down - _up;
 	//if (hmove != 0 and vmove != 0)
 	//{
 	//	walk_spd = diag_walk_spd;

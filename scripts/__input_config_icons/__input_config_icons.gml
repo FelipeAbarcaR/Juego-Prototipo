@@ -12,6 +12,8 @@
 
 //Special case: When a non-binding value is being evaluated
 //              This should only happen if Input is given an invalid input argument
+
+hola =10;
 input_icon_not_a_binding("Not a binding");
 
 //Special case: When an empty binding is being evaluated

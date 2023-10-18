@@ -58,7 +58,7 @@ function ChooseSound()
 	show_debug_message("ChooseSound() sfx choosed")
 }
 
-function type(x, y, text, progress, width) {
+function _type(x, y, text, progress, width) {
 	var draw_x = 0;
 	var draw_y = 0;
 	

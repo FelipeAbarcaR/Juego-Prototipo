@@ -238,12 +238,12 @@ function reset_variables() {
 }
 
 function get_input() {
-	if (keyboard_check(vk_left)	|| keyboard_check(ord("A")))	left	= 1;
-	if (keyboard_check(vk_right)|| keyboard_check(ord("D")))	right	= 1;
-	if (keyboard_check(vk_up)	|| keyboard_check(ord("W")))	up		= 1;
-	if (keyboard_check(vk_down)	|| keyboard_check(ord("S")))	down	= 1;
+	if (input_check("left"))	left	= 1;
+	if (input_check("right"))	right	= 1;
+	if (input_check("up"))		up		= 1;
+	if (input_check("down"))	down	= 1;
 	
-	if (keyboard_check_pressed(vk_space) || keyboard_check(ord("J")))	global.interact = true;
+	if (input_check("accept"))	global.interact = true;
 }
 
 function calc_movement() {

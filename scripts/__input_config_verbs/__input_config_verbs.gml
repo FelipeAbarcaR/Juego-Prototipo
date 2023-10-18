@@ -27,18 +27,18 @@ return {
         //No aiming verbs since we use the mouse for that (see below for aiming verb examples)
         //shoot: input_binding_mouse_button(mb_left),
         
-        //pause: input_binding_key(vk_escape),
+        pause: input_binding_key(vk_escape),
     },
     
     gamepad:
     {
-        //up:    [input_binding_gamepad_axis(gp_axislv, true),  input_binding_gamepad_button(gp_padu)],
-        //down:  [input_binding_gamepad_axis(gp_axislv, false), input_binding_gamepad_button(gp_padd)],
-        //left:  [input_binding_gamepad_axis(gp_axislh, true),  input_binding_gamepad_button(gp_padl)],
-        //right: [input_binding_gamepad_axis(gp_axislh, false), input_binding_gamepad_button(gp_padr)],
+        up:    [input_binding_gamepad_axis(gp_axislv, true),  input_binding_gamepad_button(gp_padu)],
+        down:  [input_binding_gamepad_axis(gp_axislv, false), input_binding_gamepad_button(gp_padd)],
+        left:  [input_binding_gamepad_axis(gp_axislh, true),  input_binding_gamepad_button(gp_padl)],
+        right: [input_binding_gamepad_axis(gp_axislh, false), input_binding_gamepad_button(gp_padr)],
         
-        //accept:  input_binding_gamepad_button(gp_face1),
-        //cancel:  input_binding_gamepad_button(gp_face2),
+        accept:  input_binding_gamepad_button(gp_face1), // es la x en play
+        //cancel:  input_binding_gamepad_button(gp_face2), // es el circulo en play
         //action:  input_binding_gamepad_button(gp_face3),
         //special: input_binding_gamepad_button(gp_face4),
         
@@ -48,7 +48,7 @@ return {
         //aim_right: input_binding_gamepad_axis(gp_axisrh, false),
         //shoot:     [input_binding_gamepad_button(gp_shoulderlb), input_binding_gamepad_button(gp_shoulderrb)],
         
-        //pause: input_binding_gamepad_button(gp_start),
+        pause: input_binding_gamepad_button(gp_start),
     },
     
     touch:

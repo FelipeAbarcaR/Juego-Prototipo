@@ -380,7 +380,6 @@
     {"id":{"name":"spr_textbox_sign_background","path":"sprites/spr_textbox_sign_background/spr_textbox_sign_background.yy",},},
     {"id":{"name":"input_trigger_effect_set_pause","path":"scripts/input_trigger_effect_set_pause/input_trigger_effect_set_pause.yy",},},
     {"id":{"name":"__ftr_sh_colorize","path":"shaders/__ftr_sh_colorize/__ftr_sh_colorize.yy",},},
-    {"id":{"name":"bgm_boss_01_190","path":"sounds/bgm_boss_01_190/bgm_boss_01_190.yy",},},
     {"id":{"name":"scribble_msdf_thickness_offset","path":"scripts/scribble_msdf_thickness_offset/scribble_msdf_thickness_offset.yy",},},
     {"id":{"name":"input_gamepad_get_description","path":"scripts/input_gamepad_get_description/input_gamepad_get_description.yy",},},
     {"id":{"name":"obj_questie","path":"objects/obj_questie/obj_questie.yy",},},

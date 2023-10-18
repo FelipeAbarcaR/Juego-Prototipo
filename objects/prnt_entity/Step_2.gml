@@ -1,30 +1,52 @@
 if(global.textover)
 {
-	if(id == global.activate)
+	if(self.id == global.activate)
 	{
 		var _npc = object_get_name(object_index);
 		var _array = global.dialogue_order[$ _npc];
 		
-		if(array_length(_array) < 1)
+		if(is_array(_array) and _array != [])
 		{
-			global.activate.EntityActivateScript = [-1];
-			global.activate.EntityActivateArgs = [-1];
-			global.textover = false;
-		}
-		else
-		{
-			if(is_array(_array) and _array != [])
-			{
-				array_delete(_array,0,1);
+			//array_delete(_array,0,1);
+			var _ready = false;
 				
-				var _topico = _array[0];
-				//if(global.dialogue_loop[$ _topico] == 1)
-				//{
-				//	array_insert(_array,array_length(_array),_topico);
-				//}
-				global.activate.EntityActivateArgs = [_topico];
+			for(var i =0; i < array_length(_array); i++)
+			{
+				var _topico_temp = _array[i];
+					
+				if(_topico_temp != -1)
+				{
+					array_set(_array,i,-1);
+						
+					if( i+1 < array_length(_array)) 
+					{
+						var _topico = _array[i+1];
+						
+						global.activate.EntityActivateArgs = [_topico];
+						global.textover = false;	
+						_ready = true;	
+						break;
+					}
+					else
+					{
+						global.activate.EntityActivateScript = -1;
+						global.activate.EntityActivateArgs = [-1];
+						global.textover = false;
+					}
+				}
+			}
+				
+			if(!_ready) 
+			{
+				global.activate.EntityActivateScript = -1;
+				global.activate.EntityActivateArgs = [-1];
 				global.textover = false;
 			}
+				
+			//if(global.dialogue_loop[$ _topico] == 1)
+			//{
+			//	array_insert(_array,array_length(_array),_topico);
+			//}
 		}
 	}
 }

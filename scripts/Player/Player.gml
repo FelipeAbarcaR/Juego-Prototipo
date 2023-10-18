@@ -531,6 +531,8 @@ function Space_logic()
 	//Activate key logic
 	if(global.interact)
 		{
+			hola = 10;
+			hola = 20;
 			
 			if(activate == noone)
 			{
@@ -561,6 +563,9 @@ function Space_logic()
 			}
 			else
 			{
+				hola = 10;
+				
+				
 				global.end_interaction = true;
 				if(activate.EntityActivateScript == startDialogue)
 				{
@@ -578,6 +583,7 @@ function Space_logic()
 				//Hace que en NPC mire hacia el jugador
 				if(activate.EntityNPC)
 				{
+		
 					with(activate)
 					{
 							direction = point_direction(x,y,other.x,other.y);

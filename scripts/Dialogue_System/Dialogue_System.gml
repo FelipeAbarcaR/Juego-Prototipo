@@ -657,6 +657,7 @@ for (var _i = 0; _i < array_length(dialogo); _i++)
 	}
 }
 
+hola = 10;
 
 //global.topics[$ "Breakfast"] = [
 //	//SPEAKER("Sam",spr_portrait_sam,PORTRAIT_SIDE.LEFT),

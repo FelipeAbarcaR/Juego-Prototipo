@@ -112,9 +112,11 @@ switch(bg_type)
 				if( i == current_option)
 				{
 					var _scale=1;
+
 					opt_x += option_selection_indent;
 					draw_sprite_ext(spr_textbox_paw,0,opt_x - 30,opt_y-2,_scale,_scale,0,c_white,1);
 				}
+				
 				
 				var _string=options[i].text;
 				var _scribble_option=scribble(_string);

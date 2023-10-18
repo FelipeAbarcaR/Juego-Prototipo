@@ -244,7 +244,6 @@ function get_input() {
 	if (keyboard_check(vk_down)	|| keyboard_check(ord("S")))	down	= 1;
 	
 	if (keyboard_check_pressed(vk_space) || keyboard_check(ord("J")))	global.interact = true;
-	
 }
 
 function calc_movement() {

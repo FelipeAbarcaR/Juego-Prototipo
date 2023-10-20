@@ -6,6 +6,7 @@ if(keyboard_check_pressed(vk_escape))
 		
 		//Deactivate instances
 		instance_deactivate_all(true);
+		instance_activate_object(input_controller_object);
 		
 		//Create surface
 		pause_surf = surface_create(global.res.width,global.res.height);

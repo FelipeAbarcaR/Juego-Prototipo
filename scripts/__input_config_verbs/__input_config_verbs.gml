@@ -48,7 +48,10 @@ return {
         //aim_right: input_binding_gamepad_axis(gp_axisrh, false),
         //shoot:     [input_binding_gamepad_button(gp_shoulderlb), input_binding_gamepad_button(gp_shoulderrb)],
         
-        pause: input_binding_gamepad_button(gp_start),
+        pause : input_binding_gamepad_button(gp_start),
+		change_map : input_binding_gamepad_button(gp_padl),
+		select : input_binding_gamepad_button(gp_padl),
+		
     },
     
     touch:

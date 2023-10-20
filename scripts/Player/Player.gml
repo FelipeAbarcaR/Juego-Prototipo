@@ -243,7 +243,7 @@ function get_input() {
 	if (input_check("up"))		up		= 1;
 	if (input_check("down"))	down	= 1;
 	
-	if (input_check("accept"))	global.interact = true;
+	if (input_check_pressed("accept"))	global.interact = true;
 }
 
 function calc_movement() {

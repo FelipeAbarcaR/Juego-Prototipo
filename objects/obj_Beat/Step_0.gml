@@ -215,7 +215,7 @@ if(_length>0) //if it is at least one beat meter in the array
 	   if (obj_crypt_player.key_direction_pressed) _player_input=true;
 	}
 	
-	var _activate_key=keyboard_check_pressed(vk_space);
+	var _activate_key=global.interact;
 	if(	_activate_key || _player_input)
 	{
 		perfect_good_bad(); //store the beat status (perfect,good,almost)

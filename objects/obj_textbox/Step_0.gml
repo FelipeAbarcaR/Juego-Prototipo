@@ -21,9 +21,8 @@ if(!minimize_to_destroy)
 	var confirm=false;
 	var typist_state=typist.get_state();
 	
-	// fights occurs while still in a textbox'action
-	// so confirm key only works while not fighting
-	if (event_mode==textbox_event.TEXTING) confirm = keyboard_check_pressed(confirm_key); 
+	// confirm key only works while in texting mode
+	if (event_mode==textbox_event.TEXTING) confirm = input_check_pressed("accept");
 
 	//textbox background's increasing value 
 	increasing_value=min(1,increasing_value+delta_scaling);
@@ -50,8 +49,8 @@ if(!minimize_to_destroy)
 		//check if there is options to show
 		if (option_count > 0)
 		{
-			var up = keyboard_check_pressed(up_key) || keyboard_check_pressed(ord("W"));
-			var down = keyboard_check_pressed(down_key) || keyboard_check_pressed(ord("S"));
+			var up = input_check_pressed("up");
+			var down = input_check_pressed("down");
 		
 			//Cycle through available options
 			var change = down - up;

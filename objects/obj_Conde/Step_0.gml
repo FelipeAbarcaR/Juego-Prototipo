@@ -1,10 +1,10 @@
 /// @description states,animate,dodge,*hit
 // You can write your code in this editor
 
-	Izquierda=(keyboard_check_pressed(vk_left)||keyboard_check_pressed(ord("A")));
-	Derecha=keyboard_check_pressed(vk_right)||keyboard_check_pressed(ord("D"));
-	Arriba=keyboard_check_pressed(vk_up)||keyboard_check_pressed(ord("W"));
-	Abajo=keyboard_check_pressed(vk_down)||keyboard_check_pressed(ord("S"));
+	Izquierda=	input_check_pressed("left");
+	Derecha=	input_check_pressed("right");
+	Arriba=		input_check_pressed("up");
+	Abajo=		input_check_pressed("down");
 
 //change image index through rhythm
 

@@ -95,6 +95,7 @@ if(global.playerhealth<=0)
 {
     game_over=true;
 	instance_deactivate_all(1);
+	instance_activate_object(input_controller_object);
 }
 
 //game time

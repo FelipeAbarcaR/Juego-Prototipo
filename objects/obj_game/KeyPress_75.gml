@@ -23,4 +23,4 @@
 //if(instance_exists(obj_crypt_player))
 //obj_crypt_player
 
-draw_dragon_head=!draw_dragon_head;
+//draw_dragon_head=!draw_dragon_head;

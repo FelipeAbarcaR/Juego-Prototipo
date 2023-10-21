@@ -19,7 +19,6 @@ attack_delay=0.4;
 dodge_delay=0.5;
 back_dodge_delay=1.2;
 
-
 image_speed=0;
 image_index=0;
 

@@ -1,4 +1,4 @@
-if(keyboard_check_pressed(vk_escape))
+if(input_check_pressed("pause"))
 {
 	if(!pause)
 	{
@@ -37,8 +37,18 @@ if(keyboard_check_pressed(vk_escape))
 	}
 }
 
-changeroom = keyboard_check_pressed(ord("M"));
-muteall= keyboard_check_released(ord("N"));
+if(input_check("restart"))
+{
+	event_user(2);	
+}
+
+if(input_check("restart_room"))
+{
+	event_user(3);
+}
+
+changeroom = input_check("change_map");
+muteall= input_check_pressed("mute");
 
 // on/off draw text from instances
 if keyboard_check_released(vk_lshift){

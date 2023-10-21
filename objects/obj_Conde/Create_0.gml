@@ -45,7 +45,7 @@ spr_hurt=spr_CondeHurt;
 	
 	//FX
 	
-fx_atk1=spr_fx_fight_atk1;
+fx_atk1=spr_fx_fight_atk1222;
 
 
 //SFX

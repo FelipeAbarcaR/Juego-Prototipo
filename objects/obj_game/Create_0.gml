@@ -6,7 +6,7 @@ global.textspeed = .75;
 global.iUI = instance_create_layer(0,0,layer,obj_UI);
 global.DrawText=false;
 
-
+draw_dragon_head=false;
 global.targetX = -1;
 global.targetY = -1;
 global.targetdirection = 0;

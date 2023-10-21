@@ -28,6 +28,10 @@ return {
         //shoot: input_binding_mouse_button(mb_left),
         
         pause: input_binding_key(vk_escape),
+		change_map : input_binding_key("M"),
+		restart : input_binding_key("R"),
+		restart_room: input_binding_key("T"),
+		mute : input_binding_key("N")
     },
     
     gamepad:
@@ -37,7 +41,7 @@ return {
         left:  [input_binding_gamepad_axis(gp_axislh, true),  input_binding_gamepad_button(gp_padl)],
         right: [input_binding_gamepad_axis(gp_axislh, false), input_binding_gamepad_button(gp_padr)],
         
-        accept:  input_binding_gamepad_button(gp_face1), // es la x en play
+        accept:  input_binding_gamepad_button(gp_face3), // es la x en play
         //cancel:  input_binding_gamepad_button(gp_face2), // es el circulo en play
         //action:  input_binding_gamepad_button(gp_face3),
         //special: input_binding_gamepad_button(gp_face4),
@@ -49,8 +53,8 @@ return {
         //shoot:     [input_binding_gamepad_button(gp_shoulderlb), input_binding_gamepad_button(gp_shoulderrb)],
         
         pause : input_binding_gamepad_button(gp_start),
-		change_map : input_binding_gamepad_button(gp_padl),
-		select : input_binding_gamepad_button(gp_padl),
+		change_map : input_binding_gamepad_button(gp_shoulderlb),
+		restart : input_binding_gamepad_button(gp_select),
 		
     },
     

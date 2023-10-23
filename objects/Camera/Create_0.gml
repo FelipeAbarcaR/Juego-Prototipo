@@ -28,6 +28,8 @@ window_set_size(port_width, port_height);
 surface_resize(application_surface, port_width, port_height);
 uc_window_center();
 
+
+
 // Here we are saying all the values we are setting in this code
 // are thought for a 60FPS running game, other frequencies will
 // be adapted with time factor using delta time.

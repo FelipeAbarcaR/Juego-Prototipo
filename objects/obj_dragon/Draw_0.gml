@@ -2,9 +2,9 @@
 // You can write your code in this editor
 
 
-scale+=0.1;
+draw_self();
 
-image_xscale=scale;
-image_yscale=scale;
+draw_text(x,y-50,string(scale));
+
 
 

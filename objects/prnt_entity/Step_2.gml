@@ -22,6 +22,7 @@ if(global.textover)
 					{
 						var _topico = _array[i+1];
 						
+						uc_set_mode(CMODE.OBJECT_BORDERS);
 						global.activate.EntityActivateArgs = [_topico];
 						global.textover = false;	
 						_ready = true;	
@@ -29,6 +30,7 @@ if(global.textover)
 					}
 					else
 					{
+						uc_set_mode(CMODE.OBJECT_BORDERS);
 						global.activate.EntityActivateScript = -1;
 						global.activate.EntityActivateArgs = [-1];
 						global.textover = false;
@@ -38,6 +40,7 @@ if(global.textover)
 				
 			if(!_ready) 
 			{
+				uc_set_mode(CMODE.OBJECT_BORDERS);
 				global.activate.EntityActivateScript = -1;
 				global.activate.EntityActivateArgs = [-1];
 				global.textover = false;

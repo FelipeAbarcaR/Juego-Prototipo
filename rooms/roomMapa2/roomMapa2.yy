@@ -8,7 +8,6 @@
   "inheritLayers": false,
   "instanceCreationOrder": [
     {"name":"inst_2D42C9E9","path":"rooms/roomMapa2/roomMapa2.yy",},
-    {"name":"inst_5EEC7045","path":"rooms/roomMapa2/roomMapa2.yy",},
     {"name":"inst_510C737","path":"rooms/roomMapa2/roomMapa2.yy",},
     {"name":"inst_18D19A8C","path":"rooms/roomMapa2/roomMapa2.yy",},
     {"name":"inst_4AA0CEE8","path":"rooms/roomMapa2/roomMapa2.yy",},
@@ -485,9 +484,7 @@
 -30,82,1,83,-89,50,-3,82,1,45,-26,122,1,123,-89,50,-2,82,2,45,123,-116,50,3,82,45,123,-117,50,2,82,83,-118,50,2,82,83,-118,50,2,82,83,-118,50,2,82,83,-118,50,2,82,83,-118,50,2,82,83,-118,50,2,82,83,-118,50,2,82,83,-118,50,2,82,83,-118,50,2,82,83,-118,50,2,45,123,-118,50,1,83,-119,50,1,123,-3239,50,2,42,43,-118,50,2,82,83,-118,50,2,82,83,-118,50,2,82,83,-118,50,2,82,83,-118,50,2,82,83,
 -118,50,2,82,83,-118,50,2,82,83,-118,50,2,82,83,-118,50,2,82,83,-118,50,2,82,83,-118,50,2,82,83,-118,50,2,82,83,-118,50,2,82,83,-118,50,2,82,83,-118,50,2,82,83,-118,50,2,82,83,-118,50,2,82,83,-118,50,2,82,83,-118,50,2,82,83,-118,50,2,82,83,-118,50,2,82,83,-118,50,3,82,85,43,-117,50,-2,82,1,85,-36,42,1,43,-80,50,-39,82,1,83,-80,50,],"TileDataFormat":1,},"tilesetId":{"name":"ts_Mapa2","path":"tilesets/ts_Mapa2/ts_Mapa2.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
       ],"properties":[],"userdefinedDepth":false,"visible":true,},
-    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"control_layer","depth":4400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5EEC7045","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oCameraManager","path":"objects/oCameraManager/oCameraManager.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-32.0,"y":32.0,},
-      ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
+    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"control_layer","depth":4400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
   ],
   "parent": {
     "name": "M2",

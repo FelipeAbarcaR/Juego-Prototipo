@@ -9,8 +9,11 @@ var arrayLength = array_length(global.room_data); // Get the length of the room_
 for (var i = 0; i <= arrayLength - 1; i++) {
 	
 	var _check = 0;
+	var _obj_to_follow = global.room_data[i,Index.follow];
 	
     if (global.room_data[i, Index.name] == roomName) {
+		
+		uc_set_instance_following_list(_obj_to_follow);
         global.currentroom = i;
 		_check = 1;
         break; // Exit the loop once a match is found

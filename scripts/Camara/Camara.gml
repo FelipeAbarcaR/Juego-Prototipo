@@ -9,14 +9,14 @@ global.res = {
 var _width = global.res.width;
 var _height = global.res.height;
 
-//Resolucion 
-surface_resize(application_surface,_width,_height);
+////Resolucion 
+//surface_resize(application_surface,_width,_height);
 
-//Ventana
-window_set_size(_width*global.res.scale,_height*global.res.scale);
+////Ventana
+//window_set_size(_width*global.res.scale,_height*global.res.scale);
 
-//GUI
-display_set_gui_size(global.res.guiwidth,global.res.guiheight);
+////GUI
+//display_set_gui_size(global.res.guiwidth,global.res.guiheight);
 
 //Centro de la ventana
 //var _displayWidth = display_get_width();

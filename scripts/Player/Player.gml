@@ -531,8 +531,7 @@ function Space_logic()
 	//Activate key logic
 	if(global.interact)
 		{
-			hola = 10;
-			hola = 20;
+
 			
 			if(activate == noone)
 			{
@@ -563,8 +562,7 @@ function Space_logic()
 			}
 			else
 			{
-				hola = 10;
-				
+				uc_add_instance_following_list(global.activate);
 				
 				global.end_interaction = true;
 				if(activate.EntityActivateScript == startDialogue)

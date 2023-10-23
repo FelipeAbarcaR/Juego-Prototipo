@@ -44,7 +44,7 @@
         "GMTimeLine",
         "GMObject",
         "GMRoom",
-      ],"listItems":null,"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"640","varType":1,},
+      ],"listItems":null,"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"480","varType":1,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"view_height","filters":[
         "GMTileSet",
         "GMSprite",
@@ -56,7 +56,7 @@
         "GMTimeLine",
         "GMObject",
         "GMRoom",
-      ],"listItems":null,"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"360","varType":1,},
+      ],"listItems":null,"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"270","varType":1,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"port_height","filters":[
         "GMTileSet",
         "GMSprite",
@@ -68,7 +68,7 @@
         "GMTimeLine",
         "GMObject",
         "GMRoom",
-      ],"listItems":null,"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"720","varType":0,},
+      ],"listItems":null,"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"view_height*3","varType":0,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"cam_mode","filters":[
         "GMTileSet",
         "GMSprite",
@@ -80,7 +80,7 @@
         "GMTimeLine",
         "GMObject",
         "GMRoom",
-      ],"listItems":null,"multiselect":false,"rangeEnabled":true,"rangeMax":6.0,"rangeMin":0.0,"value":"0","varType":1,},
+      ],"listItems":null,"multiselect":false,"rangeEnabled":true,"rangeMax":6.0,"rangeMin":0.0,"value":"1","varType":1,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"view_scale","filters":[
         "GMTileSet",
         "GMSprite",

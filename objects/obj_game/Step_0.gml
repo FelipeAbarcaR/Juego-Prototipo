@@ -113,3 +113,4 @@ if(global.playerhealth<=0)
 var _dt=delta_time;
 game_time+=_dt;
 room_time+=_dt;
+

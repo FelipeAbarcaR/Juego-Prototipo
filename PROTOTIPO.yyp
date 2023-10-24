@@ -994,6 +994,7 @@
     {"id":{"name":"Textbox","path":"scripts/Textbox/Textbox.yy",},},
     {"id":{"name":"o_solid","path":"objects/o_solid/o_solid.yy",},},
     {"id":{"name":"uc_set_view_inclination","path":"scripts/uc_set_view_inclination/uc_set_view_inclination.yy",},},
+    {"id":{"name":"roomMapaInicialAle2","path":"rooms/roomMapaInicialAle2/roomMapaInicialAle2.yy",},},
     {"id":{"name":"__input_class_trigger_effect_off","path":"scripts/__input_class_trigger_effect_off/__input_class_trigger_effect_off.yy",},},
     {"id":{"name":"spr_spike","path":"sprites/spr_spike/spr_spike.yy",},},
     {"id":{"name":"input_player_gamepad_type_override_get","path":"scripts/input_player_gamepad_type_override_get/input_player_gamepad_type_override_get.yy",},},
@@ -1361,6 +1362,7 @@
     {"roomId":{"name":"roomMapaInicial11","path":"rooms/roomMapaInicial11/roomMapaInicial11.yy",},},
     {"roomId":{"name":"roomMapa1Casapalchuto","path":"rooms/roomMapa1Casapalchuto/roomMapa1Casapalchuto.yy",},},
     {"roomId":{"name":"roomMapa2","path":"rooms/roomMapa2/roomMapa2.yy",},},
+    {"roomId":{"name":"roomMapaInicialAle2","path":"rooms/roomMapaInicialAle2/roomMapaInicialAle2.yy",},},
   ],
   "templateType": null,
   "TextureGroups": [

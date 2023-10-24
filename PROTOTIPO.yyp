@@ -1344,6 +1344,7 @@
     {"id":{"name":"spr_col","path":"sprites/spr_col/spr_col.yy",},},
   ],
   "RoomOrderNodes": [
+    {"roomId":{"name":"roomMapaInicialAle","path":"rooms/roomMapaInicialAle/roomMapaInicialAle.yy",},},
     {"roomId":{"name":"roomMapaInicial","path":"rooms/roomMapaInicial/roomMapaInicial.yy",},},
     {"roomId":{"name":"rm_pelea","path":"rooms/rm_pelea/rm_pelea.yy",},},
     {"roomId":{"name":"rm_Obstacle1","path":"rooms/rm_Obstacle1/rm_Obstacle1.yy",},},
@@ -1357,7 +1358,6 @@
     {"roomId":{"name":"roomMapaInicial11","path":"rooms/roomMapaInicial11/roomMapaInicial11.yy",},},
     {"roomId":{"name":"roomMapa1Casapalchuto","path":"rooms/roomMapa1Casapalchuto/roomMapa1Casapalchuto.yy",},},
     {"roomId":{"name":"roomMapa2","path":"rooms/roomMapa2/roomMapa2.yy",},},
-    {"roomId":{"name":"roomMapaInicialAle","path":"rooms/roomMapaInicialAle/roomMapaInicialAle.yy",},},
   ],
   "templateType": null,
   "TextureGroups": [

@@ -24,3 +24,5 @@
 //obj_crypt_player
 
 //draw_dragon_head=!draw_dragon_head;
+
+uc_shake(10,0.1);

@@ -6,32 +6,21 @@ global.gamemode=global.room_data[global.currentroom][Index.mode];
 var roomName = room; // Get the current room's name
 var arrayLength = array_length(global.room_data); // Get the length of the room_data array
 
-for (var i = 0; i <= arrayLength - 1; i++) {
-	
+for (var i = 0; i <= arrayLength - 1; i++)
+{
 	var _check = 0;
 	var _obj_to_follow = global.room_data[i,Index.follow];
 	
-    if (global.room_data[i, Index.name] == roomName) {
-		
+    if (global.room_data[i, Index.name] == roomName) 
+	{
 		uc_set_instance_following_list(_obj_to_follow);
         global.currentroom = i;
 		_check = 1;
+		var _camera_mode = global.room_data[i,Index.camera_mode];
+		uc_set_mode(_camera_mode);
+		uc_set_x(_obj_to_follow.x);
+		uc_set_y(_obj_to_follow.y);
 		
-		switch(roomName)
-		{
-			default:
-				uc_set_mode(CMODE.OBJECT_BORDERS);
-				uc_set_x(_obj_to_follow.x);
-				uc_set_y(_obj_to_follow.y);
-			break;
-			
-			case rm_runny:
-			case roomMapa1Casapalchuto:
-			case roomMapa1NPC:
-			case roomViejoSabio:
-				uc_set_mode(CMODE.OBJECT_FOLLOWING);
-			break;		
-		}
         break; // Exit the loop once a match is found
     }
 }

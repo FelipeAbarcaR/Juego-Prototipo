@@ -77,9 +77,7 @@ enum Index{
 	follow,
 	mode,
 	mainchar,
-	zoom,
-	witdh,
-	height
+	camera_mode,
 }
 enum mode{
 	move,

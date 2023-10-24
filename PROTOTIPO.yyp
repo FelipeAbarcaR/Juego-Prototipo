@@ -634,6 +634,7 @@
     {"id":{"name":"Note1","path":"notes/Note1/Note1.yy",},},
     {"id":{"name":"Open_Textbox","path":"sounds/Open_Textbox/Open_Textbox.yy",},},
     {"id":{"name":"scribble_markdown_format","path":"scripts/scribble_markdown_format/scribble_markdown_format.yy",},},
+    {"id":{"name":"roomMapaInicialAlediceChipiBasta","path":"rooms/roomMapaInicialAlediceChipiBasta/roomMapaInicialAlediceChipiBasta.yy",},},
     {"id":{"name":"spr_pileta","path":"sprites/spr_pileta/spr_pileta.yy",},},
     {"id":{"name":"__input_config_keyboard","path":"scripts/__input_config_keyboard/__input_config_keyboard.yy",},},
     {"id":{"name":"input_chord_create","path":"scripts/input_chord_create/input_chord_create.yy",},},
@@ -1360,6 +1361,7 @@
     {"roomId":{"name":"roomMapa1Casapalchuto","path":"rooms/roomMapa1Casapalchuto/roomMapa1Casapalchuto.yy",},},
     {"roomId":{"name":"roomMapa2","path":"rooms/roomMapa2/roomMapa2.yy",},},
     {"roomId":{"name":"roomMapaInicialAle2","path":"rooms/roomMapaInicialAle2/roomMapaInicialAle2.yy",},},
+    {"roomId":{"name":"roomMapaInicialAlediceChipiBasta","path":"rooms/roomMapaInicialAlediceChipiBasta/roomMapaInicialAlediceChipiBasta.yy",},},
   ],
   "templateType": null,
   "TextureGroups": [

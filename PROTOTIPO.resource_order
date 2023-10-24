@@ -350,6 +350,7 @@
     {"name":"uc_set_target_position","order":3,"path":"scripts/uc_set_target_position/uc_set_target_position.yy",},
     {"name":"__input_config_hotswap","order":5,"path":"scripts/__input_config_hotswap/__input_config_hotswap.yy",},
     {"name":"uc_get_object_borders_vertical_size","order":2,"path":"scripts/uc_get_object_borders_vertical_size/uc_get_object_borders_vertical_size.yy",},
+    {"name":"roomMapaInicialAlediceChipiBasta","order":6,"path":"rooms/roomMapaInicialAlediceChipiBasta/roomMapaInicialAlediceChipiBasta.yy",},
     {"name":"spr_pileta","order":2,"path":"sprites/spr_pileta/spr_pileta.yy",},
     {"name":"__input_config_keyboard","order":7,"path":"scripts/__input_config_keyboard/__input_config_keyboard.yy",},
     {"name":"uc_init_static","order":2,"path":"scripts/uc_init_static/uc_init_static.yy",},

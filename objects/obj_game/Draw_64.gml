@@ -12,9 +12,6 @@ if (global.DrawText)
 	var _y=96;
 	var _dy=16;
 	draw_text(_x,_y			,"currentroom: "+room_get_name(room));
-	draw_text(_x,_y+_dy*1	,"Zoom Width: "+ string(global.zoom_width));
-	draw_text(_x,_y+_dy*2	,"Zoom Height: "+ string(global.zoom_height));
-	draw_text(_x,_y+_dy*3	,"Zoom Percetage: "+ string(global.percentage_zoom)+"%");
 	draw_text(_x,_y+_dy*4	,"Game time: "+ string(game_time/1000000));
 	draw_text(_x,_y+_dy*5	,"Room time: "+ string(room_time/1000000));
 }

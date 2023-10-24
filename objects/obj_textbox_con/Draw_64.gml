@@ -73,7 +73,7 @@ if (!fighting)
 	draw_text_scribble_ext(draw_text_x + text_x-1,draw_text_y + text_y-3,text,draw_text_witdh,text_progress)
 	draw_set_color(text_color);
 	draw_text_scribble_ext(draw_text_x + text_x,draw_text_y + text_y,text,draw_text_witdh,text_progress)
-
+	draw_set_font(fnt_text);
 
 	//Options
 	if(finished && option_count >0)

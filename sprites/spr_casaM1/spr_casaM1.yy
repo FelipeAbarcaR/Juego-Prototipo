@@ -1,11 +1,11 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "spr_puerta_acceso",
-  "bbox_bottom": 56,
-  "bbox_left": 0,
-  "bbox_right": 63,
-  "bbox_top": 11,
+  "name": "spr_casaM1",
+  "bbox_bottom": 85,
+  "bbox_left": 3,
+  "bbox_right": 101,
+  "bbox_top": 1,
   "bboxMode": 0,
   "collisionKind": 1,
   "collisionTolerance": 0,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7cc182d8-16bf-4cc1-9d4e-5edae3a0c240",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8b4bbe18-a8e9-4955-96f4-51ab3a59ce2f",},
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 64,
+  "height": 89,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"50699c4f-ca79-4af5-a340-fca714d5928d","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"a59632db-a566-4a81-af24-0d6d2d3b9af7","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -32,7 +32,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "spr_puerta_acceso",
+    "name": "spr_casaM1",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"7cc182d8-16bf-4cc1-9d4e-5edae3a0c240","path":"sprites/spr_puerta_acceso/spr_puerta_acceso.yy",},},},"Disabled":false,"id":"21f89294-9c74-4ae5-911c-4844deb8ed16","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"8b4bbe18-a8e9-4955-96f4-51ab3a59ce2f","path":"sprites/spr_casaM1/spr_casaM1.yy",},},},"Disabled":false,"id":"f8a9450d-4290-41c0-b565-37497a7daf9b","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 64,
+  "width": 105,
 }

@@ -34,8 +34,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_puerta_acceso",
-    "path": "sprites/spr_puerta_acceso/spr_puerta_acceso.yy",
+    "name": "spr_gate_left",
+    "path": "sprites/spr_gate_left/spr_gate_left.yy",
   },
   "spriteMaskId": null,
   "visible": true,

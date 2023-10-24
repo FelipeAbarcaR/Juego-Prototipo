@@ -16,6 +16,22 @@ for (var i = 0; i <= arrayLength - 1; i++) {
 		uc_set_instance_following_list(_obj_to_follow);
         global.currentroom = i;
 		_check = 1;
+		
+		switch(roomName)
+		{
+			default:
+				uc_set_mode(CMODE.OBJECT_BORDERS);
+				uc_set_x(_obj_to_follow.x);
+				uc_set_y(_obj_to_follow.y);
+			break;
+			
+			case rm_runny:
+			case roomMapa1Casapalchuto:
+			case roomMapa1NPC:
+			case roomViejoSabio:
+				uc_set_mode(CMODE.OBJECT_FOLLOWING);
+			break;		
+		}
         break; // Exit the loop once a match is found
     }
 }

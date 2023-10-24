@@ -1253,7 +1253,6 @@
     {"id":{"name":"spr_condeATK1","path":"sprites/spr_condeATK1/spr_condeATK1.yy",},},
     {"id":{"name":"input_player_get_gamepad","path":"scripts/input_player_get_gamepad/input_player_get_gamepad.yy",},},
     {"id":{"name":"obj_Shuriken","path":"objects/obj_Shuriken/obj_Shuriken.yy",},},
-    {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
     {"id":{"name":"__shd_scribble_bake_outline_8dir","path":"shaders/__shd_scribble_bake_outline_8dir/__shd_scribble_bake_outline_8dir.yy",},},
     {"id":{"name":"__ftr_scr_internal","path":"scripts/__ftr_scr_internal/__ftr_scr_internal.yy",},},
     {"id":{"name":"input_virtual_create","path":"scripts/input_virtual_create/input_virtual_create.yy",},},

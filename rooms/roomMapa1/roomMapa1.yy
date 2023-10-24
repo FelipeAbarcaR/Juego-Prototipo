@@ -11,7 +11,6 @@
     {"name":"inst_79F0FF2D","path":"rooms/roomMapa1/roomMapa1.yy",},
     {"name":"inst_2900F4E3","path":"rooms/roomMapa1/roomMapa1.yy",},
     {"name":"inst_13E6767F","path":"rooms/roomMapa1/roomMapa1.yy",},
-    {"name":"inst_50E8D934","path":"rooms/roomMapa1/roomMapa1.yy",},
     {"name":"inst_5BC0BF32","path":"rooms/roomMapa1/roomMapa1.yy",},
     {"name":"inst_137B96D","path":"rooms/roomMapa1/roomMapa1.yy",},
     {"name":"inst_4A62F843","path":"rooms/roomMapa1/roomMapa1.yy",},
@@ -256,9 +255,7 @@
 -5400,82,-69,370,-51,82,-69,370,-51,82,-69,370,-51,82,-69,370,-51,82,-69,370,-51,82,-69,370,-51,82,-69,370,-51,82,-69,370,-51,82,-69,370,-51,82,-24,370,-9,619,-81,370,-6,82,-24,370,-9,619,-81,370,-6,82,-24,370,-9,619,-81,370,-6,82,-24,370,-9,619,-81,370,-6,82,-24,370,-9,619,-81,370,-6,82,-24,370,-9,619,-81,370,-6,82,-24,370,-9,619,-111,370,-9,619,-111,370,-9,619,-87,370,-78,619,-42,370,-78,619,-42,370,-78,619,-42,370,-78,619,-42,370,-78,619,-42,370,
 ],"TileDataFormat":1,},"tilesetId":{"name":"ts_Mapa1","path":"tilesets/ts_Mapa1/ts_Mapa1.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
       ],"properties":[],"userdefinedDepth":false,"visible":true,},
-    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"control_layer","depth":4300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_50E8D934","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oCameraManager","path":"objects/oCameraManager/oCameraManager.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-32.0,"y":0.0,},
-      ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
+    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"control_layer","depth":4300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
   ],
   "parent": {
     "name": "M1",

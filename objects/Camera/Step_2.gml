@@ -119,6 +119,8 @@ switch (cam_mode) {
 		x = uc_fixed_lerp(x, target_x, cam_object_borders_acceleration);
 		y = uc_fixed_lerp(y, target_y, cam_object_borders_acceleration);
 		
+		
+		
 		break;
 	
 	#endregion

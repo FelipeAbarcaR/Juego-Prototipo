@@ -562,7 +562,11 @@ function Space_logic()
 			}
 			else
 			{
-				uc_add_instance_following_list(global.activate);
+				//uc_add_instance_following_list(global.activate);
+				uc_set_mode(CMODE.STATIC);
+				uc_set_target_x(global.activate.x);
+				uc_set_target_y(global.activate.y);
+				
 				
 				global.end_interaction = true;
 				if(activate.EntityActivateScript == startDialogue)

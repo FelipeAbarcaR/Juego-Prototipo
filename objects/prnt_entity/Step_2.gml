@@ -58,6 +58,11 @@ if(global.textover)
 				global.textover = false;
 			}
 		}
+		else
+		{
+			uc_set_mode(CMODE.OBJECT_BORDERS);
+			global.textover = false;
+		}
 	}
 }
 // flash ira disminuyendo esta llegar a 0

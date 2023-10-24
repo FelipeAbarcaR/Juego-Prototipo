@@ -8,5 +8,5 @@ if(instance_exists(obj_textbox))
 	
 }
 
-oCameraManager.cameraFollow=true;
+uc_set_mode(CMODE.OBJECT_BORDERS);
 

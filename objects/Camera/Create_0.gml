@@ -5,7 +5,7 @@
 // ==============================================================
 #region Set all the camera main parameters
 
-window_set_fullscreen(false);
+window_set_fullscreen(true);
 // view_width --> Width of the portion of room we will be seeing
 // view_height --> Height of the portion of the room we will be seeing
 
@@ -24,8 +24,8 @@ view_x = primitive_view_x;
 view_y = primitive_view_y;
 
 // Here we apply the size of the window and the surface where we will be drawing the game.
-window_set_size(port_width, port_height);
-surface_resize(application_surface, port_width, port_height);
+window_set_size(view_width, view_height);
+surface_resize(application_surface, view_width, view_height);
 uc_window_center();
 
 

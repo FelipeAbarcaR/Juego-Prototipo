@@ -50,7 +50,17 @@ if (!global.midTransition)
 		global.midTransition = true;
 	}
 	
-oCameraManager.cameraFollow=false;
+uc_set_mode(CMODE.STATIC);
+
+var _x=0;
+var _y=0;
+
+_x =uc_get_x();
+_y =uc_get_y();
+
+uc_set_target_x(_x);
+uc_set_target_y(_y);
+
 //FightTransitionStart(background,sqFightFadeOut,sqFightFadeIn);
 var _end_in = function()
 {

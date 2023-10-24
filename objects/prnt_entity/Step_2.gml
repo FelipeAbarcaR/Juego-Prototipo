@@ -16,24 +16,36 @@ if(global.textover)
 					
 				if(_topico_temp != -1)
 				{
-					array_set(_array,i,-1);
-						
-					if( i+1 < array_length(_array)) 
+					if(global.dialogue_loop[$ _topico_temp] == 1) 
 					{
-						var _topico = _array[i+1];
-						
 						uc_set_mode(CMODE.OBJECT_BORDERS);
-						global.activate.EntityActivateArgs = [_topico];
-						global.textover = false;	
-						_ready = true;	
+						global.textover = false;
+						global.activate.EntityActivateScript = startDialogue;
+						global.activate.EntityActivateArgs = [_topico_temp];
+						_ready = true;
 						break;
 					}
 					else
 					{
-						uc_set_mode(CMODE.OBJECT_BORDERS);
-						global.activate.EntityActivateScript = -1;
-						global.activate.EntityActivateArgs = [-1];
-						global.textover = false;
+						array_set(_array,i,-1);
+						
+						if( i+1 < array_length(_array)) 
+						{
+							var _topico = _array[i+1];
+						
+							uc_set_mode(CMODE.OBJECT_BORDERS);
+							global.activate.EntityActivateArgs = [_topico];
+							global.textover = false;	
+							_ready = true;	
+							break;
+						}
+						else
+						{
+							uc_set_mode(CMODE.OBJECT_BORDERS);
+							global.activate.EntityActivateScript = -1;
+							global.activate.EntityActivateArgs = [-1];
+							global.textover = false;
+						}
 					}
 				}
 			}
@@ -45,11 +57,6 @@ if(global.textover)
 				global.activate.EntityActivateArgs = [-1];
 				global.textover = false;
 			}
-				
-			//if(global.dialogue_loop[$ _topico] == 1)
-			//{
-			//	array_insert(_array,array_length(_array),_topico);
-			//}
 		}
 	}
 }

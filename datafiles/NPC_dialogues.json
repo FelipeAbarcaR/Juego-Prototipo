@@ -1016,7 +1016,7 @@
   "SPRITE": 0,
   "BACKGROUND": "spr_textbox_bg",
   "BG_INDEX": 2,
-  "LOOP": 0,
+  "LOOP": 1,
   "OBJ_NAME": "obj_capibara"
  },
  {

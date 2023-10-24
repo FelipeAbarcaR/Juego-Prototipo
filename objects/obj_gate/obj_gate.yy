@@ -33,7 +33,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_gate_left",
+    "path": "sprites/spr_gate_left/spr_gate_left.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

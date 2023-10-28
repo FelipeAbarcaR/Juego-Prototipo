@@ -90,6 +90,8 @@ automove_x=-1;
 automove_y=-1;
 automove_active=false;
 
+//Activate activate event user depend on wich numbergot called from function ACTIVATE
+user_event_index=-1;
 //Crypt
 start_crypt=false;
 

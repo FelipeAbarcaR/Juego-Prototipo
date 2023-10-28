@@ -23,6 +23,8 @@ if(key_direction_pressed)
 	
 }else InputDirection=LastDirection;
 image_index=(InputDirection/45);
+
+
 States();
 
 

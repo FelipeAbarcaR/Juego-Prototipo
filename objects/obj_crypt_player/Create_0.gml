@@ -25,6 +25,7 @@ state="locked"
 texto="nada"/*draw*/
 z=0;
 Direction=0;
+sliding=false;
 
 inmunity=false;
 hit_inmunity_time=1.6; //time in seconds of no receveing damage when the gato get hit;

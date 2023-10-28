@@ -82,19 +82,7 @@ wait_for_signal=false;
 beat_hit_data = ds_list_create(); 
 
 
-BGM_data=[
-	[bgm_boss_01,127],
-	[bgm_Feelings,115],
-	[bgm_ForestTimeInterior,126],
-	[bgm_ForestTime,126],
-	[bgm_NightCall_118,118],
-	[bgm_OneLove,107],
-	[bgm_Kappn,130],
-	[bgm_WillPower_89,89],
-	[bgm_midnight_100,100],
-	//[bgm_Boss1_190BPM,95]
-	[bgm_illbethere,95]
-];
+BGM_data= global.BGM_data;
 
 
 //BEAT BAR 2.0
@@ -112,6 +100,8 @@ beat_frame_width=80;
 
 //beat_frame_height=sprite_get_height(spr_beat_frame_4);
 //beat_frame_width=sprite_get_width(spr_beat_frame_4);
+
+frozen_beat=false;
 
 bar2_range=beat_frame_height*beathitrange;
 

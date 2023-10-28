@@ -17,6 +17,7 @@
 #macro AUTOMOVE new AutomoveAction
 #macro CRYPT new CryptAction
 #macro BACKGROUND new BGAction
+#macro TBEVENT new UserEventAction
 
 function startDialogue(topic) {
 	if (instance_exists(obj_textbox)) return;
@@ -284,6 +285,15 @@ function BGAction(_bg_type,_sprite_index=0) : DialogueAction() constructor{
 	
 }
 
+function UserEventAction(_index): DialogueAction() constructor
+{
+    activate_index=_index;
+	act = function(textbox)
+	{
+	    textbox.user_event_index=activate_index;
+		textbox.next();
+	}
+}
 //----------------TOPICS---------------------//
 
 //Importando El JSON del dialogo
@@ -671,6 +681,14 @@ global.topics[$ "signCrypt3"] = [
 	
 	CHOICE("¿Quieres comenzar?",OPTION("Si","Cryptmoveandfight3"),OPTION("No","signenemy1"))
 ];
+global.topics[$ "signCrypt4"] = [
+	
+	CHOICE("¿Quieres comenzar?",OPTION("Si","Cryptmoveandfight4"),OPTION("No","signenemy1"))
+];
+global.topics[$ "signCrypt5"] = [
+	
+	CHOICE("¿Quieres comenzar?",OPTION("Si","Cryptmoveandfight5"),OPTION("No","signenemy1"))
+];
 
 global.topics[$ "Cryptmoveandfight"] = [
 	
@@ -685,6 +703,16 @@ global.topics[$ "Cryptmoveandfight2"] = [
 global.topics[$ "Cryptmoveandfight3"] = [
 	
 	AUTOMOVE(920,606),
+	CRYPT()
+];
+global.topics[$ "Cryptmoveandfight4"] = [
+	
+	AUTOMOVE(1207,939),
+	CRYPT()
+];
+global.topics[$ "Cryptmoveandfight5"] = [
+	
+	AUTOMOVE(1079,634),
 	CRYPT()
 ];
 global.topics[$ "signwarning1"] = [
@@ -725,4 +753,10 @@ global.topics[$ "pelearanapierde"] = [
 ];
 global.topics[$ "signentrancem1"] = [
 	TEXT("Bienvenido a Chill City, lugar de descanso")
+];
+
+global.topics[$ "bossm1"] = [
+	TEXT("Colabora fundo, se cuelga tripa."),
+	TEXT("¡VETE DE AQUÍ AHORA!"),
+	TBEVENT(0)
 ];

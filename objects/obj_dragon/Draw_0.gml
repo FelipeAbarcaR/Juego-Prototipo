@@ -4,7 +4,7 @@
 
 draw_self();
 
-draw_text(x,y-50,string(scale));
+if(global.DrawText) draw_text(x,y-50,string(scale));
 
 
 

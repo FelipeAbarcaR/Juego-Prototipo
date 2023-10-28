@@ -157,3 +157,13 @@ function beat_change_speed(N_Beats)
 	}
 
 }
+
+function beat_missed()
+{
+    var _last_time= array_shift(beat_meter_list); //delete the beat meter of the array
+	if(groovy_count>0) //reset the groovy counter
+	{
+		groovy_count=0;
+		play_sfx(sfx_groovy_error)// code here
+	}
+}

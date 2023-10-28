@@ -96,7 +96,9 @@ if global.DrawText{
 		{
 			var _bar_scale=2;
 			var _yy=beat_meter_list[i];
-		    draw_sprite_ext(spr_beat_meter_4,0,_x,_yy,_bar_scale,_bar_scale,0,c_white,1-max(0,min(1,(_yy-bar2_y)/bar2_range)));
+			var _paw_index=0;
+			if(i==0 && frozen_beat) _paw_index=1;
+		    draw_sprite_ext(spr_beat_meter_4,_paw_index,_x,_yy,_bar_scale,_bar_scale,0,c_white,1-max(0,min(1,(_yy-bar2_y)/bar2_range)));
 		}
 
 	}

@@ -12,6 +12,10 @@
 #macro TEXTBOX_W 407
 #macro TEXTBOX_H 80
 
+//spells
+
+#macro SPELL_SHIELD_COOLDOWN 4
+#macro SPELL_SHIELD_ACTIVE 3
 
 //GEOMETRY DASH
 enum obstacle{
@@ -36,9 +40,16 @@ enum states {
 	LOCK,			//6
 	CROUCH,			//7
 	JUMP,			//8
-	AUTOMOVING		//9
+	AUTOMOVING,		//9
+	SHIELD			//10	
 }
 
+enum prestates
+{
+	PREACTION	,
+	MIDACTION,
+	POSTACTION
+}
 enum ENEMYSTATE
 {
 	IDLE,

@@ -1,10 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-Izquierda =		input_check_pressed("left");
-Derecha =	input_check_pressed("right");
-Arriba =	input_check_pressed("up");
-Abajo =		input_check_pressed("down");
+Izquierda	=		input_check_pressed("left");
+Derecha		=		input_check_pressed("right");
+Arriba		=		input_check_pressed("up");
+Abajo		=		input_check_pressed("down");
 
 roll_key = input_check_pressed("accept")
 

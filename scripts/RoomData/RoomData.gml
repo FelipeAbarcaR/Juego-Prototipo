@@ -8,14 +8,14 @@
 	//room_data=[room_name, Music, BPM, obj_to_follow, room_mode, mainChar, zoom, witdh, height]
 	global.room_data = [
 
-		[roomMapaInicialAle,		bgm_ForestTime,			126,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
-		[roomMapa2,					bgm_illbethere,			130,		o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
-		[roomMapa2Dungeon,			bgm_illbethere,			130,		o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
-		[rm_runny,					bgm_bossM1D_95,			95,		o_player,			mode.move,		o_player,			CMODE.OBJECT_FOLLOWING],
-		[roomMapa1DungeonBoss,		bgm_NightCall_118,		118,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
+		[roomMapaInicial,			bgm_ForestTime,			126,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
 		[rm_GD,						bgm_boss_01,			127,	obj_obs_player,		mode.obstacle,	obj_obs_player,		CMODE.OBJECT_FOLLOWING],
-		[roomMapa1Dungeon,			bgm_NightCall_118,		118,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
+		[rm_runny,					bgm_bossM1D_95,			95,		obj_runny_player,	mode.move,		o_player,			CMODE.STATIC],
 		[roomMapa1,					bgm_WillPower_89,		89 ,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
+		[roomMapa2,					bgm_illbethere,			130,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
+		[roomMapa2Dungeon,			bgm_illbethere,			130,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
+		[roomMapa1DungeonBoss,		bgm_NightCall_118,		118,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],	
+		[roomMapa1Dungeon,			bgm_NightCall_118,		118,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
 		[roomViejoSabio,			bgm_ForestTimeInterior, 126,	o_player,			mode.move,		o_player,			CMODE.OBJECT_FOLLOWING],
 		[roomMapa1NPC,				bgm_WillPower_89,		89,		o_player,			mode.move,		o_player,			CMODE.OBJECT_FOLLOWING],
 		[roomMapa1Casapalchuto,		bgm_WillPower_89,		89,		o_player,			mode.move,		o_player,			CMODE.OBJECT_FOLLOWING]

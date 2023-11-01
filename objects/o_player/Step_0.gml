@@ -7,13 +7,14 @@ switch(state) {
 
 		calc_movement();
 		
+		check_spells();
+		
 		Space_logic();
 
 		anim();
 		
-		check_alpha_tiles();
-		
-		check_floor_tiles();
+		check_tiles();
+
 		
 		
 	break;

@@ -222,6 +222,7 @@ function reset_variables() {
 	
 	global.interact = false;
 	//global.end_interaction = false;
+	button_shield=false;
 	left = 0;
 	right = 0;
 	up = 0;
@@ -238,12 +239,14 @@ function reset_variables() {
 }
 
 function get_input() {
+	
 	if (input_check("left"))	left	= 1;
 	if (input_check("right"))	right	= 1;
 	if (input_check("up"))		up		= 1;
 	if (input_check("down"))	down	= 1;
 	
 	if (input_check_pressed("accept"))	global.interact = true;
+	if (input_check_pressed("shield")) button_shield=true;
 }
 
 function calc_movement() {
@@ -488,6 +491,33 @@ function player_roll(){
 	//}
 }
 
+function check_spells()
+{
+	var _shield	=	false;
+	
+	if(global.beatchance) //spells has to be on beat
+	{
+	    if(button_shield)
+		{
+		    _shield = true;
+		}
+		//todo el show anterior es para cuando se tengan q juntar poderes. shield+3atk, etc.
+		//ahora dentro del if puede haber if _shield && _3atk por ej.
+		if (_shield /*&& global.CanShield*/) 
+		{
+			spell_call_shield()
+			
+		}
+	}
+}
+
+function check_tiles()
+{		
+	check_alpha_tiles();
+		
+	check_floor_tiles();
+}
+
 function Space_logic()
 {
 
@@ -517,12 +547,9 @@ function Space_logic()
 	while(_entitiesfound > 0)
 	{
 		var _check = _activatelist[| --_entitiesfound];
-		if(_check.EntityActivateScript != -1)
-		{
-			global.activate = _check;
+
 			activate = _check;
 			_entitiesfound = 0; 
-		}
 	}
 					
 	ds_list_destroy(_activatelist);

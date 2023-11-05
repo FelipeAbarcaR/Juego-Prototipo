@@ -25,4 +25,5 @@
 
 //draw_dragon_head=!draw_dragon_head;
 
-uc_shake(10,0.1);
+//uc_shake(10,0.1);
+

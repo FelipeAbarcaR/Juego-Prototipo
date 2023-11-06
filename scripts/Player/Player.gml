@@ -550,6 +550,7 @@ function Space_logic()
 
 			activate = _check;
 			_entitiesfound = 0; 
+			global.activate=_check
 	}
 					
 	ds_list_destroy(_activatelist);

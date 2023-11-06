@@ -1,15 +1,13 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_rana",
-  "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-  ],
+  "name": "obj_estrella",
+  "eventList": [],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "M0",
-    "path": "folders/Objects/Entity/NPC/M0.yy",
+    "name": "M2",
+    "path": "folders/Objects/Entity/NPC/M2.yy",
   },
   "parentObjectId": {
     "name": "prnt_entity",
@@ -28,13 +26,11 @@
   "physicsShape": 1,
   "physicsShapePoints": [],
   "physicsStartAwake": true,
-  "properties": [
-    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"RanaConejo","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"0","varType":3,},
-  ],
+  "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_rana",
-    "path": "sprites/spr_rana/spr_rana.yy",
+    "name": "spr_estrella",
+    "path": "sprites/spr_estrella/spr_estrella.yy",
   },
   "spriteMaskId": null,
   "visible": true,

@@ -11,8 +11,8 @@
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"prnt_entity","path":"objects/prnt_entity/prnt_entity.yy",},"propertyId":{"name":"EntityNPC","path":"objects/prnt_entity/prnt_entity.yy",},"value":"True",},
   ],
   "parent": {
-    "name": "NPC",
-    "path": "folders/Objects/Entity/NPC.yy",
+    "name": "M0",
+    "path": "folders/Objects/Entity/NPC/M0.yy",
   },
   "parentObjectId": {
     "name": "prnt_entity",

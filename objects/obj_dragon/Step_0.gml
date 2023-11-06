@@ -19,7 +19,3 @@ if(start_shaking)
     uc_shake(2,0);
 }
 
-
-
-
-uc_flash()

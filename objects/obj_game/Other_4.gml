@@ -18,8 +18,8 @@ for (var i = 0; i <= arrayLength - 1; i++)
 		_check = 1;
 		var _camera_mode = global.room_data[i,Index.camera_mode];
 		uc_set_mode(_camera_mode);
-		uc_set_x(_obj_to_follow.x);
-		uc_set_y(_obj_to_follow.y);
+		uc_set_target_x(_obj_to_follow.x);
+		uc_set_target_y(_obj_to_follow.y);
 		
         break; // Exit the loop once a match is found
     }

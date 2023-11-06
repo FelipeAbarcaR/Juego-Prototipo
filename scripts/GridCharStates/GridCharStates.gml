@@ -29,6 +29,10 @@ switch (state)
 
 		scr = scr_Roll;
 		break;
+		
+		case "slide":
+		scr = scr_Slide;
+		break;
 	
 	}
 script_execute(scr)
@@ -79,6 +83,8 @@ function scr_GridMove(){
 
 function scr_Wait()
 {
+	//check if standing on an ice tile
+	
 	if(object_index==obj_crypt_player)
 	{
 		sprite_index=spr_wait;
@@ -102,6 +108,43 @@ function scr_Wait()
 			y_from=y;
 		}
 		}
+		
+		//Check if landing on ice tile
+		var _lay_id	= -1;
+		var _tilemap_id=-1;
+		_lay_id= layer_get_id("CryptTiles");
+		_tilemap_id = layer_tilemap_get_id(_lay_id);
+
+		var _tilemap = tilemap_get_at_pixel(_tilemap_id,x,y);
+
+		if(_tilemap==3)//if the tile landed is a frozen tile
+		{
+			obj_beat.frozen_beat	=	true;
+			
+			state	=	"slide";
+			
+			
+			var _direction	=	LastDirection;
+			var _distance	=	GridDistance;
+			
+			_lay_id		=	layer_get_id("CryptTiles");
+			_tilemap_id =	layer_tilemap_get_id(_lay_id);
+			
+			var _x_to	=	lengthdir_x(_distance,_direction);
+			var _y_to	=	lengthdir_y(_distance,_direction);
+			
+			var _tilemap	=	tilemap_get_at_pixel(_tilemap_id,x+_x_to,y+_y_to);
+			
+			if(_tilemap==-1 || _tilemap==0)// if the line you are going sliding is not a tilemap
+			{
+			    state	=	"wait";
+			}
+			
+			Direction = _direction;
+			DistanceRemaining= _distance;
+
+		}
+
 	}
 	
 }
@@ -159,6 +202,36 @@ function scr_Roll()
 				Direction+=180;
 			    damaged=true;
 				DistanceRemaining=point_distance(x,y,x_from,y_from);
+			}
+		}
+	}
+}
+
+function scr_Slide()
+{
+    //rotation
+	var _rotation=25;
+	if(Direction==180) _rotation=_rotation*(-1);
+	image_angle=_rotation;
+	if(global.beat) sliding=true;
+	if(sliding)
+	{
+		if(GridSpeed<=DistanceRemaining){
+		x+=lengthdir_x(GridSpeed,Direction);
+		y+=lengthdir_y(GridSpeed,Direction);
+		DistanceRemaining-=GridSpeed;
+		} else {
+			if(DistanceRemaining==0)
+			{
+				state="wait";
+				image_angle=0;
+			}
+			else {
+				x+=lengthdir_x(GridSpeed-DistanceRemaining,Direction);
+				y+=lengthdir_y(GridSpeed-DistanceRemaining,Direction);
+				DistanceRemaining=0;
+				state="wait"
+				image_angle=0;
 			}
 		}
 	}

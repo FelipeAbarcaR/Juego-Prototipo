@@ -103,6 +103,15 @@ function AbrirPuerta(_roomindex,_targetX,_targetY){
 		}
 	}
 }
+
+function OpenGate()
+{
+	var _gate=obj_gate;
+    if(instance_exists(_gate))
+	{
+	    _gate.gate_activated=true;
+	}
+}
 	
 function damage_entity(_tid, _sid, _damage, _time) {
 	///@desc	damage the target, and return the dead status

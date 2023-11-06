@@ -5,6 +5,14 @@ var keyUp=input_check_pressed("up");
 var keyDown=input_check_pressed("down");
 var keyLeft=input_check_pressed("left");
 
+var _keyShield = false;
+if (input_check_pressed("shield")) _keyShield=true;
+
+if(_keyShield)
+{
+	spell_call_shield();
+}
+
 if (y<ystart)
 {
 	var _acc=acc_gravedad+hola;

@@ -222,6 +222,7 @@ function reset_variables() {
 	
 	global.interact = false;
 	//global.end_interaction = false;
+	button_shield=false;
 	left = 0;
 	right = 0;
 	up = 0;
@@ -238,12 +239,30 @@ function reset_variables() {
 }
 
 function get_input() {
+	
 	if (input_check("left"))	left	= 1;
 	if (input_check("right"))	right	= 1;
 	if (input_check("up"))		up		= 1;
 	if (input_check("down"))	down	= 1;
 	
 	if (input_check_pressed("accept"))	global.interact = true;
+	if (input_check_pressed("shield")) button_shield=true;
+}
+
+function update_movement(){
+	
+	if(x != xprevious or y != yprevious)
+	{
+		for(var i = pos_array_size -1; i>0; i--)
+		{
+			pos_x[i] = pos_x[i-1];
+			pos_y[i] = pos_y[i-1];
+		}
+		
+		pos_x[0] = x;
+		pos_y[0] = y;
+	}
+	
 }
 
 function calc_movement() {
@@ -488,6 +507,33 @@ function player_roll(){
 	//}
 }
 
+function check_spells()
+{
+	var _shield	=	false;
+	
+	if(global.beatchance) //spells has to be on beat
+	{
+	    if(button_shield)
+		{
+		    _shield = true;
+		}
+		//todo el show anterior es para cuando se tengan q juntar poderes. shield+3atk, etc.
+		//ahora dentro del if puede haber if _shield && _3atk por ej.
+		if (_shield /*&& global.CanShield*/) 
+		{
+			spell_call_shield()
+			
+		}
+	}
+}
+
+function check_tiles()
+{		
+	check_alpha_tiles();
+		
+	check_floor_tiles();
+}
+
 function Space_logic()
 {
 
@@ -517,12 +563,11 @@ function Space_logic()
 	while(_entitiesfound > 0)
 	{
 		var _check = _activatelist[| --_entitiesfound];
-		if(_check.EntityActivateScript != -1)
-		{
-			global.activate = _check;
+
 			activate = _check;
+			global.activate = _check;
 			_entitiesfound = 0; 
-		}
+			global.activate=_check
 	}
 					
 	ds_list_destroy(_activatelist);
@@ -562,15 +607,15 @@ function Space_logic()
 			}
 			else
 			{
-				//uc_add_instance_following_list(global.activate);
-				uc_set_mode(CMODE.STATIC);
-				uc_set_target_x(global.activate.x);
-				uc_set_target_y(global.activate.y);
-				
+
 				
 				global.end_interaction = true;
 				if(activate.EntityActivateScript == startDialogue)
 				{
+					uc_set_mode(CMODE.STATIC);
+					uc_set_target_x(global.activate.x);
+					uc_set_target_y(global.activate.y);
+					
 					with(o_player)
 					{
 						automove_from_activate=true;
@@ -580,7 +625,10 @@ function Space_logic()
 				else
 				{
 					//Activar la entidad
-					ScriptExecuteArray(activate.EntityActivateScript, activate.EntityActivateArgs);
+					if(activate.EntityActivateScript != -1)
+					{
+						ScriptExecuteArray(activate.EntityActivateScript, activate.EntityActivateArgs);
+					}
 				}
 				//Hace que en NPC mire hacia el jugador
 				if(activate.EntityNPC)

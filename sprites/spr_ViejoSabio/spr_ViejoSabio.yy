@@ -2,10 +2,10 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_ViejoSabio",
-  "bbox_bottom": 28,
+  "bbox_bottom": 29,
   "bbox_left": 4,
   "bbox_right": 28,
-  "bbox_top": 3,
+  "bbox_top": 4,
   "bboxMode": 0,
   "collisionKind": 1,
   "collisionTolerance": 0,
@@ -13,20 +13,20 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"70ba178f-de4d-4c82-b724-191f6ab3da64",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6f0dbabb-e42d-4d62-9cfa-bf61bb38c449",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 32,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"6b779a6d-2ca7-4f87-b45d-59953f435884","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"b27334c5-393b-43cd-ac8e-c3c69520a171","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 9,
   "parent": {
-    "name": "NPC",
-    "path": "folders/Sprites/Entity/NPC.yy",
+    "name": "M0",
+    "path": "folders/Sprites/Entity/NPC/M0.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"70ba178f-de4d-4c82-b724-191f6ab3da64","path":"sprites/spr_ViejoSabio/spr_ViejoSabio.yy",},},},"Disabled":false,"id":"52279813-0add-4183-bf11-6718af5888e7","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"6f0dbabb-e42d-4d62-9cfa-bf61bb38c449","path":"sprites/spr_ViejoSabio/spr_ViejoSabio.yy",},},},"Disabled":false,"id":"f99ae39d-6355-426f-9d30-b7e49119528f","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

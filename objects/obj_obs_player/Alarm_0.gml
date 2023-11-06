@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description inmunity delay end
 // You can write your code in this editor
 
 invulnerable=false;

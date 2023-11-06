@@ -172,6 +172,7 @@ var _tp=obj_transition_manager.transition_progress;
 //BEAT BAR 2.0 STEP
 
 bar2_timer+=dt;
+
 //SET A NEW BEAT TO START MOVING DOWN THE "HEART"
 var _fix=0;
 if(beat_fix) _fix=global.BeatTimeMS/2;
@@ -186,6 +187,8 @@ var _length=array_length(beat_meter_list);
 if(_length>0) //if it is at least one beat meter in the array
 {
 	var _last_beat_position = beat_meter_list[0];
+	//check if the beat can be hit, for now this hapenns if the beat is NOT frozen
+	var _beatable=(!frozen_beat);
 	
 	//Beat's chance to hit
 	var _distance_from_heart=point_distance(bar2_x,_last_beat_position,bar2_x,bar2_y);
@@ -198,16 +201,18 @@ if(_length>0) //if it is at least one beat meter in the array
 	}
 	
 	if(_last_beat_position>=bar2_y+bar2_range) //if beat meter reach the bottom of range
-	{
-	   var _last_time	= array_shift(beat_meter_list); //delete the beat meter of the array
-	   
-	if(groovy_count>0) //reset the groovy counter
-	   {
-	       groovy_count=0;
-		   play_sfx(sfx_groovy_error);
-	   }
+	{	   
+		if(_beatable) 
+		{
+			beat_missed();//delete the lowest paw, reset groovy counter and play error sound
+		}
+		else
+		{
+		    var _last_time= array_shift(beat_meter_list); //delete the beat meter of the array
+			frozen_beat=false;
+		}
 	}
-	
+	//INPUT CHECK
 	var _player_input=0;
 	
 	if(instance_exists(obj_crypt_player))
@@ -215,38 +220,48 @@ if(_length>0) //if it is at least one beat meter in the array
 	   if (obj_crypt_player.key_direction_pressed) _player_input=true;
 	}
 	
+	
+	//IF THERE IS A KEY INPUT
 	var _activate_key=global.interact;
 	if(	_activate_key || _player_input)
 	{
-		perfect_good_bad(); //store the beat status (perfect,good,almost)
 		
-		//Create the meter to show where it was the position when input a key.
+		//Create a vanishing paw in the position when the key was inputted
 		var _obj = instance_create_depth(bar2_x,_last_beat_position,depth,obj_vanish);
 		_obj.sprite_index= spr_beat_meter_4;
 		_obj.image_xscale=1.5;
 		_obj.image_yscale=1.5;
 		_obj.draw_on_gui=true;
 		_obj.sprite_color=c_orange;
+		if(!_beatable) //if it isnt beatable, then it's frozen. 
+		{
+			//frozen shattered paw sprite
+			_obj.sprite_index=spr_beat_meter_4_shattered;
+			_obj.image_speed=1;
+		}
 		
-		if(global.beatchance) //if the input was in beatchance
+		if(_beatable)
 		{
-			var _last_time= array_shift(beat_meter_list); //delete the beat meter of the array
-			groovy_count+=1;
-			heart_pulse=true;
-			beat_heart_t=0;
+			perfect_good_bad(); //store the beat status (perfect,good,almost);
+			
+			if(global.beatchance) //if the input was in beatchance
+			{
+				var _last_time= array_shift(beat_meter_list);	//delete the beat meter of the array
+				groovy_count+=1;								//add a counter to get the LGTB mode
+				heart_pulse=true;								//shake the jingle bell
+				beat_heart_t=0;									//set the timer again in case it was already shaking
+			}
+			else // if the input was not in beatchance
+			{
+				beat_missed();//delete the lowest paw, reset groovy counter and play error sound
+			}
 		}
-		else // if the input was not in beatchance
+		else //if the input was during a beat not able to be beaten
 		{
-			var _last_time= array_shift(beat_meter_list); //delete the beat meter of the array
-		   if(groovy_count>0) //reset the groovy counter
-		   {
-		       groovy_count=0;
-			   play_sfx(sfx_groovy_error)
-		   }
+			beat_missed();//delete the lowest paw, reset groovy counter and play error sound
 		}
-	
 	}
-	
 }
+
 
 if (groovy_count>=groovy_max) global.groovy=true else global.groovy=false;

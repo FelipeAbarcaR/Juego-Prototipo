@@ -54,8 +54,8 @@ enum  BG_TYPE
 
 bg_type	=	BG_TYPE.blurry;
 
-bg_sign_sprite	=	spr_textbox_bg;
-bg_NPC_sprite	=	spr_textbox_sign_background;
+bg_sign_sprite	=	spr_textbox_sign_background;
+bg_NPC_sprite	=	spr_textbox_bg;
 
 bg_index	=	0;
 
@@ -90,6 +90,8 @@ automove_x=-1;
 automove_y=-1;
 automove_active=false;
 
+//Activate activate event user depend on wich numbergot called from function ACTIVATE
+user_event_index=-1;
 //Crypt
 start_crypt=false;
 

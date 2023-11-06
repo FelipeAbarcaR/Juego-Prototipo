@@ -153,6 +153,12 @@ if(!minimize_to_destroy)
 			global.roomTarget=new_room;
 			RoomTransition(TRANS_TYPE.SLIDE,new_room);
 		}
+		//activate stuffs
+		if(user_event_index!=(-1))
+		{
+			event_user(user_event_index);
+		    user_event_index=-1;
+		}
 	//FIGHT STUFFS
 		//ACTIVAR PELEA
 		if (start_fight){

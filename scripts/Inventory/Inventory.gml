@@ -55,6 +55,9 @@ function Inv_add(_item,_count)
 	ds_list_add(_list,_arr);
 	Inv_Interface(_item,_count);
 	
+	//check for items that are spells and added to the spell list if this is true
+	update_spells();
+	
 	return true;
 
 }

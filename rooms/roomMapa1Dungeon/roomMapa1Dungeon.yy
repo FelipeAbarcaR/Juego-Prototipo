@@ -55,7 +55,6 @@
     {"name":"inst_229896D2","path":"rooms/roomMapa1Dungeon/roomMapa1Dungeon.yy",},
     {"name":"inst_5FF41DA0","path":"rooms/roomMapa1Dungeon/roomMapa1Dungeon.yy",},
     {"name":"inst_C7628CC","path":"rooms/roomMapa1Dungeon/roomMapa1Dungeon.yy",},
-    {"name":"inst_28D07080","path":"rooms/roomMapa1Dungeon/roomMapa1Dungeon.yy",},
     {"name":"inst_27ACC87C","path":"rooms/roomMapa1Dungeon/roomMapa1Dungeon.yy",},
     {"name":"inst_7AE3CE6E","path":"rooms/roomMapa1Dungeon/roomMapa1Dungeon.yy",},
     {"name":"inst_B5ED5B2","path":"rooms/roomMapa1Dungeon/roomMapa1Dungeon.yy",},
@@ -135,7 +134,6 @@
                 {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"prnt_entity","path":"objects/prnt_entity/prnt_entity.yy",},"propertyId":{"name":"EntityShadow","path":"objects/prnt_entity/prnt_entity.yy",},"value":"False",},
                 {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"prnt_entity","path":"objects/prnt_entity/prnt_entity.yy",},"propertyId":{"name":"EntityCollision","path":"objects/prnt_entity/prnt_entity.yy",},"value":"True",},
               ],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1184.0,"y":780.0,},
-            {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_28D07080","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_dragon","path":"objects/obj_dragon/obj_dragon.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":421.0,"y":639.0,},
           ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
       ],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRLayer","resourceVersion":"1.0","name":"Crypt","depth":2100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[

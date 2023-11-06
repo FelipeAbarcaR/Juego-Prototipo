@@ -96,3 +96,15 @@ hit_inmunity_time	=	1.6; //time in seconds of no receveing damage when the gato 
 
 rainbow_particle=part_system_create(particle_notes);
 part_system_depth(rainbow_particle,depth-1);
+
+button_shield=false;
+
+//npc follow
+
+pos_array_size = 94;
+
+for(var i = pos_array_size -1; i > 0; i--)
+{
+	pos_x[i] = x;
+	pos_y[i] = y;	
+}

@@ -69,6 +69,4 @@ function uc_flash() {
 	if (argument_count>=2) Camera.flash_in_speed = spd[0];
 	if (argument_count>=2) Camera.flash_out_speed = spd[1];
 	if (argument_count==3) Camera.flash_max_alpha = alpha;
-
-
 }

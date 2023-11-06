@@ -37,12 +37,12 @@ if(input_check_pressed("pause"))
 	}
 }
 
-if(input_check("restart"))
+if(input_check_pressed("restart"))
 {
 	event_user(2);	
 }
 
-if(input_check("restart_room"))
+if(input_check_pressed("restart_room"))
 {
 	event_user(3);
 }

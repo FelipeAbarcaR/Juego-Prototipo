@@ -4,11 +4,11 @@ var _obj=o_player;
 if(instance_exists(_obj))
 {
 	var _x1,_x2,_y1,_y2,_r;
-	_r=16;
-	_x1	=	bbox_left	-	_r;
-	_x2	=	bbox_right	+	_r;
-	_y1	=	bbox_top	-	_r;
-	_y2	=	bbox_bottom	+	_r;
+	_r=13;
+	_x1	=	bbox_left	   ;
+	_x2	=	bbox_right		;
+	_y1	=	bbox_top	-_r;
+	_y2	=	bbox_bottom	-_r;
 	
 	var _col=collision_rectangle(_x1,_y1,_x2,_y2,_obj,false,1);
 	
@@ -17,6 +17,8 @@ if(instance_exists(_obj))
 		image_alpha=max(image_alpha-0.04,maxalpha)
 	}else
 	{
-		image_alpha=min(image_alpha+0.04,1.00)
+		image_alpha=min(image_alpha+0.04,1.00);
 	}
+	
+	
 }

@@ -38,33 +38,13 @@ if(instance_exists(player_move) && !player_state_changed)
 	//create new player and destroy old one
 	var _lay_id=layer_get_id("Instances")
 	instance_create_layer(_old_player.x,_old_player.y,_lay_id,_new_player);
-	//_new_player.x=_old_player.x;
-	//_new_player.y=_old_player.y;
+
 	instance_destroy(_old_player);
 	show_debug_message("obj_player_manager: Creando " + object_get_name(_new_player)+"y destruyendo "+ object_get_name(_old_player));
 
-	//check if new player already exists
-	//if(_exist(_new_player))
-	//{
-	//	instance_activate_object(_new_player);
-	//	_new_player.x=_old_player.x;
-	//	_new_player.y=_old_player.y;
-	//	instance_deactivate_object(_old_player);
-	//	show_debug_message("obj_player_manager: Reactivando instance "+ object_get_name(_new_player))
-	//}else
-	//{
-	//	var _lay_id=layer_get_id("Instances")
-	//    instance_create_layer(_old_player.x,_old_player.y,_lay_id,_new_player);
-	//	//_new_player.x=_old_player.x;
-	//	//_new_player.y=_old_player.y;
-	//	instance_deactivate_object(_old_player);
-	//	show_debug_message("obj_player_manager: no se enecontró instance " + object_get_name(_new_player)+", creándolo.");
-	//}
-	
-	with(oCameraManager)
-	{
-	    camera_follow=_new_player;
-	}
+
+	//set camera to follow the new player
+	uc_set_instance_following_list(_new_player);
 	
 	finish();
 	
@@ -87,13 +67,12 @@ if(instance_exists(player_grid) && !player_state_changed)
 	instance_destroy(_old_player);
 	show_debug_message("obj_player_manager: Creando " + object_get_name(_new_player)+"y destruyendo "+ object_get_name(_old_player));
 
+	//set camera to follow the new player
+	uc_set_instance_following_list(_new_player);
 	
-	with(oCameraManager)
-	{
-		camera_follow=_new_player;
-	}
 	finish();
 	
 }
+
 
 

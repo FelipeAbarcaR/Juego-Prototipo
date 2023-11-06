@@ -7,13 +7,16 @@ switch(state) {
 
 		calc_movement();
 		
+		check_spells();
+		
 		Space_logic();
 
 		anim();
 		
-		check_alpha_tiles();
+		check_tiles();
 		
-		check_floor_tiles();
+		update_movement();
+
 		
 		
 	break;
@@ -48,6 +51,7 @@ switch(state) {
 	break;
 	case states.LOCK:
 		//image_speed=0;
+		direction = point_direction(x,y,global.activate.x,global.activate.y);
 		image_index = CARDINAL_DIR_PLAYER;
 
 		reset_variables();

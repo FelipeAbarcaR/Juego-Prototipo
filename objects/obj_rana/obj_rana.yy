@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Enemy",
-    "path": "folders/Objects/Entity/NPC/Enemy.yy",
+    "name": "M0",
+    "path": "folders/Objects/Entity/NPC/M0.yy",
   },
   "parentObjectId": {
     "name": "prnt_entity",

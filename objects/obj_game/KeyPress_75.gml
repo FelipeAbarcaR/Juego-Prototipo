@@ -25,4 +25,4 @@
 
 //draw_dragon_head=!draw_dragon_head;
 
-uc_shake(10,0.1);
+uc_flash(c_white,[0.3,0.5])

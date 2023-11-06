@@ -20,7 +20,7 @@ return {
         right: [input_binding_key(vk_right), input_binding_key("D")],
         
         accept:  input_binding_key(vk_space),
-        //cancel:  input_binding_key(vk_backspace),
+        shield:  input_binding_key("C"),
         //action:  input_binding_key(vk_enter),
         //special: input_binding_key(vk_shift),
         
@@ -42,7 +42,7 @@ return {
         right: [input_binding_gamepad_axis(gp_axislh, false), input_binding_gamepad_button(gp_padr)],
         
         accept:  input_binding_gamepad_button(gp_face3), // es la x en play
-        //cancel:  input_binding_gamepad_button(gp_face2), // es el circulo en play
+        shield:  input_binding_gamepad_button(gp_face2), // es el circulo en play
         //action:  input_binding_gamepad_button(gp_face3),
         //special: input_binding_gamepad_button(gp_face4),
         

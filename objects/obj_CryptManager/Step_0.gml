@@ -18,15 +18,15 @@ if (global.beat && danceactive)
 		    for (var j = 0; j < room_height / tileHeight; j++)
 		    {
 			
-				data=tilemap_get_at_pixel(map_id,i*tileWidth,j*tileHeight)
-		       if ((i+j) % 2 == 1 && data!=0)
+				var _data=tilemap_get_at_pixel(map_id,i*tileWidth,j*tileHeight)
+		       if ((i+j) % 2 == 1 && _data!=0)
 		       {
-					var tileseted=tilemap_set(map_id, tileindex,i,j);
+					if(_data!=3) var tileseted=tilemap_set(map_id, tileindex,i,j);
 				
 		       }
-			   if ((i+j) % 2 == 0 && data!=0)
+			   if ((i+j) % 2 == 0 && _data!=0)
 		       {
-					var tileseted=tilemap_set(map_id, tileindex2,i,j);
+					if(_data!=3) var tileseted=tilemap_set(map_id, tileindex2,i,j);
 				
 		       }
 		    }

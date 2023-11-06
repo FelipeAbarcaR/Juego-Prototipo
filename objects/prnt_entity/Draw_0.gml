@@ -14,7 +14,10 @@ if(id == global.activate && EntitySpaceBarActive)
 {
 	if(distance_to_object(o_player) < 20)
 	{
-	    instance_activate_object(space_bar);
+		if(EntityActivateScript == startDialogue)
+		{
+			instance_activate_object(space_bar);
+		}
 	}else instance_deactivate_object(space_bar)
 }
 

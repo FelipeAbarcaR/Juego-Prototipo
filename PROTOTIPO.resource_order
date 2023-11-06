@@ -517,7 +517,6 @@
     {"name":"input_xy","order":4,"path":"scripts/input_xy/input_xy.yy",},
     {"name":"o_solid","order":3,"path":"objects/o_solid/o_solid.yy",},
     {"name":"uc_set_view_inclination","order":2,"path":"scripts/uc_set_view_inclination/uc_set_view_inclination.yy",},
-    {"name":"roomMapaInicialAle2","order":5,"path":"rooms/roomMapaInicialAle2/roomMapaInicialAle2.yy",},
     {"name":"__input_class_trigger_effect_off","order":13,"path":"scripts/__input_class_trigger_effect_off/__input_class_trigger_effect_off.yy",},
     {"name":"input_player_gamepad_type_override_get","order":4,"path":"scripts/input_player_gamepad_type_override_get/input_player_gamepad_type_override_get.yy",},
     {"name":"input_check_released","order":2,"path":"scripts/input_check_released/input_check_released.yy",},

@@ -143,8 +143,8 @@
     "path": "folders/Tile Sets/M1.yy",
   },
   "spriteId": {
-    "name": "spr_ts_Mapa1_2Ale",
-    "path": "sprites/spr_ts_Mapa1_2Ale/spr_ts_Mapa1_2Ale.yy",
+    "name": "spr_ts_Mapa1_2",
+    "path": "sprites/spr_ts_Mapa1_2/spr_ts_Mapa1_2.yy",
   },
   "spriteNoExport": true,
   "textureGroupId": {

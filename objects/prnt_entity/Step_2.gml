@@ -3,6 +3,8 @@ if(global.textover)
 	if(self.id == global.activate)
 	{
 		var _npc = object_get_name(object_index);
+		global.npc_follow[$ _npc] = true;
+		
 		var _array = global.dialogue_order[$ _npc];
 		
 		if(is_array(_array) and _array != [])

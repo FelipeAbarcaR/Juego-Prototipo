@@ -110,6 +110,7 @@
     {"name":"Animales TEST","order":23,"path":"folders/Sprites/Animales TEST.yy",},
     {"name":"Entity","order":11,"path":"folders/Sprites/Entity.yy",},
     {"name":"M2","order":1,"path":"folders/Sprites/Entity/M2.yy",},
+    {"name":"Gestures TEST","order":25,"path":"folders/Sprites/Gestures TEST.yy",},
     {"name":"Icons","order":12,"path":"folders/Sprites/Icons.yy",},
     {"name":"Interfaz","order":13,"path":"folders/Sprites/Interfaz.yy",},
     {"name":"Minijuegos","order":14,"path":"folders/Sprites/Minijuegos.yy",},
@@ -149,7 +150,6 @@
     {"name":"Shaders","order":3,"path":"folders/Transiciones/FoxeyTransitionsPro/Shaders.yy",},
     {"name":"Dither","order":1,"path":"folders/Transiciones/FoxeyTransitionsPro/Shaders/Dither.yy",},
     {"name":"Normal","order":2,"path":"folders/Transiciones/FoxeyTransitionsPro/Shaders/Normal.yy",},
-    {"name":"Gestures TEST","order":25,"path":"folders/Sprites/Gestures TEST.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_ts_MC_vehicles","order":4,"path":"sprites/spr_ts_MC_vehicles/spr_ts_MC_vehicles.yy",},

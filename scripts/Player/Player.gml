@@ -249,6 +249,22 @@ function get_input() {
 	if (input_check_pressed("shield")) button_shield=true;
 }
 
+function update_movement(){
+	
+	if(x != xprevious or y != yprevious)
+	{
+		for(var i = pos_array_size -1; i>0; i--)
+		{
+			pos_x[i] = pos_x[i-1];
+			pos_y[i] = pos_y[i-1];
+		}
+		
+		pos_x[0] = x;
+		pos_y[0] = y;
+	}
+	
+}
+
 function calc_movement() {
 
 	hmove = right - left;	
@@ -549,6 +565,7 @@ function Space_logic()
 		var _check = _activatelist[| --_entitiesfound];
 
 			activate = _check;
+			global.activate = _check;
 			_entitiesfound = 0; 
 	}
 					
@@ -589,15 +606,15 @@ function Space_logic()
 			}
 			else
 			{
-				//uc_add_instance_following_list(global.activate);
-				uc_set_mode(CMODE.STATIC);
-				uc_set_target_x(global.activate.x);
-				uc_set_target_y(global.activate.y);
-				
+
 				
 				global.end_interaction = true;
 				if(activate.EntityActivateScript == startDialogue)
 				{
+					uc_set_mode(CMODE.STATIC);
+					uc_set_target_x(global.activate.x);
+					uc_set_target_y(global.activate.y);
+					
 					with(o_player)
 					{
 						automove_from_activate=true;
@@ -607,7 +624,10 @@ function Space_logic()
 				else
 				{
 					//Activar la entidad
-					ScriptExecuteArray(activate.EntityActivateScript, activate.EntityActivateArgs);
+					if(activate.EntityActivateScript != -1)
+					{
+						ScriptExecuteArray(activate.EntityActivateScript, activate.EntityActivateArgs);
+					}
 				}
 				//Hace que en NPC mire hacia el jugador
 				if(activate.EntityNPC)

@@ -14,6 +14,8 @@ switch(state) {
 		anim();
 		
 		check_tiles();
+		
+		update_movement();
 
 		
 		
@@ -49,6 +51,7 @@ switch(state) {
 	break;
 	case states.LOCK:
 		//image_speed=0;
+		direction = point_direction(x,y,global.activate.x,global.activate.y);
 		image_index = CARDINAL_DIR_PLAYER;
 
 		reset_variables();

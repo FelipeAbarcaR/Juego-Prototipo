@@ -1,5 +1,6 @@
 event_inherited();
 
+global.npc_follow = {};
 flash = 0;
 flashShader = sha_white_flash;
 uFlash = shader_get_uniform(flashShader,"flash");

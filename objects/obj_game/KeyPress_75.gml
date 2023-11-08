@@ -25,4 +25,7 @@
 
 //draw_dragon_head=!draw_dragon_head;
 
-uc_flash(c_white,[0.3,0.5])
+//uc_flash(c_white,[0.3,0.5])
+
+holo++;
+set_gesture(obj_rana,holo);

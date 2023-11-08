@@ -8,3 +8,15 @@ if(global.npc_follow[$ _npc])
 	
 }
 
+
+if(id == global.activate && EntitySpaceBarActive) 
+{
+	if(player_active_range)
+	{
+		if(EntityActivateScript == startDialogue)
+		{
+			instance_activate_object(space_bar);
+		}
+		player_active_range=false;
+	}else instance_deactivate_object(space_bar)
+}

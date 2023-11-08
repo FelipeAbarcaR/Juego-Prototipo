@@ -18,7 +18,6 @@ switch(state) {
 		update_movement();
 
 		
-		
 	break;
 	case states.KNOCKBACK:
 		reset_variables();

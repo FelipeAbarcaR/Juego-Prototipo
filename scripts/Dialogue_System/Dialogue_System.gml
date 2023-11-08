@@ -270,6 +270,7 @@ function ItemAction(_itemid,_quantity) : DialogueAction() constructor{
 	
 }
 
+
 function BGAction(_bg_type,_sprite_index=0) : DialogueAction() constructor{
 	
 	background_type=_bg_type;

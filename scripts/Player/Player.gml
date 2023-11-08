@@ -537,9 +537,11 @@ function check_tiles()
 function Space_logic()
 {
 	var _middle	 =	bbox_top+(bbox_bottom-bbox_top)/2;
-	var _activateX = x + lengthdir_x(10, dir);
+	
+	var _detect_distance = 14;
+	var _activateX = x + lengthdir_x(_detect_distance, dir);
 			
-	var _activateY = _middle + lengthdir_y(10, dir);
+	var _activateY = _middle + lengthdir_y(_detect_distance, dir);
 			
 	var _activatesize = 4;
 			

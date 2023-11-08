@@ -21,7 +21,7 @@ global.mp_grid = 0;
 
 global.gamemode=mode.move;
 
-
+holo=0;
 	
 //mute bin var
 mute=0;

@@ -536,10 +536,10 @@ function check_tiles()
 
 function Space_logic()
 {
-
+	var _middle	 =	bbox_top+(bbox_bottom-bbox_top)/2;
 	var _activateX = x + lengthdir_x(10, dir);
 			
-	var _activateY = y + lengthdir_y(10, dir);
+	var _activateY = _middle + lengthdir_y(10, dir);
 			
 	var _activatesize = 4;
 			
@@ -558,7 +558,7 @@ function Space_logic()
 		_activatelist,
 		true
 	);
-			
+
 	//si la primera instancia que encontramos es la entidad	que podemos levantar o no tiene script: intenta el siguiente
 	while(_entitiesfound > 0)
 	{
@@ -566,8 +566,9 @@ function Space_logic()
 
 			activate = _check;
 			global.activate = _check;
+			global.activate.player_active_range=true;
 			_entitiesfound = 0; 
-			global.activate=_check
+
 	}
 					
 	ds_list_destroy(_activatelist);
@@ -577,7 +578,6 @@ function Space_logic()
 	if(global.interact)
 		{
 
-			
 			if(activate == noone)
 			{
 					
@@ -616,11 +616,8 @@ function Space_logic()
 					uc_set_target_x(global.activate.x);
 					uc_set_target_y(global.activate.y);
 					
-					with(o_player)
-					{
-						automove_from_activate=true;
-						if(state != states.LOCK && state != states.AUTOMOVING) state = states.AUTOMOVING;
-					}
+					state=states.LOCK
+					ScriptExecuteArray(activate.EntityActivateScript, activate.EntityActivateArgs);
 				}
 				else
 				{

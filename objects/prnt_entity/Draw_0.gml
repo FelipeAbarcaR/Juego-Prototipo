@@ -10,16 +10,6 @@ if(flash !=0)
 }
 	draw_sprite_ext(sprite_index,image_index, floor(x), floor(y-z),image_xscale, image_yscale, image_angle, image_blend, image_alpha);
 
-if(id == global.activate && EntitySpaceBarActive) 
-{
-	if(distance_to_object(o_player) < 20)
-	{
-		if(EntityActivateScript == startDialogue)
-		{
-			instance_activate_object(space_bar);
-		}
-	}else instance_deactivate_object(space_bar)
-}
 
 if(shader_current() != -1) shader_reset();
 

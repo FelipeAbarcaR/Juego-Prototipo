@@ -59,4 +59,6 @@ show_healthbar();
 if(global.DrawText)
 {
     draw_sprite_bbox();
+	draw_activate_region();
+	
 }

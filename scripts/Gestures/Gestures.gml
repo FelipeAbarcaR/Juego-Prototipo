@@ -41,5 +41,4 @@ function set_gesture(_obj,_gesture)
 	{
 	    show_debug_message("obj_gesture: no se encuentra objeto a cual darle emoticon")
 	}
-	
 }

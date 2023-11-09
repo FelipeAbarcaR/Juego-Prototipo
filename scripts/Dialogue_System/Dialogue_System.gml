@@ -26,6 +26,14 @@ function startDialogue(topic) {
 	inst.setTopic(topic);
 
 }
+function startDialogueConciencia(topic) {
+	if (instance_exists(obj_textbox_con)) return;
+	var inst = instance_create_depth(x, y, -999, obj_textbox_con);
+	inst.dialogue_sounds= activate.dialogue_sounds;
+	inst.setTopic(topic);
+
+}
+
 
 function DialogueSound(){
 

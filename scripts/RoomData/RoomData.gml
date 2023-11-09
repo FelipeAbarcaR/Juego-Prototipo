@@ -19,8 +19,6 @@
 		[roomViejoSabio,			bgm_ForestTimeInterior, 126,	o_player,			mode.move,		o_player,			CMODE.OBJECT_FOLLOWING],
 		[roomMapa1NPC,				bgm_WillPower_89,		89,		o_player,			mode.move,		o_player,			CMODE.OBJECT_FOLLOWING],
 		[roomMapa1Casapalchuto,		bgm_WillPower_89,		89,		o_player,			mode.move,		o_player,			CMODE.OBJECT_FOLLOWING]
-
-		
 	];
 	
 	global.room_count=array_length(global.room_data);

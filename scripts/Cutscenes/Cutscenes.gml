@@ -1,13 +1,18 @@
 function CutSceneWait(_seconds){
 /// @desc CutSceneWait
 /// @arg seconds
-
-	timer++;
-	if(timer >= _seconds * room_speed)
-	{
-		timer = 0;
-		CutSceneEndAction();
-	}
+	
+	alarm[0]=_seconds*room_speed;
+	//timer++;
+	//if(timer >= _seconds * room_speed)
+	//{
+	//	timer = 0;
+	//	CutSceneEndAction();
+	//}
+}
+function CutSceneStart()
+{
+    //POR DEFINIR
 }
 
 function CutSceneEndAction (){
@@ -25,6 +30,10 @@ function CutScenePlaySound(_SoundID,_Priority,_Loops){
 	
 	audio_play_sound(_SoundID,_Priority,_Loops);
 	CutSceneEndAction();
+}
+function CutSceneChangeMusic(_music)
+{
+    // code here
 }
 
 function CutSceneInstanceCreate(_x,_y,_layerID,_obj){
@@ -110,7 +119,7 @@ function CutScenemoveCharacter(_objID,_x,_y,_relative,_spd){
 	{
 		sprite_index = spriterun;
 		
-		if(point_distance(x,y,_xx,_yy) >= _spd)
+		if(point_distance(x,y,_xx,_yy) >= 0)
 		{
 			var dir = point_direction(x,y,_xx,_yy);
 			var ldirx = lengthdir_x(_spd,dir);

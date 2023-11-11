@@ -1,3 +1,5 @@
+global.cutscene=false;
+
 function CutSceneWait(_seconds){
 /// @desc CutSceneWait
 /// @arg seconds
@@ -9,10 +11,20 @@ function CutSceneWait(_seconds){
 	//	timer = 0;
 	//	CutSceneEndAction();
 	//}
+	return id;
 }
 function CutSceneStart()
 {
-    //POR DEFINIR
+    show_debug_message("Cutscene started");
+	global.cutscene=true;
+	uc_bars(true,0.07,0.1);
+	
+	
+}
+function CutSceneEnd()
+{
+    show_debug_message("Cutscene ended");
+	uc_bars(false);
 }
 
 function CutSceneEndAction (){
@@ -97,52 +109,15 @@ function CutSceneChangeVariable(_obj,_VarNameasString,_value){
 
 function CutScenemoveCharacter(_objID,_x,_y,_relative,_spd){
 										//Relativo es que si quiero que se mueva a un punto concreto o si quiero que se mueva relativo a su posicion
+	var _obj=_objID;
+	_obj.automoving				=	true;
+	_obj.x_dest					=	_x;
+	_obj.y_dest					=	_y;
+	_obj.dest_relative			=	_relative;
+	_obj.automove_spd			=	_spd;
 	
-	if(x_dest == -1)
-	{
-		if(!_relative)
-		{
-			x_dest = _x;
-			y_dest = _y;
-		}
-		else
-		{
-			x_dest = _objID.x + _x;
-			y_dest = _objID.y + _y;
-		}
-	}
-	
-	var _xx = x_dest;
-	var _yy = y_dest;
-	
-	with(_objID)
-	{
-		sprite_index = spriterun;
-		
-		if(point_distance(x,y,_xx,_yy) >= 0)
-		{
-			var dir = point_direction(x,y,_xx,_yy);
-			var ldirx = lengthdir_x(_spd,dir);
-			var ldiry = lengthdir_y(_spd,dir);
-			
-			x+= ldirx;
-			y+= ldiry;
-		}
-		else
-		{
-			sprite_index = spriteidle;
-			x = _xx;
-			y = _yy;
-			
-			with(other)
-			{
-				x_dest = -1;
-				y_dest = -1;
-				CutSceneEndAction();
-			}
-				
-		}
-	}				
+	var _id = instance_nearest(_x,_y,_objID);
+	return _id;
 }
 
 function CreateCutScene(_sceneinfo){

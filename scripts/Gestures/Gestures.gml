@@ -36,9 +36,12 @@ function set_gesture(_obj,_gesture)
 	
 		var _emoticon =	instance_create_depth(_x,_y,_depth,obj_gesture);
 		_emoticon.gesture=_gesture;
+		return _emoticon
 	}
 	else
 	{
 	    show_debug_message("obj_gesture: no se encuentra objeto a cual darle emoticon")
+		return -1;
 	}
+	
 }

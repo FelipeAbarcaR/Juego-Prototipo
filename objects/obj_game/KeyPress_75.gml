@@ -27,5 +27,7 @@
 
 //uc_flash(c_white,[0.3,0.5])
 
-holo++;
-set_gesture(obj_rana,holo);
+//holo++;
+//set_gesture(obj_rana,holo);
+
+instance_create_depth(x,y,depth,obj_cutscene);

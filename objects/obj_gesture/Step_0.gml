@@ -9,6 +9,10 @@ if(gesture_scale>=1 && gesture!=(-1)) sprite_index=global.gestures[gesture];
 image_xscale=gesture_scale;
 image_yscale=gesture_scale;
 
-if(gesture_active==false && gesture_scale<=0) instance_destroy();
+if(gesture_active==false && gesture_scale<=0)
+{
+	instance_destroy();
+	if(global.cutscene) obj_cutscene.next(id);
+}
 
 image_index=floor(global.beatprogress*3);

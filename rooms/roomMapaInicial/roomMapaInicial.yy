@@ -169,6 +169,8 @@
     {"name":"inst_29A6F49C_1_2","path":"rooms/roomMapaInicial/roomMapaInicial.yy",},
     {"name":"inst_332B4EA2_2","path":"rooms/roomMapaInicial/roomMapaInicial.yy",},
     {"name":"inst_167D306","path":"rooms/roomMapaInicial/roomMapaInicial.yy",},
+    {"name":"inst_1EA7FBB9","path":"rooms/roomMapaInicial/roomMapaInicial.yy",},
+    {"name":"inst_6F17CA43","path":"rooms/roomMapaInicial/roomMapaInicial.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -478,6 +480,8 @@
                 {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_puerta","path":"objects/obj_puerta/obj_puerta.yy",},"propertyId":{"name":"RoomTargetY","path":"objects/obj_puerta/obj_puerta.yy",},"value":"207",},
               ],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1368.0,"y":1463.0,},
             {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_167D306","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_spell_manager","path":"objects/obj_spell_manager/obj_spell_manager.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-32.0,"y":200.0,},
+            {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_1EA7FBB9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_coneja","path":"objects/obj_coneja/obj_coneja.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1416.0,"y":1000.0,},
+            {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6F17CA43","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_jabali","path":"objects/obj_jabali/obj_jabali.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1496.0,"y":1000.0,},
           ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
       ],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRLayer","resourceVersion":"1.0","name":"L1_SOLIDS","depth":3300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[

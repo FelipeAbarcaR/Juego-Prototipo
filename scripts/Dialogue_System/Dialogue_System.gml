@@ -24,6 +24,7 @@ function startDialogue(topic) {
 	var inst = instance_create_depth(x, y, -999, obj_textbox);
 	inst.dialogue_sounds= activate.dialogue_sounds;
 	inst.setTopic(topic);
+	return inst;
 
 }
 function startDialogueConciencia(topic) {
@@ -768,4 +769,30 @@ global.topics[$ "bossm1"] = [
 	TEXT("Colabora fundo, se cuelga tripa."),
 	TEXT("¡VETE DE AQUÍ AHORA!"),
 	TBEVENT(0)
+];
+
+global.topics[$ "TESTCUTSCENES1"] = [
+	SPEAKER("Conejite",spr_pt_coneja,PORTRAIT_SIDE.LEFT),
+	TEXT("Weena hmno no te habia visto por aquí")
+];
+global.topics[$ "TESTCUTSCENES2"] = [
+	SPEAKER("Conejite",spr_pt_coneja,PORTRAIT_SIDE.LEFT),
+	TEXT("No sé pq me acerco wn")
+];
+global.topics[$ "TESTCUTSCENES3"] = [
+	SPEAKER("Conejite",spr_pt_coneja,PORTRAIT_SIDE.LEFT),
+	TEXT("Voy a fingir que te estoy diciendo algo importante")
+];
+global.topics[$ "TESTCUTSCENES4"] = [
+	SPEAKER("Jabali",spr_pt_jabali,PORTRAIT_SIDE.RIGHT),
+	TEXT("Hola puedo unirme?")
+];
+global.topics[$ "TESTCUTSCENES5"] = [
+	SPEAKER("Conejite",spr_pt_coneja,PORTRAIT_SIDE.LEFT),
+	TEXT("Osea si pero mira de lejos pq no te vas a mover de ahí, incluso acá termina la cinemática man")
+];
+
+global.topics[$ "TESTCUTSCENES6"] = [
+	SPEAKER("Jabali",spr_pt_jabali_enojado,PORTRAIT_SIDE.RIGHT),
+	TEXT("NO PUEDE SER!")
 ];

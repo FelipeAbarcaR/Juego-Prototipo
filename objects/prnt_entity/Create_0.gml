@@ -18,3 +18,9 @@ if(EntitySpaceBarActive)
     space_bar = instance_create_depth(x,bbox_top - 3,depth-1,obj_space_NPC);
 	instance_deactivate_object(space_bar);
 }
+
+automoving=false;
+x_dest=-1;
+y_dest=-1;
+automove_relative=false;
+automove_spd=spd

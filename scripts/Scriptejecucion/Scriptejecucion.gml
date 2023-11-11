@@ -32,10 +32,12 @@ function ScriptExecuteArray(){
 	
 	var _scr = argument0;
 	var _args = argument1;
-
-	switch (array_length(_args)) 
+	
+	var _len=array_length(_args)
+	switch (_len) 
 	{
- 
+		 case 0: return script_execute(_scr);	
+			
 		 case 1: return script_execute(_scr, _args[0]);
  
 		 case 2: return script_execute(_scr, _args[0], _args[1]);

@@ -188,6 +188,10 @@ if(!minimize_to_destroy)
 		//if it is minimizing unill destroy, then minimize 'till destroy
 	    //decrease the height until 0, then instance destroy
 		increasing_value=max(0,increasing_value-delta_scaling);	 
-		if(increasing_value<=0) instance_destroy()
+		if(increasing_value<=0)
+		{
+			instance_destroy()
+			if(global.cutscene) obj_cutscene.next(id);
+		}
 	 }
 

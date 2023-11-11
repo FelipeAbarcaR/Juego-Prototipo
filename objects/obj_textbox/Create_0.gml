@@ -157,10 +157,6 @@ next = function() {
 		global.end_interaction = false;
 		global.textover = true;
 		
-		with (o_player) 
-		{
-			state = states.IDLE;
-		}
 		//call to player to update values
 		var _player=global.room_data[global.currentroom][Index.mainchar];
 		with(_player)

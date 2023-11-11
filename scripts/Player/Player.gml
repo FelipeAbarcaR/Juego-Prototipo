@@ -808,9 +808,11 @@ function player_automove()
 {
 	 if(automove_from_activate)
 		{
+			//si es que debe activar el scriupt de la instance activate al llegar
 			placement_Player_NPC( activate.x + 20 ,activate.y + 30, false,walk_spd/2);
 		}else
 		{
+			//solo llegar
 			placement_Player( automove_x, automove_y, false,walk_spd/2);
 		}
 }

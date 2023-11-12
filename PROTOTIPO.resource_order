@@ -621,6 +621,7 @@
     {"name":"uc_set_x","order":6,"path":"scripts/uc_set_x/uc_set_x.yy",},
     {"name":"input_player_ghost_set","order":10,"path":"scripts/input_player_ghost_set/input_player_ghost_set.yy",},
     {"name":"input_cursor_inverted_set","order":5,"path":"scripts/input_cursor_inverted_set/input_cursor_inverted_set.yy",},
+    {"name":"obj_alphaontile2","order":18,"path":"objects/obj_alphaontile2/obj_alphaontile2.yy",},
     {"name":"spr_ts_DungeonFloor","order":9,"path":"sprites/spr_ts_DungeonFloor/spr_ts_DungeonFloor.yy",},
     {"name":"obj_transition_manager","order":1,"path":"objects/obj_transition_manager/obj_transition_manager.yy",},
     {"name":"input_trigger_effect_get_state","order":2,"path":"scripts/input_trigger_effect_get_state/input_trigger_effect_get_state.yy",},

@@ -1097,6 +1097,7 @@
     {"id":{"name":"scribble","path":"scripts/scribble/scribble.yy",},},
     {"id":{"name":"input_cursor_inverted_set","path":"scripts/input_cursor_inverted_set/input_cursor_inverted_set.yy",},},
     {"id":{"name":"__scribble_font_add_msdf_from_project","path":"scripts/__scribble_font_add_msdf_from_project/__scribble_font_add_msdf_from_project.yy",},},
+    {"id":{"name":"obj_alphaontile2","path":"objects/obj_alphaontile2/obj_alphaontile2.yy",},},
     {"id":{"name":"spr_CondaIdle","path":"sprites/spr_CondaIdle/spr_CondaIdle.yy",},},
     {"id":{"name":"scribble_anim_wheel","path":"scripts/scribble_anim_wheel/scribble_anim_wheel.yy",},},
     {"id":{"name":"spr_ts_DungeonFloor","path":"sprites/spr_ts_DungeonFloor/spr_ts_DungeonFloor.yy",},},

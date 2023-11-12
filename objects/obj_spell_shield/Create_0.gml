@@ -10,3 +10,4 @@ spell_active_time=SPELL_SHIELD_ACTIVE;
 active_time=spell_active_time;
 
 sprite_scale=0;
+minimize_to_destroy=false;

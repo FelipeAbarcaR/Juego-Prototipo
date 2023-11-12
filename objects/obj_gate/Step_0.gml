@@ -1,6 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+if(id == global.activate && EntitySpaceBarActive) 
+{
+	hola=10;
+	hola=20
+}
+event_inherited();
 var _list = obj_game.inv_list
 var _list_size = ds_list_size(_list);
 
@@ -14,7 +19,8 @@ for(var i=0;i<ds_list_size(_list);i++)
 	if(aranitas>=3)
 	{
 	    EntityActivateScript=OpenGate;
-		EntityActivateArgs = [-1]
+		EntityActivateArgs = [-1];
+		EntitySpaceBarActive=true;
 	}
 }
 

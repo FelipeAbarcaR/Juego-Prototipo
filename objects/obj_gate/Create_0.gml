@@ -13,6 +13,8 @@ enum GATESTATE
 	closing
 }
 
+EntitySpaceBarActive=false;
+
 state=GATESTATE.closed;
 aranitas=0;
 arana=0

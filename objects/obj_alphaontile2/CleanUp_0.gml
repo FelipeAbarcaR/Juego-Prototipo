@@ -1,5 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
+if (surface_exists(surf)) surface_free(surf);
 
-if(instance_exists(o_player)) o_player.state = states.IDLE;
 

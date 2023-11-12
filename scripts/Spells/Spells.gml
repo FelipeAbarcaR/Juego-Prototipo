@@ -13,5 +13,13 @@ function update_spells(){
 
 function spell_call_shield()
 {
-    obj_spell_manager.spell_shield_called=true;
+	if(obj_spell_manager.spell_shield_current_cooldown<=0)
+	{
+		obj_spell_manager.spell_shield_called=true;
+	}
+	else
+	{
+	   show_debug_message("spell_call_shield(): Shield is on cooldown dude");
+	}
+    
 }

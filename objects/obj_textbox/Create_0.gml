@@ -11,7 +11,7 @@ input_delay = max_input_delay;
 margin = 56; // how much space the textbox gets from the edges of the screen
 padding = 12; // how much space things inside the textbox get
 width = display_get_gui_width()*(5/8);
-height = display_get_height()/6;
+height = display_get_height()/8;
 
 x = (display_get_gui_width()- width)/2;
 y = display_get_gui_height() - height - margin;

@@ -9,7 +9,7 @@ function check_alpha_tiles(){
 		var _alpha_tile_collision = tilemap_get_at_pixel(_tilemap_id,x,y);
 		if (_alpha_tile_collision)
 		{
-		    if(!instance_exists(obj_alphaontile))
+		    if(!instance_exists(obj_alphaontile2))
 			{
 				//create the object in the corner of the space of where to apply alpha
 				var _tileswidth = 4;
@@ -18,7 +18,7 @@ function check_alpha_tiles(){
 				var _y=y-y%16-16*(_tilesheight/2); // one tile up from the player
 			
 			
-				instance_create_depth(_x,_y,depth-1,obj_alphaontile);
+				instance_create_depth(_x,_y,depth-1,obj_alphaontile2);
 			}
 		}
 	}

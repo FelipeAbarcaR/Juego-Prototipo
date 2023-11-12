@@ -15,6 +15,8 @@ var _player=o_player;
 x= _player.x-(width/2) - (_player.x mod TILE_SIZE);
 y= _player.y-(height/2) - (_player.y mod TILE_SIZE);
 
+
+
 lay_id_1 = layer_get_id("solid_base");			//trees
 lay_id_2 = layer_get_id("solid_base_deco");		//upper_trees
 lay_id_3 = layer_get_id("solid_mountain");		//mountain 1st floor

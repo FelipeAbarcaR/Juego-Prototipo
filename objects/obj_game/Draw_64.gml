@@ -3,17 +3,19 @@
 
 if (global.DrawText)
 {
-	if(font_exists(draw_get_font()))
-	{
-		draw_text(100,100,"font: "+font_get_fontname(draw_get_font()));
-	    
-	}
+
 	var _x=96;
 	var _y=96;
 	var _dy=16;
 	draw_text(_x,_y			,"currentroom: "+room_get_name(room));
 	draw_text(_x,_y+_dy*4	,"Game time: "+ string(game_time/1000000));
 	draw_text(_x,_y+_dy*5	,"Room time: "+ string(room_time/1000000));
+	
+	if(font_exists(draw_get_font()))
+	{
+		draw_text(_x,_y+_dy*2,"font: "+font_get_fontname(draw_get_font()));
+	    
+	}
 }
 
 

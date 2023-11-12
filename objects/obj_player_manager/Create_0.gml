@@ -6,6 +6,7 @@ player_grid=obj_crypt_player;
 player_obs=obj_obs_player;
 
 player_state_changed=false;
+if(instance_exists(obj_spell))instance_destroy(obj_spell);
 
 var _exist=function(_instance)
 {

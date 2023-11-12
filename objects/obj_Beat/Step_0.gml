@@ -174,12 +174,18 @@ var _tp=obj_transition_manager.transition_progress;
 bar2_timer+=dt;
 
 //SET A NEW BEAT TO START MOVING DOWN THE "HEART"
+//beat fix to half tempo
 var _fix=0;
 if(beat_fix) _fix=global.BeatTimeMS/2;
+
+beat_bar_is_beating=beat_check_if_can_beat();
+
+
 if(bar2_timer>=time_to_beat-time_to_reach_end+_fix)//If it is the time to drop a meter
 {
     time_to_beat+=global.BeatTimeMS*beats_per_input; //set the time of the new beat meter
-	bar2_store_meter(bar2_y-beat_frame_height); //store the new meter in array, starting from top of frame
+	
+	if(beat_bar_is_beating) bar2_store_meter(bar2_y-beat_frame_height); //store the new meter in array, starting from top of frame
 }
 
 var _length=array_length(beat_meter_list);

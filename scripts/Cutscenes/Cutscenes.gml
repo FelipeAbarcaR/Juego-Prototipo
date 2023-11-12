@@ -18,7 +18,7 @@ function CutSceneStart()
     show_debug_message("Cutscene started");
 	global.cutscene=true;
 	uc_bars(true,0.07,0.1);
-	
+	CutSceneWait(0.3);	
 	
 }
 function CutSceneEnd()

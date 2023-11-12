@@ -23,5 +23,3 @@ if(id == global.activate && EntitySpaceBarActive)
 }
 
 if(automoving) automove_entity(x_dest,y_dest,dest_relative,automove_spd);
-
-uc_bars()

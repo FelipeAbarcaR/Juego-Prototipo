@@ -785,7 +785,7 @@ global.topics[$ "TESTCUTSCENES3"] = [
 ];
 global.topics[$ "TESTCUTSCENES4"] = [
 	SPEAKER("Jabali",spr_pt_jabali,PORTRAIT_SIDE.RIGHT),
-	TEXT("Hola puedo unirme?")
+	TEXT("Hola, puedo unirme?")
 ];
 global.topics[$ "TESTCUTSCENES5"] = [
 	SPEAKER("Conejite",spr_pt_coneja,PORTRAIT_SIDE.LEFT),

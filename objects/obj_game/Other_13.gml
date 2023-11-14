@@ -6,6 +6,7 @@ global.currentroom=room_get_current_room_index();
 global.playerhealth = global.playerhealthmax;
 game_over=false;
 instance_activate_all();
+uc_set_view_scale(1)
 with(obj_beat)
 {
     var _bgm= current(Index.music);

@@ -82,11 +82,6 @@ if (event_mode==textbox_event.TEXTING)
 			var name_h= max(_scribble_speaker.get_height()+padding*2,speaker_height);
 			//el padding los puse como extra para que calce, en verdad no se pq pero funciona
 			//draw_sprite_stretched(spr_name,0,x + speaker_x-name_w/2, y + speaker_y-speaker_height/2, name_w+padding*2, speaker_height+padding*2);
-			if(global.DrawText)
-			{
-			    draw_circle(x+padding+speaker_x,y+speaker_y,3,0);
-				draw_circle(x + speaker_x-name_w/2, y + speaker_y-speaker_height/2,3,0);
-			}
 			
 			_scribble_speaker.starting_format(text_font,#5c2e17);
 			_scribble_speaker.draw(draw_text_x+text_x,draw_text_y+text_y);
@@ -97,7 +92,7 @@ if (event_mode==textbox_event.TEXTING)
 			draw_text_y+=name_h;
 		}
 
-		// Text
+		// TEXT
 		//change te position and format of the text depending on the lenght of the text
 		//switch between the top left corner of the textbox to the middle center
 		if(text_length>=lenght_shift_format)
@@ -108,14 +103,14 @@ if (event_mode==textbox_event.TEXTING)
 		{
 		    scribble_object.align(fa_center,fa_middle);
 			draw_text_x=floor(draw_text_x + (draw_text_width/2));
-			draw_text_y=floor(draw_text_y + height*(1/7));
+			draw_text_y=floor(draw_text_y+text_y)
 		}
 		
 		scribble_object.starting_format(text_font,#5c2e17);
 		scribble_object.wrap(draw_text_width);
-		scribble_object.draw(draw_text_x + text_x,draw_text_y + text_y,typist);
+		scribble_object.draw(draw_text_x,draw_text_y,typist);
 		scribble_object.starting_format(text_font,c_white);
-		scribble_object.draw(draw_text_x + text_x+2,draw_text_y + text_y+2,typist);
+		scribble_object.draw(draw_text_x+2,draw_text_y+2,typist);
 
 		//Options
 		if(finished && option_count >0)
@@ -149,4 +144,10 @@ if (event_mode==textbox_event.TEXTING)
 		
 		}
 	}
+}
+
+if(global.DrawText)
+{
+    draw_circle(x,y,2,false);
+	draw_circle_color(draw_text_x,draw_text_y,2,c_blue,c_blue,false)
 }

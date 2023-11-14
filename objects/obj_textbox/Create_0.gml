@@ -10,8 +10,8 @@ input_delay = max_input_delay;
 // Position
 margin = 56; // how much space the textbox gets from the edges of the screen
 padding = 12; // how much space things inside the textbox get
-width = display_get_gui_width()*(5/8);
-height = display_get_height()/8;
+width = floor(display_get_gui_width()*(5/8));
+height = floor(display_get_height()/6.5);
 
 x = (display_get_gui_width()- width)/2;
 y = display_get_gui_height() - height - margin;
@@ -22,7 +22,7 @@ text_font = "fnt_RODIN";
 text_color = c_white;
 text_speed = 0.45;
 text_x = padding;
-text_y = padding*2;
+text_y = padding;
 text_width = width - padding * 2;
 lenght_shift_format=80; //max lenght to shift text from middle center to upper top corner
 
@@ -107,7 +107,6 @@ current_action = -1;
 text = "";
 text_progress = 0;
 text_length = 0;
-
 
 
 enum PORTRAIT_SIDE

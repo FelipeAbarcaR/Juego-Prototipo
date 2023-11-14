@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+
 var _rand=random(n_chance);
 if (_rand<=chance)
 {
@@ -12,6 +13,32 @@ var _array_len=array_length(runny_play_array);
 
 if (time>=runny_play_array[0][0]) && _array_len>1 {
 
+	var _action = runny_play_array[0][1];
+	switch(_action)
+	{
+	    case obstacle.activate:
+		global.runny_activate_frenzy=true;
+		alarm[0]=room_speed*frenzy_time;
+		break;
+		
+		case obstacle.up:
+		var _x=round(random_range(left_side,right_side));
+		instance_create_depth(_x,view_height,depth,obj_runny_trap_fury);
+		break;
+		
+		case obstacle.updown:
+		instance_create_depth(460,176,depth,obj_runny_dragon);
+		break;
+		
+		case obstacle.down:
+		if(instance_exists(obj_runny_dragon))
+		{
+		    obj_runny_dragon.attacking = true;
+		}
+		
+		break;
+		
+	}
     // Create the obstacle and erase first row
 	if(runny_play_array[0][1]==obstacle.activate)
 	{

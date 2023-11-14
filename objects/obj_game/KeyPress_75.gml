@@ -30,4 +30,15 @@
 //holo++;
 //set_gesture(obj_rana,holo);
 
-instance_create_depth(x,y,depth,obj_cutscene);
+//instance_create_depth(x,y,depth,obj_cutscene);
+
+//uc_hit(90,2)
+
+uc_set_view_scale(1.4,0.1)
+
+var _enable=uc_get_view_auto_scale_enabled()
+_enable=!_enable
+uc_set_auto_scale_enabled(_enable);
+
+var _enb2=uc_get_view_auto_scale_enabled()
+show_debug_message(string(_enb2))

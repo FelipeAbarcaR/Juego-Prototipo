@@ -39,16 +39,7 @@ if (time>=runny_play_array[0][0]) && _array_len>1 {
 		break;
 		
 	}
-    // Create the obstacle and erase first row
-	if(runny_play_array[0][1]==obstacle.activate)
-	{
-		global.runny_activate_frenzy=true;
-		alarm[0]=room_speed*frenzy_time;
-	}else
-	{
-		var _x=round(random_range(left_side,right_side));
-		instance_create_depth(_x,view_height,depth,obj_runny_trap_fury);
-	}
+
 	
 	array_shift(runny_play_array);
 } else {

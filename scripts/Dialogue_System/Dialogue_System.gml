@@ -18,11 +18,17 @@
 #macro CRYPT new CryptAction
 #macro BACKGROUND new BGAction
 #macro TBEVENT new UserEventAction
+#macro SETNPC new SetNPCAction
 
 function startDialogue(topic) {
 	if (instance_exists(obj_textbox)) return;
 	var inst = instance_create_depth(x, y, -999, obj_textbox);
-	inst.dialogue_sounds= activate.dialogue_sounds;
+
+	if(instance_exists(activate))
+	{
+		inst.npc_object=activate;
+		inst.dialogue_sounds= activate.dialogue_sounds;
+	}
 	inst.setTopic(topic);
 	return inst;
 
@@ -295,6 +301,18 @@ function BGAction(_bg_type,_sprite_index=0) : DialogueAction() constructor{
 	
 }
 
+function SetNPCAction(_bg_type,_sprite_index=0) : DialogueAction() constructor{
+	
+	npc_asset			=	_bg_type;
+	
+	act = function(textbox)
+	{
+		textbox.npc_object=npc_asset;
+		textbox.dialogue_sounds=npc_object.dialogue_sounds;
+		textbox.next ();
+	}
+	
+}
 function UserEventAction(_index): DialogueAction() constructor
 {
     activate_index=_index;
@@ -662,7 +680,7 @@ global.topics[$ "Batallando"] = [
 	TEXT("Esa mirada de juicio me tiene cansado, en guardia, a mover la coneja"),
 	FIGHT("pelearanagana","pelearanapierde")
 ];
-		
+
 global.topics[$ "signhouse1"] = [
 	BACKGROUND(BG_TYPE.woodsign),
 	TEXT("El Viejo Sabio le invita a entrar a la casa, no es que tenga algo mejor que hacer"),

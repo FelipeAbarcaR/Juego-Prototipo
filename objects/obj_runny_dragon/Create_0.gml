@@ -6,3 +6,7 @@
 event_inherited();
 
 attacking=false;
+
+point_target=[121,32];
+
+move_speed=1;

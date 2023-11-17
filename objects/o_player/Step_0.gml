@@ -25,7 +25,6 @@ switch(state) {
 		calc_movement();
 		
 		if knockback_time-- <= 0 state = states.IDLE;
-		
 		anim();
 	break;
 	case states.DEAD:

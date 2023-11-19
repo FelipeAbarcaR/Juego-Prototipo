@@ -16,3 +16,9 @@ if(gesture_active==false && gesture_scale<=0)
 }
 
 image_index=floor(global.beatprogress*3);
+
+if(char_follow>0)
+{
+    x = char_follow.x;
+	y = char_follow.bbox_top;
+}

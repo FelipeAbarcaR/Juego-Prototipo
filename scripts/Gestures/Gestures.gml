@@ -35,7 +35,10 @@ function set_gesture(_obj,_gesture)
 		var _depth		=	_obj.depth-1;
 	
 		var _emoticon =	instance_create_depth(_x,_y,_depth,obj_gesture);
+
 		_emoticon.gesture=_gesture;
+		var _char = instance_nearest(_x,_y,_obj);
+		_emoticon.char_follow=_char;
 		return _emoticon
 	}
 	else

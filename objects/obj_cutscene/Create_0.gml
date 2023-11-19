@@ -23,29 +23,31 @@ Automove
 */
 
 
-action_list=
-[
-	[CutSceneStart,[],true],
-	[uc_set_instance_following_list,[obj_coneja],true],
-	[CutSceneWait,[0.4],false],
-	[set_gesture,[obj_coneja,GESTURE.Exclamation],true],
-	[CutSceneWait,[1],false],
-	[set_gesture,[obj_gato,GESTURE.Question],true],
-	[startDialogue,["TESTCUTSCENES1"],false],
-	[CutScenemoveCharacter,[obj_coneja,1392,1088,false,2],false],
-	[startDialogue,["TESTCUTSCENES2"],false],
-	[startDialogue,["TESTCUTSCENES3"],false],
-	[uc_set_instance_following_list,[obj_jabali],true],
-	[startDialogue,["TESTCUTSCENES4"],false],
-	[uc_set_instance_following_list,[obj_coneja],true],
-	[startDialogue,["TESTCUTSCENES5"],false],
-	[uc_set_instance_following_list,[obj_jabali],true],
-	[CutSceneWait,[0.2],false],
-	[uc_shake,[],true],
-	[startDialogue,["TESTCUTSCENES6"],false]
+//action_list=
+//[
+//	[CutSceneStart,[],true],
+//	[uc_set_instance_following_list,[obj_coneja],true],
+//	[CutSceneWait,[0.4],false],
+//	[set_gesture,[obj_coneja,GESTURE.Exclamation],true],
+//	[CutSceneWait,[1],false],
+//	[set_gesture,[obj_gato,GESTURE.Question],true],
+//	[startDialogue,["TESTCUTSCENES1"],false],
+//	[CutScenemoveCharacter,[obj_coneja,1392,1088,false,2],false],
+//	[startDialogue,["TESTCUTSCENES2"],false],
+//	[startDialogue,["TESTCUTSCENES3"],false],
+//	[uc_set_instance_following_list,[obj_jabali],true],
+//	[startDialogue,["TESTCUTSCENES4"],false],
+//	[uc_set_instance_following_list,[obj_coneja],true],
+//	[startDialogue,["TESTCUTSCENES5"],false],
+//	[uc_set_instance_following_list,[obj_jabali],true],
+//	[CutSceneWait,[0.2],false],
+//	[uc_shake,[],true],
+//	[startDialogue,["TESTCUTSCENES6"],false]
 	
 	
-]
+//]
+
+action_list=global.cutscenes[$ "CinemaTest"];
 
 current_action=-1
 
@@ -83,6 +85,7 @@ next = function(call_id)
 
 run =function()
 {
+	
     var _script = action_list[current_action][0];
 	var _args = action_list[current_action][1];
 	var _snap =action_list[current_action][2];

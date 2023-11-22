@@ -1567,7 +1567,7 @@
     {"roomId":{"name":"roomViejoSabioVersionAle","path":"rooms/roomViejoSabioVersionAle/roomViejoSabioVersionAle.yy",},},
     {"roomId":{"name":"roomMapa1Ale","path":"rooms/roomMapa1Ale/roomMapa1Ale.yy",},},
     {"roomId":{"name":"roomMapa2Ale","path":"rooms/roomMapa2Ale/roomMapa2Ale.yy",},},
-    {"roomId":{"name":"roomMapa1Talo","path":"rooms/roomMapa1Talo/roomMapa1Talo.yy",},}
+    {"roomId":{"name":"roomMapa1Talo","path":"rooms/roomMapa1Talo/roomMapa1Talo.yy",},},
   ],
   "templateType": null,
   "TextureGroups": [

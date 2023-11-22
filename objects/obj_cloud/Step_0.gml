@@ -5,7 +5,7 @@ x+=self.speed;
 
 if(x>=room_width) x=0;
 
-var _obj=o_player;
+var _obj=prnt_entity;
 
 if(instance_exists(_obj))
 {

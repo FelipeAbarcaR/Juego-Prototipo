@@ -342,7 +342,7 @@ for (var _i = 0; _i < array_length(cinematica); _i++)
 				 _x_move		=	real(cinematica[_i][$ "ARG2"]);
 				 _y_move		=	real(cinematica[_i][$ "ARG3"]);
 				
-				array_insert(global.cutscenes[$ _cutscene],array_length(global.cutscenes[$ _cutscene]),[CutScenemoveCharacter,[_npc_move,_x_move,_y_move,false,2],_snap]);
+				array_insert(global.cutscenes[$ _cutscene],array_length(global.cutscenes[$ _cutscene]),[CutScenemoveCharacter,[_npc_move,_x_move,_y_move,false,1],_snap]);
 				
 			break;
 			

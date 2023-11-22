@@ -13,6 +13,7 @@ text_id = "";
 conversation_number = 0;
 
 player_active_range=false;
+
 if(EntitySpaceBarActive)
 {
     space_bar = instance_create_depth(x,bbox_top - 3,depth-1,obj_space_NPC);

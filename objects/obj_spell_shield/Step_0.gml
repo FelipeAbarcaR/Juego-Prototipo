@@ -10,15 +10,24 @@ if(instance_exists(obj_obs_player))
     obj_obs_player.invulnerable=true;
 }
 
+if(instance_exists(obj_crypt_player))
+{
+    obj_crypt_player.inmunity=true;
+}
+
 if(global.beat)
 {
     active_time--;
 	if(active_time<=0)
 	{
-	    instance_destroy();
+	    minimize_to_destroy=true
 	}
 }
 
+if(minimize_to_destroy)
+{
+	if(sprite_scale<=0) instance_destroy(); 
+}
 
 
 

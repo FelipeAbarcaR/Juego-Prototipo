@@ -5,7 +5,7 @@
 /// @param (optional)color
 function uc_bars() {
 
-	if (argument_count>=1)var enable = argument[0];
+	if (argument_count>=1) var enable = argument[0];
 	if (argument_count>=2) var percentage = argument[1];
 	if (argument_count>=3) var acc = argument[2];
 	if (argument_count==4) var color = argument[3];

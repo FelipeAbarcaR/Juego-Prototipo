@@ -14,8 +14,9 @@ switch(state) {
 		anim();
 		
 		check_tiles();
-
 		
+		update_movement();
+
 		
 	break;
 	case states.KNOCKBACK:
@@ -24,7 +25,6 @@ switch(state) {
 		calc_movement();
 		
 		if knockback_time-- <= 0 state = states.IDLE;
-		
 		anim();
 	break;
 	case states.DEAD:
@@ -49,6 +49,7 @@ switch(state) {
 	break;
 	case states.LOCK:
 		//image_speed=0;
+		//direction = last_direction //point_direction(x,y,global.activate.x,global.activate.y);
 		image_index = CARDINAL_DIR_PLAYER;
 
 		reset_variables();

@@ -9,6 +9,9 @@ if(instance_exists(obj_obs_player))
     obj_obs_player.invulnerable=false;
 }
 
-
+if(instance_exists(obj_crypt_player))
+{
+    obj_crypt_player.inmunity=false;
+}
 
 

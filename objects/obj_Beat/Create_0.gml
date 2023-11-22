@@ -86,6 +86,7 @@ BGM_data= global.BGM_data;
 
 
 //BEAT BAR 2.0
+beat_bar_is_beating=true;
 
 beat_bar_visible=1;
 

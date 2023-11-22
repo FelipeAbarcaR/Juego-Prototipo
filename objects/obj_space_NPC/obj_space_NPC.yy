@@ -4,6 +4,7 @@
   "name": "obj_space_NPC",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -28,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_testeo_interaction_NPC",
-    "path": "sprites/spr_testeo_interaction_NPC/spr_testeo_interaction_NPC.yy",
+    "name": "spr_gesture_icon06",
+    "path": "sprites/spr_gesture_icon06/spr_gesture_icon06.yy",
   },
   "spriteMaskId": null,
   "visible": true,

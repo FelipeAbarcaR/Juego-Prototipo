@@ -2,11 +2,8 @@
 // You can write your code in this editor
 
 event_inherited();
-scale=2.6;
-
-image_xscale=scale;
-image_yscale=scale;
-
+image_scale=2.6;
 start_mj=false;
 start_shaking=false;
 
+image_alpha=0;

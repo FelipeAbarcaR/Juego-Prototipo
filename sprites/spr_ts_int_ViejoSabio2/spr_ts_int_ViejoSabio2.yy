@@ -4,8 +4,8 @@
   "name": "spr_ts_int_ViejoSabio2",
   "bbox_bottom": 255,
   "bbox_left": 16,
-  "bbox_right": 239,
-  "bbox_top": 16,
+  "bbox_right": 303,
+  "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
   "collisionTolerance": 0,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e1a6371b-8316-4194-81b2-de561713d6c0",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"78ca0012-6085-4efc-8b27-5f1d332c1c6f",},
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 288,
+  "height": 320,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"5eca08aa-4bf3-4f76-b360-d60d68320f95","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"618bfa19-746c-4e34-8924-50cafcaff790","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e1a6371b-8316-4194-81b2-de561713d6c0","path":"sprites/spr_ts_int_ViejoSabio2/spr_ts_int_ViejoSabio2.yy",},},},"Disabled":false,"id":"cd55ff7c-872a-4074-b98d-b1b9e2a3fe8e","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"78ca0012-6085-4efc-8b27-5f1d332c1c6f","path":"sprites/spr_ts_int_ViejoSabio2/spr_ts_int_ViejoSabio2.yy",},},},"Disabled":false,"id":"62a46927-4ed5-4185-8f9e-6f7b5604b62d","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 288,
+  "width": 320,
 }

@@ -4,7 +4,7 @@
   "name": "spr_ts_MapaInicialV6",
   "bbox_bottom": 476,
   "bbox_left": 0,
-  "bbox_right": 621,
+  "bbox_right": 527,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4888eaa2-6e29-4a31-878d-6ea126f8f5fe",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"10129b19-fc7c-4ed7-96d4-daf22c75d3a4",},
   ],
   "gridX": 16,
   "gridY": 16,
   "height": 480,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"1a4c92bf-98bd-4e11-9ca1-d5a00ebc1304","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"db4bc96d-84c7-455b-82f7-b75a4a62bed4","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4888eaa2-6e29-4a31-878d-6ea126f8f5fe","path":"sprites/spr_ts_MapaInicialV6/spr_ts_MapaInicialV6.yy",},},},"Disabled":false,"id":"69f0fa55-e8f2-4256-b3d2-2e253a30451e","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"10129b19-fc7c-4ed7-96d4-daf22c75d3a4","path":"sprites/spr_ts_MapaInicialV6/spr_ts_MapaInicialV6.yy",},},},"Disabled":false,"id":"ebaaff46-498d-46f4-938a-98631adfe539","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

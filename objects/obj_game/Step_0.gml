@@ -47,6 +47,13 @@ if(input_check_pressed("restart_room"))
 	event_user(3);
 }
 
+if(keyboard_check_pressed(vk_alt))
+{
+	uc_set_view_scale(2,0.1);
+	surface_resize(application_surface,Camera.view_width*2,Camera.view_height*2);
+	
+}
+
 changeroom = input_check("change_map");
 muteall= input_check_pressed("mute");
 

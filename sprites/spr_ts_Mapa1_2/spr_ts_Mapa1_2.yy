@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_ts_Mapa1_2",
-  "bbox_bottom": 271,
+  "bbox_bottom": 351,
   "bbox_left": 16,
-  "bbox_right": 351,
+  "bbox_right": 383,
   "bbox_top": 16,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c1a5766b-fb81-483b-9785-d4ae9a9e337e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"67d48efd-bd42-4b8c-9ab8-69dc803d7c91",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 480,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"143879bd-7911-43b0-bea4-771855a9f65c","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"07559b74-6e39-4205-80f5-a2074e7db6e0","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c1a5766b-fb81-483b-9785-d4ae9a9e337e","path":"sprites/spr_ts_Mapa1_2/spr_ts_Mapa1_2.yy",},},},"Disabled":false,"id":"0f50b060-f23f-4d3a-890d-2ee162a3f233","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"67d48efd-bd42-4b8c-9ab8-69dc803d7c91","path":"sprites/spr_ts_Mapa1_2/spr_ts_Mapa1_2.yy",},},},"Disabled":false,"id":"bba71471-815f-4a79-a094-7d1a6d39fbbc","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

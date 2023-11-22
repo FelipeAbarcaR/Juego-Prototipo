@@ -167,3 +167,21 @@ function beat_missed()
 		play_sfx(sfx_groovy_error)// code here
 	}
 }
+
+function beat_check_if_can_beat()
+{
+    var _beating=true;
+	//texting
+	if(instance_exists(obj_textbox))
+	{
+		if(obj_textbox.event_mode==textbox_event.TEXTING)
+		{
+			_beating=false;
+		}
+	}
+	//in cutscene
+	if(global.cutscene) _beating=false;
+	
+	return _beating;
+	
+}

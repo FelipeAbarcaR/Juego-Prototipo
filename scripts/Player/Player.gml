@@ -249,6 +249,22 @@ function get_input() {
 	if (input_check_pressed("shield")) button_shield=true;
 }
 
+function update_movement(){
+	
+	if(x != xprevious or y != yprevious)
+	{
+		for(var i = pos_array_size -1; i>0; i--)
+		{
+			pos_x[i] = pos_x[i-1];
+			pos_y[i] = pos_y[i-1];
+		}
+		
+		pos_x[0] = x;
+		pos_y[0] = y;
+	}
+	
+}
+
 function calc_movement() {
 
 	hmove = right - left;	
@@ -520,10 +536,12 @@ function check_tiles()
 
 function Space_logic()
 {
-
-	var _activateX = x + lengthdir_x(10, dir);
+	var _middle	 =	bbox_top+(bbox_bottom-bbox_top)/2;
+	
+	var _detect_distance = 14;
+	var _activateX = x + lengthdir_x(_detect_distance, dir);
 			
-	var _activateY = y + lengthdir_y(10, dir);
+	var _activateY = _middle + lengthdir_y(_detect_distance, dir);
 			
 	var _activatesize = 4;
 			
@@ -542,14 +560,17 @@ function Space_logic()
 		_activatelist,
 		true
 	);
-			
+
 	//si la primera instancia que encontramos es la entidad	que podemos levantar o no tiene script: intenta el siguiente
 	while(_entitiesfound > 0)
 	{
 		var _check = _activatelist[| --_entitiesfound];
-		global.activate= _check;
-		activate = _check;
-		_entitiesfound = 0; 
+
+			activate = _check;
+			global.activate = _check;
+			global.activate.player_active_range=true;
+			_entitiesfound = 0; 
+
 	}
 					
 	ds_list_destroy(_activatelist);
@@ -558,6 +579,7 @@ function Space_logic()
 	//Activate key logic
 	if(global.interact)
 		{
+
 			if(activate == noone)
 			{
 					
@@ -587,25 +609,25 @@ function Space_logic()
 			}
 			else
 			{
-				//uc_add_instance_following_list(global.activate);
-				uc_set_mode(CMODE.STATIC);
-				uc_set_target_x(global.activate.x);
-				uc_set_target_y(global.activate.y);
-				
+
 				
 				global.end_interaction = true;
 				if(activate.EntityActivateScript == startDialogue)
 				{
-					with(o_player)
-					{
-						automove_from_activate=true;
-						if(state != states.LOCK && state != states.AUTOMOVING) state = states.AUTOMOVING;
-					}
+					uc_set_mode(CMODE.STATIC);
+					uc_set_target_x(global.activate.x);
+					uc_set_target_y(global.activate.y);
+					
+					state=states.LOCK
+					ScriptExecuteArray(activate.EntityActivateScript, activate.EntityActivateArgs);
 				}
 				else
 				{
 					//Activar la entidad
-					ScriptExecuteArray(activate.EntityActivateScript, activate.EntityActivateArgs);
+					if(activate.EntityActivateScript != -1)
+					{
+						ScriptExecuteArray(activate.EntityActivateScript, activate.EntityActivateArgs);
+					}
 				}
 				//Hace que en NPC mire hacia el jugador
 				if(activate.EntityNPC)
@@ -786,9 +808,11 @@ function player_automove()
 {
 	 if(automove_from_activate)
 		{
+			//si es que debe activar el scriupt de la instance activate al llegar
 			placement_Player_NPC( activate.x + 20 ,activate.y + 30, false,walk_spd/2);
 		}else
 		{
+			//solo llegar
 			placement_Player( automove_x, automove_y, false,walk_spd/2);
 		}
 }

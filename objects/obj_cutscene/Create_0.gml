@@ -47,14 +47,13 @@ Automove
 	
 //]
 
-action_list=global.cutscenes[$ "CinemaTest"];
+action_list=global.cutscenes[$ "Cinematoast"];
 
 current_action=-1
 
 //waiting=false;
 
 wait_id=id;
-activate=obj_coneja;
 
 x_dest=-1;
 y_dest=-1;

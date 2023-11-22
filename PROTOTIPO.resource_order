@@ -88,4 +88,14 @@
     {"name":"Slider","order":6,"path":"scripts/Slider/Slider.yy",},
     {"name":"keyCheck","order":8,"path":"scripts/keyCheck/keyCheck.yy",},
   ],
+  "ResourceOrderSettings": [
+    {"name":"obj_jabali2","order":5,"path":"objects/obj_jabali2/obj_jabali2.yy",},
+    {"name":"obj_jabali4","order":7,"path":"objects/obj_jabali4/obj_jabali4.yy",},
+    {"name":"obj_coneja","order":4,"path":"objects/obj_coneja/obj_coneja.yy",},
+    {"name":"obj_capibara","order":3,"path":"objects/obj_capibara/obj_capibara.yy",},
+    {"name":"obj_jabali3","order":6,"path":"objects/obj_jabali3/obj_jabali3.yy",},
+    {"name":"obj_armadillo","order":2,"path":"objects/obj_armadillo/obj_armadillo.yy",},
+    {"name":"obj_hamster","order":1,"path":"objects/obj_hamster/obj_hamster.yy",},
+    {"name":"obj_jabali2","order":5,"path":"objects/obj_jabali2/obj_jabali2.yy",},
+  ]
 }

@@ -23,4 +23,6 @@ var _dx=20;
 var _alpha=0.25;
 draw_sprite_ext(sprite_index,image_index,x+_dx,y+_distance,_scale,_scale,image_angle,image_blend,_alpha);
 gpu_set_fog(0,c_white,0,0);
+draw_set_alpha(0.5)
 draw_self();
+draw_set_alpha(1);

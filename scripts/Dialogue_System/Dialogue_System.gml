@@ -668,8 +668,8 @@ global.topics[$ "signhouse2"] = [
 	];
 
 global.topics[$ "signCrypt1"] = [
-	
-	CHOICE("¿Quieres comenzar?",OPTION("Si","Cryptmoveandfight"),OPTION("No","signenemy1"))
+	SPEAKER("Flamenco Tecrey",-1,PORTRAIT_SIDE.LEFT),
+	CHOICE("Vamos, inténtalo, este es un espacio seguro y de confianza :3",OPTION("Aceptar","Cryptmoveandfight"),OPTION("Rechazar","signenemy1"))
 ];
 
 global.topics[$ "signCrypt2"] = [

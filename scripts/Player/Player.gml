@@ -547,9 +547,9 @@ function Space_logic()
 	while(_entitiesfound > 0)
 	{
 		var _check = _activatelist[| --_entitiesfound];
-
-			activate = _check;
-			_entitiesfound = 0; 
+		global.activate= _check;
+		activate = _check;
+		_entitiesfound = 0; 
 	}
 					
 	ds_list_destroy(_activatelist);
@@ -558,8 +558,6 @@ function Space_logic()
 	//Activate key logic
 	if(global.interact)
 		{
-
-			
 			if(activate == noone)
 			{
 					

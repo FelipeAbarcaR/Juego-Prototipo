@@ -97,7 +97,7 @@ function current(_index){
 	return _value
 }
 //GET THE CURRENT 'SOMETHING' FROM TARGET ROOM
-function target(_index){
+function room_target(_index){
 	
 	var _map=global.roomTarget
 	var _array=global.room_data;

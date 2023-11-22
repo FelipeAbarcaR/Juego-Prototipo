@@ -240,6 +240,7 @@ function reset_variables() {
 
 function get_input() {
 	
+
 	if (input_check("left"))	left	= 1;
 	if (input_check("right"))	right	= 1;
 	if (input_check("up"))		up		= 1;

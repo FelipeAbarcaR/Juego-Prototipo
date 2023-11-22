@@ -1386,6 +1386,7 @@
     {"id":{"name":"spr_bg_forest_GD2","path":"sprites/spr_bg_forest_GD2/spr_bg_forest_GD2.yy",},},
     {"id":{"name":"obj_jabali2","path":"objects/obj_jabali2/obj_jabali2.yy",},},
     {"id":{"name":"spr_bg_forest","path":"sprites/spr_bg_forest/spr_bg_forest.yy",},},
+    {"id":{"name":"bgm_NEON_ICE_130BPM","path":"sounds/bgm_NEON_ICE_130BPM/bgm_NEON_ICE_130BPM.yy",},},
     {"id":{"name":"uc_init_mouse_borders","path":"scripts/uc_init_mouse_borders/uc_init_mouse_borders.yy",},},
     {"id":{"name":"__spr_ftr_mask_1","path":"sprites/__spr_ftr_mask_1/__spr_ftr_mask_1.yy",},},
     {"id":{"name":"prnt_button_pause","path":"objects/prnt_button_pause/prnt_button_pause.yy",},},

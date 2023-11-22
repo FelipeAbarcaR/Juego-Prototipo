@@ -67,14 +67,12 @@
         {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"gui_layer_base","depth":700,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
       ],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"effects_top","depth":800,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"properties":[],"userdefinedDepth":false,"visible":false,},
-    {"resourceType":"GMREffectLayer","resourceVersion":"1.0","name":"Fog_effect","depth":900,"effectEnabled":true,"effectType":"_filter_fractal_noise","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[
-        {"name":"g_FractalNoiseScale","type":0,"value":"201",},
-        {"name":"g_FractalNoisePersistence","type":0,"value":"0.175",},
-        {"name":"g_FractalNoiseOffset","type":0,"value":"0",},
-        {"name":"g_FractalNoiseOffset","type":0,"value":"0",},
-        {"name":"g_FractalNoiseSpeed","type":0,"value":"0.35",},
-        {"name":"g_FractalNoiseTintColour","type":1,"value":"#FFFFFFFF",},
-        {"name":"g_FractalNoiseTexture","type":2,"value":"_filter_fractal_noise_texture",},
+    {"resourceType":"GMREffectLayer","resourceVersion":"1.0","name":"Fog_effect","depth":900,"effectEnabled":true,"effectType":"_effect_glow","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[
+        {"name":"g_GlowRadius","type":0,"value":"256",},
+        {"name":"g_GlowQuality","type":0,"value":"5",},
+        {"name":"g_GlowIntensity","type":0,"value":"0.5",},
+        {"name":"g_GlowGamma","type":0,"value":"0",},
+        {"name":"g_GlowAlpha","type":0,"value":"1",},
       ],"userdefinedDepth":false,"visible":false,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"actor_top","depth":1000,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_690BCF55_2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_cloud","path":"objects/obj_cloud/obj_cloud.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":112.0,"y":112.0,},

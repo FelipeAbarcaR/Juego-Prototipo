@@ -8,8 +8,8 @@
 	//room_data=[room_name, Music, BPM, obj_to_follow, room_mode, mainChar, zoom, witdh, height]
 	global.room_data = [
 
-		[roomMapaInicial,			bgm_ForestTime,			126,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
-		[roomMapa1Talo,					bgm_WillPower_89,		89 ,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
+		[roomMapaInicial,			bgm_NEON_ICE_130BPM,	130,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
+		[roomMapa1Talo,				bgm_WillPower_89,		89 ,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
 		[rm_runny,					bgm_bossM1D_95,			95,		obj_runny_player,	mode.move,		o_player,			CMODE.STATIC],
 		[roomMapa1DungeonBoss,		bgm_NightCall_118,		118,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
 		[roomMapa2,					bgm_illbethere,			130,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],

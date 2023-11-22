@@ -10,7 +10,7 @@
 
 		[roomMapaInicial,			bgm_ForestTime,			126,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
 		[roomMapa1DungeonBoss,		bgm_NightCall_118,		118,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
-		[roomMapa2,					bgm_illbethere,			130,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
+		[roomMapa2Ale,					bgm_illbethere,			130,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
 		[rm_GD,						bgm_boss_01,			127,	obj_obs_player,		mode.obstacle,	obj_obs_player,		CMODE.OBJECT_FOLLOWING],
 		[rm_runny,					bgm_bossM1D_95,			95,		obj_runny_player,	mode.move,		o_player,			CMODE.STATIC],
 		[roomMapa1,					bgm_WillPower_89,		89 ,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],

@@ -9,18 +9,16 @@
 	global.room_data = [
 
 		[roomMapaInicial,			bgm_ForestTime,			126,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
+		[roomMapa1Talo,					bgm_WillPower_89,		89 ,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
+		[rm_runny,					bgm_bossM1D_95,			95,		obj_runny_player,	mode.move,		o_player,			CMODE.STATIC],
 		[roomMapa1DungeonBoss,		bgm_NightCall_118,		118,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
 		[roomMapa2Ale,					bgm_illbethere,			130,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
 		[rm_GD,						bgm_boss_01,			127,	obj_obs_player,		mode.obstacle,	obj_obs_player,		CMODE.OBJECT_FOLLOWING],
-		[rm_runny,					bgm_bossM1D_95,			95,		obj_runny_player,	mode.move,		o_player,			CMODE.STATIC],
-		[roomMapa1,					bgm_WillPower_89,		89 ,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
 		[roomMapa2Dungeon,			bgm_illbethere,			130,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
 		[roomMapa1Dungeon,			bgm_NightCall_118,		118,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
 		[roomViejoSabio,			bgm_ForestTimeInterior, 126,	o_player,			mode.move,		o_player,			CMODE.OBJECT_FOLLOWING],
 		[roomMapa1NPC,				bgm_WillPower_89,		89,		o_player,			mode.move,		o_player,			CMODE.OBJECT_FOLLOWING],
 		[roomMapa1Casapalchuto,		bgm_WillPower_89,		89,		o_player,			mode.move,		o_player,			CMODE.OBJECT_FOLLOWING]
-
-		
 	];
 	
 	global.room_count=array_length(global.room_data);
@@ -99,7 +97,7 @@ function current(_index){
 	return _value
 }
 //GET THE CURRENT 'SOMETHING' FROM TARGET ROOM
-function target(_index){
+function room_target(_index){
 	
 	var _map=global.roomTarget
 	var _array=global.room_data;

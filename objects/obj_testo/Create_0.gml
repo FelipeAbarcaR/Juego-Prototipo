@@ -9,8 +9,8 @@ u_blur_steps = shader_get_uniform(blurry_shader,"blur_steps");
 u_sigma = shader_get_uniform(blurry_shader, "sigma");
 u_texel_size = shader_get_uniform(blurry_shader, "texel_size");
 
-gui_w = display_get_gui_width();
-gui_h = display_get_gui_height();
+//gui_w = display_get_gui_width();
+//gui_h = display_get_gui_height();
 
 texel_w = 1/global.res.width;
 texel_h = 1/global.res.height;
@@ -29,3 +29,5 @@ timeStep = 0.05;
 oscillatorValue = 0;
 oscillatorValueAbs = 0;
 holavalue=1;
+
+

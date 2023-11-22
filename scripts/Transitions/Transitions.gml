@@ -6,7 +6,7 @@ global.transition_in_start=false;
 global.transition_time=-1;
 
 //Called whenever you want to go from one room to another, using any combination of in/out sequences
-function TransitionStart(_roomTarget,__type,_way=TR_WAY.TWOPASS, _time=2,_BGM=undefined)
+function TransitionStart(_roomTarget,__type=TR_TYPE.FADE_TWOPASS,_way=TR_WAY.TWOPASS, _time=2,_BGM=undefined)
 {
 	if(!global.midTransition)
 	{

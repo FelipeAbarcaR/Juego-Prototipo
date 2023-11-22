@@ -78,7 +78,7 @@
 		//Attack FX when reach the spot
 		if (x_to-x==0){
 			var _midheight = (bbox_top-bbox_bottom)/2;
-			var _effectdistance = 16
+			var _effectdistance = 24
 			//create attack effect
 			SendFX(fx_atk1,x+_effectdistance,y+_midheight,{
 					image_xscale	: 2,

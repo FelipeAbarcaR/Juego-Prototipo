@@ -1,4 +1,8 @@
 /// @description 
+
+
+hola = 10;
+
 event_inherited();
 walk_spd = 1.7;
 initial_walk_spd=walk_spd;

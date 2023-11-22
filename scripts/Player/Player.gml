@@ -240,6 +240,7 @@ function reset_variables() {
 
 function get_input() {
 	
+
 	if (input_check("left"))	left	= 1;
 	if (input_check("right"))	right	= 1;
 	if (input_check("up"))		up		= 1;
@@ -536,10 +537,12 @@ function check_tiles()
 
 function Space_logic()
 {
-
-	var _activateX = x + lengthdir_x(10, dir);
+	var _middle	 =	bbox_top+(bbox_bottom-bbox_top)/2;
+	
+	var _detect_distance = 14;
+	var _activateX = x + lengthdir_x(_detect_distance, dir);
 			
-	var _activateY = y + lengthdir_y(10, dir);
+	var _activateY = _middle + lengthdir_y(_detect_distance, dir);
 			
 	var _activatesize = 4;
 			
@@ -558,7 +561,7 @@ function Space_logic()
 		_activatelist,
 		true
 	);
-			
+
 	//si la primera instancia que encontramos es la entidad	que podemos levantar o no tiene script: intenta el siguiente
 	while(_entitiesfound > 0)
 	{
@@ -566,8 +569,9 @@ function Space_logic()
 
 			activate = _check;
 			global.activate = _check;
+			global.activate.player_active_range=true;
 			_entitiesfound = 0; 
-			global.activate=_check
+
 	}
 					
 	ds_list_destroy(_activatelist);
@@ -577,7 +581,6 @@ function Space_logic()
 	if(global.interact)
 		{
 
-			
 			if(activate == noone)
 			{
 					
@@ -616,11 +619,8 @@ function Space_logic()
 					uc_set_target_x(global.activate.x);
 					uc_set_target_y(global.activate.y);
 					
-					with(o_player)
-					{
-						automove_from_activate=true;
-						if(state != states.LOCK && state != states.AUTOMOVING) state = states.AUTOMOVING;
-					}
+					state=states.LOCK
+					ScriptExecuteArray(activate.EntityActivateScript, activate.EntityActivateArgs);
 				}
 				else
 				{
@@ -809,9 +809,11 @@ function player_automove()
 {
 	 if(automove_from_activate)
 		{
+			//si es que debe activar el scriupt de la instance activate al llegar
 			placement_Player_NPC( activate.x + 20 ,activate.y + 30, false,walk_spd/2);
 		}else
 		{
+			//solo llegar
 			placement_Player( automove_x, automove_y, false,walk_spd/2);
 		}
 }

@@ -21,4 +21,4 @@ speed=0.007+random(0.014);
 
 shadow_surface=surface_create(sprite_width,sprite_height);
 
-maxalpha=0.6;
+maxalpha=0.3;

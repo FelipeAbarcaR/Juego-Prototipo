@@ -8,10 +8,10 @@ max_input_delay = 5; // how many frames to ignore input
 input_delay = max_input_delay;
 
 // Position
-margin = 32; // how much space the textbox gets from the edges of the screen
-padding = 8; // how much space things inside the textbox get
-width = display_get_gui_width()*(5/8);
-height = display_get_height()/5;
+margin = 56; // how much space the textbox gets from the edges of the screen
+padding = 12; // how much space things inside the textbox get
+width = floor(display_get_gui_width()*(5/8));
+height = floor(display_get_height()/6.5);
 
 x = (display_get_gui_width()- width)/2;
 y = display_get_gui_height() - height - margin;
@@ -20,10 +20,11 @@ y = display_get_gui_height() - height - margin;
 // Text
 text_font = "fnt_RODIN";
 text_color = c_white;
-text_speed = 0.6;
+text_speed = 0.45;
 text_x = padding;
-text_y = padding*3;
+text_y = padding;
 text_width = width - padding * 2;
+lenght_shift_format=80; //max lenght to shift text from middle center to upper top corner
 
 //Portrait
 
@@ -36,7 +37,7 @@ portrait_y = padding;
 //Speaker
 
 speaker_font = "fnt_Dogica";
-speaker_color = #464633;
+speaker_color = #f0e1a3;
 speaker_name = "";
 speaker_width = sprite_get_width(spr_name);
 speaker_height = sprite_get_height(spr_name);
@@ -108,7 +109,6 @@ text_progress = 0;
 text_length = 0;
 
 
-
 enum PORTRAIT_SIDE
 {
 	LEFT,
@@ -157,10 +157,6 @@ next = function() {
 		global.end_interaction = false;
 		global.textover = true;
 		
-		with (o_player) 
-		{
-			state = states.IDLE;
-		}
 		//call to player to update values
 		var _player=global.room_data[global.currentroom][Index.mainchar];
 		with(_player)

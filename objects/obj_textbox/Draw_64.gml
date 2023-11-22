@@ -1,6 +1,6 @@
 var draw_text_x = x;
 var draw_text_y = y;
-var draw_text_witdh = text_width;
+var draw_text_width = text_width;
 var portrait_scale =1;
 var finished = (typist.get_state()==1);
 
@@ -13,20 +13,20 @@ if (event_mode==textbox_event.TEXTING)
 	
 	var _scaling_y = starting_y-(height/2)*increasing_value;
 	
-switch(bg_type)
-	{
-	    case BG_TYPE.npc:
-			draw_sprite_stretched(bg_NPC_sprite,bg_index,x,_scaling_y,width,1+height*increasing_value);
-		break;
+	switch(bg_type)
+		{
+		    case BG_TYPE.npc:
+				draw_sprite_stretched(bg_NPC_sprite,bg_index,x,_scaling_y,width,1+height*increasing_value);
+			break;
 		
-		case BG_TYPE.blurry:
-			draw_blurry_background_gui(x,_scaling_y,width,1+height*increasing_value);
-		break;
+			case BG_TYPE.blurry:
+				draw_blurry_background_gui(x,_scaling_y,width,1+height*increasing_value);
+			break;
 		
-		case BG_TYPE.woodsign:
-			draw_sprite_stretched(bg_NPC_sprite,bg_index,x,_scaling_y,width,1+height*increasing_value);
-		break;
-	}
+			case BG_TYPE.woodsign:
+				draw_sprite_stretched(bg_NPC_sprite,bg_index,x,_scaling_y,width,1+height*increasing_value);
+			break;
+		}
 	
 	
 	//check if the animation for background reached his limit
@@ -38,7 +38,7 @@ switch(bg_type)
 		if(sprite_exists(portrait_sprite))
 		{
 			//Shrink text width vy the width the portrait will take up
-			draw_text_witdh -= portrait_width + portrait_x + padding;
+			draw_text_width -= portrait_width + portrait_x + padding;
 	
 			var draw_portrait_x = x + portrait_x;
 			var draw_portrait_y = y + portrait_y;
@@ -77,28 +77,40 @@ switch(bg_type)
 		{
 			//Expand the nameplate if the name is wider than the default width
 			
-			var _scribble_speaker=scribble(speaker_name);
+			var _scribble_speaker=scribble(speaker_name );
 			var name_w = max(_scribble_speaker.get_width()+padding*2, speaker_width);
 			var name_h= max(_scribble_speaker.get_height()+padding*2,speaker_height);
 			//el padding los puse como extra para que calce, en verdad no se pq pero funciona
-			draw_sprite_stretched(spr_name,0,x + speaker_x-name_w/2, y + speaker_y-speaker_height/2, name_w+padding*2, speaker_height+padding*2);
-			if(global.DrawText)
-			{
-			    draw_circle(x+padding+speaker_x,y+speaker_y,3,0);
-				draw_circle(x + speaker_x-name_w/2, y + speaker_y-speaker_height/2,3,0);
-			}
+			//draw_sprite_stretched(spr_name,0,x + speaker_x-name_w/2, y + speaker_y-speaker_height/2, name_w+padding*2, speaker_height+padding*2);
 			
-			_scribble_speaker.starting_format(speaker_font,speaker_color);
-			_scribble_speaker.align(fa_center,fa_middle);
-			_scribble_speaker.draw(x+padding+speaker_x,y+speaker_y+padding);
+			_scribble_speaker.starting_format(text_font,#5c2e17);
+			_scribble_speaker.draw(draw_text_x+text_x,draw_text_y+text_y);
+			_scribble_speaker.starting_format(text_font,speaker_color);
+			_scribble_speaker.draw(draw_text_x+text_x+2,draw_text_y+text_y+2);
+			
+			//adjust the text position under the speaker name
+			draw_text_y+=name_h;
 		}
 
-		// Text
+		// TEXT
+		//change te position and format of the text depending on the lenght of the text
+		//switch between the top left corner of the textbox to the middle center
+		if(text_length>=lenght_shift_format)
+		{
+			scribble_object.align(fa_left,fa_top);
+		}
+		else
+		{
+		    scribble_object.align(fa_center,fa_middle);
+			draw_text_x=floor(draw_text_x + (draw_text_width/2));
+			draw_text_y=floor(draw_text_y+text_y)
+		}
+		
 		scribble_object.starting_format(text_font,#5c2e17);
-		scribble_object.wrap(draw_text_witdh);
-		scribble_object.draw(draw_text_x + text_x,draw_text_y + text_y,typist);
-		scribble_object.starting_format(text_font,text_color);
-		scribble_object.draw(draw_text_x + text_x+2,draw_text_y + text_y+2,typist);
+		scribble_object.wrap(draw_text_width);
+		scribble_object.draw(draw_text_x,draw_text_y,typist);
+		scribble_object.starting_format(text_font,c_white);
+		scribble_object.draw(draw_text_x+2,draw_text_y+2,typist);
 
 		//Options
 		if(finished && option_count >0)
@@ -132,4 +144,10 @@ switch(bg_type)
 		
 		}
 	}
+}
+
+if(global.DrawText)
+{
+    draw_circle(x,y,2,false);
+	draw_circle_color(draw_text_x,draw_text_y,2,c_blue,c_blue,false)
 }

@@ -18,14 +18,29 @@
 #macro CRYPT new CryptAction
 #macro BACKGROUND new BGAction
 #macro TBEVENT new UserEventAction
+#macro SETNPC new SetNPCAction
 
 function startDialogue(topic) {
 	if (instance_exists(obj_textbox)) return;
 	var inst = instance_create_depth(x, y, -999, obj_textbox);
+
+	if(instance_exists(activate))
+	{
+		inst.npc_object=activate;
+		inst.dialogue_sounds= activate.dialogue_sounds;
+	}
+	inst.setTopic(topic);
+	return inst;
+
+}
+function startDialogueConciencia(topic) {
+	if (instance_exists(obj_textbox_con)) return;
+	var inst = instance_create_depth(x, y, -999, obj_textbox_con);
 	inst.dialogue_sounds= activate.dialogue_sounds;
 	inst.setTopic(topic);
 
 }
+
 
 function DialogueSound(){
 
@@ -270,6 +285,7 @@ function ItemAction(_itemid,_quantity) : DialogueAction() constructor{
 	
 }
 
+
 function BGAction(_bg_type,_sprite_index=0) : DialogueAction() constructor{
 	
 	background_type=_bg_type;
@@ -285,6 +301,18 @@ function BGAction(_bg_type,_sprite_index=0) : DialogueAction() constructor{
 	
 }
 
+function SetNPCAction(_bg_type,_sprite_index=0) : DialogueAction() constructor{
+	
+	npc_asset			=	_bg_type;
+	
+	act = function(textbox)
+	{
+		textbox.npc_object=npc_asset;
+		textbox.dialogue_sounds=npc_object.dialogue_sounds;
+		textbox.next ();
+	}
+	
+}
 function UserEventAction(_index): DialogueAction() constructor
 {
     activate_index=_index;
@@ -652,7 +680,7 @@ global.topics[$ "Batallando"] = [
 	TEXT("Esa mirada de juicio me tiene cansado, en guardia, a mover la coneja"),
 	FIGHT("pelearanagana","pelearanapierde")
 ];
-		
+
 global.topics[$ "signhouse1"] = [
 	BACKGROUND(BG_TYPE.woodsign),
 	TEXT("El Viejo Sabio le invita a entrar a la casa, no es que tenga algo mejor que hacer"),
@@ -668,8 +696,8 @@ global.topics[$ "signhouse2"] = [
 	];
 
 global.topics[$ "signCrypt1"] = [
-	
-	CHOICE("¿Quieres comenzar?",OPTION("Si","Cryptmoveandfight"),OPTION("No","signenemy1"))
+	SPEAKER("Flamenco Tecrey",-1,PORTRAIT_SIDE.LEFT),
+	CHOICE("Vamos, inténtalo, este es un espacio seguro y de confianza :3",OPTION("Aceptar","Cryptmoveandfight"),OPTION("Rechazar","signenemy1"))
 ];
 
 global.topics[$ "signCrypt2"] = [
@@ -759,4 +787,30 @@ global.topics[$ "bossm1"] = [
 	TEXT("Colabora fundo, se cuelga tripa."),
 	TEXT("¡VETE DE AQUÍ AHORA!"),
 	TBEVENT(0)
+];
+
+global.topics[$ "TESTCUTSCENES1"] = [
+	SPEAKER("Conejite",spr_pt_coneja,PORTRAIT_SIDE.LEFT),
+	TEXT("Weena hmno no te habia visto por aquí")
+];
+global.topics[$ "TESTCUTSCENES2"] = [
+	SPEAKER("Conejite",spr_pt_coneja,PORTRAIT_SIDE.LEFT),
+	TEXT("No sé pq me acerco wn")
+];
+global.topics[$ "TESTCUTSCENES3"] = [
+	SPEAKER("Conejite",spr_pt_coneja,PORTRAIT_SIDE.LEFT),
+	TEXT("Voy a fingir que te estoy diciendo algo importante")
+];
+global.topics[$ "TESTCUTSCENES4"] = [
+	SPEAKER("Jabali",spr_pt_jabali,PORTRAIT_SIDE.RIGHT),
+	TEXT("Hola, puedo unirme?")
+];
+global.topics[$ "TESTCUTSCENES5"] = [
+	SPEAKER("Conejite",spr_pt_coneja,PORTRAIT_SIDE.LEFT),
+	TEXT("Osea si pero mira de lejos pq no te vas a mover de ahí, incluso acá termina la cinemática man")
+];
+
+global.topics[$ "TESTCUTSCENES6"] = [
+	SPEAKER("Jabali",spr_pt_jabali_enojado,PORTRAIT_SIDE.RIGHT),
+	TEXT("NO PUEDE SER!")
 ];

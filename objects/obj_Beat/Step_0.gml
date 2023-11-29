@@ -150,7 +150,7 @@ var _tp=obj_transition_manager.transition_progress;
 	{
 		mid_fading=true;
 		
-		new_music=target(Index.music);
+		new_music=room_target(Index.music);
 		show_debug_message("new_music: " +string(audio_get_name(new_music)));
 		bgm_snd=audio_play_sound(new_music,10,1,0);
 		bgm_transition_set_values();

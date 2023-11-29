@@ -24,4 +24,4 @@ automoving=false;
 x_dest=-1;
 y_dest=-1;
 automove_relative=false;
-automove_spd=spd
+automove_spd=spd;

@@ -1,4 +1,14 @@
 {
   "FolderOrderSettings": [],
-  "ResourceOrderSettings": [],
+  "ResourceOrderSettings": [
+    {"name":"ts_Mapa1Cinematica1","order":1,"path":"tilesets/ts_Mapa1Cinematica1/ts_Mapa1Cinematica1.yy",},
+    {"name":"spr_dragon","order":1,"path":"sprites/spr_dragon/spr_dragon.yy",},
+    {"name":"obj_backstage_dude","order":1,"path":"objects/obj_backstage_dude/obj_backstage_dude.yy",},
+    {"name":"spr_beam_testo_pt2","order":2,"path":"sprites/spr_beam_testo_pt2/spr_beam_testo_pt2.yy",},
+    {"name":"spr_beam_testo","order":1,"path":"sprites/spr_beam_testo/spr_beam_testo.yy",},
+    {"name":"obj_runny_beam","order":1,"path":"objects/obj_runny_beam/obj_runny_beam.yy",},
+    {"name":"bgm_NEON_ICE_130BPM","order":1,"path":"sounds/bgm_NEON_ICE_130BPM/bgm_NEON_ICE_130BPM.yy",},
+    {"name":"spr_ts_Mapa1_Cinematica","order":1,"path":"sprites/spr_ts_Mapa1_Cinematica/spr_ts_Mapa1_Cinematica.yy",},
+  ],
+
 }

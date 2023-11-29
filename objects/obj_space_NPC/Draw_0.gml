@@ -8,4 +8,3 @@ if(!instance_exists(obj_fight_control))
     draw_self(); 
 }
 
-draw_text(x,y,"yes");

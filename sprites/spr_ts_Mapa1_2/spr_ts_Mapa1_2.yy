@@ -4,7 +4,7 @@
   "name": "spr_ts_Mapa1_2",
   "bbox_bottom": 351,
   "bbox_left": 16,
-  "bbox_right": 383,
+  "bbox_right": 414,
   "bbox_top": 16,
   "bboxMode": 0,
   "collisionKind": 1,

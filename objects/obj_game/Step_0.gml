@@ -47,7 +47,7 @@ if(input_check_pressed("restart_room"))
 	event_user(3);
 }
 
-if(keyboard_check_pressed(vk_delete))
+if(keyboard_check_pressed(ord("Q")))
 {
 	uc_set_view_scale(2,0.1);
 	surface_resize(application_surface,Camera.view_width*2,Camera.view_height*2);

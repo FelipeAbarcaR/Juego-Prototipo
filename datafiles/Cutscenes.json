@@ -1,6 +1,6 @@
 [
  {
-  "ID": "1 A0",
+  "ID": "1A0",
   "CS_NUMBER": 1,
   "CS_NAME": "Cinematoast",
   "ACTION_NUMBER": 0,
@@ -15,7 +15,6 @@
   "ACTION": "CAMERA",
   "ARG1": 1,
   "ARG2": "obj_hamster",
-  "ARG3": 2312,
   "SNAP": 1
  },
  {
@@ -23,18 +22,18 @@
   "CS_NUMBER": 1,
   "CS_NAME": "Cinematoast",
   "ACTION_NUMBER": 2,
-  "ACTION": "WAIT",
-  "ARG1": 1,
-  "SNAP": 0
+  "ACTION": "GESTURE",
+  "ARG1": "obj_hamster",
+  "ARG2": 4,
+  "SNAP": 1
  },
  {
   "ID": "1A3",
   "CS_NUMBER": 1,
   "CS_NAME": "Cinematoast",
   "ACTION_NUMBER": 3,
-  "ACTION": "GESTURE",
-  "ARG1": "obj_hamster",
-  "ARG2": 1,
+  "ACTION": "SOUNDFX",
+  "ARG1": "sfx_rocks",
   "SNAP": 1
  },
  {
@@ -43,7 +42,7 @@
   "CS_NAME": "Cinematoast",
   "ACTION_NUMBER": 4,
   "ACTION": "WAIT",
-  "ARG1": 0.5,
+  "ARG1": 2.1,
   "SNAP": 0
  },
  {
@@ -51,10 +50,8 @@
   "CS_NUMBER": 1,
   "CS_NAME": "Cinematoast",
   "ACTION_NUMBER": 5,
-  "ACTION": "CAMERA",
-  "ARG1": 1,
-  "ARG2": "o_player",
-  "ARG3": 2312,
+  "ACTION": "CAMERAFX",
+  "ARG1": "SCREENSHAKE",
   "SNAP": 1
  },
  {
@@ -63,7 +60,7 @@
   "CS_NAME": "Cinematoast",
   "ACTION_NUMBER": 6,
   "ACTION": "WAIT",
-  "ARG1": 0.5,
+  "ARG1": 1,
   "SNAP": 0
  },
  {
@@ -72,7 +69,7 @@
   "CS_NAME": "Cinematoast",
   "ACTION_NUMBER": 7,
   "ACTION": "GESTURE",
-  "ARG1": "o_player",
+  "ARG1": "obj_jabali",
   "ARG2": 1,
   "SNAP": 1
  },
@@ -81,30 +78,28 @@
   "CS_NUMBER": 1,
   "CS_NAME": "Cinematoast",
   "ACTION_NUMBER": 8,
-  "ACTION": "CAMERA",
-  "ARG1": 1,
-  "ARG2": "obj_hamster",
-  "ARG3": 2312,
-  "SNAP": 1
+  "ACTION": "WAIT",
+  "ARG1": 0.1,
+  "SNAP": 0
  },
  {
   "ID": "1A9",
   "CS_NUMBER": 1,
   "CS_NAME": "Cinematoast",
   "ACTION_NUMBER": 9,
-  "ACTION": "WAIT",
-  "ARG1": 0.5,
-  "SNAP": 0
+  "ACTION": "GESTURE",
+  "ARG1": "obj_coneja",
+  "ARG2": 1,
+  "SNAP": 1
  },
  {
   "ID": "1A10",
   "CS_NUMBER": 1,
   "CS_NAME": "Cinematoast",
   "ACTION_NUMBER": 10,
-  "ACTION": "MOVE",
-  "ARG1": "obj_jabali",
-  "ARG2": 1099,
-  "ARG3": 311,
+  "ACTION": "GESTURE",
+  "ARG1": "obj_capibara",
+  "ARG2": 1,
   "SNAP": 1
  },
  {
@@ -113,7 +108,7 @@
   "CS_NAME": "Cinematoast",
   "ACTION_NUMBER": 11,
   "ACTION": "WAIT",
-  "ARG1": 0.2,
+  "ARG1": 1,
   "SNAP": 0
  },
  {
@@ -121,11 +116,11 @@
   "CS_NUMBER": 1,
   "CS_NAME": "Cinematoast",
   "ACTION_NUMBER": 12,
-  "ACTION": "MOVE",
-  "ARG1": "obj_jabali2",
-  "ARG2": 1130,
-  "ARG3": 271,
-  "SNAP": 0
+  "ACTION": "CAMERA",
+  "ARG1": 0,
+  "ARG2": 1035,
+  "ARG3": 40,
+  "SNAP": 1
  },
  {
   "ID": "1A13",
@@ -133,7 +128,7 @@
   "CS_NAME": "Cinematoast",
   "ACTION_NUMBER": 13,
   "ACTION": "WAIT",
-  "ARG1": 0.4,
+  "ARG1": 1,
   "SNAP": 0
  },
  {
@@ -141,19 +136,17 @@
   "CS_NUMBER": 1,
   "CS_NAME": "Cinematoast",
   "ACTION_NUMBER": 14,
-  "ACTION": "MOVE",
-  "ARG1": "obj_capibara",
-  "ARG2": 1018,
-  "ARG3": 296,
-  "SNAP": 0
+  "ACTION": "SOUNDFX",
+  "ARG1": "sfx_digging",
+  "SNAP": 1
  },
  {
   "ID": "1A15",
   "CS_NUMBER": 1,
   "CS_NAME": "Cinematoast",
   "ACTION_NUMBER": 15,
-  "ACTION": "WAIT",
-  "ARG1": 1,
+  "ACTION": "EVENT",
+  "ARG1": 0,
   "SNAP": 0
  },
  {
@@ -161,10 +154,8 @@
   "CS_NUMBER": 1,
   "CS_NAME": "Cinematoast",
   "ACTION_NUMBER": 16,
-  "ACTION": "MOVE",
-  "ARG1": "obj_hamster",
-  "ARG2": 1056,
-  "ARG3": 280,
+  "ACTION": "WAIT",
+  "ARG1": 0.2,
   "SNAP": 0
  },
  {
@@ -172,8 +163,10 @@
   "CS_NUMBER": 1,
   "CS_NAME": "Cinematoast",
   "ACTION_NUMBER": 17,
-  "ACTION": "WAIT",
-  "ARG1": 0.7,
+  "ACTION": "MOVE",
+  "ARG1": "obj_gato_cinematica",
+  "ARG2": 1056,
+  "ARG3": 196,
   "SNAP": 0
  },
  {
@@ -181,11 +174,11 @@
   "CS_NUMBER": 1,
   "CS_NAME": "Cinematoast",
   "ACTION_NUMBER": 18,
-  "ACTION": "MOVE",
-  "ARG1": "o_player",
-  "ARG2": 1056,
-  "ARG3": 235,
-  "SNAP": 0
+  "ACTION": "CAMERA",
+  "ARG1": 1,
+  "ARG2": "obj_hamster",
+  "ARG3": 2312,
+  "SNAP": 1
  },
  {
   "ID": "1A19",
@@ -193,7 +186,7 @@
   "CS_NAME": "Cinematoast",
   "ACTION_NUMBER": 19,
   "ACTION": "WAIT",
-  "ARG1": 0.3,
+  "ARG1": 1,
   "SNAP": 0
  },
  {
@@ -201,8 +194,244 @@
   "CS_NUMBER": 1,
   "CS_NAME": "Cinematoast",
   "ACTION_NUMBER": 20,
+  "ACTION": "GESTURE",
+  "ARG1": "obj_hamster",
+  "ARG2": 1,
+  "SNAP": 1
+ },
+ {
+  "ID": "1A21",
+  "CS_NUMBER": 1,
+  "CS_NAME": "Cinematoast",
+  "ACTION_NUMBER": 21,
+  "ACTION": "WAIT",
+  "ARG1": 0.5,
+  "SNAP": 0
+ },
+ {
+  "ID": "1A22",
+  "CS_NUMBER": 1,
+  "CS_NAME": "Cinematoast",
+  "ACTION_NUMBER": 22,
+  "ACTION": "CAMERA",
+  "ARG1": 1,
+  "ARG2": "oobj_gato_cinematica",
+  "ARG3": 2312,
+  "SNAP": 1
+ },
+ {
+  "ID": "1A23",
+  "CS_NUMBER": 1,
+  "CS_NAME": "Cinematoast",
+  "ACTION_NUMBER": 23,
+  "ACTION": "WAIT",
+  "ARG1": 0.5,
+  "SNAP": 0
+ },
+ {
+  "ID": "1A24",
+  "CS_NUMBER": 1,
+  "CS_NAME": "Cinematoast",
+  "ACTION_NUMBER": 24,
+  "ACTION": "GESTURE",
+  "ARG1": "obj_gato_cinematica",
+  "ARG2": 1,
+  "SNAP": 1
+ },
+ {
+  "ID": "1A25",
+  "CS_NUMBER": 1,
+  "CS_NAME": "Cinematoast",
+  "ACTION_NUMBER": 25,
+  "ACTION": "CAMERA",
+  "ARG1": 1,
+  "ARG2": "obj_hamster",
+  "ARG3": 2312,
+  "SNAP": 1
+ },
+ {
+  "ID": "1A26",
+  "CS_NUMBER": 1,
+  "CS_NAME": "Cinematoast",
+  "ACTION_NUMBER": 26,
+  "ACTION": "WAIT",
+  "ARG1": 0.5,
+  "SNAP": 0
+ },
+ {
+  "ID": "1A27",
+  "CS_NUMBER": 1,
+  "CS_NAME": "Cinematoast",
+  "ACTION_NUMBER": 27,
+  "ACTION": "MOVE",
+  "ARG1": "obj_jabali",
+  "ARG2": 1099,
+  "ARG3": 311,
+  "SNAP": 1
+ },
+ {
+  "ID": "1A28",
+  "CS_NUMBER": 1,
+  "CS_NAME": "Cinematoast",
+  "ACTION_NUMBER": 28,
+  "ACTION": "WAIT",
+  "ARG1": 0.2,
+  "SNAP": 0
+ },
+ {
+  "ID": "1A29",
+  "CS_NUMBER": 1,
+  "CS_NAME": "Cinematoast",
+  "ACTION_NUMBER": 29,
+  "ACTION": "MOVE",
+  "ARG1": "obj_jabali2",
+  "ARG2": 1130,
+  "ARG3": 271,
+  "SNAP": 0
+ },
+ {
+  "ID": "1A30",
+  "CS_NUMBER": 1,
+  "CS_NAME": "Cinematoast",
+  "ACTION_NUMBER": 30,
+  "ACTION": "WAIT",
+  "ARG1": 0.4,
+  "SNAP": 0
+ },
+ {
+  "ID": "1A31",
+  "CS_NUMBER": 1,
+  "CS_NAME": "Cinematoast",
+  "ACTION_NUMBER": 31,
+  "ACTION": "MOVE",
+  "ARG1": "obj_capibara",
+  "ARG2": 1018,
+  "ARG3": 296,
+  "SNAP": 0
+ },
+ {
+  "ID": "1A32",
+  "CS_NUMBER": 1,
+  "CS_NAME": "Cinematoast",
+  "ACTION_NUMBER": 32,
+  "ACTION": "WAIT",
+  "ARG1": 1,
+  "SNAP": 0
+ },
+ {
+  "ID": "1A33",
+  "CS_NUMBER": 1,
+  "CS_NAME": "Cinematoast",
+  "ACTION_NUMBER": 33,
+  "ACTION": "MOVE",
+  "ARG1": "obj_hamster",
+  "ARG2": 1056,
+  "ARG3": 280,
+  "SNAP": 1
+ },
+ {
+  "ID": "1A34",
+  "CS_NUMBER": 1,
+  "CS_NAME": "Cinematoast",
+  "ACTION_NUMBER": 34,
+  "ACTION": "WAIT",
+  "ARG1": 0.7,
+  "SNAP": 0
+ },
+ {
+  "ID": "1A35",
+  "CS_NUMBER": 1,
+  "CS_NAME": "Cinematoast",
+  "ACTION_NUMBER": 35,
+  "ACTION": "MOVE",
+  "ARG1": "obj_gato_cinematica",
+  "ARG2": 1056,
+  "ARG3": 235,
+  "SNAP": 1
+ },
+ {
+  "ID": "1A36",
+  "CS_NUMBER": 1,
+  "CS_NAME": "Cinematoast",
+  "ACTION_NUMBER": 36,
+  "ACTION": "WAIT",
+  "ARG1": 0.3,
+  "SNAP": 0
+ },
+ {
+  "ID": "1A37",
+  "CS_NUMBER": 1,
+  "CS_NAME": "Cinematoast",
+  "ACTION_NUMBER": 37,
   "ACTION": "CAMERAFX",
   "ARG1": "SCREENSHAKE",
+  "SNAP": 1
+ },
+ {
+  "ID": "1A38",
+  "CS_NUMBER": 1,
+  "CS_NAME": "Cinematoast",
+  "ACTION_NUMBER": 38,
+  "ACTION": "CAMERAFX",
+  "ARG1": "FLASH",
+  "SNAP": 1
+ },
+ {
+  "ID": "1A39",
+  "CS_NUMBER": 1,
+  "CS_NAME": "Cinematoast",
+  "ACTION_NUMBER": 39,
+  "ACTION": "SOUNDFX",
+  "ARG1": "sfx_thunder",
+  "SNAP": 1
+ },
+ {
+  "ID": "1A40",
+  "CS_NUMBER": 1,
+  "CS_NAME": "Cinematoast",
+  "ACTION_NUMBER": 40,
+  "ACTION": "EVENT",
+  "ARG1": 1,
+  "SNAP": 1
+ },
+ {
+  "ID": "1A41",
+  "CS_NUMBER": 1,
+  "CS_NAME": "Cinematoast",
+  "ACTION_NUMBER": 41,
+  "ACTION": "WAIT",
+  "ARG1": 3,
+  "SNAP": 0
+ },
+ {
+  "ID": "1A42",
+  "CS_NUMBER": 1,
+  "CS_NAME": "Cinematoast",
+  "ACTION_NUMBER": 42,
+  "ACTION": "CREATE",
+  "ARG1": "obj_dios1",
+  "ARG2": 450,
+  "ARG3": 200,
+  "SNAP": 1
+ },
+ {
+  "ID": "1A43",
+  "CS_NUMBER": 1,
+  "CS_NAME": "Cinematoast",
+  "ACTION_NUMBER": 43,
+  "ACTION": "MOVE",
+  "ARG1": "obj_dios1",
+  "ARG2": 850,
+  "ARG3": 200,
+  "SNAP": 0
+ },
+ {
+  "ID": "1A44",
+  "CS_NUMBER": 1,
+  "CS_NAME": "Cinematoast",
+  "ACTION_NUMBER": 44,
+  "ACTION": "WAIT",
+  "ARG1": 3,
   "SNAP": 0
  }
 ]

@@ -30,7 +30,7 @@
 //holo++;
 //set_gesture(obj_rana,holo);
 
-//instance_create_depth(x,y,depth,obj_cutscene);
+instance_create_depth(x,y,depth,obj_cutscene);
 
 //uc_hit(90,2)
 
@@ -43,4 +43,4 @@
 //var _enb2=uc_get_view_auto_scale_enabled()
 //show_debug_message(string(_enb2))
 
-instance_create_depth(912,0,1650,obj_backstage_dude);
+//instance_create_depth(912,0,2800,obj_backstage_dude);

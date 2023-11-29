@@ -159,3 +159,42 @@ if(layer_exists("Alpha"))
 
 //restart room timer
 room_time=0;
+
+
+//search if this is first time visiting this room
+var _rooms_visited=array_length(room_visit_list);
+
+var _visited=false;
+for(var i=0;i<_rooms_visited;i++)
+{
+	if(room_visit_list[0]==room)
+	{
+		_visited=true;
+		break;
+	}
+}
+if(!_visited)
+{
+	var _room=room;
+	array_push(room_visit_list,_room);
+		
+	switch(_room)
+	{
+		case roomMapaInicial:
+			var _lay_id=layer_get_id("gui_layer_top");
+			var _x=uc_get_view_x();
+			var _y=uc_get_view_y();
+			var _bg=instance_create_layer(_x,_y,_lay_id,obj_background_landscape,{background_type:room})	
+		break;
+			
+		case roomMapa1Talo:
+			var _lay_id=layer_get_id("gui_layer_top");
+			var _x=uc_get_view_x();
+			var _y=uc_get_view_y();
+			var _bg=instance_create_layer(_x,_y,_lay_id,obj_background_landscape,{background_type:room})	
+		break;
+	}
+		
+		
+}
+	

@@ -9,7 +9,7 @@ if(instance_number(object_index) ==1)
 		var rand_y = floor(random(room_height));
 		
 	    instance_create_layer(rand_x,rand_y,layer,object_index);
-		show_debug_message("instance_created x= "+string(rand_x)+ " y= "+string(rand_y));
+		show_debug_message("Nube creada x= "+string(rand_x)+ " y= "+string(rand_y));
 	}
 }
 

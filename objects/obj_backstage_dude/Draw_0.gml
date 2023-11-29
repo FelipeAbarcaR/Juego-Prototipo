@@ -11,9 +11,10 @@ for(var i=_row_start;i<=_row_start+_row_width;i++)
 	if (i==_row_start) _tile_map=623;
 	if(i>_row_start) _tile_map=624;
 	if(i==_row_start+_row_width) _tile_map=625;
+	if(_row_width==0) _tile_map=0;
     draw_tile(cinema_tileset,_tile_map,0,x+i*_tile_size,y+current_row*_tile_size);
 	
-	draw_circle(x+i*_tile_size,y,4,false);
+	if(global.DrawText) draw_circle(x+i*_tile_size,y,4,false);
 }
 
 
@@ -23,12 +24,12 @@ for(var _i=0;_i<current_row;_i++)
 	{
 		var _tilemap1=tilemap_get_at_pixel(tilemap1,x+_t*_tile_size,y+_i*_tile_size);
 		var _tilemap2=tilemap_get_at_pixel(tilemap2,x+_t*_tile_size,y+_i*_tile_size);
-		draw_tile(cinema_tileset,_tilemap1,0,x+_t*_tile_size,y+_i*_tile_size);
 		draw_tile(cinema_tileset,_tilemap2,0,x+_t*_tile_size,y+_i*_tile_size);
+		draw_tile(cinema_tileset,_tilemap1,0,x+_t*_tile_size,y+_i*_tile_size);
 	}
-    
 }
-draw_circle(x,y,5,false);
+
+if(global.DrawText) draw_circle(x,y,5,false);
 
 
 

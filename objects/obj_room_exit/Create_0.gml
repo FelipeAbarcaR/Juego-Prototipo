@@ -3,7 +3,7 @@ image_speed = 0;
 
 flipimageyscale=-1;
 
-room_target=-1;
+_room_target = -1;
 
 if(RoomName != "-1")
 {
@@ -17,7 +17,7 @@ if(RoomName != "-1")
 	    var _room=_data[i][Index.name];
 		if(_room==_room_index)
 		{
-		    room_target=_room;
+		    _room_target=_room;
 			break;
 			_found=1;
 		}

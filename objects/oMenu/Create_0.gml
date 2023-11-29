@@ -319,16 +319,47 @@ blah blah blah
 		]],
 		
 		// Demo for scrolling
-		["Lots of stuff", [
-			["thing 1", new ScriptRunner(function() { /* Do nothing */ })],
-			["thing 2", new ScriptRunner(function() { /* Do nothing */ })],
-			["thing 3", new ScriptRunner(function() { /* Do nothing */ })],
-			["thing 4", new ScriptRunner(function() { /* Do nothing */ })],
-			["thing 5", new ScriptRunner(function() { /* Do nothing */ })],
-			["thing 6", new ScriptRunner(function() { /* Do nothing */ })],
-			["thing 7", new ScriptRunner(function() { /* Do nothing */ })],
-			["thing 8", new ScriptRunner(function() { /* Do nothing */ })],
-			["thing 9", new ScriptRunner(function() { /* Do nothing */ })]
+		["ROOMS", [
+			["roomMapa1Talo", new ScriptRunner(function() {room_goto_menu(roomMapa1Talo);
+			menuModePause();
+			menuSetPreset(e_menu_presets.pause_menu);
+			room = roomMapa1Talo; })],
+			["rm_runny", new ScriptRunner(function() { room_goto_menu(rm_runny);
+			menuModePause();
+			menuSetPreset(e_menu_presets.pause_menu);
+			room = rm_runny; })],
+			["roomMapa1DungeonBoss", new ScriptRunner(function() { room_goto_menu(roomMapa1DungeonBoss);
+			menuModePause();
+			menuSetPreset(e_menu_presets.pause_menu);
+			room = roomMapa1DungeonBoss; })],
+			["roomMapa2", new ScriptRunner(function() { room_goto_menu(roomMapa2);
+			menuModePause();
+			menuSetPreset(e_menu_presets.pause_menu);
+			room = roomMapa2; })],
+			["rm_GD", new ScriptRunner(function() { room_goto_menu(rm_GD);
+			menuModePause();
+			menuSetPreset(e_menu_presets.pause_menu);
+			room = rm_GD; })],
+			["roomMapa2Dungeon", new ScriptRunner(function() { room_goto_menu(roomMapa2Dungeon);
+			menuModePause();
+			menuSetPreset(e_menu_presets.pause_menu);
+			room = roomMapa2Dungeon;})],
+			["roomMapa1Dungeon", new ScriptRunner(function() {room_goto_menu(roomMapa1Dungeon);
+			menuModePause();
+			menuSetPreset(e_menu_presets.pause_menu);
+			room = roomMapa1Dungeon; })],
+			["roomViejoSabio", new ScriptRunner(function() { room_goto_menu(roomViejoSabio);
+			menuModePause();
+			menuSetPreset(e_menu_presets.pause_menu);
+			room = roomViejoSabio; })],
+			["roomMapa1NPC", new ScriptRunner(function() {  room_goto_menu(roomMapa1NPC);
+			menuModePause();
+			menuSetPreset(e_menu_presets.pause_menu);
+			room = roomMapa1NPC; })],
+			["roomMapa1Casapalchuto", new ScriptRunner(function() {  room_goto_menu(roomMapa1Casapalchuto);
+			menuModePause();
+			menuSetPreset(e_menu_presets.pause_menu);
+			room = roomMapa1Casapalchuto; })]
 		]],
 		
 		// Credits edit text above

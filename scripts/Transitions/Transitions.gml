@@ -99,3 +99,20 @@ function TransitionResetValues()
 	global.targetY=-1;
 	global.targetdirection=-1;
 }
+
+function room_goto_menu(_room){
+	
+	if(_room != roomMapaInicial)
+	{
+		layer_set_target_room(_room);
+		instance_create_layer(0,0,"Instances",o_player);
+		instance_create_layer(0,0,"Instances",obj_game);
+		instance_create_layer(0,0,"Instances",obj_beat);
+		instance_create_layer(0,0,"Instances",obj_fx_manager_test);
+		instance_create_layer(0,0,"Instances",Camera);
+	
+		layer_reset_target_room();
+		room_goto(_room);
+	}
+	
+}

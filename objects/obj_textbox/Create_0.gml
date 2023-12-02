@@ -46,13 +46,6 @@ speaker_y = height-padding-speaker_height;
 
 //Background
 
-enum  BG_TYPE
-{
-    blurry,
-	woodsign,
-	npc
-}
-
 bg_type	=	BG_TYPE.blurry;
 
 bg_sign_sprite	=	spr_textbox_sign_background;
@@ -107,14 +100,6 @@ current_action = -1;
 text = "";
 text_progress = 0;
 text_length = 0;
-
-
-enum PORTRAIT_SIDE
-{
-	LEFT,
-	RIGHT,
-}
-	
 
 options = [];
 current_option = 0;

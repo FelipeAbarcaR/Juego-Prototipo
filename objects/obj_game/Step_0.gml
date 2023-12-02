@@ -5,7 +5,7 @@ if(input_check_pressed("pause"))
 		pause = true;
 		
 		//Deactivate instances
-		instance_deactivate_all(true);
+		instance_deactivate_object(prnt_entity);
 		instance_activate_object(input_controller_object);
 		
 		//Create surface
@@ -24,7 +24,7 @@ if(input_check_pressed("pause"))
 		pause = false;
 		
 		//Activate instances
-		instance_activate_all();
+		instance_activate_object(prnt_entity);
 		
 		//Remove surface
 		if(surface_exists(pause_surf)) //Chequeamos esto porque las superficies pueden ser destruidas automaticamente

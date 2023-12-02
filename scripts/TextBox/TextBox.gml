@@ -7,6 +7,20 @@ enum textbox_event
 	FIGHTING,
 	MOVING
 }
+
+enum  BG_TYPE
+{
+    blurry,
+	woodsign,
+	npc
+}
+
+enum PORTRAIT_SIDE
+{
+	LEFT,
+	RIGHT,
+}
+
 function draw_blurry_background(_x,_y,_tb_width,_tb_height,_col= #566573){
 
 	var _width=_tb_width;
@@ -140,4 +154,98 @@ function draw_blurry_background_gui(_x,_y,_tb_width,_tb_height,_col= #566573){
 	draw_roundrect_color_ext(_x,_y,_x+_width,_y+_height,_rounded,_rounded, _col , _col ,0);
 	draw_set_alpha(1);
 	
+}
+function textbox_check_actions()
+{
+//Inventory
+		if(item_quantity!=0)
+		{
+		    switch (sign(item_quantity))
+			{
+			    case 1:
+					var _added=Inv_add(inv_type,item_quantity);
+					if (_added)
+					{
+					    item_quantity=0;
+					}else
+					{
+					    show_debug_message("algo paso con inv_add")
+					}
+				break;
+			
+				case -1:
+					var _deleted = Inv_del(inv_type,item_quantity);
+					if (_deleted)
+					{
+					    item_quantity=0;
+					}else
+					{
+					    show_debug_message("algo paso con inv_del")
+					}
+				break;
+			
+				default:
+				break;
+				
+			}
+		}
+	
+		//Automove
+		if(automove_active)
+		{
+			event_mode	=	textbox_event.MOVING;
+			
+			o_player.state		=	states.AUTOMOVING;
+			o_player.automove_x	=	automove_x;
+			o_player.automove_y	=	automove_y;
+			var _player	=	o_player;
+			
+			if(_player.x==automove_x && _player.y==automove_y)
+			{
+				automove_active=false;
+			    next(); 
+			}
+		}
+		
+		//start minigame crypt
+		if(start_crypt)
+		{
+		    handcreate();
+			player_change();
+			beat_change_speed();
+			
+			next();
+		}
+		//Changeroom
+		if (new_room != -1){
+			global.roomTarget=new_room;
+			RoomTransition(TRANS_TYPE.SLIDE,new_room);
+		}
+		//activate stuffs
+		if(user_event_index!=(-1))
+		{
+			event_user(user_event_index);
+		    user_event_index=-1;
+		}
+	//FIGHT STUFFS
+		//ACTIVAR PELEA
+		if (start_fight){
+			start_fight=false;
+			NewEncounter(fight_enemy,fight_bg);
+			event_mode=textbox_event.FIGHTING;
+		}
+	//señal de que la pelea terminó, (la activa el obj_game desde alarm 0)
+		if (fight_concluded)
+		{
+			fight_concluded=false;
+		    if(global.fight_victory)
+			{
+			    setTopic(win_topic);
+			
+			}else 
+			{
+			    setTopic(lose_topic);
+			}
+
+		}
 }

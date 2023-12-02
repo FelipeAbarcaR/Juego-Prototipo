@@ -7,7 +7,7 @@ function uc_fixed_lerp() {
 	var value = argument[0];
 	var target = argument[1];
 	var amount = argument[2];
- 
+
 	 /*
 		This function fixes the old lerp function using the time_factor value of the camera.
 		This will make work the camera equally with 30, 60 or any other game frequency.

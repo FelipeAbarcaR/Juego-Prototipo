@@ -4,12 +4,13 @@
   "name": "obj_alce",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "NPC",
-    "path": "folders/Objects/Entity/NPC.yy",
+    "name": "PROTOTIPO",
+    "path": "PROTOTIPO.yyp",
   },
   "parentObjectId": {
     "name": "prnt_entity",
@@ -31,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_animales",
-    "path": "sprites/spr_animales/spr_animales.yy",
+    "name": "spr_alce",
+    "path": "sprites/spr_alce/spr_alce.yy",
   },
   "spriteMaskId": null,
   "visible": true,

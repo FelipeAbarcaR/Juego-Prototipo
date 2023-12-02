@@ -14,7 +14,10 @@
     "name": "Misceláneos",
     "path": "folders/Objects/Misceláneos.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_textbox",
+    "path": "objects/obj_textbox/obj_textbox.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -31,8 +34,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_textbox_bg",
-    "path": "sprites/spr_textbox_bg/spr_textbox_bg.yy",
+    "name": "spr_textbox_bg_conciencia",
+    "path": "sprites/spr_textbox_bg_conciencia/spr_textbox_bg_conciencia.yy",
   },
   "spriteMaskId": null,
   "visible": true,

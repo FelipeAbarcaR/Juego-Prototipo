@@ -38,9 +38,20 @@ function startDialogueConciencia(topic) {
 	var inst = instance_create_depth(activate.x, activate.y, -999, obj_textbox_con,{npc:activate});
 	inst.dialogue_sounds= activate.dialogue_sounds;
 	inst.setTopic(topic);
-
 }
 
+function startDialogueGod(topic) {
+	if (instance_exists(obj_textbox_con)) return;
+	var inst = instance_create_depth(0, 0, -999, obj_textbox_god);
+	inst.dialogue_sounds= [
+		Dialogo_2_Boss_1_SFX,
+		Dialogo_3_Boss_1_SFX,
+		Dialogo_4_Boss_1_SFX,
+		Dialogo_5_Boss_1_SFX,
+		Dialogo_6_Boss_1_SFX,
+		Dialogo_7_Boss_1_SFX]
+	inst.setTopic(topic);
+}
 
 function DialogueSound(){
 
@@ -815,8 +826,13 @@ global.topics[$ "TESTCUTSCENES6"] = [
 	TEXT("NO PUEDE SER!")
 ];
 
-global.topics[$ "probandoConciencia"] = [
-	SPEAKER("Taim",spr_pt_deer_128,PORTRAIT_SIDE.LEFT),
-	TEXT("Yo soy joven y la vida es corta, aún así no puedo matar el tiempo."),
+global.topics[$ "probandoGod"] = [
+	SPEAKER("",spr_pt_dios1,PORTRAIT_SIDE.LEFT),
+	TEXT("La vida de un crítico es sencilla en muchos aspectos"),
+	TEXT("Arriesgamos poco, y tenemos poder sobre aquellos que ofrecen su trabajo y su servicio a nuestro juicio.")
 ];
 
+global.topics[$ "probandoConciencia"] = [
+	SPEAKER("Taim",spr_pt_deer_128,PORTRAIT_SIDE.LEFT),
+	TEXT("Yo soy joven y la vida es corta, aún así no puedo matar el tiempo.")
+];

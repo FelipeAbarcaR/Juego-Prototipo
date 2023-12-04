@@ -1,4 +1,4 @@
-{
+{   
   "FolderOrderSettings": [
     {"name":"Fonts","order":3,"path":"folders/Fonts.yy",},
     {"name":"Conciencia","order":2,"path":"folders/Fonts/Conciencia.yy",},
@@ -27,6 +27,18 @@
   ],
   "ResourceOrderSettings": [
     {"name":"obj_jabali2","order":7,"path":"objects/obj_jabali2/obj_jabali2.yy",},
+    {"name":"ts_interiorMapa1","order":3,"path":"tilesets/ts_interiorMapa1/ts_interiorMapa1.yy",},
+    {"name":"Sprite285","order":4,"path":"sprites/Sprite285/Sprite285.yy",},
+    {"name":"Sprite281","order":2,"path":"sprites/Sprite281/Sprite281.yy",},
+    {"name":"spr_ts_mapa1plantas","order":1,"path":"sprites/spr_ts_mapa1plantas/spr_ts_mapa1plantas.yy",},
+    {"name":"obj_casadestruida","order":1,"path":"objects/obj_casadestruida/obj_casadestruida.yy",},
+    {"name":"Sprite286","order":5,"path":"sprites/Sprite286/Sprite286.yy",},
+    {"name":"obj_tree","order":1,"path":"sprites/obj_tree/obj_tree.yy",},
+    {"name":"spr_ts_interiorMp1","order":2,"path":"sprites/spr_ts_interiorMp1/spr_ts_interiorMp1.yy",},
+    {"name":"Sprite282","order":2,"path":"sprites/Sprite282/Sprite282.yy",},
+    {"name":"ts_plantas","order":1,"path":"tilesets/ts_plantas/ts_plantas.yy",},
+    {"name":"TileSet31","order":2,"path":"tilesets/TileSet31/TileSet31.yy",},
+    {"name":"Sprite279","order":1,"path":"sprites/Sprite279/Sprite279.yy",},
     {"name":"spr_BG_M0_01_original","order":6,"path":"sprites/spr_BG_M0_01_original/spr_BG_M0_01_original.yy",},
     {"name":"spr_pt_deer_256","order":7,"path":"sprites/spr_pt_deer_256/spr_pt_deer_256.yy",},
     {"name":"Dialogo_17_Boss_1_SFX","order":15,"path":"sounds/Dialogo_17_Boss_1_SFX/Dialogo_17_Boss_1_SFX.yy",},

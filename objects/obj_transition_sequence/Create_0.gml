@@ -7,7 +7,7 @@ transition_ended		=	false;
 transition_out_ended	=	false;
 ready_to_transition_in	=	false;
 
-room_target			=	global.roomTarget;
+_room_target			=	global.roomTarget;
 transition_type_out =	global.transition_out_type;
 transition_type_in	=	global.transition_in_type;
 sequence_time		=	global.transition_time/2;

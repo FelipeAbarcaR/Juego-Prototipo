@@ -7,7 +7,7 @@ if(start_mj)
 	var _exit = instance_nearest(x,y,obj_room_exit)
 	with(_exit)
 	{
-		_exit.room_target=rm_runny;
+		_exit._room_target=rm_runny;
 		RoomTargetX=-1;
 		RoomTargetY=-1;
 	}

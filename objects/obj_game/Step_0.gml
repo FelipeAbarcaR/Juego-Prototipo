@@ -5,7 +5,7 @@ if(input_check_pressed("pause"))
 		pause = true;
 		
 		//Deactivate instances
-		instance_deactivate_all(true);
+		instance_deactivate_object(prnt_entity);
 		instance_activate_object(input_controller_object);
 		
 		//Create surface
@@ -24,7 +24,7 @@ if(input_check_pressed("pause"))
 		pause = false;
 		
 		//Activate instances
-		instance_activate_all();
+		instance_activate_object(prnt_entity);
 		
 		//Remove surface
 		if(surface_exists(pause_surf)) //Chequeamos esto porque las superficies pueden ser destruidas automaticamente
@@ -47,7 +47,7 @@ if(input_check_pressed("restart_room"))
 	event_user(3);
 }
 
-if(keyboard_check_pressed(vk_delete))
+if(keyboard_check_pressed(ord("Q")))
 {
 	uc_set_view_scale(2,0.1);
 	surface_resize(application_surface,Camera.view_width*2,Camera.view_height*2);

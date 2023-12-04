@@ -35,7 +35,7 @@ function startDialogue(topic) {
 }
 function startDialogueConciencia(topic) {
 	if (instance_exists(obj_textbox_con)) return;
-	var inst = instance_create_depth(x, y, -999, obj_textbox_con);
+	var inst = instance_create_depth(activate.x, activate.y, -999, obj_textbox_con,{npc:activate});
 	inst.dialogue_sounds= activate.dialogue_sounds;
 	inst.setTopic(topic);
 
@@ -763,7 +763,7 @@ global.topics[$ "conejeandoitem"] = [
 	TEXT("Wena compa, te le voy a dar un item."),
 	INVENTORY(ITEM.DASH,1)
 ];
-global.topics[$ "conejeandopelea"] = [
+global.topics[$ "conejeandopelea"] = [	
 	SPEAKER("Conejita",spr_pt_coneja, PORTRAIT_SIDE.LEFT),
 	TEXT("Vamo a pelear ! (con la rana)"),
 	FIGHT("pelearanagana","pelearanapierde")
@@ -814,3 +814,9 @@ global.topics[$ "TESTCUTSCENES6"] = [
 	SPEAKER("Jabali",spr_pt_jabali_enojado,PORTRAIT_SIDE.RIGHT),
 	TEXT("NO PUEDE SER!")
 ];
+
+global.topics[$ "probandoConciencia"] = [
+	SPEAKER("Taim",spr_pt_deer_128,PORTRAIT_SIDE.LEFT),
+	TEXT("Yo soy joven y la vida es corta, aún así no puedo matar el tiempo."),
+];
+

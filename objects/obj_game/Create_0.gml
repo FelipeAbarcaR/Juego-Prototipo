@@ -51,3 +51,5 @@ game_over=false;
 //gametime
 game_time=0;
 room_time=0;
+
+room_visit_list=[];

@@ -17,7 +17,7 @@ function CutSceneStart()
 {
     show_debug_message("Cutscene started");
 	global.cutscene=true;
-	uc_bars(true,0.07,0.1);
+	uc_bars(true,0.11,0.1);
 	CutSceneWait(0.3);	
 	
 }
@@ -48,10 +48,10 @@ function CutSceneChangeMusic(_music)
     // code here
 }
 
-function CutSceneInstanceCreate(_x,_y,_layerID,_obj){
+function CutSceneInstanceCreate(_obj,_x,_y){
 	
-	var inst = instance_create_layer(_x,_y,_layerID,_obj);
-	CutSceneEndAction();
+	var _layer_id=layer_get_id("Instances")
+	var inst = instance_create_layer(_x,_y,_layer_id,_obj);
 	
 	return inst;
 }
@@ -127,6 +127,43 @@ function CreateCutScene(_sceneinfo){
 		
 }
 
+function CutsceneEvent(_number)
+{
+	var _id;
+    switch(_number)
+	{
+	    case 0:
+			_id=instance_create_depth(912,0,2800,obj_backstage_dude);
+		break;
+
+	    case 1:
+			var _layer_effect_1=layer_get_id("Effect_Ripples");
+			var _layer_effect_2=layer_get_id("Effect_Hue");
+			
+			layer_set_visible(_layer_effect_1,1);
+			layer_set_visible(_layer_effect_2,1);
+			
+			with(obj_beat)
+			{
+			    var _position =audio_sound_get_track_position(current_music);
+				audio_stop_sound(current_music);
+				current_music=bgm_WILLPOWER_89BPM_Cinematica;
+				var _snd = audio_play_sound(current_music,10,1,bgm_gain);
+				audio_sound_set_track_position(_snd,_position);
+			}
+			
+			_id=id;
+
+		break;
+		
+		default:
+			_id=0;
+			show_debug_message("Obj_cutscene: No existe este evento hmno. "+string(_number));
+		break;
+	}
+	
+	return _id;
+}
 
 
 //-------------------WEBEO DE CINEMATICAS-------------------------------
@@ -192,7 +229,15 @@ var _npc_move	=	noone;
 var _x_move		=	0;
 var _y_move		=	0;
 
+//EVENT
 
+var _event_number = -1;
+
+//CREATE
+
+var _obj_create = noone;
+var _x_create = 0;
+var _y_create = 0;
 
 
 
@@ -346,7 +391,20 @@ for (var _i = 0; _i < array_length(cinematica); _i++)
 				
 			break;
 			
+			case "EVENT":
+				
+				_event_number	=	real(cinematica[_i][$ "ARG1"]);
+				array_insert(global.cutscenes[$ _cutscene],array_length(global.cutscenes[$ _cutscene]),[CutsceneEvent,[_event_number],_snap]);
+			
+			break;
+			
+			case "CREATE":
+				
+				_obj_create		=	asset_get_index(cinematica[_i][$ "ARG1"]);
+				_x_create		=	real(cinematica[_i][$ "ARG2"]);
+				_y_create		=	real(cinematica[_i][$ "ARG3"]);
+				array_insert(global.cutscenes[$ _cutscene],array_length(global.cutscenes[$ _cutscene]),[CutSceneInstanceCreate,[_obj_create,_x_create,_y_create],_snap]);
+			break;
 		}	
 	}
-	
 }

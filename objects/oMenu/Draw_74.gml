@@ -5,7 +5,7 @@ if (!surface_exists(pause_surf)) {
 	if (pause_surf == -1) {
 		// Deactivate all instances
 		instance_deactivate_all(true);
-		
+		instance_activate_object(input_controller_object)
 		// Activate important objects
 		array_push(active_objs, oMenu, oInputManager);
 		

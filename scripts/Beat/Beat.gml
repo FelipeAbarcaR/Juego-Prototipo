@@ -179,6 +179,11 @@ function beat_check_if_can_beat()
 			_beating=false;
 		}
 	}
+	//showing background
+	if(instance_exists(obj_background_landscape))
+	{
+		_beating=false;
+	}
 	//in cutscene
 	if(global.cutscene) _beating=false;
 	

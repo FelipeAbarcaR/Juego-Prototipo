@@ -1,101 +1,181 @@
+/// @description Insert description here
+// You can write your code in this editor
 
-var draw_text_x = x;
-var draw_text_y = y;
-var draw_text_witdh = text_width;
-var portrait_scale =2;
-var finished = (text_progress == text_length); 
+var _gui_x			=	map_value(x,view_x,view_x+view_width,0,gui_width);
+var _gui_y			=	map_value(y,view_y,view_y+view_height,0,gui_height);
+var draw_text_x		=	_gui_x;
+var draw_text_y		=	_gui_y;
+var draw_text_width =	text_width;
+var portrait_scale	=	2;
+var finished		=	(text_progress == text_length);
+
 
 //Portrait
-if (!fighting)
+switch (textbox_state)
 {
-	// Draw the box
-	draw_sprite_stretched(sprite_index, 2, x, y, width, height);
+    case textbox_states.creciendo:
+		//draw growing box
+		draw_sprite_stretched(sprite_index, 0, draw_text_x, draw_text_y, width*increasing_value, height*increasing_value);
+	break;
 	
-	if(sprite_exists(portrait_sprite))
-	{
-		//Shrink text width vy the width the portrait will take up
-		draw_text_witdh -= portrait_width*portrait_scale + portrait_x + padding;
-	
-		var draw_portrait_x = x + portrait_x;
-		var draw_portrait_y = y + portrait_y;
-		var draw_portrait_xscale = 1;
-	
-		//What side is the portrait on?
-		if(portrait_side == PORTRAIT_SIDE.LEFT)
-		{
-			//Shift the text over when the portrait is on the left
-			draw_text_x += portrait_width*portrait_scale + portrait_x + padding;
-		}
-		else 
-		{
-			//Shift the portrait itself over when it is on the right
-			draw_portrait_x = x + width - portrait_width - portrait_x;
-			draw_portrait_xscale = -1;
-		}
-	
-		//Draw portrait backing
-		//draw_sprite(spr_portrait,0,draw_portrait_x,draw_portrait_y);
-	
-		//Animate the portrait when typing
-		var subimg = 0;
-		if(!finished) subimg = (text_progress / text_speed) * (sprite_get_speed(portrait_sprite) / game_get_speed(gamespeed_fps));
-	
-		draw_sprite_ext(portrait_sprite, subimg,
-						draw_portrait_x + (portrait_width*portrait_scale)/2, draw_portrait_y + (portrait_height*portrait_scale)/2,
-						draw_portrait_xscale*portrait_scale,portrait_scale,0,c_white,1);
-	}
-
-	//Speaker
-	if(speaker_name != "")
-	{
-		//Expand the nameplate if the name is wider than the default width
-		var name_w = max(string_width(speaker_name), speaker_width)
-	
-		draw_sprite_stretched(spr_name,0,x + speaker_x, y + speaker_y - speaker_height/2, name_w+15, speaker_height+10);
-	
-		draw_set_halign(fa_center);
-		draw_set_valign(fa_center);
-		//draw_set_font(speaker_font);
-		draw_set_color(speaker_color);
-		draw_text(x +padding+ speaker_x + name_w/2, y + speaker_y, speaker_name);
-	}
-
-	// Text
-	draw_set_halign(fa_left);
-	draw_set_valign(fa_top);
-
-	draw_set_font(text_font);
-	draw_set_color(text_color);
-
-	//type(draw_text_x + text_x, draw_text_y + text_y, text, text_progress, draw_text_witdh);
-
-	draw_set_color(c_gray);
-	draw_text_scribble_ext(draw_text_x + text_x-1,draw_text_y + text_y-3,text,draw_text_witdh,text_progress)
-	draw_set_color(text_color);
-	draw_text_scribble_ext(draw_text_x + text_x,draw_text_y + text_y,text,draw_text_witdh,text_progress)
-	draw_set_font(fnt_text);
-
-	//Options
-	if(finished && option_count >0)
-	{
-		draw_set_valign(fa_middle);
-		draw_set_color(option_text_color);
-	
-		for(var i = 0; i < option_count ; i++)
-		{
-			var opt_x = x + option_x;
-			var opt_y = y + option_y - (option_count - i - 1)*option_spacing;
+	case textbox_states.escribiendo:
 		
-			//Selected option is indented with an arrow
-			if( i == current_option)
+	//BOX
+		draw_sprite_stretched(sprite_index, 0, draw_text_x, draw_text_y, width, height);
+		
+		
+	
+	//Portrait
+		if(sprite_exists(portrait_sprite))
+		{
+		
+			//Shrink text width vy the width the portrait will take up
+			draw_text_width -= (portrait_width + portrait_x + padding);
+	
+			var draw_portrait_x = _gui_x + portrait_x;
+			var draw_portrait_y = _gui_y + height/4;
+			var draw_portrait_xscale = 1;
+	
+			//What side is the portrait on?
+			if(portrait_side == PORTRAIT_SIDE.LEFT)
 			{
-				opt_x += option_selection_indent;
-				draw_sprite(spr_textbox_arrow,0,opt_x - 20,opt_y - 10);
+				//Shift the text over when the portrait is on the left
+				draw_text_x += portrait_width + portrait_x + padding;
 			}
-		
-			draw_sprite_stretched(sprite_index,1,opt_x,opt_y - option_height/2,option_width,option_height);
-			draw_text(opt_x + option_text_x,opt_y,options[i].text);
+			else 
+			{
+				//Shift the portrait itself over when it is on the right
+				draw_portrait_x = _gui_x + width - portrait_width - portrait_x;
+				draw_portrait_xscale = -1;
+			}
+	
+			//materialize portrait shader
+			
+			luma_time=min(luma_time+luma_time_speed,0.99);
+			
+			//shader_set(portrait_shader);
+			//texture_set_stage(u_mask_text, mask_text);
+			//shader_set_uniform_f(u_time,luma_time);
+			//shader_set_uniform_f(u_tolerance,luma_tolerance);
+			//shader_set_uniform_f(u_inverse,luma_inverse);
+			//DissolveShader()
+			var _DissolveSprUvs = sprite_get_uvs(spr_pt_deer_128,0);
+
+			shader_set(_Dissolve_Shader);
+			shader_set_uniform_f(_u_Dissolve,luma_time);
+			shader_set_uniform_f(_u_DissolveEdge,_DissolveEdge);
+			shader_set_uniform_f(_u_DissolveUV,_DissolveTexUvs[0],_DissolveTexUvs[1]);
+			shader_set_uniform_f(_u_DefaultUV,_DissolveSprUvs[0],_DissolveSprUvs[1]);
+			shader_set_uniform_f(_u_DissolveC1,_DissolveC1[0],_DissolveC1[1],_DissolveC1[2]);
+			shader_set_uniform_f(_u_DissolveC2,_DissolveC2[0],_DissolveC2[1],_DissolveC2[2]);
+			texture_set_stage(_u_DissolveTex,_DissolveTex);
+			
+			//Animate the portrait when typing
+			var subimg = 0;
+			if(!finished) subimg = (text_progress / text_speed) * (sprite_get_speed(portrait_sprite) / game_get_speed(gamespeed_fps));
+			
+			draw_sprite_stretched(portrait_sprite,subimg,draw_portrait_x ,draw_portrait_y,portrait_width,portrait_height);
+			
+			shader_reset();
+
 		}
+	
+			//Speaker
 		
-	}
+			if(speaker_name != "")
+			{
+				//Expand the nameplate if the name is wider than the default width
+			
+				var _scribble_speaker=scribble(speaker_name);
+				var name_w = max(_scribble_speaker.get_width()+padding*2, speaker_width);
+				var name_h= max(_scribble_speaker.get_height()+padding*2,speaker_height);
+				//el padding los puse como extra para que calce, en verdad no se pq pero funciona
+				//draw_sprite_stretched(spr_name,0,x + speaker_x-name_w/2, y + speaker_y-speaker_height/2, name_w+padding*2, speaker_height+padding*2);
+			
+				_scribble_speaker.starting_format(speaker_font,#5c2e17);
+				_scribble_speaker.draw(draw_text_x+text_x,draw_text_y+text_y+padding);
+				//_scribble_speaker.starting_format(text_font,speaker_color);
+				//_scribble_speaker.draw(draw_text_x+text_x+2,draw_text_y+text_y+2);
+			
+				//adjust the text position under the speaker name
+				draw_text_y+=name_h;
+			}
+
+			// TEXT
+			//change te position and format of the text depending on the lenght of the text
+			//switch between the top left corner of the textbox to the middle center
+			//if(text_length>=lenght_shift_format)
+			//{
+				scribble_object.align(fa_left,fa_top);
+			//}
+			//else
+			//{
+			//    scribble_object.align(fa_center,fa_middle);
+			//	draw_text_x=floor(draw_text_x + (draw_text_width/2));
+			//	draw_text_y=floor(draw_text_y+text_y)
+			//}
+		
+			scribble_object.starting_format(text_font,text_color);
+			scribble_object.wrap(draw_text_width);
+			scribble_object.draw(draw_text_x,draw_text_y,typist);
+			if(finished)
+			{
+			    var _paw_x=_gui_x+width-3*padding;
+				var _paw_y=_gui_y+height-3*padding;
+
+				if(global.beat) 
+				{
+				    if(paw_index==0) paw_index=1 else paw_index=0;
+				}
+
+				draw_sprite(paw_sprite,paw_index,_paw_x,_paw_y);
+			}
+			//Options
+			if(finished && option_count >0)
+			{
+				for(var i = 0; i < option_count ; i++)
+				{
+					var opt_x = x + option_x;
+					var opt_y = y + option_y - (option_count - i - 1)*option_spacing;
+		
+					//Selected option is indented with an arrow
+					if( i == current_option)
+					{
+						var _scale=1;
+
+						opt_x += option_selection_indent;
+						draw_sprite_ext(spr_textbox_paw,0,opt_x - 30,opt_y-2,_scale,_scale,0,c_white,1);
+					}
+				
+				
+					var _string=options[i].text;
+					var _scribble_option=scribble(_string);
+				
+					var _option_width=max(option_width,_scribble_option.get_width()+padding*2);
+					draw_sprite_stretched(sprite_index,1,opt_x,opt_y,_option_width,option_height);
+				
+					_scribble_option.align(fa_left,fa_middle);
+					_scribble_option.starting_format(text_font,option_text_color);
+					_scribble_option.draw(opt_x+option_text_x,opt_y+padding+2);
+				
+				}
+		
+			}
+	
+	break;
+
+		
 }
+	if(global.DrawText)
+	{
+	    draw_circle(x,y,2,false);
+		draw_circle_color(draw_text_x,draw_text_y,2,c_blue,c_blue,false)
+	}	
+
+
+
+
+
+
+
+

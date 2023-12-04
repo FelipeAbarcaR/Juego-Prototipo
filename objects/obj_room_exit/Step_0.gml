@@ -3,7 +3,7 @@
 
 /// @description Cause Room transition
 var _player=o_player;
-var _room=room_target;
+var _room=_room_target;
 if(!global.midTransition)
 {
 	if(instance_exists(_player))

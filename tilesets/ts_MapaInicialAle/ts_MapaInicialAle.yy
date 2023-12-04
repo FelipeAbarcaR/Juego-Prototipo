@@ -481,8 +481,8 @@
     "path": "folders/Tile Sets/M0.yy",
   },
   "spriteId": {
-    "name": "spr_ts_MapaInicialV6Ale",
-    "path": "sprites/spr_ts_MapaInicialV6Ale/spr_ts_MapaInicialV6Ale.yy",
+    "name": "spr_ts_MapaInicialV7modificado",
+    "path": "sprites/spr_ts_MapaInicialV7modificado/spr_ts_MapaInicialV7modificado.yy",
   },
   "spriteNoExport": true,
   "textureGroupId": {

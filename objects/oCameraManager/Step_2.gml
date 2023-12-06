@@ -62,7 +62,7 @@ if (cameraFollow) {
 		{
 			_camW = _prevW - _addW;
 			_camH = _prevH - _addH;
-		}
+		}	
 	global.percentage_zoom = ((_camW*100)/480) - 100;
 	
 	//_camH = round(_camH);

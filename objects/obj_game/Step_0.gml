@@ -121,3 +121,17 @@ var _dt=delta_time;
 game_time+=_dt;
 room_time+=_dt;
 
+global.zoom = input_mouse_wheel_down() - input_mouse_wheel_up();
+//Wheel zoom
+if(global.zoom != 0)
+	{
+		global.zoom *= 0.05;
+		
+		var _scale = Camera.view_scale_target + global.zoom;
+		var _scale_prev = _scale;
+		
+		Camera.view_scale_target = _scale;
+		
+		surface_resize(application_surface,Camera.view_width*_scale,Camera.view_height*_scale);
+
+	}

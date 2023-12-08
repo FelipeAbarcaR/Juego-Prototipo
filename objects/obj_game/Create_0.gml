@@ -53,3 +53,5 @@ game_time=0;
 room_time=0;
 
 room_visit_list=[];
+
+if(!instance_exists(obj_spell_manager)) instance_create_depth(x,y,depth,obj_spell_manager)

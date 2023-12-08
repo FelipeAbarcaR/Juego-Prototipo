@@ -5,11 +5,24 @@ confirm= input_check_pressed("accept");
 
 switch (textbox_state)
 {
-    case textbox_states.creciendo:
+	case textbox_states.dibujando_pt:
+	
+		var _value=0.99
+		if(luma_time<_value)
+		{
+			luma_time=min(luma_time+luma_time_speed,_value);
+			if(luma_time>=_value)
+			{
+				alarm[0]=1.5*room_speed;
+			}
+		}
+	break;
+	
+    case textbox_states.creciendo_tb:
 		increasing_value=min(1,increasing_value+delta_scaling);
 		if(increasing_value>=1)
 		{
-		    textbox_state=textbox_states.escribiendo;
+			textbox_state=textbox_states.escribiendo;
 		}
 	break;
 	

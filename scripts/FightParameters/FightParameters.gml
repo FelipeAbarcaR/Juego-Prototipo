@@ -22,7 +22,7 @@ function FightRhythmAnimate(){
 
 }
 
-function FightPlaySFX(_stance){
+function Fightplay_sfx(_stance){
 	switch(_stance)
 	{
 		case EnemyStance.prepare:

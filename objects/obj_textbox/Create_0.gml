@@ -122,7 +122,7 @@ sfx_open_textbox=Open_Textbox;
 sfx_confirm_option=Confirm_Option;
 
 //Start opening sfx
-PlaySFX(sfx_open_textbox);
+play_sfx(sfx_open_textbox);
 
 // Start a conversation
 setTopic = function(topic) {
@@ -150,7 +150,7 @@ next = function() {
 		}
 	
 		minimize_to_destroy=true;
-		PlaySFX(sfx_close_textbox);
+		play_sfx(sfx_close_textbox);
 	}
 	else {
 		actions[current_action].act(id);

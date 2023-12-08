@@ -6,11 +6,12 @@ switch (state)
 	{
 		case "jump":
 		scr = scr_GridMove;
+		Crypt_jump_animate();
 		break;
 	
 		case "wait":
-		//sprite_index=
 		scr = scr_Wait;
+		if(object_index==obj_crypt_player) image_index=(InputDirection/45);
 		break;
 		
 		case "move":
@@ -23,10 +24,10 @@ switch (state)
 	
 		case "locked":
 		scr = scr_Locked;
+		if(object_index==obj_crypt_player) image_index=(InputDirection/45);
 		break;
 		
 		case "roll":
-
 		scr = scr_Roll;
 		break;
 		
@@ -71,11 +72,13 @@ function scr_GridMove(){
 		var _tilemap = tilemap_get_at_pixel(_tilemap_id,x+x_to,y+y_to);
 		if(object_index==obj_crypt_player)
 		{
+			//if the tile to land isn't a beat tile, turn around and get "damaged"
 			if(_tilemap ==-1 or _tilemap==0)
 			{
 				Direction+=180;
 			    damaged=true;
 				DistanceRemaining=point_distance(x,y,x_from,y_from);
+				play_sfx(sound_bump);
 			}
 		}
 	}
@@ -94,19 +97,20 @@ function scr_Wait()
 				Direction=InputDirection;
 				DistanceRemaining=GridDistance;
 				state = "jump";
-				//audio_play_sound(Beep, 9, 0);
+				play_sfx(sound_jump,0.6);
 				x_from=x;
 				y_from=y;
 			}   
 			
-		if(roll_key)
-		{
-			Direction=LastDirection;
-			DistanceRemaining=GridRollDistance;
-			state="roll";
-			x_from=x;
-			y_from=y;
-		}
+			if(roll_key)
+			{
+				Direction=LastDirection;
+				DistanceRemaining=GridRollDistance;
+				state="roll";
+				x_from=x;
+				y_from=y;
+				play_sfx(sfx_roll);
+			}
 		}
 		
 		//Check if landing on ice tile

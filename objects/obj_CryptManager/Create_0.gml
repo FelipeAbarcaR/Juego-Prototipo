@@ -29,3 +29,12 @@ if(instance_activated==false)
 {
     instance_deactivate_object(object_index)
 }
+
+player_return=false;
+player_direction=0;
+player_return_x=0;
+player_return_y=0;
+
+//SFX
+
+sound_victory=sfx_victory;

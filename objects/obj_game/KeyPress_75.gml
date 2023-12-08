@@ -44,4 +44,7 @@
 //show_debug_message(string(_enb2))
 
 //instance_create_depth(912,0,2800,obj_backstage_dude);
-startDialogueGod(["probandoGod"]);
+with(obj_capibara)
+{
+	startDialogueGod("probandoGod");
+}

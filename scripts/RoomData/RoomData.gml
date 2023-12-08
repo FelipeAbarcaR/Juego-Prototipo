@@ -8,17 +8,18 @@
 	//room_data=[room_name, Music, BPM, obj_to_follow, room_mode, mainChar, zoom, witdh, height]
 	global.room_data = [
 
-		[roomMapaInicial,			bgm_NEON_ICE_130BPM,	130,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
-		[roomMapa1Talo,				bgm_WillPower_89,		89 ,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
-		[rm_runny,					bgm_bossM1D_95,			95,		obj_runny_player,	mode.move,		o_player,			CMODE.STATIC],
-		[roomMapa1DungeonBoss,		bgm_NightCall_118,		118,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
-		[roomMapa2Ale,					bgm_illbethere,			130,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
-		[rm_GD,						bgm_boss_01,			127,	obj_obs_player,		mode.obstacle,	obj_obs_player,		CMODE.OBJECT_FOLLOWING],
-		[roomMapa2Dungeon,			bgm_illbethere,			130,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
-		[roomMapa1Dungeon,			bgm_NightCall_118,		118,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
-		[roomViejoSabio,			bgm_ForestTimeInterior, 126,	o_player,			mode.move,		o_player,			CMODE.OBJECT_FOLLOWING],
-		[roomMapa1NPC,				bgm_WillPower_89,		89,		o_player,			mode.move,		o_player,			CMODE.OBJECT_FOLLOWING],
-		[roomMapa1Casapalchuto,		bgm_WillPower_89,		89,		o_player,			mode.move,		o_player,			CMODE.OBJECT_FOLLOWING]
+		[roomMapaInicial,			bgm_NEON_ICE_127BPM,		127,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
+		[roomMapa1Dungeon,			bgm_NightCall_118,			118,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
+		[roomMapa1Talo,				bgm_WillPower_89,			89 ,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
+		[rm_runny,					bgm_bossM1D_95,				95,		obj_runny_player,	mode.move,		o_player,			CMODE.STATIC],
+		[roomMapa1DungeonBoss,		bgm_NightCall_118,			118,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
+		[roomMapa2Ale,				bgm_illbethere,				130,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
+		[rm_GD,						bgm_boss_01,				127,	obj_obs_player,		mode.obstacle,	obj_obs_player,		CMODE.OBJECT_FOLLOWING],
+		[roomMapa2Dungeon,			bgm_illbethere,				130,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
+		[roomViejoSabio,			bgm_NEON_ICE_int_127BPM,	127,	o_player,			mode.move,		o_player,			CMODE.OBJECT_FOLLOWING],
+		[roomMapa1NPC,				bgm_WillPower_89,			89,		o_player,			mode.move,		o_player,			CMODE.OBJECT_FOLLOWING],
+		[roomMapa1Casapalchuto,		bgm_WillPower_89,			89,		o_player,			mode.move,		o_player,			CMODE.OBJECT_FOLLOWING],
+		[roomMapa1,					bgm_WillPower_89,			89 ,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS]
 	];
 	
 	global.room_count=array_length(global.room_data);
@@ -35,7 +36,9 @@
 		[bgm_WillPower_89,89],
 		[bgm_midnight_100,100],
 		[bgm_bossM1D_95,95],
-		[bgm_illbethere,130]
+		[bgm_illbethere,130],
+		[bgm_NEON_ICE_int_127BPM,127],
+		[bgm_NEON_ICE_127BPM,127]
 	];
 	enum rm
 	{

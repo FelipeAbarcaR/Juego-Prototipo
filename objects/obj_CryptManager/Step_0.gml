@@ -44,7 +44,8 @@ if(hand_created)
     if(hand_signal)
 	{
 	    var _cryptroom=global.cryptroom;
-		var _list =_cryptroom.trap_list;
+		var _list = ds_list_create();
+		ds_list_copy(_list,_cryptroom.trap_list);
 		var _num = _cryptroom.trap_num;
 		if _num > 0
 		{
@@ -60,3 +61,32 @@ if(hand_created)
 	}
 }
 
+if(player_return)
+{
+	if(instance_exists(o_player))
+	{
+		var _player	=	o_player;
+		
+		var _distance = 40;
+		var _x = player_return_x+lengthdir_x(40,player_direction);
+		var _y = player_return_y+lengthdir_y(40,player_direction);
+		_player.state		=	states.AUTOMOVING;
+		_player.automove_x	=	_x;
+		_player.automove_y	=	_y;
+		
+		if(_player.x==_x && _player.y==_y)
+		{
+			player_return=false;
+			_player.dir=270;
+			if(!instance_exists(global.cryptroom.crypt_room_item))
+			{
+				SendFX(spr_firework,_x,_y-40,{sfx:sound_victory});
+				alarm[0]=1.5*room_speed;
+			}else
+			{
+				alarm[0]=0.5*room_speed;
+			}
+			
+		}
+	}
+}

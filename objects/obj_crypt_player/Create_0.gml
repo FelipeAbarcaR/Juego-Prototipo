@@ -69,3 +69,16 @@ red_flashing=false;
 spr_wait=spr_gato3_idle;
 spr_move=spr_gato3_idle;
 spr_roll=spr_gato_crypt_roll;
+spr_jump_up=spr_gato_crypt_jump_up;
+spr_jump_down=spr_gato_crypt_jump_down;
+spr_jump_left=spr_gato_crypt_jump_left;
+spr_jump_right=spr_gato_crypt_jump_right;
+
+//SFX
+sound_jump=sfx_gato_jump;
+sound_bump=sfx_bump;
+sound_hit=sfx_crypt_hit;
+
+hit_screen_frames_total=5;
+hit_screen_frames=0;
+

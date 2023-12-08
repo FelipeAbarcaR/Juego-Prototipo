@@ -3,6 +3,7 @@
 
 var _max_scale=1;
 var _scale_speed=0.1;
+var _alpha=0.6;
 if(room==rm_GD)
 {
 	_max_scale=3;
@@ -18,4 +19,4 @@ else
 }
 
 
-if(player!=(-1)) draw_sprite_ext(spell_sprite,0,player.x,player.y,sprite_scale,sprite_scale,0,c_white,1);
+if(player!=(-1)) draw_sprite_ext(spell_sprite,0,player.x,player.y,sprite_scale,sprite_scale,0,c_white,_alpha);

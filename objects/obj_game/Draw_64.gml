@@ -21,7 +21,18 @@ if (global.DrawText)
 
 
 //Mouse cursor
-draw_circle(device_mouse_x_to_gui(0),device_mouse_y_to_gui(0),3,false);
+var _mouse_x=device_mouse_x_to_gui(0);
+var _mouse_y=device_mouse_y_to_gui(0)
+draw_circle(_mouse_x,_mouse_y,3,false);
+if(global.DrawText)
+{
+	var _padding=16;
+	draw_text(_mouse_x+2*_padding,_mouse_y+_padding,string(_mouse_x));
+	draw_text(_mouse_x+2*_padding,_mouse_y+2*_padding,string(_mouse_y));
+	draw_text(_mouse_x-2*_padding,_mouse_y-2*_padding,string(mouse_x));
+	draw_text(_mouse_x-2*_padding,_mouse_y-_padding,string(mouse_y));
+}
+
 
 
 if(pause)

@@ -454,6 +454,7 @@ function anim() {
 			sprite_index = spr_roll;
 		break;
 		case states.AUTOMOVING:
+			var _dir;
 			if hmove != 0 or vmove != 0 
 			{
 				switch(dir)
@@ -468,6 +469,12 @@ function anim() {
 					case 315: sprite_index =	spr_move_down_right;	break;
 					case 360: sprite_index =	spr_move_right;			break;
 				}
+			}else
+			{
+			    sprite_index = spr_player_idle;
+				var _frames=sprite_get_number(spr_player_idle)-1;
+				image_index=round(map_value(dir,0,315,0,_frames));
+
 			}
 	}
 }
@@ -580,7 +587,6 @@ function Space_logic()
 	//Activate key logic
 	if(global.interact)
 		{
-
 			if(activate == noone)
 			{
 					
@@ -610,8 +616,6 @@ function Space_logic()
 			}
 			else
 			{
-
-				
 				global.end_interaction = true;
 				if(activate.EntityActivateScript == startDialogue)
 				{

@@ -1,8 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
-
 //check if the plate is still in "released mode", it should be only one time
 if(!plate_pressed && plate_released)
 {
@@ -27,8 +25,20 @@ if(_pressed)
 {
 	plate_pressed=true;
 	if(player==obj_crypt_player)
-	{
+	{	
+		//if the plate was pressed by the crypt player, then change to o_player
+		var _dir=obj_crypt_player.InputDirection;
+		var _player_x=obj_crypt_player.x;
+		var _player_y=obj_crypt_player.y;
 		instance_create_depth(x,y,depth,obj_player_manager);
+		if(instance_exists(obj_CryptManager))
+		{
+			obj_CryptManager.player_return=true;
+			obj_CryptManager.player_direction=_dir;
+			obj_CryptManager.player_return_x=_player_x;
+			obj_CryptManager.player_return_y=_player_y;
+			
+		}
 	}
     image_index=1;
 }else

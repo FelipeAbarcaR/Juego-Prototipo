@@ -13,12 +13,51 @@ var _portrait		=	sprite_exists(portrait_sprite);
 
 switch (textbox_state)
 {
-    case textbox_states.creciendo:
+	case textbox_states.dibujando_pt:
+		if(_portrait)
+		{
+			var draw_portrait_x = _gui_x;
+			var draw_portrait_y = _gui_y;
+	
+			var _DissolveSprUvs = sprite_get_uvs(portrait_sprite,0);
+
+			shader_set(_Dissolve_Shader);
+			shader_set_uniform_f(_u_Dissolve,luma_time);
+			shader_set_uniform_f(_u_DissolveEdge,_DissolveEdge);
+			shader_set_uniform_f(_u_DissolveUV,_DissolveTexUvs[0],_DissolveTexUvs[1]);
+			shader_set_uniform_f(_u_DefaultUV,_DissolveSprUvs[0],_DissolveSprUvs[1]);
+			shader_set_uniform_f(_u_DissolveC1,_DissolveC1[0],_DissolveC1[1],_DissolveC1[2]);
+			shader_set_uniform_f(_u_DissolveC2,_DissolveC2[0],_DissolveC2[1],_DissolveC2[2]);
+			texture_set_stage(_u_DissolveTex,_DissolveTex);
+		
+			
+			draw_sprite_stretched(portrait_sprite,0,draw_portrait_x ,draw_portrait_y,portrait_width,portrait_height);
+			
+			shader_reset();
+		}
+		else textbox_state=textbox_states.creciendo_tb;
+	break;
+    case textbox_states.creciendo_tb:
 		//draw growing box
 		if(_portrait) draw_text_x+=portrait_width;
 		draw_sprite_stretched(sprite_index, 0, draw_text_x, draw_text_y, width*increasing_value, height);
+		if(_portrait)
+		{
+			var draw_portrait_x = _gui_x;
+			var draw_portrait_y = _gui_y;
+			var draw_portrait_xscale = 1;
+				
+			//Animate the portrait when typing
+			var subimg = 0;
+			if(!finished) subimg = (text_progress / text_speed) * (sprite_get_speed(portrait_sprite) / game_get_speed(gamespeed_fps));
+			
+			var _alpha=map_value(increasing_value,0,1,0,0.3);
+			draw_sprite_stretched_ext(spr_portrait_galaxy,paw_index,draw_portrait_x,draw_portrait_y,portrait_width,portrait_height,c_white,_alpha);
+			draw_sprite_stretched(portrait_sprite,subimg,draw_portrait_x ,draw_portrait_y,portrait_width,portrait_height);	
+		}
 	break;
 	
+	//TEXTO CRECIENDO
 	case textbox_states.escribiendo:
 		
 	//BOX
@@ -29,52 +68,30 @@ switch (textbox_state)
 	//Portrait
 		if(_portrait)
 		{
-
 			var draw_portrait_x = _gui_x;
 			var draw_portrait_y = _gui_y;
 			var draw_portrait_xscale = 1;
 				
-			//materialize portrait shader
-			
-			luma_time=min(luma_time+luma_time_speed,0.99);
-			
-			//shader_set(portrait_shader);
-			//texture_set_stage(u_mask_text, mask_text);
-			//shader_set_uniform_f(u_time,luma_time);
-			//shader_set_uniform_f(u_tolerance,luma_tolerance);
-			//shader_set_uniform_f(u_inverse,luma_inverse);
-			//DissolveShader()
-			var _DissolveSprUvs = sprite_get_uvs(spr_pt_dios1,0);
-
-			shader_set(_Dissolve_Shader);
-			shader_set_uniform_f(_u_Dissolve,luma_time);
-			shader_set_uniform_f(_u_DissolveEdge,_DissolveEdge);
-			shader_set_uniform_f(_u_DissolveUV,_DissolveTexUvs[0],_DissolveTexUvs[1]);
-			shader_set_uniform_f(_u_DefaultUV,_DissolveSprUvs[0],_DissolveSprUvs[1]);
-			shader_set_uniform_f(_u_DissolveC1,_DissolveC1[0],_DissolveC1[1],_DissolveC1[2]);
-			shader_set_uniform_f(_u_DissolveC2,_DissolveC2[0],_DissolveC2[1],_DissolveC2[2]);
-			texture_set_stage(_u_DissolveTex,_DissolveTex);
-			
 			//Animate the portrait when typing
 			var subimg = 0;
 			if(!finished) subimg = (text_progress / text_speed) * (sprite_get_speed(portrait_sprite) / game_get_speed(gamespeed_fps));
-			
-			draw_sprite_stretched(portrait_sprite,subimg,draw_portrait_x ,draw_portrait_y,portrait_width,portrait_height);
-			
-			shader_reset();
-
+			if(global.beat)paw_index++;
+			draw_set_alpha(0.35);
+			draw_sprite_stretched(spr_portrait_galaxy,paw_index,draw_portrait_x,draw_portrait_y,portrait_width,portrait_height);
+			draw_set_alpha(1);
+			draw_sprite_stretched(portrait_sprite,subimg,draw_portrait_x ,draw_portrait_y,portrait_width,portrait_height);	
 		}
 		
 		//TEXT
 		
 		if(global.DrawText) draw_circle(draw_text_x,draw_text_y,3,false);
-		var _frame_width=25;
-		
+		var _frame_width=text_wrap_width;
+		var _frame_height=text_wrap_height;
 		
 		scribble_object.align(fa_left,fa_top);
 		scribble_object.starting_format(text_font,text_color);
-		scribble_object.wrap(draw_text_width);
-		scribble_object.draw(draw_text_x+_frame_width,draw_text_y+_frame_width,typist);
+		scribble_object.wrap(draw_text_width-_frame_width*2);
+		scribble_object.draw(draw_text_x+_frame_width,draw_text_y+_frame_height,typist);
 		
 		//paw
 		//if(finished)
@@ -123,12 +140,13 @@ switch (textbox_state)
 	
 	break;
 
-		
+
 }
 	if(global.DrawText)
 	{
 	    draw_circle(x,y,2,false);
-		draw_circle_color(draw_text_x,draw_text_y,2,c_blue,c_blue,false)
+		draw_circle_color(draw_text_x,draw_text_y,2,c_blue,c_blue,false);
+		draw_circle(gui_x,gui_y,3,false);
 	}	
 
 

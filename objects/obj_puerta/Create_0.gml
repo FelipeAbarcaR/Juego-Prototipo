@@ -26,4 +26,5 @@ if(RoomName != noone)
 	if (!_found) show_debug_message("obj_puerta no encontró el room de RoomName");
 }
 
+sound_enter=sfx_puerta;
 

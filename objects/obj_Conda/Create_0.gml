@@ -58,7 +58,7 @@ spr_idle=spr_CondaIdle;
 
 //SFX
 sfx_prepare=array_create(3,-1)
-sfx_index=0; //for playsfx()
+sfx_index=0; //for play_sfx()
 
 sfx_prepare[0]=sfx_prepare1;
 sfx_prepare[1]=sfx_prepare2;

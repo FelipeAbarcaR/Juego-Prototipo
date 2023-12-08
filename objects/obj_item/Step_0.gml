@@ -11,6 +11,7 @@ if(!collected && _player!=-1 && place_meeting(x,y,_player))
 	
 	//Collected
 	collected = _added;
+	if(_added) play_sfx(sound_collect);
 }
 
 //Collected fade away

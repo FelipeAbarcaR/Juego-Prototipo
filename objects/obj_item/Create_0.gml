@@ -7,3 +7,5 @@ collected = false;
 z = -16;
 zspd = 0;
 
+//SFX
+sound_collect=sfx_collect;

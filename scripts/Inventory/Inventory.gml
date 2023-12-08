@@ -95,11 +95,13 @@ function Inv_del(_item,_count){
 
 }
 
-function Inv_hasItem(_item)
+function Inv_hasItem(_item,_qty=undefined)
 {
+	
     var _list = obj_game.inv_list;
     var _list_size = ds_list_size(_list);
-
+	var __qty=0;
+	if(_qty!=undefined)__qty=_qty;
     for (var i = 0; i < _list_size; i++)
     {
         // Get array
@@ -108,7 +110,7 @@ function Inv_hasItem(_item)
         // Check item
         if (_arr[0] == _item)
         {
-            return true; // Item found in inventory
+			if(_arr[1] >=__qty)	return true; // Item found in inventory
         }
     }
     

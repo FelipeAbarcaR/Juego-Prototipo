@@ -22,12 +22,13 @@ if(key_direction_pressed)
 	draw_vanish_beatbar();
 	
 }else InputDirection=LastDirection;
-image_index=(InputDirection/45);
+
 
 if(button_shield)
 {
     spell_call_shield();
 }
+
 States();
 
 

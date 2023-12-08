@@ -12,3 +12,5 @@ if(instance_exists(o_player))
 	player_speed=o_player.walk_spd;
 	depth=_player.depth+1;
 }
+
+sound_steps=sfx_steps_stairs;

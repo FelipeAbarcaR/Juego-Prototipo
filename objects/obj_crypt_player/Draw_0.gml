@@ -66,3 +66,16 @@ if(global.DrawText)
 	draw_line(_x3,_y3,_x4,_y4);
 	draw_line(_x2,_y2,_x4,_y4);
 }
+
+if(hit_screen_frames>0)
+{
+	draw_set_alpha(map_value(hit_screen_frames,0,5,1,0));
+	var _margin=20;
+	var _x=uc_get_view_x();
+	var _y=uc_get_view_y();
+	var _uc_width=uc_get_view_width();
+	var _uc_height=uc_get_view_height();
+    draw_rectangle(_x-_margin,_y-_margin,_x+_uc_width+_margin,_y+_uc_height+_margin,false);
+	hit_screen_frames--;
+	draw_set_alpha(1);
+}

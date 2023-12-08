@@ -2,90 +2,75 @@
 
 textbox_states=
 {
-	creciendo:0,
-	escribiendo:1,
-	esperando:2,
-	destruyendose:3,
-	invicible:4
+	dibujando_pt:0,
+	creciendo_tb:1,
+	escribiendo:2,
+	esperando:3,
+	destruyendose:4,
+	invisible:5
 }
-textbox_state=textbox_states.creciendo;
+
+textbox_state=textbox_states.dibujando_pt;
+play_sfx(sfx_warp);
 
 
 
 // Input
-confirm_key = vk_space; // button to press to go to the next page
-up_key = vk_up;
-down_key = vk_down;
+confirm_key		= vk_space; // button to press to go to the next page
+up_key			= vk_up;
+down_key		= vk_down;
 max_input_delay = 5; // how many frames to ignore input
-input_delay = max_input_delay;
+input_delay		= max_input_delay;
 
 
 // Position
-margin = 16; // how much space the textbox gets from the edges of the screen
-padding = 8; // how much space things inside the textbox get
-width = 200;
-height = 128;
+margin	= 16; // how much space the textbox gets from the edges of the screen
+padding	= 8; // how much space things inside the textbox get
+width	= 400;
+height	= 260;
 
 show_debug_message(string(x)+" "+string(y));
 
 
-view_x=uc_get_view_x();
-view_y=uc_get_view_y();
+view_x	= uc_get_view_x();
+view_y	= uc_get_view_y();
 
-gui_width=display_get_gui_width();
-gui_height=display_get_gui_height();
+gui_width	= display_get_gui_width();
+gui_height	= display_get_gui_height();
 
 view_width	=	uc_get_view_width();
 view_height	=	uc_get_view_height();
 
-
-gui_x=0;
-gui_y=gui_height*0.1;
-
+//POSITION IN GUI
+gui_x	=	565//gui_width*0.45;
+gui_y	=	460//gui_height*0.70;
 
 // Text
-text_font = "fnt_dialogo_god";
+text_font = "fnt_dialogo_conciencia3";
 text_color = c_white;
 text_speed = 0.20;
 text_x = padding;
 text_y = padding;
 text_width = width - padding * 2;
 lenght_shift_format=80; //max lenght to shift text from middle center to upper top corner
+text_wrap_width=width*0.2;
+text_wrap_height=height*0.2;
 
 //Portrait
-
 portrait_sprite = -1;
-portrait_width = 128;
-portrait_height = 128;	
+portrait_width = 256;
+portrait_height = 256;	
 portrait_x = padding;
 portrait_y = padding;
 
 //portrait shader
-DissolveSettings(1,0,c_white,c_white,0.5)
+DissolveSettings(spr_mask_cloud,0,c_white,c_white,0.5)
 //portrait_shader=sha_luma_mask;
 
-//mask = spr_mask_cloud;
-//mask_text = sprite_get_texture(mask,0);
-//u_mask_text = shader_get_sampler_index(portrait_shader,"mask_text");
-//u_time		=shader_get_uniform(portrait_shader,"time");
-//u_tolerance	=shader_get_uniform(portrait_shader, "tolerance");
-//u_inverse	=shader_get_uniform(portrait_shader, "inverse");
+
 luma_time=0;
-//luma_tolerance=0.5;
-//luma_inverse=0;
-luma_time_speed=0.01;
 
-
-
-//Speaker
-
-speaker_font = "fnt_Dogica";
-speaker_color = #f0e1a3;
-speaker_name = "";
-speaker_width = sprite_get_width(spr_name);
-speaker_height = sprite_get_height(spr_name);
-speaker_x = padding+portrait_width/2;
-speaker_y = height-padding-speaker_height;
+luma_time_speed=0.015;
 
 //Background
 
@@ -171,7 +156,7 @@ sfx_open_textbox=Open_Textbox;
 sfx_confirm_option=Confirm_Option;
 
 //Start opening sfx
-PlaySFX(sfx_open_textbox);
+play_sfx(sfx_open_textbox);
 
 // Start a conversation
 setTopic = function(topic) {
@@ -199,7 +184,7 @@ next = function() {
 		}
 	
 		minimize_to_destroy=true;
-		PlaySFX(sfx_close_textbox);
+		play_sfx(sfx_close_textbox);
 	}
 	else {
 		actions[current_action].act(id);
@@ -235,7 +220,7 @@ hola2=0;
 
 
 //upscaling textbox draw
-increasing_value=0.0;
+increasing_value=0;
 starting_y=y+height/2;
-delta_scaling=0.06;
+delta_scaling=0.03;
 

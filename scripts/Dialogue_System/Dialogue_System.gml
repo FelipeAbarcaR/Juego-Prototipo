@@ -44,10 +44,10 @@ function startDialogueGod(topic) {
 	if (instance_exists(obj_textbox_con)) return;
 	var inst = instance_create_depth(0, 0, -999, obj_textbox_god);
 	inst.dialogue_sounds= [
-		Dialogo_2_Boss_1_SFX,
-		Dialogo_3_Boss_1_SFX,
-		Dialogo_4_Boss_1_SFX,
-		Dialogo_5_Boss_1_SFX,
+		Dialogo_10_Boss_1_SFX,
+		Dialogo_11_Boss_1_SFX,
+		Dialogo_15_Boss_1_SFX,
+		Dialogo_17_Boss_1_SFX,
 		Dialogo_6_Boss_1_SFX,
 		Dialogo_7_Boss_1_SFX]
 	inst.setTopic(topic);
@@ -836,3 +836,4 @@ global.topics[$ "probandoConciencia"] = [
 	SPEAKER("Taim",spr_pt_deer_128,PORTRAIT_SIDE.LEFT),
 	TEXT("Yo soy joven y la vida es corta, aún así no puedo matar el tiempo.")
 ];
+

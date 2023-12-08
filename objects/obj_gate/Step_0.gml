@@ -31,6 +31,7 @@ if(gate_activated)
 	uc_set_mode(CMODE.OBJECT_FOLLOWING)
 	uc_set_instance_following_list(o_player);
 	state=GATESTATE.opening;
+	if(!audio_is_playing(sound_opening))play_sfx(sound_opening);
 }
 
 switch (state)
@@ -39,6 +40,8 @@ switch (state)
 	opening_progress=min(opening_progress+opening_speed,opening_distance);
 	if(opening_progress>=opening_distance)
 	{
+		if(audio_is_playing(sound_opening)) audio_stop_sound(sound_opening);
+		play_sfx(sound_opened);
 	    state=GATESTATE.open;
 	}
 }

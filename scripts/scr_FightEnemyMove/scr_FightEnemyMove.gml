@@ -54,7 +54,7 @@ _actualdistance=point_distance(x,y,_xTo,_yTo);
 //play sfx at 90% distance
 if ((_actualdistance/_distance)>=0.90 && played_sfx==false)
 {
-	FightPlaySFX(EnemyStance.prepare);
+	Fightplay_sfx(EnemyStance.prepare);
 	played_sfx=true;
 }
 

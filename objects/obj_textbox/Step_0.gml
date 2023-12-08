@@ -57,7 +57,7 @@ if(!minimize_to_destroy)
 			if(change != 0)
 			{
 				current_option += change;
-				PlaySFX(sfx_up_down_option);
+				play_sfx(sfx_up_down_option);
 				
 				//Wrap to first and last option
 				if(current_option < 0) current_option = option_count -2;
@@ -71,7 +71,7 @@ if(!minimize_to_destroy)
 				var option = options[current_option];
 				options = [];
 				option_count  = 0;
-				PlaySFX(sfx_confirm_option);
+				play_sfx(sfx_confirm_option);
 				option.act(id);
 			}
 		

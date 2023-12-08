@@ -100,6 +100,10 @@ function AbrirPuerta(_roomindex,_targetX,_targetY){
 			TransitionStart(_roomname,TR_TYPE.DITHER_CIRCLE_TWOPASS);
 			//instance_destroy();
 			//screen_transition(TR_TYPE.DITHER_CIRCLE_TWOPASS)//HACER ROOM TRANSITION EN FUNCION DEL OBJ_TRANSITION_MANAGER, Y PONER TARGET X Y TARGET Y, LUEGO ARREGLAR LAS OTRAS PUERTAS.(OBJ_GAME ROOM,START:TARGETX Y TARGET Y A 0, Y OTRAS COSITAS (CUANDO ES PALYER MOVE, O X E Y POR DEFECTO SI ESTAN EN 0))
+			if(variable_instance_exists(global.activate,"sound_enter"))
+			{
+			    play_sfx(global.activate.sound_enter);
+			}
 		}
 	}
 }

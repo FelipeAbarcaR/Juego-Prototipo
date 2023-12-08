@@ -28,3 +28,7 @@ gate_activated=false;
 opening_speed=0.06;
 opening_distance=20;
 opening_progress=0;
+
+//SFX
+sound_opening=sfx_gate_opening;
+sound_opened=sfx_gate_opened;

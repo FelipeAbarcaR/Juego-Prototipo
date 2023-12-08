@@ -49,7 +49,10 @@ function bgm_transition_set_values(){
 		    last_music=current_music;
 			current_music=new_music;
 			current_bpm = get_bpm(new_music);
-			global.bpm = current_bpm
+			global.bpm = current_bpm;
+			var _bt=global.BeatTimeMS;
+			var _bpm=global.bpm;
+
 			global.BeatTimeMS=((60)/global.bpm)*1000000;
 			reset_beat_bar_2_variables();
 }
@@ -140,11 +143,13 @@ function reset_beat_bar_2_variables()
 	beat_meter_list=[]; 
 }
 
-function play_sfx(_sfx)
+function play_sfx(_sound,_gain=undefined)
 {
-    with(obj_beat)
+	with (obj_beat)
 	{
-	    audio_play_sound(_sfx,10,0,sfx_gain);
+		var gain;
+		if(is_undefined(_gain)) gain=sfx_gain else gain=_gain;
+	    audio_play_sound(_sound,10,0,gain)
 	}
 }
 

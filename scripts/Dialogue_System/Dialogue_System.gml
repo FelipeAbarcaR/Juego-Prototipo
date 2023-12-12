@@ -43,7 +43,7 @@ function startDialogueConciencia(topic,_cutscene=false) {
 }
 
 function startDialogueGod(topic,_cutscene) {
-	if (instance_exists(obj_textbox_con)) return;
+	if (instance_exists(obj_textbox_god)) return;
 	var inst = instance_create_depth(0, 0, -999, obj_textbox_god);
 	inst.dialogue_sounds= [
 		Dialogo_10_Boss_1_SFX,
@@ -52,7 +52,7 @@ function startDialogueGod(topic,_cutscene) {
 		Dialogo_17_Boss_1_SFX,
 		Dialogo_6_Boss_1_SFX,
 		Dialogo_7_Boss_1_SFX]
-	_cs=_cutscene;
+	var _cs=_cutscene;
 	inst.setTopic(topic,_cs);
 }
 

@@ -190,9 +190,9 @@ if(!minimize_to_destroy)
 		increasing_value=max(0,increasing_value-delta_scaling);	 
 		if(increasing_value<=0)
 		{
+
 			if(global.cutscene) obj_cutscene.next(id);
 			instance_destroy()
-			
 		}
 	 }
 

@@ -1,4 +1,7 @@
 {
   "FolderOrderSettings": [],
-  "ResourceOrderSettings": [],
+  "ResourceOrderSettings": [
+    {"name":"spr_gesture_icon07","order":2,"path":"sprites/spr_gesture_icon07/spr_gesture_icon07.yy",},
+    {"name":"spr_gesture_icon08","order":1,"path":"sprites/spr_gesture_icon08/spr_gesture_icon08.yy",},
+  ],
 }

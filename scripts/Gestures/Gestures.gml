@@ -11,7 +11,8 @@ enum GESTURE
 	Sound,
 	Weird,
 	Talk,
-	Check
+	Check,
+	Dots
 	
 }
 
@@ -24,6 +25,7 @@ global.gestures=
 	spr_gesture_icon04,
 	spr_gesture_icon05,
 	spr_gesture_icon06,
+	spr_gesture_icon07,
 	
 ]
 function set_gesture(_obj,_gesture)

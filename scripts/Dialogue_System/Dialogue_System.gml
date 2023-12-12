@@ -21,7 +21,7 @@
 #macro SETNPC new SetNPCAction
 
 function startDialogue(topic,_cutscene=false) {
-	if (instance_exists(obj_textbox)) return;
+	//if (instance_exists(obj_textbox)) return;
 	var inst = instance_create_depth(x, y, -999, obj_textbox);
 
 	if(instance_exists(activate))
@@ -35,7 +35,7 @@ function startDialogue(topic,_cutscene=false) {
 
 }
 function startDialogueConciencia(topic,_cutscene=false) {
-	if (instance_exists(obj_textbox_con)) return;
+	//if (instance_exists(obj_textbox_con)) return;
 	var inst = instance_create_depth(activate.x, activate.y, -999, obj_textbox_con,{npc:activate});
 	inst.dialogue_sounds= activate.dialogue_sounds;
 	var _cs=_cutscene;
@@ -43,7 +43,7 @@ function startDialogueConciencia(topic,_cutscene=false) {
 }
 
 function startDialogueGod(topic,_cutscene) {
-	if (instance_exists(obj_textbox_god)) return;
+	//if (instance_exists(obj_textbox_god)) return;
 	var inst = instance_create_depth(0, 0, -999, obj_textbox_god);
 	inst.dialogue_sounds= [
 		Dialogo_10_Boss_1_SFX,

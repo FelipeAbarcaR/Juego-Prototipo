@@ -444,7 +444,8 @@
   "ARG2": "god01",
   "ARG3": "¿REALMENTE PENSASTE QUE PODRÍAS HACER ALGO AL RESPECTO? ",
   "ARG4": 1,
-  "ARG6": 0,
+  "ARG5": "spr_pt_dios1",
+  "ARG6": 2,
   "ARG7": 0,
   "SNAP": 0
  },
@@ -458,7 +459,7 @@
   "ARG2": "god01",
   "ARG3": "¿ACASO SABES QUIEN SOY? ",
   "ARG4": 1,
-  "ARG6": 0,
+  "ARG6": 2,
   "ARG7": 0,
   "SNAP": 0
  },
@@ -472,7 +473,7 @@
   "ARG2": "god01",
   "ARG3": "¿SIQUIERA SABES QUIEN ERES?",
   "ARG4": 1,
-  "ARG6": 0,
+  "ARG6": 2,
   "ARG7": 0,
   "SNAP": 0
  },
@@ -486,7 +487,7 @@
   "ARG2": "god01",
   "ARG3": "Todo esfuerzo ha sido inútil, o creíste que eres el primero en intentar detener el ciclo eterno",
   "ARG4": 0,
-  "ARG6": 0,
+  "ARG6": 2,
   "ARG7": 0,
   "SNAP": 0
  },
@@ -500,7 +501,7 @@
   "ARG2": "god01",
   "ARG3": "Antes de tu llegada, nadie percibió como la serpiente mordía su propia cola",
   "ARG4": 0,
-  "ARG6": 0,
+  "ARG6": 2,
   "ARG7": 0,
   "SNAP": 0
  },
@@ -514,7 +515,7 @@
   "ARG2": "god01",
   "ARG3": "Queridas mascotas, decidan, pues esto no se repetirá",
   "ARG4": 0,
-  "ARG6": 0,
+  "ARG6": 2,
   "ARG7": 0,
   "SNAP": 0
  },
@@ -528,7 +529,7 @@
   "ARG2": "god01",
   "ARG3": "Abracen lo ya conocido, pues nunca les falto nada",
   "ARG4": 0,
-  "ARG6": 0,
+  "ARG6": 2,
   "ARG7": 0,
   "SNAP": 0
  },
@@ -542,7 +543,7 @@
   "ARG2": "god01",
   "ARG3": "Alaben al desconocido, y enfrenten su destino divino",
   "ARG4": 0,
-  "ARG6": 0,
+  "ARG6": 2,
   "ARG7": 0,
   "SNAP": 0
  },
@@ -562,7 +563,7 @@
   "ACTION_NUMBER": 57,
   "ACTION": "GESTURE",
   "ARG1": "obj_jabali",
-  "ARG2": 5,
+  "ARG2": 7,
   "SNAP": 0
  },
  {
@@ -592,7 +593,7 @@
   "ACTION_NUMBER": 60,
   "ACTION": "GESTURE",
   "ARG1": "obj_jabali2",
-  "ARG2": 5,
+  "ARG2": 7,
   "SNAP": 0
  },
  {
@@ -631,7 +632,7 @@
   "ACTION_NUMBER": 64,
   "ACTION": "GESTURE",
   "ARG1": "obj_coneja",
-  "ARG2": 5,
+  "ARG2": 7,
   "SNAP": 1
  },
  {
@@ -661,7 +662,7 @@
   "ACTION_NUMBER": 67,
   "ACTION": "GESTURE",
   "ARG1": "obj_capibara",
-  "ARG2": 5,
+  "ARG2": 7,
   "SNAP": 0
  },
  {
@@ -682,7 +683,7 @@
   "ACTION_NUMBER": 69,
   "ACTION": "GESTURE",
   "ARG1": "obj_hamster",
-  "ARG2": 5,
+  "ARG2": 7,
   "SNAP": 1
  },
  {

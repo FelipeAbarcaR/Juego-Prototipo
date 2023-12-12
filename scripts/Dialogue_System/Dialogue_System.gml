@@ -20,7 +20,7 @@
 #macro TBEVENT new UserEventAction
 #macro SETNPC new SetNPCAction
 
-function startDialogue(topic) {
+function startDialogue(topic,_cutscene=false) {
 	if (instance_exists(obj_textbox)) return;
 	var inst = instance_create_depth(x, y, -999, obj_textbox);
 
@@ -29,18 +29,20 @@ function startDialogue(topic) {
 		inst.npc_object=activate;
 		inst.dialogue_sounds= activate.dialogue_sounds;
 	}
-	inst.setTopic(topic);
+	var _cs=_cutscene;
+	inst.setTopic(topic,_cs);
 	return inst;
 
 }
-function startDialogueConciencia(topic) {
+function startDialogueConciencia(topic,_cutscene=false) {
 	if (instance_exists(obj_textbox_con)) return;
 	var inst = instance_create_depth(activate.x, activate.y, -999, obj_textbox_con,{npc:activate});
 	inst.dialogue_sounds= activate.dialogue_sounds;
-	inst.setTopic(topic);
+	var _cs=_cutscene;
+	inst.setTopic(topic,_cs);
 }
 
-function startDialogueGod(topic) {
+function startDialogueGod(topic,_cutscene) {
 	if (instance_exists(obj_textbox_con)) return;
 	var inst = instance_create_depth(0, 0, -999, obj_textbox_god);
 	inst.dialogue_sounds= [
@@ -50,7 +52,8 @@ function startDialogueGod(topic) {
 		Dialogo_17_Boss_1_SFX,
 		Dialogo_6_Boss_1_SFX,
 		Dialogo_7_Boss_1_SFX]
-	inst.setTopic(topic);
+	_cs=_cutscene;
+	inst.setTopic(topic,_cs);
 }
 
 function DialogueSound(){

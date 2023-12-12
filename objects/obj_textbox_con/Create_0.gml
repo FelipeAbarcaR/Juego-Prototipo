@@ -175,7 +175,9 @@ sfx_confirm_option=Confirm_Option;
 play_sfx(sfx_open_textbox);
 
 // Start a conversation
-setTopic = function(topic) {
+setTopic = function(topic,_cutscene=false) {
+	
+	if(_cutscene) actions = global.cutscene_topics[$ topic] else actions = global.topics[$ topic];
 	actions = global.topics[$ topic];
 	current_action = -1;
 	

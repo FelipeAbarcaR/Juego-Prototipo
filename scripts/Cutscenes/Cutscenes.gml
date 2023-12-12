@@ -269,7 +269,7 @@ for (var _i = 0; _i < array_length(cinematica); _i++)
 				_text = cinematica[_i][$ "ARG3"];
 				_portrait = real(cinematica[_i][$ "ARG4"]);
 				_sprite = asset_get_index(cinematica[_i][$ "ARG5"]);
-				_conciencia = cinematica[_i][$ "ARG6"];
+				_conciencia = real(cinematica[_i][$ "ARG6"]);
 				_background = real(cinematica[_i][$ "ARG7"]);
 				
 				if(_cutscene_comp != _cutscene) _text_number = 0;
@@ -284,17 +284,18 @@ for (var _i = 0; _i < array_length(cinematica); _i++)
 					array_insert(global.cutscene_topics[$ _cutscene_topic],array_length(global.cutscene_topics[$ _cutscene_topic]),SPEAKER(_speaker,_sprite,_portrait));
 					array_insert(global.cutscene_topics[$ _cutscene_topic],array_length(global.cutscene_topics[$ _cutscene_topic]),TEXT(_text));	
 					
-					if(_conciencia == "1")
-					{
-						array_insert(global.cutscenes[$ _cutscene],array_length(global.cutscenes[$ _cutscene]),[startDialogueConciencia,[_cutscene_topic],_snap]);
-					}else
-					if(_conciencia == "2")
-					{
-						array_insert(global.cutscenes[$ _cutscene],array_length(global.cutscenes[$ _cutscene]),[startDialogueConciencia,[_cutscene_topic],_snap]);
-					}
-					else
-					{
-						array_insert(global.cutscenes[$ _cutscene],array_length(global.cutscenes[$ _cutscene]),[startDialogueGod,[_cutscene_topic],_snap]);
+					switch(_conciencia){
+						case 1:
+						array_insert(global.cutscenes[$ _cutscene],array_length(global.cutscenes[$ _cutscene]),[startDialogueConciencia,[_cutscene_topic,1],_snap]);
+						break;
+						
+						case 2:
+						array_insert(global.cutscenes[$ _cutscene],array_length(global.cutscenes[$ _cutscene]),[startDialogueGod,[_cutscene_topic,1],_snap]);
+						break;
+						
+						default:
+						array_insert(global.cutscenes[$ _cutscene],array_length(global.cutscenes[$ _cutscene]),[startDialogue,[_cutscene_topic,1],_snap]);
+						break;
 					}
 					_cutscene_topic = "";
 					_cutscene_comp = _cutscene;

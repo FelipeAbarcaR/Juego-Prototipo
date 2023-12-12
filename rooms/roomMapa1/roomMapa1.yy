@@ -44,6 +44,7 @@
     {"name":"inst_75E3A5BB_1","path":"rooms/roomMapa1/roomMapa1.yy",},
     {"name":"inst_7C342E1D","path":"rooms/roomMapa1/roomMapa1.yy",},
     {"name":"inst_51880F7D","path":"rooms/roomMapa1/roomMapa1.yy",},
+    {"name":"inst_5EE41ED4","path":"rooms/roomMapa1/roomMapa1.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -183,6 +184,7 @@
             {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_51880F7D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_guide_markers","path":"objects/obj_guide_markers/obj_guide_markers.yy",},"properties":[
                 {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_guide_markers","path":"objects/obj_guide_markers/obj_guide_markers.yy",},"propertyId":{"name":"guide_marker_number","path":"objects/obj_guide_markers/obj_guide_markers.yy",},"value":"3",},
               ],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1024.0,"y":120.0,},
+            {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5EE41ED4","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_gato_cinematica","path":"objects/obj_gato_cinematica/obj_gato_cinematica.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1032.0,"y":-40.0,},
           ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
         {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"instances_OBJ","depth":2500,"effectEnabled":true,"effectType":null,"gridX":8,"gridY":8,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
       ],"properties":[],"userdefinedDepth":false,"visible":true,},

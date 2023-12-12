@@ -103,12 +103,16 @@ part_system_depth(rainbow_particle,depth-1);
 
 button_shield=false;
 
-//npc follow
 
+
+//npc follow
 pos_array_size = 94;
 
-for(var i = pos_array_size -1; i > 0; i--)
+for(var i = pos_array_size -1; i >= 0; i--)
 {
 	pos_x[i] = x;
-	pos_y[i] = y;	
+	pos_y[i] = y;
+	
+	to_record_sprite[i] = spr_gato3_down;
+	to_record_xscale[i] = image_xscale;
 }

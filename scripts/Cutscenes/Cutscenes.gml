@@ -287,10 +287,14 @@ for (var _i = 0; _i < array_length(cinematica); _i++)
 					if(_conciencia == "1")
 					{
 						array_insert(global.cutscenes[$ _cutscene],array_length(global.cutscenes[$ _cutscene]),[startDialogueConciencia,[_cutscene_topic],_snap]);
+					}else
+					if(_conciencia == "2")
+					{
+						array_insert(global.cutscenes[$ _cutscene],array_length(global.cutscenes[$ _cutscene]),[startDialogueConciencia,[_cutscene_topic],_snap]);
 					}
 					else
 					{
-						array_insert(global.cutscenes[$ _cutscene],array_length(global.cutscenes[$ _cutscene]),[startDialogue,[_cutscene_topic],_snap]);
+						array_insert(global.cutscenes[$ _cutscene],array_length(global.cutscenes[$ _cutscene]),[startDialogueGod,[_cutscene_topic],_snap]);
 					}
 					_cutscene_topic = "";
 					_cutscene_comp = _cutscene;

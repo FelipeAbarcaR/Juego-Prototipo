@@ -1087,6 +1087,7 @@
     {"id":{"name":"spr_ts_swamp","path":"sprites/spr_ts_swamp/spr_ts_swamp.yy",},},
     {"id":{"name":"__input_class_combo_definition","path":"scripts/__input_class_combo_definition/__input_class_combo_definition.yy",},},
     {"id":{"name":"scribble_super_glyph_copy_all","path":"scripts/scribble_super_glyph_copy_all/scribble_super_glyph_copy_all.yy",},},
+    {"id":{"name":"Sprite333","path":"sprites/Sprite333/Sprite333.yy",},},
     {"id":{"name":"fnt_text_small","path":"fonts/fnt_text_small/fnt_text_small.yy",},},
     {"id":{"name":"string_height_scribble_ext","path":"scripts/string_height_scribble_ext/string_height_scribble_ext.yy",},},
     {"id":{"name":"input_check_quick_pressed_2d","path":"scripts/input_check_quick_pressed_2d/input_check_quick_pressed_2d.yy",},},

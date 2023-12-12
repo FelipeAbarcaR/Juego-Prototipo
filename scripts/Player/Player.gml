@@ -258,10 +258,15 @@ function update_movement(){
 		{
 			pos_x[i] = pos_x[i-1];
 			pos_y[i] = pos_y[i-1];
+			
+			to_record_sprite[i] = to_record_sprite[i - 1];
+			to_record_xscale[i] = to_record_xscale[i - 1];
 		}
 		
 		pos_x[0] = x;
 		pos_y[0] = y;
+		to_record_sprite[0] = sprite_index;
+		to_record_xscale[0] = image_xscale;
 	}
 	
 }

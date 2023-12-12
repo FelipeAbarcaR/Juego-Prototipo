@@ -110,3 +110,9 @@ enum trap_type
 	WALL,
 	FLYING
 }
+
+enum npc_states
+{
+	IDLE,
+	FOLLOW	
+}

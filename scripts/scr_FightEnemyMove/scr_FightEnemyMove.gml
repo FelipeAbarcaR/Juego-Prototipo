@@ -9,6 +9,7 @@ var _control=obj_fight_control;
 //get the coordinates of the point to go
 var _current_path_x = path_get_point_x(current_path,point_to_go);
 var _current_path_y = path_get_point_y(current_path,point_to_go);
+
 //scale to screen resolution
 var _fight_room_width = 1024; //width of path's canvas
 var _fight_room_height = 576; //height of path's canvas

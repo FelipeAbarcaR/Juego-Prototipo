@@ -285,13 +285,13 @@ for (var _i = 0; _i < array_length(cinematica); _i++)
 					array_insert(global.cutscene_topics[$ _cutscene_topic],array_length(global.cutscene_topics[$ _cutscene_topic]),TEXT(_text));	
 					
 					switch(_conciencia){
-						//case 1:
-						//array_insert(global.cutscenes[$ _cutscene],array_length(global.cutscenes[$ _cutscene]),[startDialogueConciencia,[_cutscene_topic,1],_snap]);
-						//break;
+						case 1:
+						array_insert(global.cutscenes[$ _cutscene],array_length(global.cutscenes[$ _cutscene]),[startDialogueConciencia,[_cutscene_topic,1],_snap]);
+						break;
 						
-						//case 2:
-						//array_insert(global.cutscenes[$ _cutscene],array_length(global.cutscenes[$ _cutscene]),[startDialogueGod,[_cutscene_topic,1],_snap]);
-						//break;
+						case 2:
+						array_insert(global.cutscenes[$ _cutscene],array_length(global.cutscenes[$ _cutscene]),[startDialogueGod,[_cutscene_topic,1],_snap]);
+						break;
 						
 						default:
 						array_insert(global.cutscenes[$ _cutscene],array_length(global.cutscenes[$ _cutscene]),[startDialogue,[_cutscene_topic,1],_snap]);

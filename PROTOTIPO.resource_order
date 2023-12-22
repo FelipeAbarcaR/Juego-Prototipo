@@ -1,7 +1,15 @@
 {
-  "FolderOrderSettings": [],
+  "FolderOrderSettings": [
+    {"name":"Rana TEST","order":1,"path":"folders/Sprites/Minijuegos/Fight/Rana TEST.yy",},
+  ],
   "ResourceOrderSettings": [
+    {"name":"spr_frog_hurt_1_TEST","order":4,"path":"sprites/spr_frog_hurt_1_TEST/spr_frog_hurt_1_TEST.yy",},
+    {"name":"spr_frog_attack_1_TEST","order":3,"path":"sprites/spr_frog_attack_1_TEST/spr_frog_attack_1_TEST.yy",},
+    {"name":"spr_frog_prepare_1_TEST","order":1,"path":"sprites/spr_frog_prepare_1_TEST/spr_frog_prepare_1_TEST.yy",},
+    {"name":"obj_fight_rana_TEST","order":1,"path":"objects/obj_fight_rana_TEST/obj_fight_rana_TEST.yy",},
     {"name":"spr_gesture_icon07","order":2,"path":"sprites/spr_gesture_icon07/spr_gesture_icon07.yy",},
+    {"name":"Fight","order":1,"path":"scripts/Fight/Fight.yy",},
+    {"name":"spr_frog_prepare_TEST337","order":2,"path":"sprites/spr_frog_prepare_TEST337/spr_frog_prepare_TEST337.yy",},
     {"name":"spr_gesture_icon08","order":1,"path":"sprites/spr_gesture_icon08/spr_gesture_icon08.yy",},
   ],
 }

@@ -12,9 +12,9 @@ if ( stance ==  EnemyStance.prepare)
 		if(global.beat)
 		{
 		    prepare_wait_beats--;
-			hola=10;
 		}
 	}
+	
 	if(!_waiting)
 	{
 		if (current_beat != global.BeatNumber)
@@ -25,11 +25,10 @@ if ( stance ==  EnemyStance.prepare)
 	
 		if (move_on_path==true)
 		{
-			//var _ishalfbeat=(global.beatprogress>=0.45)
-			if (/*_ishalfbeat &&*/ move_on_path)
+			if ( move_on_path)
 			{
 				var _on_point = scr_FightEnemyMove();
-				if (_on_point /*and _ishalfbeat*/)
+				if (_on_point)
 				{
 					move_on_path=false;
 				}

@@ -56,21 +56,21 @@ if(fighters_created)
 
 	if(fight_status==fighting.inprogress)
 	{
-		if(obj_Conde.hp<=0)
+		if(fighter1.hp<=0)
 		{
-		   obj_Conda.stance=EnemyStance.locked;
+		   fighter2.stance=EnemyStance.locked;
 		   fight_status=fighting.ending;
 			victory=false;
 			alarm[3]=room_speed;
 		}
 		
-		if(obj_Conda.hp<=0)
+		if(fighter2.hp<=0)
 		{
-			obj_Conda.stance=EnemyStance.dead;
+			fighter2.stance=EnemyStance.dead;
 			fight_status=fighting.ending;
 			victory=true;
 			alarm[3]=room_speed;
-			with(obj_Conde)	state="stop";
+			with(fighter1)	state="stop";
 		
 		}
 	}

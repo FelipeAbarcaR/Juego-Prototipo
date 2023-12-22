@@ -245,11 +245,6 @@ for (var _i = 0; _i < array_length(cinematica); _i++)
 {
 	_cutscene = cinematica[_i][$ "CS_NAME"];
 	
-	if(_i == 18)
-	{
-		hola = 10;
-	}
-	
 	if(!struct_exists(global.cutscenes,_cutscene) and _cutscene != "")
 	{
 		global.cutscenes[$ _cutscene]= [];
@@ -264,6 +259,8 @@ for (var _i = 0; _i < array_length(cinematica); _i++)
 		{
 			case "TEXT":
 			
+				hola = 10;
+				
 				_npc = asset_get_index(cinematica[_i][$ "ARG1"]);
 				_speaker = cinematica[_i][$ "ARG2"];
 				_text = cinematica[_i][$ "ARG3"];
@@ -272,39 +269,101 @@ for (var _i = 0; _i < array_length(cinematica); _i++)
 				_conciencia = real(cinematica[_i][$ "ARG6"]);
 				_background = real(cinematica[_i][$ "ARG7"]);
 				
-				if(_cutscene_comp != _cutscene) _text_number = 0;
+				if(_cutscene_comp != _cutscene)
+				{
+					_cutscene_topic = "";
+					_text_number = 0;
+				}
 				
 				if(!struct_exists(global.cutscene_topics,_cutscene_topic) /*and _cutscene_topic != ""*/)
 				{
-					_cutscene_topic = _cutscene + " TEXT" + string(_text_number);
+					_cutscene_topic = _cutscene + " TEXT " + string(_text_number);
 					global.cutscene_topics[$ _cutscene_topic] = [];
 					
 					//if(_npc != -1) array_insert(global.cutscenes_topics[$ _cutscene_topic],array_length(global.cutscenes_topics[$ _cutscene_topic]),SETNPC(_npc));
 					array_insert(global.cutscene_topics[$ _cutscene_topic],array_length(global.cutscene_topics[$ _cutscene_topic]),BACKGROUND(_background));
 					array_insert(global.cutscene_topics[$ _cutscene_topic],array_length(global.cutscene_topics[$ _cutscene_topic]),SPEAKER(_speaker,_sprite,_portrait));
-					array_insert(global.cutscene_topics[$ _cutscene_topic],array_length(global.cutscene_topics[$ _cutscene_topic]),TEXT(_text));	
+					array_insert(global.cutscene_topics[$ _cutscene_topic],array_length(global.cutscene_topics[$ _cutscene_topic]),TEXT(_text));
 					
-					switch(_conciencia){
-						//case 1:
-						//array_insert(global.cutscenes[$ _cutscene],array_length(global.cutscenes[$ _cutscene]),[startDialogueConciencia,[_cutscene_topic,1],_snap]);
-						//break;
-						
-						//case 2:
-						//array_insert(global.cutscenes[$ _cutscene],array_length(global.cutscenes[$ _cutscene]),[startDialogueGod,[_cutscene_topic,1],_snap]);
-						//break;
-						
-						default:
-						array_insert(global.cutscenes[$ _cutscene],array_length(global.cutscenes[$ _cutscene]),[startDialogue,[_cutscene_topic,1],_snap]);
-						break;
-					}
-					_cutscene_topic = "";
 					_cutscene_comp = _cutscene;
-					_text_number++;
+					
+					if(_i != array_length(cinematica)-1)
+					{
+						
+						if(cinematica[_i+1][$ "ACTION"] != "TEXT" or asset_get_index(cinematica[_i+1][$ "ARG1"]) != _npc)
+						{
+							switch(_conciencia)
+							{
+								//case 1:
+								//array_insert(global.cutscenes[$ _cutscene],array_length(global.cutscenes[$ _cutscene]),[startDialogueConciencia,[_cutscene_topic,1],_snap]);
+								//break;
+						
+								//case 2:
+								//array_insert(global.cutscenes[$ _cutscene],array_length(global.cutscenes[$ _cutscene]),[startDialogueGod,[_cutscene_topic,1],_snap]);
+								//break;
+						
+								default:
+								array_insert(global.cutscenes[$ _cutscene],array_length(global.cutscenes[$ _cutscene]),[startDialogue,[_cutscene_topic,1],_snap]);
+								break;
+							}
+							_text_number++;
+						}
+						else
+						{
+							continue;
+						}	
+					}
 				}
 				else
 				{
-					continue;
+					if(_npc == asset_get_index(cinematica[_i-1][$ "ARG1"]))
+					{
+						array_insert(global.cutscene_topics[$ _cutscene_topic],array_length(global.cutscene_topics[$ _cutscene_topic]),BACKGROUND(_background)); //REVISAR SI DA PORBLEMA
+						
+						if(_speaker != cinematica[_i-1][$ "ARG2"] or _sprite != asset_get_index(cinematica[_i-1][$ "ARG5"])) array_insert(global.cutscene_topics[$ _cutscene_topic],array_length(global.cutscene_topics[$ _cutscene_topic]),SPEAKER(_speaker,_sprite,_portrait));
+						
+						if(_text != "") array_insert(global.cutscene_topics[$ _cutscene_topic],array_length(global.cutscene_topics[$ _cutscene_topic]),TEXT(_text)); 	
+					}
+					else
+					{
+						_cutscene_topic = _cutscene + " TEXT " + string(_text_number);
+						global.cutscene_topics[$ _cutscene_topic] = [];
+						
+						//if(_npc != -1) array_insert(global.cutscenes_topics[$ _cutscene_topic],array_length(global.cutscenes_topics[$ _cutscene_topic]),SETNPC(_npc));
+						array_insert(global.cutscene_topics[$ _cutscene_topic],array_length(global.cutscene_topics[$ _cutscene_topic]),BACKGROUND(_background));
+						array_insert(global.cutscene_topics[$ _cutscene_topic],array_length(global.cutscene_topics[$ _cutscene_topic]),SPEAKER(_speaker,_sprite,_portrait));
+						array_insert(global.cutscene_topics[$ _cutscene_topic],array_length(global.cutscene_topics[$ _cutscene_topic]),TEXT(_text));
+					}
+					
+					if(_i != array_length(cinematica)-1)
+					{
+						
+						if(cinematica[_i+1][$ "ACTION"] != "TEXT" or asset_get_index(cinematica[_i+1][$ "ARG1"]) != _npc)
+						{
+							hola = 10;
+							switch(_conciencia)
+							{
+								//case 1:
+								//array_insert(global.cutscenes[$ _cutscene],array_length(global.cutscenes[$ _cutscene]),[startDialogueConciencia,[_cutscene_topic,1],_snap]);
+								//break;
+						
+								//case 2:
+								//array_insert(global.cutscenes[$ _cutscene],array_length(global.cutscenes[$ _cutscene]),[startDialogueGod,[_cutscene_topic,1],_snap]);
+								//break;
+						
+								default:
+								array_insert(global.cutscenes[$ _cutscene],array_length(global.cutscenes[$ _cutscene]),[startDialogue,[_cutscene_topic,1],_snap]);
+								break;
+							}
+							_text_number++;
+						}
+						else
+						{
+							continue;
+						}	
+					}
 				}	
+				
 			break;
 			
 			case "CAMERA":

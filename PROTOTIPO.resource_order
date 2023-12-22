@@ -1,7 +1,13 @@
 {
-  "FolderOrderSettings": [],
+  "FolderOrderSettings": [
+    {"name":"Venado","order":2,"path":"folders/Sprites/Entity/NPC/M1/Venado.yy",},
+  ],
   "ResourceOrderSettings": [
+    {"name":"spr_venado_down","order":3,"path":"sprites/spr_venado_down/spr_venado_down.yy",},
+    {"name":"spr_venado_right","order":1,"path":"sprites/spr_venado_right/spr_venado_right.yy",},
     {"name":"spr_gesture_icon07","order":2,"path":"sprites/spr_gesture_icon07/spr_gesture_icon07.yy",},
+    {"name":"spr_venado_left","order":2,"path":"sprites/spr_venado_left/spr_venado_left.yy",},
     {"name":"spr_gesture_icon08","order":1,"path":"sprites/spr_gesture_icon08/spr_gesture_icon08.yy",},
+    {"name":"spr_venado_up","order":4,"path":"sprites/spr_venado_up/spr_venado_up.yy",},
   ],
 }

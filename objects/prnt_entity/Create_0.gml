@@ -30,7 +30,7 @@ automove_spd=spd;
 
 npc_state = npc_states.IDLE;
 pos_record = 10;
-sprite_npc_right = spr_gato3_right;
-sprite_npc_left = spr_gato3_left;
-sprite_npc_down = spr_gato3_down;
-sprite_npc_up = spr_gato3_up;
+sprite_npc_right = spr_venado_right;
+sprite_npc_left = spr_venado_left;
+sprite_npc_down = spr_venado_down;
+sprite_npc_up = spr_venado_up;

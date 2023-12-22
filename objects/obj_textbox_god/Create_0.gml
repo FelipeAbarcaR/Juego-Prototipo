@@ -164,7 +164,6 @@ setTopic = function(topic,_cutscene=false) {
 	if(_cutscene) actions = global.cutscene_topics[$ topic] else actions = global.topics[$ topic];
 	//actions = global.topics[$ topic];
 	current_action = -1;
-	
 	next();
 }
 minimize_to_destroy=false;

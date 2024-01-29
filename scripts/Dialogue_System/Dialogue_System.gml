@@ -697,7 +697,7 @@ global.topics[$ "Batallando"] = [
 
 global.topics[$ "signhouse1"] = [
 	BACKGROUND(BG_TYPE.woodsign),
-	TEXT("El Viejo Sabio le invita a entrar a la casa, no es que tenga algo mejor que hacer"),
+	TEXT("El Viejo Sabio le invita a entrar a la casa, no es que tenga algo mejor que hacer")
 ];
 global.topics[$ "signenemy1"] = [
 	BACKGROUND(BG_TYPE.woodsign),

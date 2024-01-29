@@ -12,7 +12,7 @@ switch(npc_state)
 	
 	case npc_states.FOLLOW:
 	
-		npc_following_animation();
+		//npc_following_animation();
 		
 	break;
 	

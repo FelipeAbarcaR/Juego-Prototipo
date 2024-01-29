@@ -17,7 +17,7 @@ start_delay=false;
 hit_delay=0.8;
 attack_delay=0.4;
 dodge_delay=0.5;
-back_dodge_delay=1.2;
+back_dodge_delay=0.8;
 
 image_speed=0;
 image_index=0;
@@ -25,7 +25,7 @@ image_index=0;
 
 hp=100;
 hpmax=hp;
-DMG=19;
+DMG=10;
 hpbar_width = 200;
 hpbar_height = 24;
 hpbar_x = 64;

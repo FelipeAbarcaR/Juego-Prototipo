@@ -77,8 +77,8 @@
 		x+=min(abs(x_to-x),dodge_speed)*sign(x_to-x);
 		//Attack FX when reach the spot
 		if (x_to-x==0){
-			var _midheight = (bbox_top-bbox_bottom)/2;
-			var _effectdistance = 24
+			var _midheight = ((bbox_top-bbox_bottom)/2)+10;
+			var _effectdistance = 30
 			//create attack effect
 			SendFX(fx_atk1,x+_effectdistance,y+_midheight,{
 					image_xscale	: 2,
@@ -124,7 +124,7 @@
 	attack_collision=false;
 	if (global.enemy_hit) // si el enemigo puede ser golpeado
 	{
-		with(obj_Conda)
+		with(global.fightEnemy)
 		{
 			draw_hp2=true;
 			global.enemy_hurt=true;

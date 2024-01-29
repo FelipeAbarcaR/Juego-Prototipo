@@ -1,22 +1,8 @@
 {
-  "FolderOrderSettings": [
-    {"name":"Venado","order":2,"path":"folders/Sprites/Entity/NPC/M1/Venado.yy",},
-  ],
+  "FolderOrderSettings": [],
   "ResourceOrderSettings": [
-
-    {"name":"Rana TEST","order":1,"path":"folders/Sprites/Minijuegos/Fight/Rana TEST.yy",},
-    {"name":"spr_venado_down","order":3,"path":"sprites/spr_venado_down/spr_venado_down.yy",},
-    {"name":"spr_venado_right","order":1,"path":"sprites/spr_venado_right/spr_venado_right.yy",},
-    {"name":"spr_gesture_icon07","order":2,"path":"sprites/spr_gesture_icon07/spr_gesture_icon07.yy",},
-    {"name":"spr_venado_left","order":2,"path":"sprites/spr_venado_left/spr_venado_left.yy",},
-    {"name":"spr_frog_hurt_1_TEST","order":4,"path":"sprites/spr_frog_hurt_1_TEST/spr_frog_hurt_1_TEST.yy",},
-    {"name":"spr_frog_attack_1_TEST","order":3,"path":"sprites/spr_frog_attack_1_TEST/spr_frog_attack_1_TEST.yy",},
-    {"name":"spr_frog_prepare_1_TEST","order":1,"path":"sprites/spr_frog_prepare_1_TEST/spr_frog_prepare_1_TEST.yy",},
-    {"name":"obj_fight_rana_TEST","order":1,"path":"objects/obj_fight_rana_TEST/obj_fight_rana_TEST.yy",},
-    {"name":"spr_gesture_icon07","order":2,"path":"sprites/spr_gesture_icon07/spr_gesture_icon07.yy",},
-    {"name":"Fight","order":1,"path":"scripts/Fight/Fight.yy",},
-    {"name":"spr_frog_prepare_TEST337","order":2,"path":"sprites/spr_frog_prepare_TEST337/spr_frog_prepare_TEST337.yy",},
-    {"name":"spr_gesture_icon08","order":1,"path":"sprites/spr_gesture_icon08/spr_gesture_icon08.yy",},
-    {"name":"spr_venado_up","order":4,"path":"sprites/spr_venado_up/spr_venado_up.yy",},
+    {"name":"spr_frog_prepare_3_TEST","order":2,"path":"sprites/spr_frog_prepare_3_TEST/spr_frog_prepare_3_TEST.yy",},
+    {"name":"spr_frog_attack_2_TEST","order":3,"path":"sprites/spr_frog_attack_2_TEST/spr_frog_attack_2_TEST.yy",},
+    {"name":"spr_frog_prepare_2_TEST","order":1,"path":"sprites/spr_frog_prepare_2_TEST/spr_frog_prepare_2_TEST.yy",},
   ],
 }

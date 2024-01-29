@@ -1,4 +1,4 @@
-var draw_text_x = x;
+ var draw_text_x = x;
 var draw_text_y = y;
 var draw_text_width = text_width;
 var portrait_scale =1;
@@ -24,7 +24,7 @@ if (event_mode==textbox_event.TEXTING)
 			break;
 		
 			case BG_TYPE.woodsign:
-				draw_sprite_stretched(bg_NPC_sprite,bg_index,x,_scaling_y,width,1+height*increasing_value);
+				draw_sprite_stretched(bg_sign_sprite,bg_index,x,_scaling_y,width,1+height*increasing_value);
 			break;
 		}
 	

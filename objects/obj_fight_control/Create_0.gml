@@ -49,6 +49,13 @@ if (!global.midTransition)
 	{
 		global.midTransition = true;
 	}
+//deactivate objects
+deactivated_list=[];
+if(instance_exists(obj_guide))
+{
+    instance_deactivate_object(obj_guide);
+	array_push(deactivated_list,obj_guide)
+}
 	
 uc_set_mode(CMODE.STATIC);
 
@@ -93,3 +100,4 @@ fighters_created=false;
 destroy_fighters=false;
 
 camera_recorder=instance_create_depth(x,y,depth,obj_fight_recorder)
+

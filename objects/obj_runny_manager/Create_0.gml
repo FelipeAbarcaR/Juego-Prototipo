@@ -6,7 +6,7 @@ view_height=270;
 left_side=115;
 right_side=360;
 
-n_chance=70;
+n_chance=405;
 one_chance=1;
 var _bgm =room_get_bgm(room);
 bpm=get_bpm(_bgm)
@@ -25,6 +25,6 @@ for (var i = 0; i < array_length(runny_map); i++) {
     runny_play_array[i]=[creation_time,obstacle_type];
 }
 
-time=0;
+time=0; 
 
 frenzy_time=15 //seconds

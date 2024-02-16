@@ -1406,6 +1406,7 @@
     {"id":{"name":"Shift","path":"scripts/Shift/Shift.yy",},},
     {"id":{"name":"snPause","path":"sounds/snPause/snPause.yy",},},
     {"id":{"name":"spr_gato3_right","path":"sprites/spr_gato3_right/spr_gato3_right.yy",},},
+    {"id":{"name":"sha_gray","path":"shaders/sha_gray/sha_gray.yy",},},
     {"id":{"name":"input_keyboard_check_pressed","path":"scripts/input_keyboard_check_pressed/input_keyboard_check_pressed.yy",},},
     {"id":{"name":"obj_guide","path":"objects/obj_guide/obj_guide.yy",},},
     {"id":{"name":"__input_config_profiles","path":"scripts/__input_config_profiles/__input_config_profiles.yy",},},

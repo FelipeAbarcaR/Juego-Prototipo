@@ -159,3 +159,6 @@ x1=0; //to use in draw
 	
 //white outline
 sh_texture=shader_get_uniform(sha_white_outline,"texture_Pixel");
+
+sh_texture2=shader_get_uniform(sha_gray,"texture_Pixel");
+

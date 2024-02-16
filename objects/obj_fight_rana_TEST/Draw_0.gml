@@ -4,8 +4,6 @@
 //SHADERS
 var _color=c_white;
 
-
-
 //show path points
 if(global.DrawText && current_move!=-1 &&current_point>0)
 {
@@ -92,6 +90,13 @@ if(start_flash1)
 	}
 }
 
+//draw
 
 draw_self();
+shader_set(sha_gray);	
+var _texture = sprite_get_texture(sprite_index,image_index);
+var _texture_width = texture_get_texel_width(_texture);
+var _texture_height = texture_get_texel_height(_texture);
+shader_set_uniform_f(sh_texture2,_texture_width,_texture_height);
+draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
 shader_reset();

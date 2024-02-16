@@ -25,6 +25,5 @@ void main()
 		end_pixel = vec4(1,0.0,0.0,0.6); }
 		}
 	
-	
     gl_FragColor = end_pixel;
 }

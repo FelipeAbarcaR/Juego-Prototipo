@@ -4,5 +4,6 @@
     {"name":"spr_frog_prepare_3_TEST","order":2,"path":"sprites/spr_frog_prepare_3_TEST/spr_frog_prepare_3_TEST.yy",},
     {"name":"spr_frog_attack_2_TEST","order":3,"path":"sprites/spr_frog_attack_2_TEST/spr_frog_attack_2_TEST.yy",},
     {"name":"spr_frog_prepare_2_TEST","order":1,"path":"sprites/spr_frog_prepare_2_TEST/spr_frog_prepare_2_TEST.yy",},
+    {"name":"sha_gray","order":1,"path":"shaders/sha_gray/sha_gray.yy",},
   ],
 }

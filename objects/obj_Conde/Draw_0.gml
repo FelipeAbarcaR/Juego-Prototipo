@@ -17,7 +17,17 @@ if(start_flash)
 	}
 	
 }
-
+if(global.beat)
+{
+	image_index++;
+	image_xscale=initial_x_scale*1.05;
+	image_yscale=initial_y_scale*1.05;
+}else
+{
+	image_xscale=initial_x_scale;
+	image_yscale=initial_y_scale;
+}
+			
 draw_self();
 
 if (global.DrawText){

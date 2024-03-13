@@ -36,7 +36,7 @@ function startDialogue(topic,_cutscene=false) {
 }
 function startDialogueConciencia(topic,_cutscene=false) {
 	//if (instance_exists(obj_textbox_con)) return;
-	var inst = instance_create_depth(activate.x, activate.y, -999, obj_textbox_con,{npc:activate});
+	var inst = instance_create_depth(activate.x+100, activate.y, -999, obj_textbox_con,{npc:activate});
 	inst.dialogue_sounds= activate.dialogue_sounds;
 	var _cs=_cutscene;
 	inst.setTopic(topic,_cs);
@@ -665,8 +665,6 @@ for (var _i = 0; _i < array_length(dialogo); _i++)
 	}
 }
 
-hola = 10;
-
 //global.topics[$ "Breakfast"] = [
 //	//SPEAKER("Sam",spr_portrait_sam,PORTRAIT_SIDE.LEFT),
 //	POSTFIGHT(WIN("Chose Eggs"),LOSE ("Chose Pancakes"))
@@ -840,3 +838,8 @@ global.topics[$ "probandoConciencia"] = [
 	TEXT("Yo soy joven y la vida es corta, aún así no puedo matar el tiempo.")
 ];
 
+global.topics[$ "peleatest"] = [
+	SPEAKER("Pedro",spr_pt_rana,PORTRAIT_SIDE.LEFT),
+	TEXT(" ¡Ja! ¡Sabía que eras problema para mis siestas! ¡Prepárate para luchar!"),
+	FIGHT("BUENA HMNO","MALA HMNO")
+];

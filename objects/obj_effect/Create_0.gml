@@ -8,3 +8,4 @@ if(variable_instance_exists(id,"sfx"))
 }
 
 draw_on_gui=false;
+collided=false;

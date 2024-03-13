@@ -1,5 +1,5 @@
 /// @description Draw UI
-if(global.gamemode!=mode.fight)
+if(global.gamemode!=mode.fight && !instance_exists(obj_fight_control))
 {
 	//Draw Health
 	var _playerhealth = global.playerhealth;

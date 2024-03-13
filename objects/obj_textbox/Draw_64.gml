@@ -1,6 +1,7 @@
  var draw_text_x = x;
 var draw_text_y = y;
 var draw_text_width = text_width;
+var _textbox_height=height;
 var portrait_scale =1;
 var finished = (typist.get_state()==1);
 
@@ -83,13 +84,14 @@ if (event_mode==textbox_event.TEXTING)
 			//el padding los puse como extra para que calce, en verdad no se pq pero funciona
 			//draw_sprite_stretched(spr_name,0,x + speaker_x-name_w/2, y + speaker_y-speaker_height/2, name_w+padding*2, speaker_height+padding*2);
 			
-			_scribble_speaker.starting_format(text_font,#5c2e17);
+			_scribble_speaker.starting_format(speaker_font,#5c2e17);
 			_scribble_speaker.draw(draw_text_x+text_x,draw_text_y+text_y);
-			_scribble_speaker.starting_format(text_font,speaker_color);
+			_scribble_speaker.starting_format(speaker_font,speaker_color);
 			_scribble_speaker.draw(draw_text_x+text_x+2,draw_text_y+text_y+2);
 			
 			//adjust the text position under the speaker name
 			draw_text_y+=name_h;
+			_textbox_height-=name_h;
 		}
 
 		// TEXT
@@ -103,15 +105,41 @@ if (event_mode==textbox_event.TEXTING)
 		{
 		    scribble_object.align(fa_center,fa_middle);
 			draw_text_x=floor(draw_text_x + (draw_text_width/2));
-			draw_text_y=floor(draw_text_y+text_y)
+			draw_text_y=y+height/2;//floor(draw_text_y+_textbox_height/2)
 		}
 		
-		scribble_object.starting_format(text_font,#5c2e17);
+		var _text_color_1,_text_color_2,_text_font;
+		
+		switch(bg_type)
+		{
+		    case BG_TYPE.npc:
+				_text_font=text_font_npc;
+				_text_color_1=c_gray;
+				_text_color_2=c_white;	
+			break;
+			
+			case BG_TYPE.blurry:
+				_text_font=text_font_blurry;
+				_text_color_1=#3b372b;
+				_text_color_2=c_white;
+			break;
+		
+			case BG_TYPE.woodsign:
+				_text_font=text_font_sign;
+				_text_color_1=#5c2e17;
+				_text_color_2=#966941;
+			break;
+		} 
+		//draw the text (typing)
+		scribble_object.starting_format(_text_font,_text_color_1);
 		scribble_object.wrap(draw_text_width);
 		scribble_object.draw(draw_text_x,draw_text_y,typist);
-		scribble_object.starting_format(text_font,c_white);
+		
+		scribble_object.starting_format(_text_font,_text_color_2);
 		scribble_object.draw(draw_text_x+2,draw_text_y+2,typist);
-
+		
+		if(global.DrawText) draw_circle(draw_text_x,draw_text_y,2,false);
+		
 		//Options
 		if(finished && option_count >0)
 		{

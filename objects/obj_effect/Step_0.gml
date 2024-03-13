@@ -7,9 +7,10 @@ if(global.fightEnemy!=-1)
 {
 	if (place_meeting(x , y, global.fightEnemy))
 	{		
-		if(variable_instance_exists(id,"creator"))
+		if(variable_instance_exists(id,"creator") && !collided)
 		{
-			creator.attack_collision=true;    
+			if(creator.object_index==obj_fight_gato)creator.attack_collision=true;   
+			collided=true;
 		}
 	}
 }

@@ -118,8 +118,7 @@
 	{ }
 	
 //ATAQUE DEL JUGADOR AL ENEMIGO
-
-	if(attack_collision)
+if(attack_collision)
 {
 	attack_collision=false;
 	if (global.enemy_hit) // si el enemigo puede ser golpeado
@@ -129,14 +128,11 @@
 			draw_hp2=true;
 			global.enemy_hurt=true;
 			hp-=obj_Conde.DMG;
+			uc_shake(3)
 		}
 	}
 }
 
-
-//check collition
-if (collision_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, obj_Conda, false, false))
-{
 
 //ATAQUE DEL ENEMIGO AL JUGADOR
 	if (global.enemy_atk and !invincible) //si el enemigo está atacando y pj vulnerable
@@ -147,14 +143,14 @@ if (collision_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, obj_Conda,
 		invincible=true;
 		start_delay=true;
 		state="stun";
-		hp-=obj_Conda.DMG;
+		hp-=global.fightEnemy.DMG;
 		global.enemy_atk=false;
 		if (hp<=0) state="dead";
 		start_flash=true;
-		
+		uc_shake();
 		//DAMAGE ANIMATION (obj_control_fight)
 		draw_hp2=true;
 
 	}
-}
+
 

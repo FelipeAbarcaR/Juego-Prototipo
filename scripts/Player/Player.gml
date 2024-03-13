@@ -582,12 +582,16 @@ function Space_logic()
 			activate = _check;
 			global.activate = _check;
 			global.activate.player_active_range=true;
+			entity_target=_check;
 			_entitiesfound = 0; 
-
 	}
-					
+	
+	if(activate==noone)
+	{
+		entity_target=-1;
+	}
+	
 	ds_list_destroy(_activatelist);
-
 
 	//Activate key logic
 	if(global.interact)

@@ -28,7 +28,7 @@ function draw_beat_hit_texts()
 			var _alpha = current_text.alpha;
 			
 			var _scribble_object=scribble(_text);
-			_scribble_object.starting_format("fnt_RODIN",c_white);
+			_scribble_object.starting_format("fnt_RODIN_12",c_white);
 			_scribble_object.blend(c_white,_alpha);
 			//tilt the text
 			var scaled_x = pi * (_alpha - 0.5);

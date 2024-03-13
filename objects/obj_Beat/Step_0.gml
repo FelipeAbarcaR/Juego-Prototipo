@@ -210,7 +210,13 @@ if(_length>0) //if it is at least one beat meter in the array
 	{	   
 		if(_beatable) 
 		{
-			beat_missed();//delete the lowest paw, reset groovy counter and play error sound
+			var _last_time= array_shift(beat_meter_list); //delete the beat meter of the array
+			if(groovy_count>0) //reset the groovy counter
+			{
+				if(global.groovy)groovy_count-- else groovy_count=0;
+				
+				play_sfx(sfx_groovy_error)// code here
+			}
 		}
 		else
 		{
@@ -253,7 +259,7 @@ if(_length>0) //if it is at least one beat meter in the array
 			if(global.beatchance) //if the input was in beatchance
 			{
 				var _last_time= array_shift(beat_meter_list);	//delete the beat meter of the array
-				groovy_count+=1;								//add a counter to get the LGTB mode
+				if(!global.groovy)groovy_count+=1 else groovy_count=groovy_max;								//add a counter to get the LGTB mode
 				heart_pulse=true;								//shake the jingle bell
 				beat_heart_t=0;									//set the timer again in case it was already shaking
 			}
@@ -269,5 +275,17 @@ if(_length>0) //if it is at least one beat meter in the array
 	}
 }
 
+if(!global.groovy)
+{
+	if (groovy_count>=groovy_max)
+	{
+		global.groovy=true;
+		if(!instance_exists(obj_groovy_meter)) instance_create_depth(x,y,depth,obj_groovy_meter);
+	}
+	
+}else if(groovy_count<=0)
+{
+	global.groovy=false;
+	if(instance_exists(obj_groovy_meter)) instance_destroy(obj_groovy_meter);
+}
 
-if (groovy_count>=groovy_max) global.groovy=true else global.groovy=false;

@@ -32,6 +32,7 @@ if(!instance_exists(obj_cutscene) && !instance_exists(obj_background_landscape))
 
 	 if(beat_bar_visible)
 	 {
+		
 		//BEAT BAR 2
 		var _scale=3;
 
@@ -94,9 +95,14 @@ if(!instance_exists(obj_cutscene) && !instance_exists(obj_background_landscape))
 
 		if(_length>0) //si hay al menos 1 beat en la queue
 		{
+			var _bp=global.beatprogress;
+			var _add_scale_size=2;
+			var _calculito=(power((0.5-_bp),2));
+			var _add_scale=_add_scale_size*_calculito;
+			
 			for(var i=0;i<_length;i++)
 			{
-				var _bar_scale=2;
+				var _bar_scale=2+_add_scale;
 				var _yy=beat_meter_list[i];
 				var _paw_index=0;
 				if(i==0 && frozen_beat) _paw_index=1;

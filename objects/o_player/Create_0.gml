@@ -1,8 +1,6 @@
 /// @description 
 
 
-hola = 10;
-
 event_inherited();
 walk_spd = 1.7;
 initial_walk_spd=walk_spd;
@@ -21,6 +19,8 @@ global.CanDash=false;
 //global.Can3Tempo=false;
 
 global.end_interaction = -1;
+entity_target =-1;
+
 
 //Groovy parameters (when the player is in the groove)
 groovy_speed_increase=0.6;

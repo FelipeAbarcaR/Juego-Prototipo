@@ -8,6 +8,7 @@ textbox_states=
 	destruyendose:3,
 	invicible:4
 }
+
 textbox_state=textbox_states.creciendo;
 
 
@@ -30,8 +31,8 @@ show_debug_message(string(x)+" "+string(y));
 
 if(npc!=(-1))
 {
-	x=npc.bbox_right;//x+sprite_get_bbox_right(npc.sprite_index);
-	y=npc.bbox_top//y+sprite_get_bbox_top(npc.sprite_index);
+	x=npc.bbox_right+6;//x+sprite_get_bbox_right(npc.sprite_index);
+	y=npc.bbox_top+4//y+sprite_get_bbox_top(npc.sprite_index);
 }
 
 view_x=uc_get_view_x();
@@ -239,5 +240,5 @@ hola2=0;
 //upscaling textbox draw
 increasing_value=0.0;
 starting_y=y+height/2;
-delta_scaling=0.06;
+delta_scaling=0.035;
 

@@ -47,7 +47,7 @@ Automove
 	
 //]
 
-action_list=global.cutscenes[$ "Cinematoast"];
+action_list	=	global.cutscenes[$ "Cinematoast"];
 
 current_action=-1
 

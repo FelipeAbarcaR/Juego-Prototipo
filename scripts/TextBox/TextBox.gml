@@ -101,15 +101,21 @@ function draw_blurry_background_gui(_x,_y,_tb_width,_tb_height,_col= #566573){
 	var _tb_y=_y;
 	var h_ratio=display_get_gui_height()/global.res.height;
 	var w_ratio=display_get_gui_width()/global.res.width;
+	var _surf_get_x=map_value(_x,0,display_get_gui_width(),0,global.res.width);
+	var _surf_get_y=map_value(_y,0,display_get_gui_height(),0,global.res.height);
 
 	if (!surface_exists(surface_textbox)) {
 		surface_textbox = surface_create(_width,_height);
-		surface_copy_part(surface_textbox,0,0,application_surface,_tb_x,global.res.height - _height,_width,_height);
+		surface_copy_part(surface_textbox,0,0,application_surface,_surf_get_x,_surf_get_y,_width,_height);
 		show_debug_message("surface textbox created");
-	}
-	
+		
+	} else 
+	{
+		//surface_copy_part(surface_textbox,0,0,application_surface,_tb_x,global.res.height - _height,_width,_height);
+		surface_copy_part(surface_textbox,0,0,application_surface,_surf_get_x,_surf_get_y,_width,_height);
+	}	
 	//	//draw
-
+	
 	var _circular_surface= -1;
 	_circular_surface = surface_create(_width/w_ratio,max(1,_height/h_ratio));
 
@@ -136,25 +142,26 @@ function draw_blurry_background_gui(_x,_y,_tb_width,_tb_height,_col= #566573){
 		
 		if(surface_exists(surface_textbox))
 		{
-		    draw_surface_part(surface_textbox,_x/w_ratio,_y/h_ratio,_width/w_ratio,_height/h_ratio,0,0);
-		}
+		   draw_surface(surface_textbox,0,0);//_part(surface_textbox,0,0,_width/w_ratio,/*_x/w_ratio,*/_height/h_ratio,0,0)//_y/h_ratio,_width/w_ratio,_height/h_ratio,0,0);
+		} 
 
 		shader_reset();
         gpu_set_alphatestenable(false);
         gpu_set_blendmode(bm_normal);  
 		surface_reset_target();
 
-	if(surface_exists(_circular_surface)){
-			
-	draw_surface_stretched(_circular_surface,_x,_y,_width,_height);
-		}
+	if(surface_exists(_circular_surface))
+	{
+		draw_surface_stretched(_circular_surface,_x,_y,_width,_height);
+	}
 	surface_free(_circular_surface);
-	
+
 	draw_set_alpha(0.5);
 	draw_roundrect_color_ext(_x,_y,_x+_width,_y+_height,_rounded,_rounded, _col , _col ,0);
 	draw_set_alpha(1);
 	
 }
+
 function textbox_check_actions()
 {
 //Inventory

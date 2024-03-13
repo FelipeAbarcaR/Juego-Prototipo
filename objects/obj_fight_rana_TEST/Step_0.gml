@@ -21,7 +21,8 @@ switch(state)
 				//set the beat where is started this next attack
 				beat_start_prepare=global.BeatNumber;
 			}
-		}		
+		}
+		
 	break;
 	
 	case fight_state.prepare:
@@ -44,6 +45,7 @@ switch(state)
 			    current_point++;
 				if(moves[current_move][current_point][1]==2)
 				{
+					attack_collision=false;
 					state=fight_state.attacking;
 					fight_attack_path= fight_set_attack_path(current_move);
 					path_start(fight_attack_path,0,path_action_stop,true);
@@ -57,6 +59,29 @@ switch(state)
 		status_immunity=true;
 		status_attacking=true;
 		
+		var _in_area=false;
+		for(var i=0;i<array_length(moves[current_move]);i++)
+		{
+			if(moves[current_move][i][1]==2)
+			{
+				var _x=corner_x+moves[current_move][i][2];
+				var _y=corner_y+moves[current_move][i][3];
+				if(point_distance(x,y,_x+x_atk_offset,_y)<=	10 )
+				{
+				    _in_area=true;
+					if(!attack_effect_launched)
+					{
+						attack_effect_launched=true;
+						play_sfx(Beep);
+						SendFX(spr_fx_atk,x-30,y,{sfx:sfx_sword,creator:id});
+					}
+					
+				}
+			}
+			
+		}
+		if(!_in_area)attack_effect_launched=false;
+		draw_text(xstart,ystart+20,string(attack_effect_launched))
 		////move to point through the beat's progress
 		if(beat_start_prepare==global.BeatNumber)
 		{
@@ -77,7 +102,12 @@ switch(state)
 			x_from=x;
 			y_from=y;
 		}
-
+		if(attack_collision) //si el ataque o el efecto del ataque ha alcanzado al jugador
+		{
+			attack_collision=false;
+			global.enemy_atk=true;
+		}
+	
 	break;
 	
 	case fight_state.stun:
@@ -96,3 +126,4 @@ if (global.enemy_hurt)
 	alarm[1]=room_speed*hurt_delay;
 	start_flash1=true;
 }
+

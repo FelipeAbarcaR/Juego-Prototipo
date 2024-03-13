@@ -4,7 +4,7 @@
 x_to=x;
 y_to=y;
 attack_distance=170;
-dodge_distance=70;
+dodge_distance=60;
 dodge_speed=16;
 move=true;
 state="locked";
@@ -69,3 +69,6 @@ Izquierda=0;
 Derecha=0;
 Arriba=0;
 Abajo=0;
+
+initial_x_scale=image_xscale;
+initial_y_scale=image_yscale;

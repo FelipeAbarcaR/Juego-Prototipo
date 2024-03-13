@@ -35,7 +35,7 @@ x_to=-1;
 y_to=-1;
 x_from=0;
 y_from=0;
-x_atk_offset=60;
+x_atk_offset=100;
 
 //cam corners
 corner_x=uc_get_view_x();
@@ -56,6 +56,8 @@ status_attacking=false;
 status_hurt=false;
 
 draw_hp2=false;
+
+attack_collision=false; //si es que hubo colisiónentre el ataque enemigo y el jugador
 
 //delays
 delay_post_attack=1;
@@ -143,11 +145,12 @@ fight_attack_path=-1;
 alarm[0]=4*room_speed;
 
 //SFX 
-//PREPARE
-sfx_prepare[0]=sfx_prepare1;
-sfx_prepare[1]=sfx_prepare2;
-sfx_prepare[2]=sfx_prepare3;
-
+	//PREPARE
+	sfx_prepare[0]=sfx_prepare1;
+	sfx_prepare[1]=sfx_prepare2;
+	sfx_prepare[2]=sfx_prepare3;
+	//ATK
+	sfx_sword=sfx_sword_slash
 //SHADERS
 //red flash hit
 
@@ -162,3 +165,11 @@ sh_texture=shader_get_uniform(sha_white_outline,"texture_Pixel");
 
 sh_texture2=shader_get_uniform(sha_gray,"texture_Pixel");
 
+//variable para ver si se tiro el skill cerca de esa posicion (TEST)
+attack_effect_launched=false;
+
+//EFFECTS SPRITES
+spr_fx_atk=spr_fx_fight_atk1;
+
+initial_x_scale=image_xscale;
+initial_y_scale=image_yscale;

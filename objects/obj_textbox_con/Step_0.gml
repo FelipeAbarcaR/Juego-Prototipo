@@ -10,6 +10,7 @@ switch (textbox_state)
 		if(increasing_value>=1)
 		{
 		    textbox_state=textbox_states.escribiendo;
+			play_sfx(sfx_magic_TEST,0.2);
 		}
 	break;
 	

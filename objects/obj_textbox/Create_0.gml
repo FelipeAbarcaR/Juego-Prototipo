@@ -1,5 +1,12 @@
-/// CUSTOMIZABLE PROPERTIES
+//PARCHE1
+#region
+if(instance_exists(obj_fight_control))instance_destroy();
 
+#endregion
+
+
+
+/// CUSTOMIZABLE PROPERTIES
 // Input
 confirm_key = vk_space; // button to press to go to the next page
 up_key = vk_up;
@@ -18,9 +25,12 @@ y = display_get_gui_height() - height - margin;
 
 
 // Text
-text_font = "fnt_RODIN";
+
+text_font_blurry = "fnt_RODIN_12";
+text_font_npc = "fnt_RODIN_24";
+text_font_sign =  "fnt_RODIN_24";
 text_color = c_white;
-text_speed = 0.45;
+text_speed = 0.20;
 text_x = padding;
 text_y = padding;
 text_width = width - padding * 2;

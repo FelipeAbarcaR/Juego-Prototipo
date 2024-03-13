@@ -289,8 +289,12 @@ function npc_space_bar() {
 	//		}
 
 			player_active_range=false;
-		}else instance_deactivate_object(space_bar)
-	}
+		}
+	}else instance_deactivate_object(space_bar)
 
 	if(automoving) automove_entity(x_dest,y_dest,dest_relative,automove_spd);
+	if(instance_exists(o_player))
+	{
+		if(o_player.entity_target!=id)instance_deactivate_object(space_bar)
+	}
 }

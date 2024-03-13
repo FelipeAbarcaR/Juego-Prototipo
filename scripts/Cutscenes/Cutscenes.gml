@@ -156,7 +156,21 @@ function CutsceneEvent(_number)
 
 		break;
 		
-		default:
+		case 2:
+			with(o_player)
+			{
+				sprite_index = spr_player_idle;
+				image_index = 2;
+				dir=90;
+				direction=90;
+				activate=obj_rana;
+				global.activate=obj_rana;
+				startDialogue("peleatest") ;
+			}
+			_id=id;
+		break;
+		
+		default:	
 			_id=0;
 			show_debug_message("Obj_cutscene: No existe este evento hmno. "+string(_number));
 		break;
@@ -253,7 +267,7 @@ for (var _i = 0; _i < array_length(cinematica); _i++)
 	else
 	{
 		_action = cinematica[_i][$ "ACTION"];
-		_snap = real(cinematica[_i][$ "SNAP"]);
+		_snap = (cinematica[_i][$ "SNAP"]);
 		
 		switch(_action)
 		{

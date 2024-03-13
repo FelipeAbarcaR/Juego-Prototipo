@@ -46,7 +46,6 @@ function fight_attack_to_point(_x,_y)
 {
     var _beat = global.beatprogress;
 	var _curve=max(1.2*(_beat*_beat)-0.2,0);
-	
 	var _x2=_x+corner_x;
 	var _y2=_y+corner_y;
 	

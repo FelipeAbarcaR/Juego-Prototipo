@@ -13,8 +13,8 @@ if(create_fighters)
 	var _x2 = lerp(x,x+global.res.width,0.75);
 	var _y = lerp(y,y+global.res.height,0.7);
 	
-	instance_create_layer(_x1,_y,_lay,fighter1,{image_xscale:2,image_yscale:2});
-	instance_create_layer(_x2,_y,_lay,fighter2,{image_xscale:2,image_yscale:2});
+	instance_create_layer(_x1,_y,_lay,fighter1,{image_xscale:2.8,image_yscale:2.8});
+	instance_create_layer(_x2,_y,_lay,fighter2,{image_xscale:2.8,image_yscale:2.8});
 	
 	instance_deactivate_object(prnt_entity);
 	fighters_created = true;

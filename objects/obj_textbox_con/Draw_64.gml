@@ -15,13 +15,14 @@ switch (textbox_state)
 {
     case textbox_states.creciendo:
 		//draw growing box
-		draw_sprite_stretched(sprite_index, 0, draw_text_x, draw_text_y, width*increasing_value, height*increasing_value);
+		
+		draw_sprite_stretched(sprite_index, 2, draw_text_x, draw_text_y,width*increasing_value, height*increasing_value);
 	break;
 	
 	case textbox_states.escribiendo:
 		
 	//BOX
-		draw_sprite_stretched(sprite_index, 0, draw_text_x, draw_text_y, width, height);
+		draw_sprite_stretched(sprite_index, 2, draw_text_x, draw_text_y, width, height);
 		
 		
 	
@@ -53,23 +54,19 @@ switch (textbox_state)
 			
 			luma_time=min(luma_time+luma_time_speed,0.99);
 			
-			//shader_set(portrait_shader);
-			//texture_set_stage(u_mask_text, mask_text);
-			//shader_set_uniform_f(u_time,luma_time);
-			//shader_set_uniform_f(u_tolerance,luma_tolerance);
-			//shader_set_uniform_f(u_inverse,luma_inverse);
-			//DissolveShader()
-			var _DissolveSprUvs = sprite_get_uvs(spr_pt_deer_128,0);
+			if(luma_time<0.99)
+			{
+				var _DissolveSprUvs = sprite_get_uvs(spr_pt_deer_128,0);
 
-			shader_set(_Dissolve_Shader);
-			shader_set_uniform_f(_u_Dissolve,luma_time);
-			shader_set_uniform_f(_u_DissolveEdge,_DissolveEdge);
-			shader_set_uniform_f(_u_DissolveUV,_DissolveTexUvs[0],_DissolveTexUvs[1]);
-			shader_set_uniform_f(_u_DefaultUV,_DissolveSprUvs[0],_DissolveSprUvs[1]);
-			shader_set_uniform_f(_u_DissolveC1,_DissolveC1[0],_DissolveC1[1],_DissolveC1[2]);
-			shader_set_uniform_f(_u_DissolveC2,_DissolveC2[0],_DissolveC2[1],_DissolveC2[2]);
-			texture_set_stage(_u_DissolveTex,_DissolveTex);
-			
+				shader_set(_Dissolve_Shader);
+				shader_set_uniform_f(_u_Dissolve,luma_time);
+				shader_set_uniform_f(_u_DissolveEdge,_DissolveEdge);
+				shader_set_uniform_f(_u_DissolveUV,_DissolveTexUvs[0],_DissolveTexUvs[1]);
+				shader_set_uniform_f(_u_DefaultUV,_DissolveSprUvs[0],_DissolveSprUvs[1]);
+				shader_set_uniform_f(_u_DissolveC1,_DissolveC1[0],_DissolveC1[1],_DissolveC1[2]);
+				shader_set_uniform_f(_u_DissolveC2,_DissolveC2[0],_DissolveC2[1],_DissolveC2[2]);
+				texture_set_stage(_u_DissolveTex,_DissolveTex);
+			}
 			//Animate the portrait when typing
 			var subimg = 0;
 			if(!finished) subimg = (text_progress / text_speed) * (sprite_get_speed(portrait_sprite) / game_get_speed(gamespeed_fps));

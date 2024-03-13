@@ -14,7 +14,8 @@
   "ACTION_NUMBER": 1,
   "ACTION": "CAMERA",
   "ARG1": 1,
-  "ARG2": "obj_alce",
+  "ARG2": "obj_rana",
+  "ARG3": 40,
   "SNAP": 1
  },
  {
@@ -23,8 +24,8 @@
   "CS_NAME": "Cinematoast",
   "ACTION_NUMBER": 2,
   "ACTION": "GESTURE",
-  "ARG1": "obj_alce",
-  "ARG2": 4,
+  "ARG1": "obj_rana",
+  "ARG2": 1,
   "SNAP": 1
  },
  {
@@ -32,17 +33,23 @@
   "CS_NUMBER": 1,
   "CS_NAME": "Cinematoast",
   "ACTION_NUMBER": 3,
-  "ACTION": "SOUNDFX",
-  "ARG1": "sfx_rocks",
-  "SNAP": 1
+  "ACTION": "WAIT",
+  "ARG1": 1,
+  "SNAP": 0
  },
  {
   "ID": "1A4",
   "CS_NUMBER": 1,
   "CS_NAME": "Cinematoast",
   "ACTION_NUMBER": 4,
-  "ACTION": "WAIT",
-  "ARG1": 2.1,
+  "ACTION": "TEXT",
+  "ARG1": "obj_rana",
+  "ARG2": "Pedro",
+  "ARG3": "¡Oye tú, intruso! ¿Qué haces en mi territorio?",
+  "ARG4": 0,
+  "ARG5": "spr_pt_rana",
+  "ARG6": 0,
+  "ARG7": 0,
   "SNAP": 0
  },
  {
@@ -50,27 +57,29 @@
   "CS_NUMBER": 1,
   "CS_NAME": "Cinematoast",
   "ACTION_NUMBER": 5,
-  "ACTION": "CAMERAFX",
-  "ARG1": "SCREENSHAKE",
-  "SNAP": 1
+  "ACTION": "MOVE",
+  "ARG1": "obj_rana",
+  "ARG2": 1800,
+  "ARG3": 832,
+  "SNAP": 0
  },
  {
   "ID": "1A6",
   "CS_NUMBER": 1,
   "CS_NAME": "Cinematoast",
   "ACTION_NUMBER": 6,
-  "ACTION": "WAIT",
+  "ACTION": "CAMERA",
   "ARG1": 1,
-  "SNAP": 0
+  "ARG2": "obj_rana",
+  "SNAP": 1
  },
  {
   "ID": "1A7",
   "CS_NUMBER": 1,
   "CS_NAME": "Cinematoast",
   "ACTION_NUMBER": 7,
-  "ACTION": "GESTURE",
-  "ARG1": "obj_jabali",
-  "ARG2": 1,
+  "ACTION": "EVENT",
+  "ARG1": 2,
   "SNAP": 1
  },
  {
@@ -79,640 +88,7 @@
   "CS_NAME": "Cinematoast",
   "ACTION_NUMBER": 8,
   "ACTION": "WAIT",
-  "ARG1": 0.1,
-  "SNAP": 0
- },
- {
-  "ID": "1A9",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 9,
-  "ACTION": "GESTURE",
-  "ARG1": "obj_coneja",
-  "ARG2": 1,
-  "SNAP": 1
- },
- {
-  "ID": "1A10",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 10,
-  "ACTION": "GESTURE",
-  "ARG1": "obj_capibara",
-  "ARG2": 1,
-  "SNAP": 1
- },
- {
-  "ID": "1A11",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 11,
-  "ACTION": "WAIT",
-  "ARG1": 1,
-  "SNAP": 0
- },
- {
-  "ID": "1A12",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 12,
-  "ACTION": "CAMERA",
-  "ARG1": 0,
-  "ARG2": 1035,
-  "ARG3": 40,
-  "SNAP": 1
- },
- {
-  "ID": "1A13",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 13,
-  "ACTION": "WAIT",
-  "ARG1": 1,
-  "SNAP": 0
- },
- {
-  "ID": "1A14",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 14,
-  "ACTION": "SOUNDFX",
-  "ARG1": "sfx_digging",
-  "SNAP": 1
- },
- {
-  "ID": "1A15",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 15,
-  "ACTION": "EVENT",
-  "ARG1": 0,
-  "SNAP": 0
- },
- {
-  "ID": "1A16",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 16,
-  "ACTION": "WAIT",
-  "ARG1": 0.2,
-  "SNAP": 0
- },
- {
-  "ID": "1A17",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 17,
-  "ACTION": "MOVE",
-  "ARG1": "obj_gato_cinematica",
-  "ARG2": 1056,
-  "ARG3": 196,
-  "SNAP": 0
- },
- {
-  "ID": "1A18",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 18,
-  "ACTION": "CAMERA",
-  "ARG1": 1,
-  "ARG2": "obj_alce",
-  "ARG3": 2312,
-  "SNAP": 1
- },
- {
-  "ID": "1A19",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 19,
-  "ACTION": "WAIT",
-  "ARG1": 1,
-  "SNAP": 0
- },
- {
-  "ID": "1A20",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 20,
-  "ACTION": "GESTURE",
-  "ARG1": "obj_alce",
-  "ARG2": 1,
-  "SNAP": 1
- },
- {
-  "ID": "1A21",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 21,
-  "ACTION": "WAIT",
-  "ARG1": 0.5,
-  "SNAP": 0
- },
- {
-  "ID": "1A22",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 22,
-  "ACTION": "CAMERA",
-  "ARG1": 1,
-  "ARG2": "oobj_gato_cinematica",
-  "ARG3": 2312,
-  "SNAP": 1
- },
- {
-  "ID": "1A23",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 23,
-  "ACTION": "WAIT",
-  "ARG1": 0.5,
-  "SNAP": 0
- },
- {
-  "ID": "1A24",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 24,
-  "ACTION": "GESTURE",
-  "ARG1": "obj_gato_cinematica",
-  "ARG2": 1,
-  "SNAP": 1
- },
- {
-  "ID": "1A25",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 25,
-  "ACTION": "CAMERA",
-  "ARG1": 1,
-  "ARG2": "obj_alce",
-  "ARG3": 2312,
-  "SNAP": 1
- },
- {
-  "ID": "1A26",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 26,
-  "ACTION": "WAIT",
-  "ARG1": 0.5,
-  "SNAP": 0
- },
- {
-  "ID": "1A27",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 27,
-  "ACTION": "MOVE",
-  "ARG1": "obj_jabali",
-  "ARG2": 1099,
-  "ARG3": 311,
-  "SNAP": 1
- },
- {
-  "ID": "1A28",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 28,
-  "ACTION": "WAIT",
-  "ARG1": 0.2,
-  "SNAP": 0
- },
- {
-  "ID": "1A29",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 29,
-  "ACTION": "MOVE",
-  "ARG1": "obj_jabali2",
-  "ARG2": 1130,
-  "ARG3": 271,
-  "SNAP": 0
- },
- {
-  "ID": "1A30",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 30,
-  "ACTION": "WAIT",
-  "ARG1": 0.4,
-  "SNAP": 0
- },
- {
-  "ID": "1A31",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 31,
-  "ACTION": "MOVE",
-  "ARG1": "obj_capibara",
-  "ARG2": 1018,
-  "ARG3": 296,
-  "SNAP": 0
- },
- {
-  "ID": "1A32",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 32,
-  "ACTION": "WAIT",
-  "ARG1": 1,
-  "SNAP": 0
- },
- {
-  "ID": "1A33",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 33,
-  "ACTION": "MOVE",
-  "ARG1": "obj_alce",
-  "ARG2": 1056,
-  "ARG3": 280,
-  "SNAP": 1
- },
- {
-  "ID": "1A34",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 34,
-  "ACTION": "WAIT",
-  "ARG1": 0.7,
-  "SNAP": 0
- },
- {
-  "ID": "1A35",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 35,
-  "ACTION": "MOVE",
-  "ARG1": "obj_gato_cinematica",
-  "ARG2": 1056,
-  "ARG3": 235,
-  "SNAP": 1
- },
- {
-  "ID": "1A36",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 36,
-  "ACTION": "WAIT",
-  "ARG1": 0.3,
-  "SNAP": 0
- },
- {
-  "ID": "1A37",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 37,
-  "ACTION": "CAMERAFX",
-  "ARG1": "SCREENSHAKE",
-  "SNAP": 1
- },
- {
-  "ID": "1A38",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 38,
-  "ACTION": "CAMERAFX",
-  "ARG1": "FLASH",
-  "SNAP": 1
- },
- {
-  "ID": "1A39",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 39,
-  "ACTION": "SOUNDFX",
-  "ARG1": "sfx_thunder",
-  "SNAP": 1
- },
- {
-  "ID": "1A40",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 40,
-  "ACTION": "EVENT",
-  "ARG1": 1,
-  "SNAP": 1
- },
- {
-  "ID": "1A41",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 41,
-  "ACTION": "WAIT",
   "ARG1": 3,
   "SNAP": 0
  },
- {
-  "ID": "1A42",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 42,
-  "ACTION": "CREATE",
-  "ARG1": "obj_dios1",
-  "ARG2": 450,
-  "ARG3": 200,
-  "SNAP": 1
- },
- {
-  "ID": "1A43",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 43,
-  "ACTION": "MOVE",
-  "ARG1": "obj_dios1",
-  "ARG2": 850,
-  "ARG3": 200,
-  "SNAP": 0
- },
- {
-  "ID": "1A44",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 44,
-  "ACTION": "WAIT",
-  "ARG1": 3,
-  "SNAP": 0
- },
- {
-  "ID": "1A46",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 46,
-  "ACTION": "TEXT",
-  "ARG1": "obj_dios1",
-  "ARG2": "god01",
-  "ARG3": "¿REALMENTE PENSASTE QUE PODRÍAS HACER ALGO AL RESPECTO? ",
-  "ARG4": 1,
-  "ARG5": "spr_pt_dios1",
-  "ARG6": 2,
-  "ARG7": 0,
-  "SNAP": 0
- },
- {
-  "ID": "1A48",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 48,
-  "ACTION": "TEXT",
-  "ARG1": "obj_dios1",
-  "ARG2": "god01",
-  "ARG3": "¿ACASO SABES QUIEN SOY? ",
-  "ARG4": 1,
-  "ARG6": 2,
-  "ARG7": 0,
-  "SNAP": 0
- },
- {
-  "ID": "1A50",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 50,
-  "ACTION": "TEXT",
-  "ARG1": "obj_dios1",
-  "ARG2": "god01",
-  "ARG3": "¿SIQUIERA SABES QUIEN ERES?",
-  "ARG4": 1,
-  "ARG6": 2,
-  "ARG7": 0,
-  "SNAP": 0
- },
- {
-  "ID": "1A51",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 51,
-  "ACTION": "TEXT",
-  "ARG1": "obj_dios1",
-  "ARG2": "god01",
-  "ARG3": "Todo esfuerzo ha sido inútil, o creíste que eres el primero en intentar detener el ciclo eterno",
-  "ARG4": 0,
-  "ARG6": 2,
-  "ARG7": 0,
-  "SNAP": 0
- },
- {
-  "ID": "1A52",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 52,
-  "ACTION": "TEXT",
-  "ARG1": "obj_dios1",
-  "ARG2": "god01",
-  "ARG3": "Antes de tu llegada, nadie percibió como la serpiente mordía su propia cola",
-  "ARG4": 0,
-  "ARG6": 2,
-  "ARG7": 0,
-  "SNAP": 0
- },
- {
-  "ID": "1A53",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 53,
-  "ACTION": "TEXT",
-  "ARG1": "obj_dios1",
-  "ARG2": "god01",
-  "ARG3": "Queridas mascotas, decidan, pues esto no se repetirá",
-  "ARG4": 0,
-  "ARG6": 2,
-  "ARG7": 0,
-  "SNAP": 0
- },
- {
-  "ID": "1A54",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 54,
-  "ACTION": "TEXT",
-  "ARG1": "obj_dios1",
-  "ARG2": "god01",
-  "ARG3": "Abracen lo ya conocido, pues nunca les falto nada",
-  "ARG4": 0,
-  "ARG6": 2,
-  "ARG7": 0,
-  "SNAP": 0
- },
- {
-  "ID": "1A55",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 55,
-  "ACTION": "TEXT",
-  "ARG1": "obj_dios1",
-  "ARG2": "god01",
-  "ARG3": "Alaben al desconocido, y enfrenten su destino divino",
-  "ARG4": 0,
-  "ARG6": 2,
-  "ARG7": 0,
-  "SNAP": 0
- },
- {
-  "ID": "1A56",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 56,
-  "ACTION": "WAIT",
-  "ARG1": 2.5,
-  "SNAP": 0
- },
- {
-  "ID": "1A57",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 57,
-  "ACTION": "GESTURE",
-  "ARG1": "obj_jabali",
-  "ARG2": 7,
-  "SNAP": 0
- },
- {
-  "ID": "1A58",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 58,
-  "ACTION": "WAIT",
-  "ARG1": 1,
-  "SNAP": 0
- },
- {
-  "ID": "1A59",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 59,
-  "ACTION": "MOVE",
-  "ARG1": "obj_jabali",
-  "ARG2": 1072.5,
-  "ARG3": 247,
-  "SNAP": 1
- },
- {
-  "ID": "1A60",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 60,
-  "ACTION": "GESTURE",
-  "ARG1": "obj_jabali2",
-  "ARG2": 7,
-  "SNAP": 0
- },
- {
-  "ID": "1A61",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 61,
-  "ACTION": "WAIT",
-  "ARG1": 1,
-  "SNAP": 0
- },
- {
-  "ID": "1A62",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 62,
-  "ACTION": "MOVE",
-  "ARG1": "obj_jabali2",
-  "ARG2": 1062.2,
-  "ARG3": 226,
-  "SNAP": 1
- },
- {
-  "ID": "1A63",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 63,
-  "ACTION": "WAIT",
-  "ARG1": 1,
-  "SNAP": 0
- },
- {
-  "ID": "1A64",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 64,
-  "ACTION": "GESTURE",
-  "ARG1": "obj_coneja",
-  "ARG2": 7,
-  "SNAP": 1
- },
- {
-  "ID": "1A65",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 65,
-  "ACTION": "MOVE",
-  "ARG1": "obj_coneja",
-  "ARG2": 1056,
-  "ARG3": 249.2,
-  "SNAP": 0
- },
- {
-  "ID": "1A66",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 66,
-  "ACTION": "WAIT",
-  "ARG1": 1,
-  "SNAP": 0
- },
- {
-  "ID": "1A67",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 67,
-  "ACTION": "GESTURE",
-  "ARG1": "obj_capibara",
-  "ARG2": 7,
-  "SNAP": 0
- },
- {
-  "ID": "1A68",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 68,
-  "ACTION": "MOVE",
-  "ARG1": "obj_capibara",
-  "ARG2": 1046.8,
-  "ARG3": 249,
-  "SNAP": 1
- },
- {
-  "ID": "1A69",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 69,
-  "ACTION": "GESTURE",
-  "ARG1": "obj_hamster",
-  "ARG2": 7,
-  "SNAP": 1
- },
- {
-  "ID": "1A70",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 70,
-  "ACTION": "WAIT",
-  "ARG1": 1,
-  "SNAP": 0
- },
- {
-  "ID": "1A71",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 71,
-  "ACTION": "MOVE",
-  "ARG1": "obj_hamster",
-  "ARG2": 1046.4,
-  "ARG3": 227,
-  "SNAP": 1
- },
- {
-  "ID": "1A72",
-  "CS_NUMBER": 1,
-  "CS_NAME": "Cinematoast",
-  "ACTION_NUMBER": 72,
-  "ACTION": "WAIT",
-  "ARG1": 5,
-  "SNAP": 0
- }
 ]

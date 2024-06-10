@@ -17,7 +17,7 @@ void main()
 	
 	vec2 myTexcoord = v_vTexcoord;
    
-	if(myTexcoord.y > uv_center[0] && v_vTexcoord.y<=uv_center[1])
+	if(myTexcoord.x > uv_center[0] && v_vTexcoord.y<=uv_center[1])
 	{
 	    if (pixelAngle < angle)
 		{
@@ -25,7 +25,7 @@ void main()
 		}
 		else
 		{
-		    gl_FragColor = v_vColour * texture2D( gm_BaseTexture, myTexcoord );
+		    gl_FragColor = texture2D( gm_BaseTexture, myTexcoord );
 		}
 	}
 	

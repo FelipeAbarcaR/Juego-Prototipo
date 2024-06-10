@@ -16,6 +16,4 @@ if(draw_on_gui)
 	_color,
 	image_alpha
 	)
-	hola=10;
-
 }

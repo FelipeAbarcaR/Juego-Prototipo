@@ -129,6 +129,10 @@ if (event_mode==textbox_event.TEXTING)
 				_text_color_1=#5c2e17;
 				_text_color_2=#966941;
 			break;
+			default:
+			_text_font=text_font_npc;
+			break;
+			
 		} 
 		//draw the text (typing)
 		scribble_object.starting_format(_text_font,_text_color_1);
@@ -165,7 +169,7 @@ if (event_mode==textbox_event.TEXTING)
 				draw_sprite_stretched(sprite_index,1,opt_x,opt_y,_option_width,option_height);
 				
 				_scribble_option.align(fa_left,fa_middle);
-				_scribble_option.starting_format(text_font,option_text_color);
+				_scribble_option.starting_format(_text_font,option_text_color);
 				_scribble_option.draw(opt_x+option_text_x,opt_y+padding+2);
 				
 			}

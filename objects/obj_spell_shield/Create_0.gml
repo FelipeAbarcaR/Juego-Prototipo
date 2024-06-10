@@ -2,7 +2,12 @@
 // You can write your code in this editor
 
 // Inherit the parent event
+
+image_index=33;
+image_speed=0;
+
 event_inherited();
+
 
 spell_sprite=spr_shield;
 spell_cooldown=SPELL_SHIELD_COOLDOWN;
@@ -18,3 +23,5 @@ if(layer_exists(lay_id))
 {
 	depth=layer_get_depth(lay_id)-1;
 }
+
+play_sfx(sfx_shield_in);

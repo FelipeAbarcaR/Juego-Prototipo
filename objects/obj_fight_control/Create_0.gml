@@ -27,8 +27,8 @@ fighter2=global.fightEnemy;
 
 //HP BAR PARAMS
 //margenes de especio entre la barra de hp y la esquina
-marginw=140;
-marginh=50;
+marginw=200; //220
+marginh=display_get_gui_height()*0.75;
 
 //HP decreasing animation
 decreasing=false;

@@ -20,7 +20,8 @@ return {
         right: [input_binding_key(vk_right), input_binding_key("D")],
         
         accept:  input_binding_key(vk_space),
-        shield:  input_binding_key("C"),
+        shield:  input_binding_key("Z"),
+		tempo:	 input_binding_key("X"),
         //action:  input_binding_key(vk_enter),
         //special: input_binding_key(vk_shift),
         
@@ -43,6 +44,7 @@ return {
         
         accept:  input_binding_gamepad_button(gp_face3), // es la x en play
         shield:  input_binding_gamepad_button(gp_face2), // es el circulo en play
+		tempo:	 input_binding_gamepad_button(gp_face1),
         //action:  input_binding_gamepad_button(gp_face3),
         //special: input_binding_gamepad_button(gp_face4),
         

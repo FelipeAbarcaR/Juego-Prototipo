@@ -1,9 +1,13 @@
+var _w=400;//400//480
+var _h=225;//225//270
+var _scale=3;
+
 global.res = {
-	width: 480,
-	height: 270,
-	guiwidth: 480*3,
-	guiheight: 270*3,
-	scale: 3
+	width: _w,//400,
+	height: _h,// 225,
+	guiwidth: _w*_scale,
+	guiheight: _h*_scale,
+	scale: _scale
 }
 
 var _width = global.res.width;

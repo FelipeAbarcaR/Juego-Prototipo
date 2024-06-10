@@ -10,6 +10,18 @@ function update_spells(){
 	//}
 
 }
+function spell_call_jump()
+{
+	if(obj_spell_manager.spell_jump_current_cooldown<=0)
+	{
+		obj_spell_manager.spell_jump_called=true;
+	}
+	else
+	{
+	   show_debug_message("spell_call_jump(): jump is on cooldown dude");
+	}
+    
+}
 
 function spell_call_shield()
 {
@@ -22,4 +34,17 @@ function spell_call_shield()
 	   show_debug_message("spell_call_shield(): Shield is on cooldown dude");
 	}
     
+}
+
+function spell_call_3tempo()
+{
+    if(obj_spell_manager.spell_3tempo_current_cooldown<=0)
+	{
+		obj_spell_manager.spell_3tempo_called=true;
+	}
+	else
+	{
+	   show_debug_message("spell_call_3tempo(): 3tempo is on cooldown dude");
+	}
+	
 }

@@ -8,11 +8,12 @@
 	//room_data=[room_name, Music, BPM, obj_to_follow, room_mode, mainChar, zoom, witdh, height]
 	global.room_data = [
 
-		[roomMapaInicial,			bgm_NEON_ICE_127BPM,		127,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
+		[roomMapaInicial,			bgm_NEON_ICE_127BPM,		127,	o_player,			mode.move,		o_player,			CMODE.OBJECT_FOLLOWING],
+		[roomMapa1DungeonTEST,		bgm_pedro_151BPM,					151,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
+		[roomMapa1Dungeon,			bgm_NightCall_118,			118,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
 		[roomMapa1,					bgm_WillPower_89,			89 ,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
 		[roomMapa1Talo,				bgm_WillPower_89,			89 ,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
 		[roomMapa2Ale,				bgm_illbethere,				130,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
-		[roomMapa1Dungeon,			bgm_NightCall_118,			118,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
 		[rm_runny,					bgm_bossM1D_95,				95,		obj_runny_player,	mode.move,		o_player,			CMODE.STATIC],
 		[roomMapa1DungeonBoss,		bgm_NightCall_118,			118,	o_player,			mode.move,		o_player,			CMODE.OBJECT_BORDERS],
 		[rm_GD,						bgm_boss_01,				127,	obj_obs_player,		mode.obstacle,	obj_obs_player,		CMODE.OBJECT_FOLLOWING],
@@ -39,7 +40,8 @@
 		[bgm_bossM1D_95,95],
 		[bgm_illbethere,130],
 		[bgm_NEON_ICE_int_127BPM,127],
-		[bgm_NEON_ICE_127BPM,127]
+		[bgm_NEON_ICE_127BPM,127],
+		[bgm_pedro_151BPM,151],
 	];
 	enum rm
 	{

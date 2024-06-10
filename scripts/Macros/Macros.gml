@@ -16,6 +16,8 @@
 
 #macro SPELL_SHIELD_COOLDOWN 8
 #macro SPELL_SHIELD_ACTIVE 3
+#macro SPELL_3TEMPO_COOLDOWN 3
+#macro SPELL_3TEMPO_ACTIVE 3
 
 //GEOMETRY DASH
 enum obstacle{
@@ -41,7 +43,8 @@ enum states {
 	CROUCH,			//7
 	JUMP,			//8
 	AUTOMOVING,		//9
-	SHIELD			//10	
+	SHIELD,			//10
+	TEMPO			//11
 }
 
 enum prestates

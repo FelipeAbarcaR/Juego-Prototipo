@@ -132,6 +132,7 @@ function draw_vanish_beatbar()
 
 	array_push(beat_meter_list, _y);
 }
+
 function reset_beat_bar_2_variables()
 {
     BeatTimeFrames=(60/global.bpm)*room_speed;
@@ -169,8 +170,10 @@ function beat_missed()
 	if(groovy_count>0) //reset the groovy counter
 	{
 		groovy_count=0;
-		play_sfx(sfx_groovy_error)// code here
+		play_sfx(sfx_groovy_error,0.5)// code here
+		show_debug_message("sonido error");
 	}
+	else play_sfx(sfx_groovy_error,0.5);
 }
 
 function beat_check_if_can_beat()

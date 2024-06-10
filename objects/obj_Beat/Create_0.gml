@@ -53,8 +53,8 @@ bgm_snd = audio_play_sound(_bgm,10,1,bgm_gain);
 
 // gui_cosas
 var _res=global.res;
-guiwidth=display_get_gui_width();//camera_get_view_width(oCameraManager.camera);//display_get_gui_width();
-guiheight=display_get_gui_height();//camera_get_view_height(oCameraManager.camera);//display_get_gui_height();
+guiwidth=global.res.guiwidth;//camera_get_view_width(oCameraManager.camera);//display_get_gui_width();
+guiheight=global.res.guiheight;//camera_get_view_height(oCameraManager.camera);//display_get_gui_height();
 barscale=1.6;
 
 //position of the beatbar. Set in Draw Event
@@ -107,7 +107,7 @@ frozen_beat=false;
 bar2_range=beat_frame_height*beathitrange;
 
 bar2_x=global.res.guiwidth*(0.92);
-bar2_y=global.res.guiheight*0.5;
+bar2_y=global.res.guiheight*0.55;
 
 beats_to_start=5;
 time_to_beat=global.BeatTimeMS*beats_to_start;

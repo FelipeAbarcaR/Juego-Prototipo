@@ -33,7 +33,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_icons_instruments_TEST",
+    "path": "sprites/spr_icons_instruments_TEST/spr_icons_instruments_TEST.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

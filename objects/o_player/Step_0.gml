@@ -1,6 +1,7 @@
 /// @description 
 switch(state) {
 	default:
+
 		reset_variables();
 
 		get_input();
@@ -65,6 +66,49 @@ switch(state) {
 		
 		anim();
 
+	break;
+	
+	case states.TEMPO:
+		image_speed=0;
+		var _beat_progress=global.BeatNumber+global.beatprogress-tempo_starting_beat;
+		var _tempos = tempo_count<3;
+		if(_beat_progress>=0.5*tempo_count &&_tempos)
+		{
+			dashing=true;
+			var _tempo_dis=tempo_dash_distance;
+			
+			if(global.groovy)_tempo_dis=_tempo_dis*tempo_groovy_multiplier; 
+			tempo_dash_remain_distance=_tempo_dis;
+			play_sfx(tempo_shake_sounds[tempo_count]);
+			tempo_count++;
+			
+		}
+		if(dashing)
+		{
+			var _x_to=x+lengthdir_x(tempo_dash_remain_distance,dir);
+			var _y_to=y+lengthdir_y(tempo_dash_remain_distance,dir);
+			if(tempo_dash_remain_distance<=tempo_dash_speed)
+			{
+				x=_x_to;
+				y=_y_to;
+				tempo_dash_remain_distance=0;
+				if(tempo_count>=3)
+				{
+				    state=states.IDLE;
+					tempo_count=0;
+				}
+				dashing=false;
+			}else
+			{
+				x=x+lengthdir_x(tempo_dash_speed,dir);
+				y=y+lengthdir_y(tempo_dash_speed,dir);
+				tempo_dash_remain_distance-=tempo_dash_speed;
+				var _inst=instance_create_depth(x,y,depth,obj_vanish);
+				_inst.sprite_index=self.sprite_index;
+				_inst.image_index=self.image_index
+				_inst.vanish=0.04;
+			}	
+		}
 	break;
 }
 

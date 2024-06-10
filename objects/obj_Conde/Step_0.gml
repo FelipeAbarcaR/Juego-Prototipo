@@ -5,7 +5,8 @@
 	Derecha=	input_check_pressed("right");
 	Arriba=		input_check_pressed("up");
 	Abajo=		input_check_pressed("down");
-
+	skill2=		keyboard_check_pressed(ord("Z"));
+	
 //change image index through rhythm
 
 	FightRhythmAnimate();
@@ -16,7 +17,8 @@
 
 //change states
 
-	if (state="idle" && global.beatchance){
+	if (state="idle" && global.beatchance)
+	{
 		//dodge check
 		if(Izquierda+Arriba+Abajo==1 && Derecha==0){
 					
@@ -57,6 +59,11 @@
 			sprite_index=spr_atk1;
 			x_to=x+attack_distance;
 			state="attack";
+		}
+	
+		if(skill2)
+		{
+		    spell_call_3tempo();
 		}
 	}
 //states
@@ -116,6 +123,52 @@
 	}
 	if(state=="locked")
 	{ }
+	if(state=="3tempo")
+	{
+		image_speed=1;
+		if(image_index>image_number-1)
+		{
+		    image_speed=0;
+		}
+	    x+=min(abs(x_to-x),dodge_speed)*sign(x_to-x);
+		//Attack FX when reach the spot
+		if (x_to-x==0 && tempo_counter==0){
+			var _midheight = ((bbox_top-bbox_bottom)/2)+10;
+			var _effectdistance = 50;
+			//create attack effect
+			SendFX(tempo_attack_sprites[tempo_counter],x+_effectdistance,y+_midheight,{
+					image_xscale	: 2,
+					image_yscale	: 2,
+					creator			: id
+				})
+			tempo_counter++;
+		}
+		if(tempo_counter>0)
+		{
+		    var _tempo_progress= global.BeatNumber+global.beatprogress-tempo_starting_beat;
+			if(_tempo_progress>=0.5*tempo_counter)
+			{
+				var _midheight = ((bbox_top-bbox_bottom)/2)+10;
+				 var _effectdistance = 50;
+				SendFX(tempo_attack_sprites[tempo_counter],x+_effectdistance,y+_midheight,{
+					image_xscale	: 2,
+					image_yscale	: 2,
+					creator			: id
+				})
+				play_sfx(tempo_shake_sounds[tempo_counter])
+			    tempo_counter++;
+				image_index=0;
+			}
+		}
+		
+		if (sign(x_to-x)==0 and tempo_counter==tempo_counter_max)
+		{
+			tempo_counter=0;
+			delay=attack_delay;
+			start_delay=true;
+			state="delay";
+		}	
+	}
 	
 //ATAQUE DEL JUGADOR AL ENEMIGO
 if(attack_collision)

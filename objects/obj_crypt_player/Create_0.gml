@@ -75,10 +75,16 @@ spr_jump_left=spr_gato_crypt_jump_left;
 spr_jump_right=spr_gato_crypt_jump_right;
 
 //SFX
-sound_jump=sfx_gato_jump;
+sound_jump=sfx_tambourine//sfx_gato_jump;
 sound_bump=sfx_bump;
 sound_hit=sfx_crypt_hit;
 
 hit_screen_frames_total=5;
 hit_screen_frames=0;
 
+//SPELLS
+tempo_beat=0;
+tempo_speed=6;
+tempo_count=0;
+tempo_wait=false;
+tempo_sound=[sfx_shake1,sfx_shake2,sfx_shake3];

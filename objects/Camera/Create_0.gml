@@ -15,8 +15,21 @@ port_width = port_height*aspect_ratio; // Width of the window where the game wil
 
 display_set_gui_size(port_width, port_height); //  < ------------------------ THIS LINE IS TOTALLY OPTIONAL
 
-x = view_width/2; // Adjust the camera to the top left corner
-y = view_height/2;
+var _player_x=0;
+var _player_y=0;
+if(instance_exists(o_player))
+{
+    _player_x=o_player.x;
+	_player_y=o_player.y;
+	
+	x = _player_x-view_width/2; // Adjust the camera to the top left corner
+	y = _player_y-view_height/2;
+}else
+{
+	x = view_width/2; // Adjust the camera to the top left corner
+	y = view_height/2;	
+}
+
 
 primitive_view_x = x-view_width/2; // Calculate the x position of the view relative to the camera object position
 primitive_view_y = y-view_height/2; // Calculate the y position of the view relative to the camera object position

@@ -27,8 +27,8 @@ y = display_get_gui_height() - height - margin;
 // Text
 
 text_font_blurry = "fnt_RODIN_12";
-text_font_npc = "fnt_RODIN_24";
-text_font_sign =  "fnt_RODIN_24";
+text_font_npc =	 "fnt_RODIN_24";
+text_font_sign = "fnt_RODIN_24";
 text_color = c_white;
 text_speed = 0.20;
 text_x = padding;

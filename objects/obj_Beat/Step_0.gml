@@ -173,7 +173,7 @@ var _tp=obj_transition_manager.transition_progress;
 
 bar2_timer+=dt;
 
-//SET A NEW BEAT TO START MOVING DOWN THE "HEART"
+//SET A NEW BEAT TO START MOVING DOWN TO THE "HEART"
 //beat fix to half tempo
 var _fix=0;
 if(beat_fix) _fix=global.BeatTimeMS/2;

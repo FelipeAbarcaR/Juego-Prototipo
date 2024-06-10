@@ -14,3 +14,14 @@ if(instance_exists(obj_crypt_player))	player=obj_crypt_player;
 if(instance_exists(obj_obs_player))		player=obj_obs_player;
 if(instance_exists(obj_fight_gato))		player=obj_fight_gato;
 
+if(player!=-1)
+{
+	var _p=player;
+    var _inst=instance_create_depth(_p.x,_p.y-10,_p.depth,obj_vanish)
+	_inst.sprite_index=self.sprite_index;
+	_inst.image_xscale=0.25;
+	_inst.image_yscale=0.25;
+	_inst.image_index=self.image_index;
+	_inst.vanish=0.02;
+	_inst.vspeed=-0.6;
+}

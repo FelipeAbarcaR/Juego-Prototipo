@@ -7,7 +7,7 @@ depth=layer_get_depth(layer_get_id("Instances"))-1;
 global.guide_marker_id=-1;
 global.guide_marker_number=marker_number;
 delayed=false;
-delay_time=5;
+delay_time=20;
 
 next_marker = function()
 {

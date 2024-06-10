@@ -7,6 +7,7 @@ Arriba		=		input_check_pressed("up");
 Abajo		=		input_check_pressed("down");
 
 button_shield	=	input_check_pressed("shield");
+button_tempo	=	input_check_pressed("tempo");
 roll_key		=	input_check_pressed("accept");
 
 
@@ -29,6 +30,7 @@ if(button_shield)
     spell_call_shield();
 }
 
+//spell 3tempo está en state
 States();
 
 

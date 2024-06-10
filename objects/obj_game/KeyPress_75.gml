@@ -44,7 +44,10 @@
 //show_debug_message(string(_enb2))
 
 //instance_create_depth(912,0,2800,obj_backstage_dude);
-with(obj_capibara)
-{
-	startDialogueGod("probandoGod");
-}
+
+//with(obj_capibara)
+//{
+//	startDialogueGod("probandoGod");
+//}
+
+instance_create_depth(o_player.x,o_player.y,o_player.depth,obj_spell_3tempo);

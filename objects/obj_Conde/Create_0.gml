@@ -3,7 +3,7 @@
 
 x_to=x;
 y_to=y;
-attack_distance=170;
+attack_distance=140;
 dodge_distance=60;
 dodge_speed=16;
 move=true;
@@ -69,6 +69,15 @@ Izquierda=0;
 Derecha=0;
 Arriba=0;
 Abajo=0;
+skill_2=0
 
 initial_x_scale=image_xscale;
 initial_y_scale=image_yscale;
+
+//3tempo parameter
+tempo_counter=0;
+tempo_counter_max=3;
+tempo_starting_beat=0;
+tempo_beat=0;
+tempo_shake_sounds=[sfx_shake1,sfx_shake2,sfx_shake3]
+tempo_attack_sprites=[spr_fx_small_slash_1,spr_fx_small_slash_2,spr_fx_small_slash_3];

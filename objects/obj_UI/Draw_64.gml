@@ -1,4 +1,8 @@
 /// @description Draw UI
+var _x_pos=display_get_gui_width()*0.1;
+var _y_pos=display_get_gui_height()*0.05;
+var _bp=global.beatprogress//(global.beatprogress*2)-1;
+var _extra=scr_distribucion_n(_bp,0,0.08,0.06);
 if(global.gamemode!=mode.fight && !instance_exists(obj_fight_control))
 {
 	//Draw Health
@@ -25,9 +29,9 @@ if(global.gamemode!=mode.fight && !instance_exists(obj_fight_control))
 			//3/4 de corazon (frame 4)
 			_imageindex += (_playerhealthfrac > 0.5);
 		}
-		var _scale=3;
-		var _extraspacing =30;
-		draw_sprite_ext(spr_health,_imageindex,20 +((i-1)*(16+_extraspacing)),20,_scale,_scale,image_angle,c_white,image_alpha);
+		var _scale=4+_extra;
+		var _extraspacing =80;
+		draw_sprite_ext(spr_health,_imageindex,_x_pos +((i-1)*(_extraspacing)),_y_pos,_scale,_scale,image_angle,c_white,image_alpha);
 	}
 }
 

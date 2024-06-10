@@ -223,6 +223,7 @@ function reset_variables() {
 	global.interact = false;
 	//global.end_interaction = false;
 	button_shield=false;
+	button_tempo=false;
 	left = 0;
 	right = 0;
 	up = 0;
@@ -248,6 +249,7 @@ function get_input() {
 	
 	if (input_check_pressed("accept"))	global.interact = true;
 	if (input_check_pressed("shield")) button_shield=true;
+	if (input_check_pressed("tempo")) button_tempo=true;
 }
 
 function update_movement(){
@@ -421,6 +423,7 @@ function anim() {
 	
 	switch(state) {
 		default:
+		image_speed=1;
 			if hmove != 0 or vmove != 0 
 			{
 				switch(dir)
@@ -523,6 +526,7 @@ function player_roll(){
 function check_spells()
 {
 	var _shield	=	false;
+	var _tempo	=	false;
 	
 	if(global.beatchance) //spells has to be on beat
 	{
@@ -530,12 +534,20 @@ function check_spells()
 		{
 		    _shield = true;
 		}
+		if(button_tempo)
+		{
+		    _tempo=true;
+		}
 		//todo el show anterior es para cuando se tengan q juntar poderes. shield+3atk, etc.
 		//ahora dentro del if puede haber if _shield && _3atk por ej.
 		if (_shield /*&& global.CanShield*/) 
 		{
 			spell_call_shield()
 			
+		}
+		if(_tempo)
+		{
+		    spell_call_3tempo();
 		}
 	}
 }
@@ -619,8 +631,14 @@ function Space_logic()
 					};
 					
 					movedistanceremaining = _distanceroll;
-					
-					audio_play_sound(sfx_roll,8,false);
+					//sound effect
+					//var _sfx=sfx_roll;
+					var _sfx=sfx_pandereta1;
+					if(global.groovy)_sfx=sfx_pandereta2;//_sfx=sfx_dash_groovy;
+					play_sfx(_sfx);
+					//jump smoke effect
+					SendFX(spr_fx_smoke,x,bbox_bottom);
+					spell_call_jump();
 				}
 			}
 			else

@@ -21,6 +21,7 @@ if(global.beat)
 	if(active_time<=0)
 	{
 	    minimize_to_destroy=true
+		play_sfx(sfx_shield_out);
 	}
 }
 

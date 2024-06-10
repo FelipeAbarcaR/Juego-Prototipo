@@ -2,7 +2,7 @@
 
 
 event_inherited();
-walk_spd = 1.7;
+walk_spd = 1.42;
 initial_walk_spd=walk_spd;
 diag_walk_spd = floor(walk_spd*(sqr(2)/2));
 walk_friction=0;
@@ -116,3 +116,12 @@ for(var i = pos_array_size -1; i >= 0; i--)
 	to_record_sprite[i] = spr_gato3_down;
 	to_record_xscale[i] = image_xscale;
 }
+
+tempo_count=0;
+tempo_dash_speed=5;
+tempo_dash_distance=20;
+tempo_dash_remain_distance=0;
+tempo_delay=0.2;
+tempo_starting_beat=0;
+tempo_groovy_multiplier=1.25;
+tempo_shake_sounds=[sfx_shake1,sfx_shake2,sfx_shake3];

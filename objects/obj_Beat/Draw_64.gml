@@ -112,7 +112,7 @@ if(!instance_exists(obj_cutscene) && !instance_exists(obj_background_landscape))
 		}
 
 		var _index=clamp(groovy_count,0,groovy_max);
-		var _dx=30;
+		var _dx=40;
 		var _dy=16;
 		draw_sprite(spr_numbers,_index,_x+_dx,_y)
 		draw_beat_hit_texts();	

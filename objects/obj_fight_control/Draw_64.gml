@@ -3,9 +3,10 @@
 if(fighters_created)
 {
 	var _bp=global.beatprogress;
-	var _add_scale_size=0.25;
+	var _add_scale_size=0.15;
 	var _calculito=(power((0.5-_bp),2));
 	var _add_scale=_add_scale_size*_calculito;
+	var _initial_scale=0.8;
 	
 	//FIGHTER 1
 		var _bar,_hp1,_hpmax1,_x,_y,_scale;
@@ -14,7 +15,7 @@ if(fighters_created)
 		_bar=spr_hpbar3;
 		_x=marginw;
 		_y=marginh;
-		_scale=1.5+_add_scale;
+		_scale=_initial_scale+_add_scale;
 	
 		var _spritewidth=sprite_get_width(_bar);
 		var _spriteheight=sprite_get_height(_bar);

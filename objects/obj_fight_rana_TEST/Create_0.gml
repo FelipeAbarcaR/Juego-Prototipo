@@ -116,6 +116,8 @@ array_push(moves,_move_2);
 array_push(moves,_move_3);
 array_push(moves,_move_4);
 
+moves = scale_moves(moves,1/1.2)
+
 //SPRITES
 last_sprite=-1
 

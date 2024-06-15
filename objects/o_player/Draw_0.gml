@@ -62,3 +62,18 @@ if(global.DrawText)
 	draw_activate_region();
 	
 }
+//light in shadow
+var _x=x-uc_get_view_x();
+var _y=y-uc_get_view_y();
+
+//LUZ DEL PLAYER
+with(obj_light_tester)
+{
+    if (surface_exists(dark_surface)) {
+	surface_set_target(dark_surface)
+    gpu_set_blendmode(bm_subtract);
+    draw_sprite_ext(spr_flashlight, 0, _x,_y-5,1,1,0,c_white,1);
+    gpu_set_blendmode(bm_normal);
+	surface_reset_target();
+	}
+}

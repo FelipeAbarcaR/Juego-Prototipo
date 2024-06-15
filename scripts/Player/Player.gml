@@ -611,9 +611,10 @@ function Space_logic()
 			if(activate == noone)
 			{
 					
-				if(global.beatchance && global.CanDash) //roll only if player is in beat and if player can dash
+				if(global.beatchance && global.CanDash) //roll only if player is in beat and if player can dash/roll
 				{
 					state = states.ROLL;
+					inner_state=innerstates.PREACTION;
 					
 					var _distanceroll,_xto,_yto;
 					_distanceroll=distanceroll;

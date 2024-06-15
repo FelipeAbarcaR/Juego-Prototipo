@@ -346,6 +346,7 @@
     {"name":"inst_A53DF9C","path":"rooms/roomMapaInicial/roomMapaInicial.yy",},
     {"name":"inst_3FEBF2FA","path":"rooms/roomMapaInicial/roomMapaInicial.yy",},
     {"name":"inst_2DD679D3","path":"rooms/roomMapaInicial/roomMapaInicial.yy",},
+    {"name":"inst_75B054F9","path":"rooms/roomMapaInicial/roomMapaInicial.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -427,6 +428,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_2C78ABC7","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_guide_markers","path":"objects/obj_guide_markers/obj_guide_markers.yy",},"properties":[
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_guide_markers","path":"objects/obj_guide_markers/obj_guide_markers.yy",},"propertyId":{"name":"guide_marker_number","path":"objects/obj_guide_markers/obj_guide_markers.yy",},"value":"4",},
           ],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":24.0,"y":1688.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_75B054F9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_light_tester","path":"objects/obj_light_tester/obj_light_tester.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1140.0,"y":1332.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"actor_top","depth":1000,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRLayer","resourceVersion":"1.0","name":"L3_SOLIDS_TOP","depth":1100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[

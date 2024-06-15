@@ -2,6 +2,7 @@
 event_inherited();
 
 state = states.IDLE;
+inner_state=innerstates.PREACTION;
 //init previous positions
 xp = x;
 yp = y;

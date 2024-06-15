@@ -47,7 +47,7 @@ enum states {
 	TEMPO			//11
 }
 
-enum prestates
+enum innerstates
 {
 	PREACTION	,
 	MIDACTION,
